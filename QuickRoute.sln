@@ -8,8 +8,6 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "QuickRoute.Setup", "QuickRo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B64CC9AA-878F-4690-9949-0C5784306CEE}"
 	ProjectSection(SolutionItems) = preProject
-		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
-		QuickRoute.vsmdi = QuickRoute.vsmdi
 		QuickRoute.UI\todo.txt = QuickRoute.UI\todo.txt
 	EndProjectSection
 EndProject

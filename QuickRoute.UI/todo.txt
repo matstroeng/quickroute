@@ -2,8 +2,6 @@ Use IFormattable and IFormatProvider within e g LongLat
 
 Where should event handlers be hooked in?
 
-Fixa allt med Cut och event handling
-
 Import georeferenced TIFF
 
 Visible momentaneous info items dialog should include up/down possibilities?
