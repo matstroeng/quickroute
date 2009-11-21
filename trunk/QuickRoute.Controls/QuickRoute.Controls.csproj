@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D5755345-EE87-4B08-95D7-55DDDB331CFB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuickRoute.Controls</RootNamespace>
+    <AssemblyName>QuickRoute.Controls</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Canvas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Canvas.Designer.cs">
+      <DependentUpon>Canvas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorRangeIntervalSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorRangeIntervalSlider.Designer.cs">
+      <DependentUpon>ColorRangeIntervalSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DragDropManager.cs" />
+    <Compile Include="FileSelectorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileSelectorControl.Designer.cs">
+      <DependentUpon>FileSelectorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ColorChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LapTimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LapTimeForm.Designer.cs">
+      <DependentUpon>LapTimeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RouteCutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RouteCutForm.Designer.cs">
+      <DependentUpon>RouteCutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UrlDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UrlDialog.Designer.cs">
+      <DependentUpon>UrlDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradientComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GradientListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LineGraphControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LineGraphControl.Designer.cs">
+      <DependentUpon>LineGraphControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScrollableLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScrollableLabel.Designer.cs">
+      <DependentUpon>ScrollableLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolstripColorRangeIntervalSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolstripCustomUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolstripNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolstripTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZoomWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZoomWindow.Designer.cs">
+      <DependentUpon>ZoomWindow.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Canvas.resx">
+      <DependentUpon>Canvas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorRangeIntervalSlider.resx">
+      <DependentUpon>ColorRangeIntervalSlider.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSelectorControl.de.resx">
+      <DependentUpon>FileSelectorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSelectorControl.fr.resx">
+      <DependentUpon>FileSelectorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSelectorControl.no.resx">
+      <DependentUpon>FileSelectorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSelectorControl.resx">
+      <DependentUpon>FileSelectorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSelectorControl.ru.resx">
+      <DependentUpon>FileSelectorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSelectorControl.sv.resx">
+      <DependentUpon>FileSelectorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ColorChooser.de.resx">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ColorChooser.fr.resx">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ColorChooser.no.resx">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ColorChooser.resx">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ColorChooser.ru.resx">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ColorChooser.sv.resx">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LapTimeForm.de.resx">
+      <DependentUpon>LapTimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LapTimeForm.fr.resx">
+      <DependentUpon>LapTimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LapTimeForm.no.resx">
+      <DependentUpon>LapTimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LapTimeForm.resx">
+      <DependentUpon>LapTimeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LapTimeForm.ru.resx">
+      <DependentUpon>LapTimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LapTimeForm.sv.resx">
+      <DependentUpon>LapTimeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RouteCutForm.de.resx">
+      <DependentUpon>RouteCutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RouteCutForm.fr.resx">
+      <DependentUpon>RouteCutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RouteCutForm.no.resx">
+      <DependentUpon>RouteCutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RouteCutForm.resx">
+      <DependentUpon>RouteCutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RouteCutForm.ru.resx">
+      <DependentUpon>RouteCutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RouteCutForm.sv.resx">
+      <DependentUpon>RouteCutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Graphics\AdjustRoute.cur" />
+    <None Include="Graphics\Lap.cur" />
+    <EmbeddedResource Include="Forms\UrlDialog.de.resx">
+      <DependentUpon>UrlDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UrlDialog.fr.resx">
+      <DependentUpon>UrlDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UrlDialog.no.resx">
+      <DependentUpon>UrlDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UrlDialog.resx">
+      <DependentUpon>UrlDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UrlDialog.ru.resx">
+      <DependentUpon>UrlDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UrlDialog.sv.resx">
+      <DependentUpon>UrlDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graphics\Cut.cur" />
+    <EmbeddedResource Include="Graphics\MoveMap.cur" />
+    <EmbeddedResource Include="Graphics\ZoomIn.cur" />
+    <EmbeddedResource Include="Graphics\ZoomOut.cur" />
+    <EmbeddedResource Include="LineGraphControl.resx">
+      <DependentUpon>LineGraphControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScrollableLabel.resx">
+      <DependentUpon>ScrollableLabel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuickRoute.BusinessEntities\QuickRoute.BusinessEntities.csproj">
+      <Project>{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}</Project>
+      <Name>QuickRoute.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuickRoute.Common\QuickRoute.Common.csproj">
+      <Project>{7F93415F-ACEB-4B4F-8E6B-51D0B096F38E}</Project>
+      <Name>QuickRoute.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuickRoute.Resources\QuickRoute.Resources.csproj">
+      <Project>{2854A1FB-52F7-4197-A24E-E9977FD21563}</Project>
+      <Name>QuickRoute.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

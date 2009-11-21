@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.matstroeng.se/doma" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.matstroeng.se/doma" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.matstroeng.se/doma">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="PublishMapRequest">
+        <xsd:all>
+          <xsd:element name="Username" type="xsd:string" />
+          <xsd:element name="Password" type="xsd:string" />
+          <xsd:element name="MapInfo" type="tns:MapInfo" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PublishMapResponse">
+        <xsd:all>
+          <xsd:element name="Success" type="xsd:boolean" />
+          <xsd:element name="ErrorMessage" type="xsd:string" />
+          <xsd:element name="URL" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PublishPreUploadedMapRequest">
+        <xsd:all>
+          <xsd:element name="Username" type="xsd:string" />
+          <xsd:element name="Password" type="xsd:string" />
+          <xsd:element name="MapInfo" type="tns:MapInfo" />
+          <xsd:element name="PreUploadedMapImageFileName" type="xsd:string" />
+          <xsd:element name="PreUploadedBlankMapImageFileName" type="xsd:string" />
+          <xsd:element name="PreUploadedThumbnailImageFileName" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="PublishPreUploadedMapResponse">
+        <xsd:all>
+          <xsd:element name="Success" type="xsd:boolean" />
+          <xsd:element name="ErrorMessage" type="xsd:string" />
+          <xsd:element name="URL" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="UploadPartialFileRequest">
+        <xsd:all>
+          <xsd:element name="Username" type="xsd:string" />
+          <xsd:element name="Password" type="xsd:string" />
+          <xsd:element name="FileName" type="xsd:string" />
+          <xsd:element name="Data" type="xsd:base64Binary" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="UploadPartialFileResponse">
+        <xsd:all>
+          <xsd:element name="Success" type="xsd:boolean" />
+          <xsd:element name="ErrorMessage" type="xsd:string" />
+          <xsd:element name="FileName" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetAllMapsRequest">
+        <xsd:all>
+          <xsd:element name="Username" type="xsd:string" />
+          <xsd:element name="Password" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetAllMapsResponse">
+        <xsd:all>
+          <xsd:element name="Success" type="xsd:boolean" />
+          <xsd:element name="ErrorMessage" type="xsd:string" />
+          <xsd:element name="Maps" type="tns:MapInfoArray" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetAllCategoriesRequest">
+        <xsd:all>
+          <xsd:element name="Username" type="xsd:string" />
+          <xsd:element name="Password" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetAllCategoriesResponse">
+        <xsd:all>
+          <xsd:element name="Success" type="xsd:boolean" />
+          <xsd:element name="ErrorMessage" type="xsd:string" />
+          <xsd:element name="Categories" type="tns:CategoryArray" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ConnectRequest">
+        <xsd:all>
+          <xsd:element name="Username" type="xsd:string" />
+          <xsd:element name="Password" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ConnectResponse">
+        <xsd:all>
+          <xsd:element name="Success" type="xsd:boolean" />
+          <xsd:element name="ErrorMessage" type="xsd:string" />
+          <xsd:element name="Version" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="MapInfo">
+        <xsd:all>
+          <xsd:element name="ID" type="xsd:int" />
+          <xsd:element name="UserID" type="xsd:int" />
+          <xsd:element name="CategoryID" type="xsd:int" />
+          <xsd:element name="Date" type="xsd:dateTime" />
+          <xsd:element name="Name" type="xsd:string" />
+          <xsd:element name="Organiser" type="xsd:string" />
+          <xsd:element name="Country" type="xsd:string" />
+          <xsd:element name="Discipline" type="xsd:string" />
+          <xsd:element name="RelayLeg" type="xsd:string" />
+          <xsd:element name="MapName" type="xsd:string" />
+          <xsd:element name="ResultListUrl" type="xsd:string" />
+          <xsd:element name="Comment" type="xsd:string" />
+          <xsd:element name="MapImageData" type="xsd:base64Binary" />
+          <xsd:element name="MapImageFileExtension" type="xsd:string" />
+          <xsd:element name="BlankMapImageData" type="xsd:base64Binary" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Category">
+        <xsd:all>
+          <xsd:element name="ID" type="xsd:int" />
+          <xsd:element name="UserID" type="xsd:int" />
+          <xsd:element name="Name" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="MapInfoArray">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:MapInfo[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="CategoryArray">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:Category[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="PublishMapRequest">
+    <wsdl:part name="request" type="tns:PublishMapRequest" />
+  </wsdl:message>
+  <wsdl:message name="PublishMapResponse">
+    <wsdl:part name="response" type="tns:PublishMapResponse" />
+  </wsdl:message>
+  <wsdl:message name="PublishPreUploadedMapRequest">
+    <wsdl:part name="request" type="tns:PublishPreUploadedMapRequest" />
+  </wsdl:message>
+  <wsdl:message name="PublishPreUploadedMapResponse">
+    <wsdl:part name="response" type="tns:PublishPreUploadedMapResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadPartialFileRequest">
+    <wsdl:part name="request" type="tns:UploadPartialFileRequest" />
+  </wsdl:message>
+  <wsdl:message name="UploadPartialFileResponse">
+    <wsdl:part name="response" type="tns:UploadPartialFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllMapsRequest">
+    <wsdl:part name="request" type="tns:GetAllMapsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetAllMapsResponse">
+    <wsdl:part name="response" type="tns:GetAllMapsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCategoriesRequest">
+    <wsdl:part name="request" type="tns:GetAllCategoriesRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCategoriesResponse">
+    <wsdl:part name="response" type="tns:GetAllCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConnectRequest">
+    <wsdl:part name="request" type="tns:ConnectRequest" />
+  </wsdl:message>
+  <wsdl:message name="ConnectResponse">
+    <wsdl:part name="response" type="tns:ConnectResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DOMAServicePortType">
+    <wsdl:operation name="PublishMap">
+      <wsdl:input message="tns:PublishMapRequest" />
+      <wsdl:output message="tns:PublishMapResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishPreUploadedMap">
+      <wsdl:input message="tns:PublishPreUploadedMapRequest" />
+      <wsdl:output message="tns:PublishPreUploadedMapResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadPartialFile">
+      <wsdl:input message="tns:UploadPartialFileRequest" />
+      <wsdl:output message="tns:UploadPartialFileResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMaps">
+      <wsdl:input message="tns:GetAllMapsRequest" />
+      <wsdl:output message="tns:GetAllMapsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCategories">
+      <wsdl:input message="tns:GetAllCategoriesRequest" />
+      <wsdl:output message="tns:GetAllCategoriesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Connect">
+      <wsdl:input message="tns:ConnectRequest" />
+      <wsdl:output message="tns:ConnectResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DOMAServiceBinding" type="tns:DOMAServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="PublishMap">
+      <soap:operation soapAction="http://localhost/domadev/webservice.php/PublishMap" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/doma" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/doma" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishPreUploadedMap">
+      <soap:operation soapAction="http://localhost/domadev/webservice.php/PublishPreUploadedMap" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/doma" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/doma" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadPartialFile">
+      <soap:operation soapAction="http://localhost/domadev/webservice.php/UploadPartialFile" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/doma" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/doma" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMaps">
+      <soap:operation soapAction="http://localhost/domadev/webservice.php/GetAllMaps" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/doma" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/doma" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCategories">
+      <soap:operation soapAction="http://localhost/domadev/webservice.php/GetAllCategories" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/doma" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/doma" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Connect">
+      <soap:operation soapAction="http://localhost/domadev/webservice.php/Connect" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/doma" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/doma" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DOMAService">
+    <wsdl:port name="DOMAServicePort" binding="tns:DOMAServiceBinding">
+      <soap:address location="http://localhost/domadev/webservice.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

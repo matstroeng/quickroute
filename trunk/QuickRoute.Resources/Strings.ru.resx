@@ -1,0 +1,722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Altitude" xml:space="preserve">
+    <value>Высота</value>
+  </data>
+  <data name="Distance" xml:space="preserve">
+    <value>Расстояние</value>
+  </data>
+  <data name="DonationUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/quickroute/en/donation.php</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_AdjustRoute" xml:space="preserve">
+    <value>Кликните в точку на пути и перетащите её на соответствущее место на карте. По меньшей мере две точки пути (желательно на большом расстоянии друг от друга) должны быть привязаны к карте. Если необходимо, можно привязать большее число точек. Чтобы удалить точку кликните по ней, удерживая клавишу Ctrl. Перетаскивать карту можно в помощью правой кнопки мыши. Чтобы перейти в режим визуализации данных пути, после окончания привязки выберите инструмент "указатель". </value>
+  </data>
+  <data name="DynamicHelp_MouseTool_Cut" xml:space="preserve">
+    <value>Кликните на точку не пути, чтобы удалить часть пути до или после этой точки. Перетаскивать карту можно в помощью правой кнопки мыши. </value>
+  </data>
+  <data name="DynamicHelp_MouseTool_Lap" xml:space="preserve">
+    <value>Кликните в точку на пути чтобы добавить перегон. Чтобы удалить перегон кликните по по точке, удерживая клавишу Ctrl. Чтобы добавить отсечку, соответствующую определённому времени, кликните по карте удерживая клавишу Shift. Перетаскивать карту можно в помощью правой кнопки мыши. </value>
+  </data>
+  <data name="DynamicHelp_MouseTool_Pointer" xml:space="preserve">
+    <value>Чтобы узнать время, расстояние,темп и т.д. в определённой точке пути наведите на неё указатель мыши.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_ZoomIn" xml:space="preserve">
+    <value>Выделите область карты, которую надо приблизить.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_ZoomOut" xml:space="preserve">
+    <value>Кликните в центр области карты которую надо отдалить.</value>
+  </data>
+  <data name="EastAbbreviated" xml:space="preserve">
+    <value>В</value>
+  </data>
+  <data name="ElapsedTime" xml:space="preserve">
+    <value>Общее время</value>
+  </data>
+  <data name="Error_ExportImage" xml:space="preserve">
+    <value>Ошибка при попытке экспортировать файл изображения</value>
+  </data>
+  <data name="Error_ExportRoute" xml:space="preserve">
+    <value>Ошибка при попытке экспортировать файл пути</value>
+  </data>
+  <data name="Error_NewDocument" xml:space="preserve">
+    <value>Ошибка при попытке создать новый документ</value>
+  </data>
+  <data name="Error_OpenDocument" xml:space="preserve">
+    <value>Ошибка при попытке открыть документ</value>
+  </data>
+  <data name="Error_SaveDocument" xml:space="preserve">
+    <value>Ошибка при попытке сохранить документ</value>
+  </data>
+  <data name="ExportImageTitle" xml:space="preserve">
+    <value>Экспорт изображения</value>
+  </data>
+  <data name="ExportGPXTitle" xml:space="preserve">
+    <value>Экспорт пути в GPX</value>
+  </data>
+  <data name="HeartRate" xml:space="preserve">
+    <value>ЧСС</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/quickroute/en/help</value>
+  </data>
+  <data name="Histogram" xml:space="preserve">
+    <value>Гистограмма</value>
+  </data>
+  <data name="InvalidMapImage" xml:space="preserve">
+    <value>Невалидное изображение карты</value>
+  </data>
+  <data name="InvalidRoute" xml:space="preserve">
+    <value>Невалидный путь</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Положение</value>
+  </data>
+  <data name="MapImageFileDoesNotExist" xml:space="preserve">
+    <value>Файл с изображением карты не найден</value>
+  </data>
+  <data name="NewGradient" xml:space="preserve">
+    <value>Новый градиент</value>
+  </data>
+  <data name="NoGPSDevicesConnected" xml:space="preserve">
+    <value>[Устройства GPS не найдены]</value>
+  </data>
+  <data name="NoGPSDevicesConnectedMessageBox" xml:space="preserve">
+    <value>Устройства GPS не найдены.</value>
+  </data>
+  <data name="NorthAbbreviated" xml:space="preserve">
+    <value>С</value>
+  </data>
+  <data name="OpenQuickRouteFileTitle" xml:space="preserve">
+    <value>Открыть файл QuickRoute</value>
+  </data>
+  <data name="Pace" xml:space="preserve">
+    <value>Темп</value>
+  </data>
+  <data name="PromptSaveChanges" xml:space="preserve">
+    <value>Сохранить изменение в {0}?</value>
+  </data>
+  <data name="QuickRoute" xml:space="preserve">
+    <value>QuickRoute</value>
+  </data>
+  <data name="RouteFileDoesNotExist" xml:space="preserve">
+    <value>Файл с путём не существует.</value>
+  </data>
+  <data name="RouteImportError_NoWaypoints" xml:space="preserve">
+    <value>Файл не содержит путевых отметок.</value>
+  </data>
+  <data name="RouteImportError_NoWaypointTimes" xml:space="preserve">
+    <value>Файл не содержит путевых отметок с записью времени.</value>
+  </data>
+  <data name="SaveAsTitle" xml:space="preserve">
+    <value>Сохранить файл QuickRoute как</value>
+  </data>
+  <data name="SelectMapImageFile" xml:space="preserve">
+    <value>Выберите файл с изображением карты</value>
+  </data>
+  <data name="SelectRouteFile" xml:space="preserve">
+    <value>Выберите файл с путём</value>
+  </data>
+  <data name="SouthAbbreviated" xml:space="preserve">
+    <value>Ю</value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Скорость</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Итог</value>
+  </data>
+  <data name="UICultureChangeTakesEffectAtNextRestart" xml:space="preserve">
+    <value>Изменение языка вступит в силу при следующем запуске QuickRoute</value>
+  </data>
+  <data name="Unit_Altitude" xml:space="preserve">
+    <value>м</value>
+  </data>
+  <data name="Unit_Distance" xml:space="preserve">
+    <value>м</value>
+  </data>
+  <data name="Unit_HeartRate" xml:space="preserve">
+    <value>уд/мин</value>
+  </data>
+  <data name="Unit_Pace" xml:space="preserve">
+    <value>мин/км</value>
+  </data>
+  <data name="Unit_Speed" xml:space="preserve">
+    <value>км/ч</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Безымянный</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Версия {0}</value>
+  </data>
+  <data name="WebsiteShortUrl" xml:space="preserve">
+    <value>matstroeng.se/quickroute/en</value>
+  </data>
+  <data name="WebsiteUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/quickroute/en</value>
+  </data>
+  <data name="WestAbbreviated" xml:space="preserve">
+    <value>З</value>
+  </data>
+  <data name="FileFilter_AllFiles" xml:space="preserve">
+    <value>Все файлы (*.*)|*.*</value>
+  </data>
+  <data name="FileFilter_FrwdTxtFiles" xml:space="preserve">
+    <value>Текстовые файлы Frwd (*.txt)|*.txt</value>
+  </data>
+  <data name="FileFilter_ImageFiles" xml:space="preserve">
+    <value>Файлы изображений (*.jpg; *.jpeg; *.gif; *.png; *.tif; *.tiff)|*.jpg;*.jpeg;*.gif;*.png;*.tif;*.tiff</value>
+  </data>
+  <data name="FileFilter_JpegFiles" xml:space="preserve">
+    <value>Файлы Jpeg (*.jpg; *.jpeg)|*.jpg;*.jpeg</value>
+  </data>
+  <data name="FileFilter_PngFiles" xml:space="preserve">
+    <value>Файлы  PNG (*.png)|*.png</value>
+  </data>
+  <data name="FileFilter_QuickRoute10Files" xml:space="preserve">
+    <value>Файлы QuickRoute XML 1.0 (*.xml)|*.xml</value>
+  </data>
+  <data name="FileFilter_QuickRouteFiles" xml:space="preserve">
+    <value>Файлы QuickRoute files (*.qrt)|*.qrt</value>
+  </data>
+  <data name="FileFilter_TcxFiles" xml:space="preserve">
+    <value>Файлы истории Garmin Training Center (*.tcx)|*.tcx</value>
+  </data>
+  <data name="FileFilter_TiffFiles" xml:space="preserve">
+    <value>Файлы Tiff (*.tiff; *.tif)|*.tiff;*.tif</value>
+  </data>
+  <data name="CopyToClipboard" xml:space="preserve">
+    <value>Копировать в буфер</value>
+  </data>
+  <data name="FileFilter_NavilockActFiles" xml:space="preserve">
+    <value>Файлы Navilock act (*.act)|*.act</value>
+  </data>
+  <data name="NewMap" xml:space="preserve">
+    <value>Новая карта</value>
+  </data>
+  <data name="Error_MapPublishCommunication" xml:space="preserve">
+    <value>Ошибка при взаимодействии с сервером публикации карт</value>
+  </data>
+  <data name="MapPublish_FailureTitle" xml:space="preserve">
+    <value>Карта не была опубликована</value>
+  </data>
+  <data name="MapPublish_Success" xml:space="preserve">
+    <value>Карта успешно опубликована на {0}.</value>
+  </data>
+  <data name="MapPublish_SuccessTitle" xml:space="preserve">
+    <value>Карта опубликована</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Отклонение</value>
+  </data>
+  <data name="Unit_Direction" xml:space="preserve">
+    <value>°</value>
+  </data>
+  <data name="SizeInPixels" xml:space="preserve">
+    <value>{0} x {1} пикселей</value>
+  </data>
+  <data name="DomaWebsiteUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/doma</value>
+  </data>
+  <data name="Error_GoogleEarthNotInstalledMessage" xml:space="preserve">
+    <value>По-видимому программа Google Earth не устновлена на данном компьютере. Загрузите её с сайта earth.google.com</value>
+  </data>
+  <data name="Error_GoogleEarthNotInstalledTitle" xml:space="preserve">
+    <value>Программа Google Earth не устновлена</value>
+  </data>
+  <data name="ExportKMZTitle" xml:space="preserve">
+    <value>Экспорт в KMZ</value>
+  </data>
+  <data name="ExportRouteDataTitle" xml:space="preserve">
+    <value>Экспорт пути</value>
+  </data>
+  <data name="FileFilter_GpxFiles" xml:space="preserve">
+    <value>Файлы GPX (*.gpx)|*.gpx</value>
+  </data>
+  <data name="FileFilter_KmzFiles" xml:space="preserve">
+    <value>Файлы KMZ (*.kmz)|*.kmz</value>
+  </data>
+  <data name="FileFilter_RouteDataFiles" xml:space="preserve">
+    <value>Файлы путей (*.xml)|*.xml</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Карта</value>
+  </data>
+  <data name="QuickRouteSession" xml:space="preserve">
+    <value>Сессия QuickRoute в {0}</value>
+  </data>
+  <data name="Route" xml:space="preserve">
+    <value>Путь</value>
+  </data>
+  <data name="RouteSegmentX" xml:space="preserve">
+    <value>Сегмент пути {0}</value>
+  </data>
+  <data name="Replay" xml:space="preserve">
+    <value>Воспроизведение</value>
+  </data>
+  <data name="Infinite" xml:space="preserve">
+    <value>бесконечно</value>
+  </data>
+  <data name="QuickRouteKmlData" xml:space="preserve">
+    <value>Данные QuickRoute</value>
+  </data>
+  <data name="ReplayPosition" xml:space="preserve">
+    <value>Позиция</value>
+  </data>
+  <data name="ReplayTail" xml:space="preserve">
+    <value>Остаток</value>
+  </data>
+  <data name="Routes" xml:space="preserve">
+    <value>Пути</value>
+  </data>
+  <data name="AddFiles" xml:space="preserve">
+    <value>Добавить файлы</value>
+  </data>
+  <data name="FileFilter_JpegFilesExportedFromQuickRoute" xml:space="preserve">
+    <value>Файлы JPEG экспортированные из QuickRoute (*.jpg; *.jpeg)|*.jpg;*.jpeg</value>
+  </data>
+  <data name="UnexpectedExceptionMessage" xml:space="preserve">
+    <value>Произошла непредвиденная ошибка.</value>
+  </data>
+  <data name="UntitledX" xml:space="preserve">
+    <value>Безымянный {0}</value>
+  </data>
+  <data name="OpenInGoogleEarth" xml:space="preserve">
+    <value>Открыть в Google Earth</value>
+  </data>
+  <data name="NewVersionAvailable" xml:space="preserve">
+    <value>Доступна программа QuickRoute версии {0} </value>
+  </data>
+  <data name="NewVersionFeatures" xml:space="preserve">
+    <value>Функциональность новой версии:</value>
+  </data>
+  <data name="OpenMultipleFilesInGoogleEarth" xml:space="preserve">
+    <value>Открыть несколько файлов QuickRoute в Google Earth</value>
+  </data>
+  <data name="LapX" xml:space="preserve">
+    <value>Перегон {0}</value>
+  </data>
+  <data name="MultipleFileExporterNoValidFiles" xml:space="preserve">
+    <value>Не указано ни одного корректного файла QuickRoute. </value>
+  </data>
+  <data name="MultipleFileExporterSomeInvalidFiles" xml:space="preserve">
+    <value>Указанныне ниже файлы не содержат данных QuickRoute и не могут быть включены:
+
+ {0}</value>
+  </data>
+  <data name="FileFilter_AllQuickRouteFiles" xml:space="preserve">
+    <value>Все файлы QuickRoute (*.qrt; *.xml; *.jpg; *.jpeg)|*.qrt;*.xml;*.jpg;*.jpeg</value>
+  </data>
+  <data name="UnrecognizedFileFormat" xml:space="preserve">
+    <value>Формат файла {0} не распознан.</value>
+  </data>
+  <data name="Error_InvalidQuickRouteFile" xml:space="preserve">
+    <value>Файл не является корректным файлом формата QuickRoute.</value>
+  </data>
+  <data name="SelectLapInfoColumns" xml:space="preserve">
+    <value>Настроить таблицу...</value>
+  </data>
+  <data name="SmoothingIntervalForX" xml:space="preserve">
+    <value>Сглаживающий интеравал для {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Altitude" xml:space="preserve">
+    <value>Высота: {0} м</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AltitudeDifference" xml:space="preserve">
+    <value>Разница высот (на перегоне): {0} м</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AltitudeDifferenceFromStart" xml:space="preserve">
+    <value>Разница высот (общая): {0} м</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Ascent" xml:space="preserve">
+    <value>Подъём (на перегоне): {0} м</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AscentFromStart" xml:space="preserve">
+    <value>Подъём (общий): {0} м</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageDirectionDeviationToNextLap" xml:space="preserve">
+    <value>Среднее отклонение (на перегоне): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageDirectionDeviationToNextLapFromStart" xml:space="preserve">
+    <value>Среднее отклонение (общее): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageHeartRate" xml:space="preserve">
+    <value>Средняя ЧСС (на перегоне): {0} уд/мин</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageHeartRateFromStart" xml:space="preserve">
+    <value>Средняя ЧСС  (общая): {0} уд/мин</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageInclination" xml:space="preserve">
+    <value>Средний уклон (на перегоне): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageInclinationFromStart" xml:space="preserve">
+    <value>Средний уклон (общий): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRoutePace" xml:space="preserve">
+    <value>Средний темп вдоль пути (на перегоне): {0} мин/км</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRoutePaceFromStart" xml:space="preserve">
+    <value>Средний темп вдоль пути  (общий): {0} мин/км</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRouteSpeed" xml:space="preserve">
+    <value>Средняя скорость вдоль пути (на перегоне): {0} км/ч</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRouteSpeedFromStart" xml:space="preserve">
+    <value>Средняя скорость вдоль пути (общая): {0} км/ч</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLinePace" xml:space="preserve">
+    <value>Средний темп по прямой (на перегоне): {0} мин/км</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLinePaceFromStart" xml:space="preserve">
+    <value>Средний темп по прямой (общий): {0} мин/км</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLineSpeed" xml:space="preserve">
+    <value>Средняя скорость по прямой (на перегоне): {0} км/ч</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLineSpeedFromStart" xml:space="preserve">
+    <value>Средняя скорость по прямой (общая): {0} км/ч</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Descent" xml:space="preserve">
+    <value>Спуск (на перегоне): {0} м</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_DescentFromStart" xml:space="preserve">
+    <value>Спуск (общий): {0} м</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Direction" xml:space="preserve">
+    <value>Направление: {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_DirectionDeviationToNextLap" xml:space="preserve">
+    <value>Отклонение: {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ElapsedTime" xml:space="preserve">
+    <value>Время (на перегоне): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ElapsedTimeFromStart" xml:space="preserve">
+    <value>Время (общее): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_HeartRate" xml:space="preserve">
+    <value>ЧСС: {0} уд/мин</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Inclination" xml:space="preserve">
+    <value>Уклон: {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_LapNumber" xml:space="preserve">
+    <value>Номер перегона: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Location" xml:space="preserve">
+    <value>Положение: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MaxHeartRate" xml:space="preserve">
+    <value>Максимальная ЧСС (на перегоне): {0} уд/мин</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MaxHeartRateFromStart" xml:space="preserve">
+    <value>Максимальная ЧСС (общая): {0} уд/мин</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MinHeartRate" xml:space="preserve">
+    <value>Минимальная ЧСС (на перегоне): {0} уд/мин</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MinHeartRateFromStart" xml:space="preserve">
+    <value>Минимальная ЧСС (общая): {0} уд/мин</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Pace" xml:space="preserve">
+    <value>Темп: {0} мин/км</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteDistance" xml:space="preserve">
+    <value>Длина пути (на перегоне): {0} м</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteDistanceFromStart" xml:space="preserve">
+    <value>Длина пути (общая): {0} м</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteToStraightLine" xml:space="preserve">
+    <value>Разница между расстоянием вдоль пути и по прямой (на перегоне): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteToStraightLineFromStart" xml:space="preserve">
+    <value>Разница между расстоянием вдоль пути и по прямой (общая): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Speed" xml:space="preserve">
+    <value>Скорость: {0} км/ч</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_StraightLineDistance" xml:space="preserve">
+    <value>Расстояние по прямой (на перегоне): {0} м</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_StraightLineDistanceFromStart" xml:space="preserve">
+    <value>Расстояние по прямой (общее): {0} м</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Time" xml:space="preserve">
+    <value>Время суток: {0}</value>
+  </data>
+  <data name="RoutePropertyName_Altitude" xml:space="preserve">
+    <value>Высота</value>
+  </data>
+  <data name="RoutePropertyName_AltitudeDifference" xml:space="preserve">
+    <value>Разница высот (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_AltitudeDifferenceFromStart" xml:space="preserve">
+    <value>Разница высот (общая)</value>
+  </data>
+  <data name="RoutePropertyName_Ascent" xml:space="preserve">
+    <value>Подъём (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_AscentFromStart" xml:space="preserve">
+    <value>Подъём (общий)</value>
+  </data>
+  <data name="RoutePropertyName_AverageDirectionDeviationToNextLap" xml:space="preserve">
+    <value>Среднее отклонение (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_AverageDirectionDeviationToNextLapFromStart" xml:space="preserve">
+    <value>Среднее отклонение (общее)</value>
+  </data>
+  <data name="RoutePropertyName_AverageHeartRate" xml:space="preserve">
+    <value>Средняя ЧСС (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_AverageHeartRateFromStart" xml:space="preserve">
+    <value>Средняя ЧСС  (общая)</value>
+  </data>
+  <data name="RoutePropertyName_AverageInclination" xml:space="preserve">
+    <value>Средний уклон (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_AverageInclinationFromStart" xml:space="preserve">
+    <value>Средний уклон (общий)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRoutePace" xml:space="preserve">
+    <value>Средний темп вдоль пути (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRoutePaceFromStart" xml:space="preserve">
+    <value>Средний темп вдоль пути  (общий)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRouteSpeed" xml:space="preserve">
+    <value>Средняя скорость вдоль пути (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRouteSpeedFromStart" xml:space="preserve">
+    <value>Средняя скорость вдоль пути (общая)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLinePace" xml:space="preserve">
+    <value>Средний темп по прямой (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLinePaceFromStart" xml:space="preserve">
+    <value>Средний темп по прямой (общий)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLineSpeed" xml:space="preserve">
+    <value>Средняя скорость по прямой (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLineSpeedFromStart" xml:space="preserve">
+    <value>Средняя скорость по прямой (общая)</value>
+  </data>
+  <data name="RoutePropertyName_Descent" xml:space="preserve">
+    <value>Спуск (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_DescentFromStart" xml:space="preserve">
+    <value>Спуск (общий)</value>
+  </data>
+  <data name="RoutePropertyName_Direction" xml:space="preserve">
+    <value>Направление</value>
+  </data>
+  <data name="RoutePropertyName_DirectionDeviationToNextLap" xml:space="preserve">
+    <value>Отклонение</value>
+  </data>
+  <data name="RoutePropertyName_ElapsedTime" xml:space="preserve">
+    <value>Время (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_ElapsedTimeFromStart" xml:space="preserve">
+    <value>Время (общее)</value>
+  </data>
+  <data name="RoutePropertyName_HeartRate" xml:space="preserve">
+    <value>ЧСС</value>
+  </data>
+  <data name="RoutePropertyName_Inclination" xml:space="preserve">
+    <value>Уклон</value>
+  </data>
+  <data name="RoutePropertyName_LapNumber" xml:space="preserve">
+    <value>Номер перегона</value>
+  </data>
+  <data name="RoutePropertyName_Location" xml:space="preserve">
+    <value>Положение</value>
+  </data>
+  <data name="RoutePropertyName_MaxHeartRate" xml:space="preserve">
+    <value>Максимальная ЧСС (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_MaxHeartRateFromStart" xml:space="preserve">
+    <value>Максимальная ЧСС (общая)</value>
+  </data>
+  <data name="RoutePropertyName_MinHeartRate" xml:space="preserve">
+    <value>Минимальная ЧСС (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_MinHeartRateFromStart" xml:space="preserve">
+    <value>Минимальная ЧСС (общая)</value>
+  </data>
+  <data name="RoutePropertyName_Pace" xml:space="preserve">
+    <value>Темп</value>
+  </data>
+  <data name="RoutePropertyName_RouteDistance" xml:space="preserve">
+    <value>Длина пути (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_RouteDistanceFromStart" xml:space="preserve">
+    <value>Длина пути (общая)</value>
+  </data>
+  <data name="RoutePropertyName_RouteToStraightLine" xml:space="preserve">
+    <value>Разница между расстоянием вдоль пути и по прямой (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_RouteToStraightLineFromStart" xml:space="preserve">
+    <value>Разница между расстоянием вдоль пути и по прямой (общая)</value>
+  </data>
+  <data name="RoutePropertyName_Speed" xml:space="preserve">
+    <value>Скорость</value>
+  </data>
+  <data name="RoutePropertyName_StraightLineDistance" xml:space="preserve">
+    <value>Расстояние по прямой (на перегоне)</value>
+  </data>
+  <data name="RoutePropertyName_StraightLineDistanceFromStart" xml:space="preserve">
+    <value>Расстояние по прямой (общее)</value>
+  </data>
+  <data name="RoutePropertyName_Time" xml:space="preserve">
+    <value>Время суток</value>
+  </data>
+  <data name="SelectMomentaneousInfoProperties" xml:space="preserve">
+    <value>Настроить область значений...</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ImageX" xml:space="preserve">
+    <value>X: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ImageY" xml:space="preserve">
+    <value>Y: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Latitude" xml:space="preserve">
+    <value>Широта: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Longitude" xml:space="preserve">
+    <value>Долгота: {0}</value>
+  </data>
+  <data name="RoutePropertyName_ImageX" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="RoutePropertyName_ImageY" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="RoutePropertyName_Latitude" xml:space="preserve">
+    <value>Широта</value>
+  </data>
+  <data name="RoutePropertyName_Longitude" xml:space="preserve">
+    <value>Долгота</value>
+  </data>
+</root>

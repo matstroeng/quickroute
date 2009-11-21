@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ok.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 480</value>
+  </data>
+  <data name="cancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>433, 480</value>
+  </data>
+  <data name="cancel.Text" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="filesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="filesLabel.Text" xml:space="preserve">
+    <value>&amp;Dateien</value>
+  </data>
+  <data name="replayTailsVisible.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 79</value>
+  </data>
+  <data name="replayTailDuration.Items7" xml:space="preserve">
+    <value>unendlich</value>
+  </data>
+  <data name="replayTailDuration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 99</value>
+  </data>
+  <data name="replayTailDuration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>289, 21</value>
+  </data>
+  <data name="massStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 33</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 13</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
+    <value>Zeit&amp;intervall in Sekunden</value>
+  </data>
+  <data name="replayTimeInterval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 3</value>
+  </data>
+  <data name="replayTimeInterval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>289, 21</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>466, 124</value>
+  </data>
+  <data name="replayRestartAfterEachLap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 56</value>
+  </data>
+  <data name="replayTailDurationLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 13</value>
+  </data>
+  <data name="replayTailDurationLabel.Text" xml:space="preserve">
+    <value>Schweif&amp;länge in Sekunden</value>
+  </data>
+  <data name="replayTailsVisibleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 13</value>
+  </data>
+  <data name="replayTailsVisibleLabel.Text" xml:space="preserve">
+    <value>Schweife &amp;anzeigen</value>
+  </data>
+  <data name="replayRestartAfterEachLapLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 13</value>
+  </data>
+  <data name="replayRestartAfterEachLapLabel.Text" xml:space="preserve">
+    <value>&amp;Neustart nach jeder Zwischenzeit</value>
+  </data>
+  <data name="massStartLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 13</value>
+  </data>
+  <data name="massStartLabel.Text" xml:space="preserve">
+    <value>&amp;Massenstart simulieren</value>
+  </data>
+  <data name="uiInformation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>496, 55</value>
+  </data>
+  <data name="uiInformation.Text" xml:space="preserve">
+    <value>QuickRoute-Dateien mit den gewünschten Strecken hinzufügen. Die Karte der ersten Datei wird als Hintergrundkarte verwendet. Unterstützte Dateiformate sind QRT-Dateien und JPEG-Dateien, die von QuickRoute 2.3 oder höher exportiert wurden.</value>
+  </data>
+  <data name="includeRoutes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 17</value>
+  </data>
+  <data name="includeRoutes.Text" xml:space="preserve">
+    <value>&amp;Strecken einbinden</value>
+  </data>
+  <data name="includeReplay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 17</value>
+  </data>
+  <data name="includeReplay.Text" xml:space="preserve">
+    <value>&amp;Wiederholung einbinden</value>
+  </data>
+  <data name="replayGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>496, 177</value>
+  </data>
+  <data name="replayGroupBox.Text" xml:space="preserve">
+    <value>Wiederholung</value>
+  </data>
+  <data name="routesGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>497, 53</value>
+  </data>
+  <data name="routesGroupBox.Text" xml:space="preserve">
+    <value>Strecken</value>
+  </data>
+  <data name="fileSelector.Size" type="System.Drawing.Size, System.Drawing">
+    <value>497, 139</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>520, 515</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Mehrere QuickRoute-Dateien in Google Earth öffnen</value>
+  </data>
+</root>

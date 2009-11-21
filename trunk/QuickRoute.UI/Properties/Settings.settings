@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="QuickRoute.UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="QuickRoute_WinSplitsWebServices_WebServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.obasen.nu/winsplits/webservices/WebServices.asmx</Value>
+    </Setting>
+    <Setting Name="QuickRoute_QuickRouteServer_QuickRouteServer" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.matstroeng.se/quickroute/server/index.php</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

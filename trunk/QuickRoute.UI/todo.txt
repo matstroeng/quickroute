@@ -1,0 +1,19 @@
+Use IFormattable and IFormatProvider within e g LongLat
+
+Where should event handlers be hooked in?
+
+Fixa allt med Cut och event handling
+
+Import georeferenced TIFF
+
+Visible momentaneous info items dialog should include up/down possibilities?
+
+javascript plugin api
+http://stackoverflow.com/questions/305915/winforms-how-do-i-execute-c-application-code-from-inside-webbrowser-control
+http://developer.garmin.com/forum/viewtopic.php?t=494&sid=8ce6b04046a90aaf8fe8ad26a674ac95
+
+http://en.wikipedia.org/wiki/Mercator_projection
+http://code.google.com/intl/sv-SE/apis/maps/documentation/overlays.html#Google_Maps_Coordinates
+http://markmail.org/message/c5k7pnqrzk7fabeu
+http://mtaulty.com/communityserver/blogs/mike_taultys_blog/archive/2005/08/01/5547.aspx
+http://www.koushikdutta.com/2008/07/virtual-earth-and-google-maps-tiled-map.html
