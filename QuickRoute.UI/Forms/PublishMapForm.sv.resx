@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cancel.Text" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="date.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 154</value>
+  </data>
+  <data name="date.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 20</value>
+  </data>
+  <data name="commentLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="commentLabel.Text" xml:space="preserve">
+    <value>Komm&amp;entar</value>
+  </data>
+  <data name="resultListUrlLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 13</value>
+  </data>
+  <data name="resultListUrlLabel.Text" xml:space="preserve">
+    <value>Länk till &amp;resultatlista</value>
+  </data>
+  <data name="usernameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
+  <data name="usernameLabel.Text" xml:space="preserve">
+    <value>&amp;Användarnamn</value>
+  </data>
+  <data name="webServiceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
+  </data>
+  <data name="webServiceLabel.Text" xml:space="preserve">
+    <value>&amp;Webbserviceaddress</value>
+  </data>
+  <data name="webServiceURL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 3</value>
+  </data>
+  <data name="webServiceURL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 21</value>
+  </data>
+  <data name="username.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 30</value>
+  </data>
+  <data name="username.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 20</value>
+  </data>
+  <data name="passwordLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="passwordLabel.Text" xml:space="preserve">
+    <value>&amp;Lösenord</value>
+  </data>
+  <data name="password.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 56</value>
+  </data>
+  <data name="password.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 20</value>
+  </data>
+  <data name="mapLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="mapLabel.Text" xml:space="preserve">
+    <value>&amp;Karta</value>
+  </data>
+  <data name="map.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 127</value>
+  </data>
+  <data name="map.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 21</value>
+  </data>
+  <data name="dateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="dateLabel.Text" xml:space="preserve">
+    <value>&amp;Datum</value>
+  </data>
+  <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 13</value>
+  </data>
+  <data name="nameLabel.Text" xml:space="preserve">
+    <value>&amp;Tränings-/tävlingsnamn</value>
+  </data>
+  <data name="mapNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 13</value>
+  </data>
+  <data name="mapNameLabel.Text" xml:space="preserve">
+    <value>Kartans/&amp;områdets namn</value>
+  </data>
+  <data name="organiserLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="organiserLabel.Text" xml:space="preserve">
+    <value>Arrang&amp;ör</value>
+  </data>
+  <data name="countryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="countryLabel.Text" xml:space="preserve">
+    <value>La&amp;nd</value>
+  </data>
+  <data name="disciplineLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 13</value>
+  </data>
+  <data name="disciplineLabel.Text" xml:space="preserve">
+    <value>T&amp;ävlingsform</value>
+  </data>
+  <data name="relayLegLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="relayLegLabel.Text" xml:space="preserve">
+    <value>Strä&amp;cka</value>
+  </data>
+  <data name="name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 206</value>
+  </data>
+  <data name="name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 20</value>
+  </data>
+  <data name="mapName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 232</value>
+  </data>
+  <data name="mapName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 20</value>
+  </data>
+  <data name="organiser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 258</value>
+  </data>
+  <data name="organiser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 20</value>
+  </data>
+  <data name="country.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 284</value>
+  </data>
+  <data name="country.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 20</value>
+  </data>
+  <data name="type.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 310</value>
+  </data>
+  <data name="type.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 20</value>
+  </data>
+  <data name="relayLeg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 336</value>
+  </data>
+  <data name="relayLeg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 20</value>
+  </data>
+  <data name="resultListUrl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 362</value>
+  </data>
+  <data name="resultListUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 20</value>
+  </data>
+  <data name="comment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 388</value>
+  </data>
+  <data name="comment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 61</value>
+  </data>
+  <data name="imageFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 455</value>
+  </data>
+  <data name="imageFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 21</value>
+  </data>
+  <data name="imageFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="imageFormatLabel.Text" xml:space="preserve">
+    <value>Bild&amp;format</value>
+  </data>
+  <data name="category.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 180</value>
+  </data>
+  <data name="category.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 21</value>
+  </data>
+  <data name="categoryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="categoryLabel.Text" xml:space="preserve">
+    <value>Kategor&amp;i</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 82</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>474, 39</value>
+  </data>
+  <data name="ConnectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>399, -1</value>
+  </data>
+  <data name="ConnectButton.Text" xml:space="preserve">
+    <value>Ansl&amp;ut</value>
+  </data>
+  <data name="SavePassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 17</value>
+  </data>
+  <data name="SavePassword.Text" xml:space="preserve">
+    <value>Kom ih&amp;åg lösenord</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="uiInformation.LinkArea" type="System.Windows.Forms.LinkArea, System.Windows.Forms">
+    <value>117, 22</value>
+  </data>
+  <data name="uiInformation.Text" xml:space="preserve">
+    <value>QuickRoute kan publicera kartor i en digital kartpärm. Instruktioner för hur man skapar en digital kartpärm finns på www.matstroeng.se/doma. Webbserviceadressen för din digitala kartpärm är något i stil med http://www.dindoman.se/dinmapp/webservice.php.
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Publicera karta</value>
+  </data>
+</root>

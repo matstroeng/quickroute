@@ -1,0 +1,722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Altitude" xml:space="preserve">
+    <value>Höhe</value>
+  </data>
+  <data name="Distance" xml:space="preserve">
+    <value>Distanz</value>
+  </data>
+  <data name="DonationUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/quickroute/de/donation.php</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_AdjustRoute" xml:space="preserve">
+    <value>Klicke auf einen Punkt entlang der Strecke und ziehe ihn auf die passende Stelle auf der Karte. Mindestens zwei Punkte sind erforderlich, bevorzugt in einem gleichmäßigen Abstand. Wenn benötigt, können weitere Punkt hinzugefügt werden. Drücke und halte Strg und klicke auf einen Punkt um ihn zu entfernen. Mit Rechtsklick auf die Karte und ziehen der Maus kannst du die Karte verschieben. Wenn du mit der Anpassung fertig bist, wähle das Mauszeiger-Werkzeug um die farbcodierte Strecke zu betrachten.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_Cut" xml:space="preserve">
+    <value>Klicke auf einen Punkt entlang der Strecke um den vorhergehenden oder nachfolgenden Teil zu entfernen. Mit Rechtsklick auf die Karte und ziehen der Maus kannst du die Karte verschieben.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_Lap" xml:space="preserve">
+    <value>Klicke auf einen Punkt entlang der Strecke um eine Zwischenzeit einzufügen. Drücke und halte Strg und klicke auf eine Zwischenzeit um sie zu entfernen. Drücke und halte Shift und klicke auf die Strecke um eine Zwischenzeit an einer bestimmten Zeit einzufügen. Mit Rechtsklick auf die Karte und ziehen der Maus kannst du die Karte verschieben.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_Pointer" xml:space="preserve">
+    <value>Ziehe die Maus über die Strecke um Zeit, Distanz, KM-Schnitt, usw. anzuzeigen.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_ZoomIn" xml:space="preserve">
+    <value>Wähle den Teil der Karte, der vergrößert werden soll.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_ZoomOut" xml:space="preserve">
+    <value>Klicke auf den Mittelpunkt, an dem die Karte verkleinert werden soll.</value>
+  </data>
+  <data name="EastAbbreviated" xml:space="preserve">
+    <value>O</value>
+  </data>
+  <data name="ElapsedTime" xml:space="preserve">
+    <value>Laufzeit</value>
+  </data>
+  <data name="Error_ExportImage" xml:space="preserve">
+    <value>Fehler beim Exportieren der Bilddatei</value>
+  </data>
+  <data name="Error_ExportRoute" xml:space="preserve">
+    <value>Fehler beim Exportieren der Streckendatei</value>
+  </data>
+  <data name="Error_NewDocument" xml:space="preserve">
+    <value>Fehler beim Erstellen eines neuen Dokuments</value>
+  </data>
+  <data name="Error_OpenDocument" xml:space="preserve">
+    <value>Fehler beim Öffnen des Dokuments</value>
+  </data>
+  <data name="Error_SaveDocument" xml:space="preserve">
+    <value>Fehler beim Speichern des Dokuments</value>
+  </data>
+  <data name="ExportImageTitle" xml:space="preserve">
+    <value>Bild exportieren</value>
+  </data>
+  <data name="ExportGPXTitle" xml:space="preserve">
+    <value>Strecke als GPX exportieren</value>
+  </data>
+  <data name="HeartRate" xml:space="preserve">
+    <value>Herzfrequenz</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/quickroute/de/help</value>
+  </data>
+  <data name="Histogram" xml:space="preserve">
+    <value>Balkendiagramm</value>
+  </data>
+  <data name="InvalidMapImage" xml:space="preserve">
+    <value>Ungültige Bilddatei</value>
+  </data>
+  <data name="InvalidRoute" xml:space="preserve">
+    <value>Ungültige Strecke</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Ort</value>
+  </data>
+  <data name="MapImageFileDoesNotExist" xml:space="preserve">
+    <value>Die Bilddatei existiert nicht.</value>
+  </data>
+  <data name="NewGradient" xml:space="preserve">
+    <value>Neuer Verlauf</value>
+  </data>
+  <data name="NoGPSDevicesConnected" xml:space="preserve">
+    <value>[Keine GPS-Geräte verbunden]</value>
+  </data>
+  <data name="NoGPSDevicesConnectedMessageBox" xml:space="preserve">
+    <value>Es sind keine GPS-Geräte verbunden.</value>
+  </data>
+  <data name="NorthAbbreviated" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="OpenQuickRouteFileTitle" xml:space="preserve">
+    <value>QuickRoute-Datei öffnen</value>
+  </data>
+  <data name="Pace" xml:space="preserve">
+    <value>KM-Schnitt</value>
+  </data>
+  <data name="PromptSaveChanges" xml:space="preserve">
+    <value>Änderungen in {0} speichern?</value>
+  </data>
+  <data name="QuickRoute" xml:space="preserve">
+    <value>QuickRoute</value>
+  </data>
+  <data name="RouteFileDoesNotExist" xml:space="preserve">
+    <value>Streckendatei existiert nicht.</value>
+  </data>
+  <data name="RouteImportError_NoWaypoints" xml:space="preserve">
+    <value>Es sind keine Wegpunkte in der Datei vorhanden.</value>
+  </data>
+  <data name="RouteImportError_NoWaypointTimes" xml:space="preserve">
+    <value>Es sind keine Wegpunkte mit Zeiten in der Datei vorhanden.</value>
+  </data>
+  <data name="SaveAsTitle" xml:space="preserve">
+    <value>QuickRoute-Datei speichern unter</value>
+  </data>
+  <data name="SelectMapImageFile" xml:space="preserve">
+    <value>Kartendatei wählen</value>
+  </data>
+  <data name="SelectRouteFile" xml:space="preserve">
+    <value>Streckendatei wählen</value>
+  </data>
+  <data name="SouthAbbreviated" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Geschwindigkeit</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Zeit</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Gesamt</value>
+  </data>
+  <data name="UICultureChangeTakesEffectAtNextRestart" xml:space="preserve">
+    <value>Die Änderung der Sprache wird beim nächsten Start von QuickRoute übernommen.</value>
+  </data>
+  <data name="Unit_Altitude" xml:space="preserve">
+    <value>m.ü.M.</value>
+  </data>
+  <data name="Unit_Distance" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="Unit_HeartRate" xml:space="preserve">
+    <value>bpm</value>
+  </data>
+  <data name="Unit_Pace" xml:space="preserve">
+    <value>min/km</value>
+  </data>
+  <data name="Unit_Speed" xml:space="preserve">
+    <value>km/h</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Unbenannt</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="WebsiteShortUrl" xml:space="preserve">
+    <value>matstroeng.se/quickroute/de</value>
+  </data>
+  <data name="WebsiteUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/quickroute/de</value>
+  </data>
+  <data name="WestAbbreviated" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="FileFilter_AllFiles" xml:space="preserve">
+    <value>Alle Dateien (*.*)|*.*</value>
+  </data>
+  <data name="FileFilter_FrwdTxtFiles" xml:space="preserve">
+    <value>Frwd Textdateien (*.txt)|*.txt</value>
+  </data>
+  <data name="FileFilter_ImageFiles" xml:space="preserve">
+    <value>Bilddateien (*.jpg; *.jpeg; *.gif; *.png; *.tif; *.tiff)|*.jpg;*.jpeg;*.gif;*.png;*.tif;*.tiff</value>
+  </data>
+  <data name="FileFilter_JpegFiles" xml:space="preserve">
+    <value>JPEG (*.jpg; *.jpeg)|*.jpg;*.jpeg</value>
+  </data>
+  <data name="FileFilter_PngFiles" xml:space="preserve">
+    <value>PNG (*.png)|*.png</value>
+  </data>
+  <data name="FileFilter_QuickRoute10Files" xml:space="preserve">
+    <value>QuickRoute 1.0 XML Dateien (*.xml)|*.xml</value>
+  </data>
+  <data name="FileFilter_QuickRouteFiles" xml:space="preserve">
+    <value>QuickRoute Dateien (*.qrt)|*.qrt</value>
+  </data>
+  <data name="FileFilter_TcxFiles" xml:space="preserve">
+    <value>Garmin Training Center Dateien (*.tcx)|*.tcx</value>
+  </data>
+  <data name="FileFilter_TiffFiles" xml:space="preserve">
+    <value>TIFF (*.tiff; *.tif)|*.tiff;*.tif</value>
+  </data>
+  <data name="CopyToClipboard" xml:space="preserve">
+    <value>In Zwischenablage kopieren</value>
+  </data>
+  <data name="FileFilter_NavilockActFiles" xml:space="preserve">
+    <value>Navilock act Dateien (*.act)|*.act</value>
+  </data>
+  <data name="NewMap" xml:space="preserve">
+    <value>Neue Karte</value>
+  </data>
+  <data name="Error_MapPublishCommunication" xml:space="preserve">
+    <value>Fehler beim Kommunizieren mit dem Server zum Veröffentlichen der Karte</value>
+  </data>
+  <data name="MapPublish_FailureTitle" xml:space="preserve">
+    <value>Die Karte wurde nicht veröffentlicht</value>
+  </data>
+  <data name="MapPublish_Success" xml:space="preserve">
+    <value>Die Karte wurde unter {0} veröffentlicht.</value>
+  </data>
+  <data name="MapPublish_SuccessTitle" xml:space="preserve">
+    <value>Die Karte wurde veröffentlicht</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Richtungsabweichung</value>
+  </data>
+  <data name="Unit_Direction" xml:space="preserve">
+    <value>°</value>
+  </data>
+  <data name="SizeInPixels" xml:space="preserve">
+    <value>{0} x {1} Pixel</value>
+  </data>
+  <data name="DomaWebsiteUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/doma</value>
+  </data>
+  <data name="Error_GoogleEarthNotInstalledMessage" xml:space="preserve">
+    <value>Google Earth ist anscheinend nicht installiert. Es kann von earth.google.com heruntergeladen werden.</value>
+  </data>
+  <data name="Error_GoogleEarthNotInstalledTitle" xml:space="preserve">
+    <value>Google Earth ist nicht installiert.</value>
+  </data>
+  <data name="ExportKMZTitle" xml:space="preserve">
+    <value>Exportieren als KMZ</value>
+  </data>
+  <data name="ExportRouteDataTitle" xml:space="preserve">
+    <value>Streckendaten exportieren</value>
+  </data>
+  <data name="FileFilter_GpxFiles" xml:space="preserve">
+    <value>GPX (*.gpx)|*.gpx</value>
+  </data>
+  <data name="FileFilter_KmzFiles" xml:space="preserve">
+    <value>KMZ (*.kmz)|*.kmz</value>
+  </data>
+  <data name="FileFilter_RouteDataFiles" xml:space="preserve">
+    <value>Streckendaten Dateien (*.xml)|*.xml</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Karte</value>
+  </data>
+  <data name="QuickRouteSession" xml:space="preserve">
+    <value>QuickRoute Einheit bei {0}</value>
+  </data>
+  <data name="Route" xml:space="preserve">
+    <value>Strecke</value>
+  </data>
+  <data name="RouteSegmentX" xml:space="preserve">
+    <value>Streckenabschnitt {0}</value>
+  </data>
+  <data name="Replay" xml:space="preserve">
+    <value>Wiederholung</value>
+  </data>
+  <data name="Infinite" xml:space="preserve">
+    <value>unendlich</value>
+  </data>
+  <data name="QuickRouteKmlData" xml:space="preserve">
+    <value>QuickRoute Daten</value>
+  </data>
+  <data name="ReplayPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="ReplayTail" xml:space="preserve">
+    <value>Schweif</value>
+  </data>
+  <data name="Routes" xml:space="preserve">
+    <value>Strecken</value>
+  </data>
+  <data name="AddFiles" xml:space="preserve">
+    <value>Dateien hinzufügen</value>
+  </data>
+  <data name="FileFilter_JpegFilesExportedFromQuickRoute" xml:space="preserve">
+    <value>Von QuickRoute exportierte JPEG Dateien (*.jpg; *.jpeg)|*.jpg;*.jpeg</value>
+  </data>
+  <data name="UnexpectedExceptionMessage" xml:space="preserve">
+    <value>Ein unerwarteter Fehler ist aufgetreten.</value>
+  </data>
+  <data name="UntitledX" xml:space="preserve">
+    <value>Unbenannt {0}</value>
+  </data>
+  <data name="OpenInGoogleEarth" xml:space="preserve">
+    <value>In Google Earth öffnen</value>
+  </data>
+  <data name="NewVersionAvailable" xml:space="preserve">
+    <value>QuickRoute Version {0} ist verfügbar.</value>
+  </data>
+  <data name="NewVersionFeatures" xml:space="preserve">
+    <value>Features in der neuen Version:</value>
+  </data>
+  <data name="OpenMultipleFilesInGoogleEarth" xml:space="preserve">
+    <value>Mehrere QuickRoute Dateien in Google Earth öffnen</value>
+  </data>
+  <data name="LapX" xml:space="preserve">
+    <value>Zwischenzeit {0}</value>
+  </data>
+  <data name="MultipleFileExporterNoValidFiles" xml:space="preserve">
+    <value>Es wurden keine gültigen QuickRoute Dateien angegeben.</value>
+  </data>
+  <data name="MultipleFileExporterSomeInvalidFiles" xml:space="preserve">
+    <value>Die folgende Datei enthält keine gültigen QuickRoute Daten und kann nicht verwendet werden:
+
+{0}</value>
+  </data>
+  <data name="FileFilter_AllQuickRouteFiles" xml:space="preserve">
+    <value>Alle QuickRoute Dateien (*.qrt; *.xml; *.jpg; *.jpeg)|*.qrt;*.xml;*.jpg;*.jpeg</value>
+  </data>
+  <data name="UnrecognizedFileFormat" xml:space="preserve">
+    <value>Das Dateiformat von {0} wurde nicht erkannt.</value>
+  </data>
+  <data name="Error_InvalidQuickRouteFile" xml:space="preserve">
+    <value>Die Datei ist keine gültige QuickRoute Datei.</value>
+  </data>
+  <data name="SelectLapInfoColumns" xml:space="preserve">
+    <value>Spalten wählen</value>
+  </data>
+  <data name="SmoothingIntervalForX" xml:space="preserve">
+    <value>Glättungsintervall für {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Altitude" xml:space="preserve">
+    <value>Höhe: {0} m.ü.M.</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AltitudeDifference" xml:space="preserve">
+    <value>Höhenunterschied (Zwischenzeit): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AltitudeDifferenceFromStart" xml:space="preserve">
+    <value>Höhenunterschied (Gesamt): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Ascent" xml:space="preserve">
+    <value>Anstieg (Zwischenzeit): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AscentFromStart" xml:space="preserve">
+    <value>Anstieg (Gesamt): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageDirectionDeviationToNextLap" xml:space="preserve">
+    <value>Durchschnittliche Richtungsabweichung (Zwischenzeit): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageDirectionDeviationToNextLapFromStart" xml:space="preserve">
+    <value>Durchschnittliche Richtungsabweichung (Gesamt): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageHeartRate" xml:space="preserve">
+    <value>Durchschnittliche Herzfrequenz (Zwischenzeit): {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageHeartRateFromStart" xml:space="preserve">
+    <value>Durchschnittliche Herzfrequenz (Gesamt): {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageInclination" xml:space="preserve">
+    <value>Durchschnittliche Steigung (Zwischenzeit): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageInclinationFromStart" xml:space="preserve">
+    <value>Durchschnittliche Steigung (Gesamt): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRoutePace" xml:space="preserve">
+    <value>Durchschnittlicher KM-Schnitt auf der Strecke (Zwischenzeit): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRoutePaceFromStart" xml:space="preserve">
+    <value>Durchschnittlicher KM-Schnitt auf der Strecke (Gesamt): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRouteSpeed" xml:space="preserve">
+    <value>Durchschnittsgeschwindigkeit auf der Strecke (Zwischenzeit): {0} km/h</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRouteSpeedFromStart" xml:space="preserve">
+    <value>Durchschnittsgeschwindigkeit auf der Strecke (Gesamt): {0} km/h</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLinePace" xml:space="preserve">
+    <value>Durchschnittlicher KM-Schnitt unter der Linie (Zwischenzeit): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLinePaceFromStart" xml:space="preserve">
+    <value>Durchschnittlicher KM-Schnitt unter der Linie (Gesamt): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLineSpeed" xml:space="preserve">
+    <value>Durchschnittsgeschwindigkeit unter der Linie (Zwischenzeit): {0} km/h</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLineSpeedFromStart" xml:space="preserve">
+    <value>Durchschnittsgeschwindigkeit unter der Linie (Gesamt): {0} km/h</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Descent" xml:space="preserve">
+    <value>Abstieg (Zwischenzeit): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_DescentFromStart" xml:space="preserve">
+    <value>Abstieg (Gesamt): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Direction" xml:space="preserve">
+    <value>Richtung: {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_DirectionDeviationToNextLap" xml:space="preserve">
+    <value>Richtungsabweichung: {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ElapsedTime" xml:space="preserve">
+    <value>Zeit (Zwischenzeit): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ElapsedTimeFromStart" xml:space="preserve">
+    <value>Zeit (Gesamt): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_HeartRate" xml:space="preserve">
+    <value>Herzfrequenz: {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Inclination" xml:space="preserve">
+    <value>Steigung: {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_LapNumber" xml:space="preserve">
+    <value>Runde: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Location" xml:space="preserve">
+    <value>Ort: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MaxHeartRate" xml:space="preserve">
+    <value>Maximale Herzfrequenz (Zwischenzeit): {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MaxHeartRateFromStart" xml:space="preserve">
+    <value>Maximale Herzfrequenz (Gesamt): {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MinHeartRate" xml:space="preserve">
+    <value>Minimale Herzfrequenz (Zwischenzeit): {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MinHeartRateFromStart" xml:space="preserve">
+    <value>Minimale Herzfrequenz (Gesamt): {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Pace" xml:space="preserve">
+    <value>KM-Schnitt: {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteDistance" xml:space="preserve">
+    <value>Streckenlänge (Zwischenzeit): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteDistanceFromStart" xml:space="preserve">
+    <value>Streckenlänge (Gesamt): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteToStraightLine" xml:space="preserve">
+    <value>Unterschied zwischen Streckenlänge und Distanz unter der Linie (Zwischenzeit): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteToStraightLineFromStart" xml:space="preserve">
+    <value>Unterschied zwischen Streckenlänge und Distanz unter der Linie (Gesamt): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Speed" xml:space="preserve">
+    <value>Geschwindigkeit: {0} km/h</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_StraightLineDistance" xml:space="preserve">
+    <value>Distanz unter der Linie (Zwischenzeit): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_StraightLineDistanceFromStart" xml:space="preserve">
+    <value>Distanz unter der Linie (Gesamt): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Time" xml:space="preserve">
+    <value>Uhrzeit: {0}</value>
+  </data>
+  <data name="RoutePropertyName_Altitude" xml:space="preserve">
+    <value>Höhe</value>
+  </data>
+  <data name="RoutePropertyName_AltitudeDifference" xml:space="preserve">
+    <value>Höhenunterschied (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_AltitudeDifferenceFromStart" xml:space="preserve">
+    <value>Höhenunterschied (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_Ascent" xml:space="preserve">
+    <value>Anstieg (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_AscentFromStart" xml:space="preserve">
+    <value>Anstieg (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageDirectionDeviationToNextLap" xml:space="preserve">
+    <value>Durchschnittliche Richtungsabweichung (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_AverageDirectionDeviationToNextLapFromStart" xml:space="preserve">
+    <value>Durchschnittliche Richtungsabweichung (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageHeartRate" xml:space="preserve">
+    <value>Durchschnittliche Herzfrequenz (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_AverageHeartRateFromStart" xml:space="preserve">
+    <value>Durchschnittliche Herzfrequenz (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageInclination" xml:space="preserve">
+    <value>Durchschnittliche Steigung (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_AverageInclinationFromStart" xml:space="preserve">
+    <value>Durchschnittliche Steigung (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRoutePace" xml:space="preserve">
+    <value>Durchschnittlicher KM-Schnitt auf der Strecke (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRoutePaceFromStart" xml:space="preserve">
+    <value>Durchschnittlicher KM-Schnitt auf der Strecke (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRouteSpeed" xml:space="preserve">
+    <value>Durchschnittsgeschwindigkeit auf der Strecke (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRouteSpeedFromStart" xml:space="preserve">
+    <value>Durchschnittsgeschwindigkeit auf der Strecke (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLinePace" xml:space="preserve">
+    <value>Durchschnittlicher KM-Schnitt unter der Linie (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLinePaceFromStart" xml:space="preserve">
+    <value>Durchschnittlicher KM-Schnitt unter der Linie (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLineSpeed" xml:space="preserve">
+    <value>Durchschnittsgeschwindigkeit unter der Linie (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLineSpeedFromStart" xml:space="preserve">
+    <value>Durchschnittsgeschwindigkeit unter der Linie (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_Descent" xml:space="preserve">
+    <value>Abstieg (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_DescentFromStart" xml:space="preserve">
+    <value>Abstieg (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_Direction" xml:space="preserve">
+    <value>Richtung</value>
+  </data>
+  <data name="RoutePropertyName_DirectionDeviationToNextLap" xml:space="preserve">
+    <value>Richtungsabweichung</value>
+  </data>
+  <data name="RoutePropertyName_ElapsedTime" xml:space="preserve">
+    <value>Zeit (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_ElapsedTimeFromStart" xml:space="preserve">
+    <value>Zeit (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_HeartRate" xml:space="preserve">
+    <value>Herzfrequenz</value>
+  </data>
+  <data name="RoutePropertyName_Inclination" xml:space="preserve">
+    <value>Steigung</value>
+  </data>
+  <data name="RoutePropertyName_LapNumber" xml:space="preserve">
+    <value>Runde</value>
+  </data>
+  <data name="RoutePropertyName_Location" xml:space="preserve">
+    <value>Ort</value>
+  </data>
+  <data name="RoutePropertyName_MaxHeartRate" xml:space="preserve">
+    <value>Maximale Herzfrequenz (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_MaxHeartRateFromStart" xml:space="preserve">
+    <value>Maximale Herzfrequenz (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_MinHeartRate" xml:space="preserve">
+    <value>Minimale Herzfrequenz (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_MinHeartRateFromStart" xml:space="preserve">
+    <value>Minimale Herzfrequenz (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_Pace" xml:space="preserve">
+    <value>KM-Schnitt</value>
+  </data>
+  <data name="RoutePropertyName_RouteDistance" xml:space="preserve">
+    <value>Streckenlänge (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_RouteDistanceFromStart" xml:space="preserve">
+    <value>Streckenlänge (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_RouteToStraightLine" xml:space="preserve">
+    <value>Unterschied zwischen Streckenlänge und Distanz unter der Linie (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_RouteToStraightLineFromStart" xml:space="preserve">
+    <value>Unterschied zwischen Streckenlänge und Distanz unter der Linie (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_Speed" xml:space="preserve">
+    <value>Geschwindigkeit</value>
+  </data>
+  <data name="RoutePropertyName_StraightLineDistance" xml:space="preserve">
+    <value>Distanz unter der Linie (Zwischenzeit)</value>
+  </data>
+  <data name="RoutePropertyName_StraightLineDistanceFromStart" xml:space="preserve">
+    <value>Distanz unter der Linie (Gesamt)</value>
+  </data>
+  <data name="RoutePropertyName_Time" xml:space="preserve">
+    <value>Uhrzeit</value>
+  </data>
+  <data name="SelectMomentaneousInfoProperties" xml:space="preserve">
+    <value>Eigenschaften wählen</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ImageX" xml:space="preserve">
+    <value>Horizontaler Punkt: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ImageY" xml:space="preserve">
+    <value>Vertikaler Punkt: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Latitude" xml:space="preserve">
+    <value>Breitengrad: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Longitude" xml:space="preserve">
+    <value>Längengrad: {0}</value>
+  </data>
+  <data name="RoutePropertyName_ImageX" xml:space="preserve">
+    <value>Horizontaler Punkt</value>
+  </data>
+  <data name="RoutePropertyName_ImageY" xml:space="preserve">
+    <value>Vertikaler Punkt</value>
+  </data>
+  <data name="RoutePropertyName_Latitude" xml:space="preserve">
+    <value>Breitengrad</value>
+  </data>
+  <data name="RoutePropertyName_Longitude" xml:space="preserve">
+    <value>Längengrad</value>
+  </data>
+</root>

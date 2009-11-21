@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolarRS800CXReader", "PolarRS800CXReader\PolarRS800CXReader.csproj", "{D3448966-5499-4F7F-8999-6484B27B56C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolarRS800CXReaderTest", "PolarRS800CXReader.Test\PolarRS800CXReaderTest.csproj", "{B4E51364-A825-4A53-A277-33AD290C8660}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3448966-5499-4F7F-8999-6484B27B56C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3448966-5499-4F7F-8999-6484B27B56C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3448966-5499-4F7F-8999-6484B27B56C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3448966-5499-4F7F-8999-6484B27B56C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4E51364-A825-4A53-A277-33AD290C8660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E51364-A825-4A53-A277-33AD290C8660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E51364-A825-4A53-A277-33AD290C8660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E51364-A825-4A53-A277-33AD290C8660}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

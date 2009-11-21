@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuickRoute.BusinessEntities</RootNamespace>
+    <AssemblyName>QuickRoute.BusinessEntities</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExifWorks, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalReferences\ExifWorks.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.7.2.6, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalReferences\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalReferences\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerCollections, Version=1.0.2141.24679, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalReferences\PowerCollections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\AddHandleAction.cs" />
+    <Compile Include="Actions\AddLapAction.cs" />
+    <Compile Include="Actions\AddTimeOffsetToSessionAction.cs" />
+    <Compile Include="Actions\CutRouteAction.cs" />
+    <Compile Include="Actions\DeleteHandleAction.cs" />
+    <Compile Include="Actions\DeleteLapAction.cs" />
+    <Compile Include="Actions\EditLapAction.cs" />
+    <Compile Include="Actions\IAction.cs" />
+    <Compile Include="Actions\MoveHandleAction.cs" />
+    <Compile Include="Actions\RotateMapAction.cs" />
+    <Compile Include="Actions\TrimRouteAndAddLapsAction.cs" />
+    <Compile Include="AdjustedRoute.cs" />
+    <Compile Include="ColorfulHistogram.cs" />
+    <Compile Include="ColorRange.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="DocumentSettings.cs" />
+    <Compile Include="Exporters\KmlMultipleFilesExporter.cs" />
+    <Compile Include="Exporters\GpxExporter.cs" />
+    <Compile Include="Exporters\ImageExporter.cs" />
+    <Compile Include="Exporters\RouteDataExporter.cs" />
+    <Compile Include="Forms\ExportImageSizeAndQualitySelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExportImageSizeAndQualitySelector.Designer.cs">
+      <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExportImageSizeSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExportImageSizeSelector.Designer.cs">
+      <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalizedProperties\Attributes.cs" />
+    <Compile Include="GlobalizedProperties\Descriptors.cs" />
+    <Compile Include="ImageFilePropertySelectors.cs" />
+    <Compile Include="Importers\Polar\PolarHRMImporter.cs" />
+    <Compile Include="Importers\Navilock\NavilockImporter.cs" />
+    <Compile Include="Importers\Polar\ProTrainer\PolarProTrainerImporter.cs" />
+    <Compile Include="Importers\FRWD\FRWDImporter.cs" />
+    <Compile Include="Importers\Garmin\Forerunner\GarminForerunnerImporter.cs" />
+    <Compile Include="Importers\GPX\GPX10\gpx1.0.cs" />
+    <Compile Include="Importers\GPX\GPXUtil.cs" />
+    <Compile Include="Importers\ImportError.cs" />
+    <Compile Include="Importers\Polar\ProTrainer\PersonSessionSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Importers\Polar\ProTrainer\PersonSessionSelector.Designer.cs">
+      <DependentUpon>PersonSessionSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Importers\Polar\ProTrainer\PolarProTrainerUtil.cs" />
+    <Compile Include="Importers\QuickRoute\QuickRouteImporter.cs" />
+    <Compile Include="Importers\SessionSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Importers\SessionSelector.Designer.cs">
+      <DependentUpon>SessionSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Importers\Garmin\ANTAgent\ANTDevice.cs" />
+    <Compile Include="Importers\Garmin\ANTAgent\GarminANTAgentImporter.cs" />
+    <Compile Include="General.cs" />
+    <Compile Include="GeneralMatrix.cs" />
+    <Compile Include="Gradient.cs" />
+    <Compile Include="Graphics.cs" />
+    <Compile Include="Handle.cs" />
+    <Compile Include="HandleCollection.cs" />
+    <Compile Include="Importers\Garmin\ANTAgent\HistoryItem.cs" />
+    <Compile Include="Importers\GPX\GPXImporter.cs" />
+    <Compile Include="Importers\IGPSDeviceImporter.cs" />
+    <Compile Include="Importers\ImportResult.cs" />
+    <Compile Include="Importers\IRouteFileImporter.cs" />
+    <Compile Include="Importers\IRouteImporter.cs" />
+    <Compile Include="Importers\RouteImporterUtil.cs" />
+    <Compile Include="Importers\TCX\TCXImporter.cs" />
+    <Compile Include="Importers\WorkProgressEventArgs.cs" />
+    <Compile Include="Exporters\KmlExporter.cs" />
+    <Compile Include="Lap.cs" />
+    <Compile Include="LapCollection.cs" />
+    <Compile Include="LapInfo.cs" />
+    <Compile Include="RouteProperties\Altitude.cs" />
+    <Compile Include="RouteProperties\AltitudeDifference.cs" />
+    <Compile Include="RouteProperties\Ascent.cs" />
+    <Compile Include="RouteProperties\AverageDirectionDeviationToNextLap.cs" />
+    <Compile Include="RouteProperties\AverageHeartRate.cs" />
+    <Compile Include="RouteProperties\AverageInclination.cs" />
+    <Compile Include="RouteProperties\AverageRoutePace.cs" />
+    <Compile Include="RouteProperties\AverageRouteSpeed.cs" />
+    <Compile Include="RouteProperties\AverageStraightLinePace.cs" />
+    <Compile Include="RouteProperties\AverageStraightLineSpeed.cs" />
+    <Compile Include="RouteProperties\BlankRouteProperty.cs" />
+    <Compile Include="RouteProperties\CircleTimeAtStartOfSpan.cs" />
+    <Compile Include="RouteProperties\CircleTimeBackward.cs" />
+    <Compile Include="RouteProperties\CircleTimeAtEndOfSpan.cs" />
+    <Compile Include="RouteProperties\CircleTimeInSpan.cs" />
+    <Compile Include="RouteProperties\CircleTimeForward.cs" />
+    <Compile Include="RouteProperties\CircleTime.cs" />
+    <Compile Include="RouteProperties\Direction.cs" />
+    <Compile Include="RouteProperties\DirectionDeviationToNextLap.cs" />
+    <Compile Include="RouteProperties\Inclination.cs" />
+    <Compile Include="RouteProperties\Latitude.cs" />
+    <Compile Include="RouteProperties\Location.cs" />
+    <Compile Include="RouteProperties\Descent.cs" />
+    <Compile Include="RouteProperties\HeartRate.cs" />
+    <Compile Include="RouteProperties\LapNumber.cs" />
+    <Compile Include="RouteProperties\Longitude.cs" />
+    <Compile Include="RouteProperties\MaxHeartRate.cs" />
+    <Compile Include="RouteProperties\MinHeartRate.cs" />
+    <Compile Include="RouteProperties\Pace.cs" />
+    <Compile Include="RouteProperties\ImageX.cs" />
+    <Compile Include="RouteProperties\ImageY.cs" />
+    <Compile Include="RouteProperties\RouteLocations.cs" />
+    <Compile Include="RouteProperties\RouteProperty.cs" />
+    <Compile Include="RouteProperties\RouteMomentaneousProperty.cs" />
+    <Compile Include="RouteProperties\RouteFromStartProperty.cs" />
+    <Compile Include="RouteProperties\RoutePropertyCacheManager.cs" />
+    <Compile Include="RouteProperties\RouteSpanProperty.cs" />
+    <Compile Include="RouteProperties\ElapsedTime.cs" />
+    <Compile Include="RouteProperties\RouteDistance.cs" />
+    <Compile Include="RouteProperties\RouteToStraightLine.cs" />
+    <Compile Include="RouteProperties\SelectableRoutePropertyType.cs" />
+    <Compile Include="RouteProperties\SelectableRoutePropertyTypeCollection.cs" />
+    <Compile Include="RouteProperties\Speed.cs" />
+    <Compile Include="RouteProperties\StraightLineDistance.cs" />
+    <Compile Include="LineGraph.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="MarkerDrawers.cs" />
+    <Compile Include="Numeric\Converters.cs" />
+    <Compile Include="Numeric\ScaleCreators.cs" />
+    <Compile Include="ParameterizedLocation.cs" />
+    <Compile Include="QuickRouteJpegExtensionData.cs" />
+    <Compile Include="Importers\SupportedImportFormatManager.cs" />
+    <Compile Include="RouteProperties\Time.cs" />
+    <Compile Include="Units.cs" />
+    <Compile Include="Route.cs" />
+    <Compile Include="RouteAdjustManager.cs" />
+    <Compile Include="RouteLineSettings.cs" />
+    <Compile Include="Importers\GPX\GPX11\gpx1.1.cs">
+      <DependentUpon>gpx1.1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Session.cs" />
+    <Compile Include="SessionCollection.cs" />
+    <Compile Include="ApplicationSettings.cs" />
+    <Compile Include="SessionSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Importers\GPX\GPX10\gpx1.0.xsd" />
+    <None Include="Importers\GPX\GPX11\gpx1.1.xsd" />
+    <None Include="Importers\GPX\GPX11\gpx1.1.xsx">
+      <DependentUpon>gpx1.1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.de.resx">
+      <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.fr.resx">
+      <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.no.resx">
+      <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.resx">
+      <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.ru.resx">
+      <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.sv.resx">
+      <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportImageSizeSelector.de.resx">
+      <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportImageSizeSelector.fr.resx">
+      <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportImageSizeSelector.no.resx">
+      <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportImageSizeSelector.resx">
+      <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportImageSizeSelector.ru.resx">
+      <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportImageSizeSelector.sv.resx">
+      <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.de.resx">
+      <DependentUpon>PersonSessionSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.fr.resx">
+      <DependentUpon>PersonSessionSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.no.resx">
+      <DependentUpon>PersonSessionSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.resx">
+      <DependentUpon>PersonSessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.ru.resx">
+      <DependentUpon>PersonSessionSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.sv.resx">
+      <DependentUpon>PersonSessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importers\SessionSelector.de.resx">
+      <DependentUpon>SessionSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importers\SessionSelector.fr.resx">
+      <DependentUpon>SessionSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importers\SessionSelector.no.resx">
+      <DependentUpon>SessionSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importers\SessionSelector.resx">
+      <DependentUpon>SessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importers\SessionSelector.ru.resx">
+      <DependentUpon>SessionSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importers\SessionSelector.sv.resx">
+      <DependentUpon>SessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GPSDeviceReaders\GarminUSBReader\GarminUSBReader.csproj">
+      <Project>{FFEC4820-9B6B-47E9-8594-B71A52081C1E}</Project>
+      <Name>GarminUSBReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuickRoute.Common\QuickRoute.Common.csproj">
+      <Project>{7F93415F-ACEB-4B4F-8E6B-51D0B096F38E}</Project>
+      <Name>QuickRoute.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuickRoute.Resources\QuickRoute.Resources.csproj">
+      <Project>{2854A1FB-52F7-4197-A24E-E9977FD21563}</Project>
+      <Name>QuickRoute.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Experimental\" />
+    <Folder Include="ExternalReferences\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

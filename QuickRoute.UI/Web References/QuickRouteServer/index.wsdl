@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.matstroeng.se/quickroute/server" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.matstroeng.se/quickroute/server" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.matstroeng.se/quickroute/server">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="GetCurrentVersionRequest">
+        <xsd:all>
+          <xsd:element name="UserVersion" type="xsd:string" />
+          <xsd:element name="UserLanguage" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetCurrentVersionResponse">
+        <xsd:all>
+          <xsd:element name="CurrentVersion" type="xsd:string" />
+          <xsd:element name="DownloadUrl" type="xsd:string" />
+          <xsd:element name="Features" type="tns:StringArray" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StringArray">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="xsd:string[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCurrentVersionRequest">
+    <wsdl:part name="request" type="tns:GetCurrentVersionRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentVersionResponse">
+    <wsdl:part name="response" type="tns:GetCurrentVersionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="QuickRouteServerPortType">
+    <wsdl:operation name="GetCurrentVersion">
+      <wsdl:input message="tns:GetCurrentVersionRequest" />
+      <wsdl:output message="tns:GetCurrentVersionResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QuickRouteServerBinding" type="tns:QuickRouteServerPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="GetCurrentVersion">
+      <soap:operation soapAction="http://www.matstroeng.se/quickroute/server/index.php/GetCurrentVersion" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/quickroute/server" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.matstroeng.se/quickroute/server" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QuickRouteServer">
+    <wsdl:port name="QuickRouteServerPort" binding="tns:QuickRouteServerBinding">
+      <soap:address location="http://www.matstroeng.se/quickroute/server/index.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

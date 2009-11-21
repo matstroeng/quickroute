@@ -1,0 +1,44 @@
+C:\dev\QuickRoute\GPSDeviceReaders\PolarRS800CXReader\Dependencies>dumpbin /exports PolarWindLink.dll
+Microsoft (R) COFF/PE Dumper Version 9.00.21022.08
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file PolarWindLink.dll
+
+File Type: DLL
+
+  Section contains the following exports for PolarWindLink.dll
+
+    00000000 characteristics
+    48C79B2A time date stamp Wed Sep 10 12:02:18 2008
+        0.00 version
+           1 ordinal base
+          16 number of functions
+          16 number of names
+
+    ordinal hint RVA      name
+
+          2    0 000017B0 fnOnlineCom_CloseConnection
+         14    1 00001730 fnOnlineCom_EnableBootloader
+          3    2 00001FB0 fnOnlineCom_FlushReceiveBuffer
+          7    3 00002690 fnOnlineCom_Get12BitRRPacket
+          5    4 00002100 fnOnlineCom_GetAvgHR
+          8    5 00002A10 fnOnlineCom_GetAvgHRFast
+          4    6 00002010 fnOnlineCom_GetDeviceCount
+         11    7 00002DE0 fnOnlineCom_GetG3Data
+         12    8 00002F20 fnOnlineCom_GetGamingData
+         10    9 00002C80 fnOnlineCom_GetHRData
+          9    A 00002B40 fnOnlineCom_GetRLX
+          6    B 00002230 fnOnlineCom_GetRRPacket
+         13    C 00001F00 fnOnlineCom_GetVersion
+          1    D 00001860 fnOnlineCom_OpenConnection
+         16    E 000016F0 fnOnlineCom_RebootRFUSB
+         15    F 00001770 fnOnlineCom_StartBootloader
+
+  Summary
+
+        4000 .data
+        3000 .rdata
+        2000 .reloc
+        1000 .rsrc
+        C000 .text

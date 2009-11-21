@@ -1,0 +1,770 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Altitude" xml:space="preserve">
+    <value>Höjd</value>
+  </data>
+  <data name="Distance" xml:space="preserve">
+    <value>Distans</value>
+  </data>
+  <data name="DonationUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/quickroute/sv/donation.php</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_AdjustRoute" xml:space="preserve">
+    <value>Klicka på en punkt på rutten och dra den till motsvarande ställe på kartan. Åtminstone två punkter, gärna med stort mellanrum, behöver passas in. Vid behov kan ytterligare inpassning göras. Håll ner Ctrl och klicka på en inpassad punkt för att ta bort den. Högerklicka och dra för att flytta kartan. När inpassningen är färdig, klicka på pekarverktyget för att visa den färgkodade ruttlinjen.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_Cut" xml:space="preserve">
+    <value>Klicka på en punkt på rutten för att ta bort den del som ligger före eller efter denna punkt. Högerklicka och dra för att flytta kartan.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_Lap" xml:space="preserve">
+    <value>Klicka på en punkt på rutten för att lägga till en mellantid. Håll ner Ctrl och klicka på en mellantid för att ta bort den. Håll ner Skift och klicka på rutten för att lägga till en mellantid vid en viss tidpunkt. Högerklicka och dra för att flytta kartan.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_Pointer" xml:space="preserve">
+    <value>Peka med musen på en punkt på rutten för att visa aktuell tid, distans, tempo m.m.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_ZoomIn" xml:space="preserve">
+    <value>Markera området där kartbilden ska förstoras.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_ZoomOut" xml:space="preserve">
+    <value>Markera centrumpunkten där kartbilden ska förminskas.</value>
+  </data>
+  <data name="EastAbbreviated" xml:space="preserve">
+    <value>Ö</value>
+  </data>
+  <data name="ElapsedTime" xml:space="preserve">
+    <value>Avverkad tid</value>
+  </data>
+  <data name="Error_ExportImage" xml:space="preserve">
+    <value>Fel vid export av fil</value>
+  </data>
+  <data name="Error_ExportRoute" xml:space="preserve">
+    <value>Fel vid export av ruttfil</value>
+  </data>
+  <data name="Error_NewDocument" xml:space="preserve">
+    <value>Fel vid skapande av nytt dokument</value>
+  </data>
+  <data name="Error_OpenDocument" xml:space="preserve">
+    <value>Fel vid öppnande av dokument</value>
+  </data>
+  <data name="Error_SaveDocument" xml:space="preserve">
+    <value>Fel vid sparande av dokument</value>
+  </data>
+  <data name="ExportImageTitle" xml:space="preserve">
+    <value>Exportera bild</value>
+  </data>
+  <data name="ExportGPXTitle" xml:space="preserve">
+    <value>Exportera till GPX</value>
+  </data>
+  <data name="HeartRate" xml:space="preserve">
+    <value>Puls</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/quickroute/sv/help</value>
+  </data>
+  <data name="Histogram" xml:space="preserve">
+    <value>Histogram</value>
+  </data>
+  <data name="InvalidMapImage" xml:space="preserve">
+    <value>Felaktig kartbildfil</value>
+  </data>
+  <data name="InvalidRoute" xml:space="preserve">
+    <value>Felaktig rutt</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Koordinater</value>
+  </data>
+  <data name="MapImageFileDoesNotExist" xml:space="preserve">
+    <value>Kartbildfilen existerar inte.</value>
+  </data>
+  <data name="NewGradient" xml:space="preserve">
+    <value>Ny gradient</value>
+  </data>
+  <data name="NoGPSDevicesConnected" xml:space="preserve">
+    <value>[Inga GPS-enheter anslutna]</value>
+  </data>
+  <data name="NoGPSDevicesConnectedMessageBox" xml:space="preserve">
+    <value>Det finns inga GPS-enheter anslutna.</value>
+  </data>
+  <data name="NorthAbbreviated" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="OpenQuickRouteFileTitle" xml:space="preserve">
+    <value>Öppna QuickRoute-fil</value>
+  </data>
+  <data name="Pace" xml:space="preserve">
+    <value>Tempo</value>
+  </data>
+  <data name="PromptSaveChanges" xml:space="preserve">
+    <value>Vill du spara ändringarna till {0}?</value>
+  </data>
+  <data name="QuickRoute" xml:space="preserve">
+    <value>QuickRoute</value>
+  </data>
+  <data name="RouteFileDoesNotExist" xml:space="preserve">
+    <value>Ruttfilen existerar inte.</value>
+  </data>
+  <data name="RouteImportError_NoWaypoints" xml:space="preserve">
+    <value>Det finns inga ruttpunkter i filen.</value>
+  </data>
+  <data name="RouteImportError_NoWaypointTimes" xml:space="preserve">
+    <value>Det finns inga ruttpunkter med tidsangivelser i filen.</value>
+  </data>
+  <data name="SaveAsTitle" xml:space="preserve">
+    <value>Spara QuickRoute-fil som</value>
+  </data>
+  <data name="SelectMapImageFile" xml:space="preserve">
+    <value>Välj kartbildfil</value>
+  </data>
+  <data name="SelectRouteFile" xml:space="preserve">
+    <value>Välj ruttfil</value>
+  </data>
+  <data name="SouthAbbreviated" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Hastighet</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Tid</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Totalt</value>
+  </data>
+  <data name="UICultureChangeTakesEffectAtNextRestart" xml:space="preserve">
+    <value>Ändringen av språk verkställs nästa gång QuickRoute startas.</value>
+  </data>
+  <data name="Unit_Altitude" xml:space="preserve">
+    <value>möh</value>
+  </data>
+  <data name="Unit_Distance" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="Unit_HeartRate" xml:space="preserve">
+    <value>slag/min</value>
+  </data>
+  <data name="Unit_Pace" xml:space="preserve">
+    <value>min/km</value>
+  </data>
+  <data name="Unit_Speed" xml:space="preserve">
+    <value>km/h</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Namnlös</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="WebsiteShortUrl" xml:space="preserve">
+    <value>matstroeng.se/quickroute/sv</value>
+  </data>
+  <data name="WebsiteUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/quickroute/sv</value>
+  </data>
+  <data name="WestAbbreviated" xml:space="preserve">
+    <value>V</value>
+  </data>
+  <data name="FileFilter_AllFiles" xml:space="preserve">
+    <value>Alla filer (*.*)|*.*</value>
+  </data>
+  <data name="FileFilter_FrwdTxtFiles" xml:space="preserve">
+    <value>Frwd textfiler (*.txt)|*.txt</value>
+  </data>
+  <data name="FileFilter_ImageFiles" xml:space="preserve">
+    <value>Bildfiler  (*.jpg; *.jpeg; *.gif; *.png; *.tif; *.tiff)|*.jpg;*.jpeg;*.gif;*.png;*.tif;*.tiff</value>
+  </data>
+  <data name="FileFilter_JpegFiles" xml:space="preserve">
+    <value>Jpeg (*.jpg; *.jpeg)|*.jpg;*.jpeg</value>
+  </data>
+  <data name="FileFilter_PngFiles" xml:space="preserve">
+    <value>Png (*.png)|*.png</value>
+  </data>
+  <data name="FileFilter_QuickRoute10Files" xml:space="preserve">
+    <value>QuickRoute 1.0 xml-filer (*.xml)|*.xml</value>
+  </data>
+  <data name="FileFilter_QuickRouteFiles" xml:space="preserve">
+    <value>QuickRoute-filer (*.qrt)|*.qrt</value>
+  </data>
+  <data name="FileFilter_TcxFiles" xml:space="preserve">
+    <value>Garmin Training Center historikfiler (*.tcx)|*.tcx</value>
+  </data>
+  <data name="FileFilter_TiffFiles" xml:space="preserve">
+    <value>Tiff (*.tiff; *.tif)|*.tiff;*.tif</value>
+  </data>
+  <data name="CopyToClipboard" xml:space="preserve">
+    <value>Kopiera till urklipp</value>
+  </data>
+  <data name="FileFilter_NavilockActFiles" xml:space="preserve">
+    <value>Navilock act-filer (*.act)|*.act</value>
+  </data>
+  <data name="NewMap" xml:space="preserve">
+    <value>Ny karta</value>
+  </data>
+  <data name="Error_MapPublishCommunication" xml:space="preserve">
+    <value>Fel vid kommunikation med kartpubliceringsserver</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Riktningsavvikelse</value>
+  </data>
+  <data name="Unit_Direction" xml:space="preserve">
+    <value>°</value>
+  </data>
+  <data name="SizeInPixels" xml:space="preserve">
+    <value>{0} x {1} pixlar</value>
+  </data>
+  <data name="DomaWebsiteUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/doma</value>
+  </data>
+  <data name="MapPublish_FailureTitle" xml:space="preserve">
+    <value>Kartan publicerades inte</value>
+  </data>
+  <data name="MapPublish_Success" xml:space="preserve">
+    <value>Kartan publicerades på {0}.</value>
+  </data>
+  <data name="MapPublish_SuccessTitle" xml:space="preserve">
+    <value>Kartan publicerades</value>
+  </data>
+  <data name="Error_GoogleEarthNotInstalledMessage" xml:space="preserve">
+    <value>Google Earth verkar inte vara installerat på den här datorn. Ladda ner programmet från earth.google.com.</value>
+  </data>
+  <data name="Error_GoogleEarthNotInstalledTitle" xml:space="preserve">
+    <value>Google Earth är inte installerat</value>
+  </data>
+  <data name="ExportKMZTitle" xml:space="preserve">
+    <value>Exportera till KMZ</value>
+  </data>
+  <data name="ExportRouteDataTitle" xml:space="preserve">
+    <value>Exportera ruttdata</value>
+  </data>
+  <data name="FileFilter_GpxFiles" xml:space="preserve">
+    <value>GPX (*.gpx)|*.gpx</value>
+  </data>
+  <data name="FileFilter_KmzFiles" xml:space="preserve">
+    <value>KMZ (*.kmz)|*.kmz</value>
+  </data>
+  <data name="FileFilter_RouteDataFiles" xml:space="preserve">
+    <value>Ruttdata-filer (*.xml)|*.xml</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Karta</value>
+  </data>
+  <data name="QuickRouteSession" xml:space="preserve">
+    <value>QuickRoute-pass {0}</value>
+  </data>
+  <data name="Route" xml:space="preserve">
+    <value>Rutt</value>
+  </data>
+  <data name="RouteSegmentX" xml:space="preserve">
+    <value>Ruttsegment {0}</value>
+  </data>
+  <data name="Infinite" xml:space="preserve">
+    <value>oändlig</value>
+  </data>
+  <data name="QuickRouteKmlData" xml:space="preserve">
+    <value>QuickRoute-data</value>
+  </data>
+  <data name="Replay" xml:space="preserve">
+    <value>Återuppspelning</value>
+  </data>
+  <data name="ReplayPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="ReplayTail" xml:space="preserve">
+    <value>Svans</value>
+  </data>
+  <data name="Routes" xml:space="preserve">
+    <value>Rutter</value>
+  </data>
+  <data name="AddFiles" xml:space="preserve">
+    <value>Lägg till filer</value>
+  </data>
+  <data name="FileFilter_JpegFilesExportedFromQuickRoute" xml:space="preserve">
+    <value>JPEG-filer exporterade från QuickRoute (*.jpg; *.jpeg)|*.jpg;*.jpeg</value>
+  </data>
+  <data name="UnexpectedExceptionMessage" xml:space="preserve">
+    <value>Ett oväntat fel inträffade.</value>
+  </data>
+  <data name="UntitledX" xml:space="preserve">
+    <value>Namnlös {0}</value>
+  </data>
+  <data name="OpenInGoogleEarth" xml:space="preserve">
+    <value>Öppna i Google Earth</value>
+  </data>
+  <data name="NewVersionAvailable" xml:space="preserve">
+    <value>QuickRoute version {0} är nu tillgänglig.</value>
+  </data>
+  <data name="NewVersionFeatures" xml:space="preserve">
+    <value>Funktioner i den nya versionen:</value>
+  </data>
+  <data name="OpenMultipleFilesInGoogleEarth" xml:space="preserve">
+    <value>Öppna flera QuickRoute-filer i Google Earth</value>
+  </data>
+  <data name="LapX" xml:space="preserve">
+    <value>Mellantid {0}</value>
+  </data>
+  <data name="MultipleFileExporterNoValidFiles" xml:space="preserve">
+    <value>Inga giltiga QuickRoute-filer angivna.</value>
+  </data>
+  <data name="MultipleFileExporterSomeInvalidFiles" xml:space="preserve">
+    <value>Följande filer innehåller inte QuickRoute-data och kan inte tas med:
+
+{0}</value>
+  </data>
+  <data name="FileFilter_AllQuickRouteFiles" xml:space="preserve">
+    <value>Alla QuickRoute-filer (*.qrt; *.xml; *.jpg; *.jpeg)|*.qrt;*.xml;*.jpg;*.jpeg</value>
+  </data>
+  <data name="UnrecognizedFileFormat" xml:space="preserve">
+    <value>Filformatet för {0} är okänt.</value>
+  </data>
+  <data name="Error_InvalidQuickRouteFile" xml:space="preserve">
+    <value>Filen är inte en giltig QuickRoute-fil.</value>
+  </data>
+  <data name="SelectLapInfoColumns" xml:space="preserve">
+    <value>Välj kolumner</value>
+  </data>
+  <data name="SmoothingIntervalForX" xml:space="preserve">
+    <value>Utjämningsintervall för {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Altitude" xml:space="preserve">
+    <value>Höjd: {0} möh</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AltitudeDifference" xml:space="preserve">
+    <value>Höjdskillnad (sträcka): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AltitudeDifferenceFromStart" xml:space="preserve">
+    <value>Höjdskillnad (totalt): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Ascent" xml:space="preserve">
+    <value>Stigning (sträcka): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AscentFromStart" xml:space="preserve">
+    <value>Stigning (totalt): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageDirectionDeviationToNextLap" xml:space="preserve">
+    <value>Genomsnittlig riktningsavvikelse (sträcka): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageDirectionDeviationToNextLapFromStart" xml:space="preserve">
+    <value>Genomsnittlig riktningsavvikelse (totalt): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageHeartRate" xml:space="preserve">
+    <value>Genomsnittlig puls (sträcka): {0} slag/min</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageHeartRateFromStart" xml:space="preserve">
+    <value>Genomsnittlig puls (totalt): {0} slag/min</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageInclination" xml:space="preserve">
+    <value>Genomsnittlig lutning (sträcka): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageInclinationFromStart" xml:space="preserve">
+    <value>Genomsnittlig lutning (totalt): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRoutePace" xml:space="preserve">
+    <value>Genomsnittligt ruttempo (sträcka): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRoutePaceFromStart" xml:space="preserve">
+    <value>Genomsnittligt ruttempo (totalt): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRouteSpeed" xml:space="preserve">
+    <value>Genomsnittlig rutthastighet (sträcka): {0} km/h</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRouteSpeedFromStart" xml:space="preserve">
+    <value>Genomsnittlig rutthastighet (totalt): {0} km/h</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLinePace" xml:space="preserve">
+    <value>Genomsnittligt tempo fågelvägen (sträcka): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLinePaceFromStart" xml:space="preserve">
+    <value>Genomsnittligt tempo fågelvägen (totalt): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLineSpeed" xml:space="preserve">
+    <value>Genomsnittlig hastighet fågelvägen (sträcka): {0} km/h</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLineSpeedFromStart" xml:space="preserve">
+    <value>Genomsnittlig hastighet fågelvägen (totalt): {0} km/h</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Descent" xml:space="preserve">
+    <value>Fallhöjd (sträcka): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_DescentFromStart" xml:space="preserve">
+    <value>Fallhöjd (totalt): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Direction" xml:space="preserve">
+    <value>Riktning: {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_DirectionDeviationToNextLap" xml:space="preserve">
+    <value>Riktningsavvikelse: {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ElapsedTime" xml:space="preserve">
+    <value>Tid (sträcka): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ElapsedTimeFromStart" xml:space="preserve">
+    <value>Tid (totalt): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_HeartRate" xml:space="preserve">
+    <value>Puls: {0} slag/min</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Inclination" xml:space="preserve">
+    <value>Lutning: {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_LapNumber" xml:space="preserve">
+    <value>Mellantidsnummer: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Location" xml:space="preserve">
+    <value>Position: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MaxHeartRate" xml:space="preserve">
+    <value>Högsta puls (sträcka): {0} slag/min</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MaxHeartRateFromStart" xml:space="preserve">
+    <value>Högsta puls (totalt): {0} slag/min</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MinHeartRate" xml:space="preserve">
+    <value>Lägsta puls (sträcka): {0} slag/min</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MinHeartRateFromStart" xml:space="preserve">
+    <value>Lägsta puls (totalt): {0} slag/min</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Pace" xml:space="preserve">
+    <value>Tempo: {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteDistance" xml:space="preserve">
+    <value>Ruttlängd (sträcka): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteDistanceFromStart" xml:space="preserve">
+    <value>Ruttlängd (totalt): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteToStraightLine" xml:space="preserve">
+    <value>Längdskillnad mellan rutt och fågelväg (sträcka): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteToStraightLineFromStart" xml:space="preserve">
+    <value>Längdskillnad mellan rutt och fågelväg (totalt): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Speed" xml:space="preserve">
+    <value>Hastighet: {0} km/h</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_StraightLineDistance" xml:space="preserve">
+    <value>Längd fågelvägen (sträcka): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_StraightLineDistanceFromStart" xml:space="preserve">
+    <value>Längd fågelvägen (totalt): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Time" xml:space="preserve">
+    <value>Tidpunkt: {0}</value>
+  </data>
+  <data name="RoutePropertyName_Altitude" xml:space="preserve">
+    <value>Höjd</value>
+  </data>
+  <data name="RoutePropertyName_AltitudeDifference" xml:space="preserve">
+    <value>Höjdskillnad (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_AltitudeDifferenceFromStart" xml:space="preserve">
+    <value>Höjdskillnad (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_Ascent" xml:space="preserve">
+    <value>Stigning (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_AscentFromStart" xml:space="preserve">
+    <value>Stigning (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageDirectionDeviationToNextLap" xml:space="preserve">
+    <value>Genomsnittlig riktningsavvikelse (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_AverageDirectionDeviationToNextLapFromStart" xml:space="preserve">
+    <value>Genomsnittlig riktningsavvikelse (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageHeartRate" xml:space="preserve">
+    <value>Genomsnittlig puls (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_AverageHeartRateFromStart" xml:space="preserve">
+    <value>Genomsnittlig puls (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageInclination" xml:space="preserve">
+    <value>Genomsnittlig lutning (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_AverageInclinationFromStart" xml:space="preserve">
+    <value>Genomsnittlig lutning (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRoutePace" xml:space="preserve">
+    <value>Genomsnittligt ruttempo (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRoutePaceFromStart" xml:space="preserve">
+    <value>Genomsnittligt ruttempo (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRouteSpeed" xml:space="preserve">
+    <value>Genomsnittlig rutthastighet (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRouteSpeedFromStart" xml:space="preserve">
+    <value>Genomsnittlig rutthastighet (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLinePace" xml:space="preserve">
+    <value>Genomsnittligt tempo fågelvägen (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLinePaceFromStart" xml:space="preserve">
+    <value>Genomsnittligt tempo fågelvägen (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLineSpeed" xml:space="preserve">
+    <value>Genomsnittlig hastighet fågelvägen (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLineSpeedFromStart" xml:space="preserve">
+    <value>Genomsnittlig hastighet fågelvägen (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_Descent" xml:space="preserve">
+    <value>Fallhöjd (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_DescentFromStart" xml:space="preserve">
+    <value>Fallhöjd (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_Direction" xml:space="preserve">
+    <value>Riktning</value>
+  </data>
+  <data name="RoutePropertyName_DirectionDeviationToNextLap" xml:space="preserve">
+    <value>Riktningsavvikelse</value>
+  </data>
+  <data name="RoutePropertyName_ElapsedTime" xml:space="preserve">
+    <value>Tid (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_ElapsedTimeFromStart" xml:space="preserve">
+    <value>Tid (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_HeartRate" xml:space="preserve">
+    <value>Puls</value>
+  </data>
+  <data name="RoutePropertyName_Inclination" xml:space="preserve">
+    <value>Lutning</value>
+  </data>
+  <data name="RoutePropertyName_LapNumber" xml:space="preserve">
+    <value>Mellantidsnummer</value>
+  </data>
+  <data name="RoutePropertyName_Location" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="RoutePropertyName_MaxHeartRate" xml:space="preserve">
+    <value>Högsta puls (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_MaxHeartRateFromStart" xml:space="preserve">
+    <value>Högsta puls (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_MinHeartRate" xml:space="preserve">
+    <value>Lägsta puls (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_MinHeartRateFromStart" xml:space="preserve">
+    <value>Lägsta puls (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_Pace" xml:space="preserve">
+    <value>Tempo</value>
+  </data>
+  <data name="RoutePropertyName_RouteDistance" xml:space="preserve">
+    <value>Ruttlängd (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_RouteDistanceFromStart" xml:space="preserve">
+    <value>Ruttlängd (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_RouteToStraightLine" xml:space="preserve">
+    <value>Längdskillnad mellan rutt och fågelväg (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_RouteToStraightLineFromStart" xml:space="preserve">
+    <value>Längdskillnad mellan rutt och fågelväg (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_Speed" xml:space="preserve">
+    <value>Hastighet</value>
+  </data>
+  <data name="RoutePropertyName_StraightLineDistance" xml:space="preserve">
+    <value>Längd fågelvägen (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_StraightLineDistanceFromStart" xml:space="preserve">
+    <value>Längd fågelvägen (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_Time" xml:space="preserve">
+    <value>Tidpunkt</value>
+  </data>
+  <data name="SelectMomentaneousInfoProperties" xml:space="preserve">
+    <value>Välj information</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ImageX" xml:space="preserve">
+    <value>Bildposition X: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ImageY" xml:space="preserve">
+    <value>Bildposition Y: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Latitude" xml:space="preserve">
+    <value>Latitud: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Longitude" xml:space="preserve">
+    <value>Longitud: {0}</value>
+  </data>
+  <data name="RoutePropertyName_ImageX" xml:space="preserve">
+    <value>Bildposition X</value>
+  </data>
+  <data name="RoutePropertyName_ImageY" xml:space="preserve">
+    <value>Bildposition Y</value>
+  </data>
+  <data name="RoutePropertyName_Latitude" xml:space="preserve">
+    <value>Latitud</value>
+  </data>
+  <data name="RoutePropertyName_Longitude" xml:space="preserve">
+    <value>Longitud</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeBackward" xml:space="preserve">
+    <value>Cirkeltid (bakåt)</value>
+    <comment>Added 2009-11-17</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeBackward" xml:space="preserve">
+    <value>Cirkeltid (bakåt): {0}</value>
+    <comment>Added 2009-11-17</comment>
+  </data>
+  <data name="RoutePropertyName_CircleTimeForward" xml:space="preserve">
+    <value>Cirkeltid (framåt)</value>
+    <comment>Added 2009-11-17</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeForward" xml:space="preserve">
+    <value>Cirkeltid (framåt): {0}</value>
+    <comment>Added 2009-11-17</comment>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtStartOfSpan" xml:space="preserve">
+    <value>Cirkeltid vid sträckans start</value>
+    <comment>Added 2009-11-17</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpan" xml:space="preserve">
+    <value>Cirkeltid vid sträckans start: {0}</value>
+    <comment>Added 2009-11-17</comment>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtEndOfSpan" xml:space="preserve">
+    <value>Cirkeltid vid sträckans slut</value>
+    <comment>Added 2009-11-17</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpan" xml:space="preserve">
+    <value>Cirkeltid vid sträckans slut: {0}</value>
+    <comment>Added 2009-11-17</comment>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
+    <value>Summa cirkeltid vid sträckornas start</value>
+    <comment>Added 2009-11-17</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
+    <value>Summa cirkeltid vid sträckornas start: {0}</value>
+    <comment>Added 2009-11-17</comment>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
+    <value>Summa cirkeltid vid sträckornas slut</value>
+    <comment>Added 2009-11-17</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
+    <value>Summa cirkeltid vid sträckornas slut: {0}</value>
+    <comment>Added 2009-11-17</comment>
+  </data>
+</root>

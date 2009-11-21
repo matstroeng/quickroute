@@ -1,0 +1,89 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.UI", "QuickRoute.UI\QuickRoute.UI.csproj", "{953F40A2-9741-4BE8-B42E-59C603700281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.BusinessEntities", "QuickRoute.BusinessEntities\QuickRoute.BusinessEntities.csproj", "{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "QuickRoute.Setup", "QuickRoute.Setup\QuickRoute.Setup.vdproj", "{FE26B0A5-5071-4175-94F1-4BDC04F27C95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B64CC9AA-878F-4690-9949-0C5784306CEE}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		QuickRoute.vsmdi = QuickRoute.vsmdi
+		QuickRoute.UI\todo.txt = QuickRoute.UI\todo.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.Controls", "QuickRoute.Controls\QuickRoute.Controls.csproj", "{D5755345-EE87-4B08-95D7-55DDDB331CFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.PropertyControls", "QuickRoute.PropertyControls\QuickRoute.PropertyControls.csproj", "{4900715B-572B-4279-B704-29B0640612ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.Resources", "QuickRoute.Resources\QuickRoute.Resources.csproj", "{2854A1FB-52F7-4197-A24E-E9977FD21563}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GPSDeviceReaders", "GPSDeviceReaders", "{8D875711-C954-4A8B-A492-42DD40EA190B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarminUSBReader", "GPSDeviceReaders\GarminUSBReader\GarminUSBReader.csproj", "{FFEC4820-9B6B-47E9-8594-B71A52081C1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolarRS800CXReader", "GPSDeviceReaders\PolarRS800CXReader\PolarRS800CXReader.csproj", "{D3448966-5499-4F7F-8999-6484B27B56C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publishers", "Publishers", "{DECE96F3-CCEB-4FDD-A65A-5CB444EF8151}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.Common", "QuickRoute.Common\QuickRoute.Common.csproj", "{7F93415F-ACEB-4B4F-8E6B-51D0B096F38E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOMAPublisher", "Publishers\DOMAPublisher\DOMAPublisher.csproj", "{B7D88639-3248-4309-A687-94DC11EC2946}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{953F40A2-9741-4BE8-B42E-59C603700281}.Debug|x86.ActiveCfg = Debug|x86
+		{953F40A2-9741-4BE8-B42E-59C603700281}.Debug|x86.Build.0 = Debug|x86
+		{953F40A2-9741-4BE8-B42E-59C603700281}.Release|x86.ActiveCfg = Release|x86
+		{953F40A2-9741-4BE8-B42E-59C603700281}.Release|x86.Build.0 = Release|x86
+		{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}.Debug|x86.ActiveCfg = Debug|x86
+		{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}.Debug|x86.Build.0 = Debug|x86
+		{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}.Release|x86.ActiveCfg = Release|x86
+		{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}.Release|x86.Build.0 = Release|x86
+		{FE26B0A5-5071-4175-94F1-4BDC04F27C95}.Debug|x86.ActiveCfg = Debug
+		{FE26B0A5-5071-4175-94F1-4BDC04F27C95}.Debug|x86.Build.0 = Debug
+		{FE26B0A5-5071-4175-94F1-4BDC04F27C95}.Release|x86.ActiveCfg = Release
+		{FE26B0A5-5071-4175-94F1-4BDC04F27C95}.Release|x86.Build.0 = Release
+		{D5755345-EE87-4B08-95D7-55DDDB331CFB}.Debug|x86.ActiveCfg = Debug|x86
+		{D5755345-EE87-4B08-95D7-55DDDB331CFB}.Debug|x86.Build.0 = Debug|x86
+		{D5755345-EE87-4B08-95D7-55DDDB331CFB}.Release|x86.ActiveCfg = Release|x86
+		{D5755345-EE87-4B08-95D7-55DDDB331CFB}.Release|x86.Build.0 = Release|x86
+		{4900715B-572B-4279-B704-29B0640612ED}.Debug|x86.ActiveCfg = Debug|x86
+		{4900715B-572B-4279-B704-29B0640612ED}.Debug|x86.Build.0 = Debug|x86
+		{4900715B-572B-4279-B704-29B0640612ED}.Release|x86.ActiveCfg = Release|x86
+		{4900715B-572B-4279-B704-29B0640612ED}.Release|x86.Build.0 = Release|x86
+		{2854A1FB-52F7-4197-A24E-E9977FD21563}.Debug|x86.ActiveCfg = Debug|x86
+		{2854A1FB-52F7-4197-A24E-E9977FD21563}.Debug|x86.Build.0 = Debug|x86
+		{2854A1FB-52F7-4197-A24E-E9977FD21563}.Release|x86.ActiveCfg = Release|x86
+		{2854A1FB-52F7-4197-A24E-E9977FD21563}.Release|x86.Build.0 = Release|x86
+		{FFEC4820-9B6B-47E9-8594-B71A52081C1E}.Debug|x86.ActiveCfg = Debug|x86
+		{FFEC4820-9B6B-47E9-8594-B71A52081C1E}.Debug|x86.Build.0 = Debug|x86
+		{FFEC4820-9B6B-47E9-8594-B71A52081C1E}.Release|x86.ActiveCfg = Release|x86
+		{FFEC4820-9B6B-47E9-8594-B71A52081C1E}.Release|x86.Build.0 = Release|x86
+		{D3448966-5499-4F7F-8999-6484B27B56C9}.Debug|x86.ActiveCfg = Debug|x86
+		{D3448966-5499-4F7F-8999-6484B27B56C9}.Debug|x86.Build.0 = Debug|x86
+		{D3448966-5499-4F7F-8999-6484B27B56C9}.Release|x86.ActiveCfg = Release|x86
+		{D3448966-5499-4F7F-8999-6484B27B56C9}.Release|x86.Build.0 = Release|x86
+		{7F93415F-ACEB-4B4F-8E6B-51D0B096F38E}.Debug|x86.ActiveCfg = Debug|x86
+		{7F93415F-ACEB-4B4F-8E6B-51D0B096F38E}.Debug|x86.Build.0 = Debug|x86
+		{7F93415F-ACEB-4B4F-8E6B-51D0B096F38E}.Release|x86.ActiveCfg = Release|x86
+		{7F93415F-ACEB-4B4F-8E6B-51D0B096F38E}.Release|x86.Build.0 = Release|x86
+		{B7D88639-3248-4309-A687-94DC11EC2946}.Debug|x86.ActiveCfg = Debug|x86
+		{B7D88639-3248-4309-A687-94DC11EC2946}.Debug|x86.Build.0 = Debug|x86
+		{B7D88639-3248-4309-A687-94DC11EC2946}.Release|x86.ActiveCfg = Release|x86
+		{B7D88639-3248-4309-A687-94DC11EC2946}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FFEC4820-9B6B-47E9-8594-B71A52081C1E} = {8D875711-C954-4A8B-A492-42DD40EA190B}
+		{D3448966-5499-4F7F-8999-6484B27B56C9} = {8D875711-C954-4A8B-A492-42DD40EA190B}
+		{B7D88639-3248-4309-A687-94DC11EC2946} = {DECE96F3-CCEB-4FDD-A65A-5CB444EF8151}
+	EndGlobalSection
+EndGlobal

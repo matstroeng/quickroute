@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.winsplits.se/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.winsplits.se/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.winsplits.se/">
+      <s:element name="GetEvents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventsResult" type="tns:ArrayOfEvent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEvent">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Event" nillable="true" type="tns:Event" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Event">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Organiser" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DatabaseId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCategories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="databaseId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoriesResult" type="tns:ArrayOfCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:Category" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Category">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoOfRunners" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRunnersAndSplits">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="databaseId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="categoryIndex" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRunnersAndSplitsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRunnersAndSplitsResult" type="tns:ArrayOfRunner" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRunner">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Runner" nillable="true" type="tns:Runner" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Runner">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Club" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinishTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Splits" type="tns:ArrayOfDateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDateTime">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="dateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEventsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEvents" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRunnersAndSplitsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRunnersAndSplits" />
+  </wsdl:message>
+  <wsdl:message name="GetRunnersAndSplitsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRunnersAndSplitsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServicesSoap">
+    <wsdl:operation name="GetEvents">
+      <wsdl:input message="tns:GetEventsSoapIn" />
+      <wsdl:output message="tns:GetEventsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input message="tns:GetCategoriesSoapIn" />
+      <wsdl:output message="tns:GetCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRunnersAndSplits">
+      <wsdl:input message="tns:GetRunnersAndSplitsSoapIn" />
+      <wsdl:output message="tns:GetRunnersAndSplitsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServicesSoap" type="tns:WebServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEvents">
+      <soap:operation soapAction="http://www.winsplits.se/GetEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap:operation soapAction="http://www.winsplits.se/GetCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRunnersAndSplits">
+      <soap:operation soapAction="http://www.winsplits.se/GetRunnersAndSplits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServicesSoap12" type="tns:WebServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEvents">
+      <soap12:operation soapAction="http://www.winsplits.se/GetEvents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap12:operation soapAction="http://www.winsplits.se/GetCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRunnersAndSplits">
+      <soap12:operation soapAction="http://www.winsplits.se/GetRunnersAndSplits" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServices">
+    <wsdl:port name="WebServicesSoap" binding="tns:WebServicesSoap">
+      <soap:address location="http://www.obasen.nu/winsplits/webservices/WebServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServicesSoap12" binding="tns:WebServicesSoap12">
+      <soap12:address location="http://www.obasen.nu/winsplits/webservices/WebServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
