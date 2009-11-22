@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -721,50 +721,38 @@
   </data>
   <data name="RoutePropertyName_CircleTimeBackward" xml:space="preserve">
     <value>Cirkeltid (bakåt)</value>
-    <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeBackward" xml:space="preserve">
     <value>Cirkeltid (bakåt): {0}</value>
-    <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyName_CircleTimeForward" xml:space="preserve">
     <value>Cirkeltid (framåt)</value>
-    <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeForward" xml:space="preserve">
     <value>Cirkeltid (framåt): {0}</value>
-    <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyName_CircleTimeAtStartOfSpan" xml:space="preserve">
     <value>Cirkeltid vid sträckans start</value>
-    <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpan" xml:space="preserve">
     <value>Cirkeltid vid sträckans start: {0}</value>
-    <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyName_CircleTimeAtEndOfSpan" xml:space="preserve">
     <value>Cirkeltid vid sträckans slut</value>
-    <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpan" xml:space="preserve">
     <value>Cirkeltid vid sträckans slut: {0}</value>
-    <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyName_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
     <value>Summa cirkeltid vid sträckornas start</value>
-    <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
     <value>Summa cirkeltid vid sträckornas start: {0}</value>
-    <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyName_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
     <value>Summa cirkeltid vid sträckornas slut</value>
-    <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
-    <value>Summa cirkeltid vid sträckornas slut: {0}</value>
-    <comment>Added 2009-11-17</comment>
+    <value>Summa cirkeltid vid sträckornas SLUT: {0}</value>
   </data>
 </root>
