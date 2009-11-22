@@ -19,7 +19,7 @@ namespace QuickRoute.Tools.ResourceTranslationTool
       foreach(var language in languages)
       {
         var sb = new StringBuilder();
-        sb.AppendLine("Created at " + DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") + ".");
+        sb.AppendLine("Created at " + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ".");
         sb.AppendLine();
 
         foreach(var file in solution.GetLocalizedResourceFiles(language))
