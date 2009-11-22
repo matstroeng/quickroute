@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -157,6 +159,15 @@ namespace QuickRoute.Tools.ResourceTranslationTool
     public string Key { get; set; }
     public string Value { get; set; }
     public string Comment { get; set; }
+  }
+
+  public static class SvnManager
+  {
+    public static void AddFile(string path)
+    {
+      var svnPath = ConfigurationManager.AppSettings["SubversionPath"];
+      Process.Start(svnPath, string.Format(@"add ""{0}""", path));
+    }
   }
 
 }
