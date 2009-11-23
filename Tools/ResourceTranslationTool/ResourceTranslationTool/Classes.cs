@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml;
+using System.Xml.Linq;
 using System.Xml.XPath;
 
 namespace QuickRoute.Tools.ResourceTranslationTool
@@ -35,6 +36,60 @@ namespace QuickRoute.Tools.ResourceTranslationTool
     }
 
   }
+
+  public class Project
+  {
+    public string ProjectFileName { get; private set; }
+    
+    public Project(string fileName)
+    {
+      ProjectFileName = fileName;
+    }
+    
+    public void AddResourceFile(string fileName)
+    {
+      var relativeFileName = fileName.Replace(Path.GetDirectoryName(ProjectFileName), "");
+      if (relativeFileName.StartsWith("\\")) relativeFileName = relativeFileName.Substring(1);
+      var document = XDocument.Load(ProjectFileName);
+      XNamespace ns = "http://schemas.microsoft.com/developer/msbuild/2003";
+
+      var resourceFiles = GetResourceFiles(ProjectFileName);
+
+      if (!resourceFiles.Contains(fileName))
+      {
+        var resourceFileItemGroup = new XElement(ns + "ItemGroup");
+        var embeddedResource = new XElement(ns + "EmbeddedResource");
+        embeddedResource.SetAttributeValue("Include", relativeFileName);
+        resourceFileItemGroup.Add(embeddedResource);
+        document.Descendants(ns + "ItemGroup").Last().AddAfterSelf(resourceFileItemGroup);
+        document.Save(ProjectFileName);
+      }
+    }
+
+    private static List<string> GetResourceFiles(string projectFileName)
+    {
+      var document = XDocument.Load(projectFileName);
+      XNamespace ns = "http://schemas.microsoft.com/developer/msbuild/2003";
+
+      var resourceFiles = from node in document.Descendants(ns + "ItemGroup").Descendants(ns + "EmbeddedResource")
+                          where node.Attribute("Include") != null && node.Attribute("Include").Value.EndsWith(".resx")
+                          select Path.Combine(Path.GetDirectoryName(projectFileName), node.Attribute("Include").Value);
+      return resourceFiles.ToList();
+    }
+
+    public static string GetProjectFile(string fileName)
+    {
+      var path = Path.GetDirectoryName(fileName);
+      if(string.IsNullOrEmpty(path)) return null;
+      var projectFiles = Directory.GetFiles(path, "*.csproj");
+      if (projectFiles.Length > 0)
+      {
+        return projectFiles[0];
+      }
+      return GetProjectFile(path);
+    }
+  }
+
 
 
   public class LocalizedResourceFile
