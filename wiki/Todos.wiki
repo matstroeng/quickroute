@@ -1,0 +1,7 @@
+=version 2.4=
+
+  * Printing of lap grid
+  * Delete lap from the context menu shown when right-clicking a lap in the lap grid
+
+=version 3.0=
+  * Rewrite graphics engine (canvas) to allow for fancy graphic objects and replay
