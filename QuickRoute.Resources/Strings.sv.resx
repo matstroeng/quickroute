@@ -753,6 +753,6 @@
     <value>Summa cirkeltid vid sträckornas slut</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
-    <value>Summa cirkeltid vid sträckornas SLUT: {0}</value>
+    <value>Summa cirkeltid vid sträckornas slut: {0}</value>
   </data>
 </root>
