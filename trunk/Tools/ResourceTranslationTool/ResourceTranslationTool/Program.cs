@@ -60,7 +60,7 @@ namespace QuickRoute.Tools.ResourceTranslationTool
       var client = new WebClient();
       var newFiles = client.DownloadString(serverUrl + "?action=getNewUploads");
 
-      if(!string.IsNullOrEmpty(newFiles))
+      if (!string.IsNullOrEmpty(newFiles))
       {
         foreach (var data in newFiles.Split('\n'))
         {
@@ -70,20 +70,31 @@ namespace QuickRoute.Tools.ResourceTranslationTool
           var extension = "." + language + ".resx";
           var zipFileData = client.DownloadData(serverUrl + "?action=downloadZipFile&id=" + id);
           var zipFile = ZipFile.Read(zipFileData);
-          foreach (var file in zipFile)
+          if (!zipFile.Any(o => o.IsDirectory && o.FileName.StartsWith("QuickRoute.")))
           {
-            // only extract files with the .[language].resx extension
-            if (file.FileName.EndsWith(extension))
+            Console.WriteLine("Error: Invalid file structure! QuickRoute.UI and its sibling directories must be at the root level.");
+          }
+          else
+          {
+            foreach (var file in zipFile)
             {
-              Console.WriteLine("Extracting {0}...", file.FileName);
-              file.Extract(solutionPath, true);
-              // make sure to add the file to the subversion repository
-              SvnManager.AddFile(Path.Combine(solutionPath, file.FileName));
+              // only extract files with the .[language].resx extension
+              if (file.FileName.EndsWith(extension))
+              {
+                Console.WriteLine("Extracting {0}...", file.FileName);
+                file.Extract(solutionPath, true);
+                // make sure to add the file to the subversion repository
+                var fullFileName = Path.Combine(solutionPath, file.FileName.Replace("/", "\\"));
+                SvnManager.AddFile(fullFileName);
+                // make sure to add the file to the project file
+                var projectFile = Project.GetProjectFile(fullFileName);
+                var project = new Project(projectFile);
+                project.AddResourceFile(fullFileName);
+              }
             }
           }
         }
       }
     }
-  
   }
 }

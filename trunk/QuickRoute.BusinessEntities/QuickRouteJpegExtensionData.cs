@@ -701,7 +701,7 @@ namespace QuickRoute.BusinessEntities
       /// </summary>
       ImageCornerPositions = 3,
       /// <summary>
-      /// The pixel location and size of the the map image (excluding borders and header)
+      /// The pixel location and size of the the map image (excluding borders and header) 
       /// </summary>
       MapLocationAndSizeInPixels = 4,
       Sessions = 5,
