@@ -1,6 +1,6 @@
 ==Version 2.4==
   * Printing of lap grid
-  * Delete lap from the context menu shown when right-clicking a lap in the lap grid
+  * ~~Delete lap from the context menu shown when right-clicking a lap in the lap grid~~
   * Documentation and user guides
 
 ==Version 3.0==
