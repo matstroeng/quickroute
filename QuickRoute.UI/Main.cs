@@ -1,4 +1,5 @@
 using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -48,6 +49,7 @@ namespace QuickRoute.UI
     private Cursor previousCursor;
     private int lapSortOrderColumnIndex;
     private SortOrder lapSortOrder;
+    private int lapIndexToDelete;
 
     private MainFormState formState;
 
@@ -1312,10 +1314,11 @@ namespace QuickRoute.UI
       laps.RowCount = lapInfoList.Count;
       laps.ColumnCount = (lapInfoList.Count == 0 ? 0 : lapInfoList[0].GetProperties().Count);
       updatingUINow = false;
+      SetLapGridHeaders();
       SortLapGrid();
       laps.Invalidate();
 
-      laps.AutoResizeColumns();
+      laps.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
       if (laps.Rows.Count > 0) laps.Rows[laps.Rows.Count - 1].Selected = true;
       int width = 0;
       foreach (DataGridViewColumn c in laps.Columns)
@@ -1326,6 +1329,20 @@ namespace QuickRoute.UI
       updatingUINow = true;
       rightPanel.Width = width + laps.Margin.Horizontal;
       updatingUINow = false;
+    }
+
+    private void SetLapGridHeaders()
+    {
+      if (lapInfoList.Count > 0)
+      {
+        for (var i = 0; i < laps.Columns.Count; i++)
+        {
+          var propertyType = lapInfoList[0].GetProperties()[i].GetType();
+          var tooltipTemplateText = Strings.ResourceManager.GetString("RoutePropertyName_" + propertyType.Name);
+          if (tooltipTemplateText == null) tooltipTemplateText = Strings.ResourceManager.GetString("RoutePropertyName_" + propertyType.GetType().Name.Replace("FromStart", ""));
+          if (tooltipTemplateText != null) laps.Columns[i].HeaderText = tooltipTemplateText;
+        }
+      }
     }
 
     private void SortLapGrid()
@@ -2381,7 +2398,22 @@ namespace QuickRoute.UI
         var menu = new ContextMenu();
         menu.MenuItems.Add(new MenuItem(Strings.SelectLapInfoColumns, laps_ContextMenuSelectLapInfoColumns_ItemClick));
         menu.MenuItems.Add(new MenuItem(Strings.CopyToClipboard, laps_ContextMenuCopyToClipboard_ItemClick));
+        var rowIndex = laps.HitTest(e.X, e.Y).RowIndex;
+        if(rowIndex > -1 && rowIndex < laps.Rows.Count -1)
+        {
+          lapIndexToDelete = lapInfoList[rowIndex].Index;
+          menu.MenuItems.Add(new MenuItem(string.Format(Strings.DeleteLapX, lapInfoList[rowIndex].Index), laps_ContextMenuDelete_ItemClick));
+        }
         menu.Show(laps, e.Location);
+      }
+    }
+
+    private void laps_KeyDown(object sender, KeyEventArgs e)
+    {
+      if (e.KeyData == Keys.Delete && laps.SelectedRows.Count == 1)
+      {
+        var rowIndex = laps.SelectedRows[0].Index;
+        if (rowIndex > -1 && rowIndex < laps.Rows.Count - 1) canvas.DeleteLap(canvas.CurrentSession.Laps[lapInfoList[rowIndex].Index]);
       }
     }
 
@@ -2408,6 +2440,11 @@ namespace QuickRoute.UI
     {
       string text = GetLapsInfoAsText();
       Clipboard.SetText(text);
+    }
+
+    private void laps_ContextMenuDelete_ItemClick(object sender, EventArgs e)
+    {
+      canvas.DeleteLap(canvas.CurrentSession.Laps[lapIndexToDelete]);
     }
 
     private void sessions_SelectedIndexChanged(object sender, EventArgs e)

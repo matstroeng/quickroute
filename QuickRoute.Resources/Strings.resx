@@ -767,4 +767,8 @@
     <value>Sum of circle times at end of each lap: {0}</value>
     <comment>Added 2009-11-17</comment>
   </data>
+  <data name="DeleteLapX" xml:space="preserve">
+    <value>Delete lap {0}</value>
+    <comment>Added 2009-11-26</comment>
+  </data>
 </root>

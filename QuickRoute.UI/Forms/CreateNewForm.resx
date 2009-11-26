@@ -177,6 +177,9 @@
   <data name="mapImageGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="mapImageLayoutTable.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="mapImageLayoutTable.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
@@ -193,7 +196,7 @@
     <value>3, 5, 3, 3</value>
   </data>
   <data name="mapImageFileName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>510, 21</value>
+    <value>491, 21</value>
   </data>
   <data name="mapImageFileName.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -211,10 +214,10 @@
     <value>0</value>
   </data>
   <data name="mapImageFileNameBrowse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>638, 3</value>
+    <value>619, 3</value>
   </data>
   <data name="mapImageFileNameBrowse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>97, 23</value>
   </data>
   <data name="mapImageFileNameBrowse.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -340,7 +343,7 @@
     <value>3, 3, 3, 6</value>
   </data>
   <data name="mapImageFileFormatComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>510, 21</value>
+    <value>491, 21</value>
   </data>
   <data name="mapImageFileFormatComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -364,7 +367,7 @@
     <value>3</value>
   </data>
   <data name="mapImageLayoutTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>718, 84</value>
+    <value>716, 84</value>
   </data>
   <data name="mapImageLayoutTable.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -382,7 +385,7 @@
     <value>0</value>
   </data>
   <data name="mapImageLayoutTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="mapImageFileName" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileNameBrowse" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFromFile" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageBlank" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatComboBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,Absolute,516,Absolute,163" /&gt;&lt;Rows Styles="AutoSize,0,Absolute,28,Absolute,21" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="mapImageFileName" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileNameBrowse" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFromFile" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageBlank" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatComboBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,Absolute,497,Absolute,182" /&gt;&lt;Rows Styles="AutoSize,0,Absolute,28,Absolute,21" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="mapImageGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
@@ -411,8 +414,8 @@
   <data name="routeGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="tableLayoutPanel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="tableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="tableLayoutPanel1.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
@@ -520,7 +523,7 @@
     <value>3, 3, 3, 6</value>
   </data>
   <data name="routeGpsDevice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>510, 21</value>
+    <value>491, 21</value>
   </data>
   <data name="routeGpsDevice.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -547,7 +550,7 @@
     <value>3, 3, 3, 6</value>
   </data>
   <data name="routeFileFormatComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>510, 21</value>
+    <value>491, 21</value>
   </data>
   <data name="routeFileFormatComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -565,10 +568,10 @@
     <value>4</value>
   </data>
   <data name="routeFileNameBrowse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>638, 33</value>
+    <value>619, 33</value>
   </data>
   <data name="routeFileNameBrowse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>97, 23</value>
   </data>
   <data name="routeFileNameBrowse.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -598,7 +601,7 @@
     <value>3, 5, 3, 3</value>
   </data>
   <data name="routeFileName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>510, 21</value>
+    <value>491, 21</value>
   </data>
   <data name="routeFileName.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -615,9 +618,6 @@
   <data name="&gt;&gt;routeFileName.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 16</value>
   </data>
@@ -625,7 +625,7 @@
     <value>3</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>716, 86</value>
+    <value>716, 89</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -643,7 +643,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="routeFromGpsDevice" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="routeFromFile" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="routeFileFormatLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="routeGpsDevice" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="routeFileFormatComboBox" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="routeFileNameBrowse" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="routeFileName" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,Absolute,516,Absolute,163" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="routeFromGpsDevice" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="routeFromFile" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="routeFileFormatLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="routeGpsDevice" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="routeFileFormatComboBox" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="routeFileNameBrowse" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="routeFileName" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,AutoSize,0,Absolute,182" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="routeGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 121</value>
@@ -735,6 +735,9 @@
   <data name="personGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="tableLayoutPanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="tableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
@@ -748,7 +751,7 @@
     <value>3, 3, 3, 6</value>
   </data>
   <data name="persons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>510, 21</value>
+    <value>491, 21</value>
   </data>
   <data name="persons.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -823,7 +826,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="persons" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="personNameLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,Absolute,516,Absolute,163" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="persons" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="personNameLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,Absolute,497,Absolute,182" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="personGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 232</value>

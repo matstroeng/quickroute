@@ -175,10 +175,10 @@
     <value>&amp;Karte einbinden</value>
   </data>
   <data name="replayMarkerStyleLabel.Text" xml:space="preserve">
-    <value>Stil des Positions&amp;markers</value>
+    <value>Positions&amp;markeroptionen</value>
   </data>
   <data name="replayMarkerStyle.Items" xml:space="preserve">
-    <value>schwarz-weiß</value>
+    <value>Einfarbig</value>
   </data>
   <data name="routeLineStyle.Items" xml:space="preserve">
     <value>Eingebetted in Karte, farbcodiert</value>
@@ -193,7 +193,7 @@
     <value>Streckenobjekt trennen, farbcodiert</value>
   </data>
   <data name="routeLineStyleLabel.Text" xml:space="preserve">
-    <value>Stil der &amp;Strecke</value>
+    <value>&amp;Streckeoptionen</value>
   </data>
   <data name="replayMarkerStyle.Items1" xml:space="preserve">
     <value>Farbcodiert</value>
@@ -220,6 +220,6 @@
     <value>KML Eigenschaften</value>
   </data>
   <data name="routeLineStyle.Items1" xml:space="preserve">
-    <value>Streckenobjekt trennen, schwarz-weiß</value>
+    <value>Streckenobjekt trennen, einfarbig</value>
   </data>
 </root>

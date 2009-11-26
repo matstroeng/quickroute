@@ -88,6 +88,15 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete lap {0}.
+        /// </summary>
+        public static string DeleteLapX {
+            get {
+                return ResourceManager.GetString("DeleteLapX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Direction deviation.
         /// </summary>
         public static string Direction {

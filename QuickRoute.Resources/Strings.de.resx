@@ -196,10 +196,10 @@
     <value>Neuer Verlauf</value>
   </data>
   <data name="NoGPSDevicesConnected" xml:space="preserve">
-    <value>[Keine GPS-Geräte verbunden]</value>
+    <value>[Kein GPS-Gerät gefunden]</value>
   </data>
   <data name="NoGPSDevicesConnectedMessageBox" xml:space="preserve">
-    <value>Es sind keine GPS-Geräte verbunden.</value>
+    <value>Es wurde kein GPS-Gerät gefunden.</value>
   </data>
   <data name="NorthAbbreviated" xml:space="preserve">
     <value>N</value>
@@ -298,7 +298,7 @@
     <value>QuickRoute 1.0 XML Dateien (*.xml)|*.xml</value>
   </data>
   <data name="FileFilter_QuickRouteFiles" xml:space="preserve">
-    <value>QuickRoute Dateien (*.qrt)|*.qrt</value>
+    <value>QuickRoute-Dateien (*.qrt)|*.qrt</value>
   </data>
   <data name="FileFilter_TcxFiles" xml:space="preserve">
     <value>Garmin Training Center Dateien (*.tcx)|*.tcx</value>
@@ -412,13 +412,13 @@
     <value>Features in der neuen Version:</value>
   </data>
   <data name="OpenMultipleFilesInGoogleEarth" xml:space="preserve">
-    <value>Mehrere QuickRoute Dateien in Google Earth öffnen</value>
+    <value>Mehrere QuickRoute-Dateien in Google Earth öffnen</value>
   </data>
   <data name="LapX" xml:space="preserve">
     <value>Zwischenzeit {0}</value>
   </data>
   <data name="MultipleFileExporterNoValidFiles" xml:space="preserve">
-    <value>Es wurden keine gültigen QuickRoute Dateien angegeben.</value>
+    <value>Es wurden keine gültigen QuickRoute-Dateien angegeben.</value>
   </data>
   <data name="MultipleFileExporterSomeInvalidFiles" xml:space="preserve">
     <value>Die folgende Datei enthält keine gültigen QuickRoute Daten und kann nicht verwendet werden:
@@ -426,13 +426,13 @@
 {0}</value>
   </data>
   <data name="FileFilter_AllQuickRouteFiles" xml:space="preserve">
-    <value>Alle QuickRoute Dateien (*.qrt; *.xml; *.jpg; *.jpeg)|*.qrt;*.xml;*.jpg;*.jpeg</value>
+    <value>Alle QuickRoute-Dateien (*.qrt; *.xml; *.jpg; *.jpeg)|*.qrt;*.xml;*.jpg;*.jpeg</value>
   </data>
   <data name="UnrecognizedFileFormat" xml:space="preserve">
     <value>Das Dateiformat von {0} wurde nicht erkannt.</value>
   </data>
   <data name="Error_InvalidQuickRouteFile" xml:space="preserve">
-    <value>Die Datei ist keine gültige QuickRoute Datei.</value>
+    <value>Die Datei ist keine gültige QuickRoute-Datei.</value>
   </data>
   <data name="SelectLapInfoColumns" xml:space="preserve">
     <value>Spalten wählen</value>
@@ -522,7 +522,7 @@
     <value>Steigung: {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_LapNumber" xml:space="preserve">
-    <value>Runde: {0}</value>
+    <value>Zwischenzeit: {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_Location" xml:space="preserve">
     <value>Ort: {0}</value>
@@ -648,7 +648,7 @@
     <value>Steigung</value>
   </data>
   <data name="RoutePropertyName_LapNumber" xml:space="preserve">
-    <value>Runde</value>
+    <value>Zwischenzeit</value>
   </data>
   <data name="RoutePropertyName_Location" xml:space="preserve">
     <value>Ort</value>
