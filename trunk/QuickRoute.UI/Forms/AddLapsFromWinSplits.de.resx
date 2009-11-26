@@ -152,7 +152,7 @@
     <value>&amp;Enddatum</value>
   </data>
   <data name="uiInformation.Text" xml:space="preserve">
-    <value>Du kannst deine Zwischenzeiten in eine QuickRoute Datei laden, wenn der Wettkampf in der WinSplits-Datenbank existiert. Wähle den WinSplits-Wettkampf, die Klasse und den Läufer und klicke auf OK.</value>
+    <value>Du kannst deine Zwischenzeiten in eine QuickRoute-Datei laden, wenn der Wettkampf in der WinSplits-Datenbank existiert. Wähle den WinSplits-Wettkampf, die Klasse und den Läufer und klicke auf OK.</value>
   </data>
   <data name="search.Text" xml:space="preserve">
     <value>&amp;Suche</value>

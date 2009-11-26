@@ -861,6 +861,12 @@ namespace QuickRoute.Controls
       DrawMap(MapDrawingFlags.Route | MapDrawingFlags.Markers);
     }
 
+    public void DeleteLap(Lap lap)
+    {
+      ExecuteAction(new DeleteLapAction(lap, CurrentSession));
+      DrawMap(MapDrawingFlags.Markers);
+    }
+
     private void ExecuteAction(IAction action)
     {
       action.Execute();

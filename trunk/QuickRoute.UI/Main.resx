@@ -700,7 +700,7 @@
     <value>toolStripContainer1</value>
   </data>
   <metadata name="routeAppearanceToolstrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>3, 25</value>
+    <value>3, 0</value>
   </metadata>
   <data name="routeAppearanceToolstrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
@@ -741,8 +741,8 @@
   <data name="colorRangeIntervalButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALBAAA
-        CwQBG8oqrQAAAK5JREFUOE+lUdsNgzAMpIvQIbJD+YGRqNyVqjIP0EEI5yiOQkQeEKRTgmKffXcPrXVT
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAAAK5JREFUOE+lUdsNgzAMpIvQIbJD+YGRqNyVqjIP0EEI5yiOQkQeEKRTgmKffXcPrXVT
         9TEBg4j0FUifaRaCFtceIGACVn7agAX4Am+gwzuGnRI80TAEBNsVAt7AJ/jj/0AwZjYQgg8af76E2Upg
         gldCwm0TEaMCOE8l5sTOsNYkYJv54txNEJg6qXUx5iZHCV2eBdPPauslWD3knxn9h1rnQYmBUQmSRKmR
         /rDqDXaG92MkHWJbbAAAAABJRU5ErkJggg==
@@ -1237,8 +1237,8 @@
   <data name="toolStripRightPanelVisible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALBAAA
-        CwQBG8oqrQAAAW9JREFUOE+lk01LAlEUhu3v9B8Cl9HCXxD9iRbVJqJFq6KwRZRQ0cciNDIIKqH8yCjT
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAAAW9JREFUOE+lk01LAlEUhu3v9B8Cl9HCXxD9iRbVJqJFq6KwRZRQ0cciNDIIKqH8yCjT
         ESrNMtMcHUXHZhydcRzn401HCaTFFeaFc+Au3ue853LvmG1SgM2SegArZclspu82ipYR/hThSwq4TtTB
         1FXwbUAzYMputyOTyfyr/vrdJiUvUW8biBXaoBgVoXTTBEqdPoEIqEbcqD4cg/bMo5WPoS4Dqj4YPwqg
         HNrDz6sPqe0ZvKxOQZe4fvaBiAmErwiY2x0UrtYhFhPQFenPzLd08gq6qoBL3oClzocmayILtqmRAfTF
@@ -1256,8 +1256,8 @@
   <data name="toolStripBottomPanelVisible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALBAAA
-        CwQBG8oqrQAAAY9JREFUOE/Nk8lKw1AUhvXtXLpy46LVpeDCVxDFhQhFUQQF64DghIKiKBXnWWzs4ABJ
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAAAY9JREFUOE/Nk8lKw1AUhvXtXLpy46LVpeDCVxDFhQhFUQQF64DghIKiKBXnWWzs4ABJ
         bZq26RDUmra2JvqZttqoK7EbD/z3cM+95+P8F259XUOGupqiBKhFNTWXp7cW7XwBj7ubka4OPOOdhGbb
         uBtrInUyg/mcRZcF0ueLJI9n0H0raCEBX8KsTF5ajHzGamhF2x7iKbjK/cU8OeWSt1eT9MUKyno/8b0J
         EpsDpIJbSDocSVkbkL87Jb7WR2J3jHxS4jPezBeewl407zJ+VyPh0WYi/gN2FfBcPdoAYXOWs8A1qnaP
@@ -1582,8 +1582,8 @@
   <data name="menuEditUndo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALBAAA
-        CwQBG8oqrQAAAfRJREFUOE9j/P//PwNFAGQALjx5y7eYyZu/7pi3++uj5Qe/Hll58OuUVYe+SiGrx6m5
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAAAfRJREFUOE9j/P//PwNFAGQALjx5y7eYyZu/7pi3++uj5Qe/Hll58OuUVYe+SiGrx6m5
         b8PXHUD8p3vd1+eNK748rl/y5c7cnV8fAw34hGwI3IDuVa/+Lzvx1QBkOlDTsv6N336nTnr3xqXgxG/r
         1O1/zBO2fHevuPtx5vavb4AG3IS5AmwAUICzccnL//MOfL1av+Jrw4RN3/7E9Tz/51pw/L9dxu5fprFr
         jrvkb31oGb/8T1jHu59LD3y9j2IAiFM88/n/rFmf/xfO+fI/sufjC6vkLX8tEjf8MI1dmQ+SD6jdrmIY
@@ -1606,8 +1606,8 @@
   <data name="menuEditRedo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALBAAA
-        CwQBG8oqrQAAAeBJREFUOE9j/P//PwNFAGQACK869FVq5cGvU5Yf/Hpk3u6vj3rWf0mpXPiFEyaPi4Zr
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAAAeBJREFUOE9j/P//PwNFAGQACK869FVq5cGvU5Yf/Hpk3u6vj3rWf0mpXPiFEyaPi4Zr
         Bhrwae7Or4/rl3y507jiy+PWVV/uVCz68rly0ZdUfIbADLg5c/vXN+6VD96bJ2z5bpWy7Y9D7vGvKZM/
         vyic8+VF4dwvYSBDlp34auBQdA3IhLga7H0QsfTA1/thHe9+mkXP/+2St/6maeyaY0D8xSx+8+/kyZ//
         ps/8/Cx77pfIeQe+XrXOPP4f6Fq418AGNCz9sse1/M57da+eWwG121VAYqaxK/ONo5d/1QmY/Su08+Nz
@@ -1645,8 +1645,8 @@
   <data name="menuViewFullScreen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALBAAA
-        CwQBG8oqrQAAAjBJREFUOE+lk8tPE3EUhesf5QI2uFGjLli4kqUkmGAIWppQEwWDRppIAKMGFAoC8hAF
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAAAjBJREFUOE+lk8tPE3EUhesf5QI2uFGjLli4kqUkmGAIWppQEwWDRppIAKMGFAoC8hAF
         RMRHAoi00AKFAJGqwWIpfVB52FKlqe1vPufWpI5LwySzmeR859x77hwBTId6BHCY1xSPx009o/N0v5zj
         8cgsXS/cdA676Hg+Tfugk7YBB/Zn72npn+Thkwke9I3T3DuG6LLpRayhUJoirRSpjCKZVvxMKRJJRexA
         Y++Hxva+xlZMI/xdY3NX4+ipYl2vA8RZxLXti1jvuimvc1F2203JLTdFVTMUVjo5edlBwUUHeRecHLd4
@@ -1670,8 +1670,8 @@
   <data name="menuViewRightPanelVisible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALBAAA
-        CwQBG8oqrQAAAW9JREFUOE+lk01LAlEUhu3v9B8Cl9HCXxD9iRbVJqJFq6KwRZRQ0cciNDIIKqH8yCjT
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAAAW9JREFUOE+lk01LAlEUhu3v9B8Cl9HCXxD9iRbVJqJFq6KwRZRQ0cciNDIIKqH8yCjT
         ESrNMtMcHUXHZhydcRzn401HCaTFFeaFc+Au3ue853LvmG1SgM2SegArZclspu82ipYR/hThSwq4TtTB
         1FXwbUAzYMputyOTyfyr/vrdJiUvUW8biBXaoBgVoXTTBEqdPoEIqEbcqD4cg/bMo5WPoS4Dqj4YPwqg
         HNrDz6sPqe0ZvKxOQZe4fvaBiAmErwiY2x0UrtYhFhPQFenPzLd08gq6qoBL3oClzocmayILtqmRAfTF
@@ -1692,8 +1692,8 @@
   <data name="menuViewBottomPanelVisible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALBAAA
-        CwQBG8oqrQAAAY9JREFUOE/Nk8lKw1AUhvXtXLpy46LVpeDCVxDFhQhFUQQF64DghIKiKBXnWWzs4ABJ
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAAAY9JREFUOE/Nk8lKw1AUhvXtXLpy46LVpeDCVxDFhQhFUQQF64DghIKiKBXnWWzs4ABJ
         bZq26RDUmra2JvqZttqoK7EbD/z3cM+95+P8F259XUOGupqiBKhFNTWXp7cW7XwBj7ubka4OPOOdhGbb
         uBtrInUyg/mcRZcF0ueLJI9n0H0raCEBX8KsTF5ajHzGamhF2x7iKbjK/cU8OeWSt1eT9MUKyno/8b0J
         EpsDpIJbSDocSVkbkL87Jb7WR2J3jHxS4jPezBeewl407zJ+VyPh0WYi/gN2FfBcPdoAYXOWs8A1qnaP
@@ -1721,8 +1721,8 @@
   <data name="menuToolsOpenInGoogleEarth.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALBAAA
-        CwQBG8oqrQAAA25JREFUOE9tk3tMk1cYh98RM2TAvFQQJ1u4uWVy0bEEHQreYoo3MNBtzArCSBH3h4nT
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAAA25JREFUOE9tk3tMk1cYh98RM2TAvFQQJ1u4uWVy0bEEHQreYoo3MNBtzArCSBH3h4nT
         OucVsoWLWuTSgoWBWxmiSDZGES0YrtJa5r5vtCstlNKKApEqCijg3PLbN4gmRt7kyTl5zzlPTk5+5w2a
         pbaKLvkHLFsYOv9tRz8Hbv3B6JRV3/NQrSrZpZtt/8tecEy5v1B87Ze0go4phbIbda19aFBb0aixoLap
         62/x6QblxzE/rpxV4r2peEtkonQkTXIJZ2VVKK1sRxv7AC2MHVdu9KNBcxd37w2j6PLvY8ExiuhXJLzV
@@ -1761,8 +1761,8 @@
   <data name="menuToolsPublishMap.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALBAAA
-        CwQBG8oqrQAAAqpJREFUOE910mtIk2EUB/CZUhJ0M/sslGV0g0pJXGpoabNtrnlNc4UTMyRv07xhgjlS
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAAAqpJREFUOE910mtIk2EUB/CZUhJ0M/sslGV0g0pJXGpoabNtrnlNc4UTMyRv07xhgjlS
         cxWotYq8ZBai6RZz0206dWPz3fbu1jZnZimhEdGHIX2sfzNQEnofeD48D/x/nMM5fgBo64df35e05LKE
         BO8ICPr122+X9+eWPf4B2/Zu9Q8IBs0vaPfO7Wb4B3p72wuKN0JrwPoN52u+hyU+QVi0AGeYQoiE/Whr
         V+LOYyP6ehVwEmOobuxc+TezEV77jOCrP4ddfIrQ6HJEsRpgGBqAxeCElFyFTjcHp2kKpY3PHZTAiWzF
@@ -2456,96 +2456,6 @@
   <data name="&gt;&gt;lapHistogramBinWidth.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;colorCodingAttributes.Name" xml:space="preserve">
-    <value>colorCodingAttributes</value>
-  </data>
-  <data name="&gt;&gt;colorCodingAttributes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorRangeStartValue.Name" xml:space="preserve">
-    <value>colorRangeStartValue</value>
-  </data>
-  <data name="&gt;&gt;colorRangeStartValue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorRangeIntervalSlider.Name" xml:space="preserve">
-    <value>colorRangeIntervalSlider</value>
-  </data>
-  <data name="&gt;&gt;colorRangeIntervalSlider.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.ToolstripColorRangeIntervalSlider, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;colorRangeEndValue.Name" xml:space="preserve">
-    <value>colorRangeEndValue</value>
-  </data>
-  <data name="&gt;&gt;colorRangeEndValue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorRangeIntervalButton.Name" xml:space="preserve">
-    <value>colorRangeIntervalButton</value>
-  </data>
-  <data name="&gt;&gt;colorRangeIntervalButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripAutoAdjustColorRangeInterval.Name" xml:space="preserve">
-    <value>toolStripAutoAdjustColorRangeInterval</value>
-  </data>
-  <data name="&gt;&gt;toolStripAutoAdjustColorRangeInterval.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gradientAlphaAdjustment.Name" xml:space="preserve">
-    <value>gradientAlphaAdjustment</value>
-  </data>
-  <data name="&gt;&gt;gradientAlphaAdjustment.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.ToolstripTrackBar, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
-    <value>toolStripSeparator2</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;routeLineWidth.Name" xml:space="preserve">
-    <value>routeLineWidth</value>
-  </data>
-  <data name="&gt;&gt;routeLineWidth.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.ToolstripNumericUpDown, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;routeLineMaskVisible.Name" xml:space="preserve">
-    <value>routeLineMaskVisible</value>
-  </data>
-  <data name="&gt;&gt;routeLineMaskVisible.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;routeLineMaskWidth.Name" xml:space="preserve">
-    <value>routeLineMaskWidth</value>
-  </data>
-  <data name="&gt;&gt;routeLineMaskWidth.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.ToolstripNumericUpDown, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;routeLineMaskColorButton.Name" xml:space="preserve">
-    <value>routeLineMaskColorButton</value>
-  </data>
-  <data name="&gt;&gt;routeLineMaskColorButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator9.Name" xml:space="preserve">
-    <value>toolStripSeparator9</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;smoothingIntervalLength.Name" xml:space="preserve">
-    <value>smoothingIntervalLength</value>
-  </data>
-  <data name="&gt;&gt;smoothingIntervalLength.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;toolStripNew.Name" xml:space="preserve">
     <value>toolStripNew</value>
   </data>
@@ -2707,6 +2617,96 @@
   </data>
   <data name="&gt;&gt;toolStripDonate.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorCodingAttributes.Name" xml:space="preserve">
+    <value>colorCodingAttributes</value>
+  </data>
+  <data name="&gt;&gt;colorCodingAttributes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorRangeStartValue.Name" xml:space="preserve">
+    <value>colorRangeStartValue</value>
+  </data>
+  <data name="&gt;&gt;colorRangeStartValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorRangeIntervalSlider.Name" xml:space="preserve">
+    <value>colorRangeIntervalSlider</value>
+  </data>
+  <data name="&gt;&gt;colorRangeIntervalSlider.Type" xml:space="preserve">
+    <value>QuickRoute.Controls.ToolstripColorRangeIntervalSlider, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colorRangeEndValue.Name" xml:space="preserve">
+    <value>colorRangeEndValue</value>
+  </data>
+  <data name="&gt;&gt;colorRangeEndValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorRangeIntervalButton.Name" xml:space="preserve">
+    <value>colorRangeIntervalButton</value>
+  </data>
+  <data name="&gt;&gt;colorRangeIntervalButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripAutoAdjustColorRangeInterval.Name" xml:space="preserve">
+    <value>toolStripAutoAdjustColorRangeInterval</value>
+  </data>
+  <data name="&gt;&gt;toolStripAutoAdjustColorRangeInterval.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gradientAlphaAdjustment.Name" xml:space="preserve">
+    <value>gradientAlphaAdjustment</value>
+  </data>
+  <data name="&gt;&gt;gradientAlphaAdjustment.Type" xml:space="preserve">
+    <value>QuickRoute.Controls.ToolstripTrackBar, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;routeLineWidth.Name" xml:space="preserve">
+    <value>routeLineWidth</value>
+  </data>
+  <data name="&gt;&gt;routeLineWidth.Type" xml:space="preserve">
+    <value>QuickRoute.Controls.ToolstripNumericUpDown, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;routeLineMaskVisible.Name" xml:space="preserve">
+    <value>routeLineMaskVisible</value>
+  </data>
+  <data name="&gt;&gt;routeLineMaskVisible.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;routeLineMaskWidth.Name" xml:space="preserve">
+    <value>routeLineMaskWidth</value>
+  </data>
+  <data name="&gt;&gt;routeLineMaskWidth.Type" xml:space="preserve">
+    <value>QuickRoute.Controls.ToolstripNumericUpDown, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;routeLineMaskColorButton.Name" xml:space="preserve">
+    <value>routeLineMaskColorButton</value>
+  </data>
+  <data name="&gt;&gt;routeLineMaskColorButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator9.Name" xml:space="preserve">
+    <value>toolStripSeparator9</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;smoothingIntervalLength.Name" xml:space="preserve">
+    <value>smoothingIntervalLength</value>
+  </data>
+  <data name="&gt;&gt;smoothingIntervalLength.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator12.Name" xml:space="preserve">
     <value>toolStripSeparator12</value>

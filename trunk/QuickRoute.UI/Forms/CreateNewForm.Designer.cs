@@ -267,7 +267,6 @@ namespace QuickRoute.UI.Forms
       this.mapImageLayoutTable.ResumeLayout(false);
       this.mapImageLayoutTable.PerformLayout();
       this.routeGroup.ResumeLayout(false);
-      this.routeGroup.PerformLayout();
       this.tableLayoutPanel1.ResumeLayout(false);
       this.tableLayoutPanel1.PerformLayout();
       this.personGroup.ResumeLayout(false);

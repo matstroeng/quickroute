@@ -120,9 +120,6 @@
   <data name="cancel.Text" xml:space="preserve">
     <value>Avbryt</value>
   </data>
-  <data name="mapImageGroup.Text" xml:space="preserve">
-    <value>Kartbild</value>
-  </data>
   <data name="mapImageFileNameBrowse.Text" xml:space="preserve">
     <value>&amp;Bläddra...</value>
   </data>
@@ -139,8 +136,8 @@
   <data name="mapImageFileFormatLabel.Text" xml:space="preserve">
     <value>Filforma&amp;t:</value>
   </data>
-  <data name="routeGroup.Text" xml:space="preserve">
-    <value>Rutt</value>
+  <data name="mapImageGroup.Text" xml:space="preserve">
+    <value>Kartbild</value>
   </data>
   <data name="routeFromGpsDevice.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 17</value>
@@ -162,6 +159,9 @@
   </data>
   <data name="routeFileNameBrowse.Text" xml:space="preserve">
     <value>Bl&amp;äddra...</value>
+  </data>
+  <data name="routeGroup.Text" xml:space="preserve">
+    <value>Rutt</value>
   </data>
   <data name="mapImageFromUrl.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 17</value>
