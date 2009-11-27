@@ -442,8 +442,6 @@ namespace QuickRoute.UI
             this.toolStripDonate});
       this.toolStrip.Name = "toolStrip";
       this.toolStrip.DragOver += new System.Windows.Forms.DragEventHandler(this.toolStrip_DragOver);
-      this.toolStrip.DragEnter += new System.Windows.Forms.DragEventHandler(this.toolStrip_DragEnter);
-      this.toolStrip.DragDrop += new System.Windows.Forms.DragEventHandler(this.toolStrip_DragDrop);
       // 
       // toolStripNew
       // 

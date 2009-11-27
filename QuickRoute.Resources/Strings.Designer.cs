@@ -693,6 +693,15 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Print....
+        /// </summary>
+        public static string Print {
+            get {
+                return ResourceManager.GetString("Print", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save changes to {0}?.
         /// </summary>
         public static string PromptSaveChanges {

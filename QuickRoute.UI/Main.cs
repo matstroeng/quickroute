@@ -1,5 +1,4 @@
 using System;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -2398,6 +2397,7 @@ namespace QuickRoute.UI
         var menu = new ContextMenu();
         menu.MenuItems.Add(new MenuItem(Strings.SelectLapInfoColumns, laps_ContextMenuSelectLapInfoColumns_ItemClick));
         menu.MenuItems.Add(new MenuItem(Strings.CopyToClipboard, laps_ContextMenuCopyToClipboard_ItemClick));
+        menu.MenuItems.Add(new MenuItem(Strings.Print, laps_ContextMenuPrint_ItemClick));
         var rowIndex = laps.HitTest(e.X, e.Y).RowIndex;
         if(rowIndex > -1 && rowIndex < laps.Rows.Count -1)
         {
@@ -2440,6 +2440,12 @@ namespace QuickRoute.UI
     {
       string text = GetLapsInfoAsText();
       Clipboard.SetText(text);
+    }
+
+    private void laps_ContextMenuPrint_ItemClick(object sender, EventArgs e)
+    {
+      var printer = new LapGridViewPrinter(laps);
+      printer.Print(canvas.Document.FileName);
     }
 
     private void laps_ContextMenuDelete_ItemClick(object sender, EventArgs e)
@@ -3069,6 +3075,11 @@ namespace QuickRoute.UI
       if (ApplicationSettings.AutoAdjustColorRangeInterval) PerformColorRangeIntervalAutoAdjustment();
     }
 
+    private void toolStrip_DragOver(object sender, DragEventArgs e)
+    {
+      e.Effect = toolStripOpenInGoogleEarth.Bounds.Contains(e.X, e.Y) ? DragDropEffects.Move : DragDropEffects.None;
+    }
+
     #endregion
 
     #region Private enums
@@ -3103,20 +3114,5 @@ namespace QuickRoute.UI
     }
 
     #endregion
-
-    private void toolStrip_DragDrop(object sender, DragEventArgs e)
-    {
-
-    }
-
-    private void toolStrip_DragEnter(object sender, DragEventArgs e)
-    {
-
-    }
-
-    private void toolStrip_DragOver(object sender, DragEventArgs e)
-    {
-      e.Effect = toolStripOpenInGoogleEarth.Bounds.Contains(e.X, e.Y) ? DragDropEffects.Move : DragDropEffects.None;
-    }
   }
 }

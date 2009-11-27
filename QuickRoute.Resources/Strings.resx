@@ -771,4 +771,8 @@
     <value>Delete lap {0}</value>
     <comment>Added 2009-11-26</comment>
   </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print...</value>
+    <comment>Added 2009-11-27</comment>
+  </data>
 </root>
