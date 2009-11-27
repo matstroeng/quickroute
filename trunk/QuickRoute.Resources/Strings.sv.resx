@@ -755,4 +755,10 @@
   <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
     <value>Summa cirkeltid vid sträckornas slut: {0}</value>
   </data>
+  <data name="DeleteLapX" xml:space="preserve">
+    <value>Ta bort mellantid {0}</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Skriv ut...</value>
+  </data>
 </root>

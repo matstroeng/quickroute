@@ -94,8 +94,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DataGridViewPrinter.cs" />
     <Compile Include="Classes\FullScreen.cs" />
     <Compile Include="Classes\GoogleEarthUtil.cs" />
+    <Compile Include="Classes\LapGridViewPrinter.cs" />
     <Compile Include="Classes\Util.cs" />
     <Compile Include="Classes\WinApi.cs" />
     <Compile Include="Forms\AboutBox.cs">
