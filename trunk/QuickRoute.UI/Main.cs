@@ -10,7 +10,6 @@ using System.IO.Ports;
 using System.Net;
 using System.Text;
 using System.Windows.Forms;
-using Microsoft.SqlServer.MessageBox;
 using QuickRoute.BusinessEntities;
 using QuickRoute.BusinessEntities.Actions;
 using QuickRoute.BusinessEntities.Exporters;
@@ -197,8 +196,7 @@ namespace QuickRoute.UI
           catch (Exception ex)
           {
             canvas.Document = null;
-            Util.ShowExceptionMessageBox(this, ex, Strings.Error_NewDocument, ExceptionMessageBoxButtons.OK,
-                                         ExceptionMessageBoxSymbol.Error);
+            Util.ShowExceptionMessageBox(ex, Strings.Error_NewDocument);
             documentChanged = false;
           }
           UpdateUI();
@@ -392,8 +390,7 @@ namespace QuickRoute.UI
       catch (Exception ex)
       {
         canvas.Document = null;
-        Util.ShowExceptionMessageBox(this, ex, Strings.Error_OpenDocument, ExceptionMessageBoxButtons.OK,
-                                     ExceptionMessageBoxSymbol.Error);
+        Util.ShowExceptionMessageBox(ex, Strings.Error_OpenDocument);
       }
       documentChanged = false;
       UpdateUI();
@@ -476,8 +473,7 @@ namespace QuickRoute.UI
       }
       catch (Exception ex)
       {
-        Util.ShowExceptionMessageBox(this, ex, Strings.Error_SaveDocument, ExceptionMessageBoxButtons.OK,
-                                     ExceptionMessageBoxSymbol.Error);
+        Util.ShowExceptionMessageBox(ex, Strings.Error_SaveDocument);
       }
       EndWork();
     }
@@ -582,8 +578,7 @@ namespace QuickRoute.UI
           }
           catch (Exception ex)
           {
-            Util.ShowExceptionMessageBox(this, ex, Strings.Error_ExportImage, ExceptionMessageBoxButtons.OK,
-                                         ExceptionMessageBoxSymbol.Error);
+            Util.ShowExceptionMessageBox(ex, Strings.Error_ExportImage);
           }
         }
       }
@@ -627,8 +622,7 @@ namespace QuickRoute.UI
           catch (Exception ex)
           {
             EndWork();
-            Util.ShowExceptionMessageBox(this, ex, Strings.Error_ExportRoute, ExceptionMessageBoxButtons.OK,
-                                         ExceptionMessageBoxSymbol.Error);
+            Util.ShowExceptionMessageBox(ex, Strings.Error_ExportRoute);
           }
         }
       }
@@ -679,8 +673,7 @@ namespace QuickRoute.UI
             catch (Exception ex)
             {
               EndWork();
-              Util.ShowExceptionMessageBox(this, ex, Strings.Error_ExportRoute, ExceptionMessageBoxButtons.OK,
-                                           ExceptionMessageBoxSymbol.Error);
+              Util.ShowExceptionMessageBox(ex, Strings.Error_ExportRoute);
             }
           }
           sfd.Dispose();
@@ -739,8 +732,7 @@ namespace QuickRoute.UI
             catch (Exception ex)
             {
               EndWork();
-              Util.ShowExceptionMessageBox(this, ex, Strings.Error_ExportRoute, ExceptionMessageBoxButtons.OK,
-                                           ExceptionMessageBoxSymbol.Error);
+              Util.ShowExceptionMessageBox(ex, Strings.Error_ExportRoute);
             }
           }
           sfd.Dispose();
@@ -810,9 +802,8 @@ namespace QuickRoute.UI
           catch (Exception ex)
           {
             EndWork();
-            Util.ShowExceptionMessageBox(this, Strings.Error_GoogleEarthNotInstalledMessage, ex,
-                                         Strings.Error_GoogleEarthNotInstalledTitle, ExceptionMessageBoxButtons.OK,
-                                         ExceptionMessageBoxSymbol.Error);
+            Util.ShowExceptionMessageBox(Strings.Error_GoogleEarthNotInstalledMessage, ex,
+                                         Strings.Error_GoogleEarthNotInstalledTitle);
           }
         }
       }
@@ -898,8 +889,7 @@ namespace QuickRoute.UI
           catch (Exception ex)
           {
             // todo: better error message, and maybe some sort of download meter
-            Util.ShowExceptionMessageBox(this, ex, Strings.QuickRoute, ExceptionMessageBoxButtons.OK,
-                                         ExceptionMessageBoxSymbol.Error);
+            Util.ShowExceptionMessageBox(ex, Strings.QuickRoute);
           }
         }
         else
@@ -1596,8 +1586,7 @@ namespace QuickRoute.UI
           }
           catch (Exception ex)
           {
-            Util.ShowExceptionMessageBox(this, ex, Strings.Error_ExportImage, ExceptionMessageBoxButtons.OK,
-                                         ExceptionMessageBoxSymbol.Error);
+            Util.ShowExceptionMessageBox(ex, Strings.Error_ExportImage);
           }
           EndWork();
         }
@@ -3109,8 +3098,7 @@ namespace QuickRoute.UI
     private void ShowUnhandledExceptionMessageBox(Exception ex)
     {
       var topLevelException = new ApplicationException(Strings.UnexpectedExceptionMessage, ex);
-      Util.ShowExceptionMessageBox(this, topLevelException, Strings.QuickRoute, ExceptionMessageBoxButtons.OK,
-                                   ExceptionMessageBoxSymbol.Error);
+      Util.ShowExceptionMessageBox(topLevelException, Strings.QuickRoute);
     }
 
     #endregion

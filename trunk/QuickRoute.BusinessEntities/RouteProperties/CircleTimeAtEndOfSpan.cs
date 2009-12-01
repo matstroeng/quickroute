@@ -120,7 +120,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
       var time = Session.Route.GetTimeFromParameterizedLocation(Location);
       var sum = new TimeSpan();
-      for (var i = 0; i < Session.Laps.Count; i++)
+      for (var i = 1; i < Session.Laps.Count; i++)
       {
         if (Session.Laps[i].LapType != LapType.Start)
         {

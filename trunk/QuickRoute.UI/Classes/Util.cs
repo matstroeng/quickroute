@@ -9,13 +9,13 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Windows.Forms;
-using Microsoft.SqlServer.MessageBox;
 using QuickRoute.BusinessEntities;
 using QuickRoute.BusinessEntities.Numeric;
 using QuickRoute.Common;
 using QuickRoute.Resources;
 using QuickRoute.UI.Forms;
 using QuickRoute.UI.QuickRouteServer;
+using ExceptionMessageBox=QuickRoute.UI.Forms.ExceptionMessageBox;
 
 namespace QuickRoute.UI.Classes
 {
@@ -280,22 +280,16 @@ namespace QuickRoute.UI.Classes
       }
     }
 
-    public static DialogResult ShowExceptionMessageBox(IWin32Window owner, string message, Exception exception, string title, ExceptionMessageBoxButtons buttons, ExceptionMessageBoxSymbol icon)
+    public static DialogResult ShowExceptionMessageBox(string message, Exception exception, string title)
     {
       var topLevelException = new ApplicationException(message, exception);
-      return ShowExceptionMessageBox(owner, topLevelException, title, buttons, icon);
+      return ShowExceptionMessageBox(topLevelException, title);
     }
 
-    public static DialogResult ShowExceptionMessageBox(IWin32Window owner, Exception exception, string title, ExceptionMessageBoxButtons buttons, ExceptionMessageBoxSymbol icon)
+    public static DialogResult ShowExceptionMessageBox(Exception exception, string title)
     {
-      var messageBox = new ExceptionMessageBox
-      {
-        Caption = title,
-        Message = exception,
-        Symbol = icon,
-        Buttons = buttons
-      };
-      return messageBox.Show(owner);
+      var messageBox = new ExceptionMessageBox(title, exception);
+      return messageBox.ShowDialog();
     }
   
     public static void CheckForNewVersion()
