@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.SqlServer.MessageBox;
 using QuickRoute.BusinessEntities;
 using System.IO;
 using QuickRoute.BusinessEntities.Importers;
@@ -181,8 +180,7 @@ namespace QuickRoute.UI.Forms
 
           if (routeImporter.ImportResult.Exception != null)
           {
-            Util.ShowExceptionMessageBox(this, routeImporter.ImportResult.Exception, Strings.InvalidRoute, ExceptionMessageBoxButtons.OK,
-                                         ExceptionMessageBoxSymbol.Error);
+            Util.ShowExceptionMessageBox(routeImporter.ImportResult.Exception, Strings.InvalidRoute);
           }
           else
           {

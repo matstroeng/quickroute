@@ -72,11 +72,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ExternalReferences\Interop.EARTHLib.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ExceptionMessageBox, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalReferences\Microsoft.ExceptionMessageBox.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="PowerCollections, Version=1.0.2141.24679, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ExternalReferences\PowerCollections.dll</HintPath>
@@ -129,6 +124,12 @@
     </Compile>
     <Compile Include="Forms\AddSessionsForm.Designer.cs">
       <DependentUpon>AddSessionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExceptionMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExceptionMessageBox.Designer.cs">
+      <DependentUpon>ExceptionMessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ExportRouteDataDialog.cs">
       <SubType>Form</SubType>
@@ -355,6 +356,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateNewForm.ru.resx">
       <DependentUpon>CreateNewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExceptionMessageBox.resx">
+      <DependentUpon>ExceptionMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExceptionMessageBox.sv.resx">
+      <DependentUpon>ExceptionMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportRouteDataDialog.de.resx">
       <DependentUpon>ExportRouteDataDialog.cs</DependentUpon>

@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.SqlServer.MessageBox;
 using QuickRoute.BusinessEntities;
 using System.IO;
 using QuickRoute.BusinessEntities.Importers;
@@ -269,8 +268,7 @@ namespace QuickRoute.UI.Forms
       catch (Exception ex)
       {
         Cursor = Cursors.Default;
-        Util.ShowExceptionMessageBox(this, ex, Strings.InvalidRoute, ExceptionMessageBoxButtons.OK,
-                                     ExceptionMessageBoxSymbol.Error);
+        Util.ShowExceptionMessageBox(ex, Strings.InvalidRoute);
         return DialogResult.Cancel;
       }
       if (result == DialogResult.OK)
@@ -304,8 +302,7 @@ namespace QuickRoute.UI.Forms
           Cursor = Cursors.Default;
           if (routeImporter.ImportResult.Exception != null)
           {
-            Util.ShowExceptionMessageBox(this, routeImporter.ImportResult.Exception, Strings.InvalidRoute, ExceptionMessageBoxButtons.OK,
-                                         ExceptionMessageBoxSymbol.Error);
+            Util.ShowExceptionMessageBox(routeImporter.ImportResult.Exception, Strings.InvalidRoute);
           }
           else
           {
@@ -362,8 +359,7 @@ namespace QuickRoute.UI.Forms
         catch (Exception ex)
         {
           Cursor = Cursors.Default;
-          Util.ShowExceptionMessageBox(this, ex, Strings.InvalidMapImage, ExceptionMessageBoxButtons.OK,
-                                       ExceptionMessageBoxSymbol.Error);
+          Util.ShowExceptionMessageBox(ex, Strings.InvalidMapImage);
           return DialogResult.Cancel;
         }
         route = routeImporter.ImportResult.Route;

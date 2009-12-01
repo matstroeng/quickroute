@@ -91,7 +91,7 @@ namespace QuickRoute.BusinessEntities.Importers.TCX
               while (trackpointNodes.MoveNext())
               {
                 Waypoint waypoint = new Waypoint();
-                waypoint.Time = DateTime.Parse(trackpointNodes.Current.SelectSingleNode("ns:Time", nsManager).Value);
+                waypoint.Time = DateTime.Parse(trackpointNodes.Current.SelectSingleNode("ns:Time", nsManager).Value).ToUniversalTime();
                 XPathNavigator position = trackpointNodes.Current.SelectSingleNode("ns:Position", nsManager);
                 if (position != null)
                 {
