@@ -202,10 +202,8 @@ namespace QuickRoute.UI.Forms
         ss.RouteLineSettingsCollection[WaypointAttribute.Pace].MonochromeWidth = 3;
         Session s = new Session(
           routeImporter.ImportResult.Route, 
-          routeImporter.ImportResult.Laps, 
-          Document.Map.Image.Size, 
-          ss, 
-          Document.ProjectionOrigin, Document.Sessions.CalculateAverageTransformationMatrix());
+          routeImporter.ImportResult.Laps,
+          Document.Map.Image.Size, Document.Sessions.CalculateAverageTransformation().TransformationMatrix, Document.ProjectionOrigin, ss);
         s.CreateAdjustedRoute();
         Sessions.Add(s);
 

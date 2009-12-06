@@ -165,7 +165,7 @@ namespace QuickRoute.UI
             openingDocumentNow = true;
             ApplicationSettings.AddRecentPerson(cnf.Person);
             canvas.PreventRedraw = true;
-            canvas.Document = new Document(cnf.Map, cnf.Route, cnf.Laps, cnf.InitialTransformationMatrix,
+            canvas.Document = new Document(cnf.Map, cnf.Route, cnf.Laps, cnf.InitialTransformation.TransformationMatrix, cnf.InitialTransformation.ProjectionOrigin,
                                            ApplicationSettings.DefaultDocumentSettings.Copy());
             canvas.CurrentSession = canvas.Document.Sessions[0];
             canvas.CurrentSession.SessionInfo.Person = cnf.Person;

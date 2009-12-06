@@ -23,14 +23,20 @@ namespace QuickRoute.BusinessEntities
     /// Using linear least squares algorithm described at http://en.wikipedia.org/wiki/Linear_least_squares
     /// </summary>
     /// <returns></returns>
-    public GeneralMatrix CalculateAverageTransformationMatrix()
+    public Transformation CalculateAverageTransformation()
     {
+      var averageProjectionOrigin = new LongLat();
+      foreach (var session in this)
+      {
+        averageProjectionOrigin += session.ProjectionOrigin / Count;
+      }
+      
       if (Count == 0) return null;
       var n = 4;
       var XtX = new GeneralMatrix(n, n);
       var Xty = new GeneralMatrix(n, 1);
       var numberOfUnknowns = 0;
-
+      
       foreach (var session in this)
       {
         var m = session.Handles.Length;
@@ -41,7 +47,7 @@ namespace QuickRoute.BusinessEntities
         for (var i = 0; i < m; i++)
         {
           var longLat = session.Route.GetLocationFromParameterizedLocation(session.Handles[i].ParameterizedLocation);
-          var p = longLat.Project(session.ProjectionOrigin); // projected point on earth (metres)
+          var p = longLat.Project(averageProjectionOrigin); // projected point on earth (metres)
           var q = session.Handles[i].Location; // point on map image (pixels)
           var endDistance = (i != m - 1)
                               ? (session.Route.GetAttributeFromParameterizedLocation(WaypointAttribute.Distance, session.Handles[i].ParameterizedLocation).Value +
@@ -70,23 +76,31 @@ namespace QuickRoute.BusinessEntities
         }
       }
 
-      if (numberOfUnknowns == 0) return this[0].InitialTransformationMatrix;
-      if (numberOfUnknowns == 1) return this[0].Handles[0].TransformationMatrix;
-
-      var B = XtX.QRD().Solve(Xty);
-
       var T = new GeneralMatrix(3, 3);
 
-      T.SetElement(0, 0, B.GetElement(0, 0));
-      T.SetElement(0, 1, B.GetElement(1, 0));
-      T.SetElement(0, 2, B.GetElement(2, 0));
-      T.SetElement(1, 0, B.GetElement(1, 0));
-      T.SetElement(1, 1, -B.GetElement(0, 0));
-      T.SetElement(1, 2, B.GetElement(3, 0));
-      T.SetElement(2, 0, 0);
-      T.SetElement(2, 1, 0);
-      T.SetElement(2, 2, 1);
-      return T;
+      if (numberOfUnknowns == 0)
+      {
+        T = this[0].InitialTransformationMatrix;
+      }
+      else if (numberOfUnknowns == 1)
+      {
+        T = this[0].Handles[0].TransformationMatrix;
+      }
+      else
+      {
+        var B = XtX.QRD().Solve(Xty);
+
+        T.SetElement(0, 0, B.GetElement(0, 0));
+        T.SetElement(0, 1, B.GetElement(1, 0));
+        T.SetElement(0, 2, B.GetElement(2, 0));
+        T.SetElement(1, 0, B.GetElement(1, 0));
+        T.SetElement(1, 1, -B.GetElement(0, 0));
+        T.SetElement(1, 2, B.GetElement(3, 0));
+        T.SetElement(2, 0, 0);
+        T.SetElement(2, 1, 0);
+        T.SetElement(2, 2, 1);
+      }
+      return new Transformation(T, averageProjectionOrigin);
     }
 
     /// <summary>

@@ -30,7 +30,6 @@ namespace QuickRoute.BusinessEntities
     private Bitmap GetImage(string source, MapSourceType sourceType)
     {
       Stream stream = null;
-      Bitmap targetImage = null;
       switch (sourceType)
       {
         case MapSourceType.FileSystem:
@@ -41,7 +40,13 @@ namespace QuickRoute.BusinessEntities
           stream = GetImageStreamFromUrl(source);
           break;
       }
-      
+
+      return StripQuickRouteHeader(stream);
+    }
+
+    private Bitmap StripQuickRouteHeader(Stream stream)
+    {
+      Bitmap targetImage = null;
       if(stream != null)
       {
         // check if the image is an exported QuickRoute image; if yes, remove the border
@@ -82,9 +87,7 @@ namespace QuickRoute.BusinessEntities
       this.sourceType = MapSourceType.FileSystem;
       this.storageType = MapStorageType.Inline;
       stream.Position = 0;
-      this.rawData = new byte[stream.Length];
-      stream.Read(this.rawData, 0, (int) stream.Length);
-      this.image = (Bitmap)System.Drawing.Image.FromStream(stream);
+      this.image = StripQuickRouteHeader(stream);
     }
 
     protected Map(SerializationInfo info, StreamingContext context)

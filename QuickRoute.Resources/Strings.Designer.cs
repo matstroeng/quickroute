@@ -385,7 +385,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kmz (*.kmz)|*.kmz.
+        ///   Looks up a localized string similar to Kmz files (*.kmz)|*.kmz.
         /// </summary>
         public static string FileFilter_KmzFiles {
             get {
