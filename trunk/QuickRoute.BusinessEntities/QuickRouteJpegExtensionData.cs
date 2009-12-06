@@ -433,10 +433,16 @@ namespace QuickRoute.BusinessEntities
             break;
         }
       }
-      var session = new Session(route, laps, new Size(0, 0), new SessionSettings(), projectionOrigin);
+            
+      var session = new Session(
+        route, 
+        laps, 
+        new Size(0, 0), 
+        handles != null && handles.Count > 0 ? handles[0].TransformationMatrix : null, 
+        projectionOrigin, 
+        new SessionSettings());
       if (handles != null)
       {
-        if (handles.Count > 0) session.InitialTransformationMatrix = handles[0].TransformationMatrix;
         foreach (var h in handles)
         {
           session.AddHandle(h);

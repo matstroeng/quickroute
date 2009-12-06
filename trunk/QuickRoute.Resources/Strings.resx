@@ -775,4 +775,8 @@
     <value>Print...</value>
     <comment>Added 2009-11-27</comment>
   </data>
+  <data name="FileFilter_KmzFiles" xml:space="preserve">
+    <value>Kmz files (*.kmz)|*.kmz</value>
+    <comment>Added 2009-12-05</comment>
+  </data>
 </root>

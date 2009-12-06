@@ -134,7 +134,8 @@ namespace QuickRoute.BusinessEntities.Exporters
       {
         if (KmlProperties.MapType != KmlExportMapType.None)
         {
-          using (var imageStream = new MemoryStream())
+          var fileName = temporaryBasePath + @"files\o" + groundOverlayCount + "." + document.ImageExporter.Properties.EncodingInfo.Encoder.MimeType.Replace("image/", ""); // NOTE: this assumes that the mime type matches the file extension
+          using (var imageStream = new FileStream(fileName, FileMode.Create))
           {
             document.ImageExporter.OutputStream = imageStream;
             switch (KmlProperties.MapType)
@@ -147,14 +148,9 @@ namespace QuickRoute.BusinessEntities.Exporters
                 break;
             }
             document.ImageExporter.Export();
-            using (var bmp = Image.FromStream(imageStream))
-            {
-              var fileName = temporaryBasePath + @"files\o" + groundOverlayCount + "." + document.ImageExporter.Properties.EncodingInfo.Encoder.MimeType.Replace("image/", ""); // NOTE: this assumes that the mime type matches the file extension"
-              bmp.Save(fileName, document.ImageExporter.Properties.EncodingInfo.Encoder, document.ImageExporter.Properties.EncodingInfo.EncoderParams);
-              GroundOverlays.Add(document, new KmlGroundOverlay(fileName, KmlGroundOverlay.GroundOverlayType.File));
-              groundOverlayCount++;
-            }
-            imageStream.Close();
+
+            GroundOverlays.Add(document, new KmlGroundOverlay(fileName, KmlGroundOverlay.GroundOverlayType.File));
+            groundOverlayCount++;
           }
         }
       }

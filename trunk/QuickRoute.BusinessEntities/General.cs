@@ -375,15 +375,15 @@ namespace QuickRoute.BusinessEntities
         return new LongLat(projectionOrigin.Longitude, projectionOrigin.Latitude);
       const double r = 6378200; // earth radius in metres
       var longLat = new LongLat();
-      var rho = Math.Sqrt(coordinate.X*coordinate.X + coordinate.Y*coordinate.Y);
-      var c = Math.Asin(rho/r);
+      var rho = Math.Sqrt(coordinate.X * coordinate.X + coordinate.Y * coordinate.Y);
+      var c = Math.Asin(rho / r);
       var lambda0 = projectionOrigin.Longitude * Math.PI / 180.0;
       var phi1 = projectionOrigin.Latitude * Math.PI / 180.0;
       longLat.Latitude =
         Math.Asin(Math.Cos(c) * Math.Sin(phi1) +
                   (coordinate.Y * Math.Sin(c) * Math.Cos(phi1) / rho)) / Math.PI * 180.0;
       longLat.Longitude = (lambda0 +
-                          Math.Atan(coordinate.X*Math.Sin(c)/
+                          Math.Atan(coordinate.X * Math.Sin(c) /
                                     (rho * Math.Cos(phi1) * Math.Cos(c) -
                                      coordinate.Y * Math.Sin(phi1) * Math.Sin(c)))) / Math.PI * 180.0;
       return longLat;
@@ -410,6 +410,98 @@ namespace QuickRoute.BusinessEntities
     public bool SecondsVisible { get; set; }
     public int SecondDecimalPlaces { get; set; }
   }
+
+  /// <summary>
+  /// Container class for transformation matrix and a projection origin, i e the data needed to transform from longlat space to pixel space.
+  /// </summary>
+  public class Transformation
+  {
+    public GeneralMatrix TransformationMatrix { get; set; }
+    public LongLat ProjectionOrigin { get; set; }
+
+    public Transformation()
+    {
+    }
+
+    public Transformation(LongLatBox longLatBox, Size imageSize)
+    {
+      // calculate projection origin
+      ProjectionOrigin = new LongLat((longLatBox.East + longLatBox.West) / 2,
+                                     (longLatBox.North + longLatBox.South) / 2);
+
+      // get image corners from kml file
+      var imageCornerLongLats = longLatBox.GetRotatedBoxCornerLongLats();
+
+      // project them on flat surface
+      var projectedImageCorners = new Dictionary<Corner, PointD>();
+      projectedImageCorners[Corner.NorthWest] = imageCornerLongLats[Corner.NorthWest].Project(ProjectionOrigin);
+      projectedImageCorners[Corner.SouthEast] = imageCornerLongLats[Corner.SouthEast].Project(ProjectionOrigin);
+
+      // calculate transformation matrix
+      TransformationMatrix = LinearAlgebraUtil.CalculateTransformationMatrix(
+        projectedImageCorners[Corner.NorthWest], new PointD(0, 0),
+        projectedImageCorners[Corner.SouthEast], new PointD(imageSize.Width - 1, imageSize.Height - 1), null, true);
+    }
+
+
+    public Transformation(GeneralMatrix transformationMatrix, LongLat projectionOrigin)
+    {
+      TransformationMatrix = transformationMatrix;
+      ProjectionOrigin = projectionOrigin;
+    }
+  }
+
+  public class LongLatBox
+  {
+    public double North { get; set; }
+    public double South { get; set; }
+    public double West { get; set; }
+    public double East { get; set; }
+    public double Rotation { get; set; }
+
+    public Dictionary<Corner, LongLat> GetRotatedBoxCornerLongLats()
+    {
+      var rotation = -Rotation;
+
+      var corners = new Dictionary<Corner, LongLat>();
+      corners[Corner.NorthEast] = new LongLat(East, North);
+      corners[Corner.NorthWest] = new LongLat(West, North);
+      corners[Corner.SouthWest] = new LongLat(West, South);
+      corners[Corner.SouthEast] = new LongLat(East, South);
+
+      var projectionOrigin = new LongLat((East + West) / 2, (North + South) / 2);
+
+      var projectedMapCenter = projectionOrigin.Project(projectionOrigin);
+
+      var projectedCorners = new Dictionary<Corner, PointD>();
+      projectedCorners[Corner.NorthEast] = corners[Corner.NorthEast].Project(projectionOrigin);
+      projectedCorners[Corner.NorthWest] = corners[Corner.NorthWest].Project(projectionOrigin);
+      projectedCorners[Corner.SouthWest] = corners[Corner.SouthWest].Project(projectionOrigin);
+      projectedCorners[Corner.SouthEast] = corners[Corner.SouthEast].Project(projectionOrigin);
+
+      var projectedRotatedCorners = new Dictionary<Corner, PointD>();
+      projectedRotatedCorners[Corner.NorthEast] = LinearAlgebraUtil.Rotate(projectedCorners[Corner.NorthEast], projectedMapCenter, rotation);
+      projectedRotatedCorners[Corner.NorthWest] = LinearAlgebraUtil.Rotate(projectedCorners[Corner.NorthWest], projectedMapCenter, rotation);
+      projectedRotatedCorners[Corner.SouthWest] = LinearAlgebraUtil.Rotate(projectedCorners[Corner.SouthWest], projectedMapCenter, rotation);
+      projectedRotatedCorners[Corner.SouthEast] = LinearAlgebraUtil.Rotate(projectedCorners[Corner.SouthEast], projectedMapCenter, rotation);
+
+      var rotatedCorners = new Dictionary<Corner, LongLat>();
+      rotatedCorners[Corner.NorthWest] = LongLat.Deproject(projectedRotatedCorners[Corner.NorthWest], projectionOrigin);
+      rotatedCorners[Corner.NorthEast] = LongLat.Deproject(projectedRotatedCorners[Corner.NorthEast], projectionOrigin);
+      rotatedCorners[Corner.SouthWest] = LongLat.Deproject(projectedRotatedCorners[Corner.SouthWest], projectionOrigin);
+      rotatedCorners[Corner.SouthEast] = LongLat.Deproject(projectedRotatedCorners[Corner.SouthEast], projectionOrigin);
+      return rotatedCorners;
+    }
+  }
+
+  public enum Corner
+  {
+    NorthWest,
+    NorthEast,
+    SouthWest,
+    SouthEast
+  }
+
 
   public class AlphaAdjustmentChange : IComparable<AlphaAdjustmentChange>
   {
@@ -688,12 +780,12 @@ namespace QuickRoute.BusinessEntities
       double sinTheta1 = Math.Sin(longLat1.Longitude / 180.0 * Math.PI);
       double cosTheta1 = Math.Cos(longLat1.Longitude / 180.0 * Math.PI);
 
-      GeneralMatrix p0 = new GeneralMatrix(3, 1);
+      var p0 = new GeneralMatrix(3, 1);
       p0.SetElement(0, 0, rho * sinPhi0 * cosTheta0);
       p0.SetElement(1, 0, rho * sinPhi0 * sinTheta0);
       p0.SetElement(2, 0, rho * cosPhi0);
 
-      GeneralMatrix p1 = new GeneralMatrix(3, 1);
+      var p1 = new GeneralMatrix(3, 1);
       p1.SetElement(0, 0, rho * sinPhi1 * cosTheta1);
       p1.SetElement(1, 0, rho * sinPhi1 * sinTheta1);
       p1.SetElement(2, 0, rho * cosPhi1);
@@ -710,84 +802,29 @@ namespace QuickRoute.BusinessEntities
     /// <summary>
     /// 
     /// </summary>
-    /// <param name="p0">First point on route</param>
-    /// <param name="q0">First point on map</param>
-    /// <param name="p1">Second point on route</param>
-    /// <param name="q1">Second point on map</param>
-    /// <param name="fallbackMatrix">Matrix to use if calculation fails due to singular matrix</param>
-    /// <returns></returns>
-    public static GeneralMatrix CalculateTransformationMatrix(PointD p0, PointD q0, PointD p1, PointD q1, GeneralMatrix fallbackMatrix)
-    {
-      try
-      {
-        GeneralMatrix m1 = new GeneralMatrix(2, 2);
-        m1.SetElement(0, 0, p0.X);
-        m1.SetElement(0, 1, 1);
-        m1.SetElement(1, 0, p1.X);
-        m1.SetElement(1, 1, 1);
-
-        GeneralMatrix v1 = new GeneralMatrix(2, 1);
-        v1.SetElement(0, 0, q0.X);
-        v1.SetElement(1, 0, q1.X);
-        GeneralMatrix t1 = m1.Inverse() * v1; 
-
-        GeneralMatrix m2 = new GeneralMatrix(2, 2);
-        m2.SetElement(0, 0, p0.Y);
-        m2.SetElement(0, 1, 1);
-        m2.SetElement(1, 0, p1.Y);
-        m2.SetElement(1, 1, 1);
-
-        GeneralMatrix v2 = new GeneralMatrix(2, 1);
-        v2.SetElement(0, 0, q0.Y);
-        v2.SetElement(1, 0, q1.Y);
-        GeneralMatrix t2 = m2.Inverse() * v2;
-
-        GeneralMatrix t = new GeneralMatrix(3, 3);
-        t.SetElement(0, 0, t1.GetElement(0, 0));
-        t.SetElement(0, 1, 0);
-        t.SetElement(0, 2, t1.GetElement(1, 0));
-        t.SetElement(1, 0, 0);
-        t.SetElement(1, 1, t2.GetElement(0, 0));
-        t.SetElement(1, 2, t2.GetElement(1, 0));
-        t.SetElement(2, 0, 0);
-        t.SetElement(2, 1, 0);
-        t.SetElement(2, 2, 1);
-
-        return t;
-      }
-      catch (Exception)
-      {
-        if (fallbackMatrix == null) fallbackMatrix = GeneralMatrix.Identity(3, 3);
-        return (GeneralMatrix)fallbackMatrix.Clone();
-      }
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="p0">First point on route</param>
-    /// <param name="q0">First point on map</param>
-    /// <param name="p1">Second point on route</param>
-    /// <param name="q1">Second point on map</param>
+    /// <param name="p0">First point on route, in projected (metric) coordinates relative to projection origin</param>
+    /// <param name="q0">First point on map, in pixels</param>
+    /// <param name="p1">Second point on route, in projected (metric) coordinates relative to projection origin</param>
+    /// <param name="q1">Second point on map, in pixels</param>
     /// <param name="fallbackMatrix">Matrix to use if calculation fails due to singular matrix</param>
     /// <param name="useRotation">If true, assumes orthogonal map and calculates scale and rotation. If false, calculates different scale in x and y directions and no rotation.</param>
     /// <returns></returns>
     public static GeneralMatrix CalculateTransformationMatrix(PointD p0, PointD q0, PointD p1, PointD q1, GeneralMatrix fallbackMatrix, bool useRotation)
     {
-      if (useRotation)
+      try
       {
-        // note that we need to mirror y pixel value in x axis
-        double angleDifferece = GetAngleR(p1 - p0, new PointD(q1.X, -q1.Y) - new PointD(q0.X, -q0.Y));
-        double lengthQ = DistancePointToPoint(q0, q1);
-        double lengthP = DistancePointToPoint(p0, p1);
-        double scaleFactor = lengthP == 0 ? 0 : lengthQ / lengthP;
-        double cos = Math.Cos(angleDifferece);
-        double sin = Math.Sin(angleDifferece);
-
-        try
+        if (useRotation)
         {
+          // note that we need to mirror y pixel value in x axis
+          double angleDifferece = GetAngleR(p1 - p0, new PointD(q1.X, -q1.Y) - new PointD(q0.X, -q0.Y));
+          double lengthQ = DistancePointToPoint(q0, q1);
+          double lengthP = DistancePointToPoint(p0, p1);
+          double scaleFactor = lengthP == 0 ? 0 : lengthQ / lengthP;
+          double cos = Math.Cos(angleDifferece);
+          double sin = Math.Sin(angleDifferece);
+
           // translation to origo in metric space
-          GeneralMatrix a = new GeneralMatrix(3, 3);
+          var a = new GeneralMatrix(3, 3);
           a.SetElement(0, 0, 1);
           a.SetElement(0, 1, 0);
           a.SetElement(0, 2, -p0.X);
@@ -799,7 +836,7 @@ namespace QuickRoute.BusinessEntities
           a.SetElement(2, 2, 1);
 
           // rotation
-          GeneralMatrix b = new GeneralMatrix(3, 3);
+          var b = new GeneralMatrix(3, 3);
           b.SetElement(0, 0, cos);
           b.SetElement(0, 1, -sin);
           b.SetElement(0, 2, 0);
@@ -811,7 +848,7 @@ namespace QuickRoute.BusinessEntities
           b.SetElement(2, 2, 1);
 
           // scaling, note that we need to mirror y scale around x axis
-          GeneralMatrix c = new GeneralMatrix(3, 3);
+          var c = new GeneralMatrix(3, 3);
           c.SetElement(0, 0, scaleFactor);
           c.SetElement(0, 1, 0);
           c.SetElement(0, 2, 0);
@@ -823,7 +860,7 @@ namespace QuickRoute.BusinessEntities
           c.SetElement(2, 2, 1);
 
           // translation from origo to pixel space
-          GeneralMatrix d = new GeneralMatrix(3, 3);
+          var d = new GeneralMatrix(3, 3);
           d.SetElement(0, 0, 1);
           d.SetElement(0, 1, 0);
           d.SetElement(0, 2, q0.X);
@@ -836,38 +873,31 @@ namespace QuickRoute.BusinessEntities
 
           return d * c * b * a;
         }
-        catch (Exception)
+        else // useRotation == false
         {
-          return (GeneralMatrix)fallbackMatrix.Clone();
-        }
-      }
-      else
-      {
-        try
-        {
-          GeneralMatrix m1 = new GeneralMatrix(2, 2);
+          var m1 = new GeneralMatrix(2, 2);
           m1.SetElement(0, 0, p0.X);
           m1.SetElement(0, 1, 1);
           m1.SetElement(1, 0, p1.X);
           m1.SetElement(1, 1, 1);
 
-          GeneralMatrix v1 = new GeneralMatrix(2, 1);
+          var v1 = new GeneralMatrix(2, 1);
           v1.SetElement(0, 0, q0.X);
           v1.SetElement(1, 0, q1.X);
-          GeneralMatrix t1 = m1.Inverse() * v1;
+          var t1 = m1.Inverse() * v1;
 
-          GeneralMatrix m2 = new GeneralMatrix(2, 2);
+          var m2 = new GeneralMatrix(2, 2);
           m2.SetElement(0, 0, p0.Y);
           m2.SetElement(0, 1, 1);
           m2.SetElement(1, 0, p1.Y);
           m2.SetElement(1, 1, 1);
 
-          GeneralMatrix v2 = new GeneralMatrix(2, 1);
+          var v2 = new GeneralMatrix(2, 1);
           v2.SetElement(0, 0, q0.Y);
           v2.SetElement(1, 0, q1.Y);
-          GeneralMatrix t2 = m2.Inverse() * v2;
+          var t2 = m2.Inverse() * v2;
 
-          GeneralMatrix t = new GeneralMatrix(3, 3);
+          var t = new GeneralMatrix(3, 3);
           t.SetElement(0, 0, t1.GetElement(0, 0));
           t.SetElement(0, 1, 0);
           t.SetElement(0, 2, t1.GetElement(1, 0));
@@ -880,10 +910,10 @@ namespace QuickRoute.BusinessEntities
 
           return t;
         }
-        catch (Exception)
-        {
-          return (GeneralMatrix)fallbackMatrix.Clone();
-        }
+      }
+      catch (Exception)
+      {
+        return (GeneralMatrix)fallbackMatrix.Clone();
       }
     }
 
@@ -902,7 +932,7 @@ namespace QuickRoute.BusinessEntities
     {
       try
       {
-        GeneralMatrix m = new GeneralMatrix(3, 3);
+        var m = new GeneralMatrix(3, 3);
         m.SetElement(0, 0, p0.X);
         m.SetElement(0, 1, p0.Y);
         m.SetElement(0, 2, 1.0);
@@ -913,25 +943,25 @@ namespace QuickRoute.BusinessEntities
         m.SetElement(2, 1, p2.Y);
         m.SetElement(2, 2, 1.0);
 
-        GeneralMatrix v1 = new GeneralMatrix(3, 1);
+        var v1 = new GeneralMatrix(3, 1);
         v1.SetElement(0, 0, q0.X);
         v1.SetElement(1, 0, q1.X);
         v1.SetElement(2, 0, q2.X);
-        GeneralMatrix t1 = m.Inverse() * v1;
+        var t1 = m.Inverse() * v1;
 
-        GeneralMatrix v2 = new GeneralMatrix(3, 1);
+        var v2 = new GeneralMatrix(3, 1);
         v2.SetElement(0, 0, q0.Y);
         v2.SetElement(1, 0, q1.Y);
         v2.SetElement(2, 0, q2.Y);
-        GeneralMatrix t2 = m.Inverse() * v2;
+        var t2 = m.Inverse() * v2;
 
-        GeneralMatrix v3 = new GeneralMatrix(3, 1);
+        var v3 = new GeneralMatrix(3, 1);
         v3.SetElement(0, 0, 1.0);
         v3.SetElement(1, 0, 1.0);
         v3.SetElement(2, 0, 1.0);
-        GeneralMatrix t3 = m.Inverse() * v3;
+        var t3 = m.Inverse() * v3;
 
-        GeneralMatrix t = new GeneralMatrix(3, 3);
+        var t = new GeneralMatrix(3, 3);
         t.SetElement(0, 0, t1.GetElement(0, 0));
         t.SetElement(0, 1, t1.GetElement(1, 0));
         t.SetElement(0, 2, t1.GetElement(2, 0));
@@ -984,7 +1014,7 @@ namespace QuickRoute.BusinessEntities
       if (angle > Math.PI) angle -= 2 * Math.PI;
       return angle;
     }
-    
+
     /// <summary>
     /// Gets angle in radians (-PI <= a <= PI) between two vectors.
     /// </summary>
@@ -1024,7 +1054,7 @@ namespace QuickRoute.BusinessEntities
 
     public static double GetVectorDirectionR(PointD vectorStartPoint, PointD vectorEndPoint)
     {
-      return ((GetAngleR(vectorEndPoint - vectorStartPoint) + Math.PI) % (2* Math.PI)) - Math.PI;
+      return ((GetAngleR(vectorEndPoint - vectorStartPoint) + Math.PI) % (2 * Math.PI)) - Math.PI;
     }
 
     public static double DotProduct(PointD v0, PointD v1)
@@ -1057,7 +1087,7 @@ namespace QuickRoute.BusinessEntities
     /// <returns></returns>
     public static double AnglifyD(double degreeAngle, AngleStyle style)
     {
-      switch(style)
+      switch (style)
       {
         case AngleStyle.E180CCW:
           degreeAngle = degreeAngle % 360;
@@ -1151,7 +1181,7 @@ namespace QuickRoute.BusinessEntities
     {
       double difference = angle0 - angle1;
       if (difference >= 180) difference = 360 - difference;
-      else if (difference < -180) difference = difference + 360; 
+      else if (difference < -180) difference = difference + 360;
       return difference;
     }
 
@@ -1178,7 +1208,7 @@ namespace QuickRoute.BusinessEntities
     public static PointD Rotate(PointD point, PointD rotationCenter, double angleInRadians)
     {
       var rotated =
-        new GeneralMatrix(new[] { 1, 0, 0, 0, 1, 0, rotationCenter.X, rotationCenter.Y, 1 }, 3)*
+        new GeneralMatrix(new[] { 1, 0, 0, 0, 1, 0, rotationCenter.X, rotationCenter.Y, 1 }, 3) *
         new GeneralMatrix(new[] { Math.Cos(angleInRadians), -Math.Sin(angleInRadians), 0, Math.Sin(angleInRadians), Math.Cos(angleInRadians), 0, 0, 0, 1 }, 3) *
         new GeneralMatrix(new[] { 1, 0, 0, 0, 1, 0, -rotationCenter.X, -rotationCenter.Y, 1 }, 3) *
         ConvertUtil.To3x1Matrix(point);
@@ -1216,9 +1246,9 @@ namespace QuickRoute.BusinessEntities
       {
         sum += item.WeightedValue;
         squareSum += item.Weight * item.Value * item.Value;
-        weightSum += item.Weight; 
+        weightSum += item.Weight;
       }
-      double squared = squareSum/weightSum - (sum/weightSum)*(sum/weightSum);
+      double squared = squareSum / weightSum - (sum / weightSum) * (sum / weightSum);
       if (squared < 0) squared = 0;
       return Math.Sqrt(squared);
     }
@@ -1237,7 +1267,7 @@ namespace QuickRoute.BusinessEntities
 
       public double WeightedValue
       {
-        get { return Weight*Value; }
+        get { return Weight * Value; }
       }
     }
 
@@ -1247,7 +1277,7 @@ namespace QuickRoute.BusinessEntities
   {
     public static List<string> GetQuickRouteFileExtensions()
     {
-      return new List<string>(new[] {".qrt", ".jpg", ".jpeg" });
+      return new List<string>(new[] { ".qrt", ".jpg", ".jpeg" });
     }
   }
 

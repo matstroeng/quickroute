@@ -175,8 +175,8 @@ namespace QuickRoute.UI
       // 
       // toolStripContainer1.TopToolStripPanel
       // 
-      this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.routeAppearanceToolstrip);
       this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip);
+      this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.routeAppearanceToolstrip);
       // 
       // canvas
       // 

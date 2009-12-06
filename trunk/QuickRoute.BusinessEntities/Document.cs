@@ -67,17 +67,24 @@ namespace QuickRoute.BusinessEntities
     /// <param name="initialTransformationMatrix"></param>
     /// <param name="settings"></param>
     public Document(Map map, Route route, LapCollection laps, GeneralMatrix initialTransformationMatrix, DocumentSettings settings)
+      : this(map, route, laps, initialTransformationMatrix, null, settings)
+    {
+    }
+
+    /// <summary>
+    /// Creating a new document using the specified map, route, laps, initial transformation matrix, projection origin and document settings, and adding one new session with the specified route and laps.
+    /// </summary>
+    /// <param name="map"></param>
+    /// <param name="route"></param>
+    /// <param name="laps"></param>
+    /// <param name="initialTransformationMatrix"></param>
+    /// <param name="projectionOrigin"></param>
+    /// <param name="settings"></param>
+    public Document(Map map, Route route, LapCollection laps, GeneralMatrix initialTransformationMatrix, LongLat projectionOrigin, DocumentSettings settings)
     {
       Map = map;
-      sessions.Add(new Session(route, laps, map.Image.Size, settings.DefaultSessionSettings));
+      sessions.Add(new Session(route, laps, map.Image.Size, initialTransformationMatrix, projectionOrigin, settings.DefaultSessionSettings));
       this.settings = settings;
-      if (initialTransformationMatrix != null)
-      {
-        foreach (Session s in sessions)
-        {
-          s.InitialTransformationMatrix = initialTransformationMatrix;
-        }
-      }
       UpdateDocumentToCurrentVersion(this);
     }
 
@@ -316,7 +323,7 @@ namespace QuickRoute.BusinessEntities
       var sePixel = new PointD(nePixel.X, swPixel.Y);
       var nwPixel = new PointD(swPixel.X, nePixel.Y);
 
-      var inverseAverageTransformationMatrix = Sessions.CalculateAverageTransformationMatrix().Inverse();
+      var inverseAverageTransformationMatrix = Sessions.CalculateAverageTransformation().TransformationMatrix.Inverse();
 
       return new[] 
                { 
@@ -334,7 +341,7 @@ namespace QuickRoute.BusinessEntities
       var sePixel = new PointD(nePixel.X, swPixel.Y);
       var nwPixel = new PointD(swPixel.X, nePixel.Y);
 
-      var inverseAverageTransformationMatrix = Sessions.CalculateAverageTransformationMatrix().Inverse();
+      var inverseAverageTransformationMatrix = Sessions.CalculateAverageTransformation().TransformationMatrix.Inverse();
 
       return new[] 
                { 

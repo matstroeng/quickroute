@@ -28,7 +28,7 @@ namespace QuickRoute.BusinessEntities
         mapRectangle = new RectangleD(mapRectangle.Center.X - mapRectangle.Height * routeRatio / 2.0, mapRectangle.Top, mapRectangle.Height * routeRatio, mapRectangle.Height);
       }
 
-      GeneralMatrix t = LinearAlgebraUtil.CalculateTransformationMatrix(routeRectangle.LowerLeft, mapRectangle.UpperLeft, routeRectangle.UpperRight, mapRectangle.LowerRight, null);
+      GeneralMatrix t = LinearAlgebraUtil.CalculateTransformationMatrix(routeRectangle.LowerLeft, mapRectangle.UpperLeft, routeRectangle.UpperRight, mapRectangle.LowerRight, null, false);
 
       return t;
     }

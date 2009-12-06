@@ -145,6 +145,7 @@
     <Compile Include="Importers\TCX\TCXImporter.cs" />
     <Compile Include="Importers\WorkProgressEventArgs.cs" />
     <Compile Include="Exporters\KmlExporter.cs" />
+    <Compile Include="KmzDocument.cs" />
     <Compile Include="Lap.cs" />
     <Compile Include="LapCollection.cs" />
     <Compile Include="LapInfo.cs" />

@@ -35,18 +35,18 @@ namespace QuickRoute.BusinessEntities
     #region  Constructors
 
     public Session(Route route, LapCollection laps, Size mapSize, SessionSettings settings)
-      : this(route, laps, mapSize, settings, route.CenterLongLat(), null) { }
+      : this(route, laps, mapSize, null, route.CenterLongLat(), settings) { }
 
-    public Session(Route route, LapCollection laps, Size mapSize, SessionSettings settings, LongLat projectionOrigin)
-      : this(route, laps, mapSize, settings, projectionOrigin, null) { }
+    public Session(Route route, LapCollection laps, Size mapSize, GeneralMatrix initialTransformationMatrix, SessionSettings settings)
+      : this(route, laps, mapSize, initialTransformationMatrix, null, settings) { }
 
-    public Session(Route route, LapCollection laps, Size mapSize, SessionSettings settings, LongLat projectionOrigin, GeneralMatrix initialTransformationMatrix)
+    public Session(Route route, LapCollection laps, Size mapSize, GeneralMatrix initialTransformationMatrix, LongLat projectionOrigin, SessionSettings settings)
     {
       this.route = route;
       this.route.SuppressWaypointAttributeCalculation = true;
       this.route.SmoothingIntervals = settings.SmoothingIntervals;
       this.laps = laps;
-      this.projectionOrigin = projectionOrigin;
+      this.projectionOrigin = projectionOrigin ?? route.CenterLongLat();
       this.settings = settings;
       this.initialTransformationMatrix = initialTransformationMatrix ??
                                          RouteAdjustmentManager.CreateInitialTransformationMatrix(route, mapSize, projectionOrigin);
@@ -559,7 +559,7 @@ namespace QuickRoute.BusinessEntities
     
     public Route CreateRouteAdaptedToSingleTransformationMatrix(Session baseSession)
     {
-      var transformationMatrix = baseSession.CalculateAverageTransformationMatrix();
+      var transformationMatrix = baseSession.CalculateAverageTransformation().TransformationMatrix;
       var transformationMatrixInverse = transformationMatrix.Inverse();
       var routeSegments = new List<RouteSegment>();
       foreach (var ars in adjustedRoute.Segments)
@@ -585,9 +585,9 @@ namespace QuickRoute.BusinessEntities
     /// Using linear least squares algorithm described at http://en.wikipedia.org/wiki/Linear_least_squares
     /// </summary>
     /// <returns></returns>
-    public GeneralMatrix CalculateAverageTransformationMatrix()
+    public Transformation CalculateAverageTransformation()
     {
-      return new SessionCollection { this }.CalculateAverageTransformationMatrix();
+      return new SessionCollection { this }.CalculateAverageTransformation();
     }
 
     /// <summary>

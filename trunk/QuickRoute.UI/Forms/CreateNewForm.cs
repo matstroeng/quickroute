@@ -12,9 +12,6 @@ namespace QuickRoute.UI.Forms
 {
   public partial class CreateNewForm : Form
   {
-    private Map map;
-    private Route route;
-    private LapCollection laps;
     private readonly List<FileFormat> supportedMapImageFileFormats;
     private readonly List<RouteFileFormat> supportedRouteFileFormats;
     private readonly List<GPSDevice> supportedGPSDevices;
@@ -52,28 +49,21 @@ namespace QuickRoute.UI.Forms
         if (!gpsDevicesFound) routeFromFile.Checked = true;
       }
 
+      InitialTransformation = new Transformation();
+
       UpdateUI();
     }
 
     #region Public properties
 
-    public Map Map
-    {
-      get { return map; }
-    }
+    public Map Map { get; private set; }
 
-    public Route Route
-    {
-      get { return route; }
-    }
+    public Route Route { get; private set; }
 
-    public LapCollection Laps
-    {
-      get { return laps; }
-    }
+    public LapCollection Laps { get; private set; }
 
-    public GeneralMatrix InitialTransformationMatrix { get; set; }
-
+    public Transformation InitialTransformation { get; private set; }
+    
     public SessionPerson Person
     {
       get
@@ -316,29 +306,35 @@ namespace QuickRoute.UI.Forms
         {
           if (mapImageFromFile.Checked)
           {
-            if (mapImageFileFormatComboBox.SelectedIndex == 0)
+            switch (mapImageFileFormatComboBox.SelectedIndex)
             {
-              // map image from image file
-              map = new Map(mapImageFileName.Text, MapSourceType.FileSystem, MapStorageType.Inline);
-              // is it a QuickRoute image? if yes, use embedded transformation matrix
-              var ed = QuickRouteJpegExtensionData.FromJpegFile(mapImageFileName.Text);
-              if (ed != null)
-              {
-                if (ed.Sessions != null && ed.Sessions.Count > 0)
+              case 0: // map image from image file
+                Map = new Map(mapImageFileName.Text, MapSourceType.FileSystem, MapStorageType.Inline);
+                // is it a QuickRoute image? if yes, use embedded transformation matrix
+                var ed = QuickRouteJpegExtensionData.FromJpegFile(mapImageFileName.Text);
+                if (ed != null && ed.Sessions != null && ed.Sessions.Count > 0)
                 {
-                  InitialTransformationMatrix = ed.Sessions.CalculateAverageTransformationMatrix();
+                  InitialTransformation = ed.Sessions.CalculateAverageTransformation();
                 }
-              }
-            }
-            else
-            {
-              // map image from another QuickRoute file
-              Document d = Document.OpenFromQrt(mapImageFileName.Text);
-              if (d != null)
-              {
-                map = d.Map;
-                InitialTransformationMatrix = d.Sessions.CalculateAverageTransformationMatrix();
-              }
+                break;
+
+              case 1: // map image from QuickRoute file
+                Document d = Document.OpenFromQrt(mapImageFileName.Text);
+                if (d != null)
+                {
+                  Map = d.Map;
+                  InitialTransformation = d.Sessions.CalculateAverageTransformation();
+                }
+                break;
+
+              case 2: // map image from kmz file
+                var kmz = new KmzDocument(mapImageFileName.Text);
+                if (kmz.ImageStream != null)
+                {
+                  Map = new Map(kmz.ImageStream);
+                  InitialTransformation = kmz.Transformation;
+                }
+                break;
             }
           }
           else if (mapImageBlank.Checked)
@@ -348,12 +344,12 @@ namespace QuickRoute.UI.Forms
             {
               g.Clear(Color.White);
             }
-            map = new Map(blankMap);
+            Map = new Map(blankMap);
 
           }
           else if (mapImageFromUrl.Checked)
           {
-            map = new Map(mapImageUrl.Text, MapSourceType.Url, MapStorageType.Inline);
+            Map = new Map(mapImageUrl.Text, MapSourceType.Url, MapStorageType.Inline);
           }
         }
         catch (Exception ex)
@@ -362,8 +358,8 @@ namespace QuickRoute.UI.Forms
           Util.ShowExceptionMessageBox(ex, Strings.InvalidMapImage);
           return DialogResult.Cancel;
         }
-        route = routeImporter.ImportResult.Route;
-        laps = routeImporter.ImportResult.Laps;
+        Route = routeImporter.ImportResult.Route;
+        Laps = routeImporter.ImportResult.Laps;
         if (mapImageFromFile.Checked) Util.ApplicationSettings.AddRecentMapImageFileName(mapImageFileName.Text);
         if (routeFromFile.Checked) Util.ApplicationSettings.AddRecentRouteFileName(routeFileName.Text);
       }
