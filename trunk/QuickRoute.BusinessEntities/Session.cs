@@ -49,7 +49,7 @@ namespace QuickRoute.BusinessEntities
       this.projectionOrigin = projectionOrigin ?? route.CenterLongLat();
       this.settings = settings;
       this.initialTransformationMatrix = initialTransformationMatrix ??
-                                         RouteAdjustmentManager.CreateInitialTransformationMatrix(route, mapSize, projectionOrigin);
+                                         RouteAdjustmentManager.CreateInitialTransformationMatrix(this.route, mapSize, this.projectionOrigin);
       this.route.SuppressWaypointAttributeCalculation = false;
       Initialize();
     }
