@@ -187,7 +187,7 @@
     <value>Ungültige Strecke</value>
   </data>
   <data name="Location" xml:space="preserve">
-    <value>Ort</value>
+    <value>Position</value>
   </data>
   <data name="MapImageFileDoesNotExist" xml:space="preserve">
     <value>Die Bilddatei existiert nicht.</value>
@@ -525,7 +525,7 @@
     <value>Zwischenzeit: {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_Location" xml:space="preserve">
-    <value>Ort: {0}</value>
+    <value>Position: {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_MaxHeartRate" xml:space="preserve">
     <value>Maximale Herzfrequenz (Zwischenzeit): {0} bpm</value>
@@ -651,7 +651,7 @@
     <value>Zwischenzeit</value>
   </data>
   <data name="RoutePropertyName_Location" xml:space="preserve">
-    <value>Ort</value>
+    <value>Position</value>
   </data>
   <data name="RoutePropertyName_MaxHeartRate" xml:space="preserve">
     <value>Maximale Herzfrequenz (Zwischenzeit)</value>

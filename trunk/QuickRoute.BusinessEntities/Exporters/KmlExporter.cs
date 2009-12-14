@@ -580,15 +580,15 @@ namespace QuickRoute.BusinessEntities.Exporters
       writer.WriteElementString("href", GetGroundOverlayUrl(kmlExportDocument));
       writer.WriteEndElement();
 
-      var rotatedCorners = GetRotatedCorners(kmlExportDocument);
+      var orthogonallyRotatedCorners = GetOrthogonallyRotatedCorners(kmlExportDocument);
 
-      if (rotatedCorners != null)
+      if (orthogonallyRotatedCorners != null)
       {
         writer.WriteStartElement("LatLonBox");
-        writer.WriteElementString("north", Math.Max(rotatedCorners[1].Latitude, rotatedCorners[2].Latitude).ToString(formatProvider));
-        writer.WriteElementString("south", Math.Min(rotatedCorners[0].Latitude, rotatedCorners[3].Latitude).ToString(formatProvider));
-        writer.WriteElementString("east", Math.Max(rotatedCorners[2].Longitude, rotatedCorners[3].Longitude).ToString(formatProvider));
-        writer.WriteElementString("west", Math.Min(rotatedCorners[0].Longitude, rotatedCorners[1].Longitude).ToString(formatProvider));
+        writer.WriteElementString("north", Math.Max(orthogonallyRotatedCorners[1].Latitude, orthogonallyRotatedCorners[2].Latitude).ToString(formatProvider));
+        writer.WriteElementString("south", Math.Min(orthogonallyRotatedCorners[0].Latitude, orthogonallyRotatedCorners[3].Latitude).ToString(formatProvider));
+        writer.WriteElementString("east", Math.Max(orthogonallyRotatedCorners[2].Longitude, orthogonallyRotatedCorners[3].Longitude).ToString(formatProvider));
+        writer.WriteElementString("west", Math.Min(orthogonallyRotatedCorners[0].Longitude, orthogonallyRotatedCorners[1].Longitude).ToString(formatProvider));
         writer.WriteElementString("rotation", GetImageRotationD(kmlExportDocument).ToString(formatProvider));
         writer.WriteEndElement();
       }
@@ -1074,7 +1074,12 @@ namespace QuickRoute.BusinessEntities.Exporters
 
     #endregion
 
-    private static LongLat[] GetRotatedCorners(KmlExportDocument kmlExportDocument)
+    /// <summary>
+    /// Gets the corners of the map if the map has a rotation of 0, i e are aligned to the longitude and latitude axes.
+    /// </summary>
+    /// <param name="kmlExportDocument"></param>
+    /// <returns></returns>
+    private static LongLat[] GetOrthogonallyRotatedCorners(KmlExportDocument kmlExportDocument)
     {
       var document = kmlExportDocument.Document;
       var corners = document.GetImageCornersLongLat(kmlExportDocument.ImageExporter.ImageBounds, kmlExportDocument.ImageExporter.MapBounds,
@@ -1086,21 +1091,21 @@ namespace QuickRoute.BusinessEntities.Exporters
         // need to align map in north-south direction; rotate map around its center
         var center = (corners[0] / 4 + corners[1] / 4 + corners[2] / 4 + corners[3] / 4);
         var projectedCenter = center.Project(document.ProjectionOrigin);
-        var projectedRotatedCorners = new[]
+        var projectedOrthogonallyRotatedCorners = new[]
                                           {
                                             LinearAlgebraUtil.Rotate(corners[0].Project(document.ProjectionOrigin), projectedCenter, rotationR),
                                             LinearAlgebraUtil.Rotate(corners[1].Project(document.ProjectionOrigin), projectedCenter, rotationR),
                                             LinearAlgebraUtil.Rotate(corners[2].Project(document.ProjectionOrigin), projectedCenter, rotationR),
                                             LinearAlgebraUtil.Rotate(corners[3].Project(document.ProjectionOrigin), projectedCenter, rotationR),
                                           };
-        var rotatedCorners = new[]
+        var orthogonallyRotatedCorners = new[]
                                  {
-                                   LongLat.Deproject(projectedRotatedCorners[0], document.ProjectionOrigin),
-                                   LongLat.Deproject(projectedRotatedCorners[1], document.ProjectionOrigin),
-                                   LongLat.Deproject(projectedRotatedCorners[2], document.ProjectionOrigin),
-                                   LongLat.Deproject(projectedRotatedCorners[3], document.ProjectionOrigin),
+                                   LongLat.Deproject(projectedOrthogonallyRotatedCorners[0], document.ProjectionOrigin),
+                                   LongLat.Deproject(projectedOrthogonallyRotatedCorners[1], document.ProjectionOrigin),
+                                   LongLat.Deproject(projectedOrthogonallyRotatedCorners[2], document.ProjectionOrigin),
+                                   LongLat.Deproject(projectedOrthogonallyRotatedCorners[3], document.ProjectionOrigin),
                                  };
-        return rotatedCorners;
+        return orthogonallyRotatedCorners;
       }
       return null;
     }
