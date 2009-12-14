@@ -193,7 +193,7 @@
     <value>Streckenobjekt trennen, farbcodiert</value>
   </data>
   <data name="routeLineStyleLabel.Text" xml:space="preserve">
-    <value>&amp;Streckeoptionen</value>
+    <value>&amp;Streckenoptionen</value>
   </data>
   <data name="replayMarkerStyle.Items1" xml:space="preserve">
     <value>Farbcodiert</value>
@@ -205,7 +205,7 @@
     <value>Wiederholungsobjekte an Karte an&amp;passen</value>
   </data>
   <data name="includeRoute.Text" xml:space="preserve">
-    <value>&amp;Route einbinden</value>
+    <value>Strecke &amp;einbinden</value>
   </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Abbrechen</value>
