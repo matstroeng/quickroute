@@ -117,22 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Atšaukti</value>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Permatomumas</value>
   </data>
-  <data name="cutAfter.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;po</value>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Mėlyna</value>
   </data>
-  <data name="cutBefore.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;iki</value>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Raudona</value>
   </data>
-  <data name="timeLabel.Text" xml:space="preserve">
-    <value>&amp;Laikas:</value>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Ryškumas</value>
+  </data>
+  <data name="btnOK.Text" xml:space="preserve">
+    <value>Gerai</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Žalia</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Atspalvis</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>Prisotinimas</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Iškirpti prabėgimus</value>
+    <value>Pasirinkti spalvą</value>
   </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>Gerai</value>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Atšaukti</value>
   </data>
 </root>

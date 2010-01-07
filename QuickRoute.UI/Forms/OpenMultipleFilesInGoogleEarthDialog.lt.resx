@@ -117,22 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Atšaukti</value>
+  <data name="replayTailDurationLabel.Text" xml:space="preserve">
+    <value>Uodegos ilgis sekundėmis</value>
   </data>
-  <data name="cutAfter.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;po</value>
+  <data name="replayGroupBox.Text" xml:space="preserve">
+    <value>Bėgimo pakartojimas</value>
   </data>
-  <data name="cutBefore.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;iki</value>
+  <data name="replayTailDuration.Items7" xml:space="preserve">
+    <value>neribotas</value>
   </data>
-  <data name="timeLabel.Text" xml:space="preserve">
-    <value>&amp;Laikas:</value>
+  <data name="includeRoutes.Text" xml:space="preserve">
+    <value>Įtraukti prabėgimus</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Iškirpti prabėgimus</value>
+  <data name="includeReplay.Text" xml:space="preserve">
+    <value>Įtraukti bėgimo pakartojimą</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
+    <value>Laiko intervalas sekundėmis</value>
   </data>
   <data name="ok.Text" xml:space="preserve">
     <value>Gerai</value>
+  </data>
+  <data name="replayTailsVisibleLabel.Text" xml:space="preserve">
+    <value>Rodyti uodegas</value>
+  </data>
+  <data name="filesLabel.Text" xml:space="preserve">
+    <value>&amp;Failai</value>
+  </data>
+  <data name="routesGroupBox.Text" xml:space="preserve">
+    <value>Prabėgimai</value>
+  </data>
+  <data name="massStartLabel.Text" xml:space="preserve">
+    <value>Simuliuoti bendrą startą</value>
+  </data>
+  <data name="cancel.Text" xml:space="preserve">
+    <value>Atšaukti</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Atidaryti keletą QuickRoute failų Google Earth programoje</value>
+  </data>
+  <data name="uiInformation.Text" xml:space="preserve">
+    <value>Įtraukite QuickRoute failus, kuriuose yra norimi prabėgimai. Pirmojo failo žemėlapis bus panaudotas kaip fono žemėlapis. Tinkami failų formatai apima qrt failus ir jpeg failus, perkeltus iš 2.3 arba vėlesnės QuickRoute versijos.</value>
+  </data>
+  <data name="replayRestartAfterEachLapLabel.Text" xml:space="preserve">
+    <value>Startuoti iš naujo po kiekvieno etapo</value>
   </data>
 </root>

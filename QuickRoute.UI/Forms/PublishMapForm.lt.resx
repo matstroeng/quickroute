@@ -120,19 +120,67 @@
   <data name="cancel.Text" xml:space="preserve">
     <value>Atšaukti</value>
   </data>
-  <data name="cutAfter.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;po</value>
-  </data>
-  <data name="cutBefore.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;iki</value>
-  </data>
-  <data name="timeLabel.Text" xml:space="preserve">
-    <value>&amp;Laikas:</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Iškirpti prabėgimus</value>
-  </data>
   <data name="ok.Text" xml:space="preserve">
     <value>Gerai</value>
+  </data>
+  <data name="date.CustomFormat" xml:space="preserve">
+    <value>yyyy-MM-dd H:mm</value>
+  </data>
+  <data name="commentLabel.Text" xml:space="preserve">
+    <value>Komentaras</value>
+  </data>
+  <data name="resultListUrlLabel.Text" xml:space="preserve">
+    <value>Nuoroda į rezultatus</value>
+  </data>
+  <data name="usernameLabel.Text" xml:space="preserve">
+    <value>Vartotojo vardas</value>
+  </data>
+  <data name="webServiceLabel.Text" xml:space="preserve">
+    <value>Serverio adresas</value>
+  </data>
+  <data name="passwordLabel.Text" xml:space="preserve">
+    <value>Slaptažodis</value>
+  </data>
+  <data name="mapLabel.Text" xml:space="preserve">
+    <value>Žemėlapis</value>
+  </data>
+  <data name="dateLabel.Text" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="nameLabel.Text" xml:space="preserve">
+    <value>Treniruotės/varžybų pavadinimas</value>
+  </data>
+  <data name="mapNameLabel.Text" xml:space="preserve">
+    <value>Žemėlapio/vietovės pavadinimas</value>
+  </data>
+  <data name="organiserLabel.Text" xml:space="preserve">
+    <value>Organizatorius</value>
+  </data>
+  <data name="countryLabel.Text" xml:space="preserve">
+    <value>Valstybė</value>
+  </data>
+  <data name="disciplineLabel.Text" xml:space="preserve">
+    <value>Disciplina</value>
+  </data>
+  <data name="relayLegLabel.Text" xml:space="preserve">
+    <value>Estafečių etapas</value>
+  </data>
+  <data name="imageFormatLabel.Text" xml:space="preserve">
+    <value>Vaizdo formatas</value>
+  </data>
+  <data name="categoryLabel.Text" xml:space="preserve">
+    <value>Kategorija</value>
+  </data>
+  <data name="ConnectButton.Text" xml:space="preserve">
+    <value>Prisijungti</value>
+  </data>
+  <data name="SavePassword.Text" xml:space="preserve">
+    <value>Atsiminti slaptažodį</value>
+  </data>
+  <data name="uiInformation.Text" xml:space="preserve">
+    <value>Naudojant QuickRoute programą galima publikuoti žemėlapius skaitmeniniame žemėlapių archyve. Nurodymai kaip susikurti asmeninį archyvą yra pateikti puslapyje www.matstroeng.se/doma. Serverio adresas jūsų archyvui yra kažkas panašaus į http://www.yourdomain.com/yoursubfolder/webservice.php</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Publikuoti žemėlapį</value>
   </data>
 </root>

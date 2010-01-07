@@ -117,22 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ok.Text" xml:space="preserve">
+    <value>Gerai</value>
+  </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Atšaukti</value>
   </data>
-  <data name="cutAfter.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;po</value>
+  <data name="mapImageFileNameBrowse.Text" xml:space="preserve">
+    <value>Narš&amp;yti...</value>
   </data>
-  <data name="cutBefore.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;iki</value>
+  <data name="mapImageFromFile.Text" xml:space="preserve">
+    <value>Iš &amp;failo:</value>
   </data>
-  <data name="timeLabel.Text" xml:space="preserve">
-    <value>&amp;Laikas:</value>
+  <data name="mapImageBlank.Text" xml:space="preserve">
+    <value>&amp;Tuščias</value>
+  </data>
+  <data name="mapImageFileFormatLabel.Text" xml:space="preserve">
+    <value>Failo forma&amp;tas:</value>
+  </data>
+  <data name="mapImageGroup.Text" xml:space="preserve">
+    <value>Žemėlapio vaizdas</value>
+  </data>
+  <data name="routeFromGpsDevice.Text" xml:space="preserve">
+    <value>Iš &amp;GPS laikrodžio:</value>
+  </data>
+  <data name="routeFromFile.Text" xml:space="preserve">
+    <value>Iš fai&amp;lo:</value>
+  </data>
+  <data name="routeFileFormatLabel.Text" xml:space="preserve">
+    <value>Failo forma&amp;tas:</value>
+  </data>
+  <data name="routeFileNameBrowse.Text" xml:space="preserve">
+    <value>Narš&amp;yti...</value>
+  </data>
+  <data name="routeGroup.Text" xml:space="preserve">
+    <value>Prabėgimas</value>
+  </data>
+  <data name="mapImageFromUrl.Text" xml:space="preserve">
+    <value>Iš &amp;url:</value>
+  </data>
+  <data name="personNameLabel.Text" xml:space="preserve">
+    <value>&amp;Vardas:</value>
+  </data>
+  <data name="personGroup.Text" xml:space="preserve">
+    <value>Asmuo</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Iškirpti prabėgimus</value>
-  </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>Gerai</value>
+    <value>Naujas dokumentas</value>
   </data>
 </root>

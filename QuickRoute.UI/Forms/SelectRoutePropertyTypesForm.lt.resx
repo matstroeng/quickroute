@@ -117,20 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="moveUp.Text" xml:space="preserve">
+    <value>Judėti į viršų</value>
+  </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Atšaukti</value>
   </data>
-  <data name="cutAfter.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;po</value>
-  </data>
-  <data name="cutBefore.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;iki</value>
-  </data>
-  <data name="timeLabel.Text" xml:space="preserve">
-    <value>&amp;Laikas:</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Iškirpti prabėgimus</value>
+    <value>Pasirinkti prabėgimų savybių rūšis</value>
+  </data>
+  <data name="moveDown.Text" xml:space="preserve">
+    <value>Judėti žemyn</value>
   </data>
   <data name="ok.Text" xml:space="preserve">
     <value>Gerai</value>

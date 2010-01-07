@@ -120,19 +120,19 @@
   <data name="cancel.Text" xml:space="preserve">
     <value>Atšaukti</value>
   </data>
-  <data name="cutAfter.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;po</value>
-  </data>
-  <data name="cutBefore.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;iki</value>
-  </data>
-  <data name="timeLabel.Text" xml:space="preserve">
-    <value>&amp;Laikas:</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Iškirpti prabėgimus</value>
+    <value>Intervalas</value>
   </data>
   <data name="ok.Text" xml:space="preserve">
     <value>Gerai</value>
+  </data>
+  <data name="intervalStartLabel.Text" xml:space="preserve">
+    <value>Intervalo &amp;pradžia</value>
+  </data>
+  <data name="infoLabel.Text" xml:space="preserve">
+    <value>Nustatyti pradinę ir galutinę spalvų juostos reikšmę</value>
+  </data>
+  <data name="intervalEndLabel.Text" xml:space="preserve">
+    <value>Intervalo pa&amp;baiga</value>
   </data>
 </root>

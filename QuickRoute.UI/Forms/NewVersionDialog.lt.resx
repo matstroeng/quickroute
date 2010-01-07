@@ -117,22 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Atšaukti</value>
-  </data>
-  <data name="cutAfter.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;po</value>
-  </data>
-  <data name="cutBefore.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;iki</value>
-  </data>
-  <data name="timeLabel.Text" xml:space="preserve">
-    <value>&amp;Laikas:</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Iškirpti prabėgimus</value>
+    <value>Galima nauja versija</value>
   </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>Gerai</value>
+  <data name="dontRemindMe.Text" xml:space="preserve">
+    <value>Daugiau nerodyti šios žinutės</value>
+  </data>
+  <data name="close.Text" xml:space="preserve">
+    <value>Uždaryti</value>
+  </data>
+  <data name="goToDownloadPage.Text" xml:space="preserve">
+    <value>Eiti į programos įdiegimo puslapį</value>
   </data>
 </root>
