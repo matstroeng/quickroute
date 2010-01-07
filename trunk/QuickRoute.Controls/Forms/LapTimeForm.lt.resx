@@ -120,19 +120,22 @@
   <data name="cancel.Text" xml:space="preserve">
     <value>Atšaukti</value>
   </data>
-  <data name="cutAfter.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;po</value>
-  </data>
-  <data name="cutBefore.Text" xml:space="preserve">
-    <value>Ištrinti prabėgimus &amp;iki</value>
+  <data name="ok.Text" xml:space="preserve">
+    <value>Gerai</value>
   </data>
   <data name="timeLabel.Text" xml:space="preserve">
     <value>&amp;Laikas:</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Iškirpti prabėgimus</value>
+  <data name="timeTypeLabel.Text" xml:space="preserve">
+    <value>Laiko &amp;tipas:</value>
   </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>Gerai</value>
+  <data name="timeStyle.Items" xml:space="preserve">
+    <value>Astronominis laikas</value>
+  </data>
+  <data name="timeStyle.Items1" xml:space="preserve">
+    <value>Laikas nuo starto</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Pridėti tarpinius laikus</value>
   </data>
 </root>

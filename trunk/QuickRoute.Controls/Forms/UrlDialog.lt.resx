@@ -121,7 +121,7 @@
     <value>Atšaukti</value>
   </data>
   <data name="uiInformation.Text" xml:space="preserve">
-    <value>Įveskite internetinį adresą failo, kurį norėtumėte pridėti, po vieną eilutėje.</value>
+    <value>Įveskite internetinį adresą failų, kuriuos norėtumėte pridėti, po vieną eilutėje.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Pridėti internetinį adresą</value>

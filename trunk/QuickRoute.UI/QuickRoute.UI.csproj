@@ -1,4 +1,5 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -11,11 +12,9 @@
     <AssemblyName>QuickRoute</AssemblyName>
     <StartupObject>QuickRoute.UI.Program</StartupObject>
     <ApplicationIcon>QuickRoute.ico</ApplicationIcon>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
+    <FileUpgradeFlags></FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
+    <UpgradeBackupLocation></UpgradeBackupLocation>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -657,10 +656,8 @@
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\QuickRouteServer\</RelPath>
       <UpdateFromURL>http://www.matstroeng.se/quickroute/server/index.php%3fwsdl</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
+      <ServiceLocationURL></ServiceLocationURL>
+      <CachedDynamicPropName></CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QuickRoute_QuickRouteServer_QuickRouteServer</CachedSettingsPropName>
     </WebReferenceUrl>
@@ -668,10 +665,8 @@
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WinSplitsWebServices\</RelPath>
       <UpdateFromURL>http://www.obasen.nu/winsplits/webservices/WebServices.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
+      <ServiceLocationURL></ServiceLocationURL>
+      <CachedDynamicPropName></CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QuickRoute_WinSplitsWebServices_WebServices</CachedSettingsPropName>
     </WebReferenceUrl>
@@ -679,6 +674,54 @@
   <ItemGroup>
     <Folder Include="ExternalReferences\" />
     <Folder Include="Graphics\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AboutBox.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AddSessionsForm.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ColorChooser.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ColorRangeIntervalEditor.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\CreateNewForm.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ExportRouteDataDialog.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\GradientEditor.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\KmlPropertySelectorDialog.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\NewVersionDialog.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\OpenMultipleFilesInGoogleEarthDialog.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\PublishMapForm.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\SelectRoutePropertyTypesForm.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\SelectUICultureForm.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\TimeDialog.lt.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Main.lt.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
