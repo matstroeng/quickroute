@@ -4,13 +4,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class AverageRouteSpeed : RouteSpanProperty
   {
-    public AverageRouteSpeed(Session session, ParameterizedLocation start, ParameterizedLocation end)
-      : base(session, start, end)
+    public AverageRouteSpeed(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, start, end, retrieveExternalProperty)
     {
     }
 
-    public AverageRouteSpeed(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AverageRouteSpeed(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -22,8 +22,8 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      var routeLength = (double)new RouteDistance(Session, Start, End).Value;
-      var elapsedTime = (TimeSpan)new ElapsedTime(Session, Start, End).Value;
+      var routeLength = (double)new RouteDistance(Session, Start, End, RetrieveExternalProperty).Value;
+      var elapsedTime = (TimeSpan)new ElapsedTime(Session, Start, End, RetrieveExternalProperty).Value;
       value = routeLength/elapsedTime.TotalSeconds;
       AddToCache();
     }
@@ -53,13 +53,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class AverageRouteSpeedFromStart : RouteFromStartProperty
   {
-    public AverageRouteSpeedFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public AverageRouteSpeedFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 
-    public AverageRouteSpeedFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AverageRouteSpeedFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -71,7 +71,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = (new AverageRouteSpeed(Session, ParameterizedLocation.Start, Location) { CacheManager = CacheManager }).Value;
+      value = (new AverageRouteSpeed(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty) { CacheManager = CacheManager }).Value;
       AddToCache();
     }
 

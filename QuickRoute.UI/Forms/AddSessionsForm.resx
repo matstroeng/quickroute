@@ -328,7 +328,7 @@
     <value>3</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Add Routes</value>
+    <value>Add routes</value>
   </data>
   <data name="addSessionButton.Text" xml:space="preserve">
     <value>&amp;Add route</value>

@@ -247,7 +247,7 @@
     <value>96, 105</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Crop Route</value>
+    <value>Crop route</value>
   </data>
   <data name="&gt;&gt;cutBefore.Name" xml:space="preserve">
     <value>cutBefore</value>

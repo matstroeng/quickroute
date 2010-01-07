@@ -126,4 +126,7 @@
   <data name="moveDown.Text" xml:space="preserve">
     <value>Flytta &amp;ner</value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Välj ruttegenskapstyper</value>
+  </data>
 </root>

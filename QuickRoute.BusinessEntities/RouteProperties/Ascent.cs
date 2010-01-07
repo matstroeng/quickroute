@@ -4,13 +4,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class Ascent : RouteSpanProperty
   {
-    public Ascent(Session session, ParameterizedLocation start, ParameterizedLocation end)
-      : base(session, start, end)
+    public Ascent(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, start, end, retrieveExternalProperty)
     {
     }
 
-    public Ascent(Session session, RouteLocations locations)
-      : base(session, locations)
+    public Ascent(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -43,7 +43,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         }
       }
 
-      while (pl <= End)
+      while (pl != null && pl <= End)
       {
         var altitude = Session.Route.GetAttributeFromParameterizedLocation(WaypointAttribute.Altitude, pl);
         if (pl != Start && !Session.Route.IsFirstPLInSegment(pl))
@@ -92,13 +92,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class AscentFromStart : RouteFromStartProperty
   {
-    public AscentFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public AscentFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 
-    public AscentFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AscentFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -110,7 +110,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = (new Ascent(Session, ParameterizedLocation.Start, Location) { CacheManager = CacheManager }).Value;
+      value = (new Ascent(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty) { CacheManager = CacheManager }).Value;
       AddToCache();
     }
 

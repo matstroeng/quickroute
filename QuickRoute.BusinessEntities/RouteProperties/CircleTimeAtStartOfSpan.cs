@@ -5,19 +5,25 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class CircleTimeAtStartOfSpan : RouteSpanProperty
   {
-    public CircleTimeAtStartOfSpan(Session session, ParameterizedLocation start, ParameterizedLocation end)
-      : base(session, start, end)
+    public CircleTimeAtStartOfSpan(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, start, end, retrieveExternalProperty)
     {
-      DistanceThreshold = 35; // TODO: set dynamically
     }
 
-    public CircleTimeAtStartOfSpan(Session session, RouteLocations locations)
-      : base(session, locations)
+    public CircleTimeAtStartOfSpan(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
-      DistanceThreshold = 35; // TODO: set dynamically
     }
 
-    protected double DistanceThreshold { get; set; }
+    private double? distanceThreshold;
+    protected double DistanceThreshold
+    {
+      get
+      {
+        if (distanceThreshold == null && RetrieveExternalProperty != null) distanceThreshold = RetrieveExternalProperty("CircleTimeRadius");
+        return distanceThreshold ?? 0;
+      }
+    }
 
     protected override void Calculate()
     {
@@ -95,19 +101,25 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class CircleTimeAtStartOfSpanFromStart : RouteFromStartProperty
   {
-    public CircleTimeAtStartOfSpanFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public CircleTimeAtStartOfSpanFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
-      DistanceThreshold = 35; // TODO: set dynamically
     }
 
-    public CircleTimeAtStartOfSpanFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public CircleTimeAtStartOfSpanFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
-      DistanceThreshold = 35; // TODO: set dynamically
     }
 
-    protected double DistanceThreshold { get; set; }
+    private double? distanceThreshold;
+    protected double DistanceThreshold
+    {
+      get
+      {
+        if (distanceThreshold == null && RetrieveExternalProperty != null) distanceThreshold = RetrieveExternalProperty("CircleTimeRadius");
+        return distanceThreshold ?? 0;
+      }
+    }
 
     protected override void Calculate()
     {
@@ -129,8 +141,8 @@ namespace QuickRoute.BusinessEntities.RouteProperties
             sum += (TimeSpan)new CircleTimeAtStartOfSpan(
               Session,
               Session.Route.GetParameterizedLocationFromTime(Session.Laps[i - 1].Time),
-              Session.Route.GetParameterizedLocationFromTime(Session.Laps[i].Time)
-              ).Value;
+              Session.Route.GetParameterizedLocationFromTime(Session.Laps[i].Time),
+              RetrieveExternalProperty).Value;
           }
         }
       }

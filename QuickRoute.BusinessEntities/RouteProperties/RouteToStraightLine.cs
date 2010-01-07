@@ -6,12 +6,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class RouteToStraightLine : RouteSpanProperty
   {
-    public RouteToStraightLine(Session session, RouteLocations locations) : base(session, locations)
+    public RouteToStraightLine(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
-    public RouteToStraightLine(Session session, ParameterizedLocation start, ParameterizedLocation end)
-      : base(session, start, end)
+    public RouteToStraightLine(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, start, end, retrieveExternalProperty)
     {
     }
 
@@ -23,8 +24,8 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      var routeLength = (double)(new RouteDistance(Session, Start, End).Value);
-      var straightLineLength = (double)(new StraightLineDistance(Session, Start, End).Value);
+      var routeLength = (double)(new RouteDistance(Session, Start, End, RetrieveExternalProperty).Value);
+      var straightLineLength = (double)(new StraightLineDistance(Session, Start, End, RetrieveExternalProperty).Value);
       value = straightLineLength != 0 ? (routeLength-straightLineLength)/straightLineLength : 0; 
       AddToCache();
     }
@@ -52,13 +53,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class RouteToStraightLineFromStart : RouteFromStartProperty
   {
-    public RouteToStraightLineFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public RouteToStraightLineFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
-    public RouteToStraightLineFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public RouteToStraightLineFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 
@@ -70,8 +71,8 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      var routeLength = (double)(new RouteDistanceFromStart(Session, Location).Value);
-      var straightLineLength = (double)(new StraightLineDistanceFromStart(Session, Location).Value);
+      var routeLength = (double)(new RouteDistanceFromStart(Session, Location, RetrieveExternalProperty).Value);
+      var straightLineLength = (double)(new StraightLineDistanceFromStart(Session, Location, RetrieveExternalProperty).Value);
       value = straightLineLength != 0 ? (routeLength - straightLineLength) / straightLineLength : 0;
       AddToCache();
     }

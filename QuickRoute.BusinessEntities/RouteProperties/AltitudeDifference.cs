@@ -4,13 +4,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class AltitudeDifference : RouteSpanProperty
   {
-    public AltitudeDifference(Session session, ParameterizedLocation start, ParameterizedLocation end)
-      : base(session, start, end)
+    public AltitudeDifference(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, start, end, retrieveExternalProperty)
     {
     }
 
-    public AltitudeDifference(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AltitudeDifference(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -69,13 +69,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class AltitudeDifferenceFromStart : RouteFromStartProperty
   {
-    public AltitudeDifferenceFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public AltitudeDifferenceFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 
-    public AltitudeDifferenceFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AltitudeDifferenceFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -87,7 +87,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = (new AltitudeDifference(Session, ParameterizedLocation.Start, Location) { CacheManager = CacheManager }).Value;
+      value = (new AltitudeDifference(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty) { CacheManager = CacheManager }).Value;
       AddToCache();
     }
 

@@ -117,34 +117,80 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Permatomumas</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="hsbBlue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 360</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Mėlyna</value>
+  <data name="hsbBlue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 18</value>
   </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Raudona</value>
+  <data name="hsbGreen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 336</value>
   </data>
-  <data name="Label7.Text" xml:space="preserve">
-    <value>Ryškumas</value>
+  <data name="hsbGreen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 18</value>
   </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Žalia</value>
+  <data name="hsbRed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 312</value>
   </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>Atspalvis</value>
+  <data name="hsbRed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 18</value>
+  </data>
+  <data name="hsbBrightness.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 280</value>
+  </data>
+  <data name="hsbBrightness.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 18</value>
+  </data>
+  <data name="hsbSaturation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 256</value>
+  </data>
+  <data name="hsbSaturation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 18</value>
+  </data>
+  <data name="hsbHue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 232</value>
+  </data>
+  <data name="hsbHue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 18</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Atšaukti</value>
   </data>
   <data name="btnOK.Text" xml:space="preserve">
     <value>Gerai</value>
   </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Mėlyna</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>Ryškumas</value>
+  </data>
   <data name="Label6.Text" xml:space="preserve">
     <value>Prisotinimas</value>
   </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Raudona</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Atspalvis</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Žalia</value>
+  </data>
+  <data name="hsbAlpha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 384</value>
+  </data>
+  <data name="hsbAlpha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 18</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 18</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Permatomumas</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Pasirinkti spalvą</value>
-  </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Atšaukti</value>
   </data>
 </root>

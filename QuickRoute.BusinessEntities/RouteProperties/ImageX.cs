@@ -4,13 +4,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class ImageX : RouteMomentaneousProperty
   {
-    public ImageX(Session session, RouteLocations locations)
-      : base(session, locations)
+    public ImageX(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
-    public ImageX(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public ImageX(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 

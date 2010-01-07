@@ -416,6 +416,12 @@ namespace QuickRoute.BusinessEntities
           s.Settings.RouteLineSettingsCollection.Add(WaypointAttribute.DirectionDeviationToNextLap, defaultRLS[WaypointAttribute.DirectionDeviationToNextLap]);
         }
       }
+
+      // add circle time radius, introduced in QR 2.4
+      foreach (var s in doc.sessions)
+      {
+        if (s.Settings.CircleTimeRadius == 0) s.Settings.CircleTimeRadius = 45;
+      }
     }
 
     private static Bitmap Base64StringToBitmap(string base64String)

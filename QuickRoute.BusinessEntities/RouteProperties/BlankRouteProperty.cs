@@ -6,7 +6,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class BlankRouteProperty : RouteProperty
   {
-    public BlankRouteProperty() : base(null, null)
+    public BlankRouteProperty() : base(null, null, null)
     {
     }
 

@@ -90,6 +90,7 @@
     <Compile Include="Exporters\GpxExporter.cs" />
     <Compile Include="Exporters\ImageExporter.cs" />
     <Compile Include="Exporters\RouteDataExporter.cs" />
+    <Compile Include="ExternalRoutePropertyRetriever.cs" />
     <Compile Include="Forms\ExportImageSizeAndQualitySelector.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -5,13 +5,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class ElapsedTime : RouteSpanProperty
   {
-    public ElapsedTime(Session session, ParameterizedLocation start, ParameterizedLocation end) 
-      : base(session, start, end)
+    public ElapsedTime(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty) 
+      : base(session, start, end, retrieveExternalProperty)
     {
     }
 
-    public ElapsedTime(Session session, RouteLocations locations)
-      : base(session, locations)
+    public ElapsedTime(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -69,13 +69,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class ElapsedTimeFromStart : RouteFromStartProperty
   {
-    public ElapsedTimeFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public ElapsedTimeFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 
-    public ElapsedTimeFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public ElapsedTimeFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -87,7 +87,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = (new ElapsedTime(Session, ParameterizedLocation.Start, Location) { CacheManager = CacheManager }).Value;
+      value = (new ElapsedTime(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty) { CacheManager = CacheManager }).Value;
       AddToCache();
     }
 

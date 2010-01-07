@@ -121,12 +121,12 @@
     <value>Galima nauja versija</value>
   </data>
   <data name="dontRemindMe.Text" xml:space="preserve">
-    <value>Daugiau nerodyti šios žinutės</value>
+    <value>Daugiau &amp;nerodyti šios žinutės</value>
   </data>
   <data name="close.Text" xml:space="preserve">
-    <value>Uždaryti</value>
+    <value>&amp;Uždaryti</value>
   </data>
   <data name="goToDownloadPage.Text" xml:space="preserve">
-    <value>Eiti į programos įdiegimo puslapį</value>
+    <value>&amp;Eiti į programos įdiegimo puslapį</value>
   </data>
 </root>

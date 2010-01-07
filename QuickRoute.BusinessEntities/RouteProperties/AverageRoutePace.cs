@@ -5,13 +5,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class AverageRoutePace : RouteSpanProperty
   {
-    public AverageRoutePace(Session session, ParameterizedLocation start, ParameterizedLocation end)
-      : base(session, start, end)
+    public AverageRoutePace(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, start, end, retrieveExternalProperty)
     {
     }
 
-    public AverageRoutePace(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AverageRoutePace(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -23,7 +23,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = ConvertUtil.ToPace((double)new AverageRouteSpeed(Session, Start, End).Value);
+      value = ConvertUtil.ToPace((double)new AverageRouteSpeed(Session, Start, End, RetrieveExternalProperty).Value);
       AddToCache();
     }
 
@@ -60,13 +60,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class AverageRoutePaceFromStart : RouteFromStartProperty
   {
-    public AverageRoutePaceFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public AverageRoutePaceFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 
-    public AverageRoutePaceFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AverageRoutePaceFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -78,7 +78,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = (new AverageRoutePace(Session, ParameterizedLocation.Start, Location) { CacheManager = CacheManager }).Value;
+      value = (new AverageRoutePace(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty) { CacheManager = CacheManager }).Value;
       AddToCache();
     }
   

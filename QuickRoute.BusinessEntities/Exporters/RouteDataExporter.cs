@@ -62,7 +62,9 @@ namespace QuickRoute.BusinessEntities.Exporters
             {
               if (lpType.Selected)
               {
-                var lp = Activator.CreateInstance(lpType.RoutePropertyType, Session, locations) as RouteProperty;
+                RetrieveExternalPropertyDelegate dlg = new ExternalRoutePropertyRetriever(Session.Settings).RetrieveExternalProperty;
+                var lp = Activator.CreateInstance(lpType.RoutePropertyType, Session, locations, dlg) as RouteProperty;
+
                 if (lp != null)
                 {
                   lp.CacheManager = cacheManager;

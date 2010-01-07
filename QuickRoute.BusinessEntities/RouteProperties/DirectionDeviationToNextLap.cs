@@ -5,13 +5,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class DirectionDeviationToNextLap : RouteMomentaneousProperty
   {
-    public DirectionDeviationToNextLap(Session session, RouteLocations locations)
-      : base(session, locations)
+    public DirectionDeviationToNextLap(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
-    public DirectionDeviationToNextLap(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public DirectionDeviationToNextLap(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 

@@ -457,7 +457,7 @@
     <value>23, 22</value>
   </data>
   <data name="exportLapHistogramImage.ToolTipText" xml:space="preserve">
-    <value>Export Histogram</value>
+    <value>Export histogram</value>
   </data>
   <data name="exportLapHistogramImage.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -475,7 +475,7 @@
     <value>40, 25</value>
   </data>
   <data name="lapHistogramBinWidth.ToolTipText" xml:space="preserve">
-    <value>Bar Width</value>
+    <value>Bar width</value>
   </data>
   <data name="lapHistogramToolstrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -702,190 +702,8 @@
   <data name="toolStripContainer1.Text" xml:space="preserve">
     <value>toolStripContainer1</value>
   </data>
-  <metadata name="routeAppearanceToolstrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>3, 0</value>
-  </metadata>
-  <data name="routeAppearanceToolstrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="colorCodingAttributes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 28</value>
-  </data>
-  <data name="colorCodingAttributes.ToolTipText" xml:space="preserve">
-    <value>Color code the route by...</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 28</value>
-  </data>
-  <data name="colorRangeStartValue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 28</value>
-  </data>
-  <data name="colorRangeStartValue.ToolTipText" xml:space="preserve">
-    <value>Starting value of color range</value>
-  </data>
-  <data name="colorRangeIntervalSlider.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="colorRangeIntervalSlider.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Calibri, 6pt</value>
-  </data>
-  <data name="colorRangeIntervalSlider.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 24</value>
-  </data>
-  <data name="colorRangeIntervalSlider.ToolTipText" xml:space="preserve">
-    <value>Route line color coding</value>
-  </data>
-  <data name="colorRangeEndValue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 28</value>
-  </data>
-  <data name="colorRangeEndValue.ToolTipText" xml:space="preserve">
-    <value>Ending value of color range</value>
-  </data>
-  <data name="colorRangeIntervalButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+wAA
-        CvsBy58dkAAAAK5JREFUOE+lUdsNgzAMpIvQIbJD+YGRqNyVqjIP0EEI5yiOQkQeEKRTgmKffXcPrXVT
-        9TEBg4j0FUifaRaCFtceIGACVn7agAX4Am+gwzuGnRI80TAEBNsVAt7AJ/jj/0AwZjYQgg8af76E2Upg
-        gldCwm0TEaMCOE8l5sTOsNYkYJv54txNEJg6qXUx5iZHCV2eBdPPauslWD3knxn9h1rnQYmBUQmSRKmR
-        /rDqDXaG92MkHWJbbAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="colorRangeIntervalButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
-  </data>
-  <data name="colorRangeIntervalButton.ToolTipText" xml:space="preserve">
-    <value>Set the color range interval</value>
-  </data>
-  <data name="toolStripAutoAdjustColorRangeInterval.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAALVJREFUOE+tk1EO
-        wUAQQOck3EHvwCFIOAl7AS7BAZyDL07BH98k682my1QlXcYmL520M29ntq3Ia0UTd4WtXL0RuqrMc819
-        SjTwkLyuDnJnrjP4Yvx/p4YQogfR4l6UOIAxzGEDOzjBHeIVjrCFFcxgJGnjJOiTVMHECPa14FYiyB1k
-        wZoiFZyhJViy+/StAytYUKSCxggXCg5mBBUMzQiuQ+StVvWXqNfS1aix/0Gp4Jeaz+4HCfcWr/594rkA
-        AAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="toolStripAutoAdjustColorRangeInterval.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="toolStripAutoAdjustColorRangeInterval.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
-  </data>
-  <data name="toolStripAutoAdjustColorRangeInterval.ToolTipText" xml:space="preserve">
-    <value>Auto adjust the color range interval</value>
-  </data>
-  <data name="gradientAlphaAdjustment.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="gradientAlphaAdjustment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 25</value>
-  </data>
-  <data name="gradientAlphaAdjustment.ToolTipText" xml:space="preserve">
-    <value>Route line transparency</value>
-  </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 28</value>
-  </data>
-  <data name="routeLineWidth.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="routeLineWidth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 21</value>
-  </data>
-  <data name="routeLineWidth.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="routeLineWidth.ToolTipText" xml:space="preserve">
-    <value>Route line width</value>
-  </data>
-  <data name="routeLineMaskVisible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAUtJREFUOE9jZiAM
-        mIBKVgDxLyC+SVg5qgpuIHcjEP/n4mL4nLCEQZcUAwSBireANPNJMPwv2snwv+Muw5OqYwzSxBgiDlS0
-        F6RZQIrhf9lBoOZ7ENx2j+Fk4TEGTnyGSAElj4E0iyox/AfaCNcMMyR1KcM6XAYoACXOgzRLaTH8rz2D
-        qTluFsN/Vg6G/0A17eiGKAMFroI0yxkx/K87h6k5ahLDf2ZWsGYQno9sgBqQcw8koWTO8L/pCqbm0C6G
-        /0zMcM1zkDVrAjmvQJrV7Bn+N1/D1OzXANcIsnkmutNngTTrejL8b72JqdmjDEVzMrbAYzMMZDjZdhtT
-        s1M2iuZwnFHXcpNBGpRIYNEEoq3iUDR7E0w8QAPM6q8wfAO5xDQMRbM9Qc0wBa23GKIM/OCafwLFDYjW
-        jKSwC8j+AMSg2CELgLIvURkGZDoAQru/Y4pi8sgAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="routeLineMaskVisible.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="routeLineMaskVisible.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
-  </data>
-  <data name="routeLineMaskVisible.ToolTipText" xml:space="preserve">
-    <value>Show route line edges</value>
-  </data>
-  <data name="routeLineMaskWidth.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="routeLineMaskWidth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 21</value>
-  </data>
-  <data name="routeLineMaskWidth.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="routeLineMaskWidth.ToolTipText" xml:space="preserve">
-    <value>Route line edge width</value>
-  </data>
-  <data name="routeLineMaskColorButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgxJREFUOE+lkvtL
-        U2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmMEF0ohMh+GaRWYlqabMVcNdS2QpaI
-        VqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1zcN+Pwhr51uY2/y41PQaF+wzKKiZ
-        QvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc478BAuGoZM6zvoRnakXEruEIjhc4
-        /g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE19A59FEBbmoAG7YbsLtm2mZmiml9
-        cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBREbAQiYmw/8lnuCeWkVzcgnZlnw1j
-        3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+NLXHh5Ht1ewBHsiwawCW57HyDAfWR
-        dvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFAiQJnXB0WwME0E3IsL5B17ZlADqWb
-        NYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zdpmUG62NJvKM4+XyziDk24xmfWoGE
-        s1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMVDxh4AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="routeLineMaskColorButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="routeLineMaskColorButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
-  </data>
-  <data name="routeLineMaskColorButton.ToolTipText" xml:space="preserve">
-    <value>Route line edge color</value>
-  </data>
-  <data name="toolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 28</value>
-  </data>
-  <data name="smoothingIntervalLength.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 21</value>
-  </data>
-  <data name="routeAppearanceToolstrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>594, 0</value>
-  </data>
-  <data name="routeAppearanceToolstrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 28</value>
-  </data>
-  <data name="routeAppearanceToolstrip.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;routeAppearanceToolstrip.Name" xml:space="preserve">
-    <value>routeAppearanceToolstrip</value>
-  </data>
-  <data name="&gt;&gt;routeAppearanceToolstrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;routeAppearanceToolstrip.Parent" xml:space="preserve">
-    <value>toolStripContainer1.TopToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;routeAppearanceToolstrip.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>705, 0</value>
+    <value>3, 0</value>
   </metadata>
   <data name="toolStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
@@ -1056,7 +874,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripToolPointer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 20</value>
   </data>
   <data name="toolStripToolPointer.ToolTipText" xml:space="preserve">
     <value>Pointer</value>
@@ -1074,7 +892,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripToolAdjustRoute.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 20</value>
   </data>
   <data name="toolStripToolAdjustRoute.ToolTipText" xml:space="preserve">
     <value>Adjust route</value>
@@ -1092,10 +910,10 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripToolLap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 20</value>
   </data>
   <data name="toolStripToolLap.ToolTipText" xml:space="preserve">
-    <value>Add Split Time</value>
+    <value>Add split time</value>
   </data>
   <data name="toolStripToolCut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1110,10 +928,10 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripToolCut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 20</value>
   </data>
   <data name="toolStripToolCut.ToolTipText" xml:space="preserve">
-    <value>Crop Route</value>
+    <value>Crop route</value>
   </data>
   <data name="toolStripToolZoomIn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1127,10 +945,10 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripToolZoomIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 20</value>
   </data>
   <data name="toolStripToolZoomIn.ToolTipText" xml:space="preserve">
-    <value>Zoom In</value>
+    <value>Zoom in</value>
   </data>
   <data name="toolStripToolZoomOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1144,10 +962,10 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripToolZoomOut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 20</value>
   </data>
   <data name="toolStripToolZoomOut.ToolTipText" xml:space="preserve">
-    <value>Zoom Out</value>
+    <value>Zoom out</value>
   </data>
   <data name="tstSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -1177,7 +995,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripOpenInGoogleEarth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 20</value>
   </data>
   <data name="toolStripOpenInGoogleEarth.ToolTipText" xml:space="preserve">
     <value>Open in Google Earth (Ctrl+E)</value>
@@ -1204,7 +1022,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripPublishMap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 20</value>
   </data>
   <data name="toolStripPublishMap.ToolTipText" xml:space="preserve">
     <value>Publish map</value>
@@ -1232,7 +1050,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripFullScreen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 20</value>
   </data>
   <data name="toolStripFullScreen.ToolTipText" xml:space="preserve">
     <value>Full screen (F11)</value>
@@ -1251,7 +1069,7 @@
 </value>
   </data>
   <data name="toolStripRightPanelVisible.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 20</value>
   </data>
   <data name="toolStripRightPanelVisible.ToolTipText" xml:space="preserve">
     <value>Show right panel (Ctrl+Shift+R)</value>
@@ -1271,7 +1089,7 @@
 </value>
   </data>
   <data name="toolStripBottomPanelVisible.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 20</value>
   </data>
   <data name="toolStripBottomPanelVisible.ToolTipText" xml:space="preserve">
     <value>Show bottom panel (Ctrl+Shift+B)</value>
@@ -1299,7 +1117,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 20</value>
   </data>
   <data name="toolStripHelp.ToolTipText" xml:space="preserve">
     <value>Help</value>
@@ -1323,7 +1141,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripApplicationSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
+    <value>23, 20</value>
   </data>
   <data name="toolStripApplicationSettings.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1380,10 +1198,10 @@
     <value>Support future development of QuickRoute</value>
   </data>
   <data name="toolStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
+    <value>802, 0</value>
   </data>
   <data name="toolStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>591, 25</value>
+    <value>222, 25</value>
   </data>
   <data name="toolStrip.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1398,6 +1216,257 @@
     <value>toolStripContainer1.TopToolStripPanel</value>
   </data>
   <data name="&gt;&gt;toolStrip.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="routeAppearanceToolstrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>3, 25</value>
+  </metadata>
+  <data name="routeAppearanceToolstrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="colorCodingAttributes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 28</value>
+  </data>
+  <data name="colorCodingAttributes.ToolTipText" xml:space="preserve">
+    <value>Color code the route by...</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 28</value>
+  </data>
+  <data name="colorRangeStartValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 28</value>
+  </data>
+  <data name="colorRangeStartValue.ToolTipText" xml:space="preserve">
+    <value>Starting value of color range</value>
+  </data>
+  <data name="colorRangeIntervalSlider.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="colorRangeIntervalSlider.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 6pt</value>
+  </data>
+  <data name="colorRangeIntervalSlider.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 24</value>
+  </data>
+  <data name="colorRangeIntervalSlider.ToolTipText" xml:space="preserve">
+    <value>Route line color coding</value>
+  </data>
+  <data name="colorRangeEndValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 28</value>
+  </data>
+  <data name="colorRangeEndValue.ToolTipText" xml:space="preserve">
+    <value>Ending value of color range</value>
+  </data>
+  <data name="colorRangeIntervalButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+wAA
+        CvsBy58dkAAAAK5JREFUOE+lUdsNgzAMpIvQIbJD+YGRqNyVqjIP0EEI5yiOQkQeEKRTgmKffXcPrXVT
+        9TEBg4j0FUifaRaCFtceIGACVn7agAX4Am+gwzuGnRI80TAEBNsVAt7AJ/jj/0AwZjYQgg8af76E2Upg
+        gldCwm0TEaMCOE8l5sTOsNYkYJv54txNEJg6qXUx5iZHCV2eBdPPauslWD3knxn9h1rnQYmBUQmSRKmR
+        /rDqDXaG92MkHWJbbAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="colorRangeIntervalButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 25</value>
+  </data>
+  <data name="colorRangeIntervalButton.ToolTipText" xml:space="preserve">
+    <value>Set the color range interval</value>
+  </data>
+  <data name="toolStripAutoAdjustColorRangeInterval.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAALVJREFUOE+tk1EO
+        wUAQQOck3EHvwCFIOAl7AS7BAZyDL07BH98k682my1QlXcYmL520M29ntq3Ia0UTd4WtXL0RuqrMc819
+        SjTwkLyuDnJnrjP4Yvx/p4YQogfR4l6UOIAxzGEDOzjBHeIVjrCFFcxgJGnjJOiTVMHECPa14FYiyB1k
+        wZoiFZyhJViy+/StAytYUKSCxggXCg5mBBUMzQiuQ+StVvWXqNfS1aix/0Gp4Jeaz+4HCfcWr/594rkA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripAutoAdjustColorRangeInterval.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripAutoAdjustColorRangeInterval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 25</value>
+  </data>
+  <data name="toolStripAutoAdjustColorRangeInterval.ToolTipText" xml:space="preserve">
+    <value>Auto adjust the color range interval</value>
+  </data>
+  <data name="gradientAlphaAdjustment.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gradientAlphaAdjustment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 25</value>
+  </data>
+  <data name="gradientAlphaAdjustment.ToolTipText" xml:space="preserve">
+    <value>Route line transparency</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 28</value>
+  </data>
+  <data name="routeLineWidthLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALCgAA
+        CwoBv0NmUwAAAL1JREFUOE+NU9sNwzAIZI7OU+Uvs3SNTpm/zOHmEOdiAo4jIUfgO15naa1J/ODL7P2R
+        9j0Q+sf14goBwSDwJGmmmD2CPQmSo4TtqWyC4gmCzUh2a6f3WGUmCeJsfzeSEyeIVsB9fvajYNgq2C9A
+        gbSqX/hBPqxRp+j3KvK6XGdGEsFDC08kGbgksECvpAJPCRzJMJ+oF11jJSLqgivO7t3eQTJUVMAVq9hu
+        W5g9JgrrOim2QfZpBROnyt5X8APmCAFYpeIP4QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="routeLineWidthLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 25</value>
+  </data>
+  <data name="routeLineWidthLabel.ToolTipText" xml:space="preserve">
+    <value>Route line width</value>
+  </data>
+  <data name="routeLineWidth.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="routeLineWidth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 24</value>
+  </data>
+  <data name="routeLineWidth.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="routeLineWidth.ToolTipText" xml:space="preserve">
+    <value>Route line width</value>
+  </data>
+  <data name="routeLineMaskVisible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAUtJREFUOE9jZiAM
+        mIBKVgDxLyC+SVg5qgpuIHcjEP/n4mL4nLCEQZcUAwSBireANPNJMPwv2snwv+Muw5OqYwzSxBgiDlS0
+        F6RZQIrhf9lBoOZ7ENx2j+Fk4TEGTnyGSAElj4E0iyox/AfaCNcMMyR1KcM6XAYoACXOgzRLaTH8rz2D
+        qTluFsN/Vg6G/0A17eiGKAMFroI0yxkx/K87h6k5ahLDf2ZWsGYQno9sgBqQcw8koWTO8L/pCqbm0C6G
+        /0zMcM1zkDVrAjmvQJrV7Bn+N1/D1OzXANcIsnkmutNngTTrejL8b72JqdmjDEVzMrbAYzMMZDjZdhtT
+        s1M2iuZwnFHXcpNBGpRIYNEEoq3iUDR7E0w8QAPM6q8wfAO5xDQMRbM9Qc0wBa23GKIM/OCafwLFDYjW
+        jKSwC8j+AMSg2CELgLIvURkGZDoAQru/Y4pi8sgAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="routeLineMaskVisible.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="routeLineMaskVisible.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 25</value>
+  </data>
+  <data name="routeLineMaskVisible.ToolTipText" xml:space="preserve">
+    <value>Show route line edges</value>
+  </data>
+  <data name="routeLineMaskWidth.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="routeLineMaskWidth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 24</value>
+  </data>
+  <data name="routeLineMaskWidth.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="routeLineMaskWidth.ToolTipText" xml:space="preserve">
+    <value>Route line edge width</value>
+  </data>
+  <data name="routeLineMaskColorButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgxJREFUOE+lkvtL
+        U2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmMEF0ohMh+GaRWYlqabMVcNdS2QpaI
+        VqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1zcN+Pwhr51uY2/y41PQaF+wzKKiZ
+        QvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc478BAuGoZM6zvoRnakXEruEIjhc4
+        /g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE19A59FEBbmoAG7YbsLtm2mZmiml9
+        cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBREbAQiYmw/8lnuCeWkVzcgnZlnw1j
+        3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+NLXHh5Ht1ewBHsiwawCW57HyDAfWR
+        dvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFAiQJnXB0WwME0E3IsL5B17ZlADqWb
+        NYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zdpmUG62NJvKM4+XyziDk24xmfWoGE
+        s1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMVDxh4AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="routeLineMaskColorButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="routeLineMaskColorButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 25</value>
+  </data>
+  <data name="routeLineMaskColorButton.ToolTipText" xml:space="preserve">
+    <value>Route line edge color</value>
+  </data>
+  <data name="toolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 28</value>
+  </data>
+  <data name="smoothingIntervalLengthLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALCgAA
+        CwoBv0NmUwAAAiRJREFUOE9j/P//PwNFwMHhPwMROAqopgKbOmI0swA13gXiL0DMBTPEzvE/gy0QE2OA
+        i6Xz/+9Axe+Bmi1ABoA0+1m9ZAi2eIjVAGmgooP2Dv8NrZ3+M5i5/D9Qqr16UrDFg5NWzv/THIEGAMUY
+        mtSmMZRor2FgACpEwUDbak1c/v93cPgXGmN6RqBXsenPSwaGL2c5lf/7Wj9rM3D7z2ADNPgoty5Dge5m
+        BgYXux9w7ODwg7FYe+3+VeKR/3fz2+5/zcBwDIhv3GNktrjILjf/JJf6lSUSoQxbBV0ZXgCjLt3gIAPD
+        JTYxOL7IJqb6nIHh635esz2zZPP+V2ss/JtueEirUGcjg43jT8vj3Nr/PzAwJDwDagaqM6lXm5XC8BjI
+        AeFHQPyGgWHiLNmiQ0A/6pm4/v9v4fx/jxXQuUBvMZi7/Oct0ln35Akj85+nDAzrgQZ8mipX9prhAVAj
+        CAPDU+wxI9P3BOMzuSANwIBcBsTuyHFv6vp/a7dS+85HzDwTC3Q3fQNaVA0zgAvo15adAvZ/gCGvAApY
+        bInG3vH/XBf7n7OCLB7yAi35DFSjxAD0zzSg01+e5lT9E2xx+xzQAEY8KTMeaPhhYJroA6o5ClLHkGJ0
+        pLJAb+ttH+vX54D+zSGQrPWB8iCbPwExKHkzMAA1cQGdcxOYuoBx/1+RgAFCQPm/QPwOiDnABkA1gAKr
+        AIjxOR+mthGoLg9mEQMoO1OCAdqFoJDvYogQAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="smoothingIntervalLengthLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 25</value>
+  </data>
+  <data name="smoothingIntervalLengthLabel.ToolTipText" xml:space="preserve">
+    <value>Smoothing interval length</value>
+  </data>
+  <data name="smoothingIntervalLength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 28</value>
+  </data>
+  <data name="smoothingIntervalLength.ToolTipText" xml:space="preserve">
+    <value>Smoothing interval length</value>
+  </data>
+  <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 28</value>
+  </data>
+  <data name="circleTimeRadiusLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALCgAA
+        CwoBv0NmUwAAAVVJREFUOE+Nkq9LBEEUx88fGOSiYhFcMZ5BgxaDl00mEQweFgVBELGJXhDEpoJgsSgG
+        QeQQDLYFg1Wwq+HAYvAfkPXzPd8cz7k9uYUPb/bNvM+8ndmu90LLM01mDsbhG+rwBCl8htUjWfY7lMAY
+        IB7CA9RgH3bh0nJ3xKWwPkMgQvEQE9e2cIFYdOJuxpOQQgY7mvOCPhIHcA8zrtB3N0j+xQR1YuIFU7bz
+        YpvihPyrFW8Tb+DEC6okbqO2w+4qfrPiZdtgVRt6gQ7pOGf3MXIfVrzi5kuMT71Ap76VIxgm9whrfi4U
+        esEZCy6gp80ZFHhqkBoTYRyucV3fBLpKf/LNMeky6M8Rz/AlgkAHJcFeh4IKxYnwP5K+U5IN6I9FUQcq
+        bjxeoHY3TXJFnIdRozcShPoWgSSzcG4iddS4rn8F8bXkvSM4UsdG9c8ndCgoWxchNs/gB28iStMal0HI
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="circleTimeRadiusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 25</value>
+  </data>
+  <data name="circleTimeRadiusLabel.ToolTipText" xml:space="preserve">
+    <value>Control circle radius</value>
+  </data>
+  <data name="circleTimeRadius.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 28</value>
+  </data>
+  <data name="circleTimeRadius.ToolTipText" xml:space="preserve">
+    <value>Control circle radius</value>
+  </data>
+  <data name="routeAppearanceToolstrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="routeAppearanceToolstrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>799, 28</value>
+  </data>
+  <data name="routeAppearanceToolstrip.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;routeAppearanceToolstrip.Name" xml:space="preserve">
+    <value>routeAppearanceToolstrip</value>
+  </data>
+  <data name="&gt;&gt;routeAppearanceToolstrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;routeAppearanceToolstrip.Parent" xml:space="preserve">
+    <value>toolStripContainer1.TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;routeAppearanceToolstrip.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="&gt;&gt;toolStripContainer1.TopToolStripPanel.Name" xml:space="preserve">
@@ -1448,7 +1517,7 @@
     <value>Ctrl+N</value>
   </data>
   <data name="menuFileNew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
+    <value>203, 22</value>
   </data>
   <data name="menuFileNew.Text" xml:space="preserve">
     <value>&amp;New...</value>
@@ -1474,7 +1543,7 @@
     <value>Ctrl+O</value>
   </data>
   <data name="menuFileOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
+    <value>203, 22</value>
   </data>
   <data name="menuFileOpen.Text" xml:space="preserve">
     <value>&amp;Open...</value>
@@ -1499,7 +1568,7 @@
     <value>Ctrl+S</value>
   </data>
   <data name="menuFileSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
+    <value>203, 22</value>
   </data>
   <data name="menuFileSave.Text" xml:space="preserve">
     <value>&amp;Save</value>
@@ -1508,10 +1577,10 @@
     <value>Ctrl+Shift+S</value>
   </data>
   <data name="menuFileSaveAs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
+    <value>203, 22</value>
   </data>
   <data name="menuFileSaveAs.Text" xml:space="preserve">
-    <value>Save &amp;As...</value>
+    <value>Save &amp;as...</value>
   </data>
   <data name="menuFileExportImage.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+I</value>
@@ -1550,28 +1619,28 @@
     <value>&amp;Route data...</value>
   </data>
   <data name="menuFileExport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
+    <value>203, 22</value>
   </data>
   <data name="menuFileExport.Text" xml:space="preserve">
     <value>&amp;Export</value>
   </data>
   <data name="menuFileImportSessions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
+    <value>203, 22</value>
   </data>
   <data name="menuFileImportSessions.Text" xml:space="preserve">
-    <value>I&amp;mport Routes...</value>
+    <value>I&amp;mport routes...</value>
   </data>
   <data name="menuFileImportSessions.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="menuFileRecentDocumentsSeparator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 6</value>
+    <value>200, 6</value>
   </data>
   <data name="menuFileSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 6</value>
+    <value>200, 6</value>
   </data>
   <data name="menuFileExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 22</value>
+    <value>203, 22</value>
   </data>
   <data name="menuFileExit.Text" xml:space="preserve">
     <value>E&amp;xit</value>
@@ -2459,6 +2528,126 @@
   <data name="&gt;&gt;lapHistogramBinWidth.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;colorCodingAttributes.Name" xml:space="preserve">
+    <value>colorCodingAttributes</value>
+  </data>
+  <data name="&gt;&gt;colorCodingAttributes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorRangeStartValue.Name" xml:space="preserve">
+    <value>colorRangeStartValue</value>
+  </data>
+  <data name="&gt;&gt;colorRangeStartValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorRangeIntervalSlider.Name" xml:space="preserve">
+    <value>colorRangeIntervalSlider</value>
+  </data>
+  <data name="&gt;&gt;colorRangeIntervalSlider.Type" xml:space="preserve">
+    <value>QuickRoute.Controls.ToolstripColorRangeIntervalSlider, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;colorRangeEndValue.Name" xml:space="preserve">
+    <value>colorRangeEndValue</value>
+  </data>
+  <data name="&gt;&gt;colorRangeEndValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;colorRangeIntervalButton.Name" xml:space="preserve">
+    <value>colorRangeIntervalButton</value>
+  </data>
+  <data name="&gt;&gt;colorRangeIntervalButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripAutoAdjustColorRangeInterval.Name" xml:space="preserve">
+    <value>toolStripAutoAdjustColorRangeInterval</value>
+  </data>
+  <data name="&gt;&gt;toolStripAutoAdjustColorRangeInterval.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gradientAlphaAdjustment.Name" xml:space="preserve">
+    <value>gradientAlphaAdjustment</value>
+  </data>
+  <data name="&gt;&gt;gradientAlphaAdjustment.Type" xml:space="preserve">
+    <value>QuickRoute.Controls.ToolstripTrackBar, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;routeLineWidthLabel.Name" xml:space="preserve">
+    <value>routeLineWidthLabel</value>
+  </data>
+  <data name="&gt;&gt;routeLineWidthLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;routeLineWidth.Name" xml:space="preserve">
+    <value>routeLineWidth</value>
+  </data>
+  <data name="&gt;&gt;routeLineWidth.Type" xml:space="preserve">
+    <value>QuickRoute.Controls.ToolstripNumericUpDown, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;routeLineMaskVisible.Name" xml:space="preserve">
+    <value>routeLineMaskVisible</value>
+  </data>
+  <data name="&gt;&gt;routeLineMaskVisible.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;routeLineMaskWidth.Name" xml:space="preserve">
+    <value>routeLineMaskWidth</value>
+  </data>
+  <data name="&gt;&gt;routeLineMaskWidth.Type" xml:space="preserve">
+    <value>QuickRoute.Controls.ToolstripNumericUpDown, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;routeLineMaskColorButton.Name" xml:space="preserve">
+    <value>routeLineMaskColorButton</value>
+  </data>
+  <data name="&gt;&gt;routeLineMaskColorButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator9.Name" xml:space="preserve">
+    <value>toolStripSeparator9</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;smoothingIntervalLengthLabel.Name" xml:space="preserve">
+    <value>smoothingIntervalLengthLabel</value>
+  </data>
+  <data name="&gt;&gt;smoothingIntervalLengthLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;smoothingIntervalLength.Name" xml:space="preserve">
+    <value>smoothingIntervalLength</value>
+  </data>
+  <data name="&gt;&gt;smoothingIntervalLength.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
+    <value>toolStripSeparator4</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;circleTimeRadiusLabel.Name" xml:space="preserve">
+    <value>circleTimeRadiusLabel</value>
+  </data>
+  <data name="&gt;&gt;circleTimeRadiusLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;circleTimeRadius.Name" xml:space="preserve">
+    <value>circleTimeRadius</value>
+  </data>
+  <data name="&gt;&gt;circleTimeRadius.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripNew.Name" xml:space="preserve">
     <value>toolStripNew</value>
   </data>
@@ -2620,96 +2809,6 @@
   </data>
   <data name="&gt;&gt;toolStripDonate.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorCodingAttributes.Name" xml:space="preserve">
-    <value>colorCodingAttributes</value>
-  </data>
-  <data name="&gt;&gt;colorCodingAttributes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorRangeStartValue.Name" xml:space="preserve">
-    <value>colorRangeStartValue</value>
-  </data>
-  <data name="&gt;&gt;colorRangeStartValue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorRangeIntervalSlider.Name" xml:space="preserve">
-    <value>colorRangeIntervalSlider</value>
-  </data>
-  <data name="&gt;&gt;colorRangeIntervalSlider.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.ToolstripColorRangeIntervalSlider, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;colorRangeEndValue.Name" xml:space="preserve">
-    <value>colorRangeEndValue</value>
-  </data>
-  <data name="&gt;&gt;colorRangeEndValue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;colorRangeIntervalButton.Name" xml:space="preserve">
-    <value>colorRangeIntervalButton</value>
-  </data>
-  <data name="&gt;&gt;colorRangeIntervalButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripAutoAdjustColorRangeInterval.Name" xml:space="preserve">
-    <value>toolStripAutoAdjustColorRangeInterval</value>
-  </data>
-  <data name="&gt;&gt;toolStripAutoAdjustColorRangeInterval.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gradientAlphaAdjustment.Name" xml:space="preserve">
-    <value>gradientAlphaAdjustment</value>
-  </data>
-  <data name="&gt;&gt;gradientAlphaAdjustment.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.ToolstripTrackBar, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
-    <value>toolStripSeparator2</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;routeLineWidth.Name" xml:space="preserve">
-    <value>routeLineWidth</value>
-  </data>
-  <data name="&gt;&gt;routeLineWidth.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.ToolstripNumericUpDown, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;routeLineMaskVisible.Name" xml:space="preserve">
-    <value>routeLineMaskVisible</value>
-  </data>
-  <data name="&gt;&gt;routeLineMaskVisible.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;routeLineMaskWidth.Name" xml:space="preserve">
-    <value>routeLineMaskWidth</value>
-  </data>
-  <data name="&gt;&gt;routeLineMaskWidth.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.ToolstripNumericUpDown, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;routeLineMaskColorButton.Name" xml:space="preserve">
-    <value>routeLineMaskColorButton</value>
-  </data>
-  <data name="&gt;&gt;routeLineMaskColorButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator9.Name" xml:space="preserve">
-    <value>toolStripSeparator9</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;smoothingIntervalLength.Name" xml:space="preserve">
-    <value>smoothingIntervalLength</value>
-  </data>
-  <data name="&gt;&gt;smoothingIntervalLength.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator12.Name" xml:space="preserve">
     <value>toolStripSeparator12</value>

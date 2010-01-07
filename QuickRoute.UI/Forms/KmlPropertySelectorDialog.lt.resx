@@ -117,67 +117,98 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="replayFrame.Text" xml:space="preserve">
-    <value>Bėgimo pakartojimas</value>
-  </data>
-  <data name="adaptRouteToMapImage.Text" xml:space="preserve">
-    <value>Atitaikyti prabėgimo liniją su žemėlapiu</value>
-  </data>
-  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
-    <value>Laiko intervalai sekundėmis</value>
-  </data>
-  <data name="routeFrame.Text" xml:space="preserve">
-    <value>Prabėgimas</value>
-  </data>
-  <data name="mapFrame.Text" xml:space="preserve">
-    <value>Žemėlapis</value>
-  </data>
-  <data name="replayTailDuration.Items7" xml:space="preserve">
-    <value>neribotas</value>
-  </data>
-  <data name="includeMap.Text" xml:space="preserve">
-    <value>Įtraukti &amp;žemėlapį</value>
-  </data>
-  <data name="replayMarkerStyleLabel.Text" xml:space="preserve">
-    <value>Pozicijos žymeklio stilius</value>
-  </data>
-  <data name="replayMarkerStyle.Items" xml:space="preserve">
-    <value>Vienspalvis</value>
-  </data>
-  <data name="routeLineStyle.Items" xml:space="preserve">
-    <value>Įterpta į žemėlapį, spalvota</value>
-  </data>
   <data name="ok.Text" xml:space="preserve">
     <value>Gerai</value>
-  </data>
-  <data name="includeReplay.Text" xml:space="preserve">
-    <value>Įtraukti begimo pakartojimą</value>
-  </data>
-  <data name="routeLineStyle.Items2" xml:space="preserve">
-    <value>Atskira prabėgimo linija, spalvota</value>
-  </data>
-  <data name="routeLineStyleLabel.Text" xml:space="preserve">
-    <value>Prabėgimo linijos stilius</value>
-  </data>
-  <data name="replayMarkerStyle.Items1" xml:space="preserve">
-    <value>Spalvotas</value>
-  </data>
-  <data name="adaptReplayToMapImage.Text" xml:space="preserve">
-    <value>Atitaikyti bėgimo pakartojimą su žemėlapiu</value>
-  </data>
-  <data name="includeRoute.Text" xml:space="preserve">
-    <value>Įtraukti prabėgimą</value>
   </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Atšaukti</value>
   </data>
-  <data name="replayTailVisible.Text" xml:space="preserve">
-    <value>Rodyti uodegą, ilgis sekundėmis:</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="adaptReplayToMapImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 17</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>KML savybės</value>
+  <data name="adaptReplayToMapImage.Text" xml:space="preserve">
+    <value>Atitaikyti bėgim&amp;o pakartojimą su žemėlapiu</value>
+  </data>
+  <data name="replayTailVisible.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 17</value>
+  </data>
+  <data name="replayTailVisible.Text" xml:space="preserve">
+    <value>Rodyti uo&amp;degą, ilgis sekundėmis:</value>
+  </data>
+  <data name="replayTailDuration.Items7" xml:space="preserve">
+    <value>neribotas</value>
+  </data>
+  <data name="replayTailDuration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 3</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 13</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
+    <value>Laiko &amp;intervalai sekundėmis</value>
+  </data>
+  <data name="replayMarkerStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 13</value>
+  </data>
+  <data name="replayMarkerStyleLabel.Text" xml:space="preserve">
+    <value>Pozicijos žyme&amp;klio stilius</value>
+  </data>
+  <data name="replayMarkerStyle.Items" xml:space="preserve">
+    <value>Vienspalvis</value>
+  </data>
+  <data name="replayMarkerStyle.Items1" xml:space="preserve">
+    <value>Spalvotas</value>
+  </data>
+  <data name="includeReplay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 17</value>
+  </data>
+  <data name="includeReplay.Text" xml:space="preserve">
+    <value>Įtraukti &amp;begimo pakartojimą</value>
+  </data>
+  <data name="replayFrame.Text" xml:space="preserve">
+    <value>Bėgimo pakartojimas</value>
+  </data>
+  <data name="routeLineStyle.Items" xml:space="preserve">
+    <value>Įterpta į žemėlapį, spalvota</value>
   </data>
   <data name="routeLineStyle.Items1" xml:space="preserve">
     <value>Atskira prabėgimo linija, vienspalvė</value>
+  </data>
+  <data name="routeLineStyle.Items2" xml:space="preserve">
+    <value>Atskira prabėgimo linija, spalvota</value>
+  </data>
+  <data name="includeRoute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 17</value>
+  </data>
+  <data name="includeRoute.Text" xml:space="preserve">
+    <value>Įtra&amp;ukti prabėgimą</value>
+  </data>
+  <data name="includeMap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 17</value>
+  </data>
+  <data name="includeMap.Text" xml:space="preserve">
+    <value>Įtraukti &amp;žemėlapį</value>
+  </data>
+  <data name="mapFrame.Text" xml:space="preserve">
+    <value>Žemėlapis</value>
+  </data>
+  <data name="routeLineStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 13</value>
+  </data>
+  <data name="routeLineStyleLabel.Text" xml:space="preserve">
+    <value>Prabėgimo linijos &amp;stilius</value>
+  </data>
+  <data name="adaptRouteToMapImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 17</value>
+  </data>
+  <data name="adaptRouteToMapImage.Text" xml:space="preserve">
+    <value>&amp;Atitaikyti prabėgimo liniją su žemėlapiu</value>
+  </data>
+  <data name="routeFrame.Text" xml:space="preserve">
+    <value>Prabėgimas</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>KML savybės</value>
   </data>
 </root>

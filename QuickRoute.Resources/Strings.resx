@@ -148,7 +148,7 @@
     <value>E</value>
   </data>
   <data name="ElapsedTime" xml:space="preserve">
-    <value>Elapsed Time</value>
+    <value>Elapsed time</value>
   </data>
   <data name="Error_ExportImage" xml:space="preserve">
     <value>Error when trying to export image file</value>
@@ -169,10 +169,10 @@
     <value>Export Image</value>
   </data>
   <data name="ExportGPXTitle" xml:space="preserve">
-    <value>Export Route To GPX</value>
+    <value>Export route to GPX</value>
   </data>
   <data name="HeartRate" xml:space="preserve">
-    <value>Heart Rate</value>
+    <value>Heart rate</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
     <value>http://www.matstroeng.se/quickroute/en/help</value>
@@ -193,7 +193,7 @@
     <value>The map image file does not exist.</value>
   </data>
   <data name="NewGradient" xml:space="preserve">
-    <value>New Gradient</value>
+    <value>New gradient</value>
   </data>
   <data name="NoGPSDevicesConnected" xml:space="preserve">
     <value>[No GPS devices connected]</value>
@@ -226,7 +226,7 @@
     <value>There are no waypoints with times in the file.</value>
   </data>
   <data name="SaveAsTitle" xml:space="preserve">
-    <value>Save QuickRoute File As</value>
+    <value>Save QuickRoute file as</value>
   </data>
   <data name="SelectMapImageFile" xml:space="preserve">
     <value>Select map image file</value>
@@ -346,16 +346,17 @@
     <value>Google Earth is not installed</value>
   </data>
   <data name="ExportKMZTitle" xml:space="preserve">
-    <value>Export To KMZ</value>
+    <value>Export to KMZ</value>
   </data>
   <data name="ExportRouteDataTitle" xml:space="preserve">
-    <value>Export Route Data</value>
+    <value>Export route data</value>
   </data>
   <data name="FileFilter_GpxFiles" xml:space="preserve">
     <value>Gpx (*.gpx)|*.gpx</value>
   </data>
   <data name="FileFilter_KmzFiles" xml:space="preserve">
-    <value>Kmz (*.kmz)|*.kmz</value>
+    <value>Kmz files (*.kmz)|*.kmz</value>
+    <comment>Added 2009-12-05</comment>
   </data>
   <data name="FileFilter_RouteDataFiles" xml:space="preserve">
     <value>Route data files (*.xml)|*.xml</value>
@@ -391,7 +392,7 @@
     <value>Routes</value>
   </data>
   <data name="AddFiles" xml:space="preserve">
-    <value>Add Files</value>
+    <value>Add files</value>
   </data>
   <data name="FileFilter_JpegFilesExportedFromQuickRoute" xml:space="preserve">
     <value>Jpeg files exported from QuickRoute (*.jpg; *.jpeg)|*.jpg;*.jpeg</value>
@@ -720,51 +721,51 @@
     <value>Longitude</value>
   </data>
   <data name="RoutePropertyName_CircleTimeBackward" xml:space="preserve">
-    <value>Backward circle time</value>
+    <value>Control approaching time</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeBackward" xml:space="preserve">
-    <value>Backward circle time: {0}</value>
+    <value>Control approaching time: {0}</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyName_CircleTimeForward" xml:space="preserve">
-    <value>Forward circle time</value>
+    <value>Control leaving time</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeForward" xml:space="preserve">
-    <value>Forward circle time: {0}</value>
+    <value>Control leaving time: {0}</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyName_CircleTimeAtStartOfSpan" xml:space="preserve">
-    <value>Circle time at start of lap</value>
+    <value>Control leaving time</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpan" xml:space="preserve">
-    <value>Circle time at start of lap: {0}</value>
+    <value>Control leaving time: {0}</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyName_CircleTimeAtEndOfSpan" xml:space="preserve">
-    <value>Circle time at end of lap</value>
+    <value>Control approaching time</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpan" xml:space="preserve">
-    <value>Circle time at end of lap: {0}</value>
+    <value>Control approaching time: {0}</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyName_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
-    <value>Sum of circle times at start of each lap</value>
+    <value>Sum of control leaving times</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
-    <value>Sum of circle times at start of each lap: {0}</value>
+    <value>Sum of control leaving times: {0}</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyName_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
-    <value>Sum of circle times at end of each lap</value>
+    <value>Sum of control approaching times</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
-    <value>Sum of circle times at end of each lap: {0}</value>
+    <value>Sum of control approaching times: {0}</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="DeleteLapX" xml:space="preserve">
@@ -774,9 +775,5 @@
   <data name="Print" xml:space="preserve">
     <value>Print...</value>
     <comment>Added 2009-11-27</comment>
-  </data>
-  <data name="FileFilter_KmzFiles" xml:space="preserve">
-    <value>Kmz files (*.kmz)|*.kmz</value>
-    <comment>Added 2009-12-05</comment>
   </data>
 </root>

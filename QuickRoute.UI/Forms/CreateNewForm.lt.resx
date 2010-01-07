@@ -126,35 +126,60 @@
   <data name="mapImageFileNameBrowse.Text" xml:space="preserve">
     <value>Narš&amp;yti...</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="mapImageFromFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 17</value>
+  </data>
   <data name="mapImageFromFile.Text" xml:space="preserve">
     <value>Iš &amp;failo:</value>
+  </data>
+  <data name="mapImageBlank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 17</value>
   </data>
   <data name="mapImageBlank.Text" xml:space="preserve">
     <value>&amp;Tuščias</value>
   </data>
+  <data name="mapImageFileFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
   <data name="mapImageFileFormatLabel.Text" xml:space="preserve">
-    <value>Failo forma&amp;tas:</value>
+    <value>Failo format&amp;as:</value>
   </data>
   <data name="mapImageGroup.Text" xml:space="preserve">
     <value>Žemėlapio vaizdas</value>
   </data>
+  <data name="routeFromGpsDevice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 17</value>
+  </data>
   <data name="routeFromGpsDevice.Text" xml:space="preserve">
     <value>Iš &amp;GPS laikrodžio:</value>
+  </data>
+  <data name="routeFromFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 17</value>
   </data>
   <data name="routeFromFile.Text" xml:space="preserve">
     <value>Iš fai&amp;lo:</value>
   </data>
+  <data name="routeFileFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
   <data name="routeFileFormatLabel.Text" xml:space="preserve">
-    <value>Failo forma&amp;tas:</value>
+    <value>Failo for&amp;matas:</value>
   </data>
   <data name="routeFileNameBrowse.Text" xml:space="preserve">
-    <value>Narš&amp;yti...</value>
+    <value>Na&amp;ršyti...</value>
   </data>
   <data name="routeGroup.Text" xml:space="preserve">
     <value>Prabėgimas</value>
   </data>
+  <data name="mapImageFromUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 17</value>
+  </data>
   <data name="mapImageFromUrl.Text" xml:space="preserve">
     <value>Iš &amp;url:</value>
+  </data>
+  <data name="personNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
   </data>
   <data name="personNameLabel.Text" xml:space="preserve">
     <value>&amp;Vardas:</value>

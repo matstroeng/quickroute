@@ -4,13 +4,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class MinHeartRate : RouteSpanProperty
   {
-    public MinHeartRate(Session session, ParameterizedLocation start, ParameterizedLocation end)
-      : base(session, start, end)
+    public MinHeartRate(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, start, end, retrieveExternalProperty)
     {
     }
 
-    public MinHeartRate(Session session, RouteLocations locations)
-      : base(session, locations)
+    public MinHeartRate(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -87,13 +87,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class MinHeartRateFromStart : RouteFromStartProperty
   {
-    public MinHeartRateFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public MinHeartRateFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 
-    public MinHeartRateFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public MinHeartRateFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -105,7 +105,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = (new MinHeartRate(Session, ParameterizedLocation.Start, Location) { CacheManager = CacheManager }).Value;
+      value = (new MinHeartRate(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty) { CacheManager = CacheManager }).Value;
       AddToCache();
     }
 

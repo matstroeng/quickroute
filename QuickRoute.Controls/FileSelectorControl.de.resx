@@ -131,13 +131,13 @@
     <value>121, 23</value>
   </data>
   <data name="addFileButton.Text" xml:space="preserve">
-    <value>&amp;Dateien hinzufügen</value>
+    <value>&amp;Dateien hinzufügen...</value>
   </data>
   <data name="addUrlButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 23</value>
   </data>
   <data name="addUrlButton.Text" xml:space="preserve">
-    <value>&amp;URLs hinzufügen</value>
+    <value>&amp;URLs hinzufügen...</value>
   </data>
   <data name="removeButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 23</value>

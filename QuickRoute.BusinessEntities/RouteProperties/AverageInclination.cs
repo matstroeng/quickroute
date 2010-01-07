@@ -4,13 +4,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class AverageInclination : RouteSpanProperty
   {
-    public AverageInclination(Session session, ParameterizedLocation start, ParameterizedLocation end)
-      : base(session, start, end)
+    public AverageInclination(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, start, end, retrieveExternalProperty)
     {
     }
 
-    public AverageInclination(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AverageInclination(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -22,8 +22,8 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      var routeLength = (double)new RouteDistance(Session, Start, End).Value;
-      var altitudeDifference = (double?)new AltitudeDifference(Session, Start, End).Value;
+      var routeLength = (double)new RouteDistance(Session, Start, End, RetrieveExternalProperty).Value;
+      var altitudeDifference = (double?)new AltitudeDifference(Session, Start, End, RetrieveExternalProperty).Value;
       if(altitudeDifference.HasValue)
       {
         value = LinearAlgebraUtil.ToDegrees(Math.Atan2(altitudeDifference.Value, routeLength));
@@ -62,13 +62,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class AverageInclinationFromStart : RouteFromStartProperty
   {
-    public AverageInclinationFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public AverageInclinationFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 
-    public AverageInclinationFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AverageInclinationFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -80,7 +80,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = (new AverageInclination(Session, ParameterizedLocation.Start, Location) { CacheManager = CacheManager }).Value;
+      value = (new AverageInclination(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty) { CacheManager = CacheManager }).Value;
       AddToCache();
     }
 
