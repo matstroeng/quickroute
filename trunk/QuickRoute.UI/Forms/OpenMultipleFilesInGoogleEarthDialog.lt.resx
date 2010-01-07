@@ -117,49 +117,89 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="replayTailDurationLabel.Text" xml:space="preserve">
-    <value>Uodegos ilgis sekundėmis</value>
-  </data>
-  <data name="replayGroupBox.Text" xml:space="preserve">
-    <value>Bėgimo pakartojimas</value>
-  </data>
-  <data name="replayTailDuration.Items7" xml:space="preserve">
-    <value>neribotas</value>
-  </data>
-  <data name="includeRoutes.Text" xml:space="preserve">
-    <value>Įtraukti prabėgimus</value>
-  </data>
-  <data name="includeReplay.Text" xml:space="preserve">
-    <value>Įtraukti bėgimo pakartojimą</value>
-  </data>
-  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
-    <value>Laiko intervalas sekundėmis</value>
-  </data>
   <data name="ok.Text" xml:space="preserve">
     <value>Gerai</value>
-  </data>
-  <data name="replayTailsVisibleLabel.Text" xml:space="preserve">
-    <value>Rodyti uodegas</value>
-  </data>
-  <data name="filesLabel.Text" xml:space="preserve">
-    <value>&amp;Failai</value>
-  </data>
-  <data name="routesGroupBox.Text" xml:space="preserve">
-    <value>Prabėgimai</value>
-  </data>
-  <data name="massStartLabel.Text" xml:space="preserve">
-    <value>Simuliuoti bendrą startą</value>
   </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Atšaukti</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Atidaryti keletą QuickRoute failų Google Earth programoje</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="filesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="filesLabel.Text" xml:space="preserve">
+    <value>&amp;Failai</value>
+  </data>
+  <data name="replayTailsVisible.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 79</value>
+  </data>
+  <data name="replayTailDuration.Items7" xml:space="preserve">
+    <value>neribotas</value>
+  </data>
+  <data name="replayTailDuration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 99</value>
+  </data>
+  <data name="massStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 33</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 13</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
+    <value>Laiko &amp;intervalas sekundėmis</value>
+  </data>
+  <data name="replayTimeInterval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 3</value>
+  </data>
+  <data name="replayRestartAfterEachLap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 56</value>
+  </data>
+  <data name="replayTailDurationLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
+  </data>
+  <data name="replayTailDurationLabel.Text" xml:space="preserve">
+    <value>&amp;Uodegos ilgis sekundėmis</value>
+  </data>
+  <data name="replayTailsVisibleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="replayTailsVisibleLabel.Text" xml:space="preserve">
+    <value>Rodyti uo&amp;degas</value>
+  </data>
+  <data name="replayRestartAfterEachLapLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 13</value>
+  </data>
+  <data name="replayRestartAfterEachLapLabel.Text" xml:space="preserve">
+    <value>Startuoti iš naujo po kiekvieno &amp;etapo</value>
+  </data>
+  <data name="massStartLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 13</value>
+  </data>
+  <data name="massStartLabel.Text" xml:space="preserve">
+    <value>Simuliuoti be&amp;ndrą startą</value>
   </data>
   <data name="uiInformation.Text" xml:space="preserve">
     <value>Įtraukite QuickRoute failus, kuriuose yra norimi prabėgimai. Pirmojo failo žemėlapis bus panaudotas kaip fono žemėlapis. Tinkami failų formatai apima qrt failus ir jpeg failus, perkeltus iš 2.3 arba vėlesnės QuickRoute versijos.</value>
   </data>
-  <data name="replayRestartAfterEachLapLabel.Text" xml:space="preserve">
-    <value>Startuoti iš naujo po kiekvieno etapo</value>
+  <data name="includeRoutes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 17</value>
+  </data>
+  <data name="includeRoutes.Text" xml:space="preserve">
+    <value>Įtraukti &amp;prabėgimus</value>
+  </data>
+  <data name="includeReplay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 17</value>
+  </data>
+  <data name="includeReplay.Text" xml:space="preserve">
+    <value>Įtraukti &amp;bėgimo pakartojimą</value>
+  </data>
+  <data name="replayGroupBox.Text" xml:space="preserve">
+    <value>Bėgimo pakartojimas</value>
+  </data>
+  <data name="routesGroupBox.Text" xml:space="preserve">
+    <value>Prabėgimai</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Atidaryti keletą QuickRoute failų Google Earth programoje</value>
   </data>
 </root>

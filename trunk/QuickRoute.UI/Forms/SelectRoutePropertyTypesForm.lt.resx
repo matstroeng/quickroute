@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="moveUp.Text" xml:space="preserve">
-    <value>Judėti į viršų</value>
+    <value>Judėti į &amp;viršų</value>
   </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Atšaukti</value>
@@ -127,7 +127,7 @@
     <value>Pasirinkti prabėgimų savybių rūšis</value>
   </data>
   <data name="moveDown.Text" xml:space="preserve">
-    <value>Judėti žemyn</value>
+    <value>Judėti ž&amp;emyn</value>
   </data>
   <data name="ok.Text" xml:space="preserve">
     <value>Gerai</value>

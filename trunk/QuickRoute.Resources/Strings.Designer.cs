@@ -61,7 +61,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add Files.
+        ///   Looks up a localized string similar to Add files.
         /// </summary>
         public static string AddFiles {
             get {
@@ -196,7 +196,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Elapsed Time.
+        ///   Looks up a localized string similar to Elapsed time.
         /// </summary>
         public static string ElapsedTime {
             get {
@@ -286,7 +286,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Export Route To GPX.
+        ///   Looks up a localized string similar to Export route to GPX.
         /// </summary>
         public static string ExportGPXTitle {
             get {
@@ -304,7 +304,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Export To KMZ.
+        ///   Looks up a localized string similar to Export to KMZ.
         /// </summary>
         public static string ExportKMZTitle {
             get {
@@ -313,7 +313,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Export Route Data.
+        ///   Looks up a localized string similar to Export route data.
         /// </summary>
         public static string ExportRouteDataTitle {
             get {
@@ -457,7 +457,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Heart Rate.
+        ///   Looks up a localized string similar to Heart rate.
         /// </summary>
         public static string HeartRate {
             get {
@@ -594,7 +594,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New Gradient.
+        ///   Looks up a localized string similar to New gradient.
         /// </summary>
         public static string NewGradient {
             get {
@@ -972,7 +972,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Circle time at end of lap.
+        ///   Looks up a localized string similar to Control approaching time.
         /// </summary>
         public static string RoutePropertyName_CircleTimeAtEndOfSpan {
             get {
@@ -981,7 +981,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sum of circle times at end of each lap.
+        ///   Looks up a localized string similar to Sum of control approaching times.
         /// </summary>
         public static string RoutePropertyName_CircleTimeAtEndOfSpanFromStart {
             get {
@@ -990,7 +990,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Circle time at start of lap.
+        ///   Looks up a localized string similar to Control leaving time.
         /// </summary>
         public static string RoutePropertyName_CircleTimeAtStartOfSpan {
             get {
@@ -999,7 +999,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sum of circle times at start of each lap.
+        ///   Looks up a localized string similar to Sum of control leaving times.
         /// </summary>
         public static string RoutePropertyName_CircleTimeAtStartOfSpanFromStart {
             get {
@@ -1008,7 +1008,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Backward circle time.
+        ///   Looks up a localized string similar to Control approaching time.
         /// </summary>
         public static string RoutePropertyName_CircleTimeBackward {
             get {
@@ -1017,7 +1017,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Forward circle time.
+        ///   Looks up a localized string similar to Control leaving time.
         /// </summary>
         public static string RoutePropertyName_CircleTimeForward {
             get {
@@ -1440,7 +1440,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Circle time at end of lap: {0}.
+        ///   Looks up a localized string similar to Control approaching time: {0}.
         /// </summary>
         public static string RoutePropertyNameAndValue_CircleTimeAtEndOfSpan {
             get {
@@ -1449,7 +1449,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sum of circle times at end of each lap: {0}.
+        ///   Looks up a localized string similar to Sum of control approaching times: {0}.
         /// </summary>
         public static string RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart {
             get {
@@ -1458,7 +1458,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Circle time at start of lap: {0}.
+        ///   Looks up a localized string similar to Control leaving time: {0}.
         /// </summary>
         public static string RoutePropertyNameAndValue_CircleTimeAtStartOfSpan {
             get {
@@ -1467,7 +1467,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sum of circle times at start of each lap: {0}.
+        ///   Looks up a localized string similar to Sum of control leaving times: {0}.
         /// </summary>
         public static string RoutePropertyNameAndValue_CircleTimeAtStartOfSpanFromStart {
             get {
@@ -1476,7 +1476,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Backward circle time: {0}.
+        ///   Looks up a localized string similar to Control approaching time: {0}.
         /// </summary>
         public static string RoutePropertyNameAndValue_CircleTimeBackward {
             get {
@@ -1485,7 +1485,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Forward circle time: {0}.
+        ///   Looks up a localized string similar to Control leaving time: {0}.
         /// </summary>
         public static string RoutePropertyNameAndValue_CircleTimeForward {
             get {
@@ -1755,7 +1755,7 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Save QuickRoute File As.
+        ///   Looks up a localized string similar to Save QuickRoute file as.
         /// </summary>
         public static string SaveAsTitle {
             get {

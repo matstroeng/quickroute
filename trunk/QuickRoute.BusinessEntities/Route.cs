@@ -1731,6 +1731,28 @@ namespace QuickRoute.BusinessEntities
     }
   }
 
+  [Serializable]
+  public class RouteSegment2
+  {
+    private List<Waypoint> waypoints = new List<Waypoint>();
+
+    public List<Waypoint> Waypoints
+    {
+      get { return waypoints; }
+      set { waypoints = value; }
+    }
+
+    public Waypoint FirstWaypoint
+    {
+      get { return waypoints.Count == 0 ? null : waypoints[0]; }
+    }
+
+    public Waypoint LastWaypoint
+    {
+      get { return waypoints.Count == 0 ? null : waypoints[waypoints.Count - 1]; }
+    }
+  }
+
 
   [Serializable]
   public class Waypoint

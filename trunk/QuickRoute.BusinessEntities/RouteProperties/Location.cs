@@ -6,13 +6,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class Location : RouteMomentaneousProperty
   {
-    public Location(Session session, RouteLocations locations)
-      : base(session, locations)
+    public Location(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
-    public Location(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public Location(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 

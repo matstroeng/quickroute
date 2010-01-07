@@ -6,13 +6,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class LapNumber : RouteMomentaneousProperty
   {
-    public LapNumber(Session session, RouteLocations locations)
-      : base(session, locations)
+    public LapNumber(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
-    public LapNumber(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public LapNumber(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 

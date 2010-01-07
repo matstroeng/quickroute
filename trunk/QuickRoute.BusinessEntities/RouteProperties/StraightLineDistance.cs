@@ -5,13 +5,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
   // TODO: project position in the middle of a lap down on straight line
   public class StraightLineDistance : RouteSpanProperty
   {
-    public StraightLineDistance(Session session, ParameterizedLocation start, ParameterizedLocation end)
-      : base(session, start, end)
+    public StraightLineDistance(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, start, end, retrieveExternalProperty)
     {
     }
 
-    public StraightLineDistance(Session session, RouteLocations locations)
-      : base(session, locations)
+    public StraightLineDistance(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -116,13 +116,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class StraightLineDistanceFromStart : RouteFromStartProperty
   {
-    public StraightLineDistanceFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public StraightLineDistanceFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 
-    public StraightLineDistanceFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public StraightLineDistanceFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -134,7 +134,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = (new StraightLineDistance(Session, ParameterizedLocation.Start, Location) { CacheManager = CacheManager }).Value;
+      value = (new StraightLineDistance(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty) { CacheManager = CacheManager }).Value;
       AddToCache();
     }
 

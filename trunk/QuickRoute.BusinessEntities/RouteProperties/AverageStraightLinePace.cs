@@ -5,13 +5,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class AverageStraightLinePace : RouteSpanProperty
   {
-    public AverageStraightLinePace(Session session, ParameterizedLocation start, ParameterizedLocation end)
-      : base(session, start, end)
+    public AverageStraightLinePace(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, start, end, retrieveExternalProperty)
     {
     }
 
-    public AverageStraightLinePace(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AverageStraightLinePace(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -23,7 +23,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = ConvertUtil.ToPace((double)new AverageStraightLineSpeed(Session, Start, End).Value);
+      value = ConvertUtil.ToPace((double)new AverageStraightLineSpeed(Session, Start, End, RetrieveExternalProperty).Value);
       AddToCache();
     }
 
@@ -60,13 +60,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class AverageStraightLinePaceFromStart : RouteFromStartProperty
   {
-    public AverageStraightLinePaceFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public AverageStraightLinePaceFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 
-    public AverageStraightLinePaceFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AverageStraightLinePaceFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -78,7 +78,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = (new AverageStraightLinePace(Session, ParameterizedLocation.Start, Location) { CacheManager = CacheManager }).Value;
+      value = (new AverageStraightLinePace(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty) { CacheManager = CacheManager }).Value;
       AddToCache();
     }
 

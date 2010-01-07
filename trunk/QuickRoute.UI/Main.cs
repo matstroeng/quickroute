@@ -34,6 +34,7 @@ namespace QuickRoute.UI
     private readonly Padding momentaneousInfoLabelPadding = new Padding(6, 3, 6, 3);
     private Bitmap momentaneousInfoPanelBackBuffer;
     private Graphics momentaneousInfoPanelBackBufferGraphics;
+    private RoutePropertyCacheManager cacheManager = new RoutePropertyCacheManager();
 
     private bool updatingUINow;
     private readonly bool startingUpNow;
@@ -1123,6 +1124,9 @@ namespace QuickRoute.UI
         // smoothing interval tooltip
         smoothingIntervalLength.ToolTipText = string.Format(Strings.SmoothingIntervalForX, colorCodingAttributes.Text.ToLower());
 
+        // circle time radius
+        circleTimeRadius.Text = canvas.Document.Settings.DefaultSessionSettings.CircleTimeRadius.ToString();
+
         // lap histogram toolstrip
         lapHistogramBinWidth.Text = slider.NumericConverter.ToString(canvas.Document.Settings.LapHistogramSettings[SelectedColorCodingAttribute].BinWidth);
       }
@@ -1218,7 +1222,6 @@ namespace QuickRoute.UI
       Session s = canvas.CurrentSession;
       if (s == null) return;
       Route r = s.Route;
-
       ParameterizedLocation previousLapPL = ParameterizedLocation.Start;
 
       lapInfoList = new List<LapInfo>();
@@ -1236,7 +1239,8 @@ namespace QuickRoute.UI
           {
             if (lpType.Selected)
             {
-              var lp = Activator.CreateInstance(lpType.RoutePropertyType, s, locations) as RouteProperty;
+              RetrieveExternalPropertyDelegate dlg = new ExternalRoutePropertyRetriever(s.Settings).RetrieveExternalProperty;
+              var lp = Activator.CreateInstance(lpType.RoutePropertyType, s, locations, dlg) as RouteProperty;
               li.AddProperty(lp);
             }
           }
@@ -1257,15 +1261,16 @@ namespace QuickRoute.UI
         {
           // create route span property object
           var routeSpanProperty =
-            Activator.CreateInstance(lpType.RoutePropertyType, s, new RouteLocations(ParameterizedLocation.Start)) as
+            Activator.CreateInstance(lpType.RoutePropertyType, s, new RouteLocations(ParameterizedLocation.Start), null) as
             RouteSpanProperty;
           if (routeSpanProperty != null)
           {
             // get the route from start property type for this object
             Type routeFromStartPropertyType = routeSpanProperty.GetRouteFromStartPropertyType();
             // create an instance of that type
+            RetrieveExternalPropertyDelegate dlg = new ExternalRoutePropertyRetriever(s.Settings).RetrieveExternalProperty;
             var routeFromStartProperty =
-              Activator.CreateInstance(routeFromStartPropertyType, s, new RouteLocations(r.LastPL)) as
+              Activator.CreateInstance(routeFromStartPropertyType, s, new RouteLocations(r.LastPL), dlg) as
               RouteFromStartProperty;
             if (routeFromStartProperty == null)
             {
@@ -1279,8 +1284,9 @@ namespace QuickRoute.UI
           }
           else
           {
+            RetrieveExternalPropertyDelegate dlg = new ExternalRoutePropertyRetriever(s.Settings).RetrieveExternalProperty;
             var routeFromStartProperty =
-              Activator.CreateInstance(lpType.RoutePropertyType, s, new RouteLocations(r.LastPL)) as
+              Activator.CreateInstance(lpType.RoutePropertyType, s, new RouteLocations(r.LastPL), dlg) as
               RouteFromStartProperty;
             if (routeFromStartProperty == null)
             {
@@ -1688,6 +1694,19 @@ namespace QuickRoute.UI
       EndWork();
     }
 
+    private void ValidateAndFormatCircleTimeRadiusValue()
+    {
+      BeginWork();
+      double value;
+      if(double.TryParse(circleTimeRadius.Text, out value))
+      {
+        canvas.Document.Settings.DefaultSessionSettings.CircleTimeRadius = value;
+        CalculateLapInfo();
+      }
+      circleTimeRadius.Text = canvas.Document.Settings.DefaultSessionSettings.CircleTimeRadius.ToString();
+      EndWork();
+    }
+
     private void ResetActionStacks()
     {
       undoStack.Clear();
@@ -1803,7 +1822,8 @@ namespace QuickRoute.UI
       {
         if (selectableRoutePropertyType.Selected)
         {
-          var property = Activator.CreateInstance(selectableRoutePropertyType.RoutePropertyType, canvas.CurrentSession, new RouteLocations(r.FirstPL)) as RouteProperty;
+          RetrieveExternalPropertyDelegate dlg = new ExternalRoutePropertyRetriever(canvas.CurrentSession.Settings).RetrieveExternalProperty;
+          var property = Activator.CreateInstance(selectableRoutePropertyType.RoutePropertyType, canvas.CurrentSession, new RouteLocations(r.FirstPL), dlg) as RouteProperty;
           if (property != null && property.ContainsValue)
           {
             var templateString = Strings.ResourceManager.GetString("RoutePropertyNameAndValue_" +
@@ -1859,8 +1879,9 @@ namespace QuickRoute.UI
         {
           if (selectableRoutePropertyType.Selected)
           {
+            RetrieveExternalPropertyDelegate dlg = new ExternalRoutePropertyRetriever(canvas.CurrentSession.Settings).RetrieveExternalProperty;
             var property =
-              Activator.CreateInstance(selectableRoutePropertyType.RoutePropertyType, canvas.CurrentSession, new RouteLocations(lapStartPL, pl)) as
+              Activator.CreateInstance(selectableRoutePropertyType.RoutePropertyType, canvas.CurrentSession, new RouteLocations(lapStartPL, pl), dlg) as
               RouteProperty;
             if (property != null )
             {
@@ -3042,6 +3063,21 @@ namespace QuickRoute.UI
       }
     }
 
+    private void circleTimeRadius_Leave(object sender, EventArgs e)
+    {
+      ValidateAndFormatCircleTimeRadiusValue();
+    }
+
+    private void circleTimeRadius_KeyDown(object sender, KeyEventArgs e)
+    {
+      if (e.KeyCode == Keys.Enter)
+      {
+        ValidateAndFormatCircleTimeRadiusValue();
+        circleTimeRadius.SelectAll();
+        e.SuppressKeyPress = true;
+      }
+    }
+    
     private void exportLapHistogramImage_Click(object sender, EventArgs e)
     {
       ExportLapHistogramImage();
@@ -3102,5 +3138,10 @@ namespace QuickRoute.UI
     }
 
     #endregion
+
+    private void routeAppearanceToolstrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+    {
+
+    }
   }
 }

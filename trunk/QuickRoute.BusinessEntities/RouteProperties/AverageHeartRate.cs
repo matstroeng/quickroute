@@ -5,13 +5,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class AverageHeartRate : RouteSpanProperty
   {
-    public AverageHeartRate(Session session, ParameterizedLocation start, ParameterizedLocation end)
-      : base(session, start, end)
+    public AverageHeartRate(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, start, end, retrieveExternalProperty)
     {
     }
 
-    public AverageHeartRate(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AverageHeartRate(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -114,13 +114,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class AverageHeartRateFromStart : RouteFromStartProperty
   {
-    public AverageHeartRateFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public AverageHeartRateFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 
-    public AverageHeartRateFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AverageHeartRateFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -132,7 +132,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = (new AverageHeartRate(Session, ParameterizedLocation.Start, Location) { CacheManager = CacheManager }).Value;
+      value = (new AverageHeartRate(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty) { CacheManager = CacheManager }).Value;
       AddToCache();
     }
 

@@ -5,13 +5,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class Direction : RouteMomentaneousProperty
   {
-    public Direction(Session session, RouteLocations locations)
-      : base(session, locations)
+    public Direction(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
-    public Direction(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public Direction(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 

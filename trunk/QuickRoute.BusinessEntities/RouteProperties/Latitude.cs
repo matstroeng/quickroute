@@ -5,13 +5,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class Latitude : RouteMomentaneousProperty
   {
-    public Latitude(Session session, RouteLocations locations)
-      : base(session, locations)
+    public Latitude(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
-    public Latitude(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public Latitude(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 

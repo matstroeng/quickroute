@@ -214,7 +214,7 @@
     <value>96, 55</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Set Start Time</value>
+    <value>Set start time</value>
   </data>
   <data name="timeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 13</value>
@@ -243,7 +243,7 @@
   <data name="&gt;&gt;cancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
 </root>

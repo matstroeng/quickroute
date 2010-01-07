@@ -15,6 +15,7 @@ namespace QuickRoute.BusinessEntities
     private Dictionary<WaypointAttribute, Interval> smoothingIntervals = CreateDefaultSmoothingIntervals();
     private Dictionary<WaypointAttribute, RouteLineSettings> routeLineSettingsCollection = CreateDefaultRouteLineSettingsCollection();
     private Dictionary<MarkerType, IMarkerDrawer> markerDrawers = CreateDefaultMarkerDrawers();
+    private double circleTimeRadius = 45;
 
     public Dictionary<WaypointAttribute, Interval> SmoothingIntervals
     {
@@ -41,6 +42,12 @@ namespace QuickRoute.BusinessEntities
     {
       get { return markerDrawers; }
       set { markerDrawers = value; }
+    }
+
+    public double CircleTimeRadius
+    {
+      get { return circleTimeRadius; }
+      set { circleTimeRadius = value; }
     }
 
     public static Dictionary<WaypointAttribute, Interval> CreateDefaultSmoothingIntervals()

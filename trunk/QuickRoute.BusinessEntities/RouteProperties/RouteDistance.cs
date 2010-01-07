@@ -4,13 +4,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class RouteDistance : RouteSpanProperty
   {
-    public RouteDistance(Session session, ParameterizedLocation start, ParameterizedLocation end)
-      : base(session, start, end)
+    public RouteDistance(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, start, end, retrieveExternalProperty)
     {
     }
 
-    public RouteDistance(Session session, RouteLocations locations)
-      : base(session, locations)
+    public RouteDistance(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -58,13 +58,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class RouteDistanceFromStart : RouteFromStartProperty
   {
-    public RouteDistanceFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public RouteDistanceFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 
-    public RouteDistanceFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public RouteDistanceFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -76,7 +76,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = (new RouteDistance(Session, ParameterizedLocation.Start, Location) { CacheManager = CacheManager }).Value;
+      value = (new RouteDistance(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty) { CacheManager = CacheManager }).Value;
       AddToCache();
     }
 

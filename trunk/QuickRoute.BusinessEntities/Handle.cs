@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.Serialization;
 
 namespace QuickRoute.BusinessEntities
 {
@@ -140,6 +141,7 @@ namespace QuickRoute.BusinessEntities
       Handle,
       EndHandle
     }
+
   }
 
 }

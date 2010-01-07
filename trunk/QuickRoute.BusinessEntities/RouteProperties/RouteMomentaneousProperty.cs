@@ -32,13 +32,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
   {
     public ParameterizedLocation Location { get { return Locations.Location; } }
 
-    protected RouteMomentaneousProperty(Session session, RouteLocations locations)
-      : base(session, locations)
+    protected RouteMomentaneousProperty(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
-    protected RouteMomentaneousProperty(Session session, ParameterizedLocation location)
-      : base(session, new RouteLocations(location))
+    protected RouteMomentaneousProperty(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, new RouteLocations(location), retrieveExternalProperty)
     {
     }
   }

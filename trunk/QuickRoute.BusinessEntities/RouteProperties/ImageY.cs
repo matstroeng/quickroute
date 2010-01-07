@@ -4,13 +4,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class ImageY : RouteMomentaneousProperty
   {
-    public ImageY(Session session, RouteLocations locations)
-      : base(session, locations)
+    public ImageY(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
-    public ImageY(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public ImageY(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 

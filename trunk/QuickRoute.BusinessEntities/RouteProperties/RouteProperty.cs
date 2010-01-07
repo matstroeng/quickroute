@@ -9,10 +9,11 @@ namespace QuickRoute.BusinessEntities.RouteProperties
     protected bool calculated;
     protected object value;
 
-    protected RouteProperty(Session session, RouteLocations locations)
+    protected RouteProperty(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
     {
       Session = session;
       Locations = locations;
+      RetrieveExternalProperty = retrieveExternalProperty;
     }
 
     /// <summary>
@@ -48,7 +49,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
     /// <returns></returns>
     public RouteProperty GetFromCache()
     {
-      if(!HasCache) return null;
+      if (!HasCache) return null;
       return CacheManager.Get(GetType(), Locations);
     }
 
@@ -57,7 +58,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
     /// </summary>
     public void AddToCache()
     {
-      if(HasCache) CacheManager.Add(this);
+      if (HasCache) CacheManager.Add(this);
     }
 
     /// <summary>
@@ -144,5 +145,9 @@ namespace QuickRoute.BusinessEntities.RouteProperties
     {
       return ValueToString(v, null, provider);
     }
-}
+
+    public RetrieveExternalPropertyDelegate RetrieveExternalProperty { get; private set; }
+  }
+
+  public delegate double RetrieveExternalPropertyDelegate(string externalPropertyName);
 }

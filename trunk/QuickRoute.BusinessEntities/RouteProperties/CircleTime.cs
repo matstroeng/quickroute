@@ -5,19 +5,25 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class CircleTime : RouteMomentaneousProperty
   {
-    public CircleTime(Session session, RouteLocations locations)
-      : base(session, locations)
+    public CircleTime(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
-      DistanceThreshold = 35; // TODO: set dynamically
     }
 
-    public CircleTime(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public CircleTime(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
-      DistanceThreshold = 35; // TODO: set dynamically
     }
 
-    protected double DistanceThreshold { get; set; }
+    private double? distanceThreshold;
+    protected double DistanceThreshold
+    {
+      get
+      {
+        if (distanceThreshold == null && RetrieveExternalProperty != null) distanceThreshold = RetrieveExternalProperty("CircleTimeRadius");
+        return distanceThreshold ?? 0;
+      }
+    }
 
     protected override void Calculate()
     {
@@ -28,8 +34,8 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         return;
       }
 
-      value = (TimeSpan)(new CircleTimeBackward(Session, Location).Value) +
-              (TimeSpan)(new CircleTimeForward(Session, Location).Value);
+      value = (TimeSpan)(new CircleTimeBackward(Session, Location, RetrieveExternalProperty).Value) +
+              (TimeSpan)(new CircleTimeForward(Session, Location, RetrieveExternalProperty).Value);
 
       AddToCache();
     }

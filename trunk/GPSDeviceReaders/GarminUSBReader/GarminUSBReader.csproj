@@ -10,10 +10,13 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QuickRoute.GPSDeviceReaders.GarminUSBReader</RootNamespace>
     <AssemblyName>QuickRoute.GPSDeviceReaders.GarminUSBReader</AssemblyName>
-    <StartupObject></StartupObject>
-    <FileUpgradeFlags></FileUpgradeFlags>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
-    <UpgradeBackupLocation></UpgradeBackupLocation>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -197,7 +200,10 @@
     <EmbeddedResource Include="ProgressIndicator.lt.resx" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Strings.de.resx" />
+    <EmbeddedResource Include="Strings.fr.resx" />
     <EmbeddedResource Include="Strings.lt.resx" />
+    <EmbeddedResource Include="Strings.no.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

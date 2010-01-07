@@ -5,13 +5,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class AverageDirectionDeviationToNextLap : RouteSpanProperty
   {
-    public AverageDirectionDeviationToNextLap(Session session, ParameterizedLocation start, ParameterizedLocation end)
-      : base(session, start, end)
+    public AverageDirectionDeviationToNextLap(Session session, ParameterizedLocation start, ParameterizedLocation end, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, start, end, retrieveExternalProperty)
     {
     }
 
-    public AverageDirectionDeviationToNextLap(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AverageDirectionDeviationToNextLap(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -110,13 +110,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
   public class AverageDirectionDeviationToNextLapFromStart : RouteFromStartProperty
   {
-    public AverageDirectionDeviationToNextLapFromStart(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public AverageDirectionDeviationToNextLapFromStart(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 
-    public AverageDirectionDeviationToNextLapFromStart(Session session, RouteLocations locations)
-      : base(session, locations)
+    public AverageDirectionDeviationToNextLapFromStart(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
@@ -128,7 +128,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      value = (new AverageDirectionDeviationToNextLap(Session, ParameterizedLocation.Start, Location) { CacheManager = CacheManager }).Value;
+      value = (new AverageDirectionDeviationToNextLap(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty) { CacheManager = CacheManager }).Value;
       AddToCache();
     }
 

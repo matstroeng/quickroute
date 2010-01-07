@@ -4,13 +4,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
   {
     public ParameterizedLocation Location { get { return Locations.Location; } }
 
-    protected RouteFromStartProperty(Session session, RouteLocations locations)
-      : base(session, locations)
+    protected RouteFromStartProperty(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
-    protected RouteFromStartProperty(Session session, ParameterizedLocation location)
-      : base(session, new RouteLocations(location))
+    protected RouteFromStartProperty(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, new RouteLocations(location), retrieveExternalProperty)
     {
     }
   }

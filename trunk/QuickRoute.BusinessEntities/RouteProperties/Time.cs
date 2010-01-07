@@ -5,13 +5,13 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 {
   public class Time : RouteMomentaneousProperty
   {
-    public Time(Session session, RouteLocations locations)
-      : base(session, locations)
+    public Time(Session session, RouteLocations locations, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, locations, retrieveExternalProperty)
     {
     }
 
-    public Time(Session session, ParameterizedLocation location)
-      : base(session, location)
+    public Time(Session session, ParameterizedLocation location, RetrieveExternalPropertyDelegate retrieveExternalProperty)
+      : base(session, location, retrieveExternalProperty)
     {
     }
 

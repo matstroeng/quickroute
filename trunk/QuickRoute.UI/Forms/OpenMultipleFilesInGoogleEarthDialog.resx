@@ -573,9 +573,6 @@
   <data name="filesLabel.Text" xml:space="preserve">
     <value>&amp;Files</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="replayTailDurationLabel.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>

@@ -121,7 +121,7 @@
     <value>Atšaukti</value>
   </data>
   <data name="timeLabel.Text" xml:space="preserve">
-    <value>Starto laikas:</value>
+    <value>Starto &amp;laikas:</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Nustatyti starto laiką</value>

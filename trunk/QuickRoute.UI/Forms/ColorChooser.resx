@@ -811,7 +811,7 @@
     <value>40, 23</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Select Color</value>
+    <value>Select color</value>
   </data>
   <data name="&gt;&gt;hsbBlue.ZOrder" xml:space="preserve">
     <value>10</value>

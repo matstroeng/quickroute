@@ -117,11 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="files.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 138</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 0</value>
+  </data>
+  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 138</value>
+  </data>
+  <data name="addFileButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 23</value>
+  </data>
   <data name="addFileButton.Text" xml:space="preserve">
     <value>Pridėti &amp;failą...</value>
   </data>
+  <data name="addUrlButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 23</value>
+  </data>
   <data name="addUrlButton.Text" xml:space="preserve">
     <value>Pridėti &amp;internetinį adresą...</value>
+  </data>
+  <data name="removeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 23</value>
   </data>
   <data name="removeButton.Text" xml:space="preserve">
     <value>&amp;Pašalinti</value>
