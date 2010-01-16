@@ -127,7 +127,7 @@
     <value>&amp;Tiedostosta</value>
   </data>
   <data name="mapImageBlank.Text" xml:space="preserve">
-    <value>T&amp;yhjä</value>
+    <value>&amp;Ei karttaa</value>
   </data>
   <data name="mapImageFileFormatLabel.Text" xml:space="preserve">
     <value>Tiedosto&amp;formaatti</value>

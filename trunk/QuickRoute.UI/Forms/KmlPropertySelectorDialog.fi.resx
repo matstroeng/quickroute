@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="replayFrame.Text" xml:space="preserve">
-    <value>Uusinta</value>
+    <value>Uusinta (replay)</value>
   </data>
   <data name="adaptRouteToMapImage.Text" xml:space="preserve">
-    <value>&amp;Kohdista reittiviivaobjekti karttakuvaan</value>
+    <value>Kohdista &amp;reittiviiva karttakuvaan</value>
   </data>
   <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
     <value>Aika&amp;intervalli sekunteina</value>
@@ -136,22 +136,22 @@
     <value>Ääretön</value>
   </data>
   <data name="includeMap.Text" xml:space="preserve">
-    <value>&amp;Sisällytä kartta</value>
+    <value>Vie &amp;kartta</value>
   </data>
   <data name="replayMarkerStyleLabel.Text" xml:space="preserve">
-    <value>Kohta&amp;merkinnän tyyli</value>
+    <value>Positio&amp;merkinnän tyyli</value>
   </data>
   <data name="replayMarkerStyle.Items" xml:space="preserve">
     <value>Yksivärinen</value>
   </data>
   <data name="routeLineStyle.Items" xml:space="preserve">
-    <value>Sisällytetty karttaan, värikoodattu</value>
+    <value>Upotettu karttaan, värikoodattu</value>
   </data>
   <data name="includeReplay.Text" xml:space="preserve">
-    <value>Sisällytä &amp;uusinta</value>
+    <value>Vie &amp;uusinta</value>
   </data>
   <data name="routeLineStyle.Items2" xml:space="preserve">
-    <value>Erillinen reittiviivaobjekti, värikoodattu</value>
+    <value>Erillinen reittiviiva, värikoodattu</value>
   </data>
   <data name="routeLineStyleLabel.Text" xml:space="preserve">
     <value>Reittiviivan &amp;tyyli</value>
@@ -160,10 +160,10 @@
     <value>Värikoodattu</value>
   </data>
   <data name="adaptReplayToMapImage.Text" xml:space="preserve">
-    <value>Kohdista &amp;reittiviivaobjektit karttakuvaan</value>
+    <value>Kohdista &amp;reittiviivat karttakuvaan</value>
   </data>
   <data name="includeRoute.Text" xml:space="preserve">
-    <value>Sisä&amp;llytä reitti</value>
+    <value>Vie &amp;reitti</value>
   </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Peruuta</value>
@@ -175,6 +175,6 @@
     <value>KML -ominaisuudet</value>
   </data>
   <data name="routeLineStyle.Items1" xml:space="preserve">
-    <value>E</value>
+    <value>Erillinen reittiviiva, yksivärinen</value>
   </data>
 </root>

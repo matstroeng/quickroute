@@ -117,46 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="replayTailDurationLabel.Text" xml:space="preserve">
-    <value>Hännän &amp;kestoaika sekunteina</value>
-  </data>
-  <data name="replayGroupBox.Text" xml:space="preserve">
-    <value>Uusinta</value>
-  </data>
-  <data name="replayTailDuration.Items7" xml:space="preserve">
-    <value>Ääretön</value>
-  </data>
-  <data name="includeRoutes.Text" xml:space="preserve">
-    <value>Vie &amp;reitit</value>
-  </data>
-  <data name="includeReplay.Text" xml:space="preserve">
-    <value>Vie &amp;uusinnat</value>
-  </data>
-  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
-    <value>Aika&amp;intervalli sekunteina</value>
-  </data>
-  <data name="replayTailsVisibleLabel.Text" xml:space="preserve">
-    <value>Näytä &amp;hännät</value>
-  </data>
-  <data name="filesLabel.Text" xml:space="preserve">
-    <value>&amp;Tiedostot</value>
-  </data>
-  <data name="routesGroupBox.Text" xml:space="preserve">
-    <value>Reitit</value>
-  </data>
-  <data name="massStartLabel.Text" xml:space="preserve">
-    <value>Simuloi &amp;yhteislähtö</value>
-  </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Peruuta</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Avaa useampi QuickRoute -tiedosto Google Earthissa</value>
+    <value>Intervalli</value>
   </data>
-  <data name="uiInformation.Text" xml:space="preserve">
-    <value>Lisää QuickRoute -tiedostot, jotka sisältävät halutut reitit. Ensimmäisen tiedoston kartta asetetaan taustakartaksi. Voit lisätä QRT- tai JPEG-tiedostoja, jotka ovat peräisin QuickRoute 2.3:sta tai uudemmasta versiosta.</value>
+  <data name="intervalStartLabel.Text" xml:space="preserve">
+    <value>Intervallin &amp;alku</value>
   </data>
-  <data name="replayRestartAfterEachLapLabel.Text" xml:space="preserve">
-    <value>Aloita uudelleen &amp;jokaisen kierroksen jälkeen</value>
+  <data name="infoLabel.Text" xml:space="preserve">
+    <value>Aseta väriskaalan alku ja loppuarvot</value>
+  </data>
+  <data name="intervalEndLabel.Text" xml:space="preserve">
+    <value>Intervallin &amp;loppu</value>
   </data>
 </root>

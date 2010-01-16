@@ -117,46 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="replayTailDurationLabel.Text" xml:space="preserve">
-    <value>Hännän &amp;kestoaika sekunteina</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Liukuvärieditori</value>
   </data>
-  <data name="replayGroupBox.Text" xml:space="preserve">
-    <value>Uusinta</value>
+  <data name="deleteGradient.Text" xml:space="preserve">
+    <value>&amp;Poista likuväri</value>
   </data>
-  <data name="replayTailDuration.Items7" xml:space="preserve">
-    <value>Ääretön</value>
+  <data name="gradientNameLabel.Text" xml:space="preserve">
+    <value>&amp;Nimi</value>
   </data>
-  <data name="includeRoutes.Text" xml:space="preserve">
-    <value>Vie &amp;reitit</value>
+  <data name="uiInformation.Text" xml:space="preserve">
+    <value>Klikkaa missä tahansa liukuvärjätyllä alueella lisätäksesi värimerkin. Tartu värimerkkiin siirtääksesi sen eri paikkaan. Kaksoisklikkaa värimerkkiä muuttaaksesi sen väriä. Klikkaa hiiren oikealla napilla poistaaksesi sen.</value>
   </data>
-  <data name="includeReplay.Text" xml:space="preserve">
-    <value>Vie &amp;uusinnat</value>
+  <data name="addGradient.Text" xml:space="preserve">
+    <value>&amp;Lisää liukuväri</value>
   </data>
-  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
-    <value>Aika&amp;intervalli sekunteina</value>
+  <data name="gradientProperties.Text" xml:space="preserve">
+    <value>Liukuvärin ominaisuudet</value>
   </data>
-  <data name="replayTailsVisibleLabel.Text" xml:space="preserve">
-    <value>Näytä &amp;hännät</value>
-  </data>
-  <data name="filesLabel.Text" xml:space="preserve">
-    <value>&amp;Tiedostot</value>
-  </data>
-  <data name="routesGroupBox.Text" xml:space="preserve">
-    <value>Reitit</value>
-  </data>
-  <data name="massStartLabel.Text" xml:space="preserve">
-    <value>Simuloi &amp;yhteislähtö</value>
+  <data name="availableGradients.Text" xml:space="preserve">
+    <value>Mahdolliset liukuvärit</value>
   </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Peruuta</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Avaa useampi QuickRoute -tiedosto Google Earthissa</value>
-  </data>
-  <data name="uiInformation.Text" xml:space="preserve">
-    <value>Lisää QuickRoute -tiedostot, jotka sisältävät halutut reitit. Ensimmäisen tiedoston kartta asetetaan taustakartaksi. Voit lisätä QRT- tai JPEG-tiedostoja, jotka ovat peräisin QuickRoute 2.3:sta tai uudemmasta versiosta.</value>
-  </data>
-  <data name="replayRestartAfterEachLapLabel.Text" xml:space="preserve">
-    <value>Aloita uudelleen &amp;jokaisen kierroksen jälkeen</value>
   </data>
 </root>
