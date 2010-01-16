@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Altitude" xml:space="preserve">
+    <value>Korkeus</value>
+  </data>
+  <data name="Distance" xml:space="preserve">
+    <value>Matka</value>
+  </data>
+  <data name="DonationUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/quickroute/en/donation.php</value>
+  </data>
+  <data name="EastAbbreviated" xml:space="preserve">
+    <value>I</value>
+  </data>
+  <data name="ElapsedTime" xml:space="preserve">
+    <value>Kulunut aika</value>
+  </data>
+  <data name="ExportImageTitle" xml:space="preserve">
+    <value>Vie kuva</value>
+  </data>
+  <data name="ExportGPXTitle" xml:space="preserve">
+    <value>Vie reitti GPX:nä</value>
+  </data>
+  <data name="HeartRate" xml:space="preserve">
+    <value>Syke</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://www.matstroeng.se/quickroute/en/help</value>
+  </data>
+  <data name="Histogram" xml:space="preserve">
+    <value>Pylväskaavio</value>
+  </data>
+  <data name="InvalidMapImage" xml:space="preserve">
+    <value>Ei-toimiva karttakuva</value>
+  </data>
+  <data name="InvalidRoute" xml:space="preserve">
+    <value>Ei-toimiva reitti</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Sijainti</value>
+  </data>
+  <data name="MapImageFileDoesNotExist" xml:space="preserve">
+    <value>Karttakuvaa ei löydy.</value>
+  </data>
+  <data name="NewGradient" xml:space="preserve">
+    <value>Uusi liukuväri</value>
+  </data>
+  <data name="NoGPSDevicesConnected" xml:space="preserve">
+    <value>(GPS-laitetta ei ole kytketty)</value>
+  </data>
+  <data name="NoGPSDevicesConnectedMessageBox" xml:space="preserve">
+    <value>GPS-laitteita ei ole kytketty</value>
+  </data>
+  <data name="NorthAbbreviated" xml:space="preserve">
+    <value>P</value>
+  </data>
+  <data name="OpenQuickRouteFileTitle" xml:space="preserve">
+    <value>Avaa QuickRoute -tiedosto</value>
+  </data>
+  <data name="Pace" xml:space="preserve">
+    <value>Vauhti</value>
+  </data>
+  <data name="PromptSaveChanges" xml:space="preserve">
+    <value>Tallenna muutokset tiedostoon {0}?</value>
+  </data>
+  <data name="RouteFileDoesNotExist" xml:space="preserve">
+    <value>Reittitiedostoa ei löydy.</value>
+  </data>
+  <data name="SaveAsTitle" xml:space="preserve">
+    <value>Tallenna QuickRoute -tiedosto</value>
+  </data>
+  <data name="SelectMapImageFile" xml:space="preserve">
+    <value>Valitse karttatiedosto</value>
+  </data>
+  <data name="SelectRouteFile" xml:space="preserve">
+    <value>Valitse rettitiedosto</value>
+  </data>
+  <data name="SouthAbbreviated" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Nopeus</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Aika</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Yhteensä</value>
+  </data>
+  <data name="UICultureChangeTakesEffectAtNextRestart" xml:space="preserve">
+    <value>Kielimuutos tulee voimaan, kun käynnistät QuickRouten seuraavan kerran.</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Nimetön</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versio {0}</value>
+  </data>
+  <data name="WestAbbreviated" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="CopyToClipboard" xml:space="preserve">
+    <value>Kopioi leikepöydälle</value>
+  </data>
+  <data name="NewMap" xml:space="preserve">
+    <value>Uusi kartta</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Suuntapoikkeama</value>
+  </data>
+  <data name="SizeInPixels" xml:space="preserve">
+    <value>{0} x {1} pixeliä</value>
+  </data>
+  <data name="ExportKMZTitle" xml:space="preserve">
+    <value>Vie KMZ-muodossa</value>
+  </data>
+  <data name="ExportRouteDataTitle" xml:space="preserve">
+    <value>Vie reittidata</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Kartta</value>
+  </data>
+  <data name="QuickRouteSession" xml:space="preserve">
+    <value>QuickRoute -sessio {0}</value>
+  </data>
+  <data name="Route" xml:space="preserve">
+    <value>Reitti</value>
+  </data>
+  <data name="RouteSegmentX" xml:space="preserve">
+    <value>Reittiosuus {0}</value>
+  </data>
+  <data name="Replay" xml:space="preserve">
+    <value>Uusinta</value>
+  </data>
+  <data name="Infinite" xml:space="preserve">
+    <value>ääretön</value>
+  </data>
+  <data name="QuickRouteKmlData" xml:space="preserve">
+    <value>QuickRoute -data</value>
+  </data>
+  <data name="ReplayPosition" xml:space="preserve">
+    <value>Paikka</value>
+  </data>
+  <data name="ReplayTail" xml:space="preserve">
+    <value>Häntä</value>
+  </data>
+  <data name="Routes" xml:space="preserve">
+    <value>Reitit</value>
+  </data>
+  <data name="AddFiles" xml:space="preserve">
+    <value>Lisää tiedostoja</value>
+  </data>
+  <data name="UnexpectedExceptionMessage" xml:space="preserve">
+    <value>Odottamaton virhe tapahtui.</value>
+  </data>
+  <data name="UntitledX" xml:space="preserve">
+    <value>Nimetön {0}</value>
+  </data>
+  <data name="OpenInGoogleEarth" xml:space="preserve">
+    <value>Avaa Google Earthissa</value>
+  </data>
+  <data name="NewVersionAvailable" xml:space="preserve">
+    <value>QuickRoute -versio {0} on saatavilla.</value>
+  </data>
+  <data name="NewVersionFeatures" xml:space="preserve">
+    <value>Uuden version toimintoja:</value>
+  </data>
+  <data name="OpenMultipleFilesInGoogleEarth" xml:space="preserve">
+    <value>Avaa useampi QuickRoute -tiedosto Google Earthissa</value>
+  </data>
+  <data name="LapX" xml:space="preserve">
+    <value>Kierros {0}</value>
+  </data>
+  <data name="MultipleFileExporterNoValidFiles" xml:space="preserve">
+    <value>Et ole määritellyt valideja QuickRoute -tiedostoja.</value>
+  </data>
+  <data name="MultipleFileExporterSomeInvalidFiles" xml:space="preserve">
+    <value>Seuraavissa tiedostoissa ei ole QuickRoute -dataa eikä niitä voida sisällyttää:
+
+{0}</value>
+  </data>
+  <data name="UnrecognizedFileFormat" xml:space="preserve">
+    <value>Tiedoston {0} formaattia ei tunnistettu.</value>
+  </data>
+  <data name="SelectLapInfoColumns" xml:space="preserve">
+    <value>Valitse sarakkeet</value>
+  </data>
+  <data name="SmoothingIntervalForX" xml:space="preserve">
+    <value>Tasausintervalli tiedostolle  {0}</value>
+  </data>
+  <data name="SelectMomentaneousInfoProperties" xml:space="preserve">
+    <value>Valitse tieto</value>
+  </data>
+  <data name="DeleteLapX" xml:space="preserve">
+    <value>Poista kierros {0}</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Tulosta...</value>
+  </data>
+</root>

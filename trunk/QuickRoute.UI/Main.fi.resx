@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lapsLabel.Text" xml:space="preserve">
+    <value>Väliajat</value>
+  </data>
+  <data name="exportLapHistogramImage.ToolTipText" xml:space="preserve">
+    <value>Vie histrogrammi</value>
+  </data>
+  <data name="lapHistogramBinWidth.ToolTipText" xml:space="preserve">
+    <value>Pylvään leveys</value>
+  </data>
+  <data name="toolStripContainer1.Text" xml:space="preserve">
+    <value>toolStripContainer1</value>
+  </data>
+  <data name="colorRangeStartValue.ToolTipText" xml:space="preserve">
+    <value>Värialueen aloitusarvo</value>
+  </data>
+  <data name="colorRangeIntervalSlider.ToolTipText" xml:space="preserve">
+    <value>Reittiviivan värikoodaus</value>
+  </data>
+  <data name="colorRangeEndValue.ToolTipText" xml:space="preserve">
+    <value>Värialueen lopetusarvo</value>
+  </data>
+  <data name="colorRangeIntervalButton.ToolTipText" xml:space="preserve">
+    <value>Aseta värialue</value>
+  </data>
+  <data name="toolStripAutoAdjustColorRangeInterval.ToolTipText" xml:space="preserve">
+    <value>Aseta värialue automaattisesti</value>
+  </data>
+  <data name="gradientAlphaAdjustment.ToolTipText" xml:space="preserve">
+    <value>Reittiviivan läpinäkyvyys</value>
+  </data>
+  <data name="routeLineWidth.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="routeLineWidth.ToolTipText" xml:space="preserve">
+    <value>Reittiviivan leveys</value>
+  </data>
+  <data name="routeLineMaskVisible.ToolTipText" xml:space="preserve">
+    <value>Näytä reittiviivan reunat</value>
+  </data>
+  <data name="routeLineMaskWidth.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="routeLineMaskWidth.ToolTipText" xml:space="preserve">
+    <value>Reittiviivan reunojen leveys</value>
+  </data>
+  <data name="routeLineMaskColorButton.ToolTipText" xml:space="preserve">
+    <value>Reittiviivan reunojen väri</value>
+  </data>
+  <data name="toolStripNew.ToolTipText" xml:space="preserve">
+    <value>Uusi  (Ctrl+N)</value>
+  </data>
+  <data name="toolStripOpen.ToolTipText" xml:space="preserve">
+    <value>Avaa  (Ctrl+O)</value>
+  </data>
+  <data name="toolStripSave.ToolTipText" xml:space="preserve">
+    <value>Tallenna (Ctrl+S)</value>
+  </data>
+  <data name="toolStripUndo.ToolTipText" xml:space="preserve">
+    <value>Kumoa (Ctrl+Z)</value>
+  </data>
+  <data name="toolStripRedo.ToolTipText" xml:space="preserve">
+    <value>Tee uudelleen (Ctrl+Y)</value>
+  </data>
+  <data name="toolStripZoom.Items" xml:space="preserve">
+    <value>50%</value>
+  </data>
+  <data name="toolStripZoom.Items1" xml:space="preserve">
+    <value>75%</value>
+  </data>
+  <data name="toolStripZoom.Items2" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="toolStripZoom.Items3" xml:space="preserve">
+    <value>125%</value>
+  </data>
+  <data name="toolStripZoom.Items4" xml:space="preserve">
+    <value>150%</value>
+  </data>
+  <data name="toolStripZoom.Items5" xml:space="preserve">
+    <value>200%</value>
+  </data>
+  <data name="toolStripZoom.ToolTipText" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="toolStripToolAdjustRoute.ToolTipText" xml:space="preserve">
+    <value>Muokkaa reittiä</value>
+  </data>
+  <data name="toolStripToolLap.ToolTipText" xml:space="preserve">
+    <value>Lisää väliaika</value>
+  </data>
+  <data name="toolStripOpenInGoogleEarth.ToolTipText" xml:space="preserve">
+    <value>Avaa Google Earthissa (Ctrl+E)</value>
+  </data>
+  <data name="toolStripPublishMap.ToolTipText" xml:space="preserve">
+    <value>Julkaise kartta</value>
+  </data>
+  <data name="toolStripFullScreen.ToolTipText" xml:space="preserve">
+    <value>Koko ruutu (F11)</value>
+  </data>
+  <data name="toolStripRightPanelVisible.ToolTipText" xml:space="preserve">
+    <value>Näytä oikea paneeli (Ctrl+Shift+R)</value>
+  </data>
+  <data name="toolStripBottomPanelVisible.ToolTipText" xml:space="preserve">
+    <value>Näytä alapaneeli (Ctrl+Shift+B)</value>
+  </data>
+  <data name="toolStripHelp.ToolTipText" xml:space="preserve">
+    <value>Apua</value>
+  </data>
+  <data name="toolStripDonate.ToolTipText" xml:space="preserve">
+    <value>Tue QuickRouten jatkokehitystä</value>
+  </data>
+  <data name="menuToolsAddLapsFromWinSplits.Text" xml:space="preserve">
+    <value>Lisää väliajat &amp;WinSplits -ohjelmasta</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>QuickRoute</value>
+  </data>
+  <data name="colorCodingAttributes.ToolTipText" xml:space="preserve">
+    <value>Värimerkitse reitti...</value>
+  </data>
+  <data name="toolStripToolPointer.ToolTipText" xml:space="preserve">
+    <value>Osoitin</value>
+  </data>
+  <data name="toolStripToolCut.ToolTipText" xml:space="preserve">
+    <value>Leikkaa reitti</value>
+  </data>
+  <data name="toolStripToolZoomIn.ToolTipText" xml:space="preserve">
+    <value>Zoomaa sisään</value>
+  </data>
+  <data name="toolStripToolZoomOut.ToolTipText" xml:space="preserve">
+    <value>Zoomaa ulos</value>
+  </data>
+  <data name="menuFileNew.Text" xml:space="preserve">
+    <value>&amp;Uusi</value>
+  </data>
+  <data name="menuFileOpen.Text" xml:space="preserve">
+    <value>&amp;Avaa</value>
+  </data>
+  <data name="menuFileSave.Text" xml:space="preserve">
+    <value>&amp;Tallenna</value>
+  </data>
+  <data name="menuFileSaveAs.Text" xml:space="preserve">
+    <value>Tallenna &amp;Nimellä</value>
+  </data>
+  <data name="menuFileExportImage.Text" xml:space="preserve">
+    <value>&amp;Kuva</value>
+  </data>
+  <data name="menuFileExportGPX.Text" xml:space="preserve">
+    <value>&amp;GPX...</value>
+  </data>
+  <data name="menuFileExportKMZ.Text" xml:space="preserve">
+    <value>&amp;KMZ...</value>
+  </data>
+  <data name="menuFileExportRouteData.Text" xml:space="preserve">
+    <value>&amp;Reittidata</value>
+  </data>
+  <data name="menuFileExport.Text" xml:space="preserve">
+    <value>&amp;Vie</value>
+  </data>
+  <data name="menuFileImportSessions.Text" xml:space="preserve">
+    <value>&amp;Lataa reittejä</value>
+  </data>
+  <data name="menuFileExit.Text" xml:space="preserve">
+    <value>&amp;Ulos</value>
+  </data>
+  <data name="menuFile.Text" xml:space="preserve">
+    <value>&amp;Tiedosto</value>
+  </data>
+  <data name="menuEditUndo.Text" xml:space="preserve">
+    <value>&amp;Kumoa</value>
+  </data>
+  <data name="menuEditRedo.Text" xml:space="preserve">
+    <value>&amp;Uudelleen</value>
+  </data>
+  <data name="menuEditChangeStartTime.Text" xml:space="preserve">
+    <value>Muuta &amp;aloitusaikaa</value>
+  </data>
+  <data name="menuEdit.Text" xml:space="preserve">
+    <value>&amp;Muokkaa</value>
+  </data>
+  <data name="menuViewFullScreen.Text" xml:space="preserve">
+    <value>Koko &amp;ruutu</value>
+  </data>
+  <data name="menuViewRightPanelVisible.Text" xml:space="preserve">
+    <value>Näytä &amp;oikea paneeli</value>
+  </data>
+  <data name="menuViewBottomPanelVisible.Text" xml:space="preserve">
+    <value>Näytä &amp;vasen paneeli</value>
+  </data>
+  <data name="menuView.Text" xml:space="preserve">
+    <value>&amp;Näytä</value>
+  </data>
+  <data name="menuToolsOpenInGoogleEarth.Text" xml:space="preserve">
+    <value>Avaa &amp;Google Earthissa...</value>
+  </data>
+  <data name="menuToolsOpenMultipleFilesInGoogleEarth.Text" xml:space="preserve">
+    <value>Avaa useampi reitti Google &amp;Earthissa</value>
+  </data>
+  <data name="menuToolsPublishMap.Text" xml:space="preserve">
+    <value>&amp;Julkaise kartta</value>
+  </data>
+  <data name="menuTools.Text" xml:space="preserve">
+    <value>&amp;Työkalut</value>
+  </data>
+  <data name="menuSettingsLanguage.Text" xml:space="preserve">
+    <value>&amp;Kieli</value>
+  </data>
+  <data name="menuSettings.Text" xml:space="preserve">
+    <value>&amp;Asetukset</value>
+  </data>
+  <data name="menuHelpHelp.Text" xml:space="preserve">
+    <value>&amp;Apua...</value>
+  </data>
+  <data name="menuHelpAbout.Text" xml:space="preserve">
+    <value>A&amp;bout</value>
+  </data>
+  <data name="menuHelp.Text" xml:space="preserve">
+    <value>&amp;Apua</value>
+  </data>
+  <data name="menuStrip.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+</root>
