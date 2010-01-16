@@ -120,9 +120,6 @@
   <data name="cancel.Text" xml:space="preserve">
     <value>Peruuta</value>
   </data>
-  <data name="date.CustomFormat" xml:space="preserve">
-    <value>vvvv-kk-pp T:mm</value>
-  </data>
   <data name="commentLabel.Text" xml:space="preserve">
     <value>Komme&amp;ntti</value>
   </data>
