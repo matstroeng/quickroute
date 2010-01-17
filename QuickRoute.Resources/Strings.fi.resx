@@ -226,7 +226,7 @@
     <value>Suuntapoikkeama</value>
   </data>
   <data name="SizeInPixels" xml:space="preserve">
-    <value>{0} x {1} pixeliä</value>
+    <value>{0} x {1} pikseliä</value>
   </data>
   <data name="ExportKMZTitle" xml:space="preserve">
     <value>Vie KMZ-muodossa</value>
@@ -414,61 +414,61 @@
     <value>Korkeus merenpinnasta: {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_AltitudeDifference" xml:space="preserve">
-    <value>Korkeusero (kierros): {0} m</value>
+    <value>Korkeusero (väli): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_AltitudeDifferenceFromStart" xml:space="preserve">
     <value>Korkeusero (yhteensä): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_Ascent" xml:space="preserve">
-    <value>Noususumma (kierros): {0} m</value>
+    <value>Noususumma (väli): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_AscentFromStart" xml:space="preserve">
     <value>Noususumma (yhteensä): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageDirectionDeviationToNextLap" xml:space="preserve">
-    <value>Suuntapoikkeaman keskiarvo (kierros): {0}°</value>
+    <value>Suuntapoikkeaman keskiarvo (väli): {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageDirectionDeviationToNextLapFromStart" xml:space="preserve">
     <value>Suuntapoikkeaman keskiarvo (yhteensä): {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageHeartRate" xml:space="preserve">
-    <value>Keskisyke (kierros): {0} bpm</value>
+    <value>Keskisyke (väli): {0} bpm</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageHeartRateFromStart" xml:space="preserve">
     <value>Keskisyke (yhteensä): {0} bpm</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageInclination" xml:space="preserve">
-    <value>Keskikaltevuus (kierros): {0}°</value>
+    <value>Keskikaltevuus (väli): {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageInclinationFromStart" xml:space="preserve">
     <value>Keskikaltevuus (yhteensä): {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageRoutePace" xml:space="preserve">
-    <value>Keskivauhti (kierros): {0} min/km</value>
+    <value>Keskivauhti (väli): {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageRoutePaceFromStart" xml:space="preserve">
     <value>Keskivauhti (yhteensä): {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageRouteSpeed" xml:space="preserve">
-    <value>Keskinopeus (kierros): {0} min/km</value>
+    <value>Keskinopeus (väli): {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageRouteSpeedFromStart" xml:space="preserve">
     <value>Keskinopeus (yhteensä): {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageStraightLinePace" xml:space="preserve">
-    <value>Keskivauhti suoraa viivaa (kierros): {0} min/km</value>
+    <value>Keskivauhti suoraa viivaa (väli): {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageStraightLinePaceFromStart" xml:space="preserve">
     <value>Keskivauhti suoraa viivaa (yhteensä): {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageStraightLineSpeed" xml:space="preserve">
-    <value>Keskinopeus suoraa viivaa (kierros): {0} min/km</value>
+    <value>Keskinopeus suoraa viivaa (väli): {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageStraightLineSpeedFromStart" xml:space="preserve">
     <value>Keskinopeus suoraa viivaa (yhteensä): {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_Descent" xml:space="preserve">
-    <value>Laskusumma (kierros): {0} m</value>
+    <value>Laskusumma (väli): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_DescentFromStart" xml:space="preserve">
     <value>Laskusumma (yhteensä): {0} m</value>
@@ -480,7 +480,7 @@
     <value>Suuntapoikkeama: {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_ElapsedTime" xml:space="preserve">
-    <value>Aika (kierros): {0}</value>
+    <value>Aika (väli): {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_ElapsedTimeFromStart" xml:space="preserve">
     <value>Aika (yhteensä): {0}</value>
@@ -492,19 +492,19 @@
     <value>Kaltevuus: {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_LapNumber" xml:space="preserve">
-    <value>Kierroksen numero: {0}</value>
+    <value>Välin numero: {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_Location" xml:space="preserve">
     <value>Sijainti: {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_MaxHeartRate" xml:space="preserve">
-    <value>Maksimisyke (kierros): {0} bpm</value>
+    <value>Maksimisyke (väli): {0} bpm</value>
   </data>
   <data name="RoutePropertyNameAndValue_MaxHeartRateFromStart" xml:space="preserve">
     <value>Maksimisyke (yhteensä): {0} bpm</value>
   </data>
   <data name="RoutePropertyNameAndValue_MinHeartRate" xml:space="preserve">
-    <value>Minimisyke (kierros): {0} bpm</value>
+    <value>Minimisyke (väli): {0} bpm</value>
   </data>
   <data name="RoutePropertyNameAndValue_MinHeartRateFromStart" xml:space="preserve">
     <value>Minimisyke (yhteensä): {0} bpm</value>
@@ -513,13 +513,13 @@
     <value>Vauhti: {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_RouteDistance" xml:space="preserve">
-    <value>Reitin pituus (kierros): {0} m</value>
+    <value>Reitin pituus (väli): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_RouteDistanceFromStart" xml:space="preserve">
     <value>Reitin pituus (yhteensä): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_RouteToStraightLine" xml:space="preserve">
-    <value>Reitin ja suoran viivan ero (kierros): {0}</value>
+    <value>Reitin ja suoran viivan ero (väli): {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_RouteToStraightLineFromStart" xml:space="preserve">
     <value>Reitin ja suoran viivan ero (yhteensä): {0}</value>
@@ -528,7 +528,7 @@
     <value>Nopeus: {0} km/h</value>
   </data>
   <data name="RoutePropertyNameAndValue_StraightLineDistance" xml:space="preserve">
-    <value>Suoran viivan pituus (kierros): {0} m</value>
+    <value>Suoran viivan pituus (väli): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_StraightLineDistanceFromStart" xml:space="preserve">
     <value>Suoran viivan pituus (yhteensä): {0} m</value>
@@ -540,61 +540,61 @@
     <value>Korkeus</value>
   </data>
   <data name="RoutePropertyName_AltitudeDifference" xml:space="preserve">
-    <value>Korkeusero (kierros)</value>
+    <value>Korkeusero (väli)</value>
   </data>
   <data name="RoutePropertyName_AltitudeDifferenceFromStart" xml:space="preserve">
     <value>Korkeusero (yhteensä)</value>
   </data>
   <data name="RoutePropertyName_Ascent" xml:space="preserve">
-    <value>Noususumma (kierros)</value>
+    <value>Noususumma (väli)</value>
   </data>
   <data name="RoutePropertyName_AscentFromStart" xml:space="preserve">
     <value>Noususumma (yhteensä)</value>
   </data>
   <data name="RoutePropertyName_AverageDirectionDeviationToNextLap" xml:space="preserve">
-    <value>Suuntapoikkeaman keskiarvo (kierros)</value>
+    <value>Suuntapoikkeaman keskiarvo (väli)</value>
   </data>
   <data name="RoutePropertyName_AverageDirectionDeviationToNextLapFromStart" xml:space="preserve">
     <value>Suuntapoikkeaman keskiarvo (yhteensä)</value>
   </data>
   <data name="RoutePropertyName_AverageHeartRate" xml:space="preserve">
-    <value>Keskisyke (kierros)</value>
+    <value>Keskisyke (väli)</value>
   </data>
   <data name="RoutePropertyName_AverageHeartRateFromStart" xml:space="preserve">
     <value>Keskisyke (yhteensä)</value>
   </data>
   <data name="RoutePropertyName_AverageInclination" xml:space="preserve">
-    <value>Keskikaltevuus (kierros)</value>
+    <value>Keskikaltevuus (väli)</value>
   </data>
   <data name="RoutePropertyName_AverageInclinationFromStart" xml:space="preserve">
     <value>Keskikaltevuus (yhteensä)</value>
   </data>
   <data name="RoutePropertyName_AverageRoutePace" xml:space="preserve">
-    <value>Keskivauhti (kierros)</value>
+    <value>Keskivauhti (väli)</value>
   </data>
   <data name="RoutePropertyName_AverageRoutePaceFromStart" xml:space="preserve">
     <value>Keskivauhti (yhteensä)</value>
   </data>
   <data name="RoutePropertyName_AverageRouteSpeed" xml:space="preserve">
-    <value>Keskinopeus (kierros)</value>
+    <value>Keskinopeus (väli)</value>
   </data>
   <data name="RoutePropertyName_AverageRouteSpeedFromStart" xml:space="preserve">
     <value>Keskinopeus (yhteensä)</value>
   </data>
   <data name="RoutePropertyName_AverageStraightLinePace" xml:space="preserve">
-    <value>Keskivauhti suoraa viivaa</value>
+    <value>Keskivauhti suoraviivaa (väli)</value>
   </data>
   <data name="RoutePropertyName_AverageStraightLinePaceFromStart" xml:space="preserve">
-    <value>Keskivauhti suoraa viivaa (yhteensä)</value>
+    <value>Keskivauhti suoraviivaa (yhteensä)</value>
   </data>
   <data name="RoutePropertyName_AverageStraightLineSpeed" xml:space="preserve">
-    <value>Keskinopeus suoraa viivaa (kierros)</value>
+    <value>Keskinopeus suoraa viivaa (väli)</value>
   </data>
   <data name="RoutePropertyName_AverageStraightLineSpeedFromStart" xml:space="preserve">
     <value>Keskinopeus suoraa viivaa (yhteensä)</value>
   </data>
   <data name="RoutePropertyName_Descent" xml:space="preserve">
-    <value>Laskusumma (kierros)</value>
+    <value>Laskusumma (väli)</value>
   </data>
   <data name="RoutePropertyName_DescentFromStart" xml:space="preserve">
     <value>Laskusumma (yhteensä)</value>
@@ -606,7 +606,7 @@
     <value>Suuntapoikkeama</value>
   </data>
   <data name="RoutePropertyName_ElapsedTime" xml:space="preserve">
-    <value>Aika (kierros)</value>
+    <value>Aika (väli)</value>
   </data>
   <data name="RoutePropertyName_ElapsedTimeFromStart" xml:space="preserve">
     <value>Aika (yhteensä)</value>
@@ -618,19 +618,19 @@
     <value>Kaltevuus</value>
   </data>
   <data name="RoutePropertyName_LapNumber" xml:space="preserve">
-    <value>Kierros</value>
+    <value>Väli</value>
   </data>
   <data name="RoutePropertyName_Location" xml:space="preserve">
     <value>Sijainti</value>
   </data>
   <data name="RoutePropertyName_MaxHeartRate" xml:space="preserve">
-    <value>Maksimisyke (kierros)</value>
+    <value>Maksimisyke (väli)</value>
   </data>
   <data name="RoutePropertyName_MaxHeartRateFromStart" xml:space="preserve">
     <value>Maksimisyke (yhteensä)</value>
   </data>
   <data name="RoutePropertyName_MinHeartRate" xml:space="preserve">
-    <value>Minimisyke (kierros)</value>
+    <value>Minimisyke (väli)</value>
   </data>
   <data name="RoutePropertyName_MinHeartRateFromStart" xml:space="preserve">
     <value>Minimisyke (yhteensä)</value>
@@ -639,13 +639,13 @@
     <value>Vauhti</value>
   </data>
   <data name="RoutePropertyName_RouteDistance" xml:space="preserve">
-    <value>Reitin pituus (kierros)</value>
+    <value>Reitin pituus (väli)</value>
   </data>
   <data name="RoutePropertyName_RouteDistanceFromStart" xml:space="preserve">
     <value>Reitin pituus (yhteensä)</value>
   </data>
   <data name="RoutePropertyName_RouteToStraightLine" xml:space="preserve">
-    <value>Reitin ja suoran viivan ero (kierros)</value>
+    <value>Reitin ja suoran viivan ero (väli)</value>
   </data>
   <data name="RoutePropertyName_RouteToStraightLineFromStart" xml:space="preserve">
     <value>Reitin ja suoran viivan ero (yhteensä)</value>
@@ -654,7 +654,7 @@
     <value>Nopeus</value>
   </data>
   <data name="RoutePropertyName_StraightLineDistance" xml:space="preserve">
-    <value>Suoran viivan pituus (kierros)</value>
+    <value>Suoran viivan pituus (väli)</value>
   </data>
   <data name="RoutePropertyName_StraightLineDistanceFromStart" xml:space="preserve">
     <value>Suoran viivan pituus (yhteensä)</value>
@@ -687,39 +687,39 @@
     <value>Pituusaste</value>
   </data>
   <data name="RoutePropertyName_CircleTimeBackward" xml:space="preserve">
-    <value>Kierrosaika taaksepäin</value>
+    <value>Ympyräaika (taaksepäin)</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeBackward" xml:space="preserve">
-    <value>Kierrosaika taaksepäin: {0}</value>
+    <value>Ympyräaika (taaksepäin): {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeForward" xml:space="preserve">
-    <value>Kierrosaika eteenpäin</value>
+    <value>Ympyräaika (eteenpäin)</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeForward" xml:space="preserve">
-    <value>Kierrosaika eteenpäin: {0}</value>
+    <value>Ympyräaika (eteenpäin): {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeAtStartOfSpan" xml:space="preserve">
-    <value>Kierrosaika kierroksen alkaessa</value>
+    <value>Ympyräaika välin alussa (edelliseltä rastilta lähtö)</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpan" xml:space="preserve">
-    <value>Kierrosaika kierroksen alkaessa: {0}</value>
+    <value>Ympyräaika välin alussa (edelliseltä rastilta lähtö): {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeAtEndOfSpan" xml:space="preserve">
-    <value>Kierrosaika kierroksen loppuessa</value>
+    <value>Ympyräaika välin lopussa (tälle rastille tulo)</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpan" xml:space="preserve">
-    <value>Circle time at end of lap: {0}</value>
+    <value>Ympyräaika välin lopussa (tälle rastille tulo): {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
-    <value>Kierrosaikojen summa jokaisen kierroksen alussa</value>
+    <value>Ympyräaikojen summa välien aluissa (rastilta lähtö)</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
-    <value>Kierrosaikojen summa jokaisen kierroksen alussa: {0}</value>
+    <value>Ympyräaikojen summa välien aluissa (rastilta lähtö): {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
-    <value>Kierrosaikojen summa jokaisen kierroksen lopussa</value>
+    <value>Ympyräaikojen summa välien lopuissa (rastille tulo)</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
-    <value>Kierrosaikojen summa jokaisen kierroksen lopussa: {0}</value>
+    <value>Ympyräaikojen summa välien lopuissa (rastille tulo): {0}</value>
   </data>
 </root>
