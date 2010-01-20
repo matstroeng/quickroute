@@ -117,46 +117,116 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="replayTailDurationLabel.Text" xml:space="preserve">
-    <value>Hännän &amp;kestoaika sekunteina</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ok.Location" type="System.Drawing.Point, System.Drawing">
+    <value>341, 480</value>
   </data>
-  <data name="replayGroupBox.Text" xml:space="preserve">
-    <value>Uusinta</value>
-  </data>
-  <data name="replayTailDuration.Items7" xml:space="preserve">
-    <value>Ääretön</value>
-  </data>
-  <data name="includeRoutes.Text" xml:space="preserve">
-    <value>Vie &amp;reitit</value>
-  </data>
-  <data name="includeReplay.Text" xml:space="preserve">
-    <value>Vie &amp;uusinnat</value>
-  </data>
-  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
-    <value>Aika&amp;intervalli sekunteina</value>
-  </data>
-  <data name="replayTailsVisibleLabel.Text" xml:space="preserve">
-    <value>Näytä &amp;hännät</value>
-  </data>
-  <data name="filesLabel.Text" xml:space="preserve">
-    <value>&amp;Tiedostot</value>
-  </data>
-  <data name="routesGroupBox.Text" xml:space="preserve">
-    <value>Reitit</value>
-  </data>
-  <data name="massStartLabel.Text" xml:space="preserve">
-    <value>Simuloi &amp;yhteislähtö</value>
+  <data name="cancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 480</value>
   </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Peruuta</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Avaa useampi QuickRoute -tiedosto Google Earthissa</value>
+  <data name="filesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="filesLabel.Text" xml:space="preserve">
+    <value>&amp;Tiedostot</value>
+  </data>
+  <data name="replayTailsVisible.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 79</value>
+  </data>
+  <data name="replayTailDuration.Items7" xml:space="preserve">
+    <value>Ääretön</value>
+  </data>
+  <data name="replayTailDuration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 99</value>
+  </data>
+  <data name="replayTailDuration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 21</value>
+  </data>
+  <data name="massStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 33</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
+    <value>Aika&amp;intervalli sekunteina</value>
+  </data>
+  <data name="replayTimeInterval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 3</value>
+  </data>
+  <data name="replayTimeInterval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 21</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>455, 124</value>
+  </data>
+  <data name="replayRestartAfterEachLap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>222, 56</value>
+  </data>
+  <data name="replayTailDurationLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 13</value>
+  </data>
+  <data name="replayTailDurationLabel.Text" xml:space="preserve">
+    <value>Hännän &amp;kestoaika sekunteina</value>
+  </data>
+  <data name="replayTailsVisibleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="replayTailsVisibleLabel.Text" xml:space="preserve">
+    <value>Näytä &amp;hännät</value>
+  </data>
+  <data name="replayRestartAfterEachLapLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 13</value>
+  </data>
+  <data name="replayRestartAfterEachLapLabel.Text" xml:space="preserve">
+    <value>Aloita uudelleen &amp;jokaisen kierroksen jälkeen</value>
+  </data>
+  <data name="massStartLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 13</value>
+  </data>
+  <data name="massStartLabel.Text" xml:space="preserve">
+    <value>Simuloi &amp;yhteislähtö</value>
+  </data>
+  <data name="uiInformation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 55</value>
   </data>
   <data name="uiInformation.Text" xml:space="preserve">
     <value>Lisää QuickRoute -tiedostot, jotka sisältävät halutut reitit. Ensimmäisen tiedoston kartta asetetaan taustakartaksi. Voit lisätä QRT- tai JPEG-tiedostoja, jotka ovat peräisin QuickRoute 2.3:sta tai uudemmasta versiosta.</value>
   </data>
-  <data name="replayRestartAfterEachLapLabel.Text" xml:space="preserve">
-    <value>Aloita uudelleen &amp;jokaisen kierroksen jälkeen</value>
+  <data name="includeRoutes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 17</value>
+  </data>
+  <data name="includeRoutes.Text" xml:space="preserve">
+    <value>Vie &amp;reitit</value>
+  </data>
+  <data name="includeReplay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 17</value>
+  </data>
+  <data name="includeReplay.Text" xml:space="preserve">
+    <value>Vie &amp;uusinnat</value>
+  </data>
+  <data name="replayGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>485, 177</value>
+  </data>
+  <data name="replayGroupBox.Text" xml:space="preserve">
+    <value>Uusinta</value>
+  </data>
+  <data name="routesGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>486, 53</value>
+  </data>
+  <data name="routesGroupBox.Text" xml:space="preserve">
+    <value>Reitit</value>
+  </data>
+  <data name="fileSelector.Size" type="System.Drawing.Size, System.Drawing">
+    <value>486, 139</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>509, 515</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>517, 500</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Avaa useampi QuickRoute -tiedosto Google Earthissa</value>
   </data>
 </root>

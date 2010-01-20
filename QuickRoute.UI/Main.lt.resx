@@ -561,8 +561,8 @@
   <data name="routeLineWidthLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALDAAA
-        CwwBP0AiyAAAAL1JREFUOE+NU9sNwzAIZI7OU+Uvs3SNTpm/zOHmEOdiAo4jIUfgO15naa1J/ODL7P2R
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALCwAA
+        CwsBbQSEtwAAAL1JREFUOE+NU9sNwzAIZI7OU+Uvs3SNTpm/zOHmEOdiAo4jIUfgO15naa1J/ODL7P2R
         9j0Q+sf14goBwSDwJGmmmD2CPQmSo4TtqWyC4gmCzUh2a6f3WGUmCeJsfzeSEyeIVsB9fvajYNgq2C9A
         gbSqX/hBPqxRp+j3KvK6XGdGEsFDC08kGbgksECvpAJPCRzJMJ+oF11jJSLqgivO7t3eQTJUVMAVq9hu
         W5g9JgrrOim2QfZpBROnyt5X8APmCAFYpeIP4QAAAABJRU5ErkJggg==
@@ -628,8 +628,8 @@
   <data name="smoothingIntervalLengthLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALDAAA
-        CwwBP0AiyAAAAiRJREFUOE9j/P//PwNFwMHhPwMROAqopgKbOmI0swA13gXiL0DMBTPEzvE/gy0QE2OA
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALCwAA
+        CwsBbQSEtwAAAiRJREFUOE9j/P//PwNFwMHhPwMROAqopgKbOmI0swA13gXiL0DMBTPEzvE/gy0QE2OA
         i6Xz/+9Axe+Bmi1ABoA0+1m9ZAi2eIjVAGmgooP2Dv8NrZ3+M5i5/D9Qqr16UrDFg5NWzv/THIEGAMUY
         mtSmMZRor2FgACpEwUDbak1c/v93cPgXGmN6RqBXsenPSwaGL2c5lf/7Wj9rM3D7z2ADNPgoty5Dge5m
         BgYXux9w7ODwg7FYe+3+VeKR/3fz2+5/zcBwDIhv3GNktrjILjf/JJf6lSUSoQxbBV0ZXgCjLt3gIAPD
@@ -650,8 +650,8 @@
   <data name="circleTimeRadiusLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALDAAA
-        CwwBP0AiyAAAAVVJREFUOE+Nkq9LBEEUx88fGOSiYhFcMZ5BgxaDl00mEQweFgVBELGJXhDEpoJgsSgG
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALCwAA
+        CwsBbQSEtwAAAVVJREFUOE+Nkq9LBEEUx88fGOSiYhFcMZ5BgxaDl00mEQweFgVBELGJXhDEpoJgsSgG
         QeQQDLYFg1Wwq+HAYvAfkPXzPd8cz7k9uYUPb/bNvM+8ndmu90LLM01mDsbhG+rwBCl8htUjWfY7lMAY
         IB7CA9RgH3bh0nJ3xKWwPkMgQvEQE9e2cIFYdOJuxpOQQgY7mvOCPhIHcA8zrtB3N0j+xQR1YuIFU7bz
         YpvihPyrFW8Tb+DEC6okbqO2w+4qfrPiZdtgVRt6gQ7pOGf3MXIfVrzi5kuMT71Ap76VIxgm9whrfi4U
@@ -1562,5 +1562,17 @@
         AAAAAAAAAAAADgAAACgAAAA4AAAAQAAAADwAAAAwAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAA/4MAAP+B
         AAD8AQAA8AMAAOAHAADAAwAAgAMAAIABAACHwQBEh8EbiIfBmcCDg9fwgQPm/8AD5v/gB+b/8B/m/w==
 </value>
+  </data>
+  <data name="smoothingIntervalLengthLabel.ToolTipText" xml:space="preserve">
+    <value>Švelninimo intervalo ilgis</value>
+  </data>
+  <data name="smoothingIntervalLength.ToolTipText" xml:space="preserve">
+    <value>Švelninimo intervalo ilgis</value>
+  </data>
+  <data name="circleTimeRadiusLabel.ToolTipText" xml:space="preserve">
+    <value>Kontrolinio punkto apskritimo spindulys</value>
+  </data>
+  <data name="circleTimeRadius.ToolTipText" xml:space="preserve">
+    <value>Kontrolinio punkto apskritimo spindulys</value>
   </data>
 </root>

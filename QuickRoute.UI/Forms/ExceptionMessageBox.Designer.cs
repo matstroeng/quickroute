@@ -39,38 +39,60 @@
       // 
       // stackTrace
       // 
+      this.stackTrace.AccessibleDescription = null;
+      this.stackTrace.AccessibleName = null;
       resources.ApplyResources(this.stackTrace, "stackTrace");
+      this.stackTrace.BackgroundImage = null;
+      this.stackTrace.Font = null;
       this.stackTrace.Name = "stackTrace";
       this.stackTrace.ReadOnly = true;
       // 
       // showStackTrace
       // 
+      this.showStackTrace.AccessibleDescription = null;
+      this.showStackTrace.AccessibleName = null;
       resources.ApplyResources(this.showStackTrace, "showStackTrace");
+      this.showStackTrace.BackgroundImage = null;
+      this.showStackTrace.Font = null;
       this.showStackTrace.Name = "showStackTrace";
       this.showStackTrace.UseVisualStyleBackColor = true;
       this.showStackTrace.Click += new System.EventHandler(this.showStackTrace_Click);
       // 
       // ok
       // 
+      this.ok.AccessibleDescription = null;
+      this.ok.AccessibleName = null;
       resources.ApplyResources(this.ok, "ok");
+      this.ok.BackgroundImage = null;
       this.ok.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+      this.ok.Font = null;
       this.ok.Name = "ok";
       this.ok.UseVisualStyleBackColor = true;
       this.ok.Click += new System.EventHandler(this.ok_Click);
       // 
       // errorIcon
       // 
+      this.errorIcon.AccessibleDescription = null;
+      this.errorIcon.AccessibleName = null;
       resources.ApplyResources(this.errorIcon, "errorIcon");
+      this.errorIcon.Font = null;
       this.errorIcon.Name = "errorIcon";
       // 
       // errorMessage
       // 
+      this.errorMessage.AccessibleDescription = null;
+      this.errorMessage.AccessibleName = null;
       resources.ApplyResources(this.errorMessage, "errorMessage");
+      this.errorMessage.Font = null;
       this.errorMessage.Name = "errorMessage";
       // 
       // hideStackTrace
       // 
+      this.hideStackTrace.AccessibleDescription = null;
+      this.hideStackTrace.AccessibleName = null;
       resources.ApplyResources(this.hideStackTrace, "hideStackTrace");
+      this.hideStackTrace.BackgroundImage = null;
+      this.hideStackTrace.Font = null;
       this.hideStackTrace.Name = "hideStackTrace";
       this.hideStackTrace.UseVisualStyleBackColor = true;
       this.hideStackTrace.Click += new System.EventHandler(this.hideStackTrace_Click);
@@ -78,8 +100,11 @@
       // ExceptionMessageBox
       // 
       this.AcceptButton = this.ok;
+      this.AccessibleDescription = null;
+      this.AccessibleName = null;
       resources.ApplyResources(this, "$this");
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.BackgroundImage = null;
       this.CancelButton = this.ok;
       this.Controls.Add(this.hideStackTrace);
       this.Controls.Add(this.errorMessage);
@@ -87,6 +112,8 @@
       this.Controls.Add(this.ok);
       this.Controls.Add(this.showStackTrace);
       this.Controls.Add(this.stackTrace);
+      this.Font = null;
+      this.Icon = null;
       this.MaximizeBox = false;
       this.MinimizeBox = false;
       this.Name = "ExceptionMessageBox";

@@ -117,31 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="runnerLabel.Text" xml:space="preserve">
-    <value>&amp;Kilpailija</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="eventLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
   </data>
-  <data name="search.Text" xml:space="preserve">
-    <value>&amp;Hae</value>
+  <data name="eventLabel.Text" xml:space="preserve">
+    <value>Kilpailu</value>
   </data>
-  <data name="uiInformation.Text" xml:space="preserve">
-    <value>Voit lisätä väliaikasi QuickRouteen automaattisesti, jos kilpailu löytyy WinSplits -tietokannasta. Valitse WinSplits -kilpailu, sarja, kilpailija ja klikkaa OK.</value>
-  </data>
-  <data name="startDateLabel.Text" xml:space="preserve">
-    <value>&amp;Alkupäivämäärä</value>
+  <data name="classLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
   </data>
   <data name="classLabel.Text" xml:space="preserve">
     <value>&amp;Sarja</value>
   </data>
-  <data name="endDateLabel.Text" xml:space="preserve">
-    <value>&amp;Loppupäivämäärä</value>
+  <data name="runnerLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 13</value>
+  </data>
+  <data name="runnerLabel.Text" xml:space="preserve">
+    <value>&amp;Kilpailija</value>
   </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Peruuta</value>
   </data>
+  <data name="startDateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 13</value>
+  </data>
+  <data name="startDateLabel.Text" xml:space="preserve">
+    <value>&amp;Alkupäivämäärä</value>
+  </data>
+  <data name="endDateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 13</value>
+  </data>
+  <data name="endDateLabel.Text" xml:space="preserve">
+    <value>&amp;Loppupäivämäärä</value>
+  </data>
+  <data name="uiInformation.Text" xml:space="preserve">
+    <value>Voit lisätä väliaikasi QuickRouteen automaattisesti, jos kilpailu löytyy WinSplits -tietokannasta. Valitse WinSplits -kilpailu, sarja, kilpailija ja klikkaa OK.</value>
+  </data>
+  <data name="search.Text" xml:space="preserve">
+    <value>&amp;Hae</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Lisää väliajat Winsplitsistä</value>
-  </data>
-  <data name="eventLabel.Text" xml:space="preserve">
-    <value>Kilpailu</value>
   </data>
 </root>

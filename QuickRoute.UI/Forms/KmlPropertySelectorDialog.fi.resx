@@ -117,26 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="replayFrame.Text" xml:space="preserve">
-    <value>Uusinta (replay)</value>
+  <data name="cancel.Text" xml:space="preserve">
+    <value>Peruuta</value>
   </data>
-  <data name="adaptRouteToMapImage.Text" xml:space="preserve">
-    <value>Kohdista &amp;reittiviiva karttakuvaan</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="adaptReplayToMapImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 17</value>
   </data>
-  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
-    <value>Aika&amp;intervalli sekunteina</value>
+  <data name="adaptReplayToMapImage.Text" xml:space="preserve">
+    <value>Kohdista &amp;reittiviivat karttakuvaan</value>
   </data>
-  <data name="routeFrame.Text" xml:space="preserve">
-    <value>Reitti</value>
+  <data name="replayTailVisible.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 17</value>
   </data>
-  <data name="mapFrame.Text" xml:space="preserve">
-    <value>Kartta</value>
+  <data name="replayTailVisible.Text" xml:space="preserve">
+    <value>Näytä &amp;häntä, kesto sekunteina</value>
   </data>
   <data name="replayTailDuration.Items7" xml:space="preserve">
     <value>Ääretön</value>
   </data>
-  <data name="includeMap.Text" xml:space="preserve">
-    <value>Vie &amp;kartta</value>
+  <data name="replayTailDuration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 3</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
+    <value>Aika&amp;intervalli sekunteina</value>
+  </data>
+  <data name="replayMarkerStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
   </data>
   <data name="replayMarkerStyleLabel.Text" xml:space="preserve">
     <value>Positio&amp;merkinnän tyyli</value>
@@ -144,37 +151,55 @@
   <data name="replayMarkerStyle.Items" xml:space="preserve">
     <value>Yksivärinen</value>
   </data>
-  <data name="routeLineStyle.Items" xml:space="preserve">
-    <value>Upotettu karttaan, värikoodattu</value>
+  <data name="replayMarkerStyle.Items1" xml:space="preserve">
+    <value>Värikoodattu</value>
+  </data>
+  <data name="includeReplay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 17</value>
   </data>
   <data name="includeReplay.Text" xml:space="preserve">
     <value>Vie &amp;uusinta</value>
   </data>
+  <data name="replayFrame.Text" xml:space="preserve">
+    <value>Uusinta (replay)</value>
+  </data>
+  <data name="routeLineStyle.Items" xml:space="preserve">
+    <value>Upotettu karttaan, värikoodattu</value>
+  </data>
+  <data name="routeLineStyle.Items1" xml:space="preserve">
+    <value>Erillinen reittiviiva, yksivärinen</value>
+  </data>
   <data name="routeLineStyle.Items2" xml:space="preserve">
     <value>Erillinen reittiviiva, värikoodattu</value>
   </data>
-  <data name="routeLineStyleLabel.Text" xml:space="preserve">
-    <value>Reittiviivan &amp;tyyli</value>
-  </data>
-  <data name="replayMarkerStyle.Items1" xml:space="preserve">
-    <value>Värikoodattu</value>
-  </data>
-  <data name="adaptReplayToMapImage.Text" xml:space="preserve">
-    <value>Kohdista &amp;reittiviivat karttakuvaan</value>
+  <data name="includeRoute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 17</value>
   </data>
   <data name="includeRoute.Text" xml:space="preserve">
     <value>Vie &amp;reitti</value>
   </data>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Peruuta</value>
+  <data name="includeMap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 17</value>
   </data>
-  <data name="replayTailVisible.Text" xml:space="preserve">
-    <value>Näytä &amp;häntä, kesto sekunteina</value>
+  <data name="includeMap.Text" xml:space="preserve">
+    <value>Vie &amp;kartta</value>
+  </data>
+  <data name="mapFrame.Text" xml:space="preserve">
+    <value>Kartta</value>
+  </data>
+  <data name="routeLineStyleLabel.Text" xml:space="preserve">
+    <value>Reittiviivan &amp;tyyli</value>
+  </data>
+  <data name="adaptRouteToMapImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 17</value>
+  </data>
+  <data name="adaptRouteToMapImage.Text" xml:space="preserve">
+    <value>Kohdista &amp;reittiviiva karttakuvaan</value>
+  </data>
+  <data name="routeFrame.Text" xml:space="preserve">
+    <value>Reitti</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>KML -ominaisuudet</value>
-  </data>
-  <data name="routeLineStyle.Items1" xml:space="preserve">
-    <value>Erillinen reittiviiva, yksivärinen</value>
   </data>
 </root>

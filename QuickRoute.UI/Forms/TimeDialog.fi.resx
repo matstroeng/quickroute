@@ -120,6 +120,10 @@
   <data name="cancel.Text" xml:space="preserve">
     <value>Peruuta</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="timeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
   <data name="timeLabel.Text" xml:space="preserve">
     <value>&amp;Aloitusaika</value>
   </data>

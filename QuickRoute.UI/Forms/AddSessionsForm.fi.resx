@@ -117,31 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="routeFromFile.Text" xml:space="preserve">
-    <value>&amp;Tiedostosta</value>
+  <data name="cancel.Text" xml:space="preserve">
+    <value>Peruuta</value>
   </data>
-  <data name="addRouteGroup.Text" xml:space="preserve">
-    <value>Lisää reitti</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="routeFromGpsDevice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 17</value>
   </data>
   <data name="routeFromGpsDevice.Text" xml:space="preserve">
     <value>&amp;GPS laitteesta:</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Lisää reitit</value>
+  <data name="routeFromFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 17</value>
   </data>
-  <data name="addSessionButton.Text" xml:space="preserve">
-    <value>&amp;Lisää reitti</value>
+  <data name="routeFromFile.Text" xml:space="preserve">
+    <value>&amp;Tiedostosta</value>
   </data>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Peruuta</value>
-  </data>
-  <data name="routeFileNameBrowse.Text" xml:space="preserve">
-    <value>&amp;Selaa...</value>
+  <data name="routeFileFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
   </data>
   <data name="routeFileFormatLabel.Text" xml:space="preserve">
     <value>Tiedosto&amp;formaatti</value>
   </data>
+  <data name="routeFileNameBrowse.Text" xml:space="preserve">
+    <value>&amp;Selaa...</value>
+  </data>
+  <data name="addSessionButton.Text" xml:space="preserve">
+    <value>&amp;Lisää reitti</value>
+  </data>
+  <data name="addRouteGroup.Text" xml:space="preserve">
+    <value>Lisää reitti</value>
+  </data>
   <data name="NameColumn.HeaderText" xml:space="preserve">
     <value>Nimi</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Lisää reitit</value>
   </data>
 </root>

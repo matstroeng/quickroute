@@ -35,14 +35,22 @@
       // 
       // uiCultureDropdown
       // 
+      this.uiCultureDropdown.AccessibleDescription = null;
+      this.uiCultureDropdown.AccessibleName = null;
       resources.ApplyResources(this.uiCultureDropdown, "uiCultureDropdown");
+      this.uiCultureDropdown.BackgroundImage = null;
       this.uiCultureDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+      this.uiCultureDropdown.Font = null;
       this.uiCultureDropdown.FormattingEnabled = true;
       this.uiCultureDropdown.Name = "uiCultureDropdown";
       // 
       // ok
       // 
+      this.ok.AccessibleDescription = null;
+      this.ok.AccessibleName = null;
       resources.ApplyResources(this.ok, "ok");
+      this.ok.BackgroundImage = null;
+      this.ok.Font = null;
       this.ok.Name = "ok";
       this.ok.UseVisualStyleBackColor = true;
       this.ok.Click += new System.EventHandler(this.ok_Click);
@@ -50,10 +58,15 @@
       // SelectUICultureForm
       // 
       this.AcceptButton = this.ok;
+      this.AccessibleDescription = null;
+      this.AccessibleName = null;
       resources.ApplyResources(this, "$this");
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.BackgroundImage = null;
       this.Controls.Add(this.ok);
       this.Controls.Add(this.uiCultureDropdown);
+      this.Font = null;
+      this.Icon = null;
       this.MaximizeBox = false;
       this.MinimizeBox = false;
       this.Name = "SelectUICultureForm";

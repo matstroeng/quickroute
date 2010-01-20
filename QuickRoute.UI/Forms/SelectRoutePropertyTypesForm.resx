@@ -117,10 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="routePropertyTypeCheckboxList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 555</value>
-  </data>
   <data name="&gt;&gt;ok.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -130,6 +126,7 @@
   <data name="&gt;&gt;ok.Name" xml:space="preserve">
     <value>ok</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="moveUp.Location" type="System.Drawing.Point, System.Drawing">
     <value>256, 12</value>
   </data>
@@ -138,9 +135,6 @@
   </data>
   <data name="&gt;&gt;routePropertyTypeCheckboxList.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;moveUp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="moveUp.TabIndex" type="System.Int32, mscorlib">
@@ -152,11 +146,11 @@
   <data name="cancel.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="&gt;&gt;moveUp.Name" xml:space="preserve">
+    <value>moveUp</value>
+  </data>
   <data name="&gt;&gt;moveDown.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="routePropertyTypeCheckboxList.IntegralHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="moveDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -171,8 +165,14 @@
   <data name="routePropertyTypeCheckboxList.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="routePropertyTypeCheckboxList.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
+  </data>
+  <data name="moveDown.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;moveDown.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -183,20 +183,20 @@
   <data name="cancel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="cancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="routePropertyTypeCheckboxList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 555</value>
   </data>
   <data name="&gt;&gt;cancel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="moveDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 41</value>
+  <data name="routePropertyTypeCheckboxList.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="routePropertyTypeCheckboxList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="moveDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>256, 41</value>
   </data>
   <data name="moveUp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -228,8 +228,8 @@
   <data name="&gt;&gt;ok.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="moveDown.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="cancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="&gt;&gt;routePropertyTypeCheckboxList.Parent" xml:space="preserve">
     <value>$this</value>
@@ -243,8 +243,8 @@
   <data name="&gt;&gt;moveDown.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;moveUp.Name" xml:space="preserve">
-    <value>moveUp</value>
+  <data name="&gt;&gt;cancel.Name" xml:space="preserve">
+    <value>cancel</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
@@ -264,8 +264,8 @@
   <data name="&gt;&gt;cancel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;cancel.Name" xml:space="preserve">
-    <value>cancel</value>
+  <data name="&gt;&gt;moveUp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ok.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
