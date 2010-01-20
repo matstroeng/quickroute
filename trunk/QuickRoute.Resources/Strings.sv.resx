@@ -720,40 +720,40 @@
     <value>Longitud</value>
   </data>
   <data name="RoutePropertyName_CircleTimeBackward" xml:space="preserve">
-    <value>Cirkeltid (bakåt)</value>
+    <value>Tid sista biten innan aktuell position</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeBackward" xml:space="preserve">
-    <value>Cirkeltid (bakåt): {0}</value>
+    <value>Tid sista biten innan aktuell position: {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeForward" xml:space="preserve">
-    <value>Cirkeltid (framåt)</value>
+    <value>Tid första biten efter aktuell position</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeForward" xml:space="preserve">
-    <value>Cirkeltid (framåt): {0}</value>
+    <value>Tid första biten efter aktuell position: {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeAtStartOfSpan" xml:space="preserve">
-    <value>Cirkeltid vid sträckans start</value>
+    <value>Kontrollämningstid</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpan" xml:space="preserve">
-    <value>Cirkeltid vid sträckans start: {0}</value>
+    <value>Kontrollämningstid: {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeAtEndOfSpan" xml:space="preserve">
-    <value>Cirkeltid vid sträckans slut</value>
+    <value>Kontrolltagningstid</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpan" xml:space="preserve">
-    <value>Cirkeltid vid sträckans slut: {0}</value>
+    <value>Kontrolltagningstid: {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
-    <value>Summa cirkeltid vid sträckornas start</value>
+    <value>Summa kontrollämningstid</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
-    <value>Summa cirkeltid vid sträckornas start: {0}</value>
+    <value>Summa kontrollämningstid: {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
-    <value>Summa cirkeltid vid sträckornas slut</value>
+    <value>Summa kontrolltagningstid</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
-    <value>Summa cirkeltid vid sträckornas slut: {0}</value>
+    <value>Summa kontrolltagningstid: {0}</value>
   </data>
   <data name="DeleteLapX" xml:space="preserve">
     <value>Ta bort mellantid {0}</value>

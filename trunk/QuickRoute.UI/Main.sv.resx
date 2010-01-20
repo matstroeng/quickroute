@@ -598,10 +598,10 @@
 </value>
   </data>
   <data name="circleTimeRadiusLabel.ToolTipText" xml:space="preserve">
-    <value>Kontrollringsradie</value>
+    <value>Radie för kontrolltagningstid och kontrollämningstid</value>
   </data>
   <data name="circleTimeRadius.ToolTipText" xml:space="preserve">
-    <value>Kontrollringsradie</value>
+    <value>Radie för kontrolltagningstid och kontrollämningstid</value>
   </data>
   <data name="menuFileNew.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

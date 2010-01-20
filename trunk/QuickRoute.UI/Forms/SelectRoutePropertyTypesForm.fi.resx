@@ -117,11 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="moveUp.Text" xml:space="preserve">
-    <value>Siirry &amp;ylös</value>
-  </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Peruuta</value>
+  </data>
+  <data name="moveUp.Text" xml:space="preserve">
+    <value>Siirry &amp;ylös</value>
   </data>
   <data name="moveDown.Text" xml:space="preserve">
     <value>Siirry &amp;alas</value>

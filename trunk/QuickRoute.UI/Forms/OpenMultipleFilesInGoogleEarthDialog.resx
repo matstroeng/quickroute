@@ -150,6 +150,9 @@
   <data name="replayTailDuration.Items6" xml:space="preserve">
     <value>600</value>
   </data>
+  <data name="&gt;&gt;cancel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="replayTailDuration.Items" xml:space="preserve">
     <value>30</value>
   </data>
@@ -204,8 +207,8 @@
   <data name="&gt;&gt;routesGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="uiInformation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="uiInformation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="massStart.Location" type="System.Drawing.Point, System.Drawing">
     <value>150, 33</value>
@@ -288,9 +291,6 @@
   <data name="includeRoutes.Text" xml:space="preserve">
     <value>Include ro&amp;utes</value>
   </data>
-  <data name="&gt;&gt;replayRestartAfterEachLap.Name" xml:space="preserve">
-    <value>replayRestartAfterEachLap</value>
-  </data>
   <data name="&gt;&gt;cancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -303,11 +303,14 @@
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 47</value>
   </data>
-  <data name="&gt;&gt;replayGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;replayRestartAfterEachLap.Name" xml:space="preserve">
+    <value>replayRestartAfterEachLap</value>
   </data>
   <data name="massStartLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;replayGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;replayRestartAfterEachLap.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -387,6 +390,9 @@
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;replayTailDurationLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;replayTimeIntervalLabel.Name" xml:space="preserve">
     <value>replayTimeIntervalLabel</value>
   </data>
@@ -456,9 +462,6 @@
   <data name="replayTimeInterval.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="replayTailsVisible.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 79</value>
-  </data>
   <data name="&gt;&gt;includeRoutes.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -485,9 +488,6 @@
   </data>
   <data name="replayRestartAfterEachLap.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
-  </data>
-  <data name="&gt;&gt;ok.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="replayTailsVisibleLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -588,6 +588,9 @@
   <data name="&gt;&gt;replayGroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;massStart.Name" xml:space="preserve">
+    <value>massStart</value>
+  </data>
   <data name="replayTimeIntervalLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 3</value>
   </data>
@@ -612,8 +615,8 @@
   <data name="replayTailsVisible.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 14</value>
   </data>
-  <data name="&gt;&gt;massStart.Name" xml:space="preserve">
-    <value>massStart</value>
+  <data name="replayTailsVisible.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 79</value>
   </data>
   <data name="tableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
@@ -636,8 +639,8 @@
   <data name="includeRoutes.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;cancel.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;ok.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="massStartLabel.Text" xml:space="preserve">
     <value>Simulate &amp;mass start</value>
@@ -645,8 +648,8 @@
   <data name="uiInformation.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="&gt;&gt;replayTailDurationLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>438, 124</value>
   </data>
   <data name="&gt;&gt;replayTimeIntervalLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -702,9 +705,6 @@
   <data name="&gt;&gt;includeReplay.Name" xml:space="preserve">
     <value>includeReplay</value>
   </data>
-  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="replayRestartAfterEachLap" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="replayTailsVisible" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="replayTailDurationLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="replayTailDuration" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="replayTailsVisibleLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="replayRestartAfterEachLapLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="massStartLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="replayTimeIntervalLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="replayTimeInterval" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="massStart" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
   <data name="massStart.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -729,8 +729,11 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>492, 515</value>
   </data>
-  <data name="uiInformation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="replayRestartAfterEachLap" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="replayTailsVisible" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="replayTailDurationLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="replayTailDuration" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="replayTailsVisibleLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="replayRestartAfterEachLapLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="massStartLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="replayTimeIntervalLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="replayTimeInterval" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="massStart" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="uiInformation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Open multiple QuickRoute files in Google Earth</value>
@@ -771,9 +774,6 @@
   <data name="&gt;&gt;replayTailDurationLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="replayTimeInterval.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
   <data name="replayTailsVisibleLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 13</value>
   </data>
@@ -783,8 +783,8 @@
   <data name="&gt;&gt;ok.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>438, 124</value>
+  <data name="replayTimeInterval.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -120,13 +120,20 @@
   <data name="cancel.Text" xml:space="preserve">
     <value>Peruuta</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Vie reittidata</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="dataToInclude.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 13</value>
   </data>
   <data name="dataToInclude.Text" xml:space="preserve">
     <value>Sisällytettävä &amp;data:</value>
   </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 13</value>
+  </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Poiminta&amp;intervalli sekunteina:</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Vie reittidata</value>
   </data>
 </root>

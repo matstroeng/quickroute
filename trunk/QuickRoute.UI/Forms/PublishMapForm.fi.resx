@@ -120,58 +120,207 @@
   <data name="cancel.Text" xml:space="preserve">
     <value>Peruuta</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="date.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 154</value>
+  </data>
+  <data name="date.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 20</value>
+  </data>
+  <data name="commentLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
   <data name="commentLabel.Text" xml:space="preserve">
     <value>Komme&amp;ntti</value>
+  </data>
+  <data name="resultListUrlLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
   </data>
   <data name="resultListUrlLabel.Text" xml:space="preserve">
     <value>&amp;Linkki tuloslistaan</value>
   </data>
+  <data name="usernameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
   <data name="usernameLabel.Text" xml:space="preserve">
     <value>&amp;Käyttäjätunnus</value>
+  </data>
+  <data name="webServiceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 13</value>
   </data>
   <data name="webServiceLabel.Text" xml:space="preserve">
     <value>&amp;Webservice-osoite</value>
   </data>
+  <data name="webServiceURL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 3</value>
+  </data>
+  <data name="webServiceURL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 21</value>
+  </data>
+  <data name="username.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 30</value>
+  </data>
+  <data name="username.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 20</value>
+  </data>
+  <data name="passwordLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
   <data name="passwordLabel.Text" xml:space="preserve">
     <value>&amp;Salasana</value>
+  </data>
+  <data name="password.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 56</value>
+  </data>
+  <data name="password.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 20</value>
+  </data>
+  <data name="mapLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
   </data>
   <data name="mapLabel.Text" xml:space="preserve">
     <value>&amp;Kartta</value>
   </data>
+  <data name="map.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 127</value>
+  </data>
+  <data name="map.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 21</value>
+  </data>
+  <data name="dateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
   <data name="dateLabel.Text" xml:space="preserve">
     <value>&amp;Päivämäärä</value>
+  </data>
+  <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 13</value>
   </data>
   <data name="nameLabel.Text" xml:space="preserve">
     <value>&amp;Harjoituksen/kilpailun nimi</value>
   </data>
+  <data name="mapNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 13</value>
+  </data>
   <data name="mapNameLabel.Text" xml:space="preserve">
     <value>Kartan/alueen &amp;nimi</value>
+  </data>
+  <data name="organiserLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
   </data>
   <data name="organiserLabel.Text" xml:space="preserve">
     <value>&amp;Järjestäjä</value>
   </data>
+  <data name="countryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 13</value>
+  </data>
   <data name="countryLabel.Text" xml:space="preserve">
     <value>&amp;Maa</value>
+  </data>
+  <data name="disciplineLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
   </data>
   <data name="disciplineLabel.Text" xml:space="preserve">
     <value>Sa&amp;rja</value>
   </data>
+  <data name="relayLegLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
   <data name="relayLegLabel.Text" xml:space="preserve">
     <value>&amp;Viestiosuus</value>
+  </data>
+  <data name="name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 206</value>
+  </data>
+  <data name="name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 20</value>
+  </data>
+  <data name="mapName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 232</value>
+  </data>
+  <data name="mapName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 20</value>
+  </data>
+  <data name="organiser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 258</value>
+  </data>
+  <data name="organiser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 20</value>
+  </data>
+  <data name="country.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 284</value>
+  </data>
+  <data name="country.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 20</value>
+  </data>
+  <data name="type.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 310</value>
+  </data>
+  <data name="type.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 20</value>
+  </data>
+  <data name="relayLeg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 336</value>
+  </data>
+  <data name="relayLeg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 20</value>
+  </data>
+  <data name="resultListUrl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 362</value>
+  </data>
+  <data name="resultListUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 20</value>
+  </data>
+  <data name="comment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 388</value>
+  </data>
+  <data name="comment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 61</value>
+  </data>
+  <data name="imageFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 455</value>
+  </data>
+  <data name="imageFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 21</value>
+  </data>
+  <data name="imageFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
   </data>
   <data name="imageFormatLabel.Text" xml:space="preserve">
     <value>Kuva&amp;formaatti</value>
   </data>
+  <data name="category.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 180</value>
+  </data>
+  <data name="category.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 21</value>
+  </data>
+  <data name="categoryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
   <data name="categoryLabel.Text" xml:space="preserve">
     <value>Kate&amp;goria</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 82</value>
   </data>
   <data name="ConnectButton.Text" xml:space="preserve">
     <value>&amp;Yhdistä</value>
   </data>
+  <data name="SavePassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 17</value>
+  </data>
   <data name="SavePassword.Text" xml:space="preserve">
     <value>Muista s&amp;alasana</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="uiInformation.LinkArea" type="System.Windows.Forms.LinkArea, System.Windows.Forms">
+    <value>127, 22</value>
+  </data>
   <data name="uiInformation.Text" xml:space="preserve">
     <value>QuickRoute voi julkaista karttoja digitaaliseen suunnistuskartta-arkistoon. Löydät ohjeet oman arkiston pystyttämiseen sivulta www.matstroeng.se/doma. Webservice -osoite sinun arkistoosi on muotoa: http://www.sinundomain.com/sinunhakemisto/webservice.php.</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Julkaise kartta</value>
   </data>
 </root>

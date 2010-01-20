@@ -117,17 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Liukuvärieditori</value>
+  <data name="cancel.Text" xml:space="preserve">
+    <value>Peruuta</value>
+  </data>
+  <data name="availableGradients.Text" xml:space="preserve">
+    <value>Mahdolliset liukuvärit</value>
   </data>
   <data name="deleteGradient.Text" xml:space="preserve">
     <value>&amp;Poista likuväri</value>
-  </data>
-  <data name="gradientNameLabel.Text" xml:space="preserve">
-    <value>&amp;Nimi</value>
-  </data>
-  <data name="uiInformation.Text" xml:space="preserve">
-    <value>Klikkaa missä tahansa liukuvärjätyllä alueella lisätäksesi värimerkin. Tartu värimerkkiin siirtääksesi sen eri paikkaan. Kaksoisklikkaa värimerkkiä muuttaaksesi sen väriä. Klikkaa hiiren oikealla napilla poistaaksesi sen.</value>
   </data>
   <data name="addGradient.Text" xml:space="preserve">
     <value>&amp;Lisää liukuväri</value>
@@ -135,10 +132,17 @@
   <data name="gradientProperties.Text" xml:space="preserve">
     <value>Liukuvärin ominaisuudet</value>
   </data>
-  <data name="availableGradients.Text" xml:space="preserve">
-    <value>Mahdolliset liukuvärit</value>
+  <data name="uiInformation.Text" xml:space="preserve">
+    <value>Klikkaa missä tahansa liukuvärjätyllä alueella lisätäksesi värimerkin. Tartu värimerkkiin siirtääksesi sen eri paikkaan. Kaksoisklikkaa värimerkkiä muuttaaksesi sen väriä. Klikkaa hiiren oikealla napilla poistaaksesi sen.</value>
   </data>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Peruuta</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gradientNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 13</value>
+  </data>
+  <data name="gradientNameLabel.Text" xml:space="preserve">
+    <value>&amp;Nimi:</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Liukuvärieditori</value>
   </data>
 </root>

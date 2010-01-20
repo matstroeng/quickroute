@@ -721,19 +721,19 @@
     <value>Longitude</value>
   </data>
   <data name="RoutePropertyName_CircleTimeBackward" xml:space="preserve">
-    <value>Control approaching time</value>
+    <value>Current position approaching time</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeBackward" xml:space="preserve">
-    <value>Control approaching time: {0}</value>
+    <value>Current position approaching time: {0}</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyName_CircleTimeForward" xml:space="preserve">
-    <value>Control leaving time</value>
+    <value>Current position leaving time</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeForward" xml:space="preserve">
-    <value>Control leaving time: {0}</value>
+    <value>Current positionleaving time: {0}</value>
     <comment>Added 2009-11-17</comment>
   </data>
   <data name="RoutePropertyName_CircleTimeAtStartOfSpan" xml:space="preserve">
