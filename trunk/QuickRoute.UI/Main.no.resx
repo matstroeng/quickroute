@@ -339,4 +339,13 @@
   <data name="menuStrip.Text" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
+  <data name="routeLineWidthLabel.ToolTipText" xml:space="preserve">
+    <value>Rutestrekens bredde</value>
+  </data>
+  <data name="circleTimeRadiusLabel.ToolTipText" xml:space="preserve">
+    <value>Radius på sirkel for tid inn og ut av poster</value>
+  </data>
+  <data name="circleTimeRadius.ToolTipText" xml:space="preserve">
+    <value>Radius på sirkel for tid inn og ut av poster</value>
+  </data>
 </root>

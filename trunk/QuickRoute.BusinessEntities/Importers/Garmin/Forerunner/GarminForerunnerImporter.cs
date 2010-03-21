@@ -42,7 +42,12 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.Forerunner
       }
     }
 
-    #endregion
+      public void Refresh()
+      {
+          // do nothing
+      }
+
+      #endregion
 
     #region IRouteImporter Members
 

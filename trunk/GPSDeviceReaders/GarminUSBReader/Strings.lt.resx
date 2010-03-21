@@ -142,7 +142,7 @@
     <value>treniruotės</value>
   </data>
   <data name="Status" xml:space="preserve">
-    <value>Žingsnis {0} iš {1}: nuskaitoma {2}...</value>
+    <value>Žingsnis {0} iš {1}: {2}...</value>
   </data>
   <data name="Tracks" xml:space="preserve">
     <value>trasos</value>

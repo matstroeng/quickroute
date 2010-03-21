@@ -106,6 +106,8 @@
     <Compile Include="GlobalizedProperties\Attributes.cs" />
     <Compile Include="GlobalizedProperties\Descriptors.cs" />
     <Compile Include="ImageFilePropertySelectors.cs" />
+    <Compile Include="Importers\GlobalSat\GH615M\GlobalSatGH615MImporter.cs" />
+    <Compile Include="Importers\JJConnect\RegistratorSE\JJConnectRegistratorSEImporter.cs" />
     <Compile Include="Importers\Polar\PolarHRMImporter.cs" />
     <Compile Include="Importers\Navilock\NavilockImporter.cs" />
     <Compile Include="Importers\Polar\ProTrainer\PolarProTrainerImporter.cs" />
@@ -310,6 +312,14 @@
       <Project>{FFEC4820-9B6B-47E9-8594-B71A52081C1E}</Project>
       <Name>GarminUSBReader</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GPSDeviceReaders\GlobalSatGH615MReader\GlobalSatGH615MReader.csproj">
+      <Project>{81633CC3-9C5E-4C93-A9A6-876F6AE40883}</Project>
+      <Name>GlobalSatGH615MReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GPSDeviceReaders\JJConnectRegistratorSEReader\JJConnectRegistratorSEReader.csproj">
+      <Project>{E91D684B-2DD8-4C50-8111-1940BFB427EE}</Project>
+      <Name>JJConnectRegistratorSEReader</Name>
+    </ProjectReference>
     <ProjectReference Include="..\QuickRoute.Common\QuickRoute.Common.csproj">
       <Project>{7F93415F-ACEB-4B4F-8E6B-51D0B096F38E}</Project>
       <Name>QuickRoute.Common</Name>
@@ -318,10 +328,6 @@
       <Project>{2854A1FB-52F7-4197-A24E-E9977FD21563}</Project>
       <Name>QuickRoute.Resources</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Experimental\" />
-    <Folder Include="ExternalReferences\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.lt.resx" />
@@ -346,6 +352,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Importers\SessionSelector.fi.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Experimental\" />
+    <Folder Include="ExternalReferences\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

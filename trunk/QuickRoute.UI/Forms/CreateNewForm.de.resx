@@ -175,4 +175,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Neues Dokument</value>
   </data>
+  <data name="refreshButton.Text" xml:space="preserve">
+    <value>E&amp;rneuern</value>
+  </data>
 </root>

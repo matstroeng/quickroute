@@ -14,7 +14,6 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
             garminUSBReader.USBReadCompleted += _GarminUSB_USBReadCompleted;
             garminUSBReader.USBReadError += _GarminUSB_USBReadError;
             status.Text = "";
-            status.Text = "";
         }
 
         void _GarminUSB_USBReadError(Exception e)

@@ -392,13 +392,14 @@ namespace QuickRoute.UI.Forms
       routeFileFormatComboBox.Enabled = routeFromFile.Checked;
 
       routeGpsDevice.Enabled = routeFromGpsDevice.Checked;
+      refreshButton.Enabled = routeFromGpsDevice.Checked;
     }
 
     private bool SearchForGPSDevices()
     {
       routeGpsDevice.DataSource = null;
       routeGpsDevice.Items.Clear();
-      var devices = SupportedImportFormatManager.SearchForGPSDevices(supportedGPSDevices);
+      var devices = SupportedImportFormatManager.SearchForGPSDevices();
       bool devicesFound = (devices.Count > 0);
       if (!devicesFound)
       {
@@ -447,6 +448,18 @@ namespace QuickRoute.UI.Forms
         if (found) break;
       }
 
+    }
+
+    private void refreshButton_Click(object sender, EventArgs e)
+    {
+        using (var progressIndicator = new RefreshDevicesProgressIndicator())
+        {
+            routeGpsDevice.DataSource = null;
+            routeGpsDevice.Items.Clear();
+            SupportedImportFormatManager.StartRefreshGPSDevices();
+            progressIndicator.ShowDialog();
+            SearchForGPSDevices();
+        }
     }
   }
 }

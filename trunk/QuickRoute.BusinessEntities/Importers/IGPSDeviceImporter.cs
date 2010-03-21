@@ -6,5 +6,6 @@ namespace QuickRoute.BusinessEntities.Importers
   {
     bool IsConnected { get; }
     string DeviceName { get; }
+    void Refresh();
   }
 }

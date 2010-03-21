@@ -48,6 +48,7 @@ namespace QuickRoute.UI.Forms
       this.routeFileFormatComboBox = new System.Windows.Forms.ComboBox();
       this.routeFileNameBrowse = new System.Windows.Forms.Button();
       this.routeFileName = new System.Windows.Forms.ComboBox();
+      this.refreshButton = new System.Windows.Forms.Button();
       this.mapImageUrl = new System.Windows.Forms.TextBox();
       this.mapImageFromUrl = new System.Windows.Forms.RadioButton();
       this.personGroup = new System.Windows.Forms.GroupBox();
@@ -155,6 +156,7 @@ namespace QuickRoute.UI.Forms
       this.tableLayoutPanel1.Controls.Add(this.routeFileFormatComboBox, 1, 2);
       this.tableLayoutPanel1.Controls.Add(this.routeFileNameBrowse, 2, 1);
       this.tableLayoutPanel1.Controls.Add(this.routeFileName, 1, 1);
+      this.tableLayoutPanel1.Controls.Add(this.refreshButton, 2, 0);
       this.tableLayoutPanel1.Name = "tableLayoutPanel1";
       // 
       // routeFromGpsDevice
@@ -207,6 +209,13 @@ namespace QuickRoute.UI.Forms
       this.routeFileName.FormattingEnabled = true;
       this.routeFileName.Name = "routeFileName";
       this.routeFileName.TextChanged += new System.EventHandler(this.routeFileName_TextChanged);
+      // 
+      // refreshButton
+      // 
+      resources.ApplyResources(this.refreshButton, "refreshButton");
+      this.refreshButton.Name = "refreshButton";
+      this.refreshButton.UseVisualStyleBackColor = true;
+      this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
       // 
       // mapImageUrl
       // 
@@ -304,5 +313,6 @@ namespace QuickRoute.UI.Forms
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     private System.Windows.Forms.Label personNameLabel;
     private System.Windows.Forms.ComboBox persons;
+    private System.Windows.Forms.Button refreshButton;
   }
 }

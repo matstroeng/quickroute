@@ -383,7 +383,7 @@ Du kan laste det ned fra earth.google.com.</value>
     <value>Gpx (*.gpx)|*.gpx</value>
   </data>
   <data name="FileFilter_KmzFiles" xml:space="preserve">
-    <value>Kmz (*.kmz)|*.kmz</value>
+    <value>Kmz-filer (*.kmz)|*.kmz</value>
   </data>
   <data name="FileFilter_RouteDataFiles" xml:space="preserve">
     <value>Rute-datafiler (*.xml)|*.xml</value>
@@ -418,7 +418,7 @@ Du kan laste det ned fra earth.google.com.</value>
 {0}</value>
   </data>
   <data name="FileFilter_AllQuickRouteFiles" xml:space="preserve">
-    <value>AlleQuickRoute-filer (*.qrt; *.xml; *.jpg; *.jpeg)|*.qrt;*.xml;*.jpg;*.jpeg</value>
+    <value>Alle QuickRoute-filer (*.qrt; *.xml; *.jpg; *.jpeg)|*.qrt;*.xml;*.jpg;*.jpeg</value>
   </data>
   <data name="UnrecognizedFileFormat" xml:space="preserve">
     <value>Ukjent filformat for {0}.</value>
@@ -719,5 +719,47 @@ Du kan laste det ned fra earth.google.com.</value>
   </data>
   <data name="RoutePropertyName_Longitude" xml:space="preserve">
     <value>Lengdegrad</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeBackward" xml:space="preserve">
+    <value>Tid inn mot gjeldende plassering</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeBackward" xml:space="preserve">
+    <value>Tid inn mot gjeldende plassering: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeForward" xml:space="preserve">
+    <value>Tid ut fra gjeldende plassering</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeForward" xml:space="preserve">
+    <value>Tid ut fra gjeldende plassering: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtStartOfSpan" xml:space="preserve">
+    <value>Tid ut fra post</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpan" xml:space="preserve">
+    <value>Tid ut fra post: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtEndOfSpan" xml:space="preserve">
+    <value>Tid inn mot post</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpan" xml:space="preserve">
+    <value>Tid inn mot post: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
+    <value>Total tid ut fra poster</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
+    <value>Total tid ut fra poster: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
+    <value>Total tid inn mot poster</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
+    <value>Total tid inn mot poster: {0}</value>
+  </data>
+  <data name="DeleteLapX" xml:space="preserve">
+    <value>Slett strekk/runde {0}</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Skriv ut...</value>
   </data>
 </root>

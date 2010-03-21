@@ -162,4 +162,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Nouveau Document</value>
   </data>
+  <data name="refreshButton.Text" xml:space="preserve">
+    <value>Ré&amp;actualiser</value>
+  </data>
 </root>
