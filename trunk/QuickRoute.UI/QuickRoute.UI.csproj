@@ -253,12 +253,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Forms\AboutBox.de.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AboutBox.fr.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AboutBox.no.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AboutBox.resx">
       <SubType>Designer</SubType>
@@ -274,12 +277,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddLapsFromWinSplits.de.resx">
       <DependentUpon>AddLapsFromWinSplits.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddLapsFromWinSplits.fr.resx">
       <DependentUpon>AddLapsFromWinSplits.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddLapsFromWinSplits.no.resx">
       <DependentUpon>AddLapsFromWinSplits.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddLapsFromWinSplits.resx">
       <DependentUpon>AddLapsFromWinSplits.cs</DependentUpon>
@@ -287,6 +293,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddLapsFromWinSplits.ru.resx">
       <DependentUpon>AddLapsFromWinSplits.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddLapsFromWinSplits.sv.resx">
       <DependentUpon>AddLapsFromWinSplits.cs</DependentUpon>
@@ -294,15 +301,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddSessionsForm.de.resx">
       <DependentUpon>AddSessionsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddSessionsForm.fr.resx">
       <DependentUpon>AddSessionsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddSessionsForm.no.resx">
       <DependentUpon>AddSessionsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddSessionsForm.ru.resx">
       <DependentUpon>AddSessionsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ApplicationSettingsEditor.resx">
       <DependentUpon>ApplicationSettingsEditor.cs</DependentUpon>
@@ -310,15 +321,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorChooser.de.resx">
       <DependentUpon>ColorChooser.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorChooser.fr.resx">
       <DependentUpon>ColorChooser.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorChooser.no.resx">
       <DependentUpon>ColorChooser.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorChooser.ru.resx">
       <DependentUpon>ColorChooser.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorChooser.sv.resx">
       <SubType>Designer</SubType>
@@ -326,12 +341,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorRangeIntervalEditor.de.resx">
       <DependentUpon>ColorRangeIntervalEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorRangeIntervalEditor.fr.resx">
       <DependentUpon>ColorRangeIntervalEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorRangeIntervalEditor.no.resx">
       <DependentUpon>ColorRangeIntervalEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorRangeIntervalEditor.resx">
       <SubType>Designer</SubType>
@@ -339,6 +357,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorRangeIntervalEditor.ru.resx">
       <DependentUpon>ColorRangeIntervalEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorRangeIntervalEditor.sv.resx">
       <DependentUpon>ColorRangeIntervalEditor.cs</DependentUpon>
@@ -354,30 +373,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateNewForm.de.resx">
       <DependentUpon>CreateNewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateNewForm.fr.resx">
       <DependentUpon>CreateNewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateNewForm.no.resx">
       <DependentUpon>CreateNewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateNewForm.ru.resx">
       <DependentUpon>CreateNewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExceptionMessageBox.resx">
       <DependentUpon>ExceptionMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExceptionMessageBox.sv.resx">
       <DependentUpon>ExceptionMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportRouteDataDialog.de.resx">
       <DependentUpon>ExportRouteDataDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportRouteDataDialog.fr.resx">
       <DependentUpon>ExportRouteDataDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportRouteDataDialog.no.resx">
       <DependentUpon>ExportRouteDataDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportRouteDataDialog.resx">
       <DependentUpon>ExportRouteDataDialog.cs</DependentUpon>
@@ -385,6 +413,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportRouteDataDialog.ru.resx">
       <DependentUpon>ExportRouteDataDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportRouteDataDialog.sv.resx">
       <DependentUpon>ExportRouteDataDialog.cs</DependentUpon>
@@ -396,48 +425,63 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GradientEditor.de.resx">
       <DependentUpon>GradientEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GradientEditor.fr.resx">
       <DependentUpon>GradientEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GradientEditor.no.resx">
       <DependentUpon>GradientEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GradientEditor.ru.resx">
       <DependentUpon>GradientEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KmlPropertySelectorDialog.de.resx">
       <DependentUpon>KmlPropertySelectorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KmlPropertySelectorDialog.fr.resx">
       <DependentUpon>KmlPropertySelectorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KmlPropertySelectorDialog.no.resx">
       <DependentUpon>KmlPropertySelectorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KmlPropertySelectorDialog.ru.resx">
       <DependentUpon>KmlPropertySelectorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewVersionDialog.de.resx">
       <DependentUpon>NewVersionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewVersionDialog.fr.resx">
       <DependentUpon>NewVersionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewVersionDialog.no.resx">
       <DependentUpon>NewVersionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewVersionDialog.ru.resx">
       <DependentUpon>NewVersionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OpenMultipleFilesInGoogleEarthDialog.de.resx">
       <DependentUpon>OpenMultipleFilesInGoogleEarthDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OpenMultipleFilesInGoogleEarthDialog.fr.resx">
       <DependentUpon>OpenMultipleFilesInGoogleEarthDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OpenMultipleFilesInGoogleEarthDialog.no.resx">
       <DependentUpon>OpenMultipleFilesInGoogleEarthDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OpenMultipleFilesInGoogleEarthDialog.resx">
       <DependentUpon>OpenMultipleFilesInGoogleEarthDialog.cs</DependentUpon>
@@ -445,6 +489,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OpenMultipleFilesInGoogleEarthDialog.ru.resx">
       <DependentUpon>OpenMultipleFilesInGoogleEarthDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OpenMultipleFilesInGoogleEarthDialog.sv.resx">
       <DependentUpon>OpenMultipleFilesInGoogleEarthDialog.cs</DependentUpon>
@@ -472,54 +517,71 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PublishMapForm.de.resx">
       <DependentUpon>PublishMapForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PublishMapForm.fr.resx">
       <DependentUpon>PublishMapForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PublishMapForm.no.resx">
       <DependentUpon>PublishMapForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PublishMapForm.ru.resx">
       <DependentUpon>PublishMapForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectRoutePropertyTypesForm.de.resx">
       <DependentUpon>SelectRoutePropertyTypesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectRoutePropertyTypesForm.fr.resx">
       <DependentUpon>SelectRoutePropertyTypesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectRoutePropertyTypesForm.no.resx">
       <DependentUpon>SelectRoutePropertyTypesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectRoutePropertyTypesForm.resx">
       <DependentUpon>SelectRoutePropertyTypesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectRoutePropertyTypesForm.ru.resx">
       <DependentUpon>SelectRoutePropertyTypesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectRoutePropertyTypesForm.sv.resx">
       <DependentUpon>SelectRoutePropertyTypesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectUICultureForm.de.resx">
       <DependentUpon>SelectUICultureForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectUICultureForm.fr.resx">
       <DependentUpon>SelectUICultureForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectUICultureForm.no.resx">
       <DependentUpon>SelectUICultureForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectUICultureForm.ru.resx">
       <DependentUpon>SelectUICultureForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TimeDialog.de.resx">
       <DependentUpon>TimeDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TimeDialog.fr.resx">
       <DependentUpon>TimeDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TimeDialog.no.resx">
       <DependentUpon>TimeDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TimeDialog.resx">
       <DependentUpon>TimeDialog.cs</DependentUpon>
@@ -527,6 +589,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TimeDialog.ru.resx">
       <DependentUpon>TimeDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TimeDialog.sv.resx">
       <DependentUpon>TimeDialog.cs</DependentUpon>
@@ -534,9 +597,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewVersionDialog.resx">
       <DependentUpon>NewVersionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewVersionDialog.sv.resx">
       <DependentUpon>NewVersionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PublishMapForm.resx">
       <DependentUpon>PublishMapForm.cs</DependentUpon>
@@ -560,12 +625,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.de.resx">
       <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.fr.resx">
       <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.no.resx">
       <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -573,6 +641,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.ru.resx">
       <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.sv.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -684,121 +753,193 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\AboutBox.lt.resx" />
+    <EmbeddedResource Include="Forms\AboutBox.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.lt.resx" />
+    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\AddSessionsForm.lt.resx" />
+    <EmbeddedResource Include="Forms\AddSessionsForm.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ColorChooser.lt.resx" />
+    <EmbeddedResource Include="Forms\ColorChooser.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ColorRangeIntervalEditor.lt.resx" />
+    <EmbeddedResource Include="Forms\ColorRangeIntervalEditor.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\CreateNewForm.lt.resx" />
+    <EmbeddedResource Include="Forms\CreateNewForm.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ExportRouteDataDialog.lt.resx" />
+    <EmbeddedResource Include="Forms\ExportRouteDataDialog.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\GradientEditor.lt.resx" />
+    <EmbeddedResource Include="Forms\GradientEditor.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\KmlPropertySelectorDialog.lt.resx" />
+    <EmbeddedResource Include="Forms\KmlPropertySelectorDialog.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\NewVersionDialog.lt.resx" />
+    <EmbeddedResource Include="Forms\NewVersionDialog.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\OpenMultipleFilesInGoogleEarthDialog.lt.resx" />
+    <EmbeddedResource Include="Forms\OpenMultipleFilesInGoogleEarthDialog.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\PublishMapForm.lt.resx" />
+    <EmbeddedResource Include="Forms\PublishMapForm.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\SelectRoutePropertyTypesForm.lt.resx" />
+    <EmbeddedResource Include="Forms\SelectRoutePropertyTypesForm.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\SelectUICultureForm.lt.resx" />
+    <EmbeddedResource Include="Forms\SelectUICultureForm.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\TimeDialog.lt.resx" />
+    <EmbeddedResource Include="Forms\TimeDialog.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Main.lt.resx" />
+    <EmbeddedResource Include="Main.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\AboutBox.fi.resx" />
+    <EmbeddedResource Include="Forms\AboutBox.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.fi.resx" />
+    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\AddSessionsForm.fi.resx" />
+    <EmbeddedResource Include="Forms\AddSessionsForm.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ColorChooser.fi.resx" />
+    <EmbeddedResource Include="Forms\ColorChooser.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ColorRangeIntervalEditor.fi.resx" />
+    <EmbeddedResource Include="Forms\ColorRangeIntervalEditor.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\CreateNewForm.fi.resx" />
+    <EmbeddedResource Include="Forms\CreateNewForm.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ExceptionMessageBox.fi.resx" />
+    <EmbeddedResource Include="Forms\ExceptionMessageBox.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ExportRouteDataDialog.fi.resx" />
+    <EmbeddedResource Include="Forms\ExportRouteDataDialog.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\GradientEditor.fi.resx" />
+    <EmbeddedResource Include="Forms\GradientEditor.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\KmlPropertySelectorDialog.fi.resx" />
+    <EmbeddedResource Include="Forms\KmlPropertySelectorDialog.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\NewVersionDialog.fi.resx" />
+    <EmbeddedResource Include="Forms\NewVersionDialog.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\OpenMultipleFilesInGoogleEarthDialog.fi.resx" />
+    <EmbeddedResource Include="Forms\OpenMultipleFilesInGoogleEarthDialog.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\PublishMapForm.fi.resx" />
+    <EmbeddedResource Include="Forms\PublishMapForm.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\SelectRoutePropertyTypesForm.fi.resx" />
+    <EmbeddedResource Include="Forms\SelectRoutePropertyTypesForm.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\SelectUICultureForm.fi.resx" />
+    <EmbeddedResource Include="Forms\SelectUICultureForm.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\TimeDialog.fi.resx" />
+    <EmbeddedResource Include="Forms\TimeDialog.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.de.resx">
       <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.fr.resx">
       <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.no.resx">
       <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.resx">
       <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.ru.resx">
       <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.sv.resx">
       <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.fi.resx" />
+    <EmbeddedResource Include="Main.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ExternalReferences\" />

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{E91D684B-2DD8-4C50-8111-1940BFB427EE}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -77,15 +77,19 @@
   <ItemGroup>
     <EmbeddedResource Include="JJConnectRegistratorSETrackSelector.resx">
       <DependentUpon>JJConnectRegistratorSETrackSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressIndicator.de.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressIndicator.fr.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressIndicator.no.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressIndicator.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
@@ -93,6 +97,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressIndicator.ru.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressIndicator.sv.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>

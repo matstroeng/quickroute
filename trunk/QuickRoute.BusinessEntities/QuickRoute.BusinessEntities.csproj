@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -228,12 +228,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.de.resx">
       <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.fr.resx">
       <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.no.resx">
       <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.resx">
       <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
@@ -241,6 +244,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.ru.resx">
       <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.sv.resx">
       <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
@@ -248,12 +252,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportImageSizeSelector.de.resx">
       <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportImageSizeSelector.fr.resx">
       <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportImageSizeSelector.no.resx">
       <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportImageSizeSelector.resx">
       <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
@@ -261,6 +268,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportImageSizeSelector.ru.resx">
       <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportImageSizeSelector.sv.resx">
       <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
@@ -268,12 +276,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.de.resx">
       <DependentUpon>PersonSessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.fr.resx">
       <DependentUpon>PersonSessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.no.resx">
       <DependentUpon>PersonSessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.resx">
       <DependentUpon>PersonSessionSelector.cs</DependentUpon>
@@ -281,6 +292,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.ru.resx">
       <DependentUpon>PersonSessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.sv.resx">
       <DependentUpon>PersonSessionSelector.cs</DependentUpon>
@@ -288,12 +300,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Importers\SessionSelector.de.resx">
       <DependentUpon>SessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Importers\SessionSelector.fr.resx">
       <DependentUpon>SessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Importers\SessionSelector.no.resx">
       <DependentUpon>SessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Importers\SessionSelector.resx">
       <DependentUpon>SessionSelector.cs</DependentUpon>
@@ -301,6 +316,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Importers\SessionSelector.ru.resx">
       <DependentUpon>SessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Importers\SessionSelector.sv.resx">
       <DependentUpon>SessionSelector.cs</DependentUpon>
@@ -330,28 +346,44 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.lt.resx" />
+    <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ExportImageSizeSelector.lt.resx" />
+    <EmbeddedResource Include="Forms\ExportImageSizeSelector.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.lt.resx" />
+    <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Importers\SessionSelector.lt.resx" />
+    <EmbeddedResource Include="Importers\SessionSelector.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.fi.resx" />
+    <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ExportImageSizeSelector.fi.resx" />
+    <EmbeddedResource Include="Forms\ExportImageSizeSelector.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.fi.resx" />
+    <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Importers\SessionSelector.fi.resx" />
+    <EmbeddedResource Include="Importers\SessionSelector.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Experimental\" />
