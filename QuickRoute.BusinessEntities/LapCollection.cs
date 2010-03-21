@@ -13,23 +13,23 @@ namespace QuickRoute.BusinessEntities
     public Lap this[int index]
     {
       get { return laps[index]; }
-      set 
-      { 
-        var lap = laps[index];
-        lap = value; 
-      }
     }
 
     #region ICollection<Lap> Members
 
     public void Add(Lap item)
     {
+      item.Time = item.Time.ToUniversalTime();
       laps.Add(item);
     }
 
     public void AddRange(IEnumerable<Lap> items)
     {
-      laps.AddMany(items);
+      foreach(var item in items)
+      {
+        item.Time = item.Time.ToUniversalTime();
+        laps.Add(item);
+      }
     }
 
     public void Clear()
@@ -84,10 +84,17 @@ namespace QuickRoute.BusinessEntities
 
     public void EnsureUtcTimes()
     {
+      // a bug in developer version caused wrong sorting of laps in some cases
+      // this code handles the issue (which should be really rare)
+      var utcLaps = new List<Lap>();
       foreach (var lap in this)
       {
         lap.Time = lap.Time.ToUniversalTime();
+        utcLaps.Add(lap);
       }
+      Clear();
+
+      laps.AddMany(utcLaps);
     }
 
     public CutLapsData Cut(DateTime time, CutType cutType)

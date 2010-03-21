@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
+using System.Windows.Forms;
 using QuickRoute.BusinessEntities.Importers;
 using QuickRoute.BusinessEntities.Importers.FRWD;
 using QuickRoute.BusinessEntities.Importers.Garmin.Forerunner;
@@ -10,18 +12,33 @@ using QuickRoute.BusinessEntities.Importers.Polar.ProTrainer;
 using QuickRoute.BusinessEntities.Importers.GPX;
 using QuickRoute.BusinessEntities.Importers.QuickRoute;
 using QuickRoute.BusinessEntities.Importers.TCX;
+using QuickRoute.BusinessEntities.Importers.GlobalSat.GH615M;
+using QuickRoute.BusinessEntities.Importers.JJConnect.RegistratorSE;
 using QuickRoute.Resources;
 
 namespace QuickRoute.BusinessEntities.Importers
 {
+  public delegate void RefreshProgressDelegate(string message, int percent);
+  public delegate void RefreshCompletedDelegate();
+  
   public static class SupportedImportFormatManager
   {
+      private static Thread _thread;
+      public static event RefreshProgressDelegate RefreshProgressChanged;
+    public static event RefreshCompletedDelegate RefreshCompleted;
+
     public static List<GPSDevice> GetSupportedGPSDevices()
     {
       var supportedGPSDevices = new List<GPSDevice>();
 
       // Garmin Forerunner
       supportedGPSDevices.Add(new GPSDevice(new GarminForerunnerImporter()));
+
+      // GlobalSat GH-615M
+      supportedGPSDevices.Add(new GPSDevice(new GlobalSatGH615MImporter()));
+
+      // JJ-Connect Registrator SE
+      supportedGPSDevices.Add(new GPSDevice(new JJConnectRegistratorSEImporter()));
 
       // Garmin ANT Agent
       GarminANTAgentImporter antImporter = new GarminANTAgentImporter();
@@ -83,16 +100,72 @@ namespace QuickRoute.BusinessEntities.Importers
     public static List<GPSDevice> SearchForGPSDevices(List<GPSDevice> devicesToSearchFor)
     {
       var foundDevices = new List<GPSDevice>();
-      foreach (GPSDevice supportedGPSDevice in GetSupportedGPSDevices())
+      foreach (var device in devicesToSearchFor)
       {
-        if (supportedGPSDevice.Importer.IsConnected)
+        if (device.Importer.IsConnected)
         {
-          foundDevices.Add(supportedGPSDevice);
+          foundDevices.Add(device);
         }
       }
       return foundDevices;
     }
-  
+
+    public static void StopRefreshThread()
+    {
+        try
+        {
+            if (_thread != null && _thread.IsAlive)
+            {
+                _thread.Abort();
+            }
+        }
+        catch (ThreadAbortException)
+        {
+            if (_thread != null)
+            {
+                while (_thread.ThreadState == ThreadState.Running)
+                {
+                }
+            }
+            _thread = null;
+        }
+    }
+
+    private static void StartReadThread(ThreadStart threadStartMethod)
+    {
+        StopRefreshThread();
+        var myThread = new ThreadStart(threadStartMethod);
+        _thread = new Thread(myThread);
+        _thread.Start();
+    }
+
+    public static void StartRefreshGPSDevices()
+    {
+        StartReadThread(RefreshGPSDevices);
+    }
+
+    private static void RefreshGPSDevices()
+    {
+        List<GPSDevice> devices = GetSupportedGPSDevices();
+        for (int i = 0; i < devices.Count; i++)
+        {
+            var device = devices[i];
+            var percent = ((i / (Single)devices.Count) * 100);
+            if (percent > 100)
+            {
+                percent = 100;
+            }
+            if (RefreshProgressChanged != null)
+            {
+                RefreshProgressChanged(String.Format("Looking for supported devices... ({0}/{1})", i, devices.Count), (int)percent);
+            }
+            device.Importer.Refresh();
+        }
+        if (RefreshCompleted != null)
+        {
+            RefreshCompleted();
+        }
+    }
   }
 
   public class FileFormat

@@ -303,7 +303,7 @@
     <value>Valitse sarakkeet</value>
   </data>
   <data name="SmoothingIntervalForX" xml:space="preserve">
-    <value>Tasausintervalli tiedostolle  {0}</value>
+    <value>Tasausintervalli tiedostolle {0}</value>
   </data>
   <data name="SelectMomentaneousInfoProperties" xml:space="preserve">
     <value>Valitse tieto</value>

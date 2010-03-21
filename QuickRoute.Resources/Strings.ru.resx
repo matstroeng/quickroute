@@ -719,4 +719,46 @@
   <data name="RoutePropertyName_Longitude" xml:space="preserve">
     <value>Долгота</value>
   </data>
+  <data name="RoutePropertyName_CircleTimeBackward" xml:space="preserve">
+    <value>Время выхода в текущую точку</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeBackward" xml:space="preserve">
+    <value>Время выхода в текущую точку: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeForward" xml:space="preserve">
+    <value>Время ухода из текущей точки</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeForward" xml:space="preserve">
+    <value>Время ухода из текущей точки: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtStartOfSpan" xml:space="preserve">
+    <value>Время ухода с КП</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpan" xml:space="preserve">
+    <value>Время ухода с КП: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtEndOfSpan" xml:space="preserve">
+    <value>Время выхода на КП</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpan" xml:space="preserve">
+    <value>Время выхода на КП: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
+    <value>Сумма времен ухода с КП</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
+    <value>Сумма времен ухода с КП: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
+    <value>Сумма времен выхода на КП</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
+    <value>Сумма времен выхода на КП: {0}</value>
+  </data>
+  <data name="DeleteLapX" xml:space="preserve">
+    <value>Удалить перегон {0}</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Печать…</value>
+  </data>
 </root>

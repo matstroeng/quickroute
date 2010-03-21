@@ -88,6 +88,11 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.ANTAgent
       }
     }
 
-    #endregion
+      public void Refresh()
+      {
+          // do nothing
+      }
+
+      #endregion
   }
 }

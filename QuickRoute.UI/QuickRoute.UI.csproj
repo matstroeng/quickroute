@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{953F40A2-9741-4BE8-B42E-59C603700281}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -12,9 +12,12 @@
     <AssemblyName>QuickRoute</AssemblyName>
     <StartupObject>QuickRoute.UI.Program</StartupObject>
     <ApplicationIcon>QuickRoute.ico</ApplicationIcon>
-    <FileUpgradeFlags></FileUpgradeFlags>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
-    <UpgradeBackupLocation></UpgradeBackupLocation>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,7 +30,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -159,6 +161,12 @@
     </Compile>
     <Compile Include="Forms\KmlPropertySelectorDialog.Designer.cs">
       <DependentUpon>KmlPropertySelectorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RefreshDevicesProgressIndicator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RefreshDevicesProgressIndicator.Designer.cs">
+      <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SelectRoutePropertyTypesForm.cs">
       <SubType>Form</SubType>
@@ -656,8 +664,10 @@
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\QuickRouteServer\</RelPath>
       <UpdateFromURL>http://www.matstroeng.se/quickroute/server/index.php%3fwsdl</UpdateFromURL>
-      <ServiceLocationURL></ServiceLocationURL>
-      <CachedDynamicPropName></CachedDynamicPropName>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QuickRoute_QuickRouteServer_QuickRouteServer</CachedSettingsPropName>
     </WebReferenceUrl>
@@ -665,15 +675,13 @@
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WinSplitsWebServices\</RelPath>
       <UpdateFromURL>http://www.obasen.nu/winsplits/webservices/WebServices.asmx</UpdateFromURL>
-      <ServiceLocationURL></ServiceLocationURL>
-      <CachedDynamicPropName></CachedDynamicPropName>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QuickRoute_WinSplitsWebServices_WebServices</CachedSettingsPropName>
     </WebReferenceUrl>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ExternalReferences\" />
-    <Folder Include="Graphics\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\AboutBox.lt.resx" />
@@ -772,7 +780,29 @@
     <EmbeddedResource Include="Forms\TimeDialog.fi.resx" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.de.resx">
+      <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.fr.resx">
+      <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.no.resx">
+      <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.resx">
+      <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.ru.resx">
+      <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.sv.resx">
+      <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.fi.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ExternalReferences\" />
+    <Folder Include="Graphics\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

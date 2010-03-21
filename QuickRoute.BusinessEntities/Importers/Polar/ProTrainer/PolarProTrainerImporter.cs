@@ -160,7 +160,12 @@ namespace QuickRoute.BusinessEntities.Importers.Polar.ProTrainer
       }
     }
 
-    #endregion
+      public void Refresh()
+      {
+          // do nothing
+      }
+
+      #endregion
   }
 
   public class PolarPerson

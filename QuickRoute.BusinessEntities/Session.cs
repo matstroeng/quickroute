@@ -464,7 +464,7 @@ namespace QuickRoute.BusinessEntities
           // filter vertices
           vertices = FilterVertices(vertices);
 
-          for (int i = 0; i < vertices.Count - 2; i++)
+          for (int i = 0; i < vertices.Count - 1; i++)
           {
             if (vertices[i].ParameterizedLocation.SegmentIndex == vertices[i + 1].ParameterizedLocation.SegmentIndex)
             {

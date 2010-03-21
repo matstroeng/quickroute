@@ -614,4 +614,49 @@
   <data name="RoutePropertyNameAndValue_Altitude" xml:space="preserve">
     <value>Altitude : {0} mètres</value>
   </data>
+  <data name="FileFilter_KmzFiles" xml:space="preserve">
+    <value>Fichier Kmz (*.kmz)|*.kmz</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeBackward" xml:space="preserve">
+    <value>Temps d'approche de cette position</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeBackward" xml:space="preserve">
+    <value>Temps d'approche de cette position : {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeForward" xml:space="preserve">
+    <value>Temps d'éloignement de cette position</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeForward" xml:space="preserve">
+    <value>Temps d'éloignement de cette position : {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtStartOfSpan" xml:space="preserve">
+    <value>Temps de sortie de poste</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpan" xml:space="preserve">
+    <value>Temps de sortie de poste : {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtEndOfSpan" xml:space="preserve">
+    <value>Temps d'approche de poste</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpan" xml:space="preserve">
+    <value>Temps d'approche de poste : {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
+    <value>Somme des temps de sorties de postes</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
+    <value>Somme des temps de sorties de postes : {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
+    <value>Somme des temps d'approches de postes</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
+    <value>Somme des temps d'approches de postes : {0}</value>
+  </data>
+  <data name="DeleteLapX" xml:space="preserve">
+    <value>Effacer lap {0}</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Imprimer…</value>
+  </data>
 </root>

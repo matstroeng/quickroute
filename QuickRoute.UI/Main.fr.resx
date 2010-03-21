@@ -300,4 +300,13 @@
   <data name="menuHelp.Text" xml:space="preserve">
     <value>&amp;Aide</value>
   </data>
+  <data name="routeLineWidthLabel.ToolTipText" xml:space="preserve">
+    <value>Largeur de la trace</value>
+  </data>
+  <data name="circleTimeRadiusLabel.ToolTipText" xml:space="preserve">
+    <value>Diamètre du cercle pour les temps d'approches/sortie</value>
+  </data>
+  <data name="circleTimeRadius.ToolTipText" xml:space="preserve">
+    <value>Diamètre du cercle pour les temps d'approches/sortie</value>
+  </data>
 </root>
