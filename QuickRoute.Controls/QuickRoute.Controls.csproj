@@ -147,18 +147,23 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FileSelectorControl.de.resx">
       <DependentUpon>FileSelectorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FileSelectorControl.fr.resx">
       <DependentUpon>FileSelectorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FileSelectorControl.no.resx">
       <DependentUpon>FileSelectorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FileSelectorControl.resx">
       <DependentUpon>FileSelectorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FileSelectorControl.ru.resx">
       <DependentUpon>FileSelectorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FileSelectorControl.sv.resx">
       <DependentUpon>FileSelectorControl.cs</DependentUpon>
@@ -166,12 +171,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorChooser.de.resx">
       <DependentUpon>ColorChooser.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorChooser.fr.resx">
       <DependentUpon>ColorChooser.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorChooser.no.resx">
       <DependentUpon>ColorChooser.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorChooser.resx">
       <DependentUpon>ColorChooser.cs</DependentUpon>
@@ -179,6 +187,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorChooser.ru.resx">
       <DependentUpon>ColorChooser.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ColorChooser.sv.resx">
       <DependentUpon>ColorChooser.cs</DependentUpon>
@@ -186,12 +195,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LapTimeForm.de.resx">
       <DependentUpon>LapTimeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LapTimeForm.fr.resx">
       <DependentUpon>LapTimeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LapTimeForm.no.resx">
       <DependentUpon>LapTimeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LapTimeForm.resx">
       <DependentUpon>LapTimeForm.cs</DependentUpon>
@@ -199,6 +211,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LapTimeForm.ru.resx">
       <DependentUpon>LapTimeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LapTimeForm.sv.resx">
       <DependentUpon>LapTimeForm.cs</DependentUpon>
@@ -206,12 +219,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RouteCutForm.de.resx">
       <DependentUpon>RouteCutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RouteCutForm.fr.resx">
       <DependentUpon>RouteCutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RouteCutForm.no.resx">
       <DependentUpon>RouteCutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RouteCutForm.resx">
       <DependentUpon>RouteCutForm.cs</DependentUpon>
@@ -219,6 +235,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RouteCutForm.ru.resx">
       <DependentUpon>RouteCutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RouteCutForm.sv.resx">
       <DependentUpon>RouteCutForm.cs</DependentUpon>
@@ -228,21 +245,27 @@
     <None Include="Graphics\Lap.cur" />
     <EmbeddedResource Include="Forms\UrlDialog.de.resx">
       <DependentUpon>UrlDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UrlDialog.fr.resx">
       <DependentUpon>UrlDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UrlDialog.no.resx">
       <DependentUpon>UrlDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UrlDialog.resx">
       <DependentUpon>UrlDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UrlDialog.ru.resx">
       <DependentUpon>UrlDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UrlDialog.sv.resx">
       <DependentUpon>UrlDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Graphics\Cut.cur" />
     <EmbeddedResource Include="Graphics\MoveMap.cur" />
@@ -272,34 +295,54 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FileSelectorControl.lt.resx" />
+    <EmbeddedResource Include="FileSelectorControl.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ColorChooser.lt.resx" />
+    <EmbeddedResource Include="Forms\ColorChooser.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\LapTimeForm.lt.resx" />
+    <EmbeddedResource Include="Forms\LapTimeForm.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\RouteCutForm.lt.resx" />
+    <EmbeddedResource Include="Forms\RouteCutForm.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\UrlDialog.lt.resx" />
+    <EmbeddedResource Include="Forms\UrlDialog.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FileSelectorControl.fi.resx" />
+    <EmbeddedResource Include="FileSelectorControl.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\ColorChooser.fi.resx" />
+    <EmbeddedResource Include="Forms\ColorChooser.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\LapTimeForm.fi.resx" />
+    <EmbeddedResource Include="Forms\LapTimeForm.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\RouteCutForm.fi.resx" />
+    <EmbeddedResource Include="Forms\RouteCutForm.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\UrlDialog.fi.resx" />
+    <EmbeddedResource Include="Forms\UrlDialog.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

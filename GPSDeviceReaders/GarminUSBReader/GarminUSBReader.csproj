@@ -3,17 +3,20 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{FFEC4820-9B6B-47E9-8594-B71A52081C1E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QuickRoute.GPSDeviceReaders.GarminUSBReader</RootNamespace>
     <AssemblyName>QuickRoute.GPSDeviceReaders.GarminUSBReader</AssemblyName>
-    <StartupObject></StartupObject>
-    <FileUpgradeFlags></FileUpgradeFlags>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
-    <UpgradeBackupLocation></UpgradeBackupLocation>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -91,15 +94,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GarminSessionSelector.de.resx">
       <DependentUpon>GarminSessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GarminSessionSelector.fr.resx">
       <DependentUpon>GarminSessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GarminSessionSelector.no.resx">
       <DependentUpon>GarminSessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GarminSessionSelector.ru.resx">
       <DependentUpon>GarminSessionSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GarminSessionSelector.sv.resx">
       <DependentUpon>GarminSessionSelector.cs</DependentUpon>
@@ -107,15 +114,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressIndicator.de.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressIndicator.fr.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressIndicator.no.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressIndicator.ru.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressIndicator.sv.resx">
       <SubType>Designer</SubType>
@@ -137,9 +148,14 @@
     <EmbeddedResource Include="Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Strings.ru.resx" />
-    <EmbeddedResource Include="Strings.sv.resx" />
+    <EmbeddedResource Include="Strings.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.sv.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -191,25 +207,43 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GarminSessionSelector.lt.resx" />
+    <EmbeddedResource Include="GarminSessionSelector.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ProgressIndicator.lt.resx" />
+    <EmbeddedResource Include="ProgressIndicator.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Strings.de.resx" />
-    <EmbeddedResource Include="Strings.fr.resx" />
-    <EmbeddedResource Include="Strings.lt.resx" />
-    <EmbeddedResource Include="Strings.no.resx" />
+    <EmbeddedResource Include="Strings.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.lt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.no.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GarminSessionSelector.fi.resx" />
+    <EmbeddedResource Include="GarminSessionSelector.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ProgressIndicator.fi.resx" />
+    <EmbeddedResource Include="ProgressIndicator.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Strings.fi.resx" />
+    <EmbeddedResource Include="Strings.fi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
