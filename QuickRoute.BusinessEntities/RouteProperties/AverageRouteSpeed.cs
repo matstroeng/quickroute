@@ -37,12 +37,12 @@ namespace QuickRoute.BusinessEntities.RouteProperties
     {
       // speed in km/h
       if (format == null) format = "{0:n1}";
-      return string.Format(provider, format, 3.6 * Convert.ToDouble(v));
+      return string.Format(provider, format, Convert.ToDouble(v));
     }
 
     public override string MaxWidthString
     {
-      get { return ValueToString(999.9 / 3.6); }
+      get { return ValueToString(999.9); }
     }
 
     public override bool ContainsValue
@@ -79,12 +79,12 @@ namespace QuickRoute.BusinessEntities.RouteProperties
     {
       // speed in km/h
       if (format == null) format = "{0:n1}";
-      return string.Format(provider, format, 3.6 * Convert.ToDouble(v));
+      return string.Format(provider, format, Convert.ToDouble(v));
     }
 
     public override string MaxWidthString
     {
-      get { return ValueToString(999.9 / 3.6); }
+      get { return ValueToString(999.9); }
     }
 
     public override bool ContainsValue

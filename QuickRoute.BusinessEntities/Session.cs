@@ -335,7 +335,6 @@ namespace QuickRoute.BusinessEntities
     {
       // determining value according to current attribute: pace, heart rate or altitude
       double? value = route.GetAttributeFromParameterizedLocation(colorCodingAttribute, pl);
-      if (colorCodingAttribute == WaypointAttribute.Speed) value *= 3.6;
       RouteLineSettings rls = settings.RouteLineSettingsCollection[colorCodingAttribute];
       Color color = rls.ColorRange.GetColor(value == null ? 0 : (double)value);
       return color;

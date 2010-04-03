@@ -177,45 +177,6 @@
   <data name="mapImageGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="&gt;&gt;mapImageLayoutTable.Name" xml:space="preserve">
-    <value>mapImageLayoutTable</value>
-  </data>
-  <data name="&gt;&gt;mapImageLayoutTable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mapImageLayoutTable.Parent" xml:space="preserve">
-    <value>mapImageGroup</value>
-  </data>
-  <data name="&gt;&gt;mapImageLayoutTable.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="mapImageLayoutTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="mapImageFileName" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileNameBrowse" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFromFile" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageBlank" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatComboBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,Absolute,497,Absolute,182" /&gt;&lt;Rows Styles="AutoSize,0,Absolute,28,Absolute,21" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="mapImageGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="mapImageGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>722, 103</value>
-  </data>
-  <data name="mapImageGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="mapImageGroup.Text" xml:space="preserve">
-    <value>Map image</value>
-  </data>
-  <data name="&gt;&gt;mapImageGroup.Name" xml:space="preserve">
-    <value>mapImageGroup</value>
-  </data>
-  <data name="&gt;&gt;mapImageGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mapImageGroup.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;mapImageGroup.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="mapImageLayoutTable.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -224,105 +185,6 @@
   </data>
   <data name="mapImageLayoutTable.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileName.Name" xml:space="preserve">
-    <value>mapImageFileName</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileName.Parent" xml:space="preserve">
-    <value>mapImageLayoutTable</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileName.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileNameBrowse.Name" xml:space="preserve">
-    <value>mapImageFileNameBrowse</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileNameBrowse.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileNameBrowse.Parent" xml:space="preserve">
-    <value>mapImageLayoutTable</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileNameBrowse.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;mapImageFromFile.Name" xml:space="preserve">
-    <value>mapImageFromFile</value>
-  </data>
-  <data name="&gt;&gt;mapImageFromFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mapImageFromFile.Parent" xml:space="preserve">
-    <value>mapImageLayoutTable</value>
-  </data>
-  <data name="&gt;&gt;mapImageFromFile.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;mapImageBlank.Name" xml:space="preserve">
-    <value>mapImageBlank</value>
-  </data>
-  <data name="&gt;&gt;mapImageBlank.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mapImageBlank.Parent" xml:space="preserve">
-    <value>mapImageLayoutTable</value>
-  </data>
-  <data name="&gt;&gt;mapImageBlank.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileFormatLabel.Name" xml:space="preserve">
-    <value>mapImageFileFormatLabel</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileFormatLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileFormatLabel.Parent" xml:space="preserve">
-    <value>mapImageLayoutTable</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileFormatLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileFormatComboBox.Name" xml:space="preserve">
-    <value>mapImageFileFormatComboBox</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileFormatComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileFormatComboBox.Parent" xml:space="preserve">
-    <value>mapImageLayoutTable</value>
-  </data>
-  <data name="&gt;&gt;mapImageFileFormatComboBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="mapImageLayoutTable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
-  </data>
-  <data name="mapImageLayoutTable.RowCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="mapImageLayoutTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>716, 84</value>
-  </data>
-  <data name="mapImageLayoutTable.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;mapImageLayoutTable.Name" xml:space="preserve">
-    <value>mapImageLayoutTable</value>
-  </data>
-  <data name="&gt;&gt;mapImageLayoutTable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mapImageLayoutTable.Parent" xml:space="preserve">
-    <value>mapImageGroup</value>
-  </data>
-  <data name="&gt;&gt;mapImageLayoutTable.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="mapImageLayoutTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="mapImageFileName" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileNameBrowse" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFromFile" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageBlank" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatComboBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,Absolute,497,Absolute,182" /&gt;&lt;Rows Styles="AutoSize,0,Absolute,28,Absolute,21" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="mapImageFileName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -497,6 +359,57 @@
   </data>
   <data name="&gt;&gt;mapImageFileFormatComboBox.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="mapImageLayoutTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="mapImageLayoutTable.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="mapImageLayoutTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>716, 84</value>
+  </data>
+  <data name="mapImageLayoutTable.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mapImageLayoutTable.Name" xml:space="preserve">
+    <value>mapImageLayoutTable</value>
+  </data>
+  <data name="&gt;&gt;mapImageLayoutTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mapImageLayoutTable.Parent" xml:space="preserve">
+    <value>mapImageGroup</value>
+  </data>
+  <data name="&gt;&gt;mapImageLayoutTable.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="mapImageLayoutTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="mapImageFileName" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileNameBrowse" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFromFile" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageBlank" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatComboBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,Absolute,497,Absolute,182" /&gt;&lt;Rows Styles="AutoSize,0,Absolute,28,Absolute,21" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="mapImageGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="mapImageGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>722, 103</value>
+  </data>
+  <data name="mapImageGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mapImageGroup.Text" xml:space="preserve">
+    <value>Map image</value>
+  </data>
+  <data name="&gt;&gt;mapImageGroup.Name" xml:space="preserve">
+    <value>mapImageGroup</value>
+  </data>
+  <data name="&gt;&gt;mapImageGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mapImageGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mapImageGroup.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="routeGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -849,101 +762,11 @@
   <data name="personGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel2.Name" xml:space="preserve">
-    <value>tableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel2.Parent" xml:space="preserve">
-    <value>personGroup</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="persons" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="personNameLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,Absolute,497,Absolute,182" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="personGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 232</value>
-  </data>
-  <data name="personGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>722, 50</value>
-  </data>
-  <data name="personGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="personGroup.Text" xml:space="preserve">
-    <value>Person</value>
-  </data>
-  <data name="&gt;&gt;personGroup.Name" xml:space="preserve">
-    <value>personGroup</value>
-  </data>
-  <data name="&gt;&gt;personGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;personGroup.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;personGroup.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="tableLayoutPanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="tableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="&gt;&gt;persons.Name" xml:space="preserve">
-    <value>persons</value>
-  </data>
-  <data name="&gt;&gt;persons.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;persons.Parent" xml:space="preserve">
-    <value>tableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;persons.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;personNameLabel.Name" xml:space="preserve">
-    <value>personNameLabel</value>
-  </data>
-  <data name="&gt;&gt;personNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;personNameLabel.Parent" xml:space="preserve">
-    <value>tableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;personNameLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 19</value>
-  </data>
-  <data name="tableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>716, 28</value>
-  </data>
-  <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel2.Name" xml:space="preserve">
-    <value>tableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel2.Parent" xml:space="preserve">
-    <value>personGroup</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="persons" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="personNameLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,Absolute,497,Absolute,182" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="persons.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -1004,6 +827,57 @@
   </data>
   <data name="&gt;&gt;personNameLabel.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="tableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="tableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>716, 28</value>
+  </data>
+  <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Name" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Parent" xml:space="preserve">
+    <value>personGroup</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="persons" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="personNameLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,Absolute,497,Absolute,182" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="personGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 232</value>
+  </data>
+  <data name="personGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>722, 50</value>
+  </data>
+  <data name="personGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="personGroup.Text" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="&gt;&gt;personGroup.Name" xml:space="preserve">
+    <value>personGroup</value>
+  </data>
+  <data name="&gt;&gt;personGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;personGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;personGroup.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -744,7 +744,7 @@ namespace QuickRoute.BusinessEntities
             double siStartDistance = GetAttributeFromParameterizedLocation(WaypointAttribute.Distance, siStartPL).Value;
             double siEndDistance = GetAttributeFromParameterizedLocation(WaypointAttribute.Distance, siEndPL).Value;
             double siLength = (GetTimeFromParameterizedLocation(siEndPL) - GetTimeFromParameterizedLocation(siStartPL)).TotalSeconds;
-            w.Attributes[WaypointAttribute.Speed] = (siLength == 0 ? 0 : (siEndDistance - siStartDistance) / siLength);
+            w.Attributes[WaypointAttribute.Speed] = (siLength == 0 ? 0 : 3.6 * (siEndDistance - siStartDistance) / siLength);
           }
           else
           {
@@ -910,7 +910,11 @@ namespace QuickRoute.BusinessEntities
             var distanceDuration = (distanceEndTime - distanceStartTime).TotalSeconds;
 
             // calculate the inclination
-            if (altitudeDuration == 0 || distanceDuration == 0)
+            if (!distanceDifference.HasValue || !altitudeDifference.HasValue)
+            {
+              waypoint.Attributes[WaypointAttribute.Inclination] = null;
+            }
+            else if (altitudeDuration == 0 || distanceDuration == 0)
             {
               waypoint.Attributes[WaypointAttribute.Inclination] = 0;
             }
