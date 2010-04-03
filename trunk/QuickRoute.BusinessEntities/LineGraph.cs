@@ -205,7 +205,7 @@ namespace QuickRoute.BusinessEntities
       switch (yAxisAttribute)
       {
         case WaypointAttribute.Speed:
-          return 3.6 * w.Attributes[WaypointAttribute.Speed].Value;
+          return w.Attributes[WaypointAttribute.Speed].Value;
         case WaypointAttribute.HeartRate:
           return w.Attributes[WaypointAttribute.HeartRate].GetValueOrDefault(0);
         case WaypointAttribute.Altitude:

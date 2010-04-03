@@ -16,10 +16,18 @@ namespace QuickRoute.UI.Forms
 
       samplingIntervalDropdown.Text = settings.SamplingInterval.TotalSeconds.ToString();
 
+      // (*) handling buggy multiple occurrences of route property types
+      var routePropertyTypes = new List<Type>();
+
+
       // add the names and visibility status of the route properties
       foreach (var item in settings.RoutePropertyTypes)
       {
-        routePropertyTypeCheckboxList.Items.Add(item, item.Selected);
+        if (!routePropertyTypes.Contains(item.RoutePropertyType)) // (*) 
+        {
+          routePropertyTypeCheckboxList.Items.Add(item, item.Selected);
+          routePropertyTypes.Add(item.RoutePropertyType); // (*) 
+        }
       }
       zeroTime = settings.ZeroTime; 
     }
@@ -41,12 +49,13 @@ namespace QuickRoute.UI.Forms
           ret.SamplingInterval = new TimeSpan(0, 0, 1);
         }
 
-        ret.RoutePropertyTypes = new SelectableRoutePropertyTypeCollection();
+        var srpt = new SelectableRoutePropertyTypeCollection();
         for (var i = 0; i < routePropertyTypeCheckboxList.Items.Count; i++)
         {
           var item = (SelectableRoutePropertyType)routePropertyTypeCheckboxList.Items[i];
-          ret.RoutePropertyTypes.Add(new SelectableRoutePropertyType(item.RoutePropertyType, routePropertyTypeCheckboxList.GetItemChecked(i)));
+          srpt.Add(new SelectableRoutePropertyType(item.RoutePropertyType, routePropertyTypeCheckboxList.GetItemChecked(i)));
         }
+        ret.RoutePropertyTypes = srpt;
 
         return ret;
       }
