@@ -567,23 +567,23 @@ namespace QuickRoute.BusinessEntities
     }
 
     /// <summary>
-    /// Converts a speed (m/s) to a pace (min/km).
+    /// Converts a speed (km/h) to a pace (min/km).
     /// </summary>
-    /// <param name="speed">The speed in metres per second.</param>
+    /// <param name="speed">The speed in kilometres per hour.</param>
     /// <returns></returns>
     public static TimeSpan ToPace(double speed)
     {
-      return speed == 0 ? new TimeSpan(0) : new TimeSpan((long)(1000.0 / speed * TimeSpan.TicksPerSecond));
+      return speed == 0 ? new TimeSpan(0) : new TimeSpan((long)(3600.0 / speed * TimeSpan.TicksPerSecond));
     }
 
     /// <summary>
-    /// Converts a pace (min/km) to a speed (m/s).
+    /// Converts a pace (min/km) to a speed (km/h).
     /// </summary>
     /// <param name="pace">The pace in minutes per kilometre.</param>
     /// <returns></returns>
     public static double ToSpeed(TimeSpan pace)
     {
-      return pace.TotalSeconds == 0 ? 0 : 1000.0 / pace.TotalSeconds;
+      return pace.TotalSeconds == 0 ? 0 : 3600.0 / pace.TotalSeconds;
     }
   }
 
