@@ -203,9 +203,7 @@ namespace QuickRoute.BusinessEntities
                    new SelectableRoutePropertyType(typeof (StraightLineDistanceFromStart), false),
                    new SelectableRoutePropertyType(typeof (RouteDistanceFromStart), false),
                    new SelectableRoutePropertyType(typeof (RouteToStraightLineFromStart), false),
-                   new SelectableRoutePropertyType(typeof (AverageStraightLinePace), false),
                    new SelectableRoutePropertyType(typeof (AverageStraightLinePaceFromStart), false),
-                   new SelectableRoutePropertyType(typeof (AverageRoutePace), false),
                    new SelectableRoutePropertyType(typeof (AverageRoutePaceFromStart), false),
                    new SelectableRoutePropertyType(typeof (Pace), false),
                    new SelectableRoutePropertyType(typeof (AverageStraightLineSpeed), false),
@@ -298,6 +296,24 @@ namespace QuickRoute.BusinessEntities
         {
           lapPropertyTypes = AvailableLapPropertyTypes;
         }
+        
+        // a fix for double storage of lap property types
+        var realLapPropertyTypes = new SelectableRoutePropertyTypeCollection();
+        foreach(var lpt in lapPropertyTypes)
+        {
+          var found = false;
+          foreach(var lpt2 in realLapPropertyTypes)
+          {
+            if(lpt.RoutePropertyType == lpt2.RoutePropertyType)
+            {
+              found = true;
+              break;
+            }
+          }
+          if (!found) realLapPropertyTypes.Add(lpt);
+        }
+        lapPropertyTypes = realLapPropertyTypes;
+        
         return lapPropertyTypes;
       }
       set { lapPropertyTypes = value; }
