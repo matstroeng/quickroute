@@ -54,7 +54,7 @@ namespace QuickRoute.GPSDeviceReaders.GlobalSatGH615MReader
         private GH615MDeviceInfo _info;
         private static readonly byte[] Header = new byte[] { 0x85, 0x00 };
 
-        public GetDeviceInfoCommand() : base(300) { }
+        public GetDeviceInfoCommand() : base(1000) { }
 
         override protected byte[] GetCommandBuffer()
         {
@@ -228,7 +228,7 @@ namespace QuickRoute.GPSDeviceReaders.GlobalSatGH615MReader
         private readonly LoadStatus _status;
 
         public ContinueLoadTracksCommand(LoadStatus status)
-            : base(500)
+            : base(1000)
         {
             _status = status;
         }

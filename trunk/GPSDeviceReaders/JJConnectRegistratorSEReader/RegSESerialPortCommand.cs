@@ -58,7 +58,7 @@ namespace QuickRoute.GPSDeviceReaders.JJConnectRegistratorSEReader
         private static readonly byte[] Command = ASCIIEnc.GetBytes("@AL,7,1\r\n");
         private static readonly byte[] Header = ASCIIEnc.GetBytes("@AL,7,1,");
 
-        public DeviceNameCommand() : base(500) { }
+        public DeviceNameCommand() : base(1000) { }
 
         override protected byte[] GetCommandBuffer()
         {
@@ -87,7 +87,7 @@ namespace QuickRoute.GPSDeviceReaders.JJConnectRegistratorSEReader
         private static readonly byte[] Command = ASCIIEnc.GetBytes("@AL,8,2\r\n");
         private static readonly byte[] Header = ASCIIEnc.GetBytes("@AL,8,2,");
 
-        public SoftwareVersionCommand() : base(500) { }
+        public SoftwareVersionCommand() : base(1000) { }
 
         override protected byte[] GetCommandBuffer()
         {
@@ -116,7 +116,7 @@ namespace QuickRoute.GPSDeviceReaders.JJConnectRegistratorSEReader
         private static readonly byte[] Command = ASCIIEnc.GetBytes("@AL,8,1\r\n");
         private static readonly byte[] Header = ASCIIEnc.GetBytes("@AL,8,1,");
 
-        public HardwareVersionCommand() : base(500) { }
+        public HardwareVersionCommand() : base(1000) { }
 
         override protected byte[] GetCommandBuffer()
         {
@@ -145,7 +145,7 @@ namespace QuickRoute.GPSDeviceReaders.JJConnectRegistratorSEReader
         private static readonly byte[] Command = ASCIIEnc.GetBytes("@AL,7,2\r\n");
         private static readonly byte[] Header = ASCIIEnc.GetBytes("@AL,7,2,");
 
-        public NameCommand() : base(500) { }
+        public NameCommand() : base(1000) { }
 
         override protected byte[] GetCommandBuffer()
         {
@@ -175,7 +175,7 @@ namespace QuickRoute.GPSDeviceReaders.JJConnectRegistratorSEReader
         private static readonly byte[] Command = ASCIIEnc.GetBytes("@AL,5,2\n");
         private static readonly byte[] Header = ASCIIEnc.GetBytes("@AL,5,2,");
     
-        public NumOfPointsCommand() : base(500) { }
+        public NumOfPointsCommand() : base(1000) { }
 
         override protected byte[] GetCommandBuffer()
         {
@@ -212,7 +212,7 @@ namespace QuickRoute.GPSDeviceReaders.JJConnectRegistratorSEReader
         private List<IRegSETrackPoint> _points = new List<IRegSETrackPoint>();
 
         public LoadPointsCommand(int offset)
-            : base(800)
+            : base(1000)
         {
             _offset = offset;
         }
