@@ -12,11 +12,9 @@
     <AssemblyName>QuickRoute</AssemblyName>
     <StartupObject>QuickRoute.UI.Program</StartupObject>
     <ApplicationIcon>QuickRoute.ico</ApplicationIcon>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
+    <FileUpgradeFlags></FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
+    <UpgradeBackupLocation></UpgradeBackupLocation>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -733,10 +731,8 @@
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\QuickRouteServer\</RelPath>
       <UpdateFromURL>http://www.matstroeng.se/quickroute/server/index.php%3fwsdl</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
+      <ServiceLocationURL></ServiceLocationURL>
+      <CachedDynamicPropName></CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QuickRoute_QuickRouteServer_QuickRouteServer</CachedSettingsPropName>
     </WebReferenceUrl>
@@ -744,10 +740,8 @@
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WinSplitsWebServices\</RelPath>
       <UpdateFromURL>http://www.obasen.nu/winsplits/webservices/WebServices.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
+      <ServiceLocationURL></ServiceLocationURL>
+      <CachedDynamicPropName></CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QuickRoute_WinSplitsWebServices_WebServices</CachedSettingsPropName>
     </WebReferenceUrl>
@@ -944,6 +938,63 @@
   <ItemGroup>
     <Folder Include="ExternalReferences\" />
     <Folder Include="Graphics\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AboutBox.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AddSessionsForm.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ColorChooser.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ColorRangeIntervalEditor.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\CreateNewForm.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ExceptionMessageBox.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ExportRouteDataDialog.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FormTemplate.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\GradientEditor.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\KmlPropertySelectorDialog.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\NewVersionDialog.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\OpenMultipleFilesInGoogleEarthDialog.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\PublishMapForm.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\SelectRoutePropertyTypesForm.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\SelectUICultureForm.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\TimeDialog.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Main.it.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

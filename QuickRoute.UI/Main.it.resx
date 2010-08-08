@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lapsLabel.Text" xml:space="preserve">
+    <value>Tempi intermedi</value>
+  </data>
+  <data name="exportLapHistogramImage.ToolTipText" xml:space="preserve">
+    <value>Esporta grafico</value>
+  </data>
+  <data name="lapHistogramBinWidth.ToolTipText" xml:space="preserve">
+    <value>Larghezza della barra</value>
+  </data>
+  <data name="colorCodingAttributes.ToolTipText" xml:space="preserve">
+    <value>Codice colore del percorso da...</value>
+  </data>
+  <data name="colorRangeStartValue.ToolTipText" xml:space="preserve">
+    <value>Avvio dei valori della colorazione dell'intervallo</value>
+  </data>
+  <data name="colorRangeIntervalSlider.ToolTipText" xml:space="preserve">
+    <value>Codifica del percorso con colore</value>
+  </data>
+  <data name="colorRangeEndValue.ToolTipText" xml:space="preserve">
+    <value>Fine dei valori della gamma colori</value>
+  </data>
+  <data name="colorRangeIntervalButton.ToolTipText" xml:space="preserve">
+    <value>Imposta l'intervallo della gamma dei colori</value>
+  </data>
+  <data name="toolStripAutoAdjustColorRangeInterval.ToolTipText" xml:space="preserve">
+    <value>Imposta automaticamente l'intervallo dei colori del percorso</value>
+  </data>
+  <data name="gradientAlphaAdjustment.ToolTipText" xml:space="preserve">
+    <value>Trasparenza della linea del percorso</value>
+  </data>
+  <data name="routeLineWidthLabel.ToolTipText" xml:space="preserve">
+    <value>Larghezza linea</value>
+  </data>
+  <data name="routeLineWidth.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="routeLineWidth.ToolTipText" xml:space="preserve">
+    <value>Larghezza linea</value>
+  </data>
+  <data name="routeLineMaskVisible.ToolTipText" xml:space="preserve">
+    <value>Mostra i bordi della linea</value>
+  </data>
+  <data name="routeLineMaskWidth.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="routeLineMaskWidth.ToolTipText" xml:space="preserve">
+    <value>Larghezza del bordo della linea</value>
+  </data>
+  <data name="routeLineMaskColorButton.ToolTipText" xml:space="preserve">
+    <value>Colore del bordo della linea</value>
+  </data>
+  <data name="smoothingIntervalLengthLabel.ToolTipText" xml:space="preserve">
+    <value>Smoothing interval length</value>
+  </data>
+  <data name="smoothingIntervalLength.ToolTipText" xml:space="preserve">
+    <value>Smoothing interval length</value>
+  </data>
+  <data name="circleTimeRadiusLabel.ToolTipText" xml:space="preserve">
+    <value>Angolo d'ingresso e uscita dal punto</value>
+  </data>
+  <data name="circleTimeRadius.ToolTipText" xml:space="preserve">
+    <value>Angolo d'ingresso e uscita dal punto</value>
+  </data>
+  <data name="toolStripNew.ToolTipText" xml:space="preserve">
+    <value>Nuovo (Ctrl+N)</value>
+  </data>
+  <data name="toolStripOpen.ToolTipText" xml:space="preserve">
+    <value>Apri (Ctrl+O)</value>
+  </data>
+  <data name="toolStripSave.ToolTipText" xml:space="preserve">
+    <value>Salva (Ctrl+S)</value>
+  </data>
+  <data name="toolStripUndo.ToolTipText" xml:space="preserve">
+    <value>Passo indietro (Ctrl+Z)</value>
+  </data>
+  <data name="toolStripRedo.ToolTipText" xml:space="preserve">
+    <value>Passo avanti (Ctrl+Y)</value>
+  </data>
+  <data name="toolStripZoom.Items" xml:space="preserve">
+    <value>50 %</value>
+  </data>
+  <data name="toolStripZoom.Items1" xml:space="preserve">
+    <value>75 %</value>
+  </data>
+  <data name="toolStripZoom.Items2" xml:space="preserve">
+    <value>100 %</value>
+  </data>
+  <data name="toolStripZoom.Items3" xml:space="preserve">
+    <value>125 %</value>
+  </data>
+  <data name="toolStripZoom.Items4" xml:space="preserve">
+    <value>150 %</value>
+  </data>
+  <data name="toolStripZoom.Items5" xml:space="preserve">
+    <value>200 %</value>
+  </data>
+  <data name="toolStripZoom.ToolTipText" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="toolStripToolPointer.ToolTipText" xml:space="preserve">
+    <value>Puntatore</value>
+  </data>
+  <data name="toolStripToolAdjustRoute.ToolTipText" xml:space="preserve">
+    <value>Modifica il percorso</value>
+  </data>
+  <data name="toolStripToolLap.ToolTipText" xml:space="preserve">
+    <value>Aggiungi tempo intermedio</value>
+  </data>
+  <data name="toolStripToolCut.ToolTipText" xml:space="preserve">
+    <value>Estrai il percorso</value>
+  </data>
+  <data name="toolStripToolZoomIn.ToolTipText" xml:space="preserve">
+    <value>Aumenta lo Zoom</value>
+  </data>
+  <data name="toolStripToolZoomOut.ToolTipText" xml:space="preserve">
+    <value>Diminuisci lo Zoom</value>
+  </data>
+  <data name="toolStripOpenInGoogleEarth.ToolTipText" xml:space="preserve">
+    <value>Apri in Google Heart (Ctrl+E)</value>
+  </data>
+  <data name="toolStripPublishMap.ToolTipText" xml:space="preserve">
+    <value>Pubblica mappa</value>
+  </data>
+  <data name="toolStripFullScreen.ToolTipText" xml:space="preserve">
+    <value>Schermo intero (F11)</value>
+  </data>
+  <data name="toolStripRightPanelVisible.ToolTipText" xml:space="preserve">
+    <value>Visualizza il pannello di destra (Ctrl+Shift+R)</value>
+  </data>
+  <data name="toolStripBottomPanelVisible.ToolTipText" xml:space="preserve">
+    <value>Visualizza il pannello dei bottoni (Ctrl+Shift+R)</value>
+  </data>
+  <data name="toolStripHelp.ToolTipText" xml:space="preserve">
+    <value>Aiuto</value>
+  </data>
+  <data name="toolStripDonate.ToolTipText" xml:space="preserve">
+    <value>Sostieni lo sviluppo dei nuovi aggiornamenti di QuickRoute</value>
+  </data>
+  <data name="menuFileNew.Text" xml:space="preserve">
+    <value>&amp;Nuovo...</value>
+  </data>
+  <data name="menuFileOpen.Text" xml:space="preserve">
+    <value>&amp;Apri...</value>
+  </data>
+  <data name="menuFileSave.Text" xml:space="preserve">
+    <value>&amp;Salva</value>
+  </data>
+  <data name="menuFileSaveAs.Text" xml:space="preserve">
+    <value>Salva &amp;con nome...</value>
+  </data>
+  <data name="menuFileExportImage.Text" xml:space="preserve">
+    <value>&amp;Immagine...</value>
+  </data>
+  <data name="menuFileExportGPX.Text" xml:space="preserve">
+    <value>&amp;GPX...</value>
+  </data>
+  <data name="menuFileExportKMZ.Text" xml:space="preserve">
+    <value>&amp;KMZ...</value>
+  </data>
+  <data name="menuFileExportRouteData.Text" xml:space="preserve">
+    <value>&amp;Informazioni del percorso...</value>
+  </data>
+  <data name="menuFileExport.Text" xml:space="preserve">
+    <value>&amp;Esporta</value>
+  </data>
+  <data name="menuFileImportSessions.Text" xml:space="preserve">
+    <value>I&amp;mporta percorsi...</value>
+  </data>
+  <data name="menuFileExit.Text" xml:space="preserve">
+    <value>E&amp;sci</value>
+  </data>
+  <data name="menuFile.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="menuEditUndo.Text" xml:space="preserve">
+    <value>&amp;Passo indietro</value>
+  </data>
+  <data name="menuEditRedo.Text" xml:space="preserve">
+    <value>&amp;Passo avanti</value>
+  </data>
+  <data name="menuEditChangeStartTime.Text" xml:space="preserve">
+    <value>Cambia il &amp;tempo iniziale...</value>
+  </data>
+  <data name="menuEdit.Text" xml:space="preserve">
+    <value>&amp;Modifica</value>
+  </data>
+  <data name="menuViewFullScreen.Text" xml:space="preserve">
+    <value>&amp;Schermo intero</value>
+  </data>
+  <data name="menuViewRightPanelVisible.Text" xml:space="preserve">
+    <value>Viusalizza &amp;pannello di destra</value>
+  </data>
+  <data name="menuViewBottomPanelVisible.Text" xml:space="preserve">
+    <value>Visualizza il pannello dei &amp;bottoni</value>
+  </data>
+  <data name="menuView.Text" xml:space="preserve">
+    <value>&amp;Visualizza</value>
+  </data>
+  <data name="menuToolsOpenInGoogleEarth.Text" xml:space="preserve">
+    <value>Apri in Google &amp;Earth...</value>
+  </data>
+  <data name="menuToolsOpenMultipleFilesInGoogleEarth.Text" xml:space="preserve">
+    <value>Apri &amp;molti file di QuickRoute in Google Earth...</value>
+  </data>
+  <data name="menuToolsPublishMap.Text" xml:space="preserve">
+    <value>&amp;Pubblica la mappa...</value>
+  </data>
+  <data name="menuToolsAddLapsFromWinSplits.Text" xml:space="preserve">
+    <value>Aggiungi tempi parziali da &amp;WinSplits...</value>
+  </data>
+  <data name="menuTools.Text" xml:space="preserve">
+    <value>&amp;Strumenti</value>
+  </data>
+  <data name="menuSettingsLanguage.Text" xml:space="preserve">
+    <value>&amp;Linguaggio...</value>
+  </data>
+  <data name="menuSettings.Text" xml:space="preserve">
+    <value>&amp;Impostazioni</value>
+  </data>
+  <data name="menuHelpHelp.Text" xml:space="preserve">
+    <value>&amp;Aiuto...</value>
+  </data>
+  <data name="menuHelpAbout.Text" xml:space="preserve">
+    <value>&amp;Riguardo a QuickRoute...</value>
+  </data>
+  <data name="menuHelp.Text" xml:space="preserve">
+    <value>&amp;Aiuto</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>QuickRoute</value>
+  </data>
+</root>

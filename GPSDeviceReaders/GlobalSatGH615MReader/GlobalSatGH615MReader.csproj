@@ -12,10 +12,8 @@
     <AssemblyName>QuickRoute.GPSDeviceReaders.GlobalSatGH615MReader</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <StartupObject>
-    </StartupObject>
-    <TargetFrameworkSubset>
-    </TargetFrameworkSubset>
+    <StartupObject></StartupObject>
+    <TargetFrameworkSubset></TargetFrameworkSubset>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -117,6 +115,9 @@
       <Project>{11A24507-A39E-42A2-9662-0416E8A31597}</Project>
       <Name>SerialPortDeviceReader</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProgressIndicator.it.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

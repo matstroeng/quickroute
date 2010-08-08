@@ -394,6 +394,18 @@
     <Folder Include="Experimental\" />
     <Folder Include="ExternalReferences\" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ExportImageSizeSelector.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Importers\SessionSelector.it.resx" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
