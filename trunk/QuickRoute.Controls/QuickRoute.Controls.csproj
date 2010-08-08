@@ -344,6 +344,21 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FileSelectorControl.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ColorChooser.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\LapTimeForm.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\RouteCutForm.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\UrlDialog.it.resx" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
