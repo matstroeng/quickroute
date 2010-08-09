@@ -126,7 +126,4 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Aggiungi indirizzo</value>
   </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
 </root>

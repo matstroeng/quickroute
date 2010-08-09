@@ -117,34 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="runnerLabel.Text" xml:space="preserve">
-    <value>C&amp;oncorrente</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="eventLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 13</value>
   </data>
-  <data name="search.Text" xml:space="preserve">
-    <value>Trov&amp;a</value>
+  <data name="eventLabel.Text" xml:space="preserve">
+    <value>&amp;Gara</value>
   </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="uiInformation.Text" xml:space="preserve">
-    <value>È possibile aggiungere automaticamente i vostri tempi parziali a una sessione QuickRoute se la gara esiste nel database WinSplits. Selezionare la gara su WinSplits, la categoria  e il concorrente e fare clic su OK.</value>
-  </data>
-  <data name="startDateLabel.Text" xml:space="preserve">
-    <value>&amp;Data di inizio</value>
+  <data name="classLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
   </data>
   <data name="classLabel.Text" xml:space="preserve">
     <value>&amp;Categoria</value>
   </data>
-  <data name="endDateLabel.Text" xml:space="preserve">
-    <value>Data di &amp;fine </value>
+  <data name="runnerLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="runnerLabel.Text" xml:space="preserve">
+    <value>C&amp;oncorrente</value>
   </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Cancella</value>
   </data>
+  <data name="startDateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 13</value>
+  </data>
+  <data name="startDateLabel.Text" xml:space="preserve">
+    <value>&amp;Data di inizio</value>
+  </data>
+  <data name="endDateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="endDateLabel.Text" xml:space="preserve">
+    <value>Data di &amp;fine </value>
+  </data>
+  <data name="uiInformation.Text" xml:space="preserve">
+    <value>È possibile aggiungere automaticamente i vostri tempi parziali a una sessione QuickRoute se la gara esiste nel database WinSplits. Selezionare la gara su WinSplits, la categoria  e il concorrente e fare clic su OK.</value>
+  </data>
+  <data name="search.Text" xml:space="preserve">
+    <value>Trov&amp;a</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Aggiungi tempi intermedi da WinSplits</value>
-  </data>
-  <data name="eventLabel.Text" xml:space="preserve">
-    <value>&amp;Gara</value>
   </data>
 </root>

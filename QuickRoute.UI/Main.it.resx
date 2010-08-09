@@ -120,6 +120,22 @@
   <data name="lapsLabel.Text" xml:space="preserve">
     <value>Tempi intermedi</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="exportLapHistogramImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVDhPpZP7S1NxGMbPPxKaXVUkMEq8IpKUCoY/hGgI
+        ymqkDYYXcCjDZOANURSjCNGFQUTsl4GXVMxKk62YU4fXQpaIlygHQxBRH8/zwvyaIAYe+HLgnPN8nue9
+        HA3nvDTq63oW/jm13XOwvPTB3DYFY5MH+bXfcN8ygfTSMSSXfESicQDxBqdYHwH29g9w2tnZ3UcguIvN
+        rR3417exuBJE5N1n/wfwLgXEOc38Bc6xNRHb+/y4nm49G0Bnit2zf9H6bkliE/jKuYxrd6oVgDWfjB+K
+        TWeKMyrGEVfowITvD9re/9ABVQrAhh0HHK+ZselMMaN/mvwtDb+aVqkA7HYIwIj3ysfluPTorJnP6Ezx
+        oHsD1s5ZXEktUwCOioB5f1CEPR9+wTG6iuiserTo8dkwng7HT/R+XUPF8xlcTjErAOdMcW6NW8STiwG8
+        7vej8oUPN/PsEv3t8Ao0TZP3T1u8uJRkUgAuSYHtO97oLxmXd5t9Ho8aPTK+GzntqNfrLm2fFoihwYOI
+        xGIF4KjoGBLzY1OrF9k6OOFxnwDC4wxIMX1G0pMhgVyMNyoA13PAtS7OrJk1PrC69LUdQWxuF6IybHrX
+        LRI7JrtZdoDAo1XmbjMyD+tjSXxGcXRmnYg5ttD9QuxDhN0uUgDOmbvNTpPOJaGAo2K36cyaGZvOFIfd
+        KlSA8/zRh9ABIDUG+1JpAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="exportLapHistogramImage.ToolTipText" xml:space="preserve">
     <value>Esporta grafico</value>
   </data>
@@ -138,8 +154,33 @@
   <data name="colorRangeEndValue.ToolTipText" xml:space="preserve">
     <value>Fine dei valori della gamma colori</value>
   </data>
+  <data name="colorRangeIntervalButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+QAA
+        CvkBtGHeGQAAAKVJREFUOE+tkmEOwiAMhXuSeQjvoH/ckVy6Ky16Hp0Hob4SIEDGGOKPF1jWfu1rIRGh
+        HoVkZpYW+aIJYEAzN4ihJ7RqcwZ6Qws0QVf8R7FNwAkJYwYwLQDtIAZ88J0A7pUOPGBG4iO28HIWFHDZ
+        sfDzEInoDImetZXmsXYLLlkvYbolUB7b9Yhs8bDPA9W3YvstOE8cnxX/Sex/LPhN1FZYnEEP4AuyYY/2
+        1EDQNAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="colorRangeIntervalButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 20</value>
+  </data>
   <data name="colorRangeIntervalButton.ToolTipText" xml:space="preserve">
     <value>Imposta l'intervallo della gamma dei colori</value>
+  </data>
+  <data name="toolStripAutoAdjustColorRangeInterval.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC1SURBVDhPrZNRDsFAEEDnJNxB78AhSDgJewEuwQGcgy9O
+        wR/fJOvNpstUJV3GJi+dtDNvZ7atyGtFE3eFrVy9EbqqzHPNfUo08JC8rg5yZ64z+GL8f6eGEKIH0eJe
+        lDiAMcxhAzs4wR3iFY6whRXMYCRp4yTok1TBxAj2teBWIsgdZMGaIhWcoSVYsvv0rQMrWFCkgsYIFwoO
+        ZgQVDM0IrkPkrVb1l6jX0tWosf9BqeCXms/uBwn3Fq/+feK5AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolStripAutoAdjustColorRangeInterval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 20</value>
   </data>
   <data name="toolStripAutoAdjustColorRangeInterval.ToolTipText" xml:space="preserve">
     <value>Imposta automaticamente l'intervallo dei colori del percorso</value>
@@ -147,205 +188,1396 @@
   <data name="gradientAlphaAdjustment.ToolTipText" xml:space="preserve">
     <value>Trasparenza della linea del percorso</value>
   </data>
+  <data name="routeLineWidthLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAAAL1JREFUOE+NU9sNwzAIZI7OU+Uvs3SNTpm/zOHmEOdiAo4jIUfgO15naa1J/ODL7P2R
+        9j0Q+sf14goBwSDwJGmmmD2CPQmSo4TtqWyC4gmCzUh2a6f3WGUmCeJsfzeSEyeIVsB9fvajYNgq2C9A
+        gbSqX/hBPqxRp+j3KvK6XGdGEsFDC08kGbgksECvpAJPCRzJMJ+oF11jJSLqgivO7t3eQTJUVMAVq9hu
+        W5g9JgrrOim2QfZpBROnyt5X8APmCAFYpeIP4QAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="routeLineWidthLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
   <data name="routeLineWidthLabel.ToolTipText" xml:space="preserve">
     <value>Larghezza linea</value>
   </data>
-  <data name="routeLineWidth.Text" xml:space="preserve">
-    <value>0</value>
+  <data name="routeLineWidth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 23</value>
   </data>
   <data name="routeLineWidth.ToolTipText" xml:space="preserve">
     <value>Larghezza linea</value>
   </data>
+  <data name="routeLineMaskVisible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFISURBVDhPY2AgDJiASlYCsR9hpZgquIFCG4H4PxcXw+eE
+        JQy6pBgiCFS8BaSZT4Lhf9FOhv8ddxmeVB1jkCbGEHGgor0gzQJSDP/LDgI134PgtnsMJwuPMXDiM0QK
+        KHkMpFlUieE/0Ea4ZpghqUsZ1uEyQAEocR6kWUqL4X/tGUzNcbMY/rNyMPwHqmlHN0QZKHAVpFnOiOF/
+        3TlMzVGTGP4zs4I1g/B8ZAPUgJx7IAklc4b/TVcwNYd2MfxnYoZrnoOsWRPIeQXSrGbP8L/5GqZmvwa4
+        RpDNM9GdPgukWdeT4X/rTUzNHmUompOxBR6bYSDDybbbmJqdslE0h+OMupabDNKgRAKLJhBtFYei2Ztg
+        4gEaYFZ/heEbyCWmYSia7QlqhilovcUQZeAH1/wTKG5AtGYkhV1A9gcgBsUOWQCUfYnKMCDTAVQJvdxe
+        fXZYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="routeLineMaskVisible.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 20</value>
+  </data>
   <data name="routeLineMaskVisible.ToolTipText" xml:space="preserve">
     <value>Mostra i bordi della linea</value>
   </data>
-  <data name="routeLineMaskWidth.Text" xml:space="preserve">
-    <value>0</value>
+  <data name="routeLineMaskWidth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 23</value>
   </data>
   <data name="routeLineMaskWidth.ToolTipText" xml:space="preserve">
     <value>Larghezza del bordo della linea</value>
   </data>
+  <data name="routeLineMaskColorButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVDhPpZP7S1NxGMbPPxKaXVUkMEq8IpKUCoY/hGgI
+        ymqkDYYXcCjDZOANURSjCNGFQUTsl4GXVMxKk62YU4fXQpaIlygHQxBRH8/zwvyaIAYe+HLgnPN8nue9
+        HA3nvDTq63oW/jm13XOwvPTB3DYFY5MH+bXfcN8ygfTSMSSXfESicQDxBqdYHwH29g9w2tnZ3UcguIvN
+        rR3417exuBJE5N1n/wfwLgXEOc38Bc6xNRHb+/y4nm49G0Bnit2zf9H6bkliE/jKuYxrd6oVgDWfjB+K
+        TWeKMyrGEVfowITvD9re/9ABVQrAhh0HHK+ZselMMaN/mvwtDb+aVqkA7HYIwIj3ysfluPTorJnP6Ezx
+        oHsD1s5ZXEktUwCOioB5f1CEPR9+wTG6iuiserTo8dkwng7HT/R+XUPF8xlcTjErAOdMcW6NW8STiwG8
+        7vej8oUPN/PsEv3t8Ao0TZP3T1u8uJRkUgAuSYHtO97oLxmXd5t9Ho8aPTK+GzntqNfrLm2fFoihwYOI
+        xGIF4KjoGBLzY1OrF9k6OOFxnwDC4wxIMX1G0pMhgVyMNyoA13PAtS7OrJk1PrC69LUdQWxuF6IybHrX
+        LRI7JrtZdoDAo1XmbjMyD+tjSXxGcXRmnYg5ttD9QuxDhN0uUgDOmbvNTpPOJaGAo2K36cyaGZvOFIfd
+        KlSA8/zRh9ABIDUG+1JpAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="routeLineMaskColorButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 20</value>
+  </data>
   <data name="routeLineMaskColorButton.ToolTipText" xml:space="preserve">
     <value>Colore del bordo della linea</value>
   </data>
-  <data name="smoothingIntervalLengthLabel.ToolTipText" xml:space="preserve">
-    <value>Smoothing interval length</value>
+  <data name="smoothingIntervalLengthLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAAAiVJREFUOE9j+P//PwMlmMHB4T8xOAqorgKbWmI0swA13gXiL0DMBTPEzvE/gy0QE2OA
+        i6Xz/+9Axe+Bmi1ABoA0+1m9ZAi2eIjVAGmgooP2Dv8NrZ3+M5i5/D9Qqr16UrDFg5NWzv/THIEGAMUY
+        mtSmMZRor2FgACpEwUDbak1c/v93cPgXGmN6RqBXsenPSwaGL2c5lf/7Wj9rM3D7z2ADNPgoty5Dge5m
+        BgYXux9w7ODwg7FYe+3+VeKR/3fz2+5/zcBwDIhv3GNktrjILjf/JJf6lSUSoQxbBV0ZXjAwMKQbHGRg
+        uMQmBscX2cRUnzMwfN3Pa7Znlmze/2qNhX/TDQ9pFepsZLBx/Gl5nFv7/wcGhoRnQM1AdSb1arNSGB4D
+        OSD8CIjfMDBMnCVbdAjoRz0T1///LZz/77ECOhfoLQZzl/+8RTrrnjxhZP7zlIFhPdCAT1Plyl4zPABq
+        BGFgeIo9ZmT6nmB8JhekARiQy4DYHTnuTV3/b+1Wat/5iJlnYoHupm9Ai6phBnAB/dqyU8D+DzDkFUAB
+        iy3R2Dv+n+ti/3NWkMVDXqAln4FqlBiA/pkGdPrL05yqf4Itbp8DGsCIJ3XGAw0/DEwTfUA1R0HqGFKM
+        jlQW6G297WP9+hzQvzkEkrY+UB5k8ycgBiVvBgagJi6gc24CUxcw7v8rEjBACCj/F4jfATEH2ACoBlBg
+        FQAxPufD1DYC1eXBLKIoK4OKAQAF/s1iEFX7sAAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="smoothingIntervalLength.ToolTipText" xml:space="preserve">
-    <value>Smoothing interval length</value>
+  <data name="smoothingIntervalLengthLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="smoothingIntervalLength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="circleTimeRadiusLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALAAAA
+        CwAB5DetvwAAAUxJREFUOE+Nkk8rhFEUxm/IQpYz2Vi8srRhYTYW5iNYSMqCZkMppclOzELJQqGUjQ1Z
+        KGlSFrOb8gWUPRbK1jd4/Z63c3Vc72hu/bp/n+ece+4N7yGEhBrzFtzBLRzDIlT8uTzPg/BiHTiCDrTh
+        APbg2tYe6FeiSWowZtEkXoJRF22A8Qx0IYdd7XmDYRYO4RHmSq6kLKvwYgYf9Jk3mLUUl3uIM9ZfTbxD
+        r9qceQMV7D5JO9ZG4jcTr1qAdQX0BirSaUn0SdY+Tdxw+1OMz72BCtcsMRhn7Qk2/F4UeoMLDlzBYI8a
+        BFobusZ0HMd/sKk7gZ4y/VTFnFYHfk3BM3yJaKBCyWC/T4M1xJnwP1H3lMkWjKRGSQYSFy39yttmckO/
+        ABPGUGIQ9X8MdN95uDQjZVQ8178G6bOUzTE4UcZG69cV+jSoWxax/6nBN2BcWA8xzRYiAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="circleTimeRadiusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
   </data>
   <data name="circleTimeRadiusLabel.ToolTipText" xml:space="preserve">
     <value>Angolo d'ingresso e uscita dal punto</value>
   </data>
+  <data name="circleTimeRadius.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 23</value>
+  </data>
   <data name="circleTimeRadius.ToolTipText" xml:space="preserve">
     <value>Angolo d'ingresso e uscita dal punto</value>
+  </data>
+  <data name="routeAppearanceToolstrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>594, 0</value>
+  </data>
+  <data name="routeAppearanceToolstrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>430, 28</value>
+  </data>
+  <data name="toolStripNew.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEPSURBVDhPrdPZasJAFAZgX8q+Q32N9o2kXkjphQsigoJC
+        ixa1VAWXiohG7IakbmjcNcYl5i8TCQSdGXPhgcPczHwz5xzGZrtWRN+bOM1wqo5gvAJfrIBy4w/cu8hh
+        VjyG3nDjuOcjkbTABB58cSRy9SMiiPSXhF6rTMDpedEPG0ktJfD8wQT26gEEMSAq4I3mqYCmaZCVHQZj
+        WQfst3f0Ep7CGSqw3amYzBWI/TkfcAdTZ4B60LCQt+hJK3yJEz7g8ifOAGWzhzRdo9WdofYt8QFSnzlI
+        42bLDdqDBZqtMUpC3zpgbtxPe4rq5xDZSsc6YG6c8DtCodZDsihaA4x5s1bmGI0Zkw2X8lofWHf+AdjM
+        9sNc+xBlAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolStripNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
   <data name="toolStripNew.ToolTipText" xml:space="preserve">
     <value>Nuovo (Ctrl+N)</value>
   </data>
+  <data name="toolStripOpen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJQSURBVDhPlZNdSNNRGMb/F110ZZEVhVBgeeHNICiiuggp
+        olAUyyxI0oSaH1QYC3N+tKnp5ubm1JUua5uuqdPKMgr7kApFItTUkWZqVhSVYmao5Nev/xyoQ4k88Nyc
+        8z6/93nP4QjCfy6lwc4ltZVso4P/tMyXRcmMHqZ0EeY6jZQVInzuf0e1Tb9Ina3P/tkpLD6XkNg8BJe5
+        u93C+HDVrP4M2ZkcMOOw5tLZ9nxJyJE4HSExBoKkBQhVpTrGhso9zNPfiph0JlB+U01ZcRbmwnRMeWlc
+        08opUCV6QissGsZ+WOY6z4hmuuXglC6pRYBbJSp+fzXNxnaZ66o1s3rkyKHWruJuWRYOcwZ2kxKr8TI3
+        DCkU6+QYNUnuNGWmLEY+5uOK3degoKZcx3SfEvozPfVB3OtNhi4ZvI2nrTIc23U9gtmYwa8eNXzScq8i
+        l6bHWnfRwhHeREJzGFONgYw/CeB9qQSZNNR9FyUGBT87lfQ3plJj1zLTq4COGDegLVo0HmeqKZjx+gOM
+        PNzDYPU2lLF+4jhyN6BIl8pgexK3bRpaXopJuhJEwGloiWDmVSgTLw4xWreXoZrtfK/wp/nKak4E+s6/
+        hDFHTkd9GndsOdCTBq1i3NdHmWgIYvRpAMO1OxlwSPhi2YpT641CuoWzsSfnAfnZiVRZ1Tjvx9GsF+bU
+        pF1BvWolD9JXUZmyDnOiD1cvbCZiYXfXCPrMi+gVZ8hOiiL53DHORwdzKnw/hw/uYt9uCTskfvj7+rBp
+        41rWr/Fig7fX8j/Tsn/fcgx/ARfG3ml6M3rzAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolStripOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
   <data name="toolStripOpen.ToolTipText" xml:space="preserve">
     <value>Apri (Ctrl+O)</value>
+  </data>
+  <data name="toolStripSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIsSURBVDhPrZPdS5NxFMf3L3TfTdBFtzU1hmuxGjzlHMqq
+        YVgRvT2RL+XSZZqoWJlGLV8gW+HSScvpJJxU+AamSI2hTCVLM1e0xKGm2EQw+PY7v+j5tTIvoh+cy8/n
+        POec76NS/Y/37GkUVL72ZbR5l/DYvYDGhgjuO2ZQW/MJ9tsh3CifQmnJBAoLXiMvdxQXzgeh9Cawtweo
+        qV7FRm9ldQ3GtF4cTnvCSxF4Wxe5oLLiy195giMLK9htfg61WoblkEcI3I/muaC05PO6gp/w+/Ai4kw+
+        FFyexgFzkxA462e54JLt3R+CX+GRyQi2SV5Yc8aRmuIUgrq7YS7IzhqNEfwODwbD2Kx3Q5YDMJkcQlBd
+        9ZEL5DMBRbAe3OP/gE2JDThy9AWSkmqF4GblNLq7wE4JHD/5CpZjA3zbtDCamT6bOv+A+3DQ0glJsgvB
+        1bJJdPjAMgA0ub6xu39F+fU5vlRaGM2cmRFU4OTUdhgMFUJwpXAcnmbgoXONBScKY3pOTJlP2JB+roh3
+        Tk5h8H4P9PoyIbDljTEYqLoT5Z1JwEKCOK2EobezGJuag5x7DXuNbRzW7nFBpysSAoql4x6UzyYBwWfz
+        b+FNaB6hmSVcLLYjXu9icCPidz2ANjFfCDIzhtncy3zmrQYPtuyQ0NLRD1/XILr7/Bh4OYR9JgvUunok
+        MHi7pg4ajVUIKNOnT/XzeFLCKCR0ZzoVbZsWRjNTVyqCdyZkxwr+9a/+Dk60OMVjMFpXAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="toolStripSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
   <data name="toolStripSave.ToolTipText" xml:space="preserve">
     <value>Salva (Ctrl+S)</value>
   </data>
+  <data name="tstSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="toolStripUndo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHXSURBVDhPY2CgJZi05VvMxI1fd8zc/fHRsgNfjqzY/2XK
+        siNfpYiys3fD1x31G6786V739Xnjio+P6xd/uTN358fHy3Z9/YTVkO5Vr/4vOfnFAGR619ovy/rn3/+d
+        0vPqjUv8id9aqdv/6Ces/25fdvfjzK1f36za/+UmiitWHvvH2bjk5f95+79erV/+taF+05U/cfX1/1wL
+        jv+3y9j0yyR21XH7/K0PteLr/4R1vPy5+MDn+xjeKJ75/H/WrM//C+d8+R/Z9e6Flf2Wv2bRi3+YRK/M
+        Byn2rd+hYhi84IVr+fX39Uu/7MEwIKnv2X/vpjf/o3s//y+b8+a/htek1UZRKxzhCkNDmeXjD/12Lbvz
+        un7ll0MYBgQ1P/1vVnz/v2fTK7BLEnse/a9d+NYSptDYOI3Vzn7/X7e6Z9+aVnzegmGAU8Xj/w5F1/5b
+        ZR7/bxK/7b9h1Nr/Gj5T/8MUmiSuUbLNrP9n37L/b/60R6UEoxIUsMiK1L0nu2uVXfmTBgzc+lX/2Qga
+        gK7AImXfxRCg5rC6s7kkaU7s+6Bkn3c+xh+o2a3yyjcGhv+MJBngUfnE2af+6S/7rP0/jSNXeJGkGaQ4
+        oudzpHPJ1UaDxJWiJGumiwYAXqjyIzS1ngMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripUndo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
   <data name="toolStripUndo.ToolTipText" xml:space="preserve">
     <value>Passo indietro (Ctrl+Z)</value>
+  </data>
+  <data name="toolStripRedo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHJSURBVDhPY2CgFlh25KvUiv1fpiw78OXIzN0fH/Ws/5JS
+        uPIfJ1HmgzQv2/X109ydHx/XL/5yp3HFx8etq77cKZn/5XPlwi+pBA1Ztf/LzZlbv75xL3/wXj9h/Xet
+        lG1/7HP3f02Z/O5F4ZwvLwrmfg4DGbLk5BcDh6Jr/zEMXHzg8/2wjpc/5aPn/3bJW3/TOHrNMdPYNV/k
+        4+f/tp+8/2/65PfPsuZ+jpy3/+tV68zj/1ceQ/Na/dIve1zLr79X9ei55Vu/QwVkg0n0yny1yKVfJX1m
+        //Jvef8c6JL/WbM+/zeJ34rpgvqVXw45Fd97peLZd5ghNJQZ5kSjqBWOGl6TVpfNefM/uvfzf++mN//1
+        QhdjGtC04vMW+6IXX1W8J9w0Nk5jhRkweetn3Slbv4Jt9mx69d+s+P5/DZ+pmAbkT3tUat+6/6+kz5pf
+        4q7F3DADQAFmBfSzSfy2/3ohS8CaVd26sHhh1X+2tPr6f1plV/6oe092Rw5ljADDFadhdWdzQ4CGWKTs
+        u0gw3rEr+M/oXXntpX3L/r/2eedjEvs+KJFskIrHYj6vypunAlo/ffWofOJMsgEwDd6Nr0Ijej5Hkm0A
+        XTUCAJVf6G0nSs/cAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolStripRedo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
   <data name="toolStripRedo.ToolTipText" xml:space="preserve">
     <value>Passo avanti (Ctrl+Y)</value>
   </data>
-  <data name="toolStripZoom.Items" xml:space="preserve">
-    <value>50 %</value>
+  <data name="tstSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
   </data>
-  <data name="toolStripZoom.Items1" xml:space="preserve">
-    <value>75 %</value>
+  <data name="toolStripToolPointer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABWSURBVDhPrdPBCgAgCANQ//+nDYMCLaXNvHl5IJsifjTs
+        8GpAC1GbDjKBDrIBFnEAgxwAilwBBEmBV6Q6YcVb9sTFyEQaOwD3IraQAuIDwch3wMD0wQZXPN8hfWsG
+        XgAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="toolStripZoom.Items2" xml:space="preserve">
-    <value>100 %</value>
-  </data>
-  <data name="toolStripZoom.Items3" xml:space="preserve">
-    <value>125 %</value>
-  </data>
-  <data name="toolStripZoom.Items4" xml:space="preserve">
-    <value>150 %</value>
-  </data>
-  <data name="toolStripZoom.Items5" xml:space="preserve">
-    <value>200 %</value>
-  </data>
-  <data name="toolStripZoom.ToolTipText" xml:space="preserve">
-    <value>Zoom</value>
+  <data name="toolStripToolPointer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
   <data name="toolStripToolPointer.ToolTipText" xml:space="preserve">
     <value>Puntatore</value>
   </data>
+  <data name="toolStripToolAdjustRoute.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB7SURBVDhPpZNRDoAwCEO5/6WnI2JGVyoqiT+yPLrSmZmN
+        8/tVE1BBoieHjFkE4v+jlFJ2aIU6vBjiV68moewSkgBiUh+gPGFebAqEcejN7gHS1HaiRxVczSoHae1p
+        jZ29Y2zR3VZ4Vgim8BOAqlLpe3p9r1UwoHql9/kDyX4i7Df5W1AAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripToolAdjustRoute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
   <data name="toolStripToolAdjustRoute.ToolTipText" xml:space="preserve">
     <value>Modifica il percorso</value>
+  </data>
+  <data name="toolStripToolLap.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB0SURBVDhPrZLRDkARDEP3/z/t3knI2kyHkHhAnU3VzKz9
+        c2e4bkzQp5tEbHFw0X4mOonnXcf6CU8gKzjsq/bOAdTeHUBAtAfwFjS2/gW+PNbB2HUOssshNGVO4BuT
+        ymVK2WmVixTGLV4BmHwMeQ5wYOm+iz6qgD7QoohWnwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="toolStripToolLap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
   <data name="toolStripToolLap.ToolTipText" xml:space="preserve">
     <value>Aggiungi tempo intermedio</value>
   </data>
+  <data name="toolStripToolCut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB1SURBVDhPlVIJDsAgCOP/n3bTDdJxDEpijNpWbBURWe+4
+        J6qMt3aRIh/OWRAiKX4q8ovrRLrzY2AFGpE1Ag+myEEEzN1JUaXRshE/XiR+jDvwN487yYjmCXz59El+
+        M2sX94KIJ3QC6pOlgoqV6y0GPajyDpgL9XC8RCNefroAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripToolCut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
   <data name="toolStripToolCut.ToolTipText" xml:space="preserve">
     <value>Estrai il percorso</value>
+  </data>
+  <data name="toolStripToolZoomIn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABlSURBVDhP3ZJJDgAgCAP5/6fdIgaRittJEy+kDFhLNJ6Q
+        SvIaErtUmvQRsCloaAQgCOn0PFUWa80EwLVXt2g6ZV4zkgVoi3cANQk9zfdh18RMvP7GAnGCxKa6yURR
+        Poq3nvYhhCJIaTHd2laAhgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="toolStripToolZoomIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
   <data name="toolStripToolZoomIn.ToolTipText" xml:space="preserve">
     <value>Aumenta lo Zoom</value>
   </data>
+  <data name="toolStripToolZoomOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABdSURBVDhPY2DABP+BQsgYixLsQmBN6ADJMLwGYWjEYRBO
+        QygygKBmmAKodzBcATcALfDgAUk/Awj5BZcXQH4ipBfmHdrEAsxUQgmJoCtQDMKSAslK3uh+HoaGMAAA
+        ykBJxduNsuQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripToolZoomOut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
   <data name="toolStripToolZoomOut.ToolTipText" xml:space="preserve">
     <value>Diminuisci lo Zoom</value>
+  </data>
+  <data name="toolStripOpenInGoogleEarth.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANoSURBVDhPbZNtTJNXGIafGLKBQDbROozElTFjFItj2WDD
+        ARvJUjQKBmFDka+xMtwPE8dgOj8K2QKlk6/yIWCAiFo2JBv2VbHFAAVpqXPvO9qVFktpRYFIN1RQ0Lnl
+        3ivMH0Se5Mo5OTnnynNO7kO0RIk/VwbmyjWSghptUSFPdlF7VnSGMmipvYvWtuxWBu7Jaf9ZWt3/uIkZ
+        wuWeEXToHOjU26FSDf6dLdcw7yY0vrWk6PWo2m0x6SVT+cU/4kRVKxpa+tDL/Qkt68L5q6Po0N/G7TuT
+        qFD+Oh28+3TcIsmroaeCtqfKZ0ZGbHjy+BHmZh/CarWisVmDxgt21KtGkVdrxk9qJ6anH6BUeX1O+HF9
+        6P8S6TJhmOzalS4OuoEpjE48wvOa+suF4upW5JaxOFZrQ1YhB7VuHPfvTSHtMMNSpNSN3EWK8LD4GmR8
+        b0RKHoeDpRYo1eO4N/103jP78AGKFC1IP67DFzIr0vJYmGwudPZZIAivExP5y+VvJ3UiNvsGUvP/QGah
+        BZICK47WOMBaZ+Yl/z6dRUn1ecQcuIpdh8xIPs6i/JwRy4NLq4j8ipmAnWrE5vyOxKMWpH5ng6TQjoyC
+        Bc5ecWHuyTPNP6hvakNkSgvCMlkIY9SgALmGaG25hja3IfSz35BwZAh7pcNIzh/mRfZ5Pjliw1cKJwzm
+        hbcx9PdhR3oVaGMlaN0P3US+lQ3kz8Btqx5ByUbs+HoInx4bRhIv2pfHw4/x395EbO5N5FTeQhc7A4fD
+        ibKKBry8qaj5mSCZPBTwCi7BSyG/YKX4BkT7LHybFnz4Jc9+fi4ZhCjJiFXi6/CI6EFgog6J3/SA3qzK
+        Ilohe8XvnbK7vVotTjWpELf/DITRbfCN1mPdLhPeiDfDP84Ev50cBGID3MP5g6KLoDUN98m3XLCQhfVn
+        JUznMMbGJ+GaHIfJOICTpzuQdohBRAqDzXGXINx2Eb4ftSJAfAYbtjeBVtceXJTG5aKK8u5+J4zWMZy7
+        5AA3eBcTExO45bSD5QbQpdVDdVmHumYDXgs5Uffif/CJWrtMkDm4J6eXv1s3PCOuYUuSAdEHOD4jRkRm
+        cVgd1Q5yk4ySz3shLwoECV60IlxMXh9IyVPSRu4yE3kr7pD3yTHykJnJM5Mh74gC8nk/nlaJ1zwX/AcB
+        GR/WpKQjZwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="toolStripOpenInGoogleEarth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
   <data name="toolStripOpenInGoogleEarth.ToolTipText" xml:space="preserve">
     <value>Apri in Google Heart (Ctrl+E)</value>
   </data>
+  <data name="toolStripPublishMap.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKESURBVDhPhdPtT1JRHAdwX/YP9LqtLFvW1oPNJiotnxWK
+        oWmholOzzOaUqzh1i02lfIistKRcPmTWnMaDiijgEzDwAhcueEHMLK2lL1ovnH/At1tbm724dl6d7ez7
+        2e93zu9EROxbxYqRzCSxrCKvSN6ULZV3pIgb+lJzFRrhzRZrpkTJFNzuGsyv7H26P/PPPqZo5kdUWi+i
+        EgjECpRQKUfR3WPC/RcujAwbwZCzqFP0b3MCF0rNX6LSXyIyoRZxwmY4NWPwOhnoqT3Y7Wtg3Euoau0L
+        cALREuPaH4AnA0/UCppcwiYdwLRvDy7/DrYoF2oUA8ucQJZsMXxG2I/jbAtXrj9E2GqEx7AAp2sdXpJB
+        0EWhXjFk4QT6J+eDss5hZEofQVysgl2jB6nX4rM9BLvOgsUJByruPdNwAl9/7lJGGw1R6RNck3Yh7Kfw
+        yRHE6vtphHUUrDYKBWWdw5zA6uaOzx/6hvzKHohKOrDgnsZHK40tRosNksSycw55UuVz7juoMYXLmgyI
+        EzUjWdwCo1kHctQJ81AItHMbpN+HO4S6nRM4X2L2HUl6xT4jgcTsdpg8NjicU1iZdSBEMdBO+VBep67n
+        BM5KZ6hTggEc4xFIk3Qg5POAdGvh9prYdtbxZpxGVaO6nBsoNLDAIE7w63C1UAXGRYNanWUrMYMOWPBB
+        xw6SvPvGARUYqGjhICLja3E5pw2WJQ82PAvwB+eht5kgb1PvVhAPLnIC56ST3tPCAXYSCaRI2tjxncPY
+        u3FUNz7+LhDfUmZliY9yhn8f8EonAiczXrMVELiU0QD2V67wU/Or49NzDh8Y/HsoId4mxghUU7EZ1TPJ
+        wru5fH7Rof8FfwEbeIEBF9VbngAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="toolStripPublishMap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
   <data name="toolStripPublishMap.ToolTipText" xml:space="preserve">
     <value>Pubblica mappa</value>
+  </data>
+  <data name="toolStripFullScreen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIfSURBVDhPzZPdS1NxHMb9p7qYN3ZTUV140VVeJhgYYm2D
+        LSgNixQSNSq0dJqaziw1M3sBNXPTTTdFJa1Y2tybmtOGK8fafufT+U5Yp8ugiw6cmwPPy/d5nlNQ8F88
+        vaM+el7M8Whklu7nXrqGPXQ+m6Zj0E37gAvH03e09k/y4PEE9/vGaXGOkTcuYA2F0hQZpUhnFamM4kda
+        kUwpEgcae981dvY1thIasW8a4V2NIydLD0lEWcC1HQvY73iprPdQcctL2U0vJVUzFNvcnLjkouiCC9N5
+        N8esfoI7BgKxLcrWRg8LX8AbgMlVeLWkMTin6HEpWsez3H6ZoXboJ0ftEda2DQRys9g2N8ww+xndJkT3
+        IBjnD3CdDja3JSi0hglsGggkMLlZCKY+wGtdecin6HUr2kR5NMONJylsD/cpvxvHZAnzMcbvDCRtCUwI
+        3ixrbOjKa9vwaRNWIrC0Af61w9PO1UdzBKv693yIUpWkLQTDfoVzWuGYyNI4kuZ6/wH2ziSVLbuUNcQo
+        qVnHZA7xPmQgkJ6lKiHo08GiLApG5akVGFuEM5dXcwTLuqu8AxmJ9Gxt8tD+NkvdQJJqZxKLI0H5vXjO
+        tigL+PTFeQotIRaDBgJZmIzkarOPakeAa91fsTm2qWjeorRpk7N1MYprohy/EqFIr/BUVTRXd96BzNO4
+        MBmJ9CxVSdpyjtwstkVZwPPrBgJZo7D97fvPfuJfzsJSIcPgSG8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripFullScreen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
   <data name="toolStripFullScreen.ToolTipText" xml:space="preserve">
     <value>Schermo intero (F11)</value>
   </data>
+  <data name="toolStripRightPanelVisible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+QAA
+        CvkBtGHeGQAAAWtJREFUOE+tk89KAlEUxn2e3iFwGS18guglWlSbiBatisIWUUJFfxahkUFQCTVqRpmO
+        UGmWmeboKM7YzKgzjuP8+cJRAmlxBTtwLtzF9/u+ezjX4ZioY6QeSdw1/xcAzaiIfMgIpOq4SkpgJR1i
+        GzAs2OV0OpHNZv+0bd49lNQFpLaFeLENmtURzjRtoNLpEYgALuoFd38ExjeHViEOSQV0s28/DKAS3sX3
+        SwDprWk8r0zCVIRe9n4RE9Q/o2BvtlG8XINcSsLUlF+x2DLJTzB1DULqGjx9NuBsyDz4pkEGMOfLA8Lu
+        RVdE5I5nwVA7ZEDGPQ7+4aAHsSwo5TdoDQ7loAc12k8GPPkWIMQO0fhKwDI6iM+PoUJ57BRdCHGIqzNT
+        UHJ3KAXc0GQR7HsM9VrFDqRyeTLgZHMJmQ0XCqeLyAf3EWSB6G0IYsI/3CJVI3voyALUWgH8oxchKoAC
+        W8XrugtCmiInGOVD/QCCOQUOsCKjugAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="toolStripRightPanelVisible.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
   <data name="toolStripRightPanelVisible.ToolTipText" xml:space="preserve">
     <value>Visualizza il pannello di destra (Ctrl+Shift+R)</value>
+  </data>
+  <data name="toolStripBottomPanelVisible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+QAA
+        CvkBtGHeGQAAAYxJREFUOE/Nk0lLw0AYhv15Hj158dDqUfDgXxDFgwhFUQQF64JQFxQURam472JjFxdI
+        atO0TZeg1rS1NdHH1GqjnsR68IN3Puab+Z6Zd2Dq6uqz1KSamsuH/wlAO53D6+5iuLMd71gH4elWbkYb
+        SR95MB9z6LJA5nSe1KEH3b+EFhbwJ82K9fJgFLJWQwva5iAPoWVuz2bJK+e8PJtkzpZQVvtI7IyTXO8n
+        HdpA0uFAytmAws0xiZVektujFFISH/FiPvEQ8aH5Fgm4GoiMNBEN7LGtgPfi3gYI69OcBC9RtVvUHTep
+        XTfPRqkKMot5tOMZdPGQ6J3BbrjIRfzRBgSlOFuChBxXkRe7iS33VACWhe8hZkrsizlyBjZAmmgjvTeJ
+        kb9/21+ICqgbQ5bnAShlvzCKFlN/qpSqjxhYcxOVrpHFK4LeKXzzLoSFPo5mXfivwoREhYisEI/FiL1L
+        VRM2wOFsxuFwVOR0WrLmZTW32PWP9U+5egNRFPmN/hfAfLdQzj/Rm+WqhVo+1CuZOgM5QYnCowAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="toolStripBottomPanelVisible.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
   <data name="toolStripBottomPanelVisible.ToolTipText" xml:space="preserve">
     <value>Visualizza il pannello dei bottoni (Ctrl+Shift+R)</value>
   </data>
+  <data name="toolStripHelp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIYSURBVDhPtVNPaxNBFO9HyEfYj1AUPHjK0eOiDeSYQg89
+        qAQPEgRxKQjBYBuRosHSXatiI6nupXaN1q5oa4tIF2s1tmGzLVHTZpuObpX+0fx8M1NYSyM5+eCxb4b5
+        /XlvZzo6/kdMLwS4U1xH+m4FfcNLGCyUMf7qM9pqvXO3kZ9qQC+uwavv4tvWHliwS/UOruZLSOsOiq9X
+        WxNx8AN7E/6PJmwH0EYBNS2T17bD4G42cWlwBuMvyodJuPLGzyYMG4imAMMC2DZEeAxI3uR7DBUiOZd5
+        dpBg+v0WHs83hDIH88M8zFkgkZVfThZNMaoZdOsDcvk3Icm9p3V8Yb+E1WhS2s6aQCfVSi9DMksWKFSN
+        IZF2sOQG6L4wFhJk7q+KgamaBHX2ylQoEwTm6naJQVFtKHEbNT/Asdj1kODybZemvSfsSyAdTjByIpVN
+        m9YEjKgmfU3U6t9xRB0ICXIPK1jxd6h3CVTinsjsqCSIqA6lJFBTNkrlKrrOGCHBxMxXWI4vBsSBkTgH
+        ONSSR3OhNQefMEUalocxaxFXbk0e/BOZkQUs+79JdR9AIF4LB/tgzXDwad3HqdP64XswOVdFX24OboPu
+        AqmomiP65slrvrdc3UCMrA8XZlvfxomXFZzvn4Lx5CPmF1ewRtOu1QPRM7fdRcr6v8B/P5Shwlv0XHyE
+        4/EbOHryGmJnR5AZet7+MbV9bS0O/AGd2vKsTr+IQwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="toolStripHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
   <data name="toolStripHelp.ToolTipText" xml:space="preserve">
     <value>Aiuto</value>
+  </data>
+  <data name="toolStripApplicationSettings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIISURBVDhPpZP7S1NxGMbPPxKaXVUkMEq8IpKUCoY/hGgI
+        ymqkDYYXcCjDZOANURSjCNGFQUTsl4GXVMxKk62YU4fXQpaIlygHQxBRH8/zwvyaIAYe+HLgnPN8nue9
+        HA3nvDTq63oW/jm13XOwvPTB3DYFY5MH+bXfcN8ygfTSMSSXfESicQDxBqdYHwH29g9w2tnZ3UcguIvN
+        rR3417exuBJE5N1n/wfwLgXEOc38Bc6xNRHb+/y4nm49G0Bnit2zf9H6bkliE/jKuYxrd6oVgDWfjB+K
+        TWeKMyrGEVfowITvD9re/9ABVQrAhh0HHK+ZselMMaN/mvwtDb+aVqkA7HYIwIj3ysfluPTorJnP6Ezx
+        oHsD1s5ZXEktUwCOioB5f1CEPR9+wTG6iuiserTo8dkwng7HT/R+XUPF8xlcTjErAOdMcW6NW8STiwG8
+        7vej8oUPN/PsEv3t8Ao0TZP3T1u8uJRkUgAuSYHtO97oLxmXd5t9Ho8aPTK+GzntqNfrLm2fFoihwYOI
+        xGIF4KjoGBLzY1OrF9k6OOFxnwDC4wxIMX1G0pMhgVyMNyoA13PAtS7OrJk1PrC69LUdQWxuF6IybHrX
+        LRI7JrtZdoDAo1XmbjMyD+tjSXxGcXRmnYg5ttD9QuxDhN0uUgDOmbvNTpPOJaGAo2K36cyaGZvOFIfd
+        KlSA8/zRh9ABIDUG+1JpAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="toolStripApplicationSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="toolStripDonate.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADkAAAAQCAYAAACsu9d7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAYZSURBVEhL1Zd7UJTXGcaZ9I/6l9NJp2OaZpJxvEQQUYjx
+        2oJBrUUbBGE1QZMCjYkREl3BRscqmCYoXlAUJsKSBJAFF5abYlBATFUy6ZpMiUmUiSgYiqIgyE2BLueX
+        9yxIwNjgTP9iZ5495zvv877f83zn7LfnODkN+iiT6xiVMMl4L+fF5o6iiPbOkqi2zpJtIwBRbR1Fke33
+        rKuaVYKLUe13HTPY10Bf7XV53G75cwVXcqGzBtRd5EvQOwKgddqhqwHqyrEXBFVoP0OMqvjxo+35q2y0
+        XICeJrhXL0avQUftyMLdOtHf6NBsz3/Fpn0NGO3NfOGYajgDbVXQ8tXwuKMfxreCi33okn6rjD1K7qNw
+        dK22/6Ne6zei5QLd1pXHHCZVwhTP+qORParZhrp5ZljQdI6m6hKCN8XiFRyFV0gUW3YfoP1aKTqma9Ao
+        uH0Wdau/nm77QZPE7o8/hEvjWe7WncZ2Lp/u6586uDSddeBR9A1wWs5TfymtRyU4ezr1pnqkYzNKgXLU
+        jRPDgpYyKk5n8uvZa1i3fQexCfGM8Q5nffQOeXpiVNBWc5zaC/litARunoCGk45+782TNFwqoKe+WMZl
+        rLGEe3XF1FTmYb8l13pM6gdFvMvfYnbBHakneTcuFnC7+qgYLRlW34CHW+VwOQntz6kzY26rKjegLn+I
+        ul6E+k+BIP9/gpZjJH90gCfmh4uoQug+SWziPqb5G+V9ZSXtcCIu/hF4GCIxrNvO3au5VNnMeCzfyMvG
+        aKYGRuAXFkWv3Kf4qAm3gEjchbt8fTRdtbkcTIrHaXIoE32NnP9nOltiY5lmiGDS0g0U5B1y3PPn9Dli
+        9Uf7OJ+H0Zkxp1VMzmlVxQtQZQGoqgRUnVWQi7pmEWQNAd9nwXULr72zjcWvbXb0acwmMXkP7gFGjucn
+        MmrWGixZB6n+14c8PT+MjLR9WDL385j7ajIz9mNK2cvvvNdS++XH2E4lkZoaR3paHKNlZdjKkzlRmMhv
+        ZGVYLQdIMu3lV55rqTxjYnXkNqYvi8BeKxq+P/ITbQ69dTl92q9+jKp4A1U8X0zOFpPJM1sp8oSC2VA0
+        D3VOgl/HoL5LQtUc7i+WKW2mFM+Sm5hxD9zAP/buhGa5YYOZBaGbWSGzFBO3ixnLRUiD8K6bmfVSJHGJ
+        e3hrazRzgt6RN3ae5O1giv8GemrMbHr/PfzDt0psI2N91nGnKgPLkXjGLV5H+9UMgjdG86T324RvjZHZ
+        /zvLwqPovmoWHX16BiCaVLUJdTEObJGoEz7iZ5b4+QPan5ic0krhdMjXeA5yp0r7PBz3Bk0+ueRHlC6h
+        udCXX0xfQ8L2IK5kB7J2/euMmvk6X6T8ieR3DYxd8AY3C5ZSnLiCX8qsfpbsyx8NfyE87CWoWEzAqlcJ
+        CnmZy1l+jHILpfiAL8Fr/sqMF4Ph00VErF+Js08onFrCm28GMXtpCN+m+bB/m4HKVF8oXTxU0319nyyA
+        QpkoqxvkefT5EV/an1Nvsrx4clwhx2UQnCH7WbBMGArrOM7HezBx4Sqe9lrJE3OD8PRdRtkeKV44nsY0
+        NxYGBDLBewVPeQbxweYXuJU2mXl+Bop3zsGeNYFFgQGYo73oMk9kmo/kLzXg5RdIaIgYOP4MuyO8cfJY
+        TerW31Ob4s5c3xVMnL8SL+FVHXKXSRj3U11ap9abM+kBH65of07qkLtnffpve7BOfoAw2PSP/e4jrtzJ
+        cKPlsCDdjf/mSF5+f3GrM12WyVwxedCQOk2eqDP2bBdaha+k1dB9e7bkCLfN7MYN4XVJzY7MKY6xbsmv
+        TfFw1CdvEu0yXp38HB1ZEs+Vhz9kMh6u0cGxuqB9aX+O/8relBnHVKm/LJHlshwCfx7yguLUskGQ68E5
+        p+S6XOIapf0xzdd5mjek38/VOffjutW5eszBf+B6OH06XiY+ygz0pszs2ww4NgTxM0bbzQttqvI9+EZ+
+        vJXyn/fv90ceKmPga61/Jw4/4mvo/tXUv0Gv3Af1n8hOo0JwbgRB9N44LZOUiD3Xr0KJn4efRPRR64Op
+        Rn1k6Ttqhckxa2Sg76gV0mw3jTcq09ghR60fADNu47Bw4yUXAAAAAElFTkSuQmCC
+</value>
   </data>
   <data name="toolStripDonate.ToolTipText" xml:space="preserve">
     <value>Sostieni lo sviluppo dei nuovi aggiornamenti di QuickRoute</value>
   </data>
+  <data name="toolStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="toolStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>591, 25</value>
+  </data>
+  <data name="menuFileNew.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAQ9JREFUOE+t09lq
+        wkAUBmBfyr5DfY32jaReSOmFCyKCgkKLFrVUBZeKiEbshqRuaNw1xiXmLxMJBJ0Zc+GBw9zMfDPnHMZm
+        u1ZE35s4zXCqjmC8Al+sgHLjD9y7yGFWPIbecOO45yORtMAEHnxxJHL1IyKI9JeEXqtMwOl50Q8bSS0l
+        8PzBBPbqAQQxICrgjeapgKZpkJUdBmNZB+y3d/QSnsIZKrDdqZjMFYj9OR9wB1NngHrQsJC36EkrfIkT
+        PuDyJ84AZbOHNF2j1Z2h9i3xAVKfOUjjZssN2oMFmq0xSkLfOmBu3E97iurnENlKxzpgbpzwO0Kh1kOy
+        KFoDjHmzVuYYjRmTDZfyWh9Yd/4B2Mz2w1z7EGUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="menuFileNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 22</value>
+  </data>
   <data name="menuFileNew.Text" xml:space="preserve">
     <value>&amp;Nuovo...</value>
+  </data>
+  <data name="menuFileOpen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAlBJREFUOE+Vk11I
+        01EYxv8XXXRlkRWFUGB54c0gKKK6CCmiUBTLLEjShJofVBgLc360qenm5ubUlS5rm66p08oyCvuQCkUi
+        1NSRZmpWFJViZqjk16//HKhDiTzw3JzzPr/3ec/hCMJ/LqXBziW1lWyjg/+0zJdFyYwepnQR5jqNlBUi
+        fO5/R7VNv0idrc/+2SksPpeQ2DwEl7m73cL4cNWs/gzZmRww47Dm0tn2fEnIkTgdITEGgqQFCFWlOsaG
+        yj3M09+KmHQmUH5TTVlxFubCdEx5aVzTyilQJXpCKywaxn5Y5jrPiGa65eCULqlFgFslKn5/Nc3Gdpnr
+        qjWzeuTIodau4m5ZFg5zBnaTEqvxMjcMKRTr5Bg1Se40ZaYsRj7m44rd16CgplzHdJ8S+jM99UHc602G
+        Lhm8jaetMhzbdT2C2ZjBrx41fNJyryKXpsdad9HCEd5EQnMYU42BjD8J4H2pBJk01H0XJQYFPzuV9Dem
+        UmPXMtOrgI4YN6AtWjQeZ6opmPH6A4w83MNg9TaUsX7iOHI3oEiXymB7ErdtGlpeikm6EkTAaWiJYOZV
+        KBMvDjFat5ehmu18r/Cn+cpqTgT6zr+EMUdOR30ad2w50JMGrWLc10eZaAhi9GkAw7U7GXBI+GLZilPr
+        jUK6hbOxJ+cB+dmJVFnVOO/H0awX5tSkXUG9aiUP0ldRmbIOc6IPVy9sJmJhd9cI+syL6BVnyE6KIvnc
+        Mc5HB3MqfD+HD+5i324JOyR++Pv6sGnjWtav8WKDt9fyP9Oyf99yDH8BF8beaXozevMAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="menuFileOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 22</value>
   </data>
   <data name="menuFileOpen.Text" xml:space="preserve">
     <value>&amp;Apri...</value>
   </data>
+  <data name="menuFileSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAixJREFUOE+tk91L
+        k3EUx/cvdN9N0EW3NTWGa7EaPOUcyqphWBG9PZEv5dJlmqhYmUYtXyBb4dJJy+kknFT4BqZIjaFMJUsz
+        V7TEoabYRDD49ju/6Pm1Mi+iH5zLz+c855zvo1L9j/fsaRRUvvZltHmX8Ni9gMaGCO47ZlBb8wn22yHc
+        KJ9CackECgteIy93FBfOB6H0JrC3B6ipXsVGb2V1Dca0XhxOe8JLEXhbF7mgsuLLX3mCIwsr2G1+DrVa
+        huWQRwjcj+a5oLTk87qCn/D78CLiTD4UXJ7GAXOTEDjrZ7ngku3dH4Jf4ZHJCLZJXlhzxpGa4hSCurth
+        LsjOGo0R/A4PBsPYrHdDlgMwmRxCUF31kQvkMwFFsB7c4/+ATYkNOHL0BZKSaoXgZuU0urvATgkcP/kK
+        lmMDfNu0MJqZPps6/4D7cNDSCUmyC8HVskl0+MAyADS5vrG7f0X59Tm+VFoYzZyZEVTg5NR2GAwVQnCl
+        cByeZuChc40FJwpjek5MmU/YkH6uiHdOTmHwfg/0+jIhsOWNMRiouhPlnUnAQoI4rYSht7MYm5qDnHsN
+        e41tHNbucUGnKxICiqXjHpTPJgHBZ/Nv4U1oHqGZJVwstiNe72JwI+J3PYA2MV8IMjOG2dzLfOatBg+2
+        7JDQ0tEPX9cguvv8GHg5hH0mC9S6eiQweLumDhqNVQgo06dP9fN4UsIoJHRnOhVtmxZGM1NXKoJ3JmTH
+        Cv71r/4OTrQ4xWMwWlcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="menuFileSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 22</value>
+  </data>
   <data name="menuFileSave.Text" xml:space="preserve">
     <value>&amp;Salva</value>
+  </data>
+  <data name="menuFileSaveAs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 22</value>
   </data>
   <data name="menuFileSaveAs.Text" xml:space="preserve">
     <value>Salva &amp;con nome...</value>
   </data>
+  <data name="menuFileExportImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 22</value>
+  </data>
   <data name="menuFileExportImage.Text" xml:space="preserve">
     <value>&amp;Immagine...</value>
   </data>
-  <data name="menuFileExportGPX.Text" xml:space="preserve">
-    <value>&amp;GPX...</value>
+  <data name="menuFileExportGPX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 22</value>
   </data>
-  <data name="menuFileExportKMZ.Text" xml:space="preserve">
-    <value>&amp;KMZ...</value>
+  <data name="menuFileExportKMZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 22</value>
+  </data>
+  <data name="menuFileExportRouteData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 22</value>
   </data>
   <data name="menuFileExportRouteData.Text" xml:space="preserve">
     <value>&amp;Informazioni del percorso...</value>
   </data>
+  <data name="menuFileExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 22</value>
+  </data>
   <data name="menuFileExport.Text" xml:space="preserve">
     <value>&amp;Esporta</value>
+  </data>
+  <data name="menuFileImportSessions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 22</value>
   </data>
   <data name="menuFileImportSessions.Text" xml:space="preserve">
     <value>I&amp;mporta percorsi...</value>
   </data>
+  <data name="menuFileRecentDocumentsSeparator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 6</value>
+  </data>
+  <data name="menuFileSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 6</value>
+  </data>
+  <data name="menuFileExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 22</value>
+  </data>
   <data name="menuFileExit.Text" xml:space="preserve">
     <value>E&amp;sci</value>
   </data>
-  <data name="menuFile.Text" xml:space="preserve">
-    <value>&amp;File</value>
+  <data name="menuEditUndo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+QAA
+        CvkBtGHeGQAAAexJREFUOE9j+P//PwMlGK/myVu+xUze/HXHvN1fHy0/+PXIyoNfp6w69FUK2UKcBvRt
+        +LoDiP90r/v6vHHFl8f1S77cmbvz62OgAZ+QDYEb0L3q1f9lJ74agEwHalrWv/Hb79RJ7964FJz4bZ26
+        /Y95wpbv7hV3P87c/vUN0ICbMFeADQAKcDYuefl/3oGvV+tXfG2YsOnbn7ie5/9cC47/t8vY/cs0ds1x
+        l/ytDy3jl/8J63j3c+mBr/dRDABximc+/5816/P/wjlf/kf2fHxhlbzlr0Xihh+msSvzQfIBtdtVDCMW
+        v3Atv/2+YemXPRgGJPU9++/d9OZ/dO/n/2Vz3vzX8J602iRmhSNMoYJDHbNd1qHfrmV3Xjes/HIIw4Cg
+        5qf/zYrv//dsegV2SWLPo/91i99aIhnAapd56K9X3bNvzSu/bMEwwKni8X+Homv/rTKP/zeJ3/bfMGrt
+        fw2fqUB1kHRiFrdeyTbz4L+Altd/C6Y/LsUwAD0xgQIWWUzda5K7a9ntP2mT3//r3fCVjaAB6AZapOy7
+        GNLx4V9Y3flcohISTFFc33slh/wLMf4tH/75VV75phUwm5EkAzyqHzv7t3z65VFy8adx1CovdJcRzEhR
+        vZ8jnUuuNZrGrBPFlukIGkAop1JsAABuDMymYL0yPwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="menuEditUndo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 22</value>
   </data>
   <data name="menuEditUndo.Text" xml:space="preserve">
     <value>&amp;Passo indietro</value>
   </data>
+  <data name="menuEditRedo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+QAA
+        CvkBtGHeGQAAAd1JREFUOE9j+P//PwMlGK551aGvUisPfp2y/ODXI/N2f33Us/5LSuXCL5yEDAcbANIM
+        xJ/m7vz6uH7JlzuNK748bl315U7Foi+fKxd9ScVnCMyAmzO3f33jXvngvXnClu9WKdv+OOQe/5oy+fOL
+        wjlfXhTO/RIGMmTZia8GDkXXgEyEt8EGLD3w9X5Yx7ufZtHzf7vkrb9pGrvmGBB/MYvf/Dt58ue/6TM/
+        P8ue+yVy3oGvV60zj/8HuhbuNbABDUu/7HEtv/Ne3avnVkDtdhWQmGnsynzj6OVfdQJm/wrt/Pgc6JL/
+        WbM+/zeJ34rpgoaVXw65lt97pebZd1jBoY4Z5kSTmBWOGt6TVpfNefM/uvfzf++mN//1QhdjGtC88ssW
+        7/oXXzW8J98EGsAKM2DK1q+6QAy22bPp1X+z4vv/NXymYhpQMP1xaWDrm79GkWt+AQ3ghhkACjAroJ9N
+        4rf91wtZAtas6taFaUDvhq9saZPf/3Mtu/1H3WuSO3IoIwcYtuiEJ6SwuvO5IR0f/lmk7LtIKPFgRCNI
+        QCtgNqN/9bWX/i0f/jrkX4iJ63uvRIxBKPkAaAifT+XNUwGtn796VD92JtkAmAbvhlehUb2fI8k2gBiN
+        MDUUZWWQIQCu1sRwfRrh4gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="menuEditRedo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 22</value>
+  </data>
   <data name="menuEditRedo.Text" xml:space="preserve">
     <value>&amp;Passo avanti</value>
+  </data>
+  <data name="menuEditSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 6</value>
+  </data>
+  <data name="menuEditChangeStartTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 22</value>
   </data>
   <data name="menuEditChangeStartTime.Text" xml:space="preserve">
     <value>Cambia il &amp;tempo iniziale...</value>
   </data>
+  <data name="menuEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
   <data name="menuEdit.Text" xml:space="preserve">
     <value>&amp;Modifica</value>
+  </data>
+  <data name="menuViewFullScreen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+QAA
+        CvkBtGHeGQAAAi9JREFUOE+lk0tPU1EUhfunHJQJTtSoAwaOZCgJJhiC0ibURMGgkSYSwKgBhYKIUEQB
+        EfGRACIttDwDRKqmFkuhLZWHLVWa2p77eXdN6nVoGNzJTda31t5rHxNgOsx3KLEYmxKJhKlnZI7ul7M8
+        Hp6h64WXR0MeOp9P0THgpr3fhePZe1r7JnjwZJz7vWO0OEcRXQ4gYg2F0hQZpUhnFamM4mdakUwp4gca
+        ez80tvc1tuIake8aG7saR06W6HodIM4irutYxHbHS0W9h/JbXkpveimunqaoys2JSy4KL7gwn3dzzDpP
+        cNsAkNjibG30sPgVvH6Y8MHrZY2BWUW3S9E6luX2qwx1g784atskEDMAZGaJXdkwzcwX9JgQ3oPgDv+I
+        7bq4si1OgXUDf9QAkIXJzAKY/AhvdOfBOUWPW9EmziMZbjxNUfVwn7K7O5gtG3yK8HcHsm1ZmADermis
+        686BGHyOwuomLK/DfODPaOfqwzmAT/+fX6JUJdsWwNC8wjmlcIxnaRxOc73vAFtnkoqWXUobIhTXrmGu
+        DPEhZABIz1KVAHp1sTiLg9F5chVGl+DMZV8OsKKnyieQI5GerU0e2t9lsfcnqXEmsTjilN3bycUWZxGf
+        vrhAgSXEUtAAkAuTI7naPEeNw8+1rm9UOWKUN29R0hTlrD1CUW2Y41c2KdQrPFUdztWdTyDnabwwORLp
+        WaqSbcs4MrPEFmcRL6wZAHLTQvvfL/8WDvOURfsblYYTxd5DjEEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="menuViewFullScreen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 22</value>
   </data>
   <data name="menuViewFullScreen.Text" xml:space="preserve">
     <value>&amp;Schermo intero</value>
   </data>
+  <data name="menuViewRightPanelVisible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+QAA
+        CvkBtGHeGQAAAWtJREFUOE+tk89KAlEUxn2e3iFwGS18guglWlSbiBatisIWUUJFfxahkUFQCTVqRpmO
+        UGmWmeboKM7YzKgzjuP8+cJRAmlxBTtwLtzF9/u+ezjX4ZioY6QeSdw1/xcAzaiIfMgIpOq4SkpgJR1i
+        GzAs2OV0OpHNZv+0bd49lNQFpLaFeLENmtURzjRtoNLpEYgALuoFd38ExjeHViEOSQV0s28/DKAS3sX3
+        SwDprWk8r0zCVIRe9n4RE9Q/o2BvtlG8XINcSsLUlF+x2DLJTzB1DULqGjx9NuBsyDz4pkEGMOfLA8Lu
+        RVdE5I5nwVA7ZEDGPQ7+4aAHsSwo5TdoDQ7loAc12k8GPPkWIMQO0fhKwDI6iM+PoUJ57BRdCHGIqzNT
+        UHJ3KAXc0GQR7HsM9VrFDqRyeTLgZHMJmQ0XCqeLyAf3EWSB6G0IYsI/3CJVI3voyALUWgH8oxchKoAC
+        W8XrugtCmiInGOVD/QCCOQUOsCKjugAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="menuViewRightPanelVisible.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 22</value>
+  </data>
   <data name="menuViewRightPanelVisible.Text" xml:space="preserve">
     <value>Viusalizza &amp;pannello di destra</value>
+  </data>
+  <data name="menuViewBottomPanelVisible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+QAA
+        CvkBtGHeGQAAAYxJREFUOE/Nk0lLw0AYhv15Hj158dDqUfDgXxDFgwhFUQQF64JQFxQURam472JjFxdI
+        atO0TZeg1rS1NdHH1GqjnsR68IN3Puab+Z6Zd2Dq6uqz1KSamsuH/wlAO53D6+5iuLMd71gH4elWbkYb
+        SR95MB9z6LJA5nSe1KEH3b+EFhbwJ82K9fJgFLJWQwva5iAPoWVuz2bJK+e8PJtkzpZQVvtI7IyTXO8n
+        HdpA0uFAytmAws0xiZVektujFFISH/FiPvEQ8aH5Fgm4GoiMNBEN7LGtgPfi3gYI69OcBC9RtVvUHTep
+        XTfPRqkKMot5tOMZdPGQ6J3BbrjIRfzRBgSlOFuChBxXkRe7iS33VACWhe8hZkrsizlyBjZAmmgjvTeJ
+        kb9/21+ICqgbQ5bnAShlvzCKFlN/qpSqjxhYcxOVrpHFK4LeKXzzLoSFPo5mXfivwoREhYisEI/FiL1L
+        VRM2wOFsxuFwVOR0WrLmZTW32PWP9U+5egNRFPmN/hfAfLdQzj/Rm+WqhVo+1CuZOgM5QYnCowAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="menuViewBottomPanelVisible.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 22</value>
   </data>
   <data name="menuViewBottomPanelVisible.Text" xml:space="preserve">
     <value>Visualizza il pannello dei &amp;bottoni</value>
   </data>
+  <data name="menuView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 20</value>
+  </data>
   <data name="menuView.Text" xml:space="preserve">
     <value>&amp;Visualizza</value>
+  </data>
+  <data name="menuToolsOpenInGoogleEarth.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+QAA
+        CvkBtGHeGQAAA2ZJREFUOE9tk21Mk1cYhp8YozIgi6sgbrjwsWkmgsoSVBTULUvRKRjoNrSCICnifpg4
+        LTo/IRqgaBlgCxQVtQgoko1RRAsGKEhr0b3vaFdaLKUVBSJ1qKDgZ+69g/iDyJNcOSdPzrny5OQ+RFPU
+        BtHlgNTselFGkUaSxbFPok7hJ5UHTXV2Ui84pixAKL7+e3pB+0ulqgt1LT1o0NrRqLOhtqnztTi7QfV1
+        zIWlU4p8vz2zPjJRNpQuvYxT8iqUVLahlX0MDePE1Zu9aNA9wIOHgyi+cmc4OEYZPUnCW6EIEiTljPT0
+        WPHq5QuMjT6HxWLB+Yp6nP/ThnM1vUhTmHBF7cDw8DMUlreP+X13dvm4hLdSPs1vddatG00stB1D6B14
+        gfc19K8T0oIqpOYyOKKwIiWThVrbj6dPhpDwax0zc0n+dPpoaV5YqKAISScMiE9jsec3M8rV/Xgy/Gbc
+        M/r8GST5lUg8qsXOLAsS0hgYrU40tpnhsVrBJ/I9mR0sbETU3rvYnv4PkjPNEGVYcLjIDsYyMi5592YU
+        OQVXEbn7JjYfMCHuKIO8MgPcgnPlRN5Slf8mNaLEfyP2sBnbj1shyrQhKWOCSzecGHv1v+YtzimrsSa+
+        EqHJDHwi1SD/k/Wc4HQ9La7G8h1/4YdDXdh6rBtx6d2cyDbOj4es+CXfAb1p4m30t9uwMVEO+koG8pE2
+        E30qLyFfFaav0iEozoCN+7rw05FuCDnRtjQObhUcvIeo1HsQy+6jiRmB3e5A7ukSzFwkqSCaJ4sjl3y4
+        LcvBjJA/wOPfReA2MzemGWt/5tjF7UWdCBQaMIffDpfwFgTEahG7vwW0QJ5C5Cn92HtF3qNWjQZnlDWI
+        3lUKn4hqeEXo8PlmI/wEJvhGG+G9iYUHX49ZYdzFwFrQ/JKnxDvlMRGoL0tFqsZu9PUPwjnYD6OhA4UX
+        G5BwQIXweBUWR1+Dz/paeK2rgj+/FAs3KEGeij2T0ugaJMtrvu2AwdKHsmt2sJ2PMDAwgPsOGxi2A00a
+        HWrqtCiu0MMrRFr84X/grf1s2tydnVvEraAvmuEafgtLhHpE7Ga5jBiwJoWF5zfXQbNEvTR7VciHgrmR
+        bvRJGJ/cw46Ra3I1uUiM5F74kKOPXLJMXE9F7uEZNDtUQJ7fz3sv+A+84CDTIQAbtgAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
+  <data name="menuToolsOpenInGoogleEarth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>389, 22</value>
   </data>
   <data name="menuToolsOpenInGoogleEarth.Text" xml:space="preserve">
     <value>Apri in Google &amp;Earth...</value>
   </data>
+  <data name="menuToolsOpenMultipleFilesInGoogleEarth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>389, 22</value>
+  </data>
   <data name="menuToolsOpenMultipleFilesInGoogleEarth.Text" xml:space="preserve">
     <value>Apri &amp;molti file di QuickRoute in Google Earth...</value>
+  </data>
+  <data name="menuToolsPublishMap.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+QAA
+        CvkBtGHeGQAAAptJREFUOE910+tPknEUB3Be9g/0uq0sW7et0uUktWleAyRAMVRy6kzHMgXvTm0GS0my
+        pibl8pJWcxqXhqCAosDAB3i4CYiZpWvaWuuF8w/4Rm213HpenBe/s53Pztk5PxoA2p8o75zKy+CKa/hl
+        Te08YbM8k9s6ksO/r2IJpFamQBYqre4fLxENP/235m/xr2RCheV7fPYw4lMkuMKQQSGbxsCgEZ3PXHg9
+        aUCIWECrdHSPEkisMH+Oz3mOuJQGJDO74VTNwOsMQUsewG7fQMi9gnrpSJASuFBs2PgN0MWgs6XwEyvY
+        9geh9x3AFfiKHdKF+q6JVUqAKVmOnmeO4mRshPSCh4haDfDMWeB0bcJLhBB2kWjumjBTAqO6pbD40STy
+        hH3glClgV2lBaNX4ZI/ArjFj+b0DNXcHVJTA7o990mDzg13xBPnCfkQDJD46wlh/q0dUQ8JqIyGs7Juk
+        BDa2v/kCkS8oFg2CXS6Hxa3HB6sfOyE1tggCq85FFAllQ5QAo94crWyfQzK7G9c5D2AwaUBMO2GaiMDv
+        3AMR8KFaouylXmO5yXcs40VsjRKkcnth9NjgcOqwtuBAhAxBrfPhTpOymRK4KJwnzzDGcIIuQbZAjojP
+        A8KthttrjI2ziVezftxrU1ZRA6X6GDCOU2mNYJUqEHL5Qa4vxDoxwR80451mBbUtQ0WUwCWhnjzLHEfc
+        1QZc4/XAvOLBlseCQHgJWpsRHXLlvqhBlkgJXBbOec8xx2KXKEGmoCd2vouYeTMLccfjXSa3SsZgFR6v
+        bWw79H8OPegVuuDp3JexDiRIym0F/3bLWlp2SV16Vv5RNodH4/KKaLWN7dTALfFUagJToUvKrZvPYIkK
+        s3I5R1hsDu1GfgHtJo//X+An6VOqVy8U1mMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="menuToolsPublishMap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>389, 22</value>
   </data>
   <data name="menuToolsPublishMap.Text" xml:space="preserve">
     <value>&amp;Pubblica la mappa...</value>
   </data>
+  <data name="menuToolsAddLapsFromWinSplits.Size" type="System.Drawing.Size, System.Drawing">
+    <value>389, 22</value>
+  </data>
   <data name="menuToolsAddLapsFromWinSplits.Text" xml:space="preserve">
     <value>Aggiungi tempi parziali da &amp;WinSplits...</value>
+  </data>
+  <data name="menuTools.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 20</value>
   </data>
   <data name="menuTools.Text" xml:space="preserve">
     <value>&amp;Strumenti</value>
   </data>
+  <data name="menuSettingsLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 22</value>
+  </data>
   <data name="menuSettingsLanguage.Text" xml:space="preserve">
     <value>&amp;Linguaggio...</value>
+  </data>
+  <data name="menuSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
   </data>
   <data name="menuSettings.Text" xml:space="preserve">
     <value>&amp;Impostazioni</value>
   </data>
+  <data name="menuHelpHelp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAhhJREFUOE+1U09r
+        E0EU70fIR9iPUBQ8eMrR46IN5JhCDz2oBA8SBHEpCMFgG5GiwdJdq2Ijqe6ldo3Wrmhri0gXazW2YbMt
+        UdNmm45ulf7R/HwzU1hLIzn54LFvhvn9eW9nOjr+R0wvBLhTXEf6bgV9w0sYLJQx/uoz2mq9c7eRn2pA
+        L67Bq+/i29YeWLBL9Q6u5ktI6w6Kr1dbE3HwA3sT/o8mbAfQRgE1LZPXtsPgbjZxaXAG4y/Kh0m48sbP
+        JgwbiKYAwwLYNkR4DEje5HsMFSI5l3l2kGD6/RYezzeEMgfzwzzMWSCRlV9OFk0xqhl06wNy+Tchyb2n
+        dXxhv4TVaFLazppAJ9VKL0MySxYoVI0hkXaw5AbovjAWEmTur4qBqZoEdfbKVCgTBObqdolBUW0ocRs1
+        P8Cx2PWQ4PJtl6a9J+xLIB1OMHIilU2b1gSMqCZ9TdTq33FEHQgJcg8rWPF3qHcJVOKeyOyoJIioDqUk
+        UFM2SuUqus4YIcHEzFdYji8GxIGROAc41JJHc6E1B58wRRqWhzFrEVduTR78E5mRBSz7v0l1H0AgXgsH
+        +2DNcPBp3cep0/rhezA5V0Vfbg5ug+4CqaiaI/rmyWu+t1zdQIysDxdmW9/GiZcVnO+fgvHkI+YXV7BG
+        067VA9Ezt91Fyvq/wH8/lKHCW/RcfITj8Rs4evIaYmdHkBl63v4xtX1tLQ78AZ3a8qxOv4hDAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
+  <data name="menuHelpHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 22</value>
+  </data>
   <data name="menuHelpHelp.Text" xml:space="preserve">
     <value>&amp;Aiuto...</value>
+  </data>
+  <data name="menuHelpSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 6</value>
+  </data>
+  <data name="menuHelpAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 22</value>
   </data>
   <data name="menuHelpAbout.Text" xml:space="preserve">
     <value>&amp;Riguardo a QuickRoute...</value>
   </data>
+  <data name="menuHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
   <data name="menuHelp.Text" xml:space="preserve">
     <value>&amp;Aiuto</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>QuickRoute</value>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAQAQEAAAAEAIAAoQgAARgAAADAwAAABACAAqCUAAG5CAAAgIAAAAQAgAKgQAAAWaAAAEBAAAAEA
+        IABoBAAAvngAACgAAABAAAAAgAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAACkAAABBAAAAQQAAAEEAAAAwAAAAEgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAWgAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAA
+        AIAAAABiAAAAQgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAABTAAAAgAAAAIADAxqIDQ1qqBIS
+        lcASEpXAEhKVwA8PerAGBjKQAAAAgAAAAIAAAABrAAAAFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAABjAAAAgAME
+        GogRF5bAGR/Z+Bof4P8bHeD/Gxzg/xsb4P8bG+D/Gxvg/xcXwOALC1qgAAAAgAAAAHsAAAAWAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AA8AAABrAAAAgAgOR5gXJtLwGSfh/xol4f8aIuH/GiDg/xog4P8bHuD/Gxzg/xsb4P8bG+D/Gxvg/w8P
+        erAAAACAAAAAYgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAABjAAAAgAoUW6AXLtv4GC7i/xkr4f8ZKeH/GSfh/xol4f8aI+H/GiHh/xog
+        4P8bHuD/Gxzg/xsb4P8bG+D/BgYykAAAAIAAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCAAAAgAcTSJgWN934Fzbj/xgz4/8YMeL/GC7i/xks
+        4f8XJtLwDhZ7sAYIMpAGCDKQDhJ7sBUat9gbH+D/Gx3g/wkJR5gAAACAAAAAGAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAewAAAIATOcbgFz7l/xc8
+        5P8XOeT/Fzbj/xcz4/8SJq7QAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAwQaiAgKR5gAAACAAAAAYwAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUgAA
+        AIALKX2wFkjm/xZF5v8WQub/Fz/l/xc85P8SLa/QAAAAgAAAAIAAAABSAAAAEgAAABIAAAA6AAAAYgAA
+        AIAAAACAAAAAYwAAABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAEgAAAHsAAACAE03X8BVP5v8VTOb/FUnm/xZF5v8VP9fwAwgbiAAAAIAAAAAyAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAJAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIAAACACjN9sBNZ5v8TVub/FFPm/xRP5v8VTeb/CB1coAAA
+        AIAAAABTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQAA
+        ACIAAABBAAAASQAAAGEAAABhAAAAYQAAAGEAAABhAAAAYQAAAFEAAABjAAAAgA9WxuASYeb/El7m/xNa
+        5v8TV+b/EUjG4AAAAIAAAABrAAAABwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ABoAAABKAAAAaQAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAUj
+        SZgQa+b/EWnm/xFl5v8SYeb/El7m/wgkXKAAAACAAAAAQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAMgAAAGIAAACAAAAAgAAAAIABExuIBD5coAdmmcAIbKbICn3G4Ap7xuALeMbgC3XG4Axy
+        xuAMb8bgC2Cx0AlRmcANZsbgD3Pm/xBw5v8QbOb/EWnm/w9cz+gAAACAAAAAawAAAAIAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        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
+        AIAAAACAAAAAYgAAADIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAUgAA
+        AHMAAACAAAAAgAAAAIAAAACAADsFmABLCKAASwmgAX4QwAF+EsABfxTAAFsPqABNDqAATRCgAAAAgAAA
+        AIAAAACAAAAAgAAAAIAAAABiAAAAMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAKAAAAKgAAAEoAAABpAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAA
+        AIAAAACAAAAAgAAAAIAAAABxAAAAUgAAADIAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAIQAA
+        ACIAAABBAAAAQQAAAEEAAAApAAAAIQAAACEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////
+        ////////////////////8B/////////AA////////wAB///////+AAD///////wAAP///////AAAf///
+        ///4AAB///////AAAP//////8AAA///////gAfP//////+AD//////8AAAP/////+AAAB//////gAAAH
+        /////4AAAAf////+AAAAAf////wAAAAA////+AAAAAB////wAAAAAD///+AABAAAP///4AAAAAAf///A
+        AAAAAA///4AEAACAD///gAwAAIAH//8ADgABwAf//wAfAAfAA///AB+AD+AD//4AP+B/4AP//gA////g
+        Af/+AD////AB//wAP///8AH//AA////wAf/8AH////AB//wAf///8AH//AB////wAf/8AH////AB//wA
+        f///8AH//AB////wAf/8AD////AB//wAP///8AH//AA////gAf/+AD///+AB//4AP///4AP//gAf///A
+        A///AB///8AD//8AD///gAf//wAP//+AB///gAf//wAP//+AA//+AA///8AB//wAH///4AB/8AA////g
+        AB/AAD////AAAAAAf///+AAAAAD////8AAAAAf////8AAAAD/////4AAAA//////4AAAP//////4AAD/
+        ///////AD/////////////////////////8oAAAAMAAAAGAAAAABACAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAMgAAAFEAAABhAAAAWQAAADoAAAAaAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAFIAAAB7AAAAgAAAAIAAAACAAAAAgAAA
+        AIAAAACAAAAAYgAAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWAAAAawAAAIAAAACADxB6sBUW
+        rNAXF8DgFha32BAQiLgGBjKQAAAAgAAAAIAAAABTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYAAAB7AAAAgAoQ
+        WqAYI9LwGiLh/xog4P8bH+D/Gxzg/xsb4P8bG+D/ExOiyAMDGogAAACAAAAAKgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAA
+        AGsAAACADRt7sBgv4v8ZK+H/GSnh/xkm4f8aI+H/GiHh/xof4P8bHeD/Gxvg/xMTosgAAACAAAAASQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAUgAAAIAJGFygFzrk/xc24/8YM+P/GDDi/xYq0vAOFnuwBgkykAoOWqATGaLIGB7R8BUX
+        rNAAAACAAAAAUQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAASAAAAewAAAIAVQdfwFkPm/xc+5f8XO+T/FTHM6AMGG4gAAACAAAAAgAAA
+        AIAAAACAAAAAgAAAAIAAAACAAAAAMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABSAAAAgAsufbAUT+b/FUvm/xZH5v8VQt/4BQ4zkAAA
+        AIAAAABTAAAAEgAAACoAAABSAAAAcQAAAFIAAAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAEQAAACkAAABBAAAAQQAAAFEAAABhAAAASQAAAEEAAABzAAAAgBFX1/ATWeb/FFXm/xRQ
+        5v8NL4y4AAAAgAAAAFsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAIgAAAFIAAABxAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACACDNtqBFo
+        5v8SY+b/El/m/xJU1/AAAACAAAAAgAAAABoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAADIAAABiAAAAgAAAAIAAAACAAiMzkAVJbagHZJnACGGZwApssdALdcbgCl+myAlV
+        mcAJS4y4DWrP6BBy5v8Qbeb/EWnm/wtDmcAAAACAAAAAUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        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
+        IuAApybgAKkq4ADGNP8Axzn/AMg9/wDKQv8AzEb/AM5L/wCyReAALhOQAAAAgAAAAHsAAAAWAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaAAAAYwAAAIAAAACAAEkEoAGNCdABsw74AboR/wG7
+        Ff8BvBf/Ab0b/wC+H/8AvyP/AMEn/wDCKv8AxC//AMYz/wDANvgAmi7QAFEaoAAAAIAAAACAAAAAWwAA
+        ABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEIAAABrAAAAgAAA
+        AIAAAACAADoDmABYB6gBfAvAAX0NwAF9D8ABfhHAAX8UwAB/FsAAWxKoAD4NmAAAAIAAAACAAAAAgAAA
+        AGsAAABCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAACAAAAMgAAAFoAAAB5AAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAA
+        AHkAAABaAAAAMgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAACkAAABBAAAAQQAAAEEAAABBAAAAQQAA
+        AEEAAAApAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////AAD/////Af8AAP//
+        //wAfwAA////+AA/AID////wAB+G/////+AAH47/////4AAflv/////AAB8AgP///8AAPwAA///AAB//
+        AAD//gAAH/8AAP/4AAA//wAA/+AAAB//AAD/wAAAD/8AAP+AAAAH/wAA/wAAAAP/AAD+AAAAAf8AAP4A
+        AAAA/wAA/AAAAAD/AAD8AAAAAP8AAPgBgAYAfwAA+AHADgB/AAD4A/A/AH8AgPAD//8AP+b/8AP//wA/
+        5v/wA///AD/m//AD//8APwCA8AP//wA/AADwA///AD8AAPAD//8APwAA8AP//wA/AADwA///AD8AAPAD
+        //8APwAA+AH//gB/AAD4Af/+AH8AAPgA//wAfwCA/AD//AD/fv/8AH/4AP+F//4AP+AB/47//gAHgAH/
+        AID/AAAAA/8AAP+AAAAH/wAA/8AAAA//AAD/4AAAH/8AAP/4AAB//wAA//wAAP//AAD//8AP//8AAP//
+        /////wAAKAAAACAAAABAAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        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
+        ABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ADQAAABoAXoGwAGzDvgBuhL/AbwX/wG9HP8Ash/wAKYi4ADDLf8AxjP/AMc7/wDKQf8Arz7gAFMgoAAA
+        AEsAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAwAAABEAAAAeABXBKgBewjAAaAO4AGhEuABohbgAKMb4ACUHNAAdxq4AD8QmAAA
+        AGAAAAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAEAAAABgAAAAYAAAAGAAAABgAAAAUAAA
+        ADgAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD////////4H///8A///+AP///AB///wA//8AD//4AB//8AAP/8AAB/+AAAf/gAAD/wAAAf8CAYH+A4
+        OB/gf/gP4H/8D+B//A/gf/wP4H/8D+B//A/gf/gP4D/4H/A/8B/wH/Af+A/gP/gDgH/8AAB//gAA//8A
+        A///4A///////ygAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAJAAAADwAAAA4AAAAHgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJhUkvKwaIt30GhzY6BERkXwAAAAUAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAHg44oogWROb/FDLGuA4bgXAQGZJ8AAAAFAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAIgAAADwGVoRwB06EcAhGhHAPad7oEVnU0AAAADAAAAAQAAAAFAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAJgSOoogFu+L0B7Pm/wia1NALld7oDY3m/w142dwDGDFMAAAAGgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAJgGgoogC3eb/Aqq4oATF3ugDb4RwBrHe6Aih2dwJldncC4nZ3AMc
+        MUwAAAASAAAAAAAAAAAAAAAAAAAAEgCEd3AA5tr/ALi0oAAAACYBusCsAtXi9AS6z8QCSFRYAkRUWAiv
+        5v8Ikc/EAAAALAAAAAAAAAAAAAAAAAAAACwAz6PEAObC/wAxK0wAAAAKAAAAJAAAADwAAAAsAAAAEgAA
+        ADAFudTQBb7m/wEmMUwAAAAEAAAAAAAAAAAAAABAAOOW/wDmpP8AAABAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAkArnArAPV5v8CdYRwAAAAEAAAAAAAAAAAAAAAQADac/8AznnQAAAAMAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAIAC4tKAA5Ob/AYCEcAAAABAAAAAAAAAAAAAAADQAxE3cANFf9AAAADwAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAACgAyLK4AObX/wCEgHAAAAAQAAAAAAAAAAAAAAAkAKUqrADJP/8AdixwAAAAGgAA
+        AAAAAAAAAAAAAAAAAAYAAAA4AN6s6ADiu/QAAAA8AAAAAAAAAAAAAAAAAAAACgAoBUwAuCDoALgr3AAA
+        ADQAAAAWAAAAAAAAAAgAAAAmALJpoADikf8ArnmUAAAAIgAAAAAAAAAAAAAAAAAAAAAAAAAeAFgFZAG4
+        E/QBrxzQAF0UZAAAAEAAShlYAKZBoADUYf8AvGG4AAAAKAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ACIAVwBkAZ8HuAGzD+gBvRr/AL0k9AC2LtAAjiyIAAAAKAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAADgAAACgAAAA4AAAAQAAAADwAAAAwAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAA/4MAAP+B
+        AAD8AQAA8AMAAOAHAADAAwAAgAMAAIABAACHwQBEh8EbiIfBmcCDg9fwgQPm/8AD5v/gB+b/8B/m/w==
+</value>
   </data>
 </root>

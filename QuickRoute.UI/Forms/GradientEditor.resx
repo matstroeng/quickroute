@@ -130,10 +130,7 @@
   <data name="&gt;&gt;gradientList.Name" xml:space="preserve">
     <value>gradientList</value>
   </data>
-  <data name="gradientList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;gradientProperties.Type" xml:space="preserve">
+  <data name="&gt;&gt;availableGradients.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -143,10 +140,16 @@
   <data name="&gt;&gt;gradientNameTextbox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="gradientPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>541, 277</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="&gt;&gt;gradientNameTextbox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="uiInformation.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
@@ -155,6 +158,9 @@
   </data>
   <data name="&gt;&gt;gradientList.Type" xml:space="preserve">
     <value>QuickRoute.Controls.GradientListBox, QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;gradientProperties.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
@@ -195,11 +201,11 @@
   <data name="&gt;&gt;gradientNameTextbox.Name" xml:space="preserve">
     <value>gradientNameTextbox</value>
   </data>
-  <data name="addGradient.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="gradientNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Gradient editor</value>
+  <data name="&gt;&gt;uiInformation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="cancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -213,8 +219,8 @@
   <data name="availableGradients.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;availableGradients.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="deleteGradient.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
@@ -222,11 +228,8 @@
   <data name="deleteGradient.Text" xml:space="preserve">
     <value>&amp;Delete gradient</value>
   </data>
-  <data name="gradientNameTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="gradientNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="uiInformation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
   </data>
   <data name="addGradient.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -261,8 +264,8 @@
   <data name="uiInformation.Text" xml:space="preserve">
     <value>Click anywhere in the gradient area to add a color marker. Drag a color marker to move its position. Double click a color marker to change its color. Right-click a marker to delete it.</value>
   </data>
-  <data name="cancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+  <data name="gradientProperties.Size" type="System.Drawing.Size, System.Drawing">
+    <value>309, 274</value>
   </data>
   <data name="&gt;&gt;uiInformation.Parent" xml:space="preserve">
     <value>gradientProperties</value>
@@ -275,9 +278,6 @@
   </data>
   <data name="&gt;&gt;gradientProperties.Name" xml:space="preserve">
     <value>gradientProperties</value>
-  </data>
-  <data name="addGradient.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 23</value>
   </data>
   <data name="ok.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -294,8 +294,14 @@
   <data name="gradientNameTextbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 32</value>
   </data>
-  <data name="&gt;&gt;addGradient.Parent" xml:space="preserve">
-    <value>availableGradients</value>
+  <data name="&gt;&gt;gradientPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gradientList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Gradient editor</value>
   </data>
   <data name="&gt;&gt;gradientNameTextbox.Parent" xml:space="preserve">
     <value>gradientProperties</value>
@@ -303,17 +309,20 @@
   <data name="&gt;&gt;gradientNameLabel.Name" xml:space="preserve">
     <value>gradientNameLabel</value>
   </data>
-  <data name="&gt;&gt;uiInformation.Name" xml:space="preserve">
-    <value>uiInformation</value>
+  <data name="&gt;&gt;addGradient.Parent" xml:space="preserve">
+    <value>availableGradients</value>
   </data>
-  <data name="gradientProperties.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 274</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>GradientEditor</value>
   </data>
-  <data name="&gt;&gt;gradientPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="gradientNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;gradientPanel.Parent" xml:space="preserve">
     <value>gradientProperties</value>
+  </data>
+  <data name="gradientPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 75</value>
   </data>
   <data name="gradientList.ItemHeight" type="System.Int32, mscorlib">
     <value>20</value>
@@ -327,20 +336,17 @@
   <data name="deleteGradient.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;uiInformation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>GradientEditor</value>
+  <data name="availableGradients.Text" xml:space="preserve">
+    <value>Available gradients</value>
   </data>
   <data name="&gt;&gt;cancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;gradientNameTextbox.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="gradientNameTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="gradientPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="ok.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
   <data name="uiInformation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -360,8 +366,11 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="availableGradients.Text" xml:space="preserve">
-    <value>Available gradients</value>
+  <data name="addGradient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 23</value>
+  </data>
+  <data name="&gt;&gt;gradientProperties.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;deleteGradient.Parent" xml:space="preserve">
     <value>availableGradients</value>
@@ -369,14 +378,11 @@
   <data name="&gt;&gt;cancel.Name" xml:space="preserve">
     <value>cancel</value>
   </data>
-  <data name="gradientPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 75</value>
-  </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="cancel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;gradientPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="gradientPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -399,17 +405,11 @@
   <data name="&gt;&gt;cancel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="availableGradients.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
   <data name="cancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="uiInformation.Size" type="System.Drawing.Size, System.Drawing">
     <value>297, 63</value>
-  </data>
-  <data name="gradientNameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;availableGradients.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -423,11 +423,11 @@
   <data name="&gt;&gt;ok.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ok.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="cancel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;gradientPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="addGradient.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;gradientNameLabel.Parent" xml:space="preserve">
     <value>gradientProperties</value>
@@ -447,11 +447,11 @@
   <data name="&gt;&gt;gradientList.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="uiInformation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
+  <data name="availableGradients.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
   </data>
-  <data name="&gt;&gt;gradientProperties.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;uiInformation.Name" xml:space="preserve">
+    <value>uiInformation</value>
   </data>
   <data name="gradientPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>297, 68</value>

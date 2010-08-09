@@ -117,109 +117,95 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="replayFrame.Text" xml:space="preserve">
-    <value>Ripeti</value>
+  <data name="cancel.Text" xml:space="preserve">
+    <value>Cancella</value>
   </data>
-  <data name="replayTailDuration.Items1" xml:space="preserve">
-    <value>60</value>
-  </data>
-  <data name="replayTailDuration.Items" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="replayTimeInterval.Items5" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="replayTimeInterval.Items4" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="replayTimeInterval.Items6" xml:space="preserve">
-    <value>60</value>
-  </data>
-  <data name="replayTimeInterval.Items1" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="replayTimeInterval.Items3" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="replayTimeInterval.Items2" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="routeFrame.Text" xml:space="preserve">
-    <value>Percorso</value>
-  </data>
-  <data name="mapFrame.Text" xml:space="preserve">
-    <value>Mappa</value>
-  </data>
-  <data name="replayTailDuration.Items3" xml:space="preserve">
-    <value>180</value>
-  </data>
-  <data name="replayTailDuration.Items6" xml:space="preserve">
-    <value>600</value>
-  </data>
-  <data name="replayTailDuration.Items7" xml:space="preserve">
-    <value>infinito</value>
-  </data>
-  <data name="replayTailDuration.Items4" xml:space="preserve">
-    <value>240</value>
-  </data>
-  <data name="replayTailDuration.Items5" xml:space="preserve">
-    <value>300</value>
-  </data>
-  <data name="includeMap.Text" xml:space="preserve">
-    <value>Includi &amp;mappa</value>
-  </data>
-  <data name="replayMarkerStyle.Items" xml:space="preserve">
-    <value>Monocromatico</value>
-  </data>
-  <data name="adaptRouteToMapImage.Text" xml:space="preserve">
-    <value>Sistem&amp;a la linea del percorso sulla mappa</value>
-  </data>
-  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
-    <value>&amp;Intervalli di tempo in secondi</value>
-  </data>
-  <data name="replayMarkerStyleLabel.Text" xml:space="preserve">
-    <value>Stile del pu&amp;ntatore di posizione</value>
-  </data>
-  <data name="routeLineStyle.Items" xml:space="preserve">
-    <value>Incorporato nella mappa, codice colore</value>
-  </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="includeReplay.Text" xml:space="preserve">
-    <value>Includi re&amp;play</value>
-  </data>
-  <data name="routeLineStyle.Items2" xml:space="preserve">
-    <value>Separa la linea del percosto, codice colore</value>
-  </data>
-  <data name="routeLineStyleLabel.Text" xml:space="preserve">
-    <value>&amp;Stile della linea del percorso</value>
-  </data>
-  <data name="replayMarkerStyle.Items1" xml:space="preserve">
-    <value>Codice colore</value>
-  </data>
-  <data name="replayTimeInterval.Items" xml:space="preserve">
-    <value>1</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="adaptReplayToMapImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 17</value>
   </data>
   <data name="adaptReplayToMapImage.Text" xml:space="preserve">
     <value>Sistema il repla&amp;y sulla mappa</value>
   </data>
-  <data name="includeRoute.Text" xml:space="preserve">
-    <value>Includi t&amp;racciato</value>
-  </data>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Cancella</value>
-  </data>
-  <data name="replayTailDuration.Items2" xml:space="preserve">
-    <value>120</value>
+  <data name="replayTailVisible.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 17</value>
   </data>
   <data name="replayTailVisible.Text" xml:space="preserve">
     <value>Visualizza &amp;coda, durata in secondi:</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Proprietà KML:</value>
+  <data name="replayTailDuration.Items7" xml:space="preserve">
+    <value>infinito</value>
+  </data>
+  <data name="replayTailDuration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 3</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 13</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
+    <value>&amp;Intervalli di tempo in secondi</value>
+  </data>
+  <data name="replayMarkerStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 13</value>
+  </data>
+  <data name="replayMarkerStyleLabel.Text" xml:space="preserve">
+    <value>Stile del pu&amp;ntatore di posizione</value>
+  </data>
+  <data name="replayMarkerStyle.Items" xml:space="preserve">
+    <value>Monocromatico</value>
+  </data>
+  <data name="replayMarkerStyle.Items1" xml:space="preserve">
+    <value>Codice colore</value>
+  </data>
+  <data name="includeReplay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 17</value>
+  </data>
+  <data name="includeReplay.Text" xml:space="preserve">
+    <value>Includi re&amp;play</value>
+  </data>
+  <data name="replayFrame.Text" xml:space="preserve">
+    <value>Ripeti</value>
+  </data>
+  <data name="routeLineStyle.Items" xml:space="preserve">
+    <value>Incorporato nella mappa, codice colore</value>
   </data>
   <data name="routeLineStyle.Items1" xml:space="preserve">
     <value>Separa la linea del percosto, monocromatico</value>
+  </data>
+  <data name="routeLineStyle.Items2" xml:space="preserve">
+    <value>Separa la linea del percosto, codice colore</value>
+  </data>
+  <data name="includeRoute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 17</value>
+  </data>
+  <data name="includeRoute.Text" xml:space="preserve">
+    <value>Includi t&amp;racciato</value>
+  </data>
+  <data name="includeMap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 17</value>
+  </data>
+  <data name="includeMap.Text" xml:space="preserve">
+    <value>Includi &amp;mappa</value>
+  </data>
+  <data name="mapFrame.Text" xml:space="preserve">
+    <value>Mappa</value>
+  </data>
+  <data name="routeLineStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 13</value>
+  </data>
+  <data name="routeLineStyleLabel.Text" xml:space="preserve">
+    <value>&amp;Stile della linea del percorso</value>
+  </data>
+  <data name="adaptRouteToMapImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 17</value>
+  </data>
+  <data name="adaptRouteToMapImage.Text" xml:space="preserve">
+    <value>Sistem&amp;a la linea del percorso sulla mappa</value>
+  </data>
+  <data name="routeFrame.Text" xml:space="preserve">
+    <value>Percorso</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Proprietà KML:</value>
   </data>
 </root>

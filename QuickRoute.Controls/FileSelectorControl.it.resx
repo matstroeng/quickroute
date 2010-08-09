@@ -117,13 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="removeButton.Text" xml:space="preserve">
-    <value>&amp;Rimuovi</value>
-  </data>
   <data name="addFileButton.Text" xml:space="preserve">
     <value>Aggiungi &amp;file...</value>
   </data>
   <data name="addUrlButton.Text" xml:space="preserve">
     <value>Aggiungi &amp;collegamento...</value>
+  </data>
+  <data name="removeButton.Text" xml:space="preserve">
+    <value>&amp;Rimuovi</value>
   </data>
 </root>

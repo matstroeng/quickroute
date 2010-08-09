@@ -130,15 +130,17 @@
   <data name="lblHue.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;hsbSaturation.Name" xml:space="preserve">
     <value>hsbSaturation</value>
   </data>
   <data name="lblAlpha.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 23</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pnlAlpha.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
+  <data name="pnlSelectedColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 70</value>
   </data>
   <data name="hsbBrightness.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 18</value>
@@ -146,12 +148,18 @@
   <data name="&gt;&gt;hsbRed.Name" xml:space="preserve">
     <value>hsbRed</value>
   </data>
+  <data name="&gt;&gt;pnlBrightness.Name" xml:space="preserve">
+    <value>pnlBrightness</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pnlSelectedColor.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="hsbGreen.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 18</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Alpha</value>
   </data>
   <data name="lblAlpha.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -162,11 +170,11 @@
   <data name="&gt;&gt;hsbBrightness.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="pnlBrightness.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 8</value>
+  <data name="&gt;&gt;hsbRed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pnlColor.ZOrder" xml:space="preserve">
-    <value>20</value>
+  <data name="lblHue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="hsbHue.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 18</value>
@@ -176,6 +184,9 @@
   </data>
   <data name="lblSaturation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;lblBrightness.Parent" xml:space="preserve">
     <value>$this</value>
@@ -192,17 +203,15 @@
   <data name="&gt;&gt;btnOK.Name" xml:space="preserve">
     <value>btnOK</value>
   </data>
-  <data name="pnlSelectedColor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 24</value>
-  </data>
   <data name="pnlAlpha.Location" type="System.Drawing.Point, System.Drawing">
     <value>287, 8</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="hsbBrightness.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
-  <data name="&gt;&gt;lblGreen.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
   </data>
   <data name="lblHue.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 23</value>
@@ -215,9 +224,6 @@
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 360</value>
-  </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
   </data>
   <data name="&gt;&gt;lblAlpha.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -237,14 +243,20 @@
   <data name="&gt;&gt;lblBrightness.Name" xml:space="preserve">
     <value>lblBrightness</value>
   </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 18</value>
+  </data>
   <data name="&gt;&gt;pnlSelectedColor.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="lblGreen.Location" type="System.Drawing.Point, System.Drawing">
     <value>344, 336</value>
   </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Alpha</value>
+  <data name="&gt;&gt;pnlColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblSaturation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -258,14 +270,20 @@
   <data name="Label3.Text" xml:space="preserve">
     <value>Blue</value>
   </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="lblRed.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
   </data>
-  <data name="lblAlpha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 384</value>
+  <data name="hsbHue.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="&gt;&gt;hsbHue.ZOrder" xml:space="preserve">
     <value>15</value>
@@ -282,8 +300,8 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ColorChooser</value>
   </data>
-  <data name="&gt;&gt;hsbSaturation.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;pnlColor.ZOrder" xml:space="preserve">
+    <value>20</value>
   </data>
   <data name="&gt;&gt;hsbSaturation.Type" xml:space="preserve">
     <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -291,8 +309,8 @@
   <data name="&gt;&gt;lblAlpha.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
   </data>
   <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 256</value>
@@ -303,11 +321,17 @@
   <data name="&gt;&gt;hsbHue.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;hsbBlue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;lblRed.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblRed.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="pnlSelectedColor.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
   </data>
   <data name="lblBlue.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -317,9 +341,6 @@
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 18</value>
-  </data>
-  <data name="&gt;&gt;btnOK.ZOrder" xml:space="preserve">
-    <value>17</value>
   </data>
   <data name="&gt;&gt;Label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -342,8 +363,11 @@
   <data name="Label7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="Label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblHue.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
   </data>
   <data name="&gt;&gt;hsbRed.Parent" xml:space="preserve">
     <value>$this</value>
@@ -354,8 +378,8 @@
   <data name="lblAlpha.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
   </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="pnlBrightness.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 8</value>
   </data>
   <data name="Label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -375,14 +399,14 @@
   <data name="lblBlue.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="&gt;&gt;lblBrightness.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="hsbAlpha.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 384</value>
   </data>
-  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>26</value>
+  <data name="&gt;&gt;hsbSaturation.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="lblBrightness.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -390,14 +414,8 @@
   <data name="lblRed.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 23</value>
   </data>
-  <data name="&gt;&gt;hsbRed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;hsbAlpha.Name" xml:space="preserve">
     <value>hsbAlpha</value>
-  </data>
-  <data name="lblHue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 232</value>
   </data>
   <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -411,14 +429,14 @@
   <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblHue.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
   </data>
   <data name="&gt;&gt;pnlColor.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblHue.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="hsbBrightness.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 280</value>
@@ -438,9 +456,6 @@
   <data name="&gt;&gt;Label5.Name" xml:space="preserve">
     <value>Label5</value>
   </data>
-  <data name="Label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
   <data name="&gt;&gt;pnlSelectedColor.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
@@ -455,6 +470,9 @@
   </data>
   <data name="hsbAlpha.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="Label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lblBrightness.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -471,14 +489,11 @@
   <data name="hsbGreen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
+  <data name="&gt;&gt;lblBrightness.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblGreen.Name" xml:space="preserve">
     <value>lblGreen</value>
-  </data>
-  <data name="&gt;&gt;hsbBrightness.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pnlBrightness.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -492,20 +507,26 @@
   <data name="&gt;&gt;lblBlue.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
   <data name="hsbRed.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 312</value>
   </data>
   <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+  <data name="lblGreen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 23</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;hsbHue.Name" xml:space="preserve">
     <value>hsbHue</value>
   </data>
-  <data name="&gt;&gt;hsbGreen.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="lblBlue.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;pnlSelectedColor.Name" xml:space="preserve">
     <value>pnlSelectedColor</value>
@@ -522,11 +543,8 @@
   <data name="hsbSaturation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="lblGreen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 23</value>
+  <data name="&gt;&gt;hsbGreen.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="&gt;&gt;hsbHue.Type" xml:space="preserve">
     <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -543,9 +561,6 @@
   <data name="pnlColor.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
-  <data name="hsbSaturation.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
-  </data>
   <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
@@ -561,17 +576,26 @@
   <data name="&gt;&gt;Label7.Name" xml:space="preserve">
     <value>Label7</value>
   </data>
-  <data name="lblHue.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
+  <data name="pnlAlpha.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="lblAlpha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 384</value>
+  </data>
+  <data name="&gt;&gt;lblGreen.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>26</value>
   </data>
   <data name="&gt;&gt;hsbBrightness.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 26</value>
   </data>
-  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lblSaturation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblGreen.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -582,29 +606,17 @@
   <data name="lblBrightness.Location" type="System.Drawing.Point, System.Drawing">
     <value>344, 280</value>
   </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
+  <data name="btnOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="hsbRed.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
   <data name="&gt;&gt;btnOK.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblSaturation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 23</value>
-  </data>
   <data name="&gt;&gt;Label5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnOK.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="&gt;&gt;hsbBlue.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 18</value>
@@ -624,14 +636,17 @@
   <data name="pnlAlpha.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="hsbHue.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
+  <data name="&gt;&gt;hsbBlue.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;pnlBrightness.ZOrder" xml:space="preserve">
+    <value>25</value>
   </data>
   <data name="&gt;&gt;lblSaturation.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="Label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
+  <data name="lblHue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 232</value>
   </data>
   <data name="lblBrightness.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -642,20 +657,11 @@
   <data name="&gt;&gt;pnlAlpha.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="lblSaturation.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
   <data name="hsbBlue.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 360</value>
   </data>
-  <data name="btnOK.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="btnOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;hsbBrightness.Type" xml:space="preserve">
+    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnOK.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -666,8 +672,8 @@
   <data name="&gt;&gt;lblGreen.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lblBlue.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
+  <data name="btnOK.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
   </data>
   <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 232</value>
@@ -681,8 +687,8 @@
   <data name="pnlSelectedColor.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="hsbHue.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="hsbSaturation.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
   </data>
   <data name="hsbAlpha.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 18</value>
@@ -693,8 +699,8 @@
   <data name="hsbBlue.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 18</value>
+  <data name="hsbBlue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 18</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
     <value>Green</value>
@@ -705,11 +711,11 @@
   <data name="&gt;&gt;hsbSaturation.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;hsbBlue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;hsbGreen.Name" xml:space="preserve">
     <value>hsbGreen</value>
+  </data>
+  <data name="lblBlue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>344, 360</value>
   </data>
   <data name="lblSaturation.Location" type="System.Drawing.Point, System.Drawing">
     <value>344, 256</value>
@@ -717,23 +723,23 @@
   <data name="Label5.Text" xml:space="preserve">
     <value>Hue</value>
   </data>
-  <data name="&gt;&gt;pnlBrightness.Name" xml:space="preserve">
-    <value>pnlBrightness</value>
-  </data>
-  <data name="hsbHue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 232</value>
+  <data name="btnOK.Text" xml:space="preserve">
+    <value>OK</value>
   </data>
   <data name="&gt;&gt;pnlBrightness.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="hsbHue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 232</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 24</value>
   </data>
   <data name="lblBrightness.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;lblBlue.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -752,9 +758,6 @@
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
     <value>22</value>
-  </data>
-  <data name="hsbBlue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 18</value>
   </data>
   <data name="&gt;&gt;hsbAlpha.Type" xml:space="preserve">
     <value>System.Windows.Forms.HScrollBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -780,14 +783,17 @@
   <data name="lblAlpha.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="hsbRed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
   <data name="Label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="hsbAlpha.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
   </data>
-  <data name="hsbRed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="lblSaturation.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
   </data>
   <data name="lblBlue.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -801,8 +807,8 @@
   <data name="lblAlpha.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
-  <data name="pnlSelectedColor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 70</value>
+  <data name="pnlSelectedColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 24</value>
   </data>
   <data name="hsbRed.Size" type="System.Drawing.Size, System.Drawing">
     <value>256, 18</value>
@@ -813,8 +819,8 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Select color</value>
   </data>
-  <data name="&gt;&gt;hsbBlue.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="hsbRed.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
   </data>
   <data name="&gt;&gt;lblBlue.Name" xml:space="preserve">
     <value>lblBlue</value>
@@ -822,26 +828,26 @@
   <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>328, 8</value>
   </data>
-  <data name="pnlSelectedColor.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
+  <data name="lblSaturation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 23</value>
   </data>
   <data name="lblGreen.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;pnlBrightness.ZOrder" xml:space="preserve">
-    <value>25</value>
+  <data name="&gt;&gt;hsbBlue.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="hsbGreen.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
-  <data name="Label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
+  <data name="&gt;&gt;btnOK.ZOrder" xml:space="preserve">
+    <value>17</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="&gt;&gt;lblSaturation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblHue.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;lblHue.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -855,32 +861,26 @@
   <data name="Label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
-  <data name="lblBlue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>344, 360</value>
-  </data>
   <data name="&gt;&gt;lblSaturation.Name" xml:space="preserve">
     <value>lblSaturation</value>
   </data>
-  <data name="lblHue.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
+  <data name="Label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;hsbBrightness.Name" xml:space="preserve">
     <value>hsbBrightness</value>
   </data>
-  <data name="&gt;&gt;pnlColor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
   </data>
   <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
     <value>5, 13</value>
   </data>
-  <data name="btnOK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 26</value>
+  <data name="hsbHue.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
   </data>
-  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="&gt;&gt;lblHue.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="Label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

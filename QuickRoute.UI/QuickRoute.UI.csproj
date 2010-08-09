@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{953F40A2-9741-4BE8-B42E-59C603700281}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -12,9 +12,11 @@
     <AssemblyName>QuickRoute</AssemblyName>
     <StartupObject>QuickRoute.UI.Program</StartupObject>
     <ApplicationIcon>QuickRoute.ico</ApplicationIcon>
-    <FileUpgradeFlags></FileUpgradeFlags>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
-    <UpgradeBackupLocation></UpgradeBackupLocation>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -731,8 +733,10 @@
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\QuickRouteServer\</RelPath>
       <UpdateFromURL>http://www.matstroeng.se/quickroute/server/index.php%3fwsdl</UpdateFromURL>
-      <ServiceLocationURL></ServiceLocationURL>
-      <CachedDynamicPropName></CachedDynamicPropName>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QuickRoute_QuickRouteServer_QuickRouteServer</CachedSettingsPropName>
     </WebReferenceUrl>
@@ -740,8 +744,10 @@
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WinSplitsWebServices\</RelPath>
       <UpdateFromURL>http://www.obasen.nu/winsplits/webservices/WebServices.asmx</UpdateFromURL>
-      <ServiceLocationURL></ServiceLocationURL>
-      <CachedDynamicPropName></CachedDynamicPropName>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QuickRoute_WinSplitsWebServices_WebServices</CachedSettingsPropName>
     </WebReferenceUrl>
@@ -936,10 +942,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ExternalReferences\" />
-    <Folder Include="Graphics\" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Forms\AboutBox.it.resx" />
   </ItemGroup>
   <ItemGroup>
@@ -962,9 +964,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\ExportRouteDataDialog.it.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Forms\FormTemplate.it.resx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\GradientEditor.it.resx" />
@@ -995,6 +994,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Main.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ExternalReferences\" />
+    <Folder Include="Graphics\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

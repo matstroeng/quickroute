@@ -117,31 +117,69 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Modifica la sfumatura</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ok.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 307</value>
+  </data>
+  <data name="cancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>432, 307</value>
+  </data>
+  <data name="cancel.Text" xml:space="preserve">
+    <value>Cancella</value>
+  </data>
+  <data name="deleteGradient.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 257</value>
   </data>
   <data name="deleteGradient.Text" xml:space="preserve">
     <value>&amp;Elimina sfumatura</value>
   </data>
-  <data name="gradientNameLabel.Text" xml:space="preserve">
-    <value>&amp;Nome:</value>
-  </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="uiInformation.Text" xml:space="preserve">
-    <value>Fare clic su un punto qualsiasi della sfumatura per aggiungere un indicatore di colore. Trascinare l'indicatore di colore per spostare la sua posizione. Fare doppio clic su un indicatore di colore per cambiare il colore. Destro del mouse su un marcatore per eliminarlo.</value>
+  <data name="addGradient.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 228</value>
   </data>
   <data name="addGradient.Text" xml:space="preserve">
     <value>&amp;Aggiungi sfumatura</value>
   </data>
-  <data name="gradientProperties.Text" xml:space="preserve">
-    <value>Proprietà sfumatura</value>
+  <data name="gradientList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 203</value>
+  </data>
+  <data name="availableGradients.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 283</value>
   </data>
   <data name="availableGradients.Text" xml:space="preserve">
     <value>Sfumature disponibili</value>
   </data>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Cancella</value>
+  <data name="uiInformation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 197</value>
+  </data>
+  <data name="uiInformation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>289, 80</value>
+  </data>
+  <data name="uiInformation.Text" xml:space="preserve">
+    <value>Fare clic su un punto qualsiasi della sfumatura per aggiungere un indicatore di colore. Trascinare l'indicatore di colore per spostare la sua posizione. Fare doppio clic su un indicatore di colore per cambiare il colore. Destro del mouse su un marcatore per eliminarlo.</value>
+  </data>
+  <data name="gradientNameTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>289, 20</value>
+  </data>
+  <data name="gradientNameLabel.Text" xml:space="preserve">
+    <value>&amp;Nome:</value>
+  </data>
+  <data name="gradientPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>289, 68</value>
+  </data>
+  <data name="gradientProperties.Size" type="System.Drawing.Size, System.Drawing">
+    <value>301, 283</value>
+  </data>
+  <data name="gradientProperties.Text" xml:space="preserve">
+    <value>Proprietà sfumatura</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>525, 342</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Modifica la sfumatura</value>
   </data>
 </root>

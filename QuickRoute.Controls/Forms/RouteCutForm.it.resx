@@ -120,19 +120,29 @@
   <data name="cancel.Text" xml:space="preserve">
     <value>Cancella</value>
   </data>
-  <data name="cutAfter.Text" xml:space="preserve">
-    <value>Elimina il tracciato &amp;successivo</value>
-  </data>
-  <data name="cutBefore.Text" xml:space="preserve">
-    <value>Elimina il tracciato &amp;precedente</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="timeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
   </data>
   <data name="timeLabel.Text" xml:space="preserve">
     <value>&amp;Tempo:</value>
   </data>
+  <data name="cutBefore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="cutBefore.Text" xml:space="preserve">
+    <value>Elimina il tracciato &amp;precedente</value>
+  </data>
+  <data name="cutAfter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 17</value>
+  </data>
+  <data name="cutAfter.Text" xml:space="preserve">
+    <value>Elimina il tracciato &amp;successivo</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>197, 140</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Estrai il percorso selezionato</value>
-  </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>OK</value>
   </data>
 </root>
