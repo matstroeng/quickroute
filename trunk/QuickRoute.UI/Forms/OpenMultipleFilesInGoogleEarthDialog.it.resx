@@ -117,91 +117,80 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="replayTailDurationLabel.Text" xml:space="preserve">
-    <value>&amp;Durata della coda in secondi</value>
+  <data name="cancel.Text" xml:space="preserve">
+    <value>Cancella</value>
   </data>
-  <data name="replayTailDuration.Items6" xml:space="preserve">
-    <value>600</value>
-  </data>
-  <data name="replayTailDuration.Items" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="replayTimeInterval.Items5" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="replayTimeInterval.Items4" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="replayTimeInterval.Items6" xml:space="preserve">
-    <value>60</value>
-  </data>
-  <data name="replayTimeInterval.Items1" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="replayTimeInterval.Items3" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="replayGroupBox.Text" xml:space="preserve">
-    <value>Mostra nuovamente</value>
-  </data>
-  <data name="replayTailDuration.Items2" xml:space="preserve">
-    <value>120</value>
-  </data>
-  <data name="replayTailDuration.Items3" xml:space="preserve">
-    <value>180</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="replayTailsVisible.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 79</value>
   </data>
   <data name="replayTailDuration.Items7" xml:space="preserve">
     <value>infiniti</value>
   </data>
-  <data name="replayTailDuration.Items4" xml:space="preserve">
-    <value>240</value>
+  <data name="replayTailDuration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 99</value>
   </data>
-  <data name="replayTailDuration.Items5" xml:space="preserve">
-    <value>300</value>
+  <data name="massStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 33</value>
   </data>
-  <data name="includeRoutes.Text" xml:space="preserve">
-    <value>Incl&amp;udi percorso</value>
-  </data>
-  <data name="includeReplay.Text" xml:space="preserve">
-    <value>Includi repla&amp;y</value>
+  <data name="replayTimeIntervalLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 13</value>
   </data>
   <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
     <value>&amp;Intervallo di tempo in secondi</value>
   </data>
-  <data name="replayTimeInterval.Items2" xml:space="preserve">
-    <value>5</value>
+  <data name="replayTimeInterval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 3</value>
   </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="replayRestartAfterEachLap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 56</value>
+  </data>
+  <data name="replayTailDurationLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 13</value>
+  </data>
+  <data name="replayTailDurationLabel.Text" xml:space="preserve">
+    <value>&amp;Durata della coda in secondi</value>
+  </data>
+  <data name="replayTailsVisibleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 13</value>
   </data>
   <data name="replayTailsVisibleLabel.Text" xml:space="preserve">
     <value>Visualizza &amp;coda</value>
   </data>
-  <data name="replayTimeInterval.Items" xml:space="preserve">
-    <value>1</value>
+  <data name="replayRestartAfterEachLapLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 13</value>
   </data>
-  <data name="filesLabel.Text" xml:space="preserve">
-    <value>&amp;Files</value>
+  <data name="replayRestartAfterEachLapLabel.Text" xml:space="preserve">
+    <value>Riparti dopo ogni &amp;giro</value>
   </data>
-  <data name="routesGroupBox.Text" xml:space="preserve">
-    <value>Percorso</value>
+  <data name="massStartLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 13</value>
   </data>
   <data name="massStartLabel.Text" xml:space="preserve">
     <value>Simula una partenza in &amp;massa</value>
   </data>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Cancella</value>
-  </data>
-  <data name="replayTailDuration.Items1" xml:space="preserve">
-    <value>60</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Apri più file Quickroute in Google Earts</value>
-  </data>
   <data name="uiInformation.Text" xml:space="preserve">
     <value>Aggiungi i file QuickRoute che contengono i percorsi desiderati. La mappa del primo file verrà utilizzato come sfondo. Formati dei file supportati sono QRT e JPEG esportati dalle versioni QuickRoute 2.3 e successive.</value>
   </data>
-  <data name="replayRestartAfterEachLapLabel.Text" xml:space="preserve">
-    <value>Riparti dopo ogni &amp;giro</value>
+  <data name="includeRoutes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 17</value>
+  </data>
+  <data name="includeRoutes.Text" xml:space="preserve">
+    <value>Incl&amp;udi percorso</value>
+  </data>
+  <data name="includeReplay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 17</value>
+  </data>
+  <data name="includeReplay.Text" xml:space="preserve">
+    <value>Includi repla&amp;y</value>
+  </data>
+  <data name="replayGroupBox.Text" xml:space="preserve">
+    <value>Mostra nuovamente</value>
+  </data>
+  <data name="routesGroupBox.Text" xml:space="preserve">
+    <value>Percorso</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Apri più file Quickroute in Google Earth</value>
   </data>
 </root>

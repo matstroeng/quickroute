@@ -117,22 +117,44 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Cancella</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="intervalStartTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 75</value>
   </data>
-  <data name="intervalEndLabel.Text" xml:space="preserve">
-    <value>Intervallo &amp;inizio</value>
+  <data name="intervalStartTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 20</value>
+  </data>
+  <data name="intervalStartLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
   </data>
   <data name="intervalStartLabel.Text" xml:space="preserve">
     <value>Intervallo &amp;fine</value>
   </data>
+  <data name="intervalEndLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 13</value>
+  </data>
+  <data name="intervalEndLabel.Text" xml:space="preserve">
+    <value>Intervallo &amp;inizio</value>
+  </data>
+  <data name="intervalEndTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 101</value>
+  </data>
+  <data name="intervalEndTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 20</value>
+  </data>
+  <data name="cancel.Text" xml:space="preserve">
+    <value>Cancella</value>
+  </data>
+  <data name="infoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 51</value>
+  </data>
   <data name="infoLabel.Text" xml:space="preserve">
     <value>Imposta i valori di inizio e fine del controllo della gamma del colore.</value>
   </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>233, 168</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Intervallo</value>
-  </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>OK</value>
   </data>
 </root>

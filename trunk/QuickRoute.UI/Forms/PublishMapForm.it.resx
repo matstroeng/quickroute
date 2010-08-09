@@ -120,41 +120,90 @@
   <data name="cancel.Text" xml:space="preserve">
     <value>Cancella</value>
   </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>OK</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="date.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 154</value>
   </data>
-  <data name="date.CustomFormat" xml:space="preserve">
-    <value>aaaa-MM-gg O:mm</value>
+  <data name="date.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 20</value>
+  </data>
+  <data name="commentLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
   </data>
   <data name="commentLabel.Text" xml:space="preserve">
     <value>Comme&amp;nto</value>
   </data>
+  <data name="resultListUrlLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 13</value>
+  </data>
   <data name="resultListUrlLabel.Text" xml:space="preserve">
     <value>Co&amp;llegamento ai risultati</value>
+  </data>
+  <data name="usernameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
   </data>
   <data name="usernameLabel.Text" xml:space="preserve">
     <value>Nome &amp;utente</value>
   </data>
+  <data name="webServiceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 13</value>
+  </data>
   <data name="webServiceLabel.Text" xml:space="preserve">
     <value>Indirizzo del servizio &amp;web</value>
   </data>
-  <data name="passwordLabel.Text" xml:space="preserve">
-    <value>&amp;Password</value>
+  <data name="webServiceURL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 3</value>
+  </data>
+  <data name="webServiceURL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 21</value>
+  </data>
+  <data name="username.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 30</value>
+  </data>
+  <data name="username.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 20</value>
+  </data>
+  <data name="password.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 56</value>
+  </data>
+  <data name="password.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 20</value>
+  </data>
+  <data name="mapLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
   </data>
   <data name="mapLabel.Text" xml:space="preserve">
     <value>&amp;Mappa</value>
   </data>
+  <data name="map.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 127</value>
+  </data>
+  <data name="map.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 21</value>
+  </data>
   <data name="dateLabel.Text" xml:space="preserve">
     <value>&amp;Data</value>
+  </data>
+  <data name="nameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
   </data>
   <data name="nameLabel.Text" xml:space="preserve">
     <value>Nome &amp;allenamento/gara</value>
   </data>
+  <data name="mapNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 13</value>
+  </data>
   <data name="mapNameLabel.Text" xml:space="preserve">
     <value>&amp;Nome mappa/area</value>
   </data>
+  <data name="organiserLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
   <data name="organiserLabel.Text" xml:space="preserve">
     <value>&amp;Organizzazione</value>
+  </data>
+  <data name="countryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
   </data>
   <data name="countryLabel.Text" xml:space="preserve">
     <value>&amp;Nazione</value>
@@ -162,17 +211,80 @@
   <data name="disciplineLabel.Text" xml:space="preserve">
     <value>D&amp;isciplina</value>
   </data>
+  <data name="relayLegLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
   <data name="relayLegLabel.Text" xml:space="preserve">
     <value>F&amp;razione staffetta</value>
   </data>
-  <data name="imageFormat.Items" xml:space="preserve">
-    <value>jpg</value>
+  <data name="name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 206</value>
   </data>
-  <data name="imageFormat.Items1" xml:space="preserve">
-    <value>png</value>
+  <data name="name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 20</value>
+  </data>
+  <data name="mapName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 232</value>
+  </data>
+  <data name="mapName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 20</value>
+  </data>
+  <data name="organiser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 258</value>
+  </data>
+  <data name="organiser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 20</value>
+  </data>
+  <data name="country.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 284</value>
+  </data>
+  <data name="country.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 20</value>
+  </data>
+  <data name="type.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 310</value>
+  </data>
+  <data name="type.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 20</value>
+  </data>
+  <data name="relayLeg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 336</value>
+  </data>
+  <data name="relayLeg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 20</value>
+  </data>
+  <data name="resultListUrl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 362</value>
+  </data>
+  <data name="resultListUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 20</value>
+  </data>
+  <data name="comment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 388</value>
+  </data>
+  <data name="comment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 61</value>
+  </data>
+  <data name="imageFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 455</value>
+  </data>
+  <data name="imageFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 21</value>
+  </data>
+  <data name="imageFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 13</value>
   </data>
   <data name="imageFormatLabel.Text" xml:space="preserve">
     <value>&amp;Formato immagine</value>
+  </data>
+  <data name="category.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 180</value>
+  </data>
+  <data name="category.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 21</value>
+  </data>
+  <data name="categoryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
   </data>
   <data name="categoryLabel.Text" xml:space="preserve">
     <value>Categor&amp;ia</value>
@@ -180,8 +292,18 @@
   <data name="ConnectButton.Text" xml:space="preserve">
     <value>&amp;Connetti</value>
   </data>
+  <data name="SavePassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 17</value>
+  </data>
   <data name="SavePassword.Text" xml:space="preserve">
     <value>R&amp;icorda la password</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 82</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="uiInformation.LinkArea" type="System.Windows.Forms.LinkArea, System.Windows.Forms">
+    <value>162, 22</value>
   </data>
   <data name="uiInformation.Text" xml:space="preserve">
     <value>Con QuickRoute è possibile pubblicare le mappe su un archivio digitale di cartina di orienteering. Istruzioni per come creare il vostro archivio sono presenti su www.matstroeng.se/doma. L'indirizzo web service per il vostro archivio è qualcosa di simile http://www.yourdomain.com/yoursubfolder/webservice.php.</value>

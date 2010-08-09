@@ -117,34 +117,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="routeFromFile.Text" xml:space="preserve">
-    <value>Dal fi&amp;le:</value>
+  <data name="cancel.Text" xml:space="preserve">
+    <value>Cancella</value>
   </data>
-  <data name="addRouteGroup.Text" xml:space="preserve">
-    <value>Aggiungi tracciato</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="routeFromGpsDevice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 17</value>
   </data>
   <data name="routeFromGpsDevice.Text" xml:space="preserve">
     <value>Dal dispositivo &amp;GPS:</value>
   </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="routeFromFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Aggiungi tracciato</value>
+  <data name="routeFromFile.Text" xml:space="preserve">
+    <value>Dal fi&amp;le:</value>
   </data>
-  <data name="addSessionButton.Text" xml:space="preserve">
-    <value>&amp;Aggiungi tracciato</value>
-  </data>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Cancella</value>
-  </data>
-  <data name="routeFileNameBrowse.Text" xml:space="preserve">
-    <value>&amp;Sfoglia...</value>
+  <data name="routeFileFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
   </data>
   <data name="routeFileFormatLabel.Text" xml:space="preserve">
     <value>For&amp;mato del file:</value>
   </data>
+  <data name="routeGpsDevice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 3</value>
+  </data>
+  <data name="routeGpsDevice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 21</value>
+  </data>
+  <data name="routeFileName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 35</value>
+  </data>
+  <data name="routeFileName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 20</value>
+  </data>
+  <data name="routeFileFormatComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 62</value>
+  </data>
+  <data name="routeFileFormatComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>492, 21</value>
+  </data>
+  <data name="routeFileNameBrowse.Text" xml:space="preserve">
+    <value>&amp;Sfoglia...</value>
+  </data>
+  <data name="addSessionButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 92</value>
+  </data>
+  <data name="addSessionButton.Text" xml:space="preserve">
+    <value>&amp;Aggiungi tracciato</value>
+  </data>
+  <data name="addRouteGroup.Text" xml:space="preserve">
+    <value>Aggiungi tracciato</value>
+  </data>
   <data name="NameColumn.HeaderText" xml:space="preserve">
     <value>Nome</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Aggiungi tracciato</value>
   </data>
 </root>

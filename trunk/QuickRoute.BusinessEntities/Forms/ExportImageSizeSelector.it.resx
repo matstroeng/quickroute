@@ -117,37 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="percentualSizeComboBox.Items5" xml:space="preserve">
-    <value>200 %</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ok.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 58</value>
   </data>
-  <data name="percentualSizeComboBox.Items1" xml:space="preserve">
-    <value>75 %</value>
-  </data>
-  <data name="percentualSizeComboBox.Items2" xml:space="preserve">
-    <value>100 %</value>
-  </data>
-  <data name="percentualSizeComboBox.Items3" xml:space="preserve">
-    <value>125 %</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Proprietà dell'immagine</value>
-  </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="percentualSizeComboBox.Items" xml:space="preserve">
-    <value>50 %</value>
+  <data name="cancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>152, 58</value>
   </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Cancella</value>
   </data>
+  <data name="sizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 13</value>
+  </data>
   <data name="sizeLabel.Text" xml:space="preserve">
     <value>&amp;Dimensione immagine</value>
   </data>
-  <data name="percentualSizeComboBox.Items4" xml:space="preserve">
-    <value>150 %</value>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 0</value>
   </data>
-  <data name="sizeInPixels.Text" xml:space="preserve">
-    <value>1000 x 1000 pixels</value>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 40</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>239, 93</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Proprietà dell'immagine</value>
   </data>
 </root>

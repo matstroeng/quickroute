@@ -117,20 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ok.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Cancella</value>
   </data>
   <data name="mapImageFileNameBrowse.Text" xml:space="preserve">
     <value>&amp;Sfoglia...</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="mapImageFromFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
+  </data>
   <data name="mapImageFromFile.Text" xml:space="preserve">
     <value>Dal &amp;file:</value>
   </data>
+  <data name="mapImageBlank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 17</value>
+  </data>
   <data name="mapImageBlank.Text" xml:space="preserve">
     <value>&amp;Vuoto</value>
+  </data>
+  <data name="mapImageFileFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
   </data>
   <data name="mapImageFileFormatLabel.Text" xml:space="preserve">
     <value>Forma&amp;to del file:</value>
@@ -138,11 +145,20 @@
   <data name="mapImageGroup.Text" xml:space="preserve">
     <value>Immagine della mappa</value>
   </data>
+  <data name="routeFromGpsDevice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 17</value>
+  </data>
   <data name="routeFromGpsDevice.Text" xml:space="preserve">
     <value>&amp;Da GPS:</value>
   </data>
+  <data name="routeFromFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 17</value>
+  </data>
   <data name="routeFromFile.Text" xml:space="preserve">
     <value>Da fil&amp;e:</value>
+  </data>
+  <data name="routeFileFormatLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
   </data>
   <data name="routeFileFormatLabel.Text" xml:space="preserve">
     <value>For&amp;mato del file:</value>
@@ -156,8 +172,14 @@
   <data name="routeGroup.Text" xml:space="preserve">
     <value>Percorso</value>
   </data>
+  <data name="mapImageFromUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 17</value>
+  </data>
   <data name="mapImageFromUrl.Text" xml:space="preserve">
     <value>Da &amp;url:</value>
+  </data>
+  <data name="personNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 13</value>
   </data>
   <data name="personNameLabel.Text" xml:space="preserve">
     <value>&amp;Nome</value>

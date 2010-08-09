@@ -187,7 +187,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="date.CustomFormat" xml:space="preserve">
-    <value>yyyy-MM-dd H:mm</value>
+    <value>yyyy-MM-dd HH:mm</value>
   </data>
   <data name="date.Location" type="System.Drawing.Point, System.Drawing">
     <value>142, 154</value>
