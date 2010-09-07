@@ -132,7 +132,7 @@ namespace QuickRoute.BusinessEntities
     /// <returns></returns>
     public static QuickRouteJpegExtensionData FromJpegFile(string fileName)
     {
-      var stream = new FileStream(fileName, FileMode.Open);
+      var stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
       var ed = FromStream(stream);
       stream.Close();
       stream.Dispose();
