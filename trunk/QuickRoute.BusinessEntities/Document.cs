@@ -550,7 +550,7 @@ namespace QuickRoute.BusinessEntities
     public static QuickRouteFileFormat GetFileFormat(string fileName)
     {
       // 1. check jpg
-      var stream = new FileStream(fileName, FileMode.Open);
+      var stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
       if(stream.Length >= 11)
       {
         var jpegHeader1 = new byte[4];
