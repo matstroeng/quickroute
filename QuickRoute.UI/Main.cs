@@ -1109,9 +1109,10 @@ namespace QuickRoute.UI
         colorRangeEndValue.Text = FormatColorRangeValue(rls.ColorRange.EndValue);
 
         routeLineMaskWidth.NumericUpDownControl.Value = (decimal)rls.MaskWidth;
-        routeLineWidth.NumericUpDownControl.Value = (decimal)rls.Width;
+        routeLineWidth.NumericUpDownControl.Value = (decimal)(canvas.CurrentMouseTool == Canvas.MouseTool.AdjustRoute ? rls.MonochromeWidth : rls.Width);
+        
         routeLineMaskVisible.Checked = rls.MaskVisible;
-        routeLineMaskColorButton.Image = CreateRouteLineMaskColorImage(rls.MaskColor);
+        routeLineMaskColorButton.Image = CreateRouteLineMaskColorImage(canvas.CurrentMouseTool == Canvas.MouseTool.AdjustRoute ? rls.MonochromeColor : rls.MaskColor);
         gradientAlphaAdjustment.TrackBarControl.Value = (int)(rls.AlphaAdjustment * 10);
 
         canvas.RouteLineSettings = rls;
@@ -2840,10 +2841,17 @@ namespace QuickRoute.UI
       using (var cc = new ColorChooser())
       {
         RouteLineSettings rls = canvas.CurrentSession.Settings.RouteLineSettingsCollection[SelectedColorCodingAttribute];
-        cc.Color = rls.MaskColor;
+        cc.Color = canvas.CurrentMouseTool == Canvas.MouseTool.AdjustRoute ? rls.MonochromeColor : rls.MaskColor;
         if (cc.ShowDialog() == DialogResult.OK)
         {
-          rls.MaskColor = cc.Color;
+          if (canvas.CurrentMouseTool == Canvas.MouseTool.AdjustRoute)
+          {
+            rls.MonochromeColor = cc.Color;
+          }
+          else
+          {
+            rls.MaskColor = cc.Color;
+          }
           UpdateUI();
           canvas.DrawMap(Canvas.MapDrawingFlags.Markers | Canvas.MapDrawingFlags.Route);
         }
@@ -3010,7 +3018,14 @@ namespace QuickRoute.UI
       if (!updatingUINow)
       {
         RouteLineSettings routeLineSettings = canvas.CurrentSession.Settings.RouteLineSettingsCollection[SelectedColorCodingAttribute];
-        routeLineSettings.Width = (double)routeLineWidth.NumericUpDownControl.Value;
+        if (canvas.CurrentMouseTool == Canvas.MouseTool.AdjustRoute)
+        {
+          routeLineSettings.MonochromeWidth = (double)routeLineWidth.NumericUpDownControl.Value;
+        }
+        else
+        {
+          routeLineSettings.Width = (double)routeLineWidth.NumericUpDownControl.Value;
+        }
         canvas.DrawMap(Canvas.MapDrawingFlags.Markers | Canvas.MapDrawingFlags.Route);
       }
     }
