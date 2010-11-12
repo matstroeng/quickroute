@@ -59,7 +59,7 @@ namespace QuickRoute.BusinessEntities.Importers.TCX
       XPathNavigator nav = doc.CreateNavigator();
       XmlNamespaceManager nsManager = new XmlNamespaceManager(nav.NameTable);
       nsManager.AddNamespace("ns", "http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2");
-      XPathNodeIterator activities = nav.Select("/ns:TrainingCenterDatabase/ns:Activities/ns:Activity", nsManager);
+      XPathNodeIterator activities = nav.Select("//ns:Activity", nsManager);
 
       while (activities.MoveNext())
       {
