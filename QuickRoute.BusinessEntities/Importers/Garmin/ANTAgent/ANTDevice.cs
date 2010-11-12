@@ -46,10 +46,13 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.ANTAgent
         nsManager = new XmlNamespaceManager(nav.NameTable);
         nsManager.AddNamespace("ns", "http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2");
 
-        XPathNavigator historyItemId = nav.SelectSingleNode("/ns:TrainingCenterDatabase/ns:Activities/ns:Activity/ns:Id", nsManager);
+        var historyItemIds = nav.Select("//ns:Activity/ns:Id", nsManager);
 
-        historyItems.Add(new HistoryItem(displayName, historyItemId.Value, fi.FullName));
-
+        while (historyItemIds.MoveNext())
+        {
+          XPathNavigator historyItemId = historyItemIds.Current;
+          if (historyItemId != null) historyItems.Add(new HistoryItem(displayName, historyItemId.Value, fi.FullName));
+        }
         reader.Close();
       }
     }
