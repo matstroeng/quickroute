@@ -320,12 +320,14 @@ namespace QuickRoute.BusinessEntities
 
     private static Session ReadSession(BinaryReader reader, int length)
     {
+      List<DateTime> mapReadingList = null;
       Route route = null;
       HandleCollection handles = null;
       LongLat projectionOrigin = null;
       LapCollection laps = null;
       var startPos = reader.BaseStream.Position;
       SessionInfo sessionInfo = null;
+      DateTime lastTime;
       while (reader.BaseStream.Position < startPos + length)
       {
         var tag = (Tags)reader.ReadByte();
@@ -337,7 +339,7 @@ namespace QuickRoute.BusinessEntities
             var extraWaypointAttributesLength = reader.ReadUInt16();
             var routeSegments = new List<RouteSegment>();
             var segmentCount = reader.ReadUInt32();
-            var lastTime = DateTime.MinValue;
+            lastTime = DateTime.MinValue;
             for (var i = 0; i < segmentCount; i++)
             {
               var rs = new RouteSegment();
@@ -346,16 +348,7 @@ namespace QuickRoute.BusinessEntities
               {
                 var w = new Waypoint();
                 w.LongLat = ReadLongLat(reader);
-                var timeType = (TimeType)reader.ReadByte();
-                switch (timeType)
-                {
-                  case TimeType.Full:
-                    w.Time = DateTime.FromBinary(reader.ReadInt64());
-                    break;
-                  case TimeType.Delta:
-                    w.Time = lastTime.AddSeconds((double)reader.ReadUInt16() / 1000);
-                    break;
-                }
+                w.Time = ReadTime(lastTime, reader);
                 lastTime = w.Time;
                 if ((attributes & (UInt16)WaypointAttribute.HeartRate) == (UInt16)WaypointAttribute.HeartRate)
                 {
@@ -428,15 +421,28 @@ namespace QuickRoute.BusinessEntities
             // when more fields are added, check so that tagLength is not passed
             break;
 
+          case Tags.MapReadingInfo:
+            mapReadingList = new List<DateTime>();
+            lastTime = DateTime.MinValue;
+            var startPosition = reader.BaseStream.Position;
+            while (reader.BaseStream.Position - startPosition < tagLength)
+            {
+              var time = ReadTime(lastTime, reader);
+              mapReadingList.Add(time);
+              lastTime = time;
+            }
+            break;
+
           default:
             reader.BaseStream.Position += tagLength;
             break;
         }
       }
-            
+
+      if(mapReadingList != null && route != null) route = new Route(Route.AddMapReadingWaypoints(route.Segments, mapReadingList));
       var session = new Session(
         route, 
-        laps, 
+        laps,
         new Size(0, 0), 
         handles != null && handles.Count > 0 ? handles[0].TransformationMatrix : null, 
         projectionOrigin, 
@@ -451,6 +457,18 @@ namespace QuickRoute.BusinessEntities
       if (sessionInfo != null) session.SessionInfo = sessionInfo;
 
       return session;
+    }
+
+    private static DateTime ReadTime(DateTime lastTime, BinaryReader reader)
+    {
+      var timeType = (TimeType)reader.ReadByte();
+      switch (timeType)
+      {
+        case TimeType.Full:
+          return DateTime.FromBinary(reader.ReadInt64());
+        default: //case TimeType.Delta:
+          return lastTime.AddSeconds((double)reader.ReadUInt16() / 1000);
+      }
     }
 
     private static LongLat ReadLongLat(BinaryReader br)
@@ -555,20 +573,8 @@ namespace QuickRoute.BusinessEntities
         {
           // position: 8 bytes
           WriteLongLat(waypoint.LongLat, routeWriter);
-          // time type: 1 byte
-          var diff = waypoint.Time.Subtract(lastTime).Ticks / 10000;
-          var type = (diff > UInt16.MaxValue ? TimeType.Full : TimeType.Delta);
-          routeWriter.Write((byte)type);
-          // time: 2-8 bytes
-          switch (type)
-          {
-            case TimeType.Full:
-              routeWriter.Write(waypoint.Time.ToUniversalTime().ToBinary());
-              break;
-            case TimeType.Delta:
-              routeWriter.Write((UInt16)diff);
-              break;
-          }
+          // time and tome type: 1 + 2-8 bytes
+          WriteTimeTypeAndTime(waypoint.Time, lastTime, routeWriter);
           lastTime = waypoint.Time;
           // heart rate: 1 byte
           if ((((UInt16)attributes) & ((UInt16)WaypointAttribute.HeartRate)) == (UInt16)WaypointAttribute.HeartRate)
@@ -661,11 +667,47 @@ namespace QuickRoute.BusinessEntities
       sessionInfoStream.Close();
       sessionInfoStream.Dispose();
 
+      // map reading info
+      var mapReadingsList = session.Route.GetMapReadingsList();
+      if(mapReadingsList != null)
+      {
+        var mapReadingInfoStream = new MemoryStream();
+        var mapReadingInfoWriter = new BinaryWriter(mapReadingInfoStream);
+        var lastTime = DateTime.MinValue;
+        foreach (var mapReading in mapReadingsList)
+        {
+          WriteTimeTypeAndTime(mapReading, lastTime, mapReadingInfoWriter);
+        }
+        sessionWriter.Write((byte)Tags.MapReadingInfo);
+        sessionWriter.Write((UInt32)mapReadingInfoStream.Length);
+        sessionWriter.Write(mapReadingInfoStream.ToArray());
+        mapReadingInfoWriter.Close();
+        mapReadingInfoStream.Close();
+        mapReadingInfoStream.Dispose();
+      }
+
       var data = sessionStream.ToArray();
       sessionWriter.Close();
       sessionStream.Close();
       sessionStream.Dispose();
       return data;
+    }
+
+    private static void WriteTimeTypeAndTime(DateTime time, DateTime lastTime, BinaryWriter writer)
+    {
+      var diff = time.Subtract(lastTime).Ticks / 10000; // milliseconds
+      var type = (diff > UInt16.MaxValue ? TimeType.Full : TimeType.Delta);
+      writer.Write((byte)type);
+      // time: 2-8 bytes
+      switch (type)
+      {
+        case TimeType.Full:
+          writer.Write(time.ToUniversalTime().ToBinary());
+          break;
+        case TimeType.Delta:
+          writer.Write((UInt16)diff);
+          break;
+      }
     }
 
     private static void WriteString(string s, BinaryWriter writer)
@@ -716,7 +758,8 @@ namespace QuickRoute.BusinessEntities
       Handles = 8,
       ProjectionOrigin = 9,
       Laps = 10,
-      SessionInfo = 11
+      SessionInfo = 11,
+      MapReadingInfo = 12
     }
 
     private enum TimeType : byte

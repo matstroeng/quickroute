@@ -47,7 +47,7 @@ namespace QuickRoute.BusinessEntities
     }
 
     /// <summary>
-    /// Creating a new document using the specified map, route, laps and document settings, and adding one new session with the specified route and laps.
+    /// Creating a new document using the specified map, route, laps, and document settings, and adding one new session with the specified route and laps.
     /// </summary>
     /// <param name="map"></param>
     /// <param name="route"></param>
@@ -422,6 +422,34 @@ namespace QuickRoute.BusinessEntities
       {
         if (s.Settings.CircleTimeRadius == 0) s.Settings.CircleTimeRadius = 45;
       }
+
+      // add map reading duration settings, introduced in QR 2.4
+      if (!doc.Settings.ColorRangeIntervalSliderSettings.ContainsKey(WaypointAttribute.MapReadingDuration))
+      {
+        var defaultCRISS = DocumentSettings.CreateDefaultColorRangeIntervalSliderSettings();
+        doc.Settings.ColorRangeIntervalSliderSettings.Add(WaypointAttribute.MapReadingDuration, defaultCRISS[WaypointAttribute.MapReadingDuration]);
+      }
+
+      if (!doc.Settings.LapHistogramSettings.ContainsKey(WaypointAttribute.MapReadingDuration))
+      {
+        var defaultLHS = DocumentSettings.CreateDefaultLapHistogramSettings();
+        doc.Settings.LapHistogramSettings.Add(WaypointAttribute.MapReadingDuration, defaultLHS[WaypointAttribute.MapReadingDuration]);
+      }
+
+      if (!doc.Settings.DefaultSessionSettings.SmoothingIntervals.ContainsKey(WaypointAttribute.MapReadingDuration))
+      {
+        doc.Settings.DefaultSessionSettings.SmoothingIntervals[WaypointAttribute.MapReadingDuration] = new Interval(0, 0);
+      }
+
+
+      foreach (Session s in doc.sessions)
+      {
+        if (!s.Settings.RouteLineSettingsCollection.ContainsKey(WaypointAttribute.MapReadingDuration))
+        {
+          s.Settings.RouteLineSettingsCollection.Add(WaypointAttribute.MapReadingDuration, defaultRLS[WaypointAttribute.MapReadingDuration]);
+        }
+      }
+
     }
 
     private static Bitmap Base64StringToBitmap(string base64String)
@@ -700,7 +728,7 @@ namespace QuickRoute.BusinessEntities
 
       List<RouteSegment> routeSegments = new List<RouteSegment>();
       routeSegments.Add(rs);
-      Document doc = new Document(map, new Route(routeSegments), new LapCollection(), settings);
+      Document doc = new Document(map, new Route(routeSegments), new LapCollection(), null, settings);
       foreach (var h in handles)
       {
         doc.Sessions[0].AddHandle(h);

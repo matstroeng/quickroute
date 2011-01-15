@@ -197,8 +197,11 @@ namespace QuickRoute.BusinessEntities.Exporters
                 new SelectableRoutePropertyType(typeof (AverageInclinationFromStart), false),
                 new SelectableRoutePropertyType(typeof (AverageDirectionDeviationToNextLap), false),
                 new SelectableRoutePropertyType(typeof (AverageDirectionDeviationToNextLapFromStart), false),
-                new SelectableRoutePropertyType(typeof (Direction), false),                               
                 new SelectableRoutePropertyType(typeof (Location), false),
+                new SelectableRoutePropertyType(typeof (RouteProperties.MapReadingState), false),
+                new SelectableRoutePropertyType(typeof (MapReadingDuration), false),
+                new SelectableRoutePropertyType(typeof (PreviousMapReadingEnd), false),
+                new SelectableRoutePropertyType(typeof (NextMapReadingStart), false),
               };
       }
     }

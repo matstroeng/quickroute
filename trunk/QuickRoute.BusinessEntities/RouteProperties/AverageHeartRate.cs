@@ -37,7 +37,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         else
         {
           value = null;
-            return;
+          return;
         }
         if (pl >= End) break;
         pl = Session.Route.GetNextPLNode(pl, ParameterizedLocation.Direction.Forward);

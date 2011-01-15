@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -152,16 +152,19 @@
     <Compile Include="Lap.cs" />
     <Compile Include="LapCollection.cs" />
     <Compile Include="LapInfo.cs" />
+    <Compile Include="MapReadingState.cs" />
     <Compile Include="RouteProperties\Altitude.cs" />
     <Compile Include="RouteProperties\AltitudeDifference.cs" />
     <Compile Include="RouteProperties\Ascent.cs" />
     <Compile Include="RouteProperties\AverageDirectionDeviationToNextLap.cs" />
     <Compile Include="RouteProperties\AverageHeartRate.cs" />
     <Compile Include="RouteProperties\AverageInclination.cs" />
+    <Compile Include="RouteProperties\AverageMapReadingTime.cs" />
     <Compile Include="RouteProperties\AverageRoutePace.cs" />
     <Compile Include="RouteProperties\AverageRouteSpeed.cs" />
     <Compile Include="RouteProperties\AverageStraightLinePace.cs" />
     <Compile Include="RouteProperties\AverageStraightLineSpeed.cs" />
+    <Compile Include="RouteProperties\AverageTimeBetweenMapReadings.cs" />
     <Compile Include="RouteProperties\BlankRouteProperty.cs" />
     <Compile Include="RouteProperties\CircleTimeAtStartOfSpan.cs" />
     <Compile Include="RouteProperties\CircleTimeBackward.cs" />
@@ -178,11 +181,17 @@
     <Compile Include="RouteProperties\HeartRate.cs" />
     <Compile Include="RouteProperties\LapNumber.cs" />
     <Compile Include="RouteProperties\Longitude.cs" />
+    <Compile Include="RouteProperties\MapReadingDuration.cs" />
+    <Compile Include="RouteProperties\MapReadingPercentage.cs" />
+    <Compile Include="RouteProperties\MapReadingState.cs" />
     <Compile Include="RouteProperties\MaxHeartRate.cs" />
     <Compile Include="RouteProperties\MinHeartRate.cs" />
+    <Compile Include="RouteProperties\NextMapReadingStart.cs" />
+    <Compile Include="RouteProperties\NumberOfMapReadings.cs" />
     <Compile Include="RouteProperties\Pace.cs" />
     <Compile Include="RouteProperties\ImageX.cs" />
     <Compile Include="RouteProperties\ImageY.cs" />
+    <Compile Include="RouteProperties\PreviousMapReadingEnd.cs" />
     <Compile Include="RouteProperties\RouteLocations.cs" />
     <Compile Include="RouteProperties\RouteProperty.cs" />
     <Compile Include="RouteProperties\RouteMomentaneousProperty.cs" />
@@ -391,10 +400,6 @@
     <Content Include="Importers\GlobalSat\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Experimental\" />
-    <Folder Include="ExternalReferences\" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.it.resx" />
   </ItemGroup>
   <ItemGroup>
@@ -405,6 +410,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Importers\SessionSelector.it.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Experimental\" />
+    <Folder Include="ExternalReferences\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

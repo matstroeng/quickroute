@@ -36,6 +36,11 @@ namespace QuickRoute.BusinessEntities.Exporters
       var writerSettings = new XmlWriterSettings { Encoding = Encoding.UTF8, Indent = true, IndentChars = "  " };
       var writer = XmlWriter.Create(OutputStream, writerSettings);
       var xmlSerializer = new XmlSerializer(typeof(gpx11Type));
+      var stNs = "urn:uuid:D0EB2ED5-49B6-44e3-B13C-CF15BE7DD7DD";
+      var mrNs = "http://www.matstroeng.se/quickroute/map-reading";
+      var ns = new XmlSerializerNamespaces();
+      ns.Add("st", stNs);
+      if(Session.Route.ContainsWaypointAttribute(WaypointAttribute.MapReadingDuration)) ns.Add("mr", mrNs);
       var xml = new XmlDocument();
       var nfi = new NumberFormatInfo();
       nfi.NumberDecimalSeparator = ".";
@@ -45,9 +50,11 @@ namespace QuickRoute.BusinessEntities.Exporters
       gpx11.trk = new trkType[] { new trkType() };
 
       gpx11.extensions = new extensionsType();
-      gpx11.extensions.Any = new XmlElement[] { xml.CreateElement("st", "activity", "urn:uuid:D0EB2ED5-49B6-44e3-B13C-CF15BE7DD7DD") };
-      XmlElement activityElement = gpx11.extensions.Any[0];
-      XmlElement heartRateTrackElement = xml.CreateElement("st", "heartRateTrack", "urn:uuid:D0EB2ED5-49B6-44e3-B13C-CF15BE7DD7DD");
+      var extensionElements = new List<XmlElement>();
+      // TODO: add map-reading elements if exists
+      XmlElement activityElement = xml.CreateElement("st", "activity", stNs);
+      extensionElements.Add(activityElement);
+      XmlElement heartRateTrackElement = xml.CreateElement("st", "heartRateTrack", stNs);
       activityElement.AppendChild(heartRateTrackElement);
 
       var trksegs = new List<trksegType>();
@@ -71,7 +78,7 @@ namespace QuickRoute.BusinessEntities.Exporters
           if (w.HeartRate.HasValue)
           {
             // add heartrate
-            var heartRateElement = xml.CreateElement("st", "heartRate", "urn:uuid:D0EB2ED5-49B6-44e3-B13C-CF15BE7DD7DD");
+            var heartRateElement = xml.CreateElement("st", "heartRate", stNs);
             var timeAttribute = xml.CreateAttribute("time");
             timeAttribute.Value = w.Time.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ"); // use ToUniversalTime for backwards compatibility, QR <= v2.2 used local time internally
             var bpmAttribute = xml.CreateAttribute("bpm");
@@ -87,13 +94,13 @@ namespace QuickRoute.BusinessEntities.Exporters
       gpx11.trk[0].trkseg = trksegs.ToArray();
 
       // add laps as GPX st:split
-      var splitsElement = xml.CreateElement("st", "splits", "urn:uuid:D0EB2ED5-49B6-44e3-B13C-CF15BE7DD7DD");
+      var splitsElement = xml.CreateElement("st", "splits", stNs);
       // first distances
       foreach (var lap in Session.Laps)
       {
         if (lap.LapType == LapType.Lap)
         {
-          var splitElement = xml.CreateElement("st", "split", "urn:uuid:D0EB2ED5-49B6-44e3-B13C-CF15BE7DD7DD");
+          var splitElement = xml.CreateElement("st", "split", stNs);
           var distanceAttribute = xml.CreateAttribute("distance");
           distanceAttribute.Value = Session.Route.GetAttributeFromParameterizedLocation(WaypointAttribute.Distance, Session.Route.GetParameterizedLocationFromTime(lap.Time)).Value.ToString(nfi);
           splitElement.Attributes.Append(distanceAttribute);
@@ -105,7 +112,7 @@ namespace QuickRoute.BusinessEntities.Exporters
       {
         if (lap.LapType == LapType.Lap)
         {
-          var splitElement = xml.CreateElement("st", "split", "urn:uuid:D0EB2ED5-49B6-44e3-B13C-CF15BE7DD7DD");
+          var splitElement = xml.CreateElement("st", "split", stNs);
           var timeAttribute = xml.CreateAttribute("time");
           timeAttribute.Value = lap.Time.Subtract(Session.Route.FirstWaypoint.Time).TotalSeconds.ToString(nfi);
           splitElement.Attributes.Append(timeAttribute);
@@ -137,7 +144,21 @@ namespace QuickRoute.BusinessEntities.Exporters
       }
       if(lapWaypoints.Count > 0) gpx11.wpt = lapWaypoints.ToArray();
 
-      xmlSerializer.Serialize(writer, gpx11);
+      // map reading
+      if(Session.Route.ContainsWaypointAttribute(WaypointAttribute.MapReadingDuration))
+      {
+        var mapReadingsList = Session.Route.GetMapReadingsList();
+        for(var i=0; i<mapReadingsList.Count; i+=2)
+        {
+          var mapReadingElement = xml.CreateElement("mr", "map-reading", mrNs);
+          mapReadingElement.SetAttribute("start", mapReadingsList[i].ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ"));
+          mapReadingElement.SetAttribute("end", mapReadingsList[i+1].ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ"));
+          extensionElements.Add(mapReadingElement);
+        }
+      }
+      gpx11.extensions.Any = extensionElements.ToArray();
+
+      xmlSerializer.Serialize(writer, gpx11, ns);
       writer.Close();
     }
 

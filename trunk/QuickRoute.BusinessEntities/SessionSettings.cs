@@ -58,6 +58,7 @@ namespace QuickRoute.BusinessEntities
       smoothingIntervals.Add(WaypointAttribute.HeartRate, new Interval(0, 0));
       smoothingIntervals.Add(WaypointAttribute.Altitude, new Interval(-10, 10));
       smoothingIntervals.Add(WaypointAttribute.DirectionDeviationToNextLap, new Interval(-2.5, 2.5));
+      smoothingIntervals.Add(WaypointAttribute.MapReadingDuration, new Interval(0, 0));
       return smoothingIntervals;
     }
 
@@ -156,6 +157,26 @@ namespace QuickRoute.BusinessEntities
       rls.MonochromeColor = rls.ColorRange.Gradient.GetColor(1);
       rls.MonochromeWidth = rls.Width;
       coll.Add(WaypointAttribute.DirectionDeviationToNextLap, rls);
+
+      // default map reading duration line settings
+      rls = new RouteLineSettings(
+        new ColorRange(
+          new Gradient(Color.FromArgb(0, Color.White), 0.0,
+                       Color.FromArgb(128, 255, 128, 128), 0.0001,
+                       Color.FromArgb(128, 255, 0, 0), 0.5,
+                       Color.FromArgb(128, 128, 0, 0), 1.0),
+          0, 10),
+        3,
+        Color.FromArgb(160, Color.Black),
+        2,
+        true,
+        0);
+      // TODO: localize
+      rls.ColorRange.Gradient.Name = WaypointAttribute.MapReadingDuration.ToString();
+      rls.MonochromeColor = rls.ColorRange.Gradient.GetColor(1);
+      rls.MonochromeWidth = rls.Width;
+      coll.Add(WaypointAttribute.MapReadingDuration, rls);
+
 
       return coll; 
     }

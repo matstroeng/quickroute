@@ -761,4 +761,100 @@
   <data name="Print" xml:space="preserve">
     <value>Skriv ut...</value>
   </data>
+  <data name="MapReadingDuration" xml:space="preserve">
+    <value>Kartläsningstid</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="Unit_Time" xml:space="preserve">
+    <value>Tid</value>
+  </data>
+  <data name="RoutePropertyName_AverageTimeBetweenMapReadings" xml:space="preserve">
+    <value>Genomsnittlig tid mellan kartläsningar (sträcka)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageTimeBetweenMapReadings" xml:space="preserve">
+    <value>Genomsnittlig tid mellan kartläsningar (sträcka): {0}</value>
+  </data>
+  <data name="RoutePropertyName_AverageTimeBetweenMapReadingsFromStart" xml:space="preserve">
+    <value>Genomsnittlig tid mellan kartläsningar (totalt)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageTimeBetweenMapReadingsFromStart" xml:space="preserve">
+    <value>Genomsnittlig tid mellan kartläsningar (totalt): {0}</value>
+  </data>
+  <data name="RoutePropertyName_AverageMapReadingTime" xml:space="preserve">
+    <value>Genomsnittlig kartläsningtid (sträcka)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageMapReadingTime" xml:space="preserve">
+    <value>Genomsnittlig kartläsningtid (sträcka): {0}</value>
+  </data>
+  <data name="RoutePropertyName_AverageMapReadingTimeFromStart" xml:space="preserve">
+    <value>Genomsnittlig kartläsningtid (totalt)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageMapReadingTimeFromStart" xml:space="preserve">
+    <value>Genomsnittlig kartläsningtid (totalt): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingDuration" xml:space="preserve">
+    <value>Kartläsningstid</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingDuration" xml:space="preserve">
+    <value>Kartläsningstid: {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingDurationInSpan" xml:space="preserve">
+    <value>Kartläsningstid (sträcka)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingDurationInSpan" xml:space="preserve">
+    <value>Kartläsningstid (sträcka): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingDurationFromStart" xml:space="preserve">
+    <value>Kartläsningstid (totalt)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingDurationFromStart" xml:space="preserve">
+    <value>Kartläsningstid (totalt): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingPercentage" xml:space="preserve">
+    <value>Kartläsningsandel (sträcka)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingPercentage" xml:space="preserve">
+    <value>Kartläsningsandel (sträcka): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingPercentageFromStart" xml:space="preserve">
+    <value>Kartläsningsandel (totalt)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingPercentageFromStart" xml:space="preserve">
+    <value>Kartläsningsandel (totalt): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingState" xml:space="preserve">
+    <value>Kartläsning</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingState" xml:space="preserve">
+    <value>Kartläsning: {0}</value>
+  </data>
+  <data name="RoutePropertyName_PreviousMapReadingEnd" xml:space="preserve">
+    <value>Tid till föregående kartläsnings slut</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_PreviousMapReadingEnd" xml:space="preserve">
+    <value>Tid till föregående kartläsnings slut: {0}</value>
+  </data>
+  <data name="RoutePropertyName_NextMapReadingStart" xml:space="preserve">
+    <value>Tid till nästa kartläsnings start</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_NextMapReadingStart" xml:space="preserve">
+    <value>Tid till nästa kartläsnings start: {0}</value>
+  </data>
+  <data name="RoutePropertyName_NumberOfMapReadings" xml:space="preserve">
+    <value>Antal kartläsningar (sträcka)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_NumberOfMapReadings" xml:space="preserve">
+    <value>Antal kartläsningar (sträcka): {0}</value>
+  </data>
+  <data name="RoutePropertyName_NumberOfMapReadingsFromStart" xml:space="preserve">
+    <value>Antal kartläsningar (totalt)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_NumberOfMapReadingsFromStart" xml:space="preserve">
+    <value>Antal kartläsningar (totalt): {0}</value>
+  </data>
 </root>

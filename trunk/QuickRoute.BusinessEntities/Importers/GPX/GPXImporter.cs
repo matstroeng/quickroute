@@ -133,10 +133,15 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
       var gpx11 = (gpx11Type)xSerializer.Deserialize(sr);
       sr.Close();
       var nsManager = new XmlNamespaceManager(sr.NameTable);
+      // add namespace for split times and heart rates (from SportsTracks software)
       nsManager.AddNamespace("st", "urn:uuid:D0EB2ED5-49B6-44e3-B13C-CF15BE7DD7DD");
+      // add namespace for map reading information (QuickRoute native)
+      nsManager.AddNamespace("mr", "http://www.matstroeng.se/quickroute/map-reading");
 
       // pre-store heart rates in dictionary (if present)
       var heartRates = new Dictionary<DateTime, double>();
+      // pre-store map-readings in map reading collection (if present)
+      var mapReadings = new List<DateTime>();
       if (gpx11.extensions != null && gpx11.extensions.Any != null)
       {
         foreach (var element in gpx11.extensions.Any)
@@ -159,8 +164,19 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
               }
             }
           }
+          if(element.Name == "mr:map-reading")
+          {
+            DateTime start, end;
+            if (DateTime.TryParse(element.Attributes["start"].Value, out start) &&
+                DateTime.TryParse(element.Attributes["end"].Value, out end))
+            {
+              mapReadings.Add(start.ToUniversalTime());
+              mapReadings.Add(end.ToUniversalTime());
+            }
+          }
         }
       }
+      mapReadings = FilterMapReadings(mapReadings);
 
       // QuickRoute route
       var noOfWaypoints = 0;
@@ -196,7 +212,7 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
                 }
                 if (wpt.timeSpecified)
                 {
-                  routeSegment.Waypoints.Add(new Waypoint(wpt.time, new LongLat(lon, lat), altitude, heartRate));
+                  routeSegment.Waypoints.Add(new Waypoint(wpt.time, new LongLat(lon, lat), altitude, heartRate, null));
                   noOfWaypointsWithTimes++;
                 }
               }
@@ -234,7 +250,7 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
               }
               if (rtept.timeSpecified)
               {
-                routeSegment.Waypoints.Add(new Waypoint(rtept.time, new LongLat(lon, lat), altitude, heartRate));
+                routeSegment.Waypoints.Add(new Waypoint(rtept.time, new LongLat(lon, lat), altitude, heartRate, null));
                 noOfWaypointsWithTimes++;
               }
             }
@@ -243,6 +259,10 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
           if (routeSegment.Waypoints.Count > 0) routeSegments.Add(routeSegment);
         }
       }
+
+      // add map reading waypoints
+      routeSegments = Route.AddMapReadingWaypoints(routeSegments, mapReadings);
+
       importResult.Succeeded = (noOfWaypointsWithTimes > 0);
 
       if (ImportResult.Succeeded)
@@ -275,7 +295,7 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
         }
 
         // from GPX waypoints
-        if (gpx11.wpt != null)
+        if (gpx11.wpt != null && laps.Count == 0)
         {
           foreach (var waypoint in gpx11.wpt)
           {
@@ -327,6 +347,29 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
       if (EndWork != null) EndWork(this, new EventArgs());
     }
 
+    private static List<DateTime> FilterMapReadings(List<DateTime> mapReadings)
+    {
+      mapReadings.Sort();
+      var filteredMapReadings = new List<DateTime>();
+      // remove zero-length intervals
+      for(var i=0; i<mapReadings.Count; i+=2)
+      {
+        if (mapReadings[i] < mapReadings[i + 1])
+        {
+          filteredMapReadings.Add(mapReadings[i]);
+          filteredMapReadings.Add(mapReadings[i+1]);
+        }
+      }
+      // merge adjacent intervals
+      for (var i = filteredMapReadings.Count - 2; i >= 2; i -= 2)
+      {
+        if(filteredMapReadings[i] == filteredMapReadings[i-1])
+        {
+          filteredMapReadings.RemoveRange(i-1, 2);
+        }
+      }
+      return filteredMapReadings;
+    }
 
     #region IRouteImporter Members
 

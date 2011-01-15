@@ -93,7 +93,8 @@ namespace QuickRoute.UI
                                               new WaypointAttributeString(WaypointAttribute.Speed),
                                               new WaypointAttributeString(WaypointAttribute.HeartRate),
                                               new WaypointAttributeString(WaypointAttribute.Altitude),
-                                              new WaypointAttributeString(WaypointAttribute.DirectionDeviationToNextLap)
+                                              new WaypointAttributeString(WaypointAttribute.DirectionDeviationToNextLap),
+                                              new WaypointAttributeString(WaypointAttribute.MapReadingDuration)
                                             };
       colorCodingAttributes.ComboBox.DataSource = cca;
       colorCodingAttributes.SelectedIndex = 0;
@@ -166,7 +167,7 @@ namespace QuickRoute.UI
             openingDocumentNow = true;
             ApplicationSettings.AddRecentPerson(cnf.Person);
             canvas.PreventRedraw = true;
-            canvas.Document = new Document(cnf.Map, cnf.Route, cnf.Laps, cnf.InitialTransformation.TransformationMatrix, cnf.InitialTransformation.ProjectionOrigin,
+            canvas.Document = new Document(cnf.Map, cnf.ImportResult.Route, cnf.ImportResult.Laps, cnf.InitialTransformation.TransformationMatrix, cnf.InitialTransformation.ProjectionOrigin,
                                            ApplicationSettings.DefaultDocumentSettings.Copy());
             canvas.CurrentSession = canvas.Document.Sessions[0];
             canvas.CurrentSession.SessionInfo.Person = cnf.Person;
@@ -214,7 +215,8 @@ namespace QuickRoute.UI
                   WaypointAttribute.Speed, 
                   WaypointAttribute.HeartRate,
                   WaypointAttribute.Altitude,
-                  WaypointAttribute.DirectionDeviationToNextLap 
+                  WaypointAttribute.DirectionDeviationToNextLap, 
+                  WaypointAttribute.MapReadingDuration 
                 };
       Route r = canvas.CurrentSession.Route;
       foreach (WaypointAttribute wa in was)
@@ -231,6 +233,7 @@ namespace QuickRoute.UI
             values[1] += 0.1 * span;
             if (wa == WaypointAttribute.Pace) values[1] = Math.Min(30 * 60, values[1].Value);
             if (wa == WaypointAttribute.DirectionDeviationToNextLap) values[0] = 0;
+            if (wa == WaypointAttribute.MapReadingDuration) values[0] = 0;
             UpdateColorRangeInterval(wa, values[0].Value, values[1].Value, true);
           }
         }
@@ -254,6 +257,8 @@ namespace QuickRoute.UI
           return new List<double>(new double[] { 0.1, 1 });
         case WaypointAttribute.DirectionDeviationToNextLap:
           return new List<double>(new double[] { 0, 0.9 });
+        case WaypointAttribute.MapReadingDuration:
+          return new List<double>(new double[] { 0, 1.1 });
         default:
           return new List<double>(new double[] { 0.1, 0.9 });
       }
@@ -1097,6 +1102,10 @@ namespace QuickRoute.UI
             slider.ScaleCreator = new DoubleScaleCreator(sliderSettings.MinValue, sliderSettings.MaxValue, 20, false);
             slider.NumericConverter = new NumericConverter { NoOfDecimals = 0 };
             break;
+          case WaypointAttribute.MapReadingDuration:
+            slider.ScaleCreator = new TimeScaleCreator(sliderSettings.MinValue, sliderSettings.MaxValue, 5, false);
+            slider.NumericConverter = new TimeConverter(TimeConverter.TimeConverterType.ElapsedTime);
+            break;
         }
         slider.ColorRange = rls.ColorRange;
         slider.MinValue = sliderSettings.MinValue;
@@ -1643,6 +1652,9 @@ namespace QuickRoute.UI
         case WaypointAttribute.DirectionDeviationToNextLap:
           lineGraph.Graph.YAxisCaption = Strings.Direction + " (" + Strings.Unit_Direction + ")";
           break;
+        case WaypointAttribute.MapReadingDuration:
+          lineGraph.Graph.YAxisCaption = Strings.MapReadingDuration;
+          break;
       }
       switch (lineGraph.Graph.XAxisAttribute)
       {
@@ -1974,6 +1986,7 @@ namespace QuickRoute.UI
         values[1] += 0.1 * span;
         if (SelectedColorCodingAttribute == WaypointAttribute.Pace) values[1] = Math.Min(30 * 60, values[1].Value);
         if (SelectedColorCodingAttribute == WaypointAttribute.DirectionDeviationToNextLap) values[0] = 0;
+        if (SelectedColorCodingAttribute == WaypointAttribute.MapReadingDuration) values[0] = 0;
 
         BeginWork();
         UpdateColorRangeInterval(SelectedColorCodingAttribute, values[0].Value, values[1].Value, true);

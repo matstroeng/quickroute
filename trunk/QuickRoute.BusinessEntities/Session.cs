@@ -50,6 +50,7 @@ namespace QuickRoute.BusinessEntities
       this.settings = settings;
       this.initialTransformationMatrix = initialTransformationMatrix ??
                                          RouteAdjustmentManager.CreateInitialTransformationMatrix(this.route, mapSize, this.projectionOrigin);
+      this.route.CalculateWaypointAttributes();
       this.route.SuppressWaypointAttributeCalculation = false;
       Initialize();
     }
