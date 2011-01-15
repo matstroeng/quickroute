@@ -776,4 +776,132 @@
     <value>Print...</value>
     <comment>Added 2009-11-27</comment>
   </data>
+  <data name="MapReadingDuration" xml:space="preserve">
+    <value>Map reading duration</value>
+    <comment>Added 2011-01-13</comment>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+    <comment>Added 2011-01-13</comment>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+    <comment>Added 2011-01-13</comment>
+  </data>
+  <data name="Unit_Time" xml:space="preserve">
+    <value>Time</value>
+    <comment>Added 2011-01-13</comment>
+  </data>
+  <data name="RoutePropertyName_AverageTimeBetweenMapReadings" xml:space="preserve">
+    <value>Average time between map readings (lap)</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageTimeBetweenMapReadings" xml:space="preserve">
+    <value>Average time between map readings (lap): {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyName_AverageTimeBetweenMapReadingsFromStart" xml:space="preserve">
+    <value>Average time between map readings (total)</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageTimeBetweenMapReadingsFromStart" xml:space="preserve">
+    <value>Average time between map readings (total): {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyName_AverageMapReadingTime" xml:space="preserve">
+    <value>Average map reading time (lap)</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageMapReadingTime" xml:space="preserve">
+    <value>Average map reading time (lap): {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyName_AverageMapReadingTimeFromStart" xml:space="preserve">
+    <value>Average map reading time (total)</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageMapReadingTimeFromStart" xml:space="preserve">
+    <value>Average map reading time (total): {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyName_MapReadingDuration" xml:space="preserve">
+    <value>Map reading duration</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingDuration" xml:space="preserve">
+    <value>Map reading duration: {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyName_MapReadingDurationInSpan" xml:space="preserve">
+    <value>Map reading duration (lap)</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingDurationInSpan" xml:space="preserve">
+    <value>Map reading duration (lap): {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyName_MapReadingDurationFromStart" xml:space="preserve">
+    <value>Map reading duration (total)</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingDurationFromStart" xml:space="preserve">
+    <value>Map reading duration (total): {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyName_MapReadingPercentage" xml:space="preserve">
+    <value>Map reading percentage (lap)</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingPercentage" xml:space="preserve">
+    <value>Map reading percentage (lap): {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyName_MapReadingPercentageFromStart" xml:space="preserve">
+    <value>Map reading percentage (total)</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingPercentageFromStart" xml:space="preserve">
+    <value>Map reading percentage (total): {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyName_MapReadingState" xml:space="preserve">
+    <value>Reading map</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingState" xml:space="preserve">
+    <value>Reading map: {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyName_PreviousMapReadingEnd" xml:space="preserve">
+    <value>Time to end of previous map reading</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_PreviousMapReadingEnd" xml:space="preserve">
+    <value>Time to end of previous map reading: {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyName_NextMapReadingStart" xml:space="preserve">
+    <value>Time to start of next map reading</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_NextMapReadingStart" xml:space="preserve">
+    <value>Time to start of next map reading: {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyName_NumberOfMapReadings" xml:space="preserve">
+    <value>Number of map readings (lap)</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_NumberOfMapReadings" xml:space="preserve">
+    <value>Number of map readings (lap): {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyName_NumberOfMapReadingsFromStart" xml:space="preserve">
+    <value>Number of map readings (total)</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_NumberOfMapReadingsFromStart" xml:space="preserve">
+    <value>Number of map readings (total): {0}</value>
+    <comment>Added 2011-01-15</comment>
+  </data>
 </root>

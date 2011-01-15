@@ -426,6 +426,62 @@ namespace QuickRoute.BusinessEntities
     }
   }
 
+  public class MapReadingSimpleState : IUnit
+  {
+    public MapReadingSimpleState()
+    {
+    }
+
+    public MapReadingSimpleState(bool value)
+    {
+      Value = value;
+    }
+
+    public bool Value { get; set; }
+
+    #region IUnit Members
+
+    public override string ToString()
+    {
+      return Value.ToString();
+    }
+
+    public override void FromString(string s)
+    {
+      bool result;
+      if (bool.TryParse(s, out result))
+      {
+        Value = result;
+      }
+    }
+
+    public override double ToDouble(IUnit u0, double d0, IUnit u1, double d1)
+    {
+      MapReadingSimpleState v0 = u0 as MapReadingSimpleState;
+      MapReadingSimpleState v1 = u1 as MapReadingSimpleState;
+      if (v0 == null || v1 == null) throw new ArgumentException();
+      if (v0.Value == v1.Value) return d0;
+      return d0 + ((Value ? 1 : 0) - (v0.Value ? 1 : 0)) / ((v1.Value ? 1 : 0) - (v0.Value ? 1 : 0)) * (d1 - d0);
+    }
+
+    public override object ValueAsObject
+    {
+      get { return Value; }
+      set { Value = Convert.ToBoolean(value); }
+    }
+
+    public override int CompareTo(IUnit other)
+    {
+      if (other is MapReadingSimpleState)
+      {
+        return Value.CompareTo((other as MapReadingSimpleState).Value);
+      }
+      throw new ArgumentException();
+    }
+
+    #endregion
+  }
+
   public class Scale
   {
     public IUnit Start { get; set; }

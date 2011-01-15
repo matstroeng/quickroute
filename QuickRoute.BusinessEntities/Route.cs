@@ -229,17 +229,18 @@ namespace QuickRoute.BusinessEntities
     public double? GetAttributeFromParameterizedLocation(WaypointAttribute attribute, ParameterizedLocation parameterizedLocation)
     {
       List<Waypoint> waypoints = segments[parameterizedLocation.SegmentIndex].Waypoints;
-      if (parameterizedLocation.IsNode) return waypoints[(int)parameterizedLocation.Value].Attributes[attribute];
+      if (parameterizedLocation.IsNode)
+      {
+        return waypoints[(int)parameterizedLocation.Value].Attributes.ContainsKey(attribute) 
+          ? waypoints[(int)parameterizedLocation.Value].Attributes[attribute] 
+          : null;
+      }
       var i = (int)parameterizedLocation.Floor().Value;
       if (i >= waypoints.Count - 1) i = waypoints.Count - 2;
       if (waypoints.Count < 2) return waypoints[0].Attributes[attribute];
       double d = parameterizedLocation.Value - i;
 
-      var d0 = waypoints[i].Attributes[attribute];
-      var d1 = waypoints[i + 1].Attributes[attribute];
-      if (d0.HasValue && d1.HasValue) return d0 + d * (d1 - d0);
-      if (!d0.HasValue && !d1.HasValue) return null;
-      return (d < 0.5 ? d0 : d1);
+      return GetAttributeValueBetweenWaypoints(waypoints[i], waypoints[i + 1], d, attribute);
     }
 
     /// <summary>
@@ -523,9 +524,9 @@ namespace QuickRoute.BusinessEntities
         }
       }
 
-      // check existence of heart rate and altitude
+      // check existence of heart rate, altitude and map reading
       waypointAttributeExists = new Dictionary<WaypointAttribute, bool>();
-      var attributesToCheckExistenceFor = new List<WaypointAttribute> { WaypointAttribute.HeartRate, WaypointAttribute.Altitude };
+      var attributesToCheckExistenceFor = new List<WaypointAttribute> { WaypointAttribute.HeartRate, WaypointAttribute.Altitude, WaypointAttribute.MapReadingDuration };
       foreach (var wa in attributesToCheckExistenceFor)
       {
         waypointAttributeExists[wa] = CheckIfWaypointAttributeExists(wa);
@@ -537,422 +538,7 @@ namespace QuickRoute.BusinessEntities
       CalculateSlidingAverageAttributes(WaypointAttribute.Altitude, SmoothingIntervals[WaypointAttribute.Altitude]);
       CalculateDirectionDeviationsToNextLap();
       CalculateInclinations();
-
-    }
-
-    private void CalculateSlidingAverageAttributes(WaypointAttribute attribute, Interval smoothingInterval)
-    {
-      // using optimized but hard-to-understand algorithm
-      if (attribute != WaypointAttribute.HeartRate && attribute != WaypointAttribute.Altitude) throw new ArgumentException("The 'attribute' parameter must be either WaypointAttribute.HeartRate or WaypointAttribute.Altitude");
-
-      bool zeroLengthInterval = smoothingInterval.Length == 0;
-      bool containsAttribute = ContainsWaypointAttribute(attribute);
-
-      ParameterizedLocation siStartPL = null;
-      ParameterizedLocation siEndPL = null;
-      if (!zeroLengthInterval)
-      {
-        siStartPL = GetParameterizedLocationFromTime(FirstWaypoint.Time.AddSeconds(smoothingInterval.Start));
-        siEndPL = GetParameterizedLocationFromTime(FirstWaypoint.Time.AddSeconds(smoothingInterval.End));
-      }
-      for (int i = 0; i < segments.Count; i++)
-      {
-        double[] valueSums = null;
-        bool[] valueIsSet = null;
-        DateTime[] valueTimes = null;
-        var nullValueFound = false;
-        if (containsAttribute && !zeroLengthInterval)
-        {
-          valueSums = new double[segments[i].Waypoints.Count];
-          valueIsSet = new bool[segments[i].Waypoints.Count];
-          valueTimes = new DateTime[segments[i].Waypoints.Count];
-          valueSums[0] = 0;
-          if(segments[i].Waypoints.Count > 0)
-          {
-            valueIsSet[0] = segments[i].Waypoints[0].GetOriginalAttribute(attribute).HasValue;
-            valueTimes[0] = segments[i].Waypoints[0].Time;
-            nullValueFound = !valueIsSet[0];
-          }
-          for (int j = 1; j < segments[i].Waypoints.Count; j++)
-          {
-            var previousWaypoint = segments[i].Waypoints[j - 1];
-            var thisWaypoint = segments[i].Waypoints[j];
-            var previousOriginalAttribute = previousWaypoint.GetOriginalAttribute(attribute);
-            var thisOriginalAttribute = thisWaypoint.GetOriginalAttribute(attribute);
-            valueIsSet[j] = thisOriginalAttribute.HasValue;
-            valueTimes[j] = thisWaypoint.Time;
-            nullValueFound = nullValueFound || !valueIsSet[j];
-            if (valueIsSet[j - 1] && valueIsSet[j])
-            {
-              valueSums[j] = valueSums[j - 1] +
-                             (valueTimes[j] - valueTimes[j-1]).TotalSeconds *
-                             (previousOriginalAttribute.Value + thisOriginalAttribute.Value) / 2;
-            }
-            else
-            {
-              valueSums[j] = valueSums[j - 1];
-            }
-          }
-        }
-
-        for (int j = 0; j < segments[i].Waypoints.Count; j++)
-        {
-          Waypoint w = segments[i].Waypoints[j];
-          if (!containsAttribute)
-          {
-            w.Attributes[attribute] = null;
-          }
-          else if (zeroLengthInterval)
-          {
-            w.Attributes[attribute] = w.GetOriginalAttribute(attribute);
-          }
-          else
-          {
-            // start of sliding interval
-            siStartPL =
-              GetParameterizedLocationFromTime(w.Time.AddSeconds(smoothingInterval.Start), siStartPL,
-                                               ParameterizedLocation.Direction.Forward);
-            // end of sliding interval
-            siEndPL =
-              GetParameterizedLocationFromTime(w.Time.AddSeconds(smoothingInterval.End), siEndPL,
-                                               ParameterizedLocation.Direction.Forward);
-            if (siStartPL != null && siEndPL != null)
-            {
-              if (siStartPL.SegmentIndex < i) siStartPL = new ParameterizedLocation(i, 0);
-              if (siEndPL.SegmentIndex > i) siEndPL = new ParameterizedLocation(i, segments[i].Waypoints.Count - 1);
-
-              double startSum;
-              double endSum;
-              var adjustedIntervalLength = (GetTimeFromParameterizedLocation(siEndPL) - GetTimeFromParameterizedLocation(siStartPL)).TotalSeconds;
-              int startIndex;
-              int endIndex;
-              if (siStartPL.IsNode)
-              {
-                startSum = valueSums[(int)siStartPL.Value];
-                startIndex = (int)siStartPL.Value;
-              }
-              else
-              {
-                var d = siStartPL.Value - Math.Floor(siStartPL.Value);
-                startSum = (1 - d) * valueSums[(int)siStartPL.Value] + d * valueSums[(int)siStartPL.Value + 1];
-                startIndex = (int)siStartPL.Value;
-              }
-              if (siEndPL.IsNode)
-              {
-                endSum = valueSums[(int)siEndPL.Value];
-                endIndex = (int)siEndPL.Value;
-              }
-              else
-              {
-                var d = siEndPL.Value - Math.Floor(siEndPL.Value);
-                endSum = (1 - d) * valueSums[(int)siEndPL.Value] + d * valueSums[(int)siEndPL.Value + 1];
-                endIndex = (int)siEndPL.Value + 1;
-              }
-
-              if (adjustedIntervalLength == 0)
-              {
-                w.Attributes[attribute] = w.GetOriginalAttribute(attribute);
-              }
-              else
-              {
-                // check if there are any null values in this interval
-                bool nullValueFoundInInterval;
-                if (!nullValueFound)
-                {
-                  // no null value in whole route, don't need to check this interval
-                  nullValueFoundInInterval = false;
-                }
-                else
-                {
-                  // there is at least one null value in the route, need to check if there exists any in this interval
-                  nullValueFoundInInterval = false;
-                  for (var k = startIndex; k <= endIndex; k++)
-                  {
-                    if (!valueIsSet[k])
-                    {
-                      nullValueFoundInInterval = true;
-                      break;
-                    }
-                  }
-                }
-                if(!nullValueFoundInInterval)
-                {
-                  // no null values in this interval, perform normal calculation
-                  w.Attributes[attribute] = (endSum - startSum) / adjustedIntervalLength;
-                }
-                else
-                {
-                  // null value found, calculate based on each non-null value waypoint pair
-                  adjustedIntervalLength = 0;
-                  double sum = 0;
-                  for (var k = startIndex; k < endIndex; k++)
-                  {
-                    if(valueIsSet[k] && valueIsSet[k+1])
-                    {
-                      double start = Math.Max(k, siStartPL.Value);
-                      double end = Math.Min(k+1, siEndPL.Value);
-                      adjustedIntervalLength += (end-start) * (valueTimes[k + 1] - valueTimes[k]).TotalSeconds;
-                      sum += (end-start) * (valueSums[k + 1] - valueSums[k]);
-                    }
-                  }
-                  w.Attributes[attribute] = (adjustedIntervalLength == 0 ? (double?)null : sum / adjustedIntervalLength);
-                }
-              }
-            }
-            else
-            {
-              w.Attributes[attribute] = null;
-            }
-          }
-        }
-      }
-    }
-
-    /// <summary>
-    /// Calculates speeds and paces.
-    /// </summary>
-    private void CalculateSpeeds()
-    {
-      // using optimized but hard-to-understand algorithm
-      var actualInterval = new Interval(SmoothingIntervals[WaypointAttribute.Speed]);
-      if (actualInterval.Length == 0)
-      {
-        // need to have non-zero smothing interval when calculating speed, set it to a millisecond
-        var center = actualInterval.Start;
-        actualInterval = new Interval(center - 0.0005, center + 0.0005);
-      }
-      ParameterizedLocation siStartPL =
-        GetParameterizedLocationFromTime(FirstWaypoint.Time.AddSeconds(actualInterval.Start));
-      ParameterizedLocation siEndPL = GetParameterizedLocationFromTime(FirstWaypoint.Time.AddSeconds(actualInterval.End));
-      for (int i = 0; i < segments.Count; i++)
-      {
-        for (int j = 0; j < segments[i].Waypoints.Count; j++)
-        {
-          Waypoint w = segments[i].Waypoints[j];
-          // start of sliding interval
-          siStartPL =
-            GetParameterizedLocationFromTime(w.Time.AddSeconds(actualInterval.Start), siStartPL,
-                                             ParameterizedLocation.Direction.Forward);
-          // end of sliding interval
-          siEndPL =
-            GetParameterizedLocationFromTime(w.Time.AddSeconds(actualInterval.End), siEndPL,
-                                             ParameterizedLocation.Direction.Forward);
-          if (siStartPL != null && siEndPL != null)
-          {
-            if (siStartPL.SegmentIndex < i) siStartPL = new ParameterizedLocation(i, 0);
-            if (siEndPL.SegmentIndex > i) siEndPL = new ParameterizedLocation(i, segments[i].Waypoints.Count - 1);
-            double siStartDistance = GetAttributeFromParameterizedLocation(WaypointAttribute.Distance, siStartPL).Value;
-            double siEndDistance = GetAttributeFromParameterizedLocation(WaypointAttribute.Distance, siEndPL).Value;
-            double siLength = (GetTimeFromParameterizedLocation(siEndPL) - GetTimeFromParameterizedLocation(siStartPL)).TotalSeconds;
-            w.Attributes[WaypointAttribute.Speed] = (siLength == 0 ? 0 : 3.6 * (siEndDistance - siStartDistance) / siLength);
-          }
-          else
-          {
-            w.Attributes[WaypointAttribute.Speed] = 0;
-          }
-          w.Attributes[WaypointAttribute.Pace] = ConvertUtil.ToPace(w.Attributes[WaypointAttribute.Speed].Value).TotalSeconds;
-        }
-      }
-    }
-
-    private void CalculateDirectionDeviationsToNextLap()
-    {
-      if (lapTimes.Count >= 2)
-      {
-        int lapIndex = 0;
-        var lapStartPL = GetParameterizedLocationFromTime(lapTimes[lapIndex]);
-        var lapEndPL = GetParameterizedLocationFromTime(lapTimes[lapIndex + 1]);
-        // using optimized but hard-to-understand algorithm
-        var actualInterval = new Interval(SmoothingIntervals[WaypointAttribute.DirectionDeviationToNextLap]);
-        if (actualInterval.Length == 0)
-        {
-          // need to have non-zero smothing interval when calculating direction vectors, set it to a millisecond
-          var center = actualInterval.Start;
-          actualInterval = new Interval(center - 0.0005, center + 0.0005);
-        }
-        ParameterizedLocation siStartPL =
-          GetParameterizedLocationFromTime(FirstWaypoint.Time.AddSeconds(actualInterval.Start));
-        ParameterizedLocation siEndPL =
-          GetParameterizedLocationFromTime(FirstWaypoint.Time.AddSeconds(actualInterval.End));
-        for (int i = 0; i < segments.Count; i++)
-        {
-          // 1. calculate the direction angles in this segment, taking laps into account (never consider positions outside current lap)
-          var directionAngles = new double[segments[i].Waypoints.Count];
-          var startLapIndexInThisSegment = lapIndex;
-          var lapStartPLInThisSegment = GetParameterizedLocationFromTime(lapTimes[lapIndex]);
-          var lapEndPLInThisSegment = GetParameterizedLocationFromTime(lapTimes[lapIndex + 1]);
-          for (int j = 0; j < segments[i].Waypoints.Count; j++)
-          {
-            Waypoint w = segments[i].Waypoints[j];
-            while (w.Time > lapTimes[lapIndex] && lapIndex < lapTimes.Count - 1)
-            {
-              lapIndex++;
-              lapStartPL = GetParameterizedLocationFromTime(lapTimes[lapIndex - 1]);
-              lapEndPL = GetParameterizedLocationFromTime(lapTimes[lapIndex]);
-            }
-
-            // start of sliding interval
-            siStartPL =
-              GetParameterizedLocationFromTime(w.Time.AddSeconds(actualInterval.Start), siStartPL,
-                                               ParameterizedLocation.Direction.Forward);
-            // end of sliding interval
-            siEndPL =
-              GetParameterizedLocationFromTime(w.Time.AddSeconds(actualInterval.End), siEndPL,
-                                               ParameterizedLocation.Direction.Forward);
-            if (siStartPL != null && siEndPL != null)
-            {
-              if (siStartPL.SegmentIndex < i) siStartPL = new ParameterizedLocation(i, 0);
-              if (siEndPL.SegmentIndex > i) siEndPL = new ParameterizedLocation(i, segments[i].Waypoints.Count - 1);
-              if (siStartPL < lapStartPL) siStartPL = new ParameterizedLocation(lapStartPL);
-              if (siEndPL > lapEndPL) siEndPL = new ParameterizedLocation(lapEndPL);
-              var siStartLocation = GetLocationFromParameterizedLocation(siStartPL);
-              var siEndLocation = GetLocationFromParameterizedLocation(siEndPL);
-              var middle = (siStartLocation / 2 + siEndLocation / 2);
-              var p0 = siStartLocation.Project(middle);
-              var p1 = siEndLocation.Project(middle);
-              directionAngles[j] = LinearAlgebraUtil.GetAngleD(LinearAlgebraUtil.Normalize(p1 - p0));
-            }
-            else
-            {
-              directionAngles[j] = 0;
-            }
-          }
-
-
-          // 2. calculate the directions and direction deviations based on values achieved in step 1
-          lapIndex = startLapIndexInThisSegment;
-          lapStartPL = lapStartPLInThisSegment;
-          lapEndPL = lapEndPLInThisSegment;
-          var lapLongLat = GetLocationFromParameterizedLocation(GetParameterizedLocationFromTime(lapTimes[lapIndex + 1]));
-          for (int j = 0; j < segments[i].Waypoints.Count; j++)
-          {
-            Waypoint w = segments[i].Waypoints[j];
-
-            // direction (clockwise from north: n = 0, e = 90, s = 180, w = 270)
-            var direction = -directionAngles[j] + 90;
-            if (direction < 0) direction += 360;
-            w.Attributes[WaypointAttribute.Direction] = direction;
-
-            // direction deviation to next lap
-            while (w.Time > lapTimes[lapIndex] && lapIndex < lapTimes.Count - 1)
-            {
-              lapIndex++;
-              lapLongLat = GetLocationFromParameterizedLocation(GetParameterizedLocationFromTime(lapTimes[lapIndex]));
-            }
-            LongLat middle = (w.LongLat / 2 + lapLongLat / 2);
-            PointD p0 = w.LongLat.Project(middle);
-            PointD p1 = lapLongLat.Project(middle);
-            PointD directionVectorToNextLap = LinearAlgebraUtil.Normalize(p1 - p0);
-            w.Attributes[WaypointAttribute.DirectionDeviationToNextLap] = Math.Abs(LinearAlgebraUtil.GetAngleD(directionVectorToNextLap, LinearAlgebraUtil.CreateNormalizedVectorFromAngleD(directionAngles[j])));
-          }
-        }
-      }
-    }
-
-    private void CalculateInclinations()
-    {
-      var containsAltitude = ContainsWaypointAttribute(WaypointAttribute.Altitude);
-      var altitudeSmoothingInterval = new Interval(-0.005, 0.005);
-      var distanceSmoothingInterval = SmoothingIntervals[WaypointAttribute.Altitude];
-      if (distanceSmoothingInterval.Length == 0) distanceSmoothingInterval = altitudeSmoothingInterval;
-
-      for (int i = 0; i < segments.Count; i++)
-      {
-        for (int j = 0; j < segments[i].Waypoints.Count; j++)
-        {
-          var waypoint = segments[i].Waypoints[j];
-          if (containsAltitude)
-          {
-            var pl = new ParameterizedLocation(i, j);
-            var startDirection = altitudeSmoothingInterval.Start < 0
-                                   ? ParameterizedLocation.Direction.Backward
-                                   : ParameterizedLocation.Direction.Forward;
-            var endDirection = altitudeSmoothingInterval.End < 0
-                                 ? ParameterizedLocation.Direction.Backward
-                                 : ParameterizedLocation.Direction.Forward;
-
-            // altitude calculations
-            var altitudeStartTime = waypoint.Time.AddSeconds(altitudeSmoothingInterval.Start);
-            var altitudeEndTime = waypoint.Time.AddSeconds(altitudeSmoothingInterval.End);
-            var altitudeStartPL = GetParameterizedLocationFromTime(altitudeStartTime, pl, startDirection);
-            var altitudeEndPL = GetParameterizedLocationFromTime(altitudeEndTime, pl, endDirection);
-            if (altitudeStartPL.SegmentIndex < i)
-            {
-              altitudeStartPL = new ParameterizedLocation(i, 0);
-              altitudeStartTime = segments[i].FirstWaypoint.Time;
-            }
-            if (altitudeEndPL.SegmentIndex > i)
-            {
-              altitudeEndPL = new ParameterizedLocation(i, segments[i].Waypoints.Count - 1);
-              altitudeEndTime = segments[i].LastWaypoint.Time;
-            }
-            var altitudeDifference = GetAttributeFromParameterizedLocation(WaypointAttribute.Altitude, altitudeEndPL) -
-                                     GetAttributeFromParameterizedLocation(WaypointAttribute.Altitude, altitudeStartPL);
-            var altitudeDuration = (altitudeEndTime - altitudeStartTime).TotalSeconds;
-
-            // distance calculations
-            var distanceStartTime = waypoint.Time.AddSeconds(distanceSmoothingInterval.Start);
-            var distanceEndTime = waypoint.Time.AddSeconds(distanceSmoothingInterval.End);
-            var distanceStartPL = GetParameterizedLocationFromTime(distanceStartTime, pl, startDirection);
-            var distanceEndPL = GetParameterizedLocationFromTime(distanceEndTime, pl, endDirection);
-            if (distanceStartPL.SegmentIndex < i)
-            {
-              distanceStartPL = new ParameterizedLocation(i, 0);
-              distanceStartTime = segments[i].FirstWaypoint.Time;
-            }
-            if (distanceEndPL.SegmentIndex > i)
-            {
-              distanceEndPL = new ParameterizedLocation(i, segments[i].Waypoints.Count - 1);
-              distanceEndTime = segments[i].LastWaypoint.Time;
-            }
-            var distanceDifference = GetAttributeFromParameterizedLocation(WaypointAttribute.Distance, distanceEndPL) -
-                                     GetAttributeFromParameterizedLocation(WaypointAttribute.Distance, distanceStartPL);
-            var distanceDuration = (distanceEndTime - distanceStartTime).TotalSeconds;
-
-            // calculate the inclination
-            if (!distanceDifference.HasValue || !altitudeDifference.HasValue)
-            {
-              waypoint.Attributes[WaypointAttribute.Inclination] = null;
-            }
-            else if (altitudeDuration == 0 || distanceDuration == 0)
-            {
-              waypoint.Attributes[WaypointAttribute.Inclination] = 0;
-            }
-            else
-            {
-              waypoint.Attributes[WaypointAttribute.Inclination] = LinearAlgebraUtil.ToDegrees(Math.Atan2(altitudeDifference.Value / altitudeDuration, distanceDifference.Value / distanceDuration));
-            }
-          }
-          else
-          {
-            waypoint.Attributes[WaypointAttribute.Inclination] = null;
-          }
-        }
-      }
-    }
-
-
-    private int GetNextLapIndexFromTime(DateTime time)
-    {
-      int lo = 0;
-      int hi = lapTimes.Count - 1;
-      while (hi >= lo)
-      {
-        int mi = (lo + hi) / 2;
-        if (time < lapTimes[mi])
-        {
-          hi = mi - 1;
-        }
-        else if (time > lapTimes[mi + 1])
-        {
-          lo = mi + 1;
-        }
-        else
-        {
-          return Math.Min(mi + 1, lapTimes.Count - 1);
-        }
-      }
-      return lo;
+      CalculateMapReadings();
     }
 
     public Waypoint CreateWaypointFromParameterizedLocation(ParameterizedLocation parameterizedLocation)
@@ -987,7 +573,7 @@ namespace QuickRoute.BusinessEntities
         w.HeartRate = waypoints[i].HeartRate + d * (waypoints[i + 1].HeartRate - waypoints[i].HeartRate);
       }
 
-      var attributes = new[]
+      var attributes = new List<WaypointAttribute>
                          {
                            WaypointAttribute.Pace,
                            WaypointAttribute.HeartRate,
@@ -1002,12 +588,24 @@ namespace QuickRoute.BusinessEntities
                            WaypointAttribute.Latitude
                          };
 
+      // map reading
+      if(waypointAttributeExists[WaypointAttribute.MapReadingDuration])
+      {
+        w.MapReadingState = waypoints[i].MapReadingState == MapReadingState.NotReading || waypoints[i+1].MapReadingState == MapReadingState.NotReading
+          ? MapReadingState.NotReading 
+          : MapReadingState.Reading;
+        attributes.AddRange(new[]
+                              {
+                                WaypointAttribute.MapReadingDuration,
+                                WaypointAttribute.MapReadingState,
+                                WaypointAttribute.PreviousMapReadingEnd,
+                                WaypointAttribute.NextMapReadingStart
+                              });
+      }
+
       foreach (var attribute in attributes)
       {
-        if (waypoints[i].Attributes[attribute].HasValue && waypoints[i + 1].Attributes[attribute].HasValue)
-        {
-          w.Attributes[attribute] = waypoints[i].Attributes[attribute] + d * (waypoints[i + 1].Attributes[attribute] - waypoints[i].Attributes[attribute]);
-        }
+        w.Attributes[attribute] = GetAttributeValueBetweenWaypoints(waypoints[i], waypoints[i + 1], d, attribute);
       }
 
       return w;
@@ -1046,6 +644,12 @@ namespace QuickRoute.BusinessEntities
             cutRoute.Segments.Add(rs);
             segments[0].Waypoints.RemoveRange(0, (int)parameterizedLocation.Value);
           }
+          // handle map readings nicely
+          if (waypointAttributeExists[WaypointAttribute.MapReadingDuration] &&
+             segments[0].FirstWaypoint.MapReadingState == MapReadingState.Reading)
+          {
+            segments[0].FirstWaypoint.MapReadingState = MapReadingState.StartReading;
+          }
           break;
 
         case CutType.After:
@@ -1077,6 +681,13 @@ namespace QuickRoute.BusinessEntities
             cutRoute.Segments.Insert(0, rs);
             segments[parameterizedLocation.SegmentIndex].Waypoints.RemoveRange(i + 1, count - 1 - i);
           }
+          // handle map readings nicely
+          var lastWaypoint = segments[segments.Count - 1].LastWaypoint;
+          if (waypointAttributeExists[WaypointAttribute.MapReadingDuration] &&
+             lastWaypoint.MapReadingState == MapReadingState.Reading)
+          {
+            lastWaypoint.MapReadingState = MapReadingState.EndReading;
+          }
           break;
       }
       return cutRoute;
@@ -1084,22 +695,48 @@ namespace QuickRoute.BusinessEntities
 
     public void UnCut(CutRouteData cutRouteData)
     {
+      Waypoint cutWaypoint;
       switch (cutRouteData.CutType)
       {
         case CutType.Before:
+          cutWaypoint = segments[0].FirstWaypoint;
+          var beforeCutWaypoint = cutRouteData.Segments[cutRouteData.Segments.Count - 1].LastWaypoint;
           if (cutRouteData.WaypointInsertedAtCut != null)
+          {
             segments[0].Waypoints.Remove(cutRouteData.WaypointInsertedAtCut);
+          }
           segments.InsertRange(0, cutRouteData.Segments.GetRange(0, cutRouteData.Segments.Count - 1));
-          segments[cutRouteData.Segments.Count - 1].Waypoints.InsertRange(0,
-                                                                          cutRouteData.Segments[
-                                                                            cutRouteData.Segments.Count - 1].Waypoints);
+          segments[cutRouteData.Segments.Count - 1].Waypoints.
+            InsertRange(0, cutRouteData.Segments[cutRouteData.Segments.Count - 1].Waypoints);
+          // handle map reading
+          if (cutRouteData.WaypointInsertedAtCut == null)
+          {
+            if (cutWaypoint.MapReadingState == MapReadingState.StartReading &&
+               (beforeCutWaypoint.MapReadingState == MapReadingState.Reading || beforeCutWaypoint.MapReadingState == MapReadingState.StartReading))
+            {
+              cutWaypoint.MapReadingState = MapReadingState.Reading;
+            }
+          }
           break;
 
         case CutType.After:
+          cutWaypoint = segments[segments.Count - 1].LastWaypoint;
+          var afterCutWaypoint = cutRouteData.Segments[0].FirstWaypoint;
           if (cutRouteData.WaypointInsertedAtCut != null)
+          {
             segments[segments.Count - 1].Waypoints.Remove(cutRouteData.WaypointInsertedAtCut);
+          }
           segments[segments.Count - 1].Waypoints.AddRange(cutRouteData.Segments[0].Waypoints);
           segments.AddRange(cutRouteData.Segments.GetRange(1, cutRouteData.Segments.Count - 1));
+          // handle map reading
+          if (cutRouteData.WaypointInsertedAtCut == null)
+          {
+            if (cutWaypoint.MapReadingState == MapReadingState.EndReading &&
+               (afterCutWaypoint.MapReadingState == MapReadingState.Reading || afterCutWaypoint.MapReadingState == MapReadingState.EndReading))
+            {
+              cutWaypoint.MapReadingState = MapReadingState.Reading;
+            }
+          }
           break;
       }
     }
@@ -1117,13 +754,10 @@ namespace QuickRoute.BusinessEntities
 
       while (time < endTime)
       {
-        double? value = null;
         double t0 = time.Subtract(previousWaypoint.Time).TotalSeconds;
         double t1 = nextWaypoint.Time.Subtract(previousWaypoint.Time).TotalSeconds;
         double t = (t1 > 0 ? t0 / t1 : 0);
-        value = (previousWaypoint.Attributes[attribute].HasValue && nextWaypoint.Attributes[attribute].HasValue)
-                   ? (1 - t) * previousWaypoint.Attributes[attribute] + t * nextWaypoint.Attributes[attribute]
-                   : null;
+        double? value = GetAttributeValueBetweenWaypoints(previousWaypoint, nextWaypoint, 1 - t, attribute);
         values.Add(value);
 
         // is there a waypoint before next sample time?
@@ -1435,25 +1069,19 @@ namespace QuickRoute.BusinessEntities
       return waypointAttributeExists[attribute];
     }
 
-    private bool CheckIfWaypointAttributeExists(WaypointAttribute attribute)
+    public List<DateTime> GetMapReadingsList()
     {
-      foreach (RouteSegment segment in Segments)
+      if(!waypointAttributeExists[WaypointAttribute.MapReadingDuration]) return null;
+      var mapReadingsList = new List<DateTime>();
+      for (var i = 0; i < segments.Count; i++)
       {
-        foreach (Waypoint waypoint in segment.Waypoints)
+        for (var j = 0; j < segments[i].Waypoints.Count; j++)
         {
-          switch (attribute)
-          {
-            case WaypointAttribute.Altitude:
-              if (waypoint.Altitude != null) return true;
-              break;
-
-            case WaypointAttribute.HeartRate:
-              if (waypoint.HeartRate != null) return true;
-              break;
-          }
+          var w = segments[i].Waypoints[j];
+          if(w.MapReadingState == MapReadingState.StartReading || w.MapReadingState == MapReadingState.EndReading) mapReadingsList.Add(w.Time);
         }
       }
-      return false;
+      return mapReadingsList.Count == 0 ? null : mapReadingsList;
     }
 
     #region  ParameterizedLocation helpers
@@ -1637,6 +1265,591 @@ namespace QuickRoute.BusinessEntities
                                                                                                forceAdvance));
     }
 
+    // w0 and w1 are adjacent, t measured from w0
+    private static double? GetAttributeValueBetweenWaypoints(Waypoint w0, Waypoint w1, double t, WaypointAttribute attribute)
+    {
+      switch(attribute)
+      {
+        case WaypointAttribute.MapReadingDuration:
+          return w0.MapReadingState == MapReadingState.StartReading || w0.MapReadingState == MapReadingState.Reading 
+            ? w0.Attributes[WaypointAttribute.MapReadingDuration]
+            : null;
+        case WaypointAttribute.MapReadingState:
+          return GetAttributeValueBetweenWaypoints(w0, w1, t, WaypointAttribute.MapReadingDuration) != null ? 1 : 0;
+        case WaypointAttribute.PreviousMapReadingEnd:
+          return w1.Attributes[WaypointAttribute.PreviousMapReadingEnd] != null
+          ? (double?)(w1.Attributes[WaypointAttribute.PreviousMapReadingEnd].Value - (1 - t) * (w1.Time - w0.Time).TotalSeconds)
+          : null;
+        case WaypointAttribute.NextMapReadingStart:
+          return w0.Attributes[WaypointAttribute.NextMapReadingStart] != null
+          ? (double?)(w0.Attributes[WaypointAttribute.NextMapReadingStart].Value - t * (w1.Time - w0.Time).TotalSeconds)
+          : null;
+        default:
+          var d0 = w0.Attributes[attribute];
+          var d1 = w1.Attributes[attribute];
+          if (d0.HasValue && d1.HasValue) return d0 + t * (d1 - d0);
+          if (!d0.HasValue && !d1.HasValue) return null;
+          return (t < 0.5 ? d0 : d1);
+      }
+    }
+
+
+    private void CalculateSlidingAverageAttributes(WaypointAttribute attribute, Interval smoothingInterval)
+    {
+      // using optimized but hard-to-understand algorithm
+      if (attribute != WaypointAttribute.HeartRate && attribute != WaypointAttribute.Altitude) throw new ArgumentException("The 'attribute' parameter must be either WaypointAttribute.HeartRate or WaypointAttribute.Altitude");
+
+      bool zeroLengthInterval = smoothingInterval.Length == 0;
+      bool containsAttribute = ContainsWaypointAttribute(attribute);
+
+      ParameterizedLocation siStartPL = null;
+      ParameterizedLocation siEndPL = null;
+      if (!zeroLengthInterval)
+      {
+        siStartPL = GetParameterizedLocationFromTime(FirstWaypoint.Time.AddSeconds(smoothingInterval.Start));
+        siEndPL = GetParameterizedLocationFromTime(FirstWaypoint.Time.AddSeconds(smoothingInterval.End));
+      }
+      for (int i = 0; i < segments.Count; i++)
+      {
+        double[] valueSums = null;
+        bool[] valueIsSet = null;
+        DateTime[] valueTimes = null;
+        var nullValueFound = false;
+        if (containsAttribute && !zeroLengthInterval)
+        {
+          valueSums = new double[segments[i].Waypoints.Count];
+          valueIsSet = new bool[segments[i].Waypoints.Count];
+          valueTimes = new DateTime[segments[i].Waypoints.Count];
+          valueSums[0] = 0;
+          if (segments[i].Waypoints.Count > 0)
+          {
+            valueIsSet[0] = segments[i].Waypoints[0].GetOriginalAttribute(attribute).HasValue;
+            valueTimes[0] = segments[i].Waypoints[0].Time;
+            nullValueFound = !valueIsSet[0];
+          }
+          for (int j = 1; j < segments[i].Waypoints.Count; j++)
+          {
+            var previousWaypoint = segments[i].Waypoints[j - 1];
+            var thisWaypoint = segments[i].Waypoints[j];
+            var previousOriginalAttribute = previousWaypoint.GetOriginalAttribute(attribute);
+            var thisOriginalAttribute = thisWaypoint.GetOriginalAttribute(attribute);
+            valueIsSet[j] = thisOriginalAttribute.HasValue;
+            valueTimes[j] = thisWaypoint.Time;
+            nullValueFound = nullValueFound || !valueIsSet[j];
+            if (valueIsSet[j - 1] && valueIsSet[j])
+            {
+              valueSums[j] = valueSums[j - 1] +
+                             (valueTimes[j] - valueTimes[j - 1]).TotalSeconds *
+                             (previousOriginalAttribute.Value + thisOriginalAttribute.Value) / 2;
+            }
+            else
+            {
+              valueSums[j] = valueSums[j - 1];
+            }
+          }
+        }
+
+        for (int j = 0; j < segments[i].Waypoints.Count; j++)
+        {
+          Waypoint w = segments[i].Waypoints[j];
+          if (!containsAttribute)
+          {
+            w.Attributes[attribute] = null;
+          }
+          else if (zeroLengthInterval)
+          {
+            w.Attributes[attribute] = w.GetOriginalAttribute(attribute);
+          }
+          else
+          {
+            // start of sliding interval
+            siStartPL =
+              GetParameterizedLocationFromTime(w.Time.AddSeconds(smoothingInterval.Start), siStartPL,
+                                               ParameterizedLocation.Direction.Forward);
+            // end of sliding interval
+            siEndPL =
+              GetParameterizedLocationFromTime(w.Time.AddSeconds(smoothingInterval.End), siEndPL,
+                                               ParameterizedLocation.Direction.Forward);
+            if (siStartPL != null && siEndPL != null)
+            {
+              if (siStartPL.SegmentIndex < i) siStartPL = new ParameterizedLocation(i, 0);
+              if (siEndPL.SegmentIndex > i) siEndPL = new ParameterizedLocation(i, segments[i].Waypoints.Count - 1);
+
+              double startSum;
+              double endSum;
+              var adjustedIntervalLength = (GetTimeFromParameterizedLocation(siEndPL) - GetTimeFromParameterizedLocation(siStartPL)).TotalSeconds;
+              int startIndex;
+              int endIndex;
+              if (siStartPL.IsNode)
+              {
+                startSum = valueSums[(int)siStartPL.Value];
+                startIndex = (int)siStartPL.Value;
+              }
+              else
+              {
+                var d = siStartPL.Value - Math.Floor(siStartPL.Value);
+                startSum = (1 - d) * valueSums[(int)siStartPL.Value] + d * valueSums[(int)siStartPL.Value + 1];
+                startIndex = (int)siStartPL.Value;
+              }
+              if (siEndPL.IsNode)
+              {
+                endSum = valueSums[(int)siEndPL.Value];
+                endIndex = (int)siEndPL.Value;
+              }
+              else
+              {
+                var d = siEndPL.Value - Math.Floor(siEndPL.Value);
+                endSum = (1 - d) * valueSums[(int)siEndPL.Value] + d * valueSums[(int)siEndPL.Value + 1];
+                endIndex = (int)siEndPL.Value + 1;
+              }
+
+              if (adjustedIntervalLength == 0)
+              {
+                w.Attributes[attribute] = w.GetOriginalAttribute(attribute);
+              }
+              else
+              {
+                // check if there are any null values in this interval
+                bool nullValueFoundInInterval;
+                if (!nullValueFound)
+                {
+                  // no null value in whole route, don't need to check this interval
+                  nullValueFoundInInterval = false;
+                }
+                else
+                {
+                  // there is at least one null value in the route, need to check if there exists any in this interval
+                  nullValueFoundInInterval = false;
+                  for (var k = startIndex; k <= endIndex; k++)
+                  {
+                    if (!valueIsSet[k])
+                    {
+                      nullValueFoundInInterval = true;
+                      break;
+                    }
+                  }
+                }
+                if (!nullValueFoundInInterval)
+                {
+                  // no null values in this interval, perform normal calculation
+                  w.Attributes[attribute] = (endSum - startSum) / adjustedIntervalLength;
+                }
+                else
+                {
+                  // null value found, calculate based on each non-null value waypoint pair
+                  adjustedIntervalLength = 0;
+                  double sum = 0;
+                  for (var k = startIndex; k < endIndex; k++)
+                  {
+                    if (valueIsSet[k] && valueIsSet[k + 1])
+                    {
+                      double start = Math.Max(k, siStartPL.Value);
+                      double end = Math.Min(k + 1, siEndPL.Value);
+                      adjustedIntervalLength += (end - start) * (valueTimes[k + 1] - valueTimes[k]).TotalSeconds;
+                      sum += (end - start) * (valueSums[k + 1] - valueSums[k]);
+                    }
+                  }
+                  w.Attributes[attribute] = (adjustedIntervalLength == 0 ? (double?)null : sum / adjustedIntervalLength);
+                }
+              }
+            }
+            else
+            {
+              w.Attributes[attribute] = null;
+            }
+          }
+        }
+      }
+    }
+
+    /// <summary>
+    /// Calculates speeds and paces.
+    /// </summary>
+    private void CalculateSpeeds()
+    {
+      // using optimized but hard-to-understand algorithm
+      var actualInterval = new Interval(SmoothingIntervals[WaypointAttribute.Speed]);
+      if (actualInterval.Length == 0)
+      {
+        // need to have non-zero smothing interval when calculating speed, set it to a millisecond
+        var center = actualInterval.Start;
+        actualInterval = new Interval(center - 0.0005, center + 0.0005);
+      }
+      ParameterizedLocation siStartPL =
+        GetParameterizedLocationFromTime(FirstWaypoint.Time.AddSeconds(actualInterval.Start));
+      ParameterizedLocation siEndPL = GetParameterizedLocationFromTime(FirstWaypoint.Time.AddSeconds(actualInterval.End));
+      for (int i = 0; i < segments.Count; i++)
+      {
+        for (int j = 0; j < segments[i].Waypoints.Count; j++)
+        {
+          Waypoint w = segments[i].Waypoints[j];
+          // start of sliding interval
+          siStartPL =
+            GetParameterizedLocationFromTime(w.Time.AddSeconds(actualInterval.Start), siStartPL,
+                                             ParameterizedLocation.Direction.Forward);
+          // end of sliding interval
+          siEndPL =
+            GetParameterizedLocationFromTime(w.Time.AddSeconds(actualInterval.End), siEndPL,
+                                             ParameterizedLocation.Direction.Forward);
+          if (siStartPL != null && siEndPL != null)
+          {
+            if (siStartPL.SegmentIndex < i) siStartPL = new ParameterizedLocation(i, 0);
+            if (siEndPL.SegmentIndex > i) siEndPL = new ParameterizedLocation(i, segments[i].Waypoints.Count - 1);
+            double siStartDistance = GetAttributeFromParameterizedLocation(WaypointAttribute.Distance, siStartPL).Value;
+            double siEndDistance = GetAttributeFromParameterizedLocation(WaypointAttribute.Distance, siEndPL).Value;
+            double siLength = (GetTimeFromParameterizedLocation(siEndPL) - GetTimeFromParameterizedLocation(siStartPL)).TotalSeconds;
+            w.Attributes[WaypointAttribute.Speed] = (siLength == 0 ? 0 : 3.6 * (siEndDistance - siStartDistance) / siLength);
+          }
+          else
+          {
+            w.Attributes[WaypointAttribute.Speed] = 0;
+          }
+          w.Attributes[WaypointAttribute.Pace] = ConvertUtil.ToPace(w.Attributes[WaypointAttribute.Speed].Value).TotalSeconds;
+        }
+      }
+    }
+
+    private void CalculateDirectionDeviationsToNextLap()
+    {
+      if (lapTimes.Count >= 2)
+      {
+        int lapIndex = 0;
+        var lapStartPL = GetParameterizedLocationFromTime(lapTimes[lapIndex]);
+        var lapEndPL = GetParameterizedLocationFromTime(lapTimes[lapIndex + 1]);
+        // using optimized but hard-to-understand algorithm
+        var actualInterval = new Interval(SmoothingIntervals[WaypointAttribute.DirectionDeviationToNextLap]);
+        if (actualInterval.Length == 0)
+        {
+          // need to have non-zero smothing interval when calculating direction vectors, set it to a millisecond
+          var center = actualInterval.Start;
+          actualInterval = new Interval(center - 0.0005, center + 0.0005);
+        }
+        ParameterizedLocation siStartPL =
+          GetParameterizedLocationFromTime(FirstWaypoint.Time.AddSeconds(actualInterval.Start));
+        ParameterizedLocation siEndPL =
+          GetParameterizedLocationFromTime(FirstWaypoint.Time.AddSeconds(actualInterval.End));
+        for (int i = 0; i < segments.Count; i++)
+        {
+          // 1. calculate the direction angles in this segment, taking laps into account (never consider positions outside current lap)
+          var directionAngles = new double[segments[i].Waypoints.Count];
+          var startLapIndexInThisSegment = lapIndex;
+          var lapStartPLInThisSegment = GetParameterizedLocationFromTime(lapTimes[lapIndex]);
+          var lapEndPLInThisSegment = GetParameterizedLocationFromTime(lapTimes[lapIndex + 1]);
+          for (int j = 0; j < segments[i].Waypoints.Count; j++)
+          {
+            Waypoint w = segments[i].Waypoints[j];
+            while (w.Time > lapTimes[lapIndex] && lapIndex < lapTimes.Count - 1)
+            {
+              lapIndex++;
+              lapStartPL = GetParameterizedLocationFromTime(lapTimes[lapIndex - 1]);
+              lapEndPL = GetParameterizedLocationFromTime(lapTimes[lapIndex]);
+            }
+
+            // start of sliding interval
+            siStartPL =
+              GetParameterizedLocationFromTime(w.Time.AddSeconds(actualInterval.Start), siStartPL,
+                                               ParameterizedLocation.Direction.Forward);
+            // end of sliding interval
+            siEndPL =
+              GetParameterizedLocationFromTime(w.Time.AddSeconds(actualInterval.End), siEndPL,
+                                               ParameterizedLocation.Direction.Forward);
+            if (siStartPL != null && siEndPL != null)
+            {
+              if (siStartPL.SegmentIndex < i) siStartPL = new ParameterizedLocation(i, 0);
+              if (siEndPL.SegmentIndex > i) siEndPL = new ParameterizedLocation(i, segments[i].Waypoints.Count - 1);
+              if (siStartPL < lapStartPL) siStartPL = new ParameterizedLocation(lapStartPL);
+              if (siEndPL > lapEndPL) siEndPL = new ParameterizedLocation(lapEndPL);
+              var siStartLocation = GetLocationFromParameterizedLocation(siStartPL);
+              var siEndLocation = GetLocationFromParameterizedLocation(siEndPL);
+              var middle = (siStartLocation / 2 + siEndLocation / 2);
+              var p0 = siStartLocation.Project(middle);
+              var p1 = siEndLocation.Project(middle);
+              directionAngles[j] = LinearAlgebraUtil.GetAngleD(LinearAlgebraUtil.Normalize(p1 - p0));
+            }
+            else
+            {
+              directionAngles[j] = 0;
+            }
+          }
+
+
+          // 2. calculate the directions and direction deviations based on values achieved in step 1
+          lapIndex = startLapIndexInThisSegment;
+          lapStartPL = lapStartPLInThisSegment;
+          lapEndPL = lapEndPLInThisSegment;
+          var lapLongLat = GetLocationFromParameterizedLocation(GetParameterizedLocationFromTime(lapTimes[lapIndex + 1]));
+          for (int j = 0; j < segments[i].Waypoints.Count; j++)
+          {
+            Waypoint w = segments[i].Waypoints[j];
+
+            // direction (clockwise from north: n = 0, e = 90, s = 180, w = 270)
+            var direction = -directionAngles[j] + 90;
+            if (direction < 0) direction += 360;
+            w.Attributes[WaypointAttribute.Direction] = direction;
+
+            // direction deviation to next lap
+            while (w.Time > lapTimes[lapIndex] && lapIndex < lapTimes.Count - 1)
+            {
+              lapIndex++;
+              lapLongLat = GetLocationFromParameterizedLocation(GetParameterizedLocationFromTime(lapTimes[lapIndex]));
+            }
+            LongLat middle = (w.LongLat / 2 + lapLongLat / 2);
+            PointD p0 = w.LongLat.Project(middle);
+            PointD p1 = lapLongLat.Project(middle);
+            PointD directionVectorToNextLap = LinearAlgebraUtil.Normalize(p1 - p0);
+            w.Attributes[WaypointAttribute.DirectionDeviationToNextLap] = Math.Abs(LinearAlgebraUtil.GetAngleD(directionVectorToNextLap, LinearAlgebraUtil.CreateNormalizedVectorFromAngleD(directionAngles[j])));
+          }
+        }
+      }
+    }
+
+    private void CalculateInclinations()
+    {
+      var containsAltitude = ContainsWaypointAttribute(WaypointAttribute.Altitude);
+      var altitudeSmoothingInterval = new Interval(-0.005, 0.005);
+      var distanceSmoothingInterval = SmoothingIntervals[WaypointAttribute.Altitude];
+      if (distanceSmoothingInterval.Length == 0) distanceSmoothingInterval = altitudeSmoothingInterval;
+
+      for (int i = 0; i < segments.Count; i++)
+      {
+        for (int j = 0; j < segments[i].Waypoints.Count; j++)
+        {
+          var waypoint = segments[i].Waypoints[j];
+          if (containsAltitude)
+          {
+            var pl = new ParameterizedLocation(i, j);
+            var startDirection = altitudeSmoothingInterval.Start < 0
+                                   ? ParameterizedLocation.Direction.Backward
+                                   : ParameterizedLocation.Direction.Forward;
+            var endDirection = altitudeSmoothingInterval.End < 0
+                                 ? ParameterizedLocation.Direction.Backward
+                                 : ParameterizedLocation.Direction.Forward;
+
+            // altitude calculations
+            var altitudeStartTime = waypoint.Time.AddSeconds(altitudeSmoothingInterval.Start);
+            var altitudeEndTime = waypoint.Time.AddSeconds(altitudeSmoothingInterval.End);
+            var altitudeStartPL = GetParameterizedLocationFromTime(altitudeStartTime, pl, startDirection);
+            var altitudeEndPL = GetParameterizedLocationFromTime(altitudeEndTime, pl, endDirection);
+            if (altitudeStartPL.SegmentIndex < i)
+            {
+              altitudeStartPL = new ParameterizedLocation(i, 0);
+              altitudeStartTime = segments[i].FirstWaypoint.Time;
+            }
+            if (altitudeEndPL.SegmentIndex > i)
+            {
+              altitudeEndPL = new ParameterizedLocation(i, segments[i].Waypoints.Count - 1);
+              altitudeEndTime = segments[i].LastWaypoint.Time;
+            }
+            var altitudeDifference = GetAttributeFromParameterizedLocation(WaypointAttribute.Altitude, altitudeEndPL) -
+                                     GetAttributeFromParameterizedLocation(WaypointAttribute.Altitude, altitudeStartPL);
+            var altitudeDuration = (altitudeEndTime - altitudeStartTime).TotalSeconds;
+
+            // distance calculations
+            var distanceStartTime = waypoint.Time.AddSeconds(distanceSmoothingInterval.Start);
+            var distanceEndTime = waypoint.Time.AddSeconds(distanceSmoothingInterval.End);
+            var distanceStartPL = GetParameterizedLocationFromTime(distanceStartTime, pl, startDirection);
+            var distanceEndPL = GetParameterizedLocationFromTime(distanceEndTime, pl, endDirection);
+            if (distanceStartPL.SegmentIndex < i)
+            {
+              distanceStartPL = new ParameterizedLocation(i, 0);
+              distanceStartTime = segments[i].FirstWaypoint.Time;
+            }
+            if (distanceEndPL.SegmentIndex > i)
+            {
+              distanceEndPL = new ParameterizedLocation(i, segments[i].Waypoints.Count - 1);
+              distanceEndTime = segments[i].LastWaypoint.Time;
+            }
+            var distanceDifference = GetAttributeFromParameterizedLocation(WaypointAttribute.Distance, distanceEndPL) -
+                                     GetAttributeFromParameterizedLocation(WaypointAttribute.Distance, distanceStartPL);
+            var distanceDuration = (distanceEndTime - distanceStartTime).TotalSeconds;
+
+            // calculate the inclination
+            if (!distanceDifference.HasValue || !altitudeDifference.HasValue)
+            {
+              waypoint.Attributes[WaypointAttribute.Inclination] = null;
+            }
+            else if (altitudeDuration == 0 || distanceDuration == 0)
+            {
+              waypoint.Attributes[WaypointAttribute.Inclination] = 0;
+            }
+            else
+            {
+              waypoint.Attributes[WaypointAttribute.Inclination] = LinearAlgebraUtil.ToDegrees(Math.Atan2(altitudeDifference.Value / altitudeDuration, distanceDifference.Value / distanceDuration));
+            }
+          }
+          else
+          {
+            waypoint.Attributes[WaypointAttribute.Inclination] = null;
+          }
+        }
+      }
+    }
+
+    private void CalculateMapReadings()
+    {
+      if (waypointAttributeExists[WaypointAttribute.MapReadingDuration])
+      {
+        for (int i = 0; i < segments.Count; i++)
+        {
+          double? duration = null;
+          for (int j = 0; j < segments[i].Waypoints.Count; j++)
+          {
+            var waypoint = segments[i].Waypoints[j];
+            if (waypoint.MapReadingState == MapReadingState.StartReading)
+            {
+              var k = j + 1;
+              while (segments[i].Waypoints[k].MapReadingState == MapReadingState.Reading) k++;
+              duration = (segments[i].Waypoints[k].Time - waypoint.Time).TotalSeconds;
+            }
+            waypoint.Attributes[WaypointAttribute.MapReadingDuration] = duration;
+            waypoint.Attributes[WaypointAttribute.MapReadingState] = duration != null ? 1 : 0;
+            if (waypoint.MapReadingState == MapReadingState.EndReading)
+            {
+              duration = null;
+            }
+          }
+
+          DateTime? previousEndReadingTime = null;
+          for (int j = 0; j < segments[i].Waypoints.Count; j++)
+          {
+            var waypoint = segments[i].Waypoints[j];
+            waypoint.Attributes[WaypointAttribute.PreviousMapReadingEnd] = previousEndReadingTime == null ? null : (double?)(waypoint.Time - previousEndReadingTime.Value).TotalSeconds;
+            if (waypoint.MapReadingState == MapReadingState.EndReading)
+            {
+              previousEndReadingTime = waypoint.Time;
+            }
+          }
+
+          DateTime? nextStartReadingTime = null;
+          for (int j = segments[i].Waypoints.Count - 1; j >= 0; j--)
+          {
+            var waypoint = segments[i].Waypoints[j];
+            waypoint.Attributes[WaypointAttribute.NextMapReadingStart] = nextStartReadingTime == null ? null : (double?)(nextStartReadingTime.Value - waypoint.Time).TotalSeconds; ;
+            if (waypoint.MapReadingState == MapReadingState.StartReading)
+            {
+              nextStartReadingTime = waypoint.Time;
+            }
+          }
+
+        }
+      }
+    }
+
+    private int GetNextLapIndexFromTime(DateTime time)
+    {
+      int lo = 0;
+      int hi = lapTimes.Count - 1;
+      while (hi >= lo)
+      {
+        int mi = (lo + hi) / 2;
+        if (time < lapTimes[mi])
+        {
+          hi = mi - 1;
+        }
+        else if (time > lapTimes[mi + 1])
+        {
+          lo = mi + 1;
+        }
+        else
+        {
+          return Math.Min(mi + 1, lapTimes.Count - 1);
+        }
+      }
+      return lo;
+    }
+
+    private bool CheckIfWaypointAttributeExists(WaypointAttribute attribute)
+    {
+      foreach (RouteSegment segment in Segments)
+      {
+        foreach (Waypoint waypoint in segment.Waypoints)
+        {
+          switch (attribute)
+          {
+            case WaypointAttribute.Altitude:
+              if (waypoint.Altitude != null) return true;
+              break;
+
+            case WaypointAttribute.HeartRate:
+              if (waypoint.HeartRate != null) return true;
+              break;
+
+            case WaypointAttribute.MapReadingDuration:
+              if (waypoint.MapReadingState != null) return true;
+              break;
+          }
+        }
+      }
+      return false;
+    }
+    #endregion
+
+    #region Public static methods
+    public static List<RouteSegment> AddMapReadingWaypoints(List<RouteSegment> routeSegments, List<DateTime> mapReadings)
+    {
+      if (mapReadings.Count == 0) return routeSegments;
+      var newRouteSegments = new List<RouteSegment>();
+      foreach (var routeSegment in routeSegments)
+      {
+        var newRouteSegment = new RouteSegment();
+        var waypointCount = 0;
+        var mapReadingIndex = 0; // just to be sure, could probably be removed
+        foreach (var waypoint in routeSegment.Waypoints)
+        {
+          while (mapReadingIndex < mapReadings.Count - 1 && mapReadings[mapReadingIndex] <= waypoint.Time)
+          {
+            if (mapReadings[mapReadingIndex + 1] > waypoint.Time) break;
+            mapReadingIndex++;
+          }
+          var newWaypoint = waypoint.Clone();
+          if (waypoint == routeSegment.FirstWaypoint)
+          {
+            newWaypoint.MapReadingState = mapReadingIndex % 2 == 0 ? MapReadingState.StartReading : MapReadingState.NotReading;
+            newRouteSegment.Waypoints.Add(newWaypoint);
+          }
+          else if (waypoint == routeSegment.LastWaypoint)
+          {
+            newWaypoint.MapReadingState = newRouteSegment.LastWaypoint.MapReadingState == MapReadingState.Reading
+                                         ? MapReadingState.EndReading
+                                         : MapReadingState.NotReading;
+            newRouteSegment.Waypoints.Add(newWaypoint);
+            break;
+          }
+          else
+          {
+            if (mapReadings[mapReadingIndex] == newWaypoint.Time)
+            {
+              newWaypoint.MapReadingState = mapReadingIndex % 2 == 0 ? MapReadingState.StartReading : MapReadingState.EndReading;
+            }
+            else
+            {
+              newWaypoint.MapReadingState = mapReadingIndex % 2 == 0 ? MapReadingState.Reading : MapReadingState.NotReading;
+            }
+            newRouteSegment.Waypoints.Add(newWaypoint);
+          }
+          var nextWaypoint = routeSegment.Waypoints[waypointCount + 1];
+          while (mapReadingIndex < mapReadings.Count - 1 && mapReadings[mapReadingIndex + 1] < nextWaypoint.Time)
+          {
+            var time = mapReadings[mapReadingIndex + 1];
+            var t = (double)(time - waypoint.Time).Ticks / (nextWaypoint.Time - waypoint.Time).Ticks;
+            var longLat = t * waypoint.LongLat + (1 - t) * nextWaypoint.LongLat;
+            var altitude = waypoint.Altitude.HasValue && nextWaypoint.Altitude.HasValue
+              ? (double?)(t * waypoint.Altitude.Value + (1 - t) * nextWaypoint.Altitude.Value)
+              : null;
+            var heartRate = waypoint.HeartRate.HasValue && nextWaypoint.HeartRate.HasValue
+              ? (double?)(t * waypoint.HeartRate.Value + (1 - t) * nextWaypoint.HeartRate.Value)
+              : null;
+            var mapReadingState = (mapReadingIndex + 1) % 2 == 0 ? MapReadingState.StartReading : MapReadingState.EndReading;
+            newRouteSegment.Waypoints.Add(new Waypoint(time, longLat, altitude, heartRate, mapReadingState));
+            mapReadingIndex++;
+          }
+          waypointCount++;
+        }
+        newRouteSegments.Add(newRouteSegment);
+      }
+      return newRouteSegments;
+    }
+
     #endregion
 
     #region Nested classes
@@ -1736,29 +1949,6 @@ namespace QuickRoute.BusinessEntities
   }
 
   [Serializable]
-  public class RouteSegment2
-  {
-    private List<Waypoint> waypoints = new List<Waypoint>();
-
-    public List<Waypoint> Waypoints
-    {
-      get { return waypoints; }
-      set { waypoints = value; }
-    }
-
-    public Waypoint FirstWaypoint
-    {
-      get { return waypoints.Count == 0 ? null : waypoints[0]; }
-    }
-
-    public Waypoint LastWaypoint
-    {
-      get { return waypoints.Count == 0 ? null : waypoints[waypoints.Count - 1]; }
-    }
-  }
-
-
-  [Serializable]
   public class Waypoint
   {
     // core data of a waypoint
@@ -1766,6 +1956,7 @@ namespace QuickRoute.BusinessEntities
     private double? heartRate;
     private LongLat longLat;
     private DateTime time;
+    private MapReadingState? mapReadingState;
     // dictionary for storing calculated (possibly smoothed) attribute values (speed, altitude, etc) of this waypoint.
     [NonSerialized]
     private Dictionary<WaypointAttribute, double?> attributes;
@@ -1775,13 +1966,14 @@ namespace QuickRoute.BusinessEntities
       attributes = new Dictionary<WaypointAttribute, double?>();
     }
 
-    public Waypoint(DateTime time, LongLat longLat, double? altitude, double? heartRate)
+    public Waypoint(DateTime time, LongLat longLat, double? altitude, double? heartRate, MapReadingState? mapReadingState)
       : this()
     {
       this.time = time;
       this.longLat = longLat;
       this.altitude = altitude;
       this.heartRate = heartRate;
+      this.mapReadingState = mapReadingState;
     }
 
     public DateTime Time
@@ -1808,9 +2000,15 @@ namespace QuickRoute.BusinessEntities
       set { heartRate = value; }
     }
 
+    public MapReadingState? MapReadingState
+    {
+      get { return mapReadingState; }
+      set { mapReadingState = value; }
+    }
+
     public Waypoint Clone()
     {
-      var newWaypoint = new Waypoint(time, longLat, altitude, heartRate);
+      var newWaypoint = new Waypoint(time, longLat, altitude, heartRate, mapReadingState);
       foreach (var attributeKey in Attributes.Keys)
       {
         newWaypoint.Attributes[attributeKey] = Attributes[attributeKey];

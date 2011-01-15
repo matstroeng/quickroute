@@ -60,6 +60,10 @@ namespace QuickRoute.BusinessEntities
         WaypointAttribute.DirectionDeviationToNextLap,
         new ColorRangeIntervalSliderSettings(0, 90)
       );
+      defaultColorRangeIntervalSliderSettings.Add(
+        WaypointAttribute.MapReadingDuration,
+        new ColorRangeIntervalSliderSettings(0, 10)
+      );
 
       return defaultColorRangeIntervalSliderSettings;
     }
@@ -86,6 +90,10 @@ namespace QuickRoute.BusinessEntities
       defaultLapHistogramSettings.Add(
         WaypointAttribute.DirectionDeviationToNextLap,
         new LapHistogramSettings(2)
+      );
+      defaultLapHistogramSettings.Add(
+        WaypointAttribute.MapReadingDuration,
+        new LapHistogramSettings(1)
       );
       return defaultLapHistogramSettings;
     }

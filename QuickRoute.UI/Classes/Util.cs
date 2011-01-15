@@ -182,6 +182,25 @@ namespace QuickRoute.UI.Classes
         s.DefaultSessionSettings.RouteLineSettingsCollection.Add(WaypointAttribute.DirectionDeviationToNextLap, defaultRLS[WaypointAttribute.DirectionDeviationToNextLap]);
       }
 
+      // add some map reading duration attribute settings, introduced in QR 2.4
+      if (!s.ColorRangeIntervalSliderSettings.ContainsKey(WaypointAttribute.MapReadingDuration))
+      {
+        var defaultCRISS = DocumentSettings.CreateDefaultColorRangeIntervalSliderSettings();
+        s.ColorRangeIntervalSliderSettings.Add(WaypointAttribute.MapReadingDuration, defaultCRISS[WaypointAttribute.MapReadingDuration]);
+      }
+
+      if (!s.LapHistogramSettings.ContainsKey(WaypointAttribute.MapReadingDuration))
+      {
+        var defaultLHS = DocumentSettings.CreateDefaultLapHistogramSettings();
+        s.LapHistogramSettings.Add(WaypointAttribute.MapReadingDuration, defaultLHS[WaypointAttribute.MapReadingDuration]);
+      }
+
+      if (!s.DefaultSessionSettings.RouteLineSettingsCollection.ContainsKey(WaypointAttribute.MapReadingDuration))
+      {
+        var defaultRLS = SessionSettings.CreateDefaultRouteLineSettingsCollection();
+        s.DefaultSessionSettings.RouteLineSettingsCollection.Add(WaypointAttribute.MapReadingDuration, defaultRLS[WaypointAttribute.MapReadingDuration]);
+      }
+      
       if (ApplicationSettings.PublishMapSettings == null)
         ApplicationSettings.PublishMapSettings = new List<PublishMapSettingsItem>();
 
@@ -270,6 +289,7 @@ namespace QuickRoute.UI.Classes
       switch (wa)
       {
         case WaypointAttribute.Pace:
+        case WaypointAttribute.MapReadingDuration:
           return new TimeConverter(TimeConverter.TimeConverterType.ElapsedTime);
         case WaypointAttribute.Speed:
           return new NumericConverter();

@@ -142,7 +142,7 @@ namespace QuickRoute.BusinessEntities
         {
           var previousWaypoint = i > 0 ? rs.Waypoints[i - 1] : null;
           var thisWaypoint = rs.Waypoints[i];
-          var nextWaypoint = i < rs.Waypoints.Count-1 ? rs.Waypoints[i + 1] : null;
+          var nextWaypoint = i < rs.Waypoints.Count - 1 ? rs.Waypoints[i + 1] : null;
 
           if (thisWaypoint.Time >= startTime && thisWaypoint.Time <= endTime)
           {
@@ -150,7 +150,7 @@ namespace QuickRoute.BusinessEntities
                       {
                         X = GetXValue(thisWaypoint),
                         Y = GetYValue(thisWaypoint),
-                        Type = (i == 0 ? LineGraphPointType.Start 
+                        Type = (i == 0 ? LineGraphPointType.Start
                                        : (i == rs.Waypoints.Count - 1 ? LineGraphPointType.End : LineGraphPointType.Intermediate))
                       };
 
@@ -159,19 +159,39 @@ namespace QuickRoute.BusinessEntities
             List<LineGraphPoint> afterPoints = null;
             if (previousWaypoint != null && !previousWaypoint.Attributes[yAxisAttribute].HasValue && thisWaypoint.Attributes[yAxisAttribute].HasValue)
             {
-              beforePoints = new List<LineGraphPoint>() 
-              { 
-                new LineGraphPoint() {X = (GetXValue(previousWaypoint) + p.X)/2, Y = 0, Type = LineGraphPointType.Intermediate},
-                new LineGraphPoint() {X = (GetXValue(previousWaypoint) + p.X)/2, Y = p.Y, Type = LineGraphPointType.Intermediate}
-              };
+              if (YAxisAttributeIsMapReadingAttribute)
+              {
+                beforePoints = new List<LineGraphPoint>()
+                                 {
+                                   new LineGraphPoint() {X = p.X, Y = 0, Type = LineGraphPointType.Intermediate},
+                                 };
+              }
+              else
+              {
+                beforePoints = new List<LineGraphPoint>() 
+                { 
+                  new LineGraphPoint() {X = (GetXValue(previousWaypoint) + p.X)/2, Y = 0, Type = LineGraphPointType.Intermediate},
+                  new LineGraphPoint() {X = (GetXValue(previousWaypoint) + p.X)/2, Y = p.Y, Type = LineGraphPointType.Intermediate}
+                };
+              }
             }
             if (nextWaypoint != null && !nextWaypoint.Attributes[yAxisAttribute].HasValue && thisWaypoint.Attributes[yAxisAttribute].HasValue)
             {
-              afterPoints = new List<LineGraphPoint>() 
-              { 
-                new LineGraphPoint() {X = (GetXValue(nextWaypoint) + p.X)/2, Y = p.Y, Type = LineGraphPointType.Intermediate},
-                new LineGraphPoint() {X = (GetXValue(nextWaypoint) + p.X)/2, Y = 0, Type = LineGraphPointType.Intermediate}
-              };
+              if (YAxisAttributeIsMapReadingAttribute)
+              {
+                afterPoints = new List<LineGraphPoint>()
+                                 {
+                                   new LineGraphPoint() {X = p.X, Y = 0, Type = LineGraphPointType.Intermediate},
+                                 };
+              }
+              else
+              {
+                afterPoints = new List<LineGraphPoint>() 
+                { 
+                  new LineGraphPoint() {X = (GetXValue(nextWaypoint) + p.X)/2, Y = p.Y, Type = LineGraphPointType.Intermediate},
+                  new LineGraphPoint() {X = (GetXValue(nextWaypoint) + p.X)/2, Y = 0, Type = LineGraphPointType.Intermediate}
+                };
+              }
             }
             if (beforePoints != null) points.AddRange(beforePoints);
             points.Add(p);
@@ -212,6 +232,8 @@ namespace QuickRoute.BusinessEntities
           return w.Attributes[WaypointAttribute.Altitude].GetValueOrDefault(0);
         case WaypointAttribute.DirectionDeviationToNextLap:
           return w.Attributes[WaypointAttribute.DirectionDeviationToNextLap].Value;
+        case WaypointAttribute.MapReadingDuration:
+          return w.Attributes[WaypointAttribute.MapReadingDuration].GetValueOrDefault(0);
         case WaypointAttribute.Pace:
         default:
           return ConvertUtil.ToPace(w.Attributes[WaypointAttribute.Speed].Value).TotalSeconds;
@@ -462,6 +484,10 @@ namespace QuickRoute.BusinessEntities
       return p0.Y + (xValue - p0.X) / (p1.X - p0.X) * (p1.Y - p0.Y);
     }
 
+    private bool YAxisAttributeIsMapReadingAttribute
+    {
+      get { return YAxisAttribute == WaypointAttribute.MapReadingDuration; }
+    }
   }
 
   public class LineGraphPoint : PointD

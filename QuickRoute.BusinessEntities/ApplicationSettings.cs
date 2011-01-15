@@ -230,6 +230,16 @@ namespace QuickRoute.BusinessEntities
                    new SelectableRoutePropertyType(typeof (DirectionDeviationToNextLap), false),
                    new SelectableRoutePropertyType(typeof (Direction), false),
                    new SelectableRoutePropertyType(typeof (Location), false),
+                   new SelectableRoutePropertyType(typeof (MapReadingDurationInSpan), false),
+                   new SelectableRoutePropertyType(typeof (MapReadingDurationFromStart), false),
+                   new SelectableRoutePropertyType(typeof (MapReadingPercentage), false),
+                   new SelectableRoutePropertyType(typeof (MapReadingPercentageFromStart), false),
+                   new SelectableRoutePropertyType(typeof (NumberOfMapReadings), false),
+                   new SelectableRoutePropertyType(typeof (NumberOfMapReadingsFromStart), false),
+                   new SelectableRoutePropertyType(typeof (AverageMapReadingTime), false),
+                   new SelectableRoutePropertyType(typeof (AverageMapReadingTimeFromStart), false),
+                   new SelectableRoutePropertyType(typeof (AverageTimeBetweenMapReadings), false),
+                   new SelectableRoutePropertyType(typeof (AverageTimeBetweenMapReadingsFromStart), false),
                  };
       }
     }
@@ -284,6 +294,20 @@ namespace QuickRoute.BusinessEntities
                    new SelectableRoutePropertyType(typeof (AverageDirectionDeviationToNextLap), false),
                    new SelectableRoutePropertyType(typeof (AverageDirectionDeviationToNextLapFromStart), false),
                    new SelectableRoutePropertyType(typeof (Direction), false),
+                   new SelectableRoutePropertyType(typeof (RouteProperties.MapReadingState), false),
+                   new SelectableRoutePropertyType(typeof (MapReadingDuration), false),
+                   new SelectableRoutePropertyType(typeof (MapReadingDurationInSpan), false),
+                   new SelectableRoutePropertyType(typeof (MapReadingDurationFromStart), false),
+                   new SelectableRoutePropertyType(typeof (MapReadingPercentage), false),
+                   new SelectableRoutePropertyType(typeof (MapReadingPercentageFromStart), false),
+                   new SelectableRoutePropertyType(typeof (NumberOfMapReadings), false),
+                   new SelectableRoutePropertyType(typeof (NumberOfMapReadingsFromStart), false),
+                   new SelectableRoutePropertyType(typeof (AverageMapReadingTime), false),
+                   new SelectableRoutePropertyType(typeof (AverageMapReadingTimeFromStart), false),
+                   new SelectableRoutePropertyType(typeof (AverageTimeBetweenMapReadings), false),
+                   new SelectableRoutePropertyType(typeof (AverageTimeBetweenMapReadingsFromStart), false),
+                   new SelectableRoutePropertyType(typeof (PreviousMapReadingEnd), false),
+                   new SelectableRoutePropertyType(typeof (NextMapReadingStart), false),
                  };
       }
     }

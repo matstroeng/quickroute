@@ -1311,7 +1311,11 @@ namespace QuickRoute.BusinessEntities
     Longitude,
     Latitude,
     PixelX,
-    PixelY
+    PixelY,
+    MapReadingState,
+    MapReadingDuration,
+    PreviousMapReadingEnd,
+    NextMapReadingStart
   }
 
   public struct WaypointAttributeString
@@ -1344,6 +1348,10 @@ namespace QuickRoute.BusinessEntities
         case WaypointAttribute.DirectionDeviationToNextLap:
           name = Strings.Direction;
           unit = Strings.Unit_Direction;
+          break;
+        case WaypointAttribute.MapReadingDuration:
+          name = Strings.MapReadingDuration;
+          unit = Strings.Unit_Time;
           break;
         default:
           name = "";

@@ -58,9 +58,7 @@ namespace QuickRoute.UI.Forms
 
     public Map Map { get; private set; }
 
-    public Route Route { get; private set; }
-
-    public LapCollection Laps { get; private set; }
+    public ImportResult ImportResult { get; private set; }
 
     public Transformation InitialTransformation { get; private set; }
     
@@ -358,8 +356,8 @@ namespace QuickRoute.UI.Forms
           Util.ShowExceptionMessageBox(ex, Strings.InvalidMapImage);
           return DialogResult.Cancel;
         }
-        Route = routeImporter.ImportResult.Route;
-        Laps = routeImporter.ImportResult.Laps;
+        ImportResult = routeImporter.ImportResult;
+
         if (mapImageFromFile.Checked) Util.ApplicationSettings.AddRecentMapImageFileName(mapImageFileName.Text);
         if (routeFromFile.Checked) Util.ApplicationSettings.AddRecentRouteFileName(routeFileName.Text);
       }

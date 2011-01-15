@@ -53,7 +53,8 @@ namespace QuickRoute.BusinessEntities.Numeric
 
     public TimeConverter(TimeConverterType type)
     {
-      this.type = type; 
+      this.type = type;
+      NoOfDecimals = 0;
     }
 
     public TimeConverterType Type
@@ -104,32 +105,26 @@ namespace QuickRoute.BusinessEntities.Numeric
     public override string ToString(double? d)
     {
       if (d == null) return null;
-      long value = (long)d;
+      long intValue = (long)d;
+      var secondsFormat = "00" + (NoOfDecimals == 0 ? "" : "." + new string('0', NoOfDecimals));
 
       switch (type)
       {
         case TimeConverterType.ElapsedTime:
-          if (value < 3600)
+          if (intValue < 3600)
           {
-            return string.Format("{0:d1}", value / 60) +
-                   ":" +
-                   string.Format("{0:d2}", value % 60);
+            return string.Format("{0:d1}:{1:" + secondsFormat + "}",
+              intValue / 60, d % 60);
           }
           else
           {
-            return string.Format("{0:d1}", value / 3600) +
-                   ":" +
-                   string.Format("{0:d2}", (value / 60) % 60) +
-                   ":" +
-                   string.Format("{0:d2}", value % 60);
+            return string.Format("{0:d1}:{1:d2}:{2:" + secondsFormat + "}",
+              intValue / 3600, (intValue / 60) % 60, d % 60);
           }
 
         case TimeConverterType.TimeOfDay:
-          return string.Format("{0:d1}", (value / 3600) % 24) + 
-                 ":" +
-                 string.Format("{0:d2}", (value / 60) % 60) +
-                 ":" +
-                 string.Format("{0:d2}", value % 60);
+          return string.Format("{0:d1}:{1:d2}:{2:" + secondsFormat + "}",
+            (intValue / 3600) % 24, (intValue / 60) % 60, d % 60);
 
         default:
           return null;
