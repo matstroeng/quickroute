@@ -28,6 +28,7 @@ namespace QuickRoute.Controls
     private PointD activeHandleOldLocation;
     private Lap activeLap;
     private WaypointAttribute colorCodingAttribute = WaypointAttribute.Pace;
+    private WaypointAttribute? secondaryColorCodingAttribute;
     private MouseTool currentMouseTool = MouseTool.Pointer;
     private Session currentSession;
     private Document document;
@@ -192,6 +193,16 @@ namespace QuickRoute.Controls
       set
       {
         colorCodingAttribute = value;
+        DrawMap(MapDrawingFlags.Markers | MapDrawingFlags.Route);
+      }
+    }
+
+    public WaypointAttribute? SecondaryColorCodingAttribute
+    {
+      get { return secondaryColorCodingAttribute; }
+      set
+      {
+        secondaryColorCodingAttribute = value;
         DrawMap(MapDrawingFlags.Markers | MapDrawingFlags.Route);
       }
     }
@@ -576,7 +587,7 @@ namespace QuickRoute.Controls
       {
         sessionList = GetSessions(SessionsToDraw);
       }
-      document.DrawRoutes(sessionList, zoom, graphics, mapImage, mode, colorCodingAttribute, sessionSettings);
+      document.DrawRoutes(sessionList, zoom, graphics, mapImage, mode, colorCodingAttribute, secondaryColorCodingAttribute, sessionSettings);
     }
 
     private SessionCollection GetSessions(SessionDrawingMode mode)

@@ -238,7 +238,7 @@ namespace QuickRoute.BusinessEntities
       return image;
     }
 
-    public void DrawRoutes(IEnumerable<Session> sessionsToDraw, double zoom, Graphics graphics, Image mapImage, RouteDrawingMode mode, WaypointAttribute colorCodingAttribute, SessionSettings sessionSettings)
+    public void DrawRoutes(IEnumerable<Session> sessionsToDraw, double zoom, Graphics graphics, Image mapImage, RouteDrawingMode mode, WaypointAttribute colorCodingAttribute, WaypointAttribute? secondaryColorCodingAttribute, SessionSettings sessionSettings)
     {
       graphics.Clip = new Region(new Rectangle(0, 0, mapImage.Width, mapImage.Height));
 
@@ -248,7 +248,7 @@ namespace QuickRoute.BusinessEntities
       // draw the routes
       foreach (var s in sessionsToDraw)
       {
-        s.DrawRoute(zoom, graphics, mode, colorCodingAttribute, sessionSettings);
+        s.DrawRoute(zoom, graphics, mode, colorCodingAttribute, secondaryColorCodingAttribute, sessionSettings);
       }
     }
 
@@ -259,7 +259,7 @@ namespace QuickRoute.BusinessEntities
                       size.Height + 3 * exportImageBorderWidth + exportImageHeaderHeight);
     }
 
-    public Bitmap CreateMapAndRouteImage(bool showMap, double zoomValue, SessionCollection sessionsToDraw, WaypointAttribute colorCodingAttribute, RouteDrawingMode mode, SessionSettings sessionSettings)
+    public Bitmap CreateMapAndRouteImage(bool showMap, double zoomValue, SessionCollection sessionsToDraw, WaypointAttribute colorCodingAttribute, WaypointAttribute? secondaryColorCodingAttribute, RouteDrawingMode mode, SessionSettings sessionSettings)
     {
       Bitmap mapImage;
       if(showMap)
@@ -278,7 +278,7 @@ namespace QuickRoute.BusinessEntities
       var mapAndRouteGraphics = Graphics.FromImage(mapAndRouteImage);
       mapAndRouteGraphics.SmoothingMode = SmoothingMode.AntiAlias;
 
-      DrawRoutes(sessionsToDraw, zoomValue, mapAndRouteGraphics, mapImage, mode, colorCodingAttribute, sessionSettings);
+      DrawRoutes(sessionsToDraw, zoomValue, mapAndRouteGraphics, mapImage, mode, colorCodingAttribute, secondaryColorCodingAttribute, sessionSettings);
 
       mapAndRouteGraphics.Dispose();
       mapImage.Dispose();
@@ -286,13 +286,13 @@ namespace QuickRoute.BusinessEntities
     }
 
     // todo: skip showRouteLine parameter, use RouteDrawingMode instead
-    public Bitmap CreateMapAndRouteImage(bool showRouteLine, double zoomValue, Session sessionToDraw, List<int> legsToDraw, double frameWidth, WaypointAttribute colorCodingAttribute, RouteDrawingMode mode, SessionSettings sessionSettings)
+    public Bitmap CreateMapAndRouteImage(bool showRouteLine, double zoomValue, Session sessionToDraw, List<int> legsToDraw, double frameWidth, WaypointAttribute colorCodingAttribute, WaypointAttribute? secondaryColorCodingAttribute, RouteDrawingMode mode, SessionSettings sessionSettings)
     {
       RectangleD frame = GetFrame(zoomValue, sessionToDraw, legsToDraw, frameWidth, colorCodingAttribute, mode);
 
       var sc = new SessionCollection();
       sc.Add(sessionToDraw);
-      var wholeImage = CreateMapAndRouteImage(true, zoomValue, sc, colorCodingAttribute, mode, sessionSettings);
+      var wholeImage = CreateMapAndRouteImage(true, zoomValue, sc, colorCodingAttribute, secondaryColorCodingAttribute, mode, sessionSettings);
 
       AdjustFrameToImage(frame, wholeImage);
 

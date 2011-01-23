@@ -471,6 +471,9 @@
   <data name="colorCodingAttributes.ToolTipText" xml:space="preserve">
     <value>Attribut för ruttlinjens färgkodning</value>
   </data>
+  <data name="secondaryColorCodingAttributes.ToolTipText" xml:space="preserve">
+    <value>Attribut för ruttlinjens sekundära färgkodning</value>
+  </data>
   <data name="colorRangeStartValue.ToolTipText" xml:space="preserve">
     <value>Färgskalans startvärde</value>
   </data>

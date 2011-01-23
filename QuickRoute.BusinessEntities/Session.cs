@@ -336,6 +336,11 @@ namespace QuickRoute.BusinessEntities
     {
       // determining value according to current attribute: pace, heart rate or altitude
       double? value = route.GetAttributeFromParameterizedLocation(colorCodingAttribute, pl);
+      // need to check whether this is the end of a map reading, if so we need to reset the value so that the line following this waypoint will indicate "not reading"
+      if (colorCodingAttribute == WaypointAttribute.MapReadingDuration && pl.IsNode && Route.CreateWaypointFromParameterizedLocation(pl).MapReadingState == MapReadingState.EndReading)
+      {
+        value = 0;
+      }
       RouteLineSettings rls = settings.RouteLineSettingsCollection[colorCodingAttribute];
       Color color = rls.ColorRange.GetColor(value == null ? 0 : (double)value);
       return color;
@@ -425,7 +430,7 @@ namespace QuickRoute.BusinessEntities
       return LinearAlgebraUtil.AnglifyD(LinearAlgebraUtil.ToDegrees(LinearAlgebraUtil.GetVectorDirectionR(p0, p1)), AngleStyle.N360CW);
     }
 
-    public void DrawRoute(double zoom, Graphics graphics, Document.RouteDrawingMode mode, WaypointAttribute colorCodingAttribute, SessionSettings sessionSettings)
+    public void DrawRoute(double zoom, Graphics graphics, Document.RouteDrawingMode mode, WaypointAttribute colorCodingAttribute, WaypointAttribute? secondaryColorCodingAttribute, SessionSettings sessionSettings)
     {
       // use this session's settings if no settings are specified
       var rls = sessionSettings == null 
@@ -458,8 +463,8 @@ namespace QuickRoute.BusinessEntities
           List<RouteLineVertex> vertices = CreateRouteLineVertices(
             AdjustedRoute.GetFirstParameterizedLocation(),
             AdjustedRoute.GetLastParameterizedLocation(),
-            colorCodingAttribute
-            );
+            colorCodingAttribute,
+            secondaryColorCodingAttribute);
 
           // filter vertices
           vertices = FilterVertices(vertices);
@@ -478,6 +483,7 @@ namespace QuickRoute.BusinessEntities
                                             vertices[i + 1].ParameterizedLocation.SegmentIndex
                                               ? vertices[i + 2]
                                               : null);
+              var splitLine = secondaryColorCodingAttribute.HasValue;
               var line = new RouteLine(
                 vertices[i],
                 vertices[i + 1],
@@ -485,12 +491,28 @@ namespace QuickRoute.BusinessEntities
                 nextVertex,
                 lineWidth,
                 maskWidth,
-                zoom);
-              Color lineColor = GraphicsUtil.AlphaAdjustColor(vertices[i].Color, vertices[i].AlphaAdjustment);
+                zoom,
+                splitLine);
+              Brush b;
               Color maskColor = GraphicsUtil.AlphaAdjustColor(rls.MaskColor, vertices[i].AlphaAdjustment);
-              Brush b = new SolidBrush(lineColor);
-              graphics.FillPath(b, line.LinePath);
-              b.Dispose();
+              if (splitLine)
+              {
+                var leftLineColor = GraphicsUtil.AlphaAdjustColor(vertices[i].Color, vertices[i].AlphaAdjustment);
+                b = new SolidBrush(leftLineColor);
+                graphics.FillPath(b, line.LeftLinePath);
+                b.Dispose();
+                var rightLineColor = GraphicsUtil.AlphaAdjustColor(vertices[i].SecondaryColor.Value, vertices[i].AlphaAdjustment);
+                b = new SolidBrush(rightLineColor);
+                graphics.FillPath(b, line.RightLinePath);
+                b.Dispose();
+              }
+              else
+              {
+                var lineColor = GraphicsUtil.AlphaAdjustColor(vertices[i].Color, vertices[i].AlphaAdjustment);
+                b = new SolidBrush(lineColor);
+                graphics.FillPath(b, line.LinePath);
+                b.Dispose();
+              }
               b = new SolidBrush(maskColor);
               if (line.MaskPath != null) graphics.FillPath(b, line.MaskPath);
               b.Dispose();
@@ -820,8 +842,9 @@ namespace QuickRoute.BusinessEntities
       return filteredVertices;
     }
 
-    private List<RouteLineVertex> CreateRouteLineVertices(ParameterizedLocation startPL,
-                                                                 ParameterizedLocation endPL, WaypointAttribute colorCodingAttribute)
+    private List<RouteLineVertex> CreateRouteLineVertices(
+      ParameterizedLocation startPL, ParameterizedLocation endPL, 
+      WaypointAttribute colorCodingAttribute, WaypointAttribute? secondaryColorCodingAttribute)
     {
       // Points to use:
       //   1. Points in adjusted route
@@ -898,6 +921,7 @@ namespace QuickRoute.BusinessEntities
         var vertex = new RouteLineVertex();
         vertex.Location = aw.Location;
         vertex.Color = GetColorFromParameterizedLocation(aw.ParameterizedLocation, colorCodingAttribute);
+        if(secondaryColorCodingAttribute.HasValue) vertex.SecondaryColor = GetColorFromParameterizedLocation(aw.ParameterizedLocation, secondaryColorCodingAttribute.Value);
         vertex.AlphaAdjustment = currentAlphaAdjustment;
         vertex.ParameterizedLocation = aw.ParameterizedLocation;
         vertices.Add(vertex);
@@ -914,6 +938,7 @@ namespace QuickRoute.BusinessEntities
 
       public PointD Location { get; set; }
       public Color Color { get; set; }
+      public Color? SecondaryColor { get; set; }
       public ParameterizedLocation ParameterizedLocation { get; set; }
 
       public double AlphaAdjustment
@@ -934,11 +959,8 @@ namespace QuickRoute.BusinessEntities
 
     private class RouteLine
     {
-      private readonly GraphicsPath linePath;
-      private readonly GraphicsPath maskPath;
-
       public RouteLine(RouteLineVertex startVertex, RouteLineVertex endVertex, RouteLineVertex previousVertex,
-                       RouteLineVertex nextVertex, double lineWidth, double maskWidth, double zoom)
+                       RouteLineVertex nextVertex, double lineWidth, double maskWidth, double zoom, bool splitLine)
       {
         PointD p0 = zoom * (previousVertex ?? startVertex).Location;
         PointD p1 = zoom * startVertex.Location;
@@ -956,29 +978,35 @@ namespace QuickRoute.BusinessEntities
           p3 = p2 + directionVector;
         }
 
-        linePath = CreatePath(p1, p2, p1 - p0, p3 - p2, zoom * lineWidth / 2, -zoom * lineWidth / 2, previousVertex == null,
-                              nextVertex == null);
+        if(splitLine)
+        {
+          LeftLinePath = CreatePath(p1, p2, p1 - p0, p3 - p2, -zoom * lineWidth / 2, 0, previousVertex == null,
+                                nextVertex == null);
+          RightLinePath = CreatePath(p1, p2, p1 - p0, p3 - p2, zoom * lineWidth / 2, 0, previousVertex == null,
+                                nextVertex == null);
+        }
+        else
+        {
+          LinePath = CreatePath(p1, p2, p1 - p0, p3 - p2, zoom * lineWidth / 2, -zoom * lineWidth / 2, previousVertex == null,
+                                nextVertex == null);
+        }
+
         if (zoom * maskWidth > 0)
         {
           GraphicsPath leftMaskPath = CreatePath(p1, p2, p1 - p0, p3 - p2, zoom * (lineWidth / 2 + maskWidth),
                                                  zoom * lineWidth / 2, previousVertex == null, nextVertex == null);
           GraphicsPath rightMaskPath = CreatePath(p1, p2, p1 - p0, p3 - p2, zoom * (-lineWidth / 2 - maskWidth),
                                                   zoom * -lineWidth / 2, previousVertex == null, nextVertex == null);
-          maskPath = new GraphicsPath(FillMode.Winding);
-          maskPath.AddPath(leftMaskPath, false);
-          maskPath.AddPath(rightMaskPath, false);
+          MaskPath = new GraphicsPath(FillMode.Winding);
+          MaskPath.AddPath(leftMaskPath, false);
+          MaskPath.AddPath(rightMaskPath, false);
         }
       }
 
-      public GraphicsPath LinePath
-      {
-        get { return linePath; }
-      }
-
-      public GraphicsPath MaskPath
-      {
-        get { return maskPath; }
-      }
+      public GraphicsPath LinePath { get; private set; }
+      public GraphicsPath LeftLinePath { get; private set; }
+      public GraphicsPath RightLinePath { get; private set; }
+      public GraphicsPath MaskPath { get; private set; }
 
       // TODO: add support for bool isStartOfLine, bool isEndOfLine
       private static GraphicsPath CreatePath(PointD p1, PointD p2, PointD d0, PointD d2, double t0, double t1,

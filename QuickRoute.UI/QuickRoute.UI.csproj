@@ -210,6 +210,21 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main.fi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main.fi.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.it.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main.it.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.lt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main.lt.resx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\CreateNewForm.resx">
@@ -830,6 +845,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Main.lt.resx">
       <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Main.lt.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -939,6 +956,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.fi.resx">
       <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Main.fi.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -993,7 +1012,10 @@
     <EmbeddedResource Include="Forms\TimeDialog.it.resx" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Main.it.resx" />
+    <EmbeddedResource Include="Main.it.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Main.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ExternalReferences\" />
