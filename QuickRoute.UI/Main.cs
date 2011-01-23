@@ -2201,7 +2201,7 @@ namespace QuickRoute.UI
     {
       get
       {
-        return ((WaypointAttributeString)secondaryColorCodingAttributes.SelectedItem).WaypointAttribute;
+        return secondaryColorCodingAttributes.SelectedItem == null ? null : ((WaypointAttributeString)secondaryColorCodingAttributes.SelectedItem).WaypointAttribute;
       }
       set
       {
