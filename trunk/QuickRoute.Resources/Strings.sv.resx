@@ -857,4 +857,31 @@
   <data name="RoutePropertyNameAndValue_NumberOfMapReadingsFromStart" xml:space="preserve">
     <value>Antal kartläsningar (totalt): {0}</value>
   </data>
+  <data name="RoutePropertyName_AveragePaceWhenReadingMap" xml:space="preserve">
+    <value>Genomsnittligt tempo vid kartläsning (sträcka)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePaceWhenReadingMap" xml:space="preserve">
+    <value>Genomsnittligt tempo vid kartläsning (sträcka): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyName_AveragePaceWhenReadingMapFromStart" xml:space="preserve">
+    <value>Genomsnittligt tempo vid kartläsning (totalt)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePaceWhenReadingMapFromStart" xml:space="preserve">
+    <value>Genomsnittligt tempo vid kartläsning (totalt): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyName_AveragePaceWhenNotReadingMap" xml:space="preserve">
+    <value>Genomsnittligt tempo utanför kartläsning (sträcka)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePaceWhenNotReadingMap" xml:space="preserve">
+    <value>Genomsnittligt tempo utanför kartläsning (sträcka): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyName_AveragePaceWhenNotReadingMapFromStart" xml:space="preserve">
+    <value>Genomsnittligt tempo utanför kartläsning (totalt)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePaceWhenNotReadingMapFromStart" xml:space="preserve">
+    <value>Genomsnittligt tempo utanför kartläsning (totalt): {0} min/km</value>
+  </data>
+  <data name="NoSecondaryColorCoding" xml:space="preserve">
+    <value>[ingen andra färg]</value>
+  </data>
 </root>

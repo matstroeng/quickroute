@@ -18,13 +18,15 @@ namespace QuickRoute.UI.Forms
     private readonly Document document;
     private readonly ColorRangeProperties colorRangeProperties;
     private readonly WaypointAttribute colorCodingAttribute;
+    private readonly WaypointAttribute? secondaryColorCodingAttribute;
 
-    public PublishMapForm(Document document, WaypointAttribute colorCodingAttribute, ColorRangeProperties colorRangeProperties)
+    public PublishMapForm(Document document, WaypointAttribute colorCodingAttribute, WaypointAttribute? secondaryColorCodingAttribute, ColorRangeProperties colorRangeProperties)
     {
       InitializeComponent();
 
       this.document = document;
       this.colorCodingAttribute = colorCodingAttribute;
+      this.secondaryColorCodingAttribute = secondaryColorCodingAttribute;
       this.colorRangeProperties = colorRangeProperties;
       foreach (var setting in Util.ApplicationSettings.PublishMapSettings)
       {
@@ -196,6 +198,7 @@ namespace QuickRoute.UI.Forms
             EncodingInfo = selector.EncodingInfo,
             RouteDrawingMode = Document.RouteDrawingMode.Extended,
             ColorCodingAttribute = colorCodingAttribute,
+            SecondaryColorCodingAttribute = secondaryColorCodingAttribute,
             PercentualSize = selector.PercentualImageSize,
             ColorRangeProperties = colorRangeProperties
           };

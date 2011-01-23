@@ -200,6 +200,10 @@ namespace QuickRoute.BusinessEntities.Exporters
                 new SelectableRoutePropertyType(typeof (Location), false),
                 new SelectableRoutePropertyType(typeof (RouteProperties.MapReadingState), false),
                 new SelectableRoutePropertyType(typeof (MapReadingDuration), false),
+                new SelectableRoutePropertyType(typeof (AveragePaceWhenReadingMap), false),
+                new SelectableRoutePropertyType(typeof (AveragePaceWhenReadingMapFromStart), false),
+                new SelectableRoutePropertyType(typeof (AveragePaceWhenNotReadingMap), false),
+                new SelectableRoutePropertyType(typeof (AveragePaceWhenNotReadingMapFromStart), false),
                 new SelectableRoutePropertyType(typeof (PreviousMapReadingEnd), false),
                 new SelectableRoutePropertyType(typeof (NextMapReadingStart), false),
               };

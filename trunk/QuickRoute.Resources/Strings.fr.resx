@@ -45,19 +45,19 @@
     read any of the formats listed below.
     
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
+    value  : The object must be serialized with 
+           : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+           : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
+    value  : The object must be serialized with 
+           : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+           : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
+    value  : The object must be serialized into a byte array 
+           : using a System.ComponentModel.TypeConverter
+           : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
@@ -345,127 +345,127 @@
     <value>Lisser les intervalles pour {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_AltitudeDifference" xml:space="preserve">
-    <value>Différence d'altitude (lap) : {0} m</value>
+    <value>Différence d'altitude (lap): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_AltitudeDifferenceFromStart" xml:space="preserve">
-    <value>Différence d'altitude (total) : {0} m</value>
+    <value>Différence d'altitude (total): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_Ascent" xml:space="preserve">
-    <value>Ascension (lap) : {0} m</value>
+    <value>Ascension (lap): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_AscentFromStart" xml:space="preserve">
-    <value>Ascension (total) : {0} m</value>
+    <value>Ascension (total): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageDirectionDeviationToNextLap" xml:space="preserve">
-    <value>Dérive moyenne de la direction (lap) : {0}°</value>
+    <value>Dérive moyenne de la direction (lap): {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageDirectionDeviationToNextLapFromStart" xml:space="preserve">
-    <value>Dérive moyenne de la direction (total) : {0}°</value>
+    <value>Dérive moyenne de la direction (total): {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageHeartRate" xml:space="preserve">
-    <value>FC moyenne (lap) : {0} bpm</value>
+    <value>FC moyenne (lap): {0} bpm</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageHeartRateFromStart" xml:space="preserve">
-    <value>FC moyenne (total) : {0} bpm</value>
+    <value>FC moyenne (total): {0} bpm</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageInclination" xml:space="preserve">
-    <value>Pente moyenne (lap) : {0}°</value>
+    <value>Pente moyenne (lap): {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageInclinationFromStart" xml:space="preserve">
-    <value>Pente moyenne (total) : {0}°</value>
+    <value>Pente moyenne (total): {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageRoutePace" xml:space="preserve">
-    <value>Allure moyenne (lap) : {0} min/km</value>
+    <value>Allure moyenne (lap): {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageRoutePaceFromStart" xml:space="preserve">
-    <value>Allure moyenne (total) : {0} min/km</value>
+    <value>Allure moyenne (total): {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageRouteSpeed" xml:space="preserve">
-    <value>Vitesse moyenne (lap) : {0} km/h</value>
+    <value>Vitesse moyenne (lap): {0} km/h</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageRouteSpeedFromStart" xml:space="preserve">
-    <value>Vitesse moyenne (total) : {0} km/h</value>
+    <value>Vitesse moyenne (total): {0} km/h</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageStraightLinePace" xml:space="preserve">
-    <value>Allure moyenne en ligne droite (lap) : {0} min/km</value>
+    <value>Allure moyenne en ligne droite (lap): {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageStraightLinePaceFromStart" xml:space="preserve">
-    <value>Allure moyenne en ligne droite (total) : {0} min/km</value>
+    <value>Allure moyenne en ligne droite (total): {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageStraightLineSpeed" xml:space="preserve">
-    <value>Vitesse moyenne en ligne droite (lap) : {0} km/h</value>
+    <value>Vitesse moyenne en ligne droite (lap): {0} km/h</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageStraightLineSpeedFromStart" xml:space="preserve">
-    <value>Vitesse moyenne en ligne droite (total) : {0} km/h</value>
+    <value>Vitesse moyenne en ligne droite (total): {0} km/h</value>
   </data>
   <data name="RoutePropertyNameAndValue_Descent" xml:space="preserve">
-    <value>Descente (lap) : {0} m</value>
+    <value>Descente (lap): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_DescentFromStart" xml:space="preserve">
-    <value>Descente (total) : {0} m</value>
+    <value>Descente (total): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_Direction" xml:space="preserve">
-    <value>Direction : {0}°</value>
+    <value>Direction: {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_DirectionDeviationToNextLap" xml:space="preserve">
-    <value>Déviation de la direction : {0}°</value>
+    <value>Déviation de la direction: {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_ElapsedTime" xml:space="preserve">
-    <value>Durée (lap) : {0}</value>
+    <value>Durée (lap): {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_ElapsedTimeFromStart" xml:space="preserve">
-    <value>Durée (total) : {0}</value>
+    <value>Durée (total): {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_HeartRate" xml:space="preserve">
-    <value>Fréquence cardiaque : {0} bpm</value>
+    <value>Fréquence cardiaque: {0} bpm</value>
   </data>
   <data name="RoutePropertyNameAndValue_Inclination" xml:space="preserve">
-    <value>Pente : {0}°</value>
+    <value>Pente: {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_LapNumber" xml:space="preserve">
-    <value>lap N° : {0}</value>
+    <value>lap N°: {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_Location" xml:space="preserve">
-    <value>Emplacement : {0}</value>
+    <value>Emplacement: {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_MaxHeartRate" xml:space="preserve">
-    <value>FCmax (lap) : {0} bpm</value>
+    <value>FCmax (lap): {0} bpm</value>
   </data>
   <data name="RoutePropertyNameAndValue_MaxHeartRateFromStart" xml:space="preserve">
-    <value>FCmax (total) : {0} bpm</value>
+    <value>FCmax (total): {0} bpm</value>
   </data>
   <data name="RoutePropertyNameAndValue_MinHeartRate" xml:space="preserve">
-    <value>FCmin (lap) : {0} bpm</value>
+    <value>FCmin (lap): {0} bpm</value>
   </data>
   <data name="RoutePropertyNameAndValue_MinHeartRateFromStart" xml:space="preserve">
-    <value>FCmin (total) : {0} bpm</value>
+    <value>FCmin (total): {0} bpm</value>
   </data>
   <data name="RoutePropertyNameAndValue_Pace" xml:space="preserve">
-    <value>Allure : {0} min/km</value>
+    <value>Allure: {0} min/km</value>
   </data>
   <data name="RoutePropertyNameAndValue_RouteDistance" xml:space="preserve">
-    <value>Distance (lap) : {0} m</value>
+    <value>Distance (lap): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_RouteDistanceFromStart" xml:space="preserve">
-    <value>Distance (total) : {0} m</value>
+    <value>Distance (total): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_RouteToStraightLine" xml:space="preserve">
-    <value>Différence de longueur entre la trace et la ligne droite (lap) : {0}</value>
+    <value>Différence de longueur entre la trace et la ligne droite (lap): {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_RouteToStraightLineFromStart" xml:space="preserve">
-    <value>Différence de longueur entre la trace et la ligne droite (total) : {0}</value>
+    <value>Différence de longueur entre la trace et la ligne droite (total): {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_Speed" xml:space="preserve">
-    <value>Vitesse : {0} km/h</value>
+    <value>Vitesse: {0} km/h</value>
   </data>
   <data name="RoutePropertyNameAndValue_StraightLineDistance" xml:space="preserve">
-    <value>Distance en ligne droite (lap) : {0} m</value>
+    <value>Distance en ligne droite (lap): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_StraightLineDistanceFromStart" xml:space="preserve">
-    <value>Distance en ligne droite (total) : {0} m</value>
+    <value>Distance en ligne droite (total): {0} m</value>
   </data>
   <data name="RoutePropertyNameAndValue_Time" xml:space="preserve">
-    <value>Heure : {0}</value>
+    <value>Heure: {0}</value>
   </data>
   <data name="RoutePropertyName_AltitudeDifference" xml:space="preserve">
     <value>Différence d'altitude (lap)</value>
@@ -591,10 +591,10 @@
     <value>Sélectionner l'information</value>
   </data>
   <data name="RoutePropertyNameAndValue_ImageX" xml:space="preserve">
-    <value>Position en X de l'image : {0}</value>
+    <value>Position en X de l'image: {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_ImageY" xml:space="preserve">
-    <value>Position en Y de l'image : {0}</value>
+    <value>Position en Y de l'image: {0}</value>
   </data>
   <data name="RoutePropertyName_ImageX" xml:space="preserve">
     <value>Position en X de l'image</value>
@@ -612,7 +612,7 @@
     <value>Sans titre {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_Altitude" xml:space="preserve">
-    <value>Altitude : {0} mètres</value>
+    <value>Altitude: {0} mètres</value>
   </data>
   <data name="FileFilter_KmzFiles" xml:space="preserve">
     <value>Fichier Kmz (*.kmz)|*.kmz</value>
@@ -621,42 +621,138 @@
     <value>Temps d'approche de cette position</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeBackward" xml:space="preserve">
-    <value>Temps d'approche de cette position : {0}</value>
+    <value>Temps d'approche de cette position: {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeForward" xml:space="preserve">
     <value>Temps d'éloignement de cette position</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeForward" xml:space="preserve">
-    <value>Temps d'éloignement de cette position : {0}</value>
+    <value>Temps d'éloignement de cette position: {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeAtStartOfSpan" xml:space="preserve">
     <value>Temps de sortie de poste</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpan" xml:space="preserve">
-    <value>Temps de sortie de poste : {0}</value>
+    <value>Temps de sortie de poste: {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeAtEndOfSpan" xml:space="preserve">
     <value>Temps d'approche de poste</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpan" xml:space="preserve">
-    <value>Temps d'approche de poste : {0}</value>
+    <value>Temps d'approche de poste: {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
     <value>Somme des temps de sorties de postes</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
-    <value>Somme des temps de sorties de postes : {0}</value>
+    <value>Somme des temps de sorties de postes: {0}</value>
   </data>
   <data name="RoutePropertyName_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
     <value>Somme des temps d'approches de postes</value>
   </data>
   <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
-    <value>Somme des temps d'approches de postes : {0}</value>
+    <value>Somme des temps d'approches de postes: {0}</value>
   </data>
   <data name="DeleteLapX" xml:space="preserve">
     <value>Effacer lap {0}</value>
   </data>
   <data name="Print" xml:space="preserve">
-    <value>Imprimer…</value>
+    <value>Imprimer...</value>
+  </data>
+  <data name="MapReadingDuration" xml:space="preserve">
+    <value>Durée de lecture</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Pas</value>
+  </data>
+  <data name="Unit_Time" xml:space="preserve">
+    <value>Temps</value>
+  </data>
+  <data name="RoutePropertyName_AverageTimeBetweenMapReadings" xml:space="preserve">
+    <value>Temps moyen entre les lectures (lap)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageTimeBetweenMapReadings" xml:space="preserve">
+    <value>Temps moyen entre les lectures (lap): {0}</value>
+  </data>
+  <data name="RoutePropertyName_AverageTimeBetweenMapReadingsFromStart" xml:space="preserve">
+    <value>Temps moyen entre les lectures (total)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageTimeBetweenMapReadingsFromStart" xml:space="preserve">
+    <value>Temps moyen entre les lectures (total): {0}</value>
+  </data>
+  <data name="RoutePropertyName_AverageMapReadingTime" xml:space="preserve">
+    <value>Temps moyen de lecture (lap)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageMapReadingTime" xml:space="preserve">
+    <value>Temps moyen de lecture (lap): {0}</value>
+  </data>
+  <data name="RoutePropertyName_AverageMapReadingTimeFromStart" xml:space="preserve">
+    <value>Temps moyen de lecture (total)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageMapReadingTimeFromStart" xml:space="preserve">
+    <value>Temps moyen de lecture (total): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingDuration" xml:space="preserve">
+    <value>Durée de lecture</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingDuration" xml:space="preserve">
+    <value>Durée de lecture: {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingDurationInSpan" xml:space="preserve">
+    <value>Durée de lecture (lap)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingDurationInSpan" xml:space="preserve">
+    <value>Durée de lecture (lap): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingDurationFromStart" xml:space="preserve">
+    <value>Durée de lecture (total)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingDurationFromStart" xml:space="preserve">
+    <value>Durée de lecture (total): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingPercentage" xml:space="preserve">
+    <value>Pourcentage de lecture (lap)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingPercentage" xml:space="preserve">
+    <value>Pourcentage de lecture (lap): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingPercentageFromStart" xml:space="preserve">
+    <value>Pourcentage de lecture (total)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingPercentageFromStart" xml:space="preserve">
+    <value>Pourcentage de lecture (total): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingState" xml:space="preserve">
+    <value>Reading map</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingState" xml:space="preserve">
+    <value>Reading map: {0}</value>
+  </data>
+  <data name="RoutePropertyName_PreviousMapReadingEnd" xml:space="preserve">
+    <value>Temps depuis la dernière lecture</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_PreviousMapReadingEnd" xml:space="preserve">
+    <value>Temps depuis la dernière lecture: {0}</value>
+  </data>
+  <data name="RoutePropertyName_NextMapReadingStart" xml:space="preserve">
+    <value>Temps avant la prochaine lecture</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_NextMapReadingStart" xml:space="preserve">
+    <value>Temps avant la prochaine lecture: {0}</value>
+  </data>
+  <data name="RoutePropertyName_NumberOfMapReadings" xml:space="preserve">
+    <value>Nombre de lectures (lap)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_NumberOfMapReadings" xml:space="preserve">
+    <value>Nombre de lectures (lap): {0}</value>
+  </data>
+  <data name="RoutePropertyName_NumberOfMapReadingsFromStart" xml:space="preserve">
+    <value>Nombre de lectures (total)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_NumberOfMapReadingsFromStart" xml:space="preserve">
+    <value>Nombre de lectures (total): {0}</value>
   </data>
 </root>

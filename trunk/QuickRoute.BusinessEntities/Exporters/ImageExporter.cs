@@ -83,7 +83,8 @@ namespace QuickRoute.BusinessEntities.Exporters
         Properties.ShowMap, 
         Properties.PercentualSize, 
         Sessions, 
-        Properties.ColorCodingAttribute, 
+        Properties.ColorCodingAttribute,
+        Properties.SecondaryColorCodingAttribute,
         Properties.RouteDrawingMode, 
         Properties.SessionSettings
       );
@@ -281,6 +282,7 @@ namespace QuickRoute.BusinessEntities.Exporters
     public Document.RouteDrawingMode RouteDrawingMode { get; set; }
     public bool ShowMap { get; set; }
     public WaypointAttribute ColorCodingAttribute { get; set; }
+    public WaypointAttribute? SecondaryColorCodingAttribute { get; set; }
     public ColorRangeProperties ColorRangeProperties { get; set; }
 
     public ImageExporterProperties()

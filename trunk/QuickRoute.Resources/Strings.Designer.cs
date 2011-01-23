@@ -675,6 +675,15 @@ namespace QuickRoute.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to [no second color].
+        /// </summary>
+        public static string NoSecondaryColorCoding {
+            get {
+                return ResourceManager.GetString("NoSecondaryColorCoding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Open in Google Earth.
         /// </summary>
         public static string OpenInGoogleEarth {
@@ -932,6 +941,42 @@ namespace QuickRoute.Resources {
         public static string RoutePropertyName_AverageMapReadingTimeFromStart {
             get {
                 return ResourceManager.GetString("RoutePropertyName_AverageMapReadingTimeFromStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Average pace when not reading map (leg).
+        /// </summary>
+        public static string RoutePropertyName_AveragePaceWhenNotReadingMap {
+            get {
+                return ResourceManager.GetString("RoutePropertyName_AveragePaceWhenNotReadingMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Average pace when not reading map (total).
+        /// </summary>
+        public static string RoutePropertyName_AveragePaceWhenNotReadingMapFromStart {
+            get {
+                return ResourceManager.GetString("RoutePropertyName_AveragePaceWhenNotReadingMapFromStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Average pace when reading map (leg).
+        /// </summary>
+        public static string RoutePropertyName_AveragePaceWhenReadingMap {
+            get {
+                return ResourceManager.GetString("RoutePropertyName_AveragePaceWhenReadingMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Average pace when reading map (total).
+        /// </summary>
+        public static string RoutePropertyName_AveragePaceWhenReadingMapFromStart {
+            get {
+                return ResourceManager.GetString("RoutePropertyName_AveragePaceWhenReadingMapFromStart", resourceCulture);
             }
         }
         
@@ -1526,6 +1571,42 @@ namespace QuickRoute.Resources {
         public static string RoutePropertyNameAndValue_AverageMapReadingTimeFromStart {
             get {
                 return ResourceManager.GetString("RoutePropertyNameAndValue_AverageMapReadingTimeFromStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Average pace when not reading map (leg): {0} min/km.
+        /// </summary>
+        public static string RoutePropertyNameAndValue_AveragePaceWhenNotReadingMap {
+            get {
+                return ResourceManager.GetString("RoutePropertyNameAndValue_AveragePaceWhenNotReadingMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Average pace when not reading map (total): {0} min/km.
+        /// </summary>
+        public static string RoutePropertyNameAndValue_AveragePaceWhenNotReadingMapFromStart {
+            get {
+                return ResourceManager.GetString("RoutePropertyNameAndValue_AveragePaceWhenNotReadingMapFromStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Average pace when reading map (leg): {0} min/km.
+        /// </summary>
+        public static string RoutePropertyNameAndValue_AveragePaceWhenReadingMap {
+            get {
+                return ResourceManager.GetString("RoutePropertyNameAndValue_AveragePaceWhenReadingMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Average pace when reading map (total): {0} min/km.
+        /// </summary>
+        public static string RoutePropertyNameAndValue_AveragePaceWhenReadingMapFromStart {
+            get {
+                return ResourceManager.GetString("RoutePropertyNameAndValue_AveragePaceWhenReadingMapFromStart", resourceCulture);
             }
         }
         

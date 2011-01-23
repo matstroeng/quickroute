@@ -904,4 +904,40 @@
     <value>Number of map readings (total): {0}</value>
     <comment>Added 2011-01-15</comment>
   </data>
+  <data name="RoutePropertyName_AveragePaceWhenReadingMap" xml:space="preserve">
+    <value>Average pace when reading map (leg)</value>
+    <comment>Added 2011-01-23</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePaceWhenReadingMap" xml:space="preserve">
+    <value>Average pace when reading map (leg): {0} min/km</value>
+    <comment>Added 2011-01-23</comment>
+  </data>
+  <data name="RoutePropertyName_AveragePaceWhenReadingMapFromStart" xml:space="preserve">
+    <value>Average pace when reading map (total)</value>
+    <comment>Added 2011-01-23</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePaceWhenReadingMapFromStart" xml:space="preserve">
+    <value>Average pace when reading map (total): {0} min/km</value>
+    <comment>Added 2011-01-23</comment>
+  </data>
+  <data name="RoutePropertyName_AveragePaceWhenNotReadingMap" xml:space="preserve">
+    <value>Average pace when not reading map (leg)</value>
+    <comment>Added 2011-01-23</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePaceWhenNotReadingMap" xml:space="preserve">
+    <value>Average pace when not reading map (leg): {0} min/km</value>
+    <comment>Added 2011-01-23</comment>
+  </data>
+  <data name="RoutePropertyName_AveragePaceWhenNotReadingMapFromStart" xml:space="preserve">
+    <value>Average pace when not reading map (total)</value>
+    <comment>Added 2011-01-23</comment>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePaceWhenNotReadingMapFromStart" xml:space="preserve">
+    <value>Average pace when not reading map (total): {0} min/km</value>
+    <comment>Added 2011-01-23</comment>
+  </data>
+  <data name="NoSecondaryColorCoding" xml:space="preserve">
+    <value>[no second color]</value>
+    <comment>Added 2011-01-23</comment>
+  </data>
 </root>

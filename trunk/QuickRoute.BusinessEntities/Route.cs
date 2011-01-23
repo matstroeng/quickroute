@@ -591,9 +591,16 @@ namespace QuickRoute.BusinessEntities
       // map reading
       if(waypointAttributeExists[WaypointAttribute.MapReadingDuration])
       {
-        w.MapReadingState = waypoints[i].MapReadingState == MapReadingState.NotReading || waypoints[i+1].MapReadingState == MapReadingState.NotReading
-          ? MapReadingState.NotReading 
-          : MapReadingState.Reading;
+        if(parameterizedLocation.IsNode)
+        {
+          w.MapReadingState = waypoints[i].MapReadingState;
+        }
+        else
+        {
+          w.MapReadingState = waypoints[i].MapReadingState == MapReadingState.NotReading || waypoints[i + 1].MapReadingState == MapReadingState.NotReading
+            ? MapReadingState.NotReading
+            : MapReadingState.Reading;
+        }
         attributes.AddRange(new[]
                               {
                                 WaypointAttribute.MapReadingDuration,
@@ -1793,10 +1800,10 @@ namespace QuickRoute.BusinessEntities
       {
         var newRouteSegment = new RouteSegment();
         var waypointCount = 0;
-        var mapReadingIndex = 0; // just to be sure, could probably be removed
+        var mapReadingIndex = -1; // just to be sure, could probably be removed
         foreach (var waypoint in routeSegment.Waypoints)
         {
-          while (mapReadingIndex < mapReadings.Count - 1 && mapReadings[mapReadingIndex] <= waypoint.Time)
+          while (mapReadingIndex < mapReadings.Count - 1 && (mapReadingIndex == -1 || mapReadings[mapReadingIndex] <= waypoint.Time))
           {
             if (mapReadings[mapReadingIndex + 1] > waypoint.Time) break;
             mapReadingIndex++;
@@ -1809,7 +1816,7 @@ namespace QuickRoute.BusinessEntities
           }
           else if (waypoint == routeSegment.LastWaypoint)
           {
-            newWaypoint.MapReadingState = newRouteSegment.LastWaypoint.MapReadingState == MapReadingState.Reading
+            newWaypoint.MapReadingState = newRouteSegment.LastWaypoint.MapReadingState == MapReadingState.StartReading || newRouteSegment.LastWaypoint.MapReadingState == MapReadingState.Reading
                                          ? MapReadingState.EndReading
                                          : MapReadingState.NotReading;
             newRouteSegment.Waypoints.Add(newWaypoint);
@@ -1832,12 +1839,12 @@ namespace QuickRoute.BusinessEntities
           {
             var time = mapReadings[mapReadingIndex + 1];
             var t = (double)(time - waypoint.Time).Ticks / (nextWaypoint.Time - waypoint.Time).Ticks;
-            var longLat = t * waypoint.LongLat + (1 - t) * nextWaypoint.LongLat;
+            var longLat = (1 - t) * waypoint.LongLat + t * nextWaypoint.LongLat;
             var altitude = waypoint.Altitude.HasValue && nextWaypoint.Altitude.HasValue
-              ? (double?)(t * waypoint.Altitude.Value + (1 - t) * nextWaypoint.Altitude.Value)
+              ? (double?)((1 - t) * waypoint.Altitude.Value + t * nextWaypoint.Altitude.Value)
               : null;
             var heartRate = waypoint.HeartRate.HasValue && nextWaypoint.HeartRate.HasValue
-              ? (double?)(t * waypoint.HeartRate.Value + (1 - t) * nextWaypoint.HeartRate.Value)
+              ? (double?)((1 - t) * waypoint.HeartRate.Value + t * nextWaypoint.HeartRate.Value)
               : null;
             var mapReadingState = (mapReadingIndex + 1) % 2 == 0 ? MapReadingState.StartReading : MapReadingState.EndReading;
             newRouteSegment.Waypoints.Add(new Waypoint(time, longLat, altitude, heartRate, mapReadingState));

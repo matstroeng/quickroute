@@ -157,16 +157,16 @@ namespace QuickRoute.BusinessEntities
             // handle null values 
             List<LineGraphPoint> beforePoints = null;
             List<LineGraphPoint> afterPoints = null;
-            if (previousWaypoint != null && !previousWaypoint.Attributes[yAxisAttribute].HasValue && thisWaypoint.Attributes[yAxisAttribute].HasValue)
+            if (previousWaypoint != null)
             {
-              if (YAxisAttributeIsMapReadingAttribute)
+              if (YAxisAttributeIsMapReadingAttribute && thisWaypoint.MapReadingState == MapReadingState.StartReading)
               {
                 beforePoints = new List<LineGraphPoint>()
                                  {
                                    new LineGraphPoint() {X = p.X, Y = 0, Type = LineGraphPointType.Intermediate},
                                  };
               }
-              else
+              else if (!previousWaypoint.Attributes[yAxisAttribute].HasValue && thisWaypoint.Attributes[yAxisAttribute].HasValue)
               {
                 beforePoints = new List<LineGraphPoint>() 
                 { 
@@ -175,16 +175,16 @@ namespace QuickRoute.BusinessEntities
                 };
               }
             }
-            if (nextWaypoint != null && !nextWaypoint.Attributes[yAxisAttribute].HasValue && thisWaypoint.Attributes[yAxisAttribute].HasValue)
+            if (nextWaypoint != null)
             {
-              if (YAxisAttributeIsMapReadingAttribute)
+              if (YAxisAttributeIsMapReadingAttribute && thisWaypoint.MapReadingState == MapReadingState.EndReading)
               {
                 afterPoints = new List<LineGraphPoint>()
                                  {
                                    new LineGraphPoint() {X = p.X, Y = 0, Type = LineGraphPointType.Intermediate},
                                  };
               }
-              else
+              else if (!nextWaypoint.Attributes[yAxisAttribute].HasValue && thisWaypoint.Attributes[yAxisAttribute].HasValue)
               {
                 afterPoints = new List<LineGraphPoint>() 
                 { 

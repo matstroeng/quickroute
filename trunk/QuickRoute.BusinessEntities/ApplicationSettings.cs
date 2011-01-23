@@ -240,6 +240,10 @@ namespace QuickRoute.BusinessEntities
                    new SelectableRoutePropertyType(typeof (AverageMapReadingTimeFromStart), false),
                    new SelectableRoutePropertyType(typeof (AverageTimeBetweenMapReadings), false),
                    new SelectableRoutePropertyType(typeof (AverageTimeBetweenMapReadingsFromStart), false),
+                   new SelectableRoutePropertyType(typeof (AveragePaceWhenReadingMap), false),
+                   new SelectableRoutePropertyType(typeof (AveragePaceWhenReadingMapFromStart), false),
+                   new SelectableRoutePropertyType(typeof (AveragePaceWhenNotReadingMap), false),
+                   new SelectableRoutePropertyType(typeof (AveragePaceWhenNotReadingMapFromStart), false),
                  };
       }
     }
@@ -306,6 +310,10 @@ namespace QuickRoute.BusinessEntities
                    new SelectableRoutePropertyType(typeof (AverageMapReadingTimeFromStart), false),
                    new SelectableRoutePropertyType(typeof (AverageTimeBetweenMapReadings), false),
                    new SelectableRoutePropertyType(typeof (AverageTimeBetweenMapReadingsFromStart), false),
+                   new SelectableRoutePropertyType(typeof (AveragePaceWhenReadingMap), false),
+                   new SelectableRoutePropertyType(typeof (AveragePaceWhenReadingMapFromStart), false),
+                   new SelectableRoutePropertyType(typeof (AveragePaceWhenNotReadingMap), false),
+                   new SelectableRoutePropertyType(typeof (AveragePaceWhenNotReadingMapFromStart), false),
                    new SelectableRoutePropertyType(typeof (PreviousMapReadingEnd), false),
                    new SelectableRoutePropertyType(typeof (NextMapReadingStart), false),
                  };

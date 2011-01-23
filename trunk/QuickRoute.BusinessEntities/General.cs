@@ -1320,36 +1320,40 @@ namespace QuickRoute.BusinessEntities
 
   public struct WaypointAttributeString
   {
-    private WaypointAttribute waypointAttribute;
+    private WaypointAttribute? waypointAttribute;
     private readonly string name;
     private readonly string unit;
 
-    public WaypointAttributeString(WaypointAttribute waypointAttribute)
+    public WaypointAttributeString(WaypointAttribute? waypointAttribute)
     {
       this.waypointAttribute = waypointAttribute;
       switch (waypointAttribute)
       {
-        case WaypointAttribute.Pace:
+        case null:
+          name = Strings.NoSecondaryColorCoding;
+          unit = "";
+          break;
+        case BusinessEntities.WaypointAttribute.Pace:
           name = Strings.Pace;
           unit = Strings.Unit_Pace;
           break;
-        case WaypointAttribute.Speed:
+        case BusinessEntities.WaypointAttribute.Speed:
           name = Strings.Speed;
           unit = Strings.Unit_Speed;
           break;
-        case WaypointAttribute.HeartRate:
+        case BusinessEntities.WaypointAttribute.HeartRate:
           name = Strings.HeartRate;
           unit = Strings.Unit_HeartRate;
           break;
-        case WaypointAttribute.Altitude:
+        case BusinessEntities.WaypointAttribute.Altitude:
           name = Strings.Altitude;
           unit = Strings.Unit_Altitude;
           break;
-        case WaypointAttribute.DirectionDeviationToNextLap:
+        case BusinessEntities.WaypointAttribute.DirectionDeviationToNextLap:
           name = Strings.Direction;
           unit = Strings.Unit_Direction;
           break;
-        case WaypointAttribute.MapReadingDuration:
+        case BusinessEntities.WaypointAttribute.MapReadingDuration:
           name = Strings.MapReadingDuration;
           unit = Strings.Unit_Time;
           break;
@@ -1360,7 +1364,7 @@ namespace QuickRoute.BusinessEntities
       }
     }
 
-    public WaypointAttribute WaypointAttribute
+    public WaypointAttribute? WaypointAttribute
     {
       get { return waypointAttribute; }
       set { waypointAttribute = value; }

@@ -98,6 +98,18 @@ namespace QuickRoute.UI
                                             };
       colorCodingAttributes.ComboBox.DataSource = cca;
       colorCodingAttributes.SelectedIndex = 0;
+      List<WaypointAttributeString> scca = new List<WaypointAttributeString>
+                                            {
+                                              new WaypointAttributeString(null),
+                                              new WaypointAttributeString(WaypointAttribute.Pace),
+                                              new WaypointAttributeString(WaypointAttribute.Speed),
+                                              new WaypointAttributeString(WaypointAttribute.HeartRate),
+                                              new WaypointAttributeString(WaypointAttribute.Altitude),
+                                              new WaypointAttributeString(WaypointAttribute.DirectionDeviationToNextLap),
+                                              new WaypointAttributeString(WaypointAttribute.MapReadingDuration)
+                                            };
+      secondaryColorCodingAttributes.ComboBox.DataSource = scca;
+      secondaryColorCodingAttributes.SelectedIndex = 0;
 
       routeLineWidth.NumericUpDownControl.DecimalPlaces = 1;
       routeLineMaskWidth.NumericUpDownControl.DecimalPlaces = 1;
@@ -564,6 +576,7 @@ namespace QuickRoute.UI
                                                   EncodingInfo = selector.EncodingInfo,
                                                   RouteDrawingMode = Document.RouteDrawingMode.Extended,
                                                   ColorCodingAttribute = SelectedColorCodingAttribute,
+                                                  SecondaryColorCodingAttribute = SelectedSecondaryColorCodingAttribute,
                                                   PercentualSize = selector.PercentualImageSize,
                                                   ColorRangeProperties = GetCurrentColorRangeProperties()
                                                 };
@@ -668,7 +681,7 @@ namespace QuickRoute.UI
               ApplicationSettings.ExportKmlProperties = kmlPropertySelector.Properties;
               using (var stream = new FileStream(sfd.FileName, FileMode.Create))
               {
-                CreateKmz(canvas.Document, stream, kmlPropertySelector.Properties, SelectedColorCodingAttribute,
+                CreateKmz(canvas.Document, stream, kmlPropertySelector.Properties, SelectedColorCodingAttribute, SelectedSecondaryColorCodingAttribute, 
                           GetCurrentColorRangeProperties());
                 stream.Close();
               }
@@ -762,12 +775,12 @@ namespace QuickRoute.UI
                };
     }
 
-    private void OpenInGoogleEarth(string documentFileName, WaypointAttribute? colorCodingAttribute, ColorRangeProperties colorRangeProperties)
+    private void OpenInGoogleEarth(string documentFileName, WaypointAttribute? colorCodingAttribute, WaypointAttribute? secondaryColorCodingAttribute, ColorRangeProperties colorRangeProperties)
     {
       var document = Document.Open(documentFileName);
       try
       {
-        OpenInGoogleEarth(document, colorCodingAttribute, colorRangeProperties);
+        OpenInGoogleEarth(document, colorCodingAttribute, secondaryColorCodingAttribute, colorRangeProperties);
       }
       catch (Exception)
       {
@@ -777,7 +790,7 @@ namespace QuickRoute.UI
     }
 
 
-    private void OpenInGoogleEarth(Document document, WaypointAttribute? colorCodingAttribute, ColorRangeProperties colorRangeProperties)
+    private void OpenInGoogleEarth(Document document, WaypointAttribute? colorCodingAttribute, WaypointAttribute? secondaryColorCodingAttribute, ColorRangeProperties colorRangeProperties)
     {
       if (document == null) throw new ArgumentNullException("document");
       // set default values
@@ -798,7 +811,7 @@ namespace QuickRoute.UI
             ApplicationSettings.ExportKmlProperties = kmlPropertySelector.Properties;
             using (var stream = new MemoryStream())
             {
-              CreateKmz(document, stream, kmlPropertySelector.Properties, colorCodingAttribute.Value,
+              CreateKmz(document, stream, kmlPropertySelector.Properties, colorCodingAttribute.Value, secondaryColorCodingAttribute, 
                         colorRangeProperties);
               GoogleEarthUtil.OpenInGoogleEarth(stream);
               stream.Close();
@@ -924,11 +937,12 @@ namespace QuickRoute.UI
       }
     }
 
-    private void CreateKmz(Document document, Stream stream, KmlProperties kmlProperties, WaypointAttribute colorCodingAttribute, ColorRangeProperties colorRangeProperties)
+    private void CreateKmz(Document document, Stream stream, KmlProperties kmlProperties, WaypointAttribute colorCodingAttribute, WaypointAttribute? secondaryColorCodingAttribute, ColorRangeProperties colorRangeProperties)
     {
       var imageExporterProperties = new ImageExporterProperties()
       {
         ColorCodingAttribute = colorCodingAttribute,
+        SecondaryColorCodingAttribute = secondaryColorCodingAttribute,
         ColorRangeProperties = colorRangeProperties
       };
 
@@ -949,6 +963,7 @@ namespace QuickRoute.UI
       var imageExporterProperties = new ImageExporterProperties()
       {
         ColorCodingAttribute = SelectedColorCodingAttribute,
+        SecondaryColorCodingAttribute = SelectedSecondaryColorCodingAttribute,
         ColorRangeProperties = GetCurrentColorRangeProperties(),
         SessionSettings = new SessionSettings()
       };
@@ -1114,6 +1129,7 @@ namespace QuickRoute.UI
         slider.PreventRedraw = false;
 
         SelectedColorCodingAttribute = canvas.ColorCodingAttribute;
+        SelectedSecondaryColorCodingAttribute = canvas.SecondaryColorCodingAttribute;
         colorRangeStartValue.Text = FormatColorRangeValue(rls.ColorRange.StartValue);
         colorRangeEndValue.Text = FormatColorRangeValue(rls.ColorRange.EndValue);
 
@@ -2060,7 +2076,7 @@ namespace QuickRoute.UI
 
     private void PublishMap()
     {
-      using (var pmForm = new PublishMapForm(canvas.Document, SelectedColorCodingAttribute, GetCurrentColorRangeProperties()))
+      using (var pmForm = new PublishMapForm(canvas.Document, SelectedColorCodingAttribute, SelectedSecondaryColorCodingAttribute, GetCurrentColorRangeProperties()))
       {
         pmForm.ShowDialog();
       }
@@ -2142,7 +2158,7 @@ namespace QuickRoute.UI
         ScaleUnit = new WaypointAttributeString(wa).Unit
       };
 
-      OpenInGoogleEarth(fileName, wa, crp);
+      OpenInGoogleEarth(fileName, wa, null, crp);
       Util.SaveSettings(ApplicationSettings);
 
       var process = Process.GetCurrentProcess();
@@ -2173,11 +2189,23 @@ namespace QuickRoute.UI
     {
       get
       {
-        return ((WaypointAttributeString)colorCodingAttributes.SelectedItem).WaypointAttribute;
+        return ((WaypointAttributeString)colorCodingAttributes.SelectedItem).WaypointAttribute.Value;
       }
       set
       {
         colorCodingAttributes.SelectedItem = new WaypointAttributeString(value);
+      }
+    }
+
+    private WaypointAttribute? SelectedSecondaryColorCodingAttribute
+    {
+      get
+      {
+        return ((WaypointAttributeString)secondaryColorCodingAttributes.SelectedItem).WaypointAttribute;
+      }
+      set
+      {
+        secondaryColorCodingAttributes.SelectedItem = new WaypointAttributeString(value);
       }
     }
 
@@ -2656,7 +2684,7 @@ namespace QuickRoute.UI
 
     private void menuToolsOpenInGoogleEarth_Click(object sender, EventArgs e)
     {
-      OpenInGoogleEarth(canvas.Document, null, null);
+      OpenInGoogleEarth(canvas.Document, null, null, null);
     }
 
     private void menuToolsOpenMultipleFilesInGoogleEarth_Click(object sender, EventArgs e)
@@ -2783,7 +2811,7 @@ namespace QuickRoute.UI
 
     private void toolStripOpenInGoogleEarth_Click(object sender, EventArgs e)
     {
-      OpenInGoogleEarth(canvas.Document, null, null);
+      OpenInGoogleEarth(canvas.Document, null, null, null);
     }
 
     private void toolStripPublishMap_Click(object sender, EventArgs e)
@@ -3003,6 +3031,7 @@ namespace QuickRoute.UI
       BeginWork();
       canvas.PreventRedraw = true;
       canvas.ColorCodingAttribute = SelectedColorCodingAttribute;
+      canvas.SecondaryColorCodingAttribute = SelectedSecondaryColorCodingAttribute;
       canvas.PreventRedraw = false;
       if (!updatingUINow)
       {
@@ -3014,6 +3043,11 @@ namespace QuickRoute.UI
       DrawLineGraph();
       canvas.DrawMap(Canvas.MapDrawingFlags.Markers | Canvas.MapDrawingFlags.Route);
       EndWork();
+    }
+
+    private void secondaryColorCodingAttributes_SelectedIndexChanged(object sender, EventArgs e)
+    {
+      colorCodingAttributes_SelectedIndexChanged(sender, e);
     }
 
     private void routeLineMaskWidth_ValueChanged(object sender, EventArgs e)
@@ -3167,9 +3201,5 @@ namespace QuickRoute.UI
 
     #endregion
 
-    private void routeAppearanceToolstrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-    {
-
-    }
   }
 }

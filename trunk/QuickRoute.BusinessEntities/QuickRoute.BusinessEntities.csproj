@@ -172,6 +172,8 @@
     <Compile Include="RouteProperties\CircleTimeInSpan.cs" />
     <Compile Include="RouteProperties\CircleTimeForward.cs" />
     <Compile Include="RouteProperties\CircleTime.cs" />
+    <Compile Include="RouteProperties\AveragePaceWhenReadingMap.cs" />
+    <Compile Include="RouteProperties\AveragePaceWhenNotReadingMap.cs" />
     <Compile Include="RouteProperties\Direction.cs" />
     <Compile Include="RouteProperties\DirectionDeviationToNextLap.cs" />
     <Compile Include="RouteProperties\Inclination.cs" />
