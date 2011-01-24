@@ -1740,6 +1740,20 @@ namespace QuickRoute.BusinessEntities
 
         }
       }
+      else
+      {
+        for (int i = 0; i < segments.Count; i++)
+        {
+          for (int j = 0; j < segments[i].Waypoints.Count; j++)
+          {
+            var waypoint = segments[i].Waypoints[j];
+            waypoint.Attributes[WaypointAttribute.MapReadingState] = null;
+            waypoint.Attributes[WaypointAttribute.MapReadingDuration] = null;
+            waypoint.Attributes[WaypointAttribute.PreviousMapReadingEnd] = null;
+            waypoint.Attributes[WaypointAttribute.NextMapReadingStart] = null;
+          }
+        }
+      }
     }
 
     private int GetNextLapIndexFromTime(DateTime time)
@@ -1803,9 +1817,8 @@ namespace QuickRoute.BusinessEntities
         var mapReadingIndex = -1; // just to be sure, could probably be removed
         foreach (var waypoint in routeSegment.Waypoints)
         {
-          while (mapReadingIndex < mapReadings.Count - 1 && (mapReadingIndex == -1 || mapReadings[mapReadingIndex] <= waypoint.Time))
+          while (mapReadingIndex < mapReadings.Count - 1 && mapReadings[mapReadingIndex+1] <= waypoint.Time)
           {
-            if (mapReadings[mapReadingIndex + 1] > waypoint.Time) break;
             mapReadingIndex++;
           }
           var newWaypoint = waypoint.Clone();
@@ -1824,7 +1837,7 @@ namespace QuickRoute.BusinessEntities
           }
           else
           {
-            if (mapReadings[mapReadingIndex] == newWaypoint.Time)
+            if (mapReadingIndex != -1 && mapReadings[mapReadingIndex] == newWaypoint.Time)
             {
               newWaypoint.MapReadingState = mapReadingIndex % 2 == 0 ? MapReadingState.StartReading : MapReadingState.EndReading;
             }

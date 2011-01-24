@@ -25,7 +25,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
       }
       if (!Session.Route.ContainsWaypointAttribute(WaypointAttribute.MapReadingDuration))
       {
-        value = TimeSpan.Zero;
+        value = null;
       }
       else
       {
@@ -117,7 +117,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         return;
       }
 
-      value = (TimeSpan)(new AveragePaceWhenNotReadingMap(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty).Value);
+      value = (TimeSpan?)(new AveragePaceWhenNotReadingMap(Session, ParameterizedLocation.Start, Location, RetrieveExternalProperty).Value);
 
       AddToCache();
     }
