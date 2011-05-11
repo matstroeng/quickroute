@@ -107,6 +107,8 @@ namespace QuickRoute.BusinessEntities.Numeric
       if (d == null) return null;
       long intValue = (long)d;
       var secondsFormat = "00" + (NoOfDecimals == 0 ? "" : "." + new string('0', NoOfDecimals));
+      var resolution = Math.Pow(10, -NoOfDecimals);
+      var rounded = Math.Floor(d.Value/resolution) * resolution;
 
       switch (type)
       {
@@ -114,17 +116,17 @@ namespace QuickRoute.BusinessEntities.Numeric
           if (intValue < 3600)
           {
             return string.Format("{0:d1}:{1:" + secondsFormat + "}",
-              intValue / 60, d % 60);
+              intValue / 60, rounded % 60);
           }
           else
           {
             return string.Format("{0:d1}:{1:d2}:{2:" + secondsFormat + "}",
-              intValue / 3600, (intValue / 60) % 60, d % 60);
+              intValue / 3600, (intValue / 60) % 60, rounded % 60);
           }
 
         case TimeConverterType.TimeOfDay:
           return string.Format("{0:d1}:{1:d2}:{2:" + secondsFormat + "}",
-            (intValue / 3600) % 24, (intValue / 60) % 60, d % 60);
+            (intValue / 3600) % 24, (intValue / 60) % 60, rounded % 60);
 
         default:
           return null;
