@@ -2048,7 +2048,17 @@ namespace QuickRoute.UI
             foreach (DateTime dt in form.Runner.Splits)
             {
               var utc = dt.ToUniversalTime();
-              action.Laps.Add(new Lap(utc, LapType.Lap));
+              // do not add lap if there is already a lap for that time
+              var found = false;
+              foreach (var existingLap in canvas.CurrentSession.Laps)
+              {
+                if(existingLap.Time == utc)
+                {
+                  found = true;
+                  break;
+                }
+              }
+              if(!found) action.Laps.Add(new Lap(utc, LapType.Lap));
             }
           }
           action.Execute();
