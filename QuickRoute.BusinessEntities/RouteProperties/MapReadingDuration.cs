@@ -92,7 +92,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
       else
       {
         var pl = Locations.Start;
-        DateTime? previousStartReadingTime = null;
+        DateTime previousStartReadingTime = default(DateTime);
         var totalTime = TimeSpan.Zero;
         while (true)
         {
@@ -107,8 +107,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
           if ((w.MapReadingState == BusinessEntities.MapReadingState.EndReading && pl != Locations.Start) ||
               (w.MapReadingState == BusinessEntities.MapReadingState.Reading && pl == Locations.End))
           {
-            if(previousStartReadingTime != null) totalTime += w.Time - previousStartReadingTime.Value;
-            previousStartReadingTime = null;
+            totalTime += w.Time - previousStartReadingTime;
           }
           if (pl >= Locations.End) break;
           pl = Session.Route.GetNextPLNode(pl, ParameterizedLocation.Direction.Forward);
