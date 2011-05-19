@@ -24,16 +24,24 @@ namespace QuickRoute.BusinessEntities.RouteProperties
         value = cachedProperty.Value;
         return;
       }
-      // remove all start of segments
-      var segmentStartTimes = new List<DateTime>();
-      foreach(var rs in Session.Route.Segments)
-      {
-        segmentStartTimes.Add(rs.FirstWaypoint.Time);
-      }
+      // remove all start of segments (if they are not the end of another segment at the same time)
+      var lapTimeCounts = new Dictionary<DateTime, int>();
       var lapTimesWithoutSegmentStarts = new List<DateTime>();
-      foreach(var lapTime in Session.Route.LapTimes)
+      foreach (var lapTime in Session.Route.LapTimes)
       {
-        if(!segmentStartTimes.Contains(lapTime)) lapTimesWithoutSegmentStarts.Add(lapTime);
+        if (!lapTimeCounts.ContainsKey(lapTime)) lapTimeCounts.Add(lapTime, 0);
+        lapTimeCounts[lapTime]++;
+      }
+      foreach (var rs in Session.Route.Segments)
+      {
+        lapTimeCounts[rs.FirstWaypoint.Time]--;
+      }
+      foreach (var item in lapTimeCounts)
+      {
+        for(var i=0; i<item.Value; i++)
+        {
+          lapTimesWithoutSegmentStarts.Add(item.Key);
+        }
       }
 
       var time = Session.Route.GetTimeFromParameterizedLocation(Location);

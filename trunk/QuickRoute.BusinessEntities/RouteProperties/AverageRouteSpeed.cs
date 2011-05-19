@@ -24,7 +24,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
       }
       var routeLength = (double)new RouteDistance(Session, Start, End, RetrieveExternalProperty).Value;
       var elapsedTime = (TimeSpan)new ElapsedTime(Session, Start, End, RetrieveExternalProperty).Value;
-      value = 3.6 * routeLength/elapsedTime.TotalSeconds;
+      value = elapsedTime.TotalSeconds == 0 ? 0 : 3.6 * routeLength / elapsedTime.TotalSeconds;
       AddToCache();
     }
 
