@@ -55,7 +55,7 @@ namespace QuickRoute.BusinessEntities
     public int CompareTo(Lap other)
     {
       var compare = Math.Sign(time.Ticks - other.Time.Ticks);
-      return compare == 0 ? lapType.CompareTo(other.lapType) : compare;
+      return compare == 0 ? -lapType.CompareTo(other.lapType) : compare;
     }
 
     #endregion

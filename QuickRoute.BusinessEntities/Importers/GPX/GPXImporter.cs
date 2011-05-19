@@ -192,35 +192,38 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
           {
             var routeSegment = new RouteSegment();
             wptType lastWpt = null;
-            foreach (var wpt in trkseg.trkpt)
+            if (trkseg.trkpt != null)
             {
-              if (lastWpt == null || wpt.time != lastWpt.time)
+              foreach (var wpt in trkseg.trkpt)
               {
-                if (wpt.extensions != null && wpt.extensions.Any[0].LocalName == "timerPaused")
+                if (lastWpt == null || wpt.time != lastWpt.time)
                 {
-                  // new route segment ahead
-                  if (routeSegment.Waypoints.Count > 0) routeSegments.Add(routeSegment);
-                  routeSegment = new RouteSegment();
-                }
-                else
-                {
-                  var lat = (double) wpt.lat;
-                  var lon = (double) wpt.lon;
-                  double? heartRate = null;
-                  double? altitude = null;
-                  if (heartRates.ContainsKey(wpt.time)) heartRate = heartRates[wpt.time];
-                  if (wpt.eleSpecified)
+                  if (wpt.extensions != null && wpt.extensions.Any[0].LocalName == "timerPaused")
                   {
-                    altitude = (double?) wpt.ele;
+                    // new route segment ahead
+                    if (routeSegment.Waypoints.Count > 0) routeSegments.Add(routeSegment);
+                    routeSegment = new RouteSegment();
                   }
-                  if (wpt.timeSpecified)
+                  else
                   {
-                    routeSegment.Waypoints.Add(new Waypoint(wpt.time, new LongLat(lon, lat), altitude, heartRate, null));
-                    noOfWaypointsWithTimes++;
-                    lastWpt = wpt;
+                    var lat = (double)wpt.lat;
+                    var lon = (double)wpt.lon;
+                    double? heartRate = null;
+                    double? altitude = null;
+                    if (heartRates.ContainsKey(wpt.time)) heartRate = heartRates[wpt.time];
+                    if (wpt.eleSpecified)
+                    {
+                      altitude = (double?)wpt.ele;
+                    }
+                    if (wpt.timeSpecified)
+                    {
+                      routeSegment.Waypoints.Add(new Waypoint(wpt.time, new LongLat(lon, lat), altitude, heartRate, null));
+                      noOfWaypointsWithTimes++;
+                      lastWpt = wpt;
+                    }
                   }
+                  noOfWaypoints++;
                 }
-                noOfWaypoints++;
               }
             }
             if (routeSegment.Waypoints.Count > 0) routeSegments.Add(routeSegment);
