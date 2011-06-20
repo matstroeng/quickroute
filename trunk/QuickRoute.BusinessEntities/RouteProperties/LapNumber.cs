@@ -34,7 +34,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
       }
       foreach (var rs in Session.Route.Segments)
       {
-        lapTimeCounts[rs.FirstWaypoint.Time]--;
+        if(lapTimeCounts.ContainsKey(rs.FirstWaypoint.Time)) lapTimeCounts[rs.FirstWaypoint.Time]--;
       }
       foreach (var item in lapTimeCounts)
       {
