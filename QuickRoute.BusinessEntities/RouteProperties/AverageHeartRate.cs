@@ -52,7 +52,7 @@ namespace QuickRoute.BusinessEntities.RouteProperties
 
       var heartbeats = 0.0;
       var totalDuration = 0.0;
-      for(var i=0; i<nodes.Count; i++)
+      for(var i=1; i<nodes.Count; i++)
       {
         double duration = 0;
         switch(nodes[i].NodeType)

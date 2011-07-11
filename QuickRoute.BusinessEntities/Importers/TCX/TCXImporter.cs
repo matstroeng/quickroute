@@ -126,7 +126,7 @@ namespace QuickRoute.BusinessEntities.Importers.TCX
               trackCount++;
             }
           }
-
+          
           // add last route segment
           if (routeSegment.Waypoints.Count > 1) routeSegments.Add(routeSegment);
 
@@ -160,7 +160,8 @@ namespace QuickRoute.BusinessEntities.Importers.TCX
 
           importResult.Route = new Route(routeSegments);
           importResult.Laps = laps;
-          importResult.Succeeded = true;
+          importResult.Succeeded = importResult.Route.Segments.Count > 0;
+          if(importResult.Route.Segments.Count == 0) importResult.Error = ImportError.NoWaypoints;
 
           break;
         }
