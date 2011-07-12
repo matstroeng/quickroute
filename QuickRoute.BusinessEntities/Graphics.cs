@@ -123,6 +123,24 @@ namespace QuickRoute.BusinessEntities
       }
       return aa1 + (1 - aa2)*(1 - aa1);
     }
+
+    public static Color CombineColors(params Color[] colors)
+    {
+      int a = 0, r = 0, g = 0, b = 0;
+      foreach(var color in colors)
+      {
+        a += color.A;
+        r += color.R;
+        g += color.G;
+        b += color.B;
+      }
+      return Color.FromArgb(
+        (int)Math.Round((double)a / colors.Length), 
+        (int)Math.Round((double)r / colors.Length), 
+        (int)Math.Round((double)g / colors.Length), 
+        (int)Math.Round((double)b / colors.Length));
+    }
+
   }
 
 }
