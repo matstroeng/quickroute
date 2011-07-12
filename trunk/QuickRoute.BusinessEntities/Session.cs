@@ -334,14 +334,23 @@ namespace QuickRoute.BusinessEntities
 
     public Color GetColorFromParameterizedLocation(ParameterizedLocation pl, WaypointAttribute colorCodingAttribute)
     {
-      // determining value according to current attribute: pace, heart rate or altitude
+      RouteLineSettings rls = settings.RouteLineSettingsCollection[colorCodingAttribute];
+
+      //// determining value according to current attribute: pace, heart rate or altitude
       double? value = route.GetAttributeFromParameterizedLocation(colorCodingAttribute, pl);
+
+      // experimental: dashed route
+      //RouteLineSettings rls = settings.RouteLineSettingsCollection[DashedAdjustedWaypointCreator.experimental_dashWaypointAttribute];
+      //if (value != null)
+      //{
+      //  value = ((int) (value/250.0))%2 == 0 ? rls.ColorRange.StartValue : rls.ColorRange.EndValue;
+      //}
+      
       // need to check whether this is the end of a map reading, if so we need to reset the value so that the line following this waypoint will indicate "not reading"
       if (colorCodingAttribute == WaypointAttribute.MapReadingDuration && pl.IsNode && Route.CreateWaypointFromParameterizedLocation(pl).MapReadingState == MapReadingState.EndReading)
       {
         value = 0;
       }
-      RouteLineSettings rls = settings.RouteLineSettingsCollection[colorCodingAttribute];
       Color color = rls.ColorRange.GetColor(value == null ? 0 : (double)value);
       return color;
     }
@@ -620,129 +629,9 @@ namespace QuickRoute.BusinessEntities
       SetLapTimesToRoute(route);
     }
 
-    /// <summary>
-    /// Used to keep internal route lap time list and laps in sync
-    /// </summary>
-    /// <param name="r"></param>
-    private void SetLapTimesToRoute(Route r)
-    {
-      var lapTimes = new OrderedBag<DateTime>();
-      foreach (var l in Laps)
-      {
-        lapTimes.Add(l.Time.ToUniversalTime());
-      }
-      r.LapTimes = lapTimes;
-    }
-
     #endregion
 
     #region  Private methods
-
-    /// <summary>
-    /// Calculates transformation matrices based on the locations of the handles.
-    /// </summary>
-    /// <param name="activeHandle">The handle that has changed</param>
-    private void UpdateTransformationMatrices_old(Handle activeHandle)
-    {
-      switch (handles.Count)
-      {
-        case 0:
-          break;
-
-        case 1:
-          {
-            // perform translation of whole route
-            GeneralMatrix newTransformationMatrix = (GeneralMatrix)initialTransformationMatrix.Clone();
-            PointD initialProjectedLocation = route.GetProjectedLocationFromParameterizedLocation(activeHandle.ParameterizedLocation, projectionOrigin);
-            PointD initialAdjustedLocation = LinearAlgebraUtil.Transform(initialProjectedLocation, initialTransformationMatrix);
-            PointD translation = activeHandle.Location - initialAdjustedLocation;
-            newTransformationMatrix.SetElement(0, 2, newTransformationMatrix.GetElement(0, 2) + translation.X);
-            newTransformationMatrix.SetElement(1, 2, newTransformationMatrix.GetElement(1, 2) + translation.Y);
-            activeHandle.TransformationMatrix = newTransformationMatrix;
-            break;
-          }
-
-        case 2:
-          {
-            // perform scaling of whole route based on two points
-            Handle firstHandle = null;
-            Handle secondHandle = activeHandle;
-            foreach (Handle h in handles)
-            {
-              if (!h.Equals(activeHandle))
-              {
-                firstHandle = h;
-                break;
-              }
-            }
-
-            GeneralMatrix newTransformationMatrix = LinearAlgebraUtil.CalculateTransformationMatrix(
-              route.GetProjectedLocationFromParameterizedLocation(firstHandle.ParameterizedLocation, projectionOrigin),
-              firstHandle.Location,
-              route.GetProjectedLocationFromParameterizedLocation(secondHandle.ParameterizedLocation, projectionOrigin),
-              secondHandle.Location,
-              firstHandle.TransformationMatrix, false);
-
-            firstHandle.TransformationMatrix = newTransformationMatrix;
-            secondHandle.TransformationMatrix = newTransformationMatrix;
-
-            break;
-          }
-
-        case 3:
-          {
-            // make three-point transformation
-            Handle firstHandle = null;
-            Handle secondHandle = null;
-            Handle thirdHandle = activeHandle;
-            foreach (Handle h in handles)
-            {
-              if (!h.Equals(activeHandle))
-              {
-                if (firstHandle == null)
-                {
-                  firstHandle = h;
-                }
-                else
-                {
-                  secondHandle = h;
-                  break;
-                }
-              }
-            }
-            GeneralMatrix newTransformationMatrix = LinearAlgebraUtil.CalculateTransformationMatrix(
-              route.GetProjectedLocationFromParameterizedLocation(firstHandle.ParameterizedLocation, projectionOrigin),
-              firstHandle.Location,
-              route.GetProjectedLocationFromParameterizedLocation(secondHandle.ParameterizedLocation, projectionOrigin),
-              secondHandle.Location,
-              route.GetProjectedLocationFromParameterizedLocation(thirdHandle.ParameterizedLocation, projectionOrigin),
-              thirdHandle.Location,
-              firstHandle.TransformationMatrix
-              );
-
-            firstHandle.TransformationMatrix = newTransformationMatrix;
-            secondHandle.TransformationMatrix = newTransformationMatrix;
-            thirdHandle.TransformationMatrix = newTransformationMatrix;
-
-            break;
-          }
-
-        default:
-          {
-            HandleCollection ah = GetAdjacentHandles(activeHandle);
-            GeneralMatrix newTransformationMatrix = LinearAlgebraUtil.CalculateTransformationMatrix(
-              route.GetProjectedLocationFromParameterizedLocation(ah[0].ParameterizedLocation, projectionOrigin),
-              ah[0].Location,
-              route.GetProjectedLocationFromParameterizedLocation(ah[1].ParameterizedLocation, projectionOrigin),
-              ah[1].Location,
-              route.GetProjectedLocationFromParameterizedLocation(ah[2].ParameterizedLocation, projectionOrigin),
-              ah[2].Location,
-              ah[0].TransformationMatrix);
-            activeHandle.TransformationMatrix = newTransformationMatrix;
-            break;
-          }
-      }
-    }
 
     private void UpdateTransformationMatrices(Handle activeHandle)
     {
@@ -804,23 +693,6 @@ namespace QuickRoute.BusinessEntities
       }
     }
 
-    /// <summary>
-    /// Returns the two handles that are adjacent to the given handle.
-    /// </summary>
-    /// <param name="handle">The handle "in the middle"</param>
-    /// <returns>A collection of three handles</returns>
-    private HandleCollection GetAdjacentHandles(Handle handle)
-    {
-      HandleCollection list = new HandleCollection();
-      int index = handles.IndexOf(handle);
-      if (index <= 0) index = 1;
-      if (index >= handles.Count - 1) index = handles.Count - 2;
-      list.Add(handles[index - 1]);
-      list.Add(handles[index]);
-      list.Add(handles[index + 1]);
-      return list;
-    }
-
     private int GetLapIndexFromParameterizedLocation(ParameterizedLocation pl)
     {
       DateTime time = route.GetTimeFromParameterizedLocation(pl);
@@ -832,14 +704,71 @@ namespace QuickRoute.BusinessEntities
       return laps.Count - 2;
     }
 
+    /// <summary>
+    /// Reduces the number of vertices by removing "unnecessary" vertices, eg those that do not differ much in color and won't change the direction of the line much.
+    /// </summary>
+    /// <param name="vertices"></param>
+    /// <returns></returns>
     private static List<RouteLineVertex> FilterVertices(IList<RouteLineVertex> vertices)
     {
+      const double colorDistanceThreshold = 32;
+      const double distanceFromLineThreshold = 0.5;
+      const int maxSubsequentSkippedVertices = 10;
+
       var filteredVertices = new List<RouteLineVertex>();
-      for (int i = 0; i < vertices.Count; i++)
+      var lastIndex = 0;
+      for (var i = 0; i < vertices.Count; i++)
       {
-        if (i % 1 == 0) filteredVertices.Add(vertices[i]);
+        var includeVertex = i == 0 ||                                      // always include first vertex
+                            i == vertices.Count - 1 ||                     // always include last vertex
+                            vertices[i].SecondaryColor != null ||          // currently no filtering when secondary colors are used
+                            i - lastIndex >= maxSubsequentSkippedVertices; // not too many vertices in a row can be skipped
+        if (!includeVertex)
+        {
+          var colorDistance = ColorDistance(GraphicsUtil.AlphaAdjustColor(vertices[lastIndex].Color, vertices[lastIndex].AlphaAdjustment),
+                                            GraphicsUtil.AlphaAdjustColor(vertices[i].Color, vertices[i].AlphaAdjustment));
+          if(colorDistance >= colorDistanceThreshold)
+          {
+            includeVertex = true;
+          }
+          else
+          {
+            double t;
+            var distanceFromLine = LinearAlgebraUtil.ClosestDistancePointToLine(vertices[i].Location,
+                                                                                vertices[lastIndex].Location,
+                                                                                vertices[i + 1].Location,
+                                                                                out t);
+            if (distanceFromLine >= distanceFromLineThreshold) includeVertex = true;
+          }
+        }
+        
+        if (includeVertex)
+        {
+          if (filteredVertices.Count > 0 && i - lastIndex > 1)
+          {
+            // adjust color of last vertex to an average of the vertex and all skipped vertices
+            var averageList = new List<Color>();
+            for(var j = lastIndex; j < i; j++)
+            {
+              averageList.Add(vertices[j].Color);
+            }
+            vertices[lastIndex].Color = GraphicsUtil.CombineColors(averageList.ToArray());
+          }
+
+          filteredVertices.Add(vertices[i]);
+          lastIndex = i;
+        }
       }
       return filteredVertices;
+    }
+
+    private static double ColorDistance(Color color1, Color color2)
+    {
+      return Math.Sqrt(
+        (color1.A-color2.A)*(color1.A-color2.A) +
+        (color1.R-color2.R)*(color1.R-color2.R) +
+        (color1.G-color2.G)*(color1.G-color2.G) +
+        (color1.B-color2.B)*(color1.B-color2.B));
     }
 
     private List<RouteLineVertex> CreateRouteLineVertices(
@@ -853,31 +782,15 @@ namespace QuickRoute.BusinessEntities
       // Don't insert points from category 2 if there already is a point with the same PL in category 1
       // Don't insert points from category 3 if there already is a point with the same PL in category 1 or 2
 
-      var adjustedWaypoints = new List<AdjustedWaypoint>();
-
       //   1. Points in adjusted route
-      for (int i = startPL.SegmentIndex; i <= endPL.SegmentIndex; i++)
-      {
-        AdjustedRouteSegment ars = AdjustedRoute.Segments[i];
-        for (int j = 0; j < ars.Waypoints.Count; j++)
-        {
-          AdjustedWaypoint aw = ars.Waypoints[j];
-          if (aw.ParameterizedLocation >= startPL && aw.ParameterizedLocation <= endPL)
-          {
-            adjustedWaypoints.Add(aw);
-          }
-        }
-      }
+      var adjustedWaypoints = new List<AdjustedWaypoint>(new DefaultAdjustedWaypointCreator().Create(adjustedRoute, startPL, endPL, this));
+
+      // experimental: dashed route
+      //var adjustedWaypoints = new List<AdjustedWaypoint>(new DashedAdjustedWaypointCreator().Create(adjustedRoute, startPL, endPL, this));
 
       //   2. Start and end points
-      AdjustedWaypoint startWaypoint = AdjustedRoute.CreateWaypointFromParameterizedLocation(startPL,
-                                                                                                     AdjustedWaypoint.
-                                                                                                       AdjustedWaypointType
-                                                                                                       .Start);
-      AdjustedWaypoint endWaypoint = AdjustedRoute.CreateWaypointFromParameterizedLocation(startPL,
-                                                                                                   AdjustedWaypoint.
-                                                                                                     AdjustedWaypointType
-                                                                                                     .End);
+      AdjustedWaypoint startWaypoint = AdjustedRoute.CreateWaypointFromParameterizedLocation(startPL, AdjustedWaypoint.AdjustedWaypointType.Start);
+      AdjustedWaypoint endWaypoint = AdjustedRoute.CreateWaypointFromParameterizedLocation(startPL, AdjustedWaypoint.AdjustedWaypointType.End);
       adjustedWaypoints.Add(startWaypoint);
       adjustedWaypoints.Add(endWaypoint);
 
@@ -886,10 +799,7 @@ namespace QuickRoute.BusinessEntities
       {
         foreach (AlphaAdjustmentChange aac in AlphaAdjustmentChanges)
         {
-          AdjustedWaypoint w = AdjustedRoute.CreateWaypointFromParameterizedLocation(aac.ParameterizedLocation,
-                                                                                             AdjustedWaypoint.
-                                                                                               AdjustedWaypointType.
-                                                                                               AlphaAdjustmentChange);
+          AdjustedWaypoint w = AdjustedRoute.CreateWaypointFromParameterizedLocation(aac.ParameterizedLocation, AdjustedWaypoint.AdjustedWaypointType.AlphaAdjustmentChange);
           adjustedWaypoints.Add(w);
         }
       }
@@ -921,13 +831,32 @@ namespace QuickRoute.BusinessEntities
         var vertex = new RouteLineVertex();
         vertex.Location = aw.Location;
         vertex.Color = GetColorFromParameterizedLocation(aw.ParameterizedLocation, colorCodingAttribute);
-        if(secondaryColorCodingAttribute.HasValue) vertex.SecondaryColor = GetColorFromParameterizedLocation(aw.ParameterizedLocation, secondaryColorCodingAttribute.Value);
+
+        // experimental: dashed route
+        //vertex.Color = GetColorFromParameterizedLocation(aw.ParameterizedLocation, DashedAdjustedWaypointCreator.experimental_dashWaypointAttribute);
+
+        if (secondaryColorCodingAttribute.HasValue) vertex.SecondaryColor = GetColorFromParameterizedLocation(aw.ParameterizedLocation, secondaryColorCodingAttribute.Value);
         vertex.AlphaAdjustment = currentAlphaAdjustment;
         vertex.ParameterizedLocation = aw.ParameterizedLocation;
         vertices.Add(vertex);
       }
       return vertices;
     }
+
+    /// <summary>
+    /// Used to keep internal route lap time list and laps in sync
+    /// </summary>
+    /// <param name="r"></param>
+    private void SetLapTimesToRoute(Route r)
+    {
+      var lapTimes = new OrderedBag<DateTime>();
+      foreach (var l in Laps)
+      {
+        lapTimes.Add(l.Time.ToUniversalTime());
+      }
+      r.LapTimes = lapTimes;
+    }
+
     #endregion
 
     #region Nested type: RouteLineVertex
@@ -1145,7 +1074,6 @@ namespace QuickRoute.BusinessEntities
 
     #endregion
 
-
     private class PLWithKey : ParameterizedLocation, IComparable<PLWithKey>
     {
       private PLKey key;
@@ -1241,6 +1169,7 @@ namespace QuickRoute.BusinessEntities
       set { description = value; }
     }
   }
+ 
   [Serializable]
   public class SessionPerson
   {
@@ -1258,4 +1187,87 @@ namespace QuickRoute.BusinessEntities
       return Name + (!String.IsNullOrEmpty(Club) ? ", " + Club : "");
     }
   }
+
+  // experimental: dashed route
+  public static class AdjustmentWaypointFactory
+  {
+    public static IAdjustedWaypointCreator Create()
+    {
+      return new DefaultAdjustedWaypointCreator();
+    }
+  }
+
+  // experimental: dashed route
+  public interface IAdjustedWaypointCreator
+  {
+    IEnumerable<AdjustedWaypoint> Create(AdjustedRoute adjustedRoute, ParameterizedLocation startPL, ParameterizedLocation endPL, Session session);
+  }
+
+  public class DefaultAdjustedWaypointCreator : IAdjustedWaypointCreator
+  {
+    public IEnumerable<AdjustedWaypoint> Create(AdjustedRoute adjustedRoute, ParameterizedLocation startPL, ParameterizedLocation endPL, Session session)
+    {
+      var adjustedWaypoints = new List<AdjustedWaypoint>();
+      for (var i = startPL.SegmentIndex; i <= endPL.SegmentIndex; i++)
+      {
+        var ars = adjustedRoute.Segments[i];
+        for (var j = 0; j < ars.Waypoints.Count; j++)
+        {
+          var aw = ars.Waypoints[j];
+          if (aw.ParameterizedLocation >= startPL && aw.ParameterizedLocation <= endPL)
+          {
+            adjustedWaypoints.Add(aw);
+          }
+        }
+      }
+      return adjustedWaypoints;
+    }
+  }
+
+  // experimental: dashed route
+  public class DashedAdjustedWaypointCreator : IAdjustedWaypointCreator
+  {
+    public static WaypointAttribute experimental_dashWaypointAttribute = WaypointAttribute.Distance;
+    public static double experimental_dashLength = 250;
+
+    public IEnumerable<AdjustedWaypoint> Create(AdjustedRoute adjustedRoute, ParameterizedLocation startPL, ParameterizedLocation endPL, Session session)
+    {
+      var adjustedWaypoints = new List<AdjustedWaypoint>();
+      for (var i = startPL.SegmentIndex; i <= endPL.SegmentIndex; i++)
+      {
+        var ars = adjustedRoute.Segments[i];
+        var previousDashPL = ars.FirstWaypoint.ParameterizedLocation;
+        var previousDashValue = session.Route.GetAttributeFromParameterizedLocation(experimental_dashWaypointAttribute, previousDashPL) ?? 0;
+        var previousDashIndex = previousDashValue / experimental_dashLength;
+        for (var j = 0; j < ars.Waypoints.Count; j++)
+        {
+          var aw = ars.Waypoints[j];
+          if (aw.ParameterizedLocation >= startPL && aw.ParameterizedLocation <= endPL)
+          {
+            var currentDashValue = session.Route.GetAttributeFromParameterizedLocation(experimental_dashWaypointAttribute, aw.ParameterizedLocation) ?? 0;
+            var currentDashIndex = currentDashValue / experimental_dashLength;
+            var dashStartPassed = (int) currentDashIndex > (int) previousDashIndex;
+            if (dashStartPassed)
+            {
+              // create dash start points that are between these adjusted route points
+              for(var k = (int)previousDashIndex+1; k<currentDashIndex; k++)
+              {
+                var t = (k - previousDashIndex)/(currentDashIndex - previousDashIndex);
+                var newDashStartPL = new ParameterizedLocation(i, (1 - t)*previousDashPL.Value + t*aw.ParameterizedLocation.Value);
+                adjustedWaypoints.Add(adjustedRoute.CreateWaypointFromParameterizedLocation(newDashStartPL, AdjustedWaypoint.AdjustedWaypointType.Normal));
+              }
+              previousDashPL = aw.ParameterizedLocation;
+              previousDashIndex = currentDashIndex;
+            }
+            adjustedWaypoints.Add(aw);
+          }
+        }
+      }
+      return adjustedWaypoints;
+    }
+  }
+
 }
+
+
+
