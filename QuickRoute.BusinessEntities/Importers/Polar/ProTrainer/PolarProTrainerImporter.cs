@@ -95,10 +95,10 @@ namespace QuickRoute.BusinessEntities.Importers.Polar.ProTrainer
 
       List<PolarPerson> persons = new List<PolarPerson>();
 
-      foreach(var path in paths)
+      foreach (var path in paths)
       {
         var baseDir = new DirectoryInfo(path);
-        if(baseDir.Exists)
+        if (baseDir.Exists)
         {
           // get all persons
           var personDirectories = new List<DirectoryInfo>(baseDir.GetDirectories());
@@ -110,7 +110,7 @@ namespace QuickRoute.BusinessEntities.Importers.Polar.ProTrainer
       }
       if (EndWork != null) EndWork(this, new EventArgs());
 
-      using(var dlg = new PersonSessionSelector(persons))
+      using (var dlg = new PersonSessionSelector(persons))
       {
         DialogResult result = dlg.ShowDialog();
         if (result == DialogResult.OK)
@@ -144,12 +144,17 @@ namespace QuickRoute.BusinessEntities.Importers.Polar.ProTrainer
     {
       get
       {
-        foreach(var path in paths)
+        foreach (var path in paths)
         {
-          if(Directory.Exists(path)) return true;
+          if (Directory.Exists(path)) return true;
         }
         return false;
       }
+    }
+
+    public bool CachedDataExists
+    {
+      get { return IsConnected; }
     }
 
     public string DeviceName
@@ -160,12 +165,12 @@ namespace QuickRoute.BusinessEntities.Importers.Polar.ProTrainer
       }
     }
 
-      public void Refresh()
-      {
-          // do nothing
-      }
+    public void Refresh()
+    {
+      // do nothing
+    }
 
-      #endregion
+    #endregion
   }
 
   public class PolarPerson

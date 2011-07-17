@@ -664,6 +664,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GPSDeviceReaders\GarminUSBReader\GarminUSBReader.csproj">
+      <Project>{FFEC4820-9B6B-47E9-8594-B71A52081C1E}</Project>
+      <Name>GarminUSBReader</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Publishers\DOMAPublisher\DOMAPublisher.csproj">
       <Project>{B7D88639-3248-4309-A687-94DC11EC2946}</Project>
       <Name>DOMAPublisher</Name>

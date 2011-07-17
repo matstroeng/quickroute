@@ -8,13 +8,9 @@ namespace QuickRoute.Common
 {
   public class CommonUtil
   {
-    /// <summary>
-    /// Includes a trailing \
-    /// </summary>
-    /// <returns></returns>
     public static string GetApplicationDataPath()
     {
-      return (Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\QuickRoute\\").Replace("\\\\", "\\");
+      return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "QuickRoute");
     }
 
     public static string GetTempFileName()
@@ -63,7 +59,7 @@ namespace QuickRoute.Common
     /// <returns></returns>
     public static string GetTempPath()
     {
-      return GetApplicationDataPath() + @"Temp\";
+      return Path.Combine(GetApplicationDataPath(), "Temp");
     }
 
     public static void ClearTempFolder()

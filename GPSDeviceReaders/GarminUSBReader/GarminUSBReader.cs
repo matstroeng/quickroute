@@ -2,40 +2,113 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 
 namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
 {
-  public delegate void USBProgressDelegate(string type, int stepNr, int stepMax, int percent);
-  public delegate void USBReadCompletedDelegate();
-  public delegate void USBReadErrorDelegate(Exception e);
+  public delegate void ProgressDelegate(ReadType readType, int step, int maxSteps, double partCompleted);
+  public delegate void CompletedDelegate();
+  public delegate void ErrorDelegate(Exception ex);
 
   public class GarminUSBReader
   {
+    // singleton implementation
+    private static readonly GarminUSBReader instance = new GarminUSBReader();
+    public static GarminUSBReader Instance { get { return instance; } }
+
+    private readonly object locker = new object();
+    private bool abortingThreadNow;
+
+    private int step;
+    private int maxSteps;
+    private ReadType readType;
+
     private IntPtr handle;
     private Int16 usbPacketSize;
-    private Thread thread;
-    private GarminDevice garminDevice;
-    private string readType;
-    private int readStep;
-    private int readStepsNrOf;
-    private readonly string error_Finding_Device;
-    private readonly string error_Communicating_With_Device;
-    private bool readCompleted;
 
-    public event USBProgressDelegate USBProgressChanged;
+    private IDictionary<string, GarminSessionHeader> cachedSessionHeaders = new Dictionary<string, GarminSessionHeader>();
 
-    public event USBReadCompletedDelegate USBReadCompleted;
-    
-    public event USBReadErrorDelegate USBReadError;
-    
+    private string CachedSessionsFileName
+    {
+      get { return Path.Combine(CacheDirectory, "CachedSessions.bin"); }
+    }
+
+    public string cacheDirectory;
+    public string CacheDirectory
+    {
+      get { return cacheDirectory; }
+      set
+      {
+        cacheDirectory = value;
+        if (!Directory.Exists(cacheDirectory))
+        {
+          try
+          {
+            Directory.CreateDirectory(cacheDirectory);
+          }
+          catch (Exception)
+          {
+          }
+        }
+
+        if (File.Exists(CachedSessionsFileName))
+        {
+          try
+          {
+            cachedSessionHeaders = DeserializeFromFile<IDictionary<string, GarminSessionHeader>>(CachedSessionsFileName);
+          }
+          catch (Exception)
+          {
+          }
+        }
+      }
+    }
+
+    private Thread workingThread;
+
+    private GarminUSBReader()
+    {
+    }
+
+    private bool readingNow;
+    public bool ReadingNow
+    {
+      get
+      {
+        lock(locker)
+        {
+          return readingNow;
+        }
+      } 
+      private set
+      {
+        lock (locker)
+        {
+          readingNow = value;
+        }
+      }
+    }
+
+    #region Events
+
+    public event ProgressDelegate Progress;
+
+    public event CompletedDelegate Completed;
+
+    public event ErrorDelegate Error;
+
+    #endregion
+
+    #region Enums
 
     private enum Packet_Type
     {
       USB_Protocol_Layer = 0,
       Application_Layer = 20
     }
-    
+
     private enum L000_Packet_Id
     {
       Pid_Protocol_Array = 253,
@@ -43,7 +116,7 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
       Pid_Product_Data = 255,
       Pid_Ext_Product_Data = 248
     }
-   
+
     private enum L001_Packet_Id
     {
       Pid_Command_Data = 10,
@@ -104,381 +177,51 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
       Cmnd_Transfer_Course_Limits = 565                   /* transfer fitness course limits */
     }
 
+    #endregion
+
+    #region Constants
+
     private const int MAX_BUFFER_SIZE = 4096;
 
     private const int RECORDS_TYPE_LENGTH = 2;
 
-    public GarminUSBReader()
-    {
-      usbPacketSize = 0;
-      readStep = 0;
-      readStepsNrOf = 0;
-      error_Finding_Device = Strings.ErrorFindingDevice;
-      error_Communicating_With_Device = Strings.ErrorCommunicatingWithDevice;
-    }
+    #endregion
 
-    private static uint CTL_CODE(uint DeviceType, uint Function, uint Method, uint Access)
+    #region Public properties and methods
+
+    public bool IsConnected
     {
-      return ((DeviceType << 16) | (Access << 14) | (Function << 2) | Method);
-    }
- 
-    private static APIs.DeviceInterfaceDetailData GetDeviceInfo(IntPtr hDevInfoSet, Guid DeviceGUID, out string DeviceID, int DevicePortIndex)
-    {
-      try
+      get
       {
-        // Get a Device Interface Data structure.
-        // --------------------------------------
+        if (ReadingNow) return true;
 
-        APIs.DeviceInterfaceData interfaceData = new APIs.DeviceInterfaceData();
-        APIs.CRErrorCodes CRResult;
-        IntPtr startingDevice;
-        APIs.DevinfoData infoData = new APIs.DevinfoData();
-        APIs.DeviceInterfaceDetailData detailData = new APIs.DeviceInterfaceDetailData();
-
-        bool result = true;
-        IntPtr ptrInstanceBuf;
-        uint requiredSize = 0;
-
-        interfaceData.Init();
-        infoData.Size = Marshal.SizeOf(typeof(APIs.DevinfoData));
-        detailData.Size = Marshal.SizeOf(typeof(APIs.DeviceInterfaceDetailData));
-
-        result = APIs.SetupDiEnumDeviceInterfaces(
-                hDevInfoSet,
-                0,
-                ref DeviceGUID,
-                (uint)DevicePortIndex,
-                ref interfaceData);
-
-        if (!result)
+        var connected = true;
+        try
         {
-          if (Marshal.GetLastWin32Error() == APIs.ERROR_NO_MORE_ITEMS)
-          {
-            DeviceID = string.Empty;
-            return new APIs.DeviceInterfaceDetailData();
-          }
-          else
-            throw (new ApplicationException("[CCore::GetDeviceInfo] Error when retriving device info"));
+          StartUSBCommunication();
         }
-
-
-        //Get a DevInfoDetailData and DeviceInfoData
-        // ------------------------------------------
-
-        // First call to get the required size.
-        result = APIs.SetupDiGetDeviceInterfaceDetail(
-                hDevInfoSet,
-                ref interfaceData,
-                IntPtr.Zero,
-                0,
-                ref requiredSize,
-                ref infoData);
-
-        // Create the buffer.
-        detailData.Size = 5;
-
-        // Call with the correct buffer
-        result = APIs.SetupDiGetDeviceInterfaceDetail(
-              hDevInfoSet,
-              ref interfaceData,
-              ref detailData, // ref devDetailBuffer,
-              requiredSize,
-              ref requiredSize,
-              ref infoData);
-
-        if (!result)
+        catch
         {
-          System.Windows.Forms.MessageBox.Show(Marshal.GetLastWin32Error().ToString());
-          throw (new ApplicationException("[CCore::GetDeviceInfo] Can not get SetupDiGetDeviceInterfaceDetail"));
+          connected = false;
         }
-
-        startingDevice = infoData.DevInst;
-
-        //Get current device data
-        ptrInstanceBuf = Marshal.AllocHGlobal(1024);
-        CRResult = (APIs.CRErrorCodes)APIs.CM_Get_Device_ID(startingDevice, ptrInstanceBuf, 1024, 0);
-
-        if (CRResult != APIs.CRErrorCodes.CR_SUCCESS)
-          throw (new ApplicationException("[CCore::GetDeviceInfo] Error calling CM_Get_Device_ID: " + CRResult.ToString()));
-
-        // We have the pnp string of the parent device.
-        DeviceID = Marshal.PtrToStringAuto(ptrInstanceBuf);
-
-        Marshal.FreeHGlobal(ptrInstanceBuf);
-        return detailData;
-      }
-      catch (Exception e)
-      {
-        throw (e);
-      }
-    }
-
-    private void StartUSBCommunication()
-    {
-      try
-      {
-        Guid guid = new Guid("2C9C45C2-8E7D-4C08-A12D-816BBAE722C0");
-        string mDeviceID;
-        int mPortIndex = 0;
-
-        IntPtr hDevInfoSet = APIs.SetupDiGetClassDevs(ref guid
-                              , 0
-                              , IntPtr.Zero
-                              , (int)(APIs.DeviceFlags.DigCDDeviceInterface | APIs.DeviceFlags.DigCFPresent));
-
-        APIs.DeviceInterfaceDetailData mDetailedData = GetDeviceInfo(hDevInfoSet, guid, out mDeviceID, mPortIndex);
-
-        handle = APIs.CreateFile(mDetailedData.DevicePath, FileAccess.Read | FileAccess.Write, FileShare.None, IntPtr.Zero, FileMode.Open, 0x00000080, IntPtr.Zero);
-
-        // Did we get a handle?
-        if ((int)handle < 0)
+        finally
         {
-          throw (new Exception(error_Finding_Device));
+          StopUSBCommunication();
         }
-
-        IntPtr pUSBPacketSize = Marshal.AllocHGlobal(sizeof(Int16));
-        int bytesReturned = 0;
-
-        bool r = APIs.DeviceIoControl(
-            handle.ToInt32(),
-            CTL_CODE(0x00000022, 0x851, 0, 0),
-            IntPtr.Zero,
-            0,
-            pUSBPacketSize,
-            (uint)sizeof(int),
-            out bytesReturned,
-            0);
-        if (r == false)
-        {
-          throw (new Exception());
-        }
-        usbPacketSize = (Int16)Marshal.PtrToStructure(pUSBPacketSize, typeof(Int16));
-
-        Marshal.FreeHGlobal(pUSBPacketSize);
-
-        // Tell the device that we are starting a session.
-        GarminUSBPacket theStartSessionPacket = new GarminUSBPacket();
-        theStartSessionPacket.Id = 5;
-
-        SendPacket(theStartSessionPacket);
-
-        GarminUSBPacket thePacket;
-        while (true)
-        {
-          thePacket = GetPacket();
-          if (thePacket.Type == 0 && thePacket.Id == 6)
-          {
-            break;
-          }
-        }
-      }
-      catch (Exception e)
-      {
-        throw (e);
+        return connected;
       }
     }
-   
-    private void StopUSBCommunication()
+
+    public string deviceName;
+    public string DeviceName
     {
-      try
+      get
       {
-        if (handle != null)
-        {
-          int i = APIs.CloseHandle(handle);
-          handle = IntPtr.Zero;
-        }
-      }
-      catch (Exception)
-      { }
-    }
-
-    private void SendA010Command(UInt16 command)
-    {
-      try
-      {
-        byte[] data = BitConverter.GetBytes(command);
-        GarminUSBPacket p = new GarminUSBPacket((byte)Packet_Type.Application_Layer, (UInt16)L001_Packet_Id.Pid_Command_Data, RECORDS_TYPE_LENGTH, data);
-        SendPacket(p);
-      }
-      catch (Exception e)
-      {
-        throw (e);
-      }
-    }
-  
-    private void SendPacket(GarminUSBPacket aPacket)
-    {
-      try
-      {
-        int theBytesToWrite = 12 + (int)aPacket.Size;
-        int theBytesReturned = 0;
-        IntPtr pPacket = Marshal.AllocHGlobal(theBytesToWrite);
-        Marshal.StructureToPtr(aPacket, pPacket, false);
-
-        bool r = APIs.WriteFile(handle, pPacket, theBytesToWrite, out theBytesReturned, IntPtr.Zero);
-        Marshal.FreeHGlobal(pPacket);
-        if (r == false) { throw (new Exception(error_Communicating_With_Device)); }
-
-        // If the packet size was an exact multiple of the USB packet size, we must make a final write call with no data
-        if (theBytesToWrite % usbPacketSize == 0)
-        {
-          r = APIs.WriteFile(handle, IntPtr.Zero, 0, out theBytesReturned, IntPtr.Zero);
-          if (r == false) { throw (new Exception(error_Communicating_With_Device)); }
-        }
-      }
-      catch (Exception e)
-      {
-        throw (e);
-      }
-    }
-   
-    private GarminUSBPacket GetPacket()
-    {
-      try
-      {
-        GarminUSBPacket thePacket = new GarminUSBPacket();
-        int theBufferSize = 0;
-        byte[] theBuffer = new byte[0];
-
-        while (true)
-        {
-          // Read async data until the driver returns less than the
-          // max async data size, which signifies the end of a packet
-          byte[] theTempBuffer = new byte[APIs.ASYNC_DATA_SIZE];
-          byte[] theNewBuffer;
-          int theBytesReturned = 0;
-
-          IntPtr pInBuffer = Marshal.AllocHGlobal(0);
-          IntPtr pOutBuffer = Marshal.AllocHGlobal(APIs.ASYNC_DATA_SIZE);
-
-          bool r = APIs.DeviceIoControl(
-                handle.ToInt32(),
-                CTL_CODE(0x00000022, 0x850, 0, 0),
-                pInBuffer,
-                0,
-                pOutBuffer,
-                APIs.ASYNC_DATA_SIZE,
-                out theBytesReturned,
-                0);
-
-          Marshal.Copy(pOutBuffer, theTempBuffer, 0, APIs.ASYNC_DATA_SIZE);
-          Marshal.FreeHGlobal(pInBuffer);
-          Marshal.FreeHGlobal(pOutBuffer);
-          if (r == false) { throw (new Exception(error_Communicating_With_Device)); }
-
-          theBufferSize += APIs.ASYNC_DATA_SIZE;
-          theNewBuffer = new byte[theBufferSize];
-
-          if (theBuffer.Length > 0) { Array.Copy(theBuffer, 0, theNewBuffer, 0, theBuffer.Length); }
-          Array.Copy(theTempBuffer, 0, theNewBuffer, theBufferSize - APIs.ASYNC_DATA_SIZE, theTempBuffer.Length);
-
-          theBuffer = theNewBuffer;
-
-          if (theBytesReturned != APIs.ASYNC_DATA_SIZE)
-          {
-            thePacket = new GarminUSBPacket(theBuffer);
-            break;
-          }
-        }
-
-        // If this was a small "signal" packet, read a real
-        // packet using ReadFile
-        if (thePacket.Type == 0 && thePacket.Id == 2)
-        {
-          byte[] theTempBuffer = new byte[MAX_BUFFER_SIZE];
-          byte[] theNewBuffer = new byte[MAX_BUFFER_SIZE];
-          int theBytesReturned = 0;
-
-          thePacket = new GarminUSBPacket();
-
-          // A full implementation would keep reading (and queueing)
-          // packets until the driver returns a 0 size buffer.
-          bool r = APIs.ReadFile(handle,
-                    theNewBuffer,
-                    MAX_BUFFER_SIZE,
-                    ref theBytesReturned,
-                    IntPtr.Zero);
-          if (r == false) { throw (new Exception(error_Communicating_With_Device)); }
-          return new GarminUSBPacket(theNewBuffer);
-        }
-        else
-        {
-          return thePacket;
-        }
-      }
-      catch (Exception e)
-      {
-        throw (e);
+        return deviceName ?? "Garmin Forerunner";
       }
     }
 
-    private void SendUSBProgressChanged(int value, int max)
-    {
-      Single percent = (((Single)value / (Single)max) * 100);
-      if (percent > 100) { percent = 100; }
-      if (USBProgressChanged != null) { USBProgressChanged(readType, readStep, readStepsNrOf, (int)percent); }
-    }
-   
-    private void SendUSBReadCompleted()
-    {
-      if (USBReadCompleted != null) { USBReadCompleted(); }
-    }
-   
-    private void SendUSBReadError(Exception e)
-    {
-      if (USBReadError != null) { USBReadError(e); }
-    }
-
-    public void StartReadA1000Protocol()
-    {
-      StartReadThread(new ThreadStart(ReadA1000Protocol));
-    }
-   
-    public void StartReadProductData()
-    {
-      StartReadThread(new ThreadStart(ReadA000Protocol));
-    }
-   
-    public void ReadProductData()
-    {
-      ReadA000Protocol();
-    }
-
-    public bool IsConnected()
-    {
-      bool connected = true;
-      try
-      {
-        StartUSBCommunication();
-      }
-      catch
-      {
-        connected = false;
-      }
-      finally
-      {
-        StopUSBCommunication();
-      }
-      return connected;
-    }
-
-    public void StopReadGarminDevice()
-    {
-      try
-      {
-        if (thread != null && thread.IsAlive)
-        {
-            thread.Abort();
-        }
-      }
-      catch (ThreadAbortException)
-      {
-        while (thread.ThreadState == ThreadState.Running) { }
-        thread = null;
-      }
-    }
-    
-    public void Cancel()
+    public void CancelRead()
     {
       try
       {
@@ -494,260 +237,240 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
       finally
       {
         StopUSBCommunication();
-        StopReadGarminDevice();
-        readCompleted = false;
+      }
+      AbortThread();
+    }
+
+    public void BeginReadData()
+    {
+      if (ReadingNow) throw new ReadingNowException();
+      abortingThreadNow = false;
+      workingThread = new Thread(ReadData);
+      workingThread.Start();
+    }
+
+    public bool CachedSessionsExists
+    {
+      get
+      {
+        return CacheDirectory != null && Directory.Exists(CacheDirectory) &&
+               Directory.GetFiles(CacheDirectory).Length > 0;
       }
     }
 
-    private void StartReadThread(ThreadStart threadStartMethod)
+    public IEnumerable<GarminSessionHeader> GetSessionHeadersFromCache()
     {
-      StopReadGarminDevice();
-      ThreadStart MyThread = new ThreadStart(threadStartMethod);
-      thread = new Thread(MyThread);
-      thread.Start();
+      return cachedSessionHeaders.Values;
     }
-   
-    private void ReadAllProtocols()
+
+    public GarminSession GetSessionFromCache(GarminSessionHeader sessionHeader)
     {
+      if (!cachedSessionHeaders.ContainsKey(sessionHeader.Key)) return null;
+      try
+      {
+        return DeserializeFromFile<GarminSession>(GetSessionFileName(sessionHeader));
+      }
+      catch (Exception)
+      {
+        return null;
+      }
+    }
+
+    #endregion
+
+    #region Private methods
+
+    private void ReadData()
+    {
+      Exception exception = null;
+      var completed = false;
       try
       {
         StartUSBCommunication();
 
-        readStepsNrOf = 6;
+        maxSteps = 4;
+        // first get device information
+        step = 1;
+        readType = ReadType.ProductData;
+        var deviceInfo = GetDeviceInformation();
+        deviceName = deviceInfo == null ? "Garmin Forerunner" : deviceInfo.ProductDescription;
 
-        readStep = 1;
-        readType = "product data";
-        GetProductData_A000_And_A001();
+        // then get runs...
+        step = 2;
+        readType = ReadType.Runs;
+        var runs = GetRuns();
 
-        readStep = 2;
-        readType = "date and time";
-        GetDateTime();
+        // ... and laps
+        step = 3;
+        readType = ReadType.Laps;
+        var laps = GetLaps();
 
-        readStep = 3;
-        readType = "almanac";
-        GetAlmanac();
-
-        readStep = 4;
-        readType = "position";
-        GetPosition();
-
-        readStep = 5;
-        readType = "runs";
-        GetRuns();
-
-        readStep = 6;
-        readType = "laps";
-        GetLaps();
-
-        readStep = 7;
-        readType = "tracks";
-        GetTracks();
-
-        SendUSBReadCompleted();
-      }
-      catch (Exception e)
-      {
-        SendUSBReadError(e);
-      }
-      finally
-      {
-        StopUSBCommunication();
-        StopReadGarminDevice();
-      }
-    }
-   
-    private void ReadA1000Protocol()
-    {
-      try
-      {
-        StartUSBCommunication();
-
-        readStepsNrOf = 3;
-        readCompleted = false;
-
-        readStep = 1;
-        readType = "runs";
-        GetRuns();
-
-        readStep = 2;
-        readType = "laps";
-        GetLaps();
-
-        readStep = 3;
-        readType = "tracks";
-        GetTracks();
-
-        readCompleted = true;
-
-        SendUSBReadCompleted();
-      }
-      catch (Exception e)
-      {
-        SendUSBReadError(e);
-      }
-      finally
-      {
-        StopUSBCommunication();
-        StopReadGarminDevice();
-      }
-    }
-  
-    private void ReadA000Protocol()
-    {
-      try
-      {
-        StartUSBCommunication();
-
-        GetProductData_A000_And_A001();
-
-        SendUSBReadCompleted();
-      }
-      catch (Exception e)
-      {
-        SendUSBReadError(e);
-      }
-      finally
-      {
-        StopUSBCommunication();
-        StopReadGarminDevice();
-      }
-    }
-   
-    private void GetProductData_A000_And_A001()
-    {
-      // A000 Product data and A001 Protocol Capability Protocol
-      GarminUSBPacket p = new GarminUSBPacket((byte)Packet_Type.Application_Layer, (ushort)L000_Packet_Id.Pid_Product_Rqst);
-      SendPacket(p);
-
-      SendUSBProgressChanged(0, 100);
-      GarminUSBPacket thePacket = GetPacket();
-      if (thePacket.Id == (short)L000_Packet_Id.Pid_Product_Data)
-      {
-        garminDevice.AddProductData(thePacket.Data);
-        thePacket = GetPacket();
-        while (thePacket.Id != 0)
+        // based on the runs and laps, check if there are any non-cached sessions present
+        var newSessionFound = false;
+        foreach (var session in CreateSessions(runs, laps, null, false))
         {
-          if (thePacket.Id == (short)L000_Packet_Id.Pid_Ext_Product_Data)
-          { // Skip this according to documentation...
-          }
-          if (thePacket.Id == (short)L000_Packet_Id.Pid_Protocol_Array)
+          var key = session.GetHeader().Key;
+          if (!cachedSessionHeaders.ContainsKey(key))
           {
-            for (int i = 0; i < thePacket.Data.Length; i = i + 3)
-            {
-              SendUSBProgressChanged(i + 3, thePacket.Data.Length);
-              D_Protocol_Data_Type pdt = new D_Protocol_Data_Type();
-              pdt.Tag = thePacket.Data[i + 0];                // 1 bytes
-              pdt.Data = BitConverter.ToUInt16(thePacket.Data, i + 1);  // 2 bytes
-              garminDevice.Protocols.Add(pdt);
-            }
-            SendUSBProgressChanged(100, 100);
+            newSessionFound = true;
             break;
           }
-          thePacket = GetPacket();
         }
+
+        if (newSessionFound)
+        {
+          // there is at least one new session found, download the trackpoints for all sessions and save to cache
+          step = 4;
+          readType = ReadType.Tracks;
+          var tracks = GetTracks();
+          foreach (var session in CreateSessions(runs, laps, tracks, true))
+          {
+            var sessionHeader = session.GetHeader();
+            SerializeToFile(session, GetSessionFileName(sessionHeader));
+            if (!cachedSessionHeaders.ContainsKey(sessionHeader.Key)) cachedSessionHeaders.Add(sessionHeader.Key, sessionHeader);
+          }
+          SerializeToFile(cachedSessionHeaders, CachedSessionsFileName);
+        }
+
+        completed = true;
       }
-      garminDevice.GetSupportedProtocols();
-
-    }
-    
-    private void GetAlmanac()
-    {
-      // Retrive Almanac
-      SendA010Command((UInt16)A010_Command_Id_Type.Cmnd_Transfer_Alm);
-
-      SendUSBProgressChanged(0, 100);
-      GarminUSBPacket thePacket = GetPacket();
-      UInt16 nrOfExpectedRecords = 0;
-      UInt16 nrOfRecords = 0;
-      while (thePacket.Id != 0 && thePacket.Id != (short)L001_Packet_Id.Pid_Xfer_Cmplt)
+      catch (Exception e)
       {
-        if (thePacket.Id == (short)L001_Packet_Id.Pid_Records)
-        {
-          nrOfExpectedRecords = BitConverter.ToUInt16(thePacket.Data, 0);
-        }
-        if (thePacket.Id == (short)L001_Packet_Id.Pid_Almanac_Data)
-        {
-          nrOfRecords++;
-          SendUSBProgressChanged(nrOfRecords, nrOfExpectedRecords);
-          garminDevice.AddAlmanac(thePacket.Data);
-        }
-        thePacket = GetPacket();
+        exception = e;
       }
-      SendUSBProgressChanged(100, 100);
-    }
-    
-    private void GetPosition()
-    {
-      // Retrive Position
-      SendA010Command((UInt16)A010_Command_Id_Type.Cmnd_Transfer_Posn);
-
-      SendUSBProgressChanged(0, 100);
-      GarminUSBPacket thePacket = GetPacket();
-      while (thePacket.Id != 0 && thePacket.Id != (short)L001_Packet_Id.Pid_Xfer_Cmplt)
+      finally
       {
-        if (thePacket.Id == (short)L001_Packet_Id.Pid_Position_Data)
-        {
-          SendUSBProgressChanged(50, 100);
-          garminDevice.AddPosition(thePacket.Data);
-        }
-        break;
+        StopUSBCommunication();
+        if (completed) SendCompleted();
+        if (exception != null) SendError(exception);
       }
-      SendUSBProgressChanged(100, 100);
     }
-    
-    private void GetLaps()
+
+    public void AbortThread()
     {
+      abortingThreadNow = true;
+      try
+      {
+        if (workingThread != null && workingThread.IsAlive)
+        {
+          workingThread.Abort();
+        }
+      }
+      catch (ThreadAbortException)
+      {
+        while (workingThread.ThreadState == ThreadState.Running) { Thread.Sleep(100); }
+        workingThread = null;
+      }
+    }
+
+    private GarminUSBDeviceInformation GetDeviceInformation()
+    {
+      // A000 Product data and A001 Protocol Capability Protocol
+      var p = new GarminUSBPacket((byte)Packet_Type.Application_Layer, (ushort)L000_Packet_Id.Pid_Product_Rqst);
+      SendPacket(p);
+
+      SendProgress(0);
+      var packet = GetPacket();
+      if (packet.Id == (short)L000_Packet_Id.Pid_Product_Data)
+      {
+        var c = new char[packet.Data.Length - 4];
+        Array.Copy(packet.Data, 4, c, 0, packet.Data.Length - 4);
+        return new GarminUSBDeviceInformation()
+        {
+          ProductId = BitConverter.ToUInt16(packet.Data, 0),
+          SoftwareVersion = BitConverter.ToInt16(packet.Data, 2),
+          ProductDescription = GetStringFromNullTerminatedCharArray(c)
+        };
+      }
+      return null;
+    }
+
+    private IList<D1010_Run_Type> GetRuns()
+    {
+      var runs = new List<D1010_Run_Type>();
+
+      // Retrive Runs
+      SendA010Command((UInt16)A010_Command_Id_Type.Cmnd_Transfer_Runs);
+
+      SendProgress(0);
+      var packet = GetPacket();
+      UInt16 numberOfExpectedRecords = 0;
+      UInt16 numberOfRecords = 0;
+      while (packet.Id != 0 && packet.Id != (short)L001_Packet_Id.Pid_Xfer_Cmplt)
+      {
+        if (packet.Id == (short)L001_Packet_Id.Pid_Records)
+        {
+          numberOfExpectedRecords = BitConverter.ToUInt16(packet.Data, 0);
+        }
+        else if (packet.Id == (short)L001_Packet_Id.Pid_Run)
+        {
+          numberOfRecords++;
+          SendProgress((double)numberOfRecords / numberOfExpectedRecords);
+          runs.Add(CreateRun(packet.Data));
+        }
+        packet = GetPacket();
+      }
+      SendProgress(1);
+      return runs;
+    }
+
+    private IList<D1001_Lap_Type> GetLaps()
+    {
+      var laps = new List<D1001_Lap_Type>();
+
       // Retrive Laps
       SendA010Command((UInt16)A010_Command_Id_Type.Cmnd_Transfer_Laps);
 
-      SendUSBProgressChanged(0, 100);
-      GarminUSBPacket thePacket = GetPacket();
-      UInt16 nrOfExpectedRecords = 0;
-      UInt16 nrOfRecords = 0;
-      while (thePacket.Id != 0 && thePacket.Id != (short)L001_Packet_Id.Pid_Xfer_Cmplt)
+      SendProgress(0);
+      var packet = GetPacket();
+      UInt16 numberOfExpectedRecords = 0;
+      UInt16 numberOfRecords = 0;
+      while (packet.Id != 0 && packet.Id != (short)L001_Packet_Id.Pid_Xfer_Cmplt)
       {
-        if (thePacket.Id == (short)L001_Packet_Id.Pid_Records)
+        if (packet.Id == (short)L001_Packet_Id.Pid_Records)
         {
-          nrOfExpectedRecords = BitConverter.ToUInt16(thePacket.Data, 0);
+          numberOfExpectedRecords = BitConverter.ToUInt16(packet.Data, 0);
         }
-        else if (thePacket.Id == (short)L001_Packet_Id.Pid_Lap)
+        else if (packet.Id == (short)L001_Packet_Id.Pid_Lap)
         {
-          nrOfRecords++;
-          SendUSBProgressChanged(nrOfRecords, nrOfExpectedRecords);
-          garminDevice.AddLaps(thePacket.Data);
+          numberOfRecords++;
+          SendProgress((double)numberOfRecords / numberOfExpectedRecords);
+          laps.Add(CreateLap(packet.Data));
         }
-        thePacket = GetPacket();
+        packet = GetPacket();
       }
-      SendUSBProgressChanged(100, 100);
+      SendProgress(1);
+      return laps;
     }
-    
-    private void GetTracks()
+
+    private IDictionary<UInt32, IList<D303_Trk_Point_Type>> GetTracks()
     {
+      var tracks = new Dictionary<UInt32, IList<D303_Trk_Point_Type>>();
       // Retrive Tracks
       SendA010Command((UInt16)A010_Command_Id_Type.Cmnd_Transfer_Trk);
 
-      SendUSBProgressChanged(0, 100);
-      GarminUSBPacket thePacket = GetPacket();
-      UInt16 nrOfExpectedRecords = 0;
-      UInt16 nrOfRecords = 0;
+      SendProgress(0);
+      var packet = GetPacket();
+      UInt16 numberOfExpectedRecords = 0;
+      UInt16 numberOfRecords = 0;
       UInt16 trackKey = 0;
-      bool validTrack = true;
-      garminDevice.Tracks = new SortedList<int, List<D303_Trk_Point_Type>>();
-      while ((nrOfRecords < nrOfExpectedRecords || nrOfExpectedRecords == 0) && thePacket.Id != (short)L001_Packet_Id.Pid_Xfer_Cmplt)
+      var validTrack = true;
+
+      while ((numberOfRecords < numberOfExpectedRecords || numberOfExpectedRecords == 0) && packet.Id != (short)L001_Packet_Id.Pid_Xfer_Cmplt)
       {
         // would rather exit on thePacket.Id == 0, but there is something fishy with Garmin devices setting the id to 0 sometimes
-        if (thePacket.Id == (short)L001_Packet_Id.Pid_Records)
+        if (packet.Id == (short)L001_Packet_Id.Pid_Records)
         {
-          nrOfExpectedRecords = BitConverter.ToUInt16(thePacket.Data, 0);
+          numberOfExpectedRecords = BitConverter.ToUInt16(packet.Data, 0);
         }
-        else if (thePacket.Id == (short)L001_Packet_Id.Pid_Trk_Hdr)
+        else if (packet.Id == (short)L001_Packet_Id.Pid_Trk_Hdr)
         {
-          nrOfRecords++;
+          numberOfRecords++;
           // D311_Trk_Hdr_Type
-          trackKey = BitConverter.ToUInt16(thePacket.Data, 0);
-          if (!garminDevice.Tracks.ContainsKey(trackKey))
+          trackKey = BitConverter.ToUInt16(packet.Data, 0);
+          if (!tracks.ContainsKey(trackKey))
           {
-            garminDevice.Tracks.Add(trackKey, new List<D303_Trk_Point_Type>());
+            tracks.Add(trackKey, new List<D303_Trk_Point_Type>());
             validTrack = true;
           }
           else
@@ -755,72 +478,474 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
             validTrack = false;
           }
         }
-        else if (thePacket.Id == (short)L001_Packet_Id.Pid_Trk_Data)
+        else if (packet.Id == (short)L001_Packet_Id.Pid_Trk_Data)
         {
-          nrOfRecords++;
-          SendUSBProgressChanged(nrOfRecords, nrOfExpectedRecords);
-          if (validTrack) garminDevice.AddTracks(thePacket.Data, trackKey);
+          numberOfRecords++;
+          SendProgress((double)numberOfRecords / numberOfExpectedRecords);
+          if (validTrack) tracks[trackKey].Add(CreateTrackpoint(packet.Data));
         }
 
-        thePacket = GetPacket();
+        packet = GetPacket();
       }
-      SendUSBProgressChanged(100, 100);
+      SendProgress(1);
+      return tracks;
     }
-    
-    private void GetRuns()
-    {
-      // Retrive Runs
-      SendA010Command((UInt16)A010_Command_Id_Type.Cmnd_Transfer_Runs);
 
-      SendUSBProgressChanged(0, 100);
-      GarminUSBPacket thePacket = GetPacket();
-      UInt16 nrOfExpectedRecords = 0;
-      UInt16 nrOfRecords = 0;
-      while (thePacket.Id != 0 && thePacket.Id != (short)L001_Packet_Id.Pid_Xfer_Cmplt)
+    private void StartUSBCommunication()
+    {
+      ReadingNow = true;
+      
+      var guid = new Guid("2C9C45C2-8E7D-4C08-A12D-816BBAE722C0");
+      string deviceId;
+      const int portIndex = 0;
+
+      IntPtr hDevInfoSet = APIs.SetupDiGetClassDevs(ref guid,
+                            0,
+                            IntPtr.Zero,
+                            (int)(APIs.DeviceFlags.DigCDDeviceInterface | APIs.DeviceFlags.DigCFPresent));
+
+      APIs.DeviceInterfaceDetailData mDetailedData = GetDeviceInfo(hDevInfoSet, guid, out deviceId, portIndex);
+
+      handle = APIs.CreateFile(mDetailedData.DevicePath, FileAccess.Read | FileAccess.Write, FileShare.None, IntPtr.Zero, FileMode.Open, 0x00000080, IntPtr.Zero);
+
+      // Did we get a handle?
+      if ((int)handle < 0)
       {
-        if (thePacket.Id == (short)L001_Packet_Id.Pid_Records)
-        {
-          nrOfExpectedRecords = BitConverter.ToUInt16(thePacket.Data, 0);
-        }
-        else if (thePacket.Id == (short)L001_Packet_Id.Pid_Run)
-        {
-          nrOfRecords++;
-          SendUSBProgressChanged(nrOfRecords, nrOfExpectedRecords);
-          garminDevice.AddRuns(thePacket.Data);
-        }
-        thePacket = GetPacket();
+        throw new GarminUsbException(Strings.ErrorFindingDevice);
       }
-      SendUSBProgressChanged(100, 100);
-    }
-    
-    private void GetDateTime()
-    {
-      // Retrieve Time
-      SendA010Command((UInt16)A010_Command_Id_Type.Cmnd_Transfer_Time);
 
-      SendUSBProgressChanged(0, 100);
-      GarminUSBPacket thePacket = GetPacket();
-      while (thePacket.Id != 0 && thePacket.Id != (short)L001_Packet_Id.Pid_Xfer_Cmplt)
+      IntPtr usbPacketSizePointer = Marshal.AllocHGlobal(sizeof(Int16));
+      int bytesReturned;
+
+      bool r = APIs.DeviceIoControl(
+          handle.ToInt32(),
+          CTL_CODE(0x00000022, 0x851, 0, 0),
+          IntPtr.Zero,
+          0,
+          usbPacketSizePointer,
+          (uint)sizeof(int),
+          out bytesReturned,
+          0);
+      if (!r)
       {
-        if (thePacket.Id == (short)L001_Packet_Id.Pid_Date_Time_Data)
-        {
-          garminDevice.AddDateTime(thePacket.Data);
-        }
-        break;
+        throw new GarminUsbException(Strings.ErrorCommunicatingWithDevice);
       }
-      SendUSBProgressChanged(100, 100);
+      usbPacketSize = (Int16)Marshal.PtrToStructure(usbPacketSizePointer, typeof(Int16));
+
+      Marshal.FreeHGlobal(usbPacketSizePointer);
+
+      // Tell the device that we are starting a session.
+      var startSessionPacket = new GarminUSBPacket {Id = 5};
+
+      SendPacket(startSessionPacket);
+
+      GarminUSBPacket packet;
+      while (true)
+      {
+        packet = GetPacket();
+        if (packet.Type == 0 && packet.Id == 6)
+        {
+          break;
+        }
+      }
     }
 
-    public GarminDevice GarminDevice
+    private void StopUSBCommunication()
     {
-      set { garminDevice = value; }
-      get { return garminDevice; }
+      try
+      {
+        if (handle != IntPtr.Zero)
+        {
+          APIs.CloseHandle(handle);
+          handle = IntPtr.Zero;
+        }
+      }
+      finally
+      {
+        ReadingNow = false;
+      }
     }
 
-    public bool ReadCompleted
+    private void SendA010Command(UInt16 command)
     {
-      get { return readCompleted; }
+      var data = BitConverter.GetBytes(command);
+      var p = new GarminUSBPacket((byte)Packet_Type.Application_Layer, (UInt16)L001_Packet_Id.Pid_Command_Data, RECORDS_TYPE_LENGTH, data);
+      SendPacket(p);
     }
 
+    private void SendPacket(GarminUSBPacket aPacket)
+    {
+      var bytesToWrite = 12 + (int)aPacket.Size;
+      int theBytesReturned;
+      IntPtr pPacket = Marshal.AllocHGlobal(bytesToWrite);
+      Marshal.StructureToPtr(aPacket, pPacket, false);
+
+      bool r = APIs.WriteFile(handle, pPacket, bytesToWrite, out theBytesReturned, IntPtr.Zero);
+      Marshal.FreeHGlobal(pPacket);
+      if (!r)
+      {
+        throw new GarminUsbException(Strings.ErrorCommunicatingWithDevice);
+      }
+
+      // If the packet size was an exact multiple of the USB packet size, we must make a final write call with no data
+      if (bytesToWrite % usbPacketSize == 0)
+      {
+        r = APIs.WriteFile(handle, IntPtr.Zero, 0, out theBytesReturned, IntPtr.Zero);
+        if (!r)
+        {
+          throw new GarminUsbException(Strings.ErrorCommunicatingWithDevice);
+        }
+      }
+    }
+
+    private GarminUSBPacket GetPacket()
+    {
+      GarminUSBPacket packet;
+      var bufferSize = 0;
+      var buffer = new byte[0];
+
+      while (true)
+      {
+        // Read async data until the driver returns less than the
+        // max async data size, which signifies the end of a packet
+        var tempBuffer = new byte[APIs.ASYNC_DATA_SIZE];
+        int bytesReturned;
+
+        IntPtr pInBuffer = Marshal.AllocHGlobal(0);
+        IntPtr pOutBuffer = Marshal.AllocHGlobal(APIs.ASYNC_DATA_SIZE);
+
+        bool r = APIs.DeviceIoControl(
+              handle.ToInt32(),
+              CTL_CODE(0x00000022, 0x850, 0, 0),
+              pInBuffer,
+              0,
+              pOutBuffer,
+              APIs.ASYNC_DATA_SIZE,
+              out bytesReturned,
+              0);
+
+        Marshal.Copy(pOutBuffer, tempBuffer, 0, APIs.ASYNC_DATA_SIZE);
+        Marshal.FreeHGlobal(pInBuffer);
+        Marshal.FreeHGlobal(pOutBuffer);
+        if (!r)
+        {
+          throw new GarminUsbException(Strings.ErrorCommunicatingWithDevice);
+        }
+
+        bufferSize += APIs.ASYNC_DATA_SIZE;
+        var newBuffer = new byte[bufferSize];
+
+        if (buffer.Length > 0) { Array.Copy(buffer, 0, newBuffer, 0, buffer.Length); }
+        Array.Copy(tempBuffer, 0, newBuffer, bufferSize - APIs.ASYNC_DATA_SIZE, tempBuffer.Length);
+
+        buffer = newBuffer;
+
+        if (bytesReturned != APIs.ASYNC_DATA_SIZE)
+        {
+          packet = new GarminUSBPacket(buffer);
+          break;
+        }
+      }
+
+      // If this was a small "signal" packet, read a real
+      // packet using ReadFile
+      if (packet.Type == 0 && packet.Id == 2)
+      {
+        var newBuffer = new byte[MAX_BUFFER_SIZE];
+        var bytesReturned = 0;
+
+        // A full implementation would keep reading (and queueing)
+        // packets until the driver returns a 0 size buffer.
+        bool r = APIs.ReadFile(handle,
+                  newBuffer,
+                  MAX_BUFFER_SIZE,
+                  ref bytesReturned,
+                  IntPtr.Zero);
+        if (!r)
+        {
+          throw new GarminUsbException(Strings.ErrorCommunicatingWithDevice);
+        }
+        return new GarminUSBPacket(newBuffer);
+      }
+
+      return packet;
+    }
+
+    private static uint CTL_CODE(uint deviceType, uint function, uint method, uint access)
+    {
+      return ((deviceType << 16) | (access << 14) | (function << 2) | method);
+    }
+
+    private static APIs.DeviceInterfaceDetailData GetDeviceInfo(IntPtr hDevInfoSet, Guid deviceGUID, out string deviceID, int devicePortIndex)
+    {
+      // Get a Device Interface Data structure.
+      // --------------------------------------
+
+      APIs.DeviceInterfaceData interfaceData = new APIs.DeviceInterfaceData();
+      APIs.CRErrorCodes crResult;
+      IntPtr startingDevice;
+      APIs.DevinfoData infoData = new APIs.DevinfoData();
+      APIs.DeviceInterfaceDetailData detailData = new APIs.DeviceInterfaceDetailData();
+
+      bool result = true;
+      IntPtr ptrInstanceBuf;
+      uint requiredSize = 0;
+
+      interfaceData.Init();
+      infoData.Size = Marshal.SizeOf(typeof(APIs.DevinfoData));
+      detailData.Size = Marshal.SizeOf(typeof(APIs.DeviceInterfaceDetailData));
+
+      result = APIs.SetupDiEnumDeviceInterfaces(
+              hDevInfoSet,
+              0,
+              ref deviceGUID,
+              (uint)devicePortIndex,
+              ref interfaceData);
+
+      if (!result)
+      {
+        if (Marshal.GetLastWin32Error() == APIs.ERROR_NO_MORE_ITEMS)
+        {
+          deviceID = string.Empty;
+          return new APIs.DeviceInterfaceDetailData();
+        }
+        else
+        {
+          throw new ApplicationException("[CCore::GetDeviceInfo] Error when retriving device info");
+        }
+      }
+
+
+      //Get a DevInfoDetailData and DeviceInfoData
+      // ------------------------------------------
+
+      // First call to get the required size.
+      result = APIs.SetupDiGetDeviceInterfaceDetail(
+              hDevInfoSet,
+              ref interfaceData,
+              IntPtr.Zero,
+              0,
+              ref requiredSize,
+              ref infoData);
+
+      // Create the buffer.
+      detailData.Size = 5;
+
+      // Call with the correct buffer
+      result = APIs.SetupDiGetDeviceInterfaceDetail(
+            hDevInfoSet,
+            ref interfaceData,
+            ref detailData, // ref devDetailBuffer,
+            requiredSize,
+            ref requiredSize,
+            ref infoData);
+
+      if (!result)
+      {
+        System.Windows.Forms.MessageBox.Show(Marshal.GetLastWin32Error().ToString());
+        throw new ApplicationException("[CCore::GetDeviceInfo] Can not get SetupDiGetDeviceInterfaceDetail");
+      }
+
+      startingDevice = infoData.DevInst;
+
+      //Get current device data
+      ptrInstanceBuf = Marshal.AllocHGlobal(1024);
+      crResult = (APIs.CRErrorCodes)APIs.CM_Get_Device_ID(startingDevice, ptrInstanceBuf, 1024, 0);
+
+      if (crResult != APIs.CRErrorCodes.CR_SUCCESS)
+        throw new ApplicationException("[CCore::GetDeviceInfo] Error calling CM_Get_Device_ID: " + crResult);
+
+      // We have the pnp string of the parent device.
+      deviceID = Marshal.PtrToStringAuto(ptrInstanceBuf);
+
+      Marshal.FreeHGlobal(ptrInstanceBuf);
+      return detailData;
+    }
+
+    private void SendProgress(double partCompleted)
+    {
+      if (Progress != null) Progress(readType, step, maxSteps, partCompleted);
+    }
+
+    private void SendCompleted()
+    {
+      if (Completed != null) Completed();
+    }
+
+    private void SendError(Exception ex)
+    {
+      if (Error != null && !abortingThreadNow) Error(ex);
+    }
+
+    private static string GetStringFromNullTerminatedCharArray(char[] c)
+    {
+      string s = new string(c);
+      return s.Remove(s.IndexOf("\0"));
+    }
+
+    private static D1010_Run_Type CreateRun(byte[] data)
+    {
+      return new D1010_Run_Type
+      {
+        TrackIndex = BitConverter.ToUInt16(data, 0),
+        FirstLapIndex = BitConverter.ToUInt16(data, 2),
+        LastLapIndex = BitConverter.ToUInt16(data, 4),
+        SportType = GetSportType(data[6]),
+        ProgramType = GetProgramType(data[7]),
+        Multisport = GetMultisport(data[8]),
+        VirtualPartner = new D_Virtual_partner
+        {
+          Time = BitConverter.ToUInt32(data, 16),
+          Distance = BitConverter.ToSingle(data, 20)
+        },
+        Workout = new D1002_Workout_Type
+        {
+          NumValidSteps = BitConverter.ToUInt32(data, 24)
+        }
+      };
+    }
+
+    private static Sport_Type GetSportType(byte value)
+    {
+      switch (value)
+      {
+        case 0: return Sport_Type.Running;
+        case 1: return Sport_Type.Biking;
+        default: return Sport_Type.Other;
+      }
+    }
+
+    private static Program_Type GetProgramType(byte value)
+    {
+      switch (value)
+      {
+        case 1: return Program_Type.Virtual_Partner;
+        case 2: return Program_Type.Workout;
+        case 3: return Program_Type.Auto_Multisport;
+        default: return Program_Type.None;
+      }
+    }
+
+    private static Multisport GetMultisport(byte value)
+    {
+      switch (value)
+      {
+        case 1: return Multisport.Yes;
+        case 2: return Multisport.YesAndLastInGroup;
+        default: return Multisport.No;
+      }
+    }
+
+    private static D1001_Lap_Type CreateLap(byte[] data)
+    {
+      return new D1001_Lap_Type()
+               {
+                 Index = BitConverter.ToUInt32(data, 0),
+                 StartTime = BitConverter.ToUInt32(data, 4),
+                 TotalTime = BitConverter.ToUInt32(data, 8),
+                 TotalDist = BitConverter.ToSingle(data, 12),
+                 MaxSpeed = BitConverter.ToSingle(data, 16),
+                 Begin = new D_Position_Type()
+                           {
+                             Latitude = BitConverter.ToInt32(data, 20),
+                             Longitude = BitConverter.ToInt32(data, 24)
+                           },
+                 End = new D_Position_Type()
+                         {
+                           Latitude = BitConverter.ToInt32(data, 28),
+                           Longitude = BitConverter.ToInt32(data, 32)
+                         },
+                 Calories = BitConverter.ToUInt16(data, 36),
+                 AvgHeartRate = data[38],
+                 MaxHeartRate = data[39],
+                 Intensity = data[40]
+               };
+    }
+
+    private static D303_Trk_Point_Type CreateTrackpoint(byte[] data)
+    {
+      return new D303_Trk_Point_Type()
+               {
+                 Position = new D_Position_Type()
+                              {
+                                Latitude = BitConverter.ToInt32(data, 0),
+                                Longitude = BitConverter.ToInt32(data, 4)
+                              },
+                 Time = BitConverter.ToUInt32(data, 8),
+                 Altitude = BitConverter.ToSingle(data, 12),
+                 HeartRate = data[20]
+               };
+    }
+
+    public static void SerializeToFile<T>(T obj, string fileName)
+    {
+      IFormatter formatter = new BinaryFormatter();
+      using (var stream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None))
+      {
+        formatter.Serialize(stream, obj);
+      }
+    }
+
+    public static T DeserializeFromFile<T>(string fileName)
+    {
+      IFormatter formatter = new BinaryFormatter();
+      using (var stream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.None))
+      {
+        return (T)formatter.Deserialize(stream);
+      }
+    }
+
+    private string GetSessionFileName(GarminSessionHeader sessionHeader)
+    {
+      return Path.Combine(CacheDirectory, sessionHeader.Key + ".bin");
+    }
+
+    public List<GarminSession> CreateSessions(IList<D1010_Run_Type> runs, IList<D1001_Lap_Type> laps, IDictionary<UInt32, IList<D303_Trk_Point_Type>> tracks, bool excludeSessionsWithoutTrackpoints)
+    {
+      var sessions = new List<GarminSession>();
+      foreach (var run in runs)
+      {
+        // No tracks if trackIndex == 65535
+        if (run.TrackIndex != 65535 && (!excludeSessionsWithoutTrackpoints || (tracks != null && tracks.ContainsKey(run.TrackIndex))))
+        {
+          sessions.Add(new GarminSession(run, GetLapsForRun(run, laps), GetTrackpointsForRun(run, tracks)));
+        }
+      }
+      return sessions;
+    }
+
+    private static IList<D1001_Lap_Type> GetLapsForRun(D1010_Run_Type run, IEnumerable<D1001_Lap_Type> laps)
+    {
+      var lapsForRun = new List<D1001_Lap_Type>();
+      foreach (var lap in laps)
+      {
+        if (lap.Index >= run.FirstLapIndex && lap.Index <= run.LastLapIndex)
+        {
+          lapsForRun.Add(lap);
+        }
+      }
+      return lapsForRun;
+    }
+
+    private static IList<D303_Trk_Point_Type> GetTrackpointsForRun(D1010_Run_Type run, IDictionary<UInt32, IList<D303_Trk_Point_Type>> tracks)
+    {
+      return tracks != null && tracks.ContainsKey(run.TrackIndex) ? tracks[run.TrackIndex] : new List<D303_Trk_Point_Type>();
+    }
+
+    #endregion
+
+    private class GarminUSBDeviceInformation
+    {
+      public UInt16 ProductId { get; set; }
+      public Int16 SoftwareVersion { get; set; }
+      public string ProductDescription { get; set; }
+    }
+  }
+
+  public class GarminUsbException : Exception
+  {
+    public GarminUsbException(string message) : base(message)
+    {
+    }
   }
 }

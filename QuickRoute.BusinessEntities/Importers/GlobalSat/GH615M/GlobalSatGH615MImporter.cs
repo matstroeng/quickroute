@@ -44,6 +44,11 @@ namespace QuickRoute.BusinessEntities.Importers.GlobalSat.GH615M
             }
         }
 
+        public bool CachedDataExists
+        {
+          get { return false; }
+        }
+
         public string DeviceName
         {
             get

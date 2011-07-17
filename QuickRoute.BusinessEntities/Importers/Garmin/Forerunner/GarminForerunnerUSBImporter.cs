@@ -1,27 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
 using System.Windows.Forms;
 using QuickRoute.BusinessEntities;
 using QuickRoute.GPSDeviceReaders.GarminUSBReader;
+using Timer = System.Threading.Timer;
 
 namespace QuickRoute.BusinessEntities.Importers.Garmin.Forerunner
 {
-  public class GarminForerunnerImporter : IGPSDeviceImporter
+  public class GarminForerunnerUSBImporter : IGPSDeviceImporter
   {
+    private readonly GarminUSBReader garminUSBReader = GarminUSBReader.Instance;
+
     private ImportResult importResult;
     private GarminSession sessionToImport;
-    private readonly GarminUSBReader garminUSBReader = new GarminUSBReader();
-
-    public GarminForerunnerImporter()
-    {
-      garminUSBReader.GarminDevice = new GarminDevice();
-    }
-
-    public GarminDevice GarminDevice
-    {
-      get { return garminUSBReader.GarminDevice; }
-      set { garminUSBReader.GarminDevice = value; }
-    }
 
     #region IGPSDeviceImporter Members
 
@@ -29,7 +24,15 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.Forerunner
     {
       get
       {
-        return garminUSBReader.IsConnected();
+        return garminUSBReader.IsConnected;
+      }
+    }
+
+    public bool CachedDataExists
+    {
+      get
+      {
+        return garminUSBReader.CachedSessionsExists;
       }
     }
 
@@ -37,17 +40,16 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.Forerunner
     {
       get
       {
-        garminUSBReader.ReadProductData();
-        return garminUSBReader.GarminDevice.ProductDescription;
+        return garminUSBReader.DeviceName;
       }
     }
 
-      public void Refresh()
-      {
-          // do nothing
-      }
+    public void Refresh()
+    {
+      // do nothing
+    }
 
-      #endregion
+    #endregion
 
     #region IRouteImporter Members
 
@@ -56,11 +58,21 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.Forerunner
       if (BeginWork != null) BeginWork(this, new EventArgs());
 
       DialogResult result;
+      var showProgressIndicator = false;
 
-      if (!garminUSBReader.ReadCompleted)
+      if (!garminUSBReader.CachedSessionsExists && !garminUSBReader.ReadingNow)
+      {
+        garminUSBReader.BeginReadData();
+        showProgressIndicator = true;
+      }
+      else
+      {
+        showProgressIndicator = garminUSBReader.ReadingNow;
+      }
+
+      if (showProgressIndicator)
       {
         var progressIndicator = new ProgressIndicator(garminUSBReader);
-        garminUSBReader.StartReadA1000Protocol();
         result = progressIndicator.ShowDialog();
         if (result != DialogResult.OK)
         {
@@ -69,12 +81,16 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.Forerunner
         }
       }
 
-      using (var dlg = new GarminSessionSelector { GarminUSBReader = garminUSBReader })
+      var sessionHeaders = new List<GarminSessionHeader>(garminUSBReader.GetSessionHeadersFromCache());
+      sessionHeaders.Sort();
+      sessionHeaders.Reverse();
+
+      using (var dlg = new GarminSessionSelector(sessionHeaders))
       {
         result = dlg.ShowDialog();
         if (result == DialogResult.OK)
         {
-          sessionToImport = dlg.SelectedSession;
+          sessionToImport = garminUSBReader.GetSessionFromCache(dlg.SelectedSessionHeader);
         }
         dlg.Dispose();
       }
@@ -155,4 +171,5 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.Forerunner
 
     #endregion
   }
+
 }

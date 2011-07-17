@@ -3,17 +3,20 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{FFEC4820-9B6B-47E9-8594-B71A52081C1E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QuickRoute.GPSDeviceReaders.GarminUSBReader</RootNamespace>
     <AssemblyName>QuickRoute.GPSDeviceReaders.GarminUSBReader</AssemblyName>
-    <StartupObject></StartupObject>
-    <FileUpgradeFlags></FileUpgradeFlags>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
-    <UpgradeBackupLocation></UpgradeBackupLocation>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -77,17 +80,15 @@
     <Compile Include="APIs.cs" />
     <Compile Include="D1001_Lap_Type.cs" />
     <Compile Include="D1002_Workout_Type.cs" />
-    <Compile Include="D600_Date_Time_Type.cs" />
-    <Compile Include="D_Steps.cs" />
     <Compile Include="D1010_Run_Type.cs" />
     <Compile Include="D303_Trk_Point_Type.cs" />
-    <Compile Include="D500_Almanac_Type.cs" />
-    <Compile Include="D700_Position_Type.cs" />
     <Compile Include="D_Position_Type.cs" />
-    <Compile Include="D_Protocol_Data_Type.cs" />
-    <Compile Include="GarminDevice.cs" />
+    <Compile Include="GarminSession.cs" />
+    <Compile Include="Multisport.cs" />
     <Compile Include="GarminUSBReader.cs" />
     <Compile Include="GarminUSBPacket.cs" />
+    <Compile Include="GarminUtil.cs" />
+    <Compile Include="Program_Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GarminSessionSelector.de.resx">
       <DependentUpon>GarminSessionSelector.cs</DependentUpon>
@@ -180,6 +181,9 @@
     <Compile Include="GarminSessionSelector.Designer.cs">
       <DependentUpon>GarminSessionSelector.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReadingNowException.cs" />
+    <Compile Include="ReadType.cs" />
+    <Compile Include="Sport_Type.cs" />
     <Compile Include="Strings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

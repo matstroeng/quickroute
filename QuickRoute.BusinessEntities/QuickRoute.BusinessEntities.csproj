@@ -106,13 +106,15 @@
     <Compile Include="GlobalizedProperties\Attributes.cs" />
     <Compile Include="GlobalizedProperties\Descriptors.cs" />
     <Compile Include="ImageFilePropertySelectors.cs" />
+    <Compile Include="Importers\FileFormat.cs" />
     <Compile Include="Importers\GlobalSat\GH615M\GlobalSatGH615MImporter.cs" />
+    <Compile Include="Importers\GPSDevice.cs" />
     <Compile Include="Importers\JJConnect\RegistratorSE\JJConnectRegistratorSEImporter.cs" />
     <Compile Include="Importers\Polar\PolarHRMImporter.cs" />
     <Compile Include="Importers\Navilock\NavilockImporter.cs" />
     <Compile Include="Importers\Polar\ProTrainer\PolarProTrainerImporter.cs" />
     <Compile Include="Importers\FRWD\FRWDImporter.cs" />
-    <Compile Include="Importers\Garmin\Forerunner\GarminForerunnerImporter.cs" />
+    <Compile Include="Importers\Garmin\Forerunner\GarminForerunnerUSBImporter.cs" />
     <Compile Include="Importers\GPX\GPX10\gpx1.0.cs" />
     <Compile Include="Importers\GPX\GPXUtil.cs" />
     <Compile Include="Importers\ImportError.cs" />
@@ -124,6 +126,7 @@
     </Compile>
     <Compile Include="Importers\Polar\ProTrainer\PolarProTrainerUtil.cs" />
     <Compile Include="Importers\QuickRoute\QuickRouteImporter.cs" />
+    <Compile Include="Importers\RouteFileFormat.cs" />
     <Compile Include="Importers\SessionSelector.cs">
       <SubType>Form</SubType>
     </Compile>

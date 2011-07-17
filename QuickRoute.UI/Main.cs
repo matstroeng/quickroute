@@ -13,10 +13,12 @@ using System.Windows.Forms;
 using QuickRoute.BusinessEntities;
 using QuickRoute.BusinessEntities.Actions;
 using QuickRoute.BusinessEntities.Exporters;
+using QuickRoute.BusinessEntities.Importers.Garmin.Forerunner;
 using QuickRoute.BusinessEntities.Numeric;
 using QuickRoute.BusinessEntities.RouteProperties;
 using QuickRoute.Common;
 using QuickRoute.Controls;
+using QuickRoute.GPSDeviceReaders.GarminUSBReader;
 using QuickRoute.UI.Classes;
 using QuickRoute.UI.Forms;
 using System.IO;
@@ -59,7 +61,7 @@ namespace QuickRoute.UI
       Application.ThreadException += Application_ThreadException;
 
       var log4NetLogFileName = ConfigurationManager.AppSettings.Get("log4netLogFileName") ??
-                               CommonUtil.GetApplicationDataPath() + "QuickRoute.log";
+                               Path.Combine(CommonUtil.GetApplicationDataPath(), "QuickRoute.log");
       LogUtil.Configure(log4NetLogFileName);
       Util.EnsureApplicationDataFolderExists();
       Util.UpdateApplicationSettingsToCurrentVersion();
@@ -125,7 +127,26 @@ namespace QuickRoute.UI
         OpenInGoogleEarthFromCommandLine(Environment.GetCommandLineArgs()[2]);
       }
 
+      SetupGarminUSBReader();
+
       startingUpNow = false;
+    }
+
+    private void SetupGarminUSBReader()
+    {
+      GarminUSBReader.Instance.CacheDirectory = Path.Combine(CommonUtil.GetApplicationDataPath(), "GarminUSBReaderCache");
+      ReadGarminUSBData();
+    }
+
+    private bool garminUSBLastConnectionState;
+    private void ReadGarminUSBData()
+    {
+      var isConnected = GarminUSBReader.Instance.IsConnected;
+      if(isConnected && !garminUSBLastConnectionState && !GarminUSBReader.Instance.ReadingNow)
+      {
+        GarminUSBReader.Instance.BeginReadData();
+      }
+      garminUSBLastConnectionState = isConnected;
     }
 
     ~Main()
@@ -1409,7 +1430,7 @@ namespace QuickRoute.UI
     {
       using (var ge = new GradientEditor())
       {
-        string gradientPath = CommonUtil.GetApplicationDataPath() + "Gradients\\";
+        string gradientPath = Path.Combine(CommonUtil.GetApplicationDataPath(), "Gradients");
         // get all unique gradients
         var gradients = new List<Gradient>();
         // from default route line settings
@@ -2235,6 +2256,15 @@ namespace QuickRoute.UI
         }
       }
 
+    }
+
+    protected override void WndProc(ref Message message)
+    {
+      if (message.Msg == 0x219 && (int)message.WParam == 0x07)
+      {
+        ReadGarminUSBData();
+      }
+      base.WndProc(ref message);
     }
 
     private void canvas_DocumentChanged(object sender, EventArgs e)

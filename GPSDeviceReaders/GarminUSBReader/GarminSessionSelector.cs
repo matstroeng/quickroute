@@ -1,31 +1,20 @@
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
 {
   public partial class GarminSessionSelector : Form
   {
-    private GarminUSBReader garminUSBReader;
-
-    public GarminSessionSelector()
+    public GarminSessionSelector(IEnumerable<GarminSessionHeader> sessionHeaders)
     {
       InitializeComponent();
+      sessionsComboBox.DataSource = sessionHeaders;
     }
 
-    public GarminUSBReader GarminUSBReader
+    public GarminSessionHeader SelectedSessionHeader
     {
-      get { return garminUSBReader; }
-      set
-      {
-        garminUSBReader = value;
-        sessionsComboBox.DataSource = garminUSBReader.GarminDevice.Sessions;
-      }
-    }
-
-    public GarminSession SelectedSession
-    {
-      get { return sessionsComboBox.SelectedItem as GarminSession; }
-      set { sessionsComboBox.SelectedItem = value; }
+      get { return sessionsComboBox.SelectedItem as GarminSessionHeader; }
     }
 
     private void ok_Click(object sender, EventArgs e)
@@ -38,15 +27,6 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
     {
       DialogResult = DialogResult.Cancel;
       Close();
-    }
-
-    private void readGPSUnit_Click(object sender, EventArgs e)
-    {
-      using (var progressIndicator = new ProgressIndicator(garminUSBReader))
-      {
-        garminUSBReader.StartReadA1000Protocol();
-        progressIndicator.ShowDialog();
-      }
     }
   }
 }
