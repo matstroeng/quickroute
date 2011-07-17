@@ -940,4 +940,8 @@
     <value>[no second color]</value>
     <comment>Added 2011-01-23</comment>
   </data>
+	<data name="NotConnected" xml:space="preserve">
+    <value>not connected</value>
+    <comment>Added 2011-07-15</comment>
+  </data>
 </root>

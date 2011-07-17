@@ -14,17 +14,18 @@ using QuickRoute.BusinessEntities.Importers.QuickRoute;
 using QuickRoute.BusinessEntities.Importers.TCX;
 using QuickRoute.BusinessEntities.Importers.GlobalSat.GH615M;
 using QuickRoute.BusinessEntities.Importers.JJConnect.RegistratorSE;
+using QuickRoute.GPSDeviceReaders.GarminUSBReader;
 using QuickRoute.Resources;
 
 namespace QuickRoute.BusinessEntities.Importers
 {
   public delegate void RefreshProgressDelegate(string message, int percent);
   public delegate void RefreshCompletedDelegate();
-  
+
   public static class SupportedImportFormatManager
   {
-      private static Thread _thread;
-      public static event RefreshProgressDelegate RefreshProgressChanged;
+    private static Thread _thread;
+    public static event RefreshProgressDelegate RefreshProgressChanged;
     public static event RefreshCompletedDelegate RefreshCompleted;
 
     public static List<GPSDevice> GetSupportedGPSDevices()
@@ -32,7 +33,7 @@ namespace QuickRoute.BusinessEntities.Importers
       var supportedGPSDevices = new List<GPSDevice>();
 
       // Garmin Forerunner
-      supportedGPSDevices.Add(new GPSDevice(new GarminForerunnerImporter()));
+      supportedGPSDevices.Add(new GPSDevice(new GarminForerunnerUSBImporter()));
 
       // GlobalSat GH-615M
       supportedGPSDevices.Add(new GPSDevice(new GlobalSatGH615MImporter()));
@@ -102,7 +103,7 @@ namespace QuickRoute.BusinessEntities.Importers
       var foundDevices = new List<GPSDevice>();
       foreach (var device in devicesToSearchFor)
       {
-        if (device.Importer.IsConnected)
+        if (device.Importer.IsConnected || device.Importer.CachedDataExists)
         {
           foundDevices.Add(device);
         }
@@ -112,59 +113,59 @@ namespace QuickRoute.BusinessEntities.Importers
 
     public static void StopRefreshThread()
     {
-        try
+      try
+      {
+        if (_thread != null && _thread.IsAlive)
         {
-            if (_thread != null && _thread.IsAlive)
-            {
-                _thread.Abort();
-            }
+          _thread.Abort();
         }
-        catch (ThreadAbortException)
+      }
+      catch (ThreadAbortException)
+      {
+        if (_thread != null)
         {
-            if (_thread != null)
-            {
-                while (_thread.ThreadState == ThreadState.Running)
-                {
-                }
-            }
-            _thread = null;
+          while (_thread.ThreadState == ThreadState.Running)
+          {
+          }
         }
+        _thread = null;
+      }
     }
 
     private static void StartReadThread(ThreadStart threadStartMethod)
     {
-        StopRefreshThread();
-        var myThread = new ThreadStart(threadStartMethod);
-        _thread = new Thread(myThread);
-        _thread.Start();
+      StopRefreshThread();
+      var myThread = new ThreadStart(threadStartMethod);
+      _thread = new Thread(myThread);
+      _thread.Start();
     }
 
     public static void StartRefreshGPSDevices()
     {
-        StartReadThread(RefreshGPSDevices);
+      StartReadThread(RefreshGPSDevices);
     }
 
     private static void RefreshGPSDevices()
     {
-        List<GPSDevice> devices = GetSupportedGPSDevices();
-        for (int i = 0; i < devices.Count; i++)
+      List<GPSDevice> devices = GetSupportedGPSDevices();
+      for (int i = 0; i < devices.Count; i++)
+      {
+        var device = devices[i];
+        var percent = ((i / (Single)devices.Count) * 100);
+        if (percent > 100)
         {
-            var device = devices[i];
-            var percent = ((i / (Single)devices.Count) * 100);
-            if (percent > 100)
-            {
-                percent = 100;
-            }
-            if (RefreshProgressChanged != null)
-            {
-                RefreshProgressChanged(String.Format("Looking for supported devices... ({0}/{1})", i, devices.Count), (int)percent);
-            }
-            device.Importer.Refresh();
+          percent = 100;
         }
-        if (RefreshCompleted != null)
+        if (RefreshProgressChanged != null)
         {
-            RefreshCompleted();
+          RefreshProgressChanged(String.Format("Looking for supported devices... ({0}/{1})", i, devices.Count), (int)percent);
         }
+        device.Importer.Refresh();
+      }
+      if (RefreshCompleted != null)
+      {
+        RefreshCompleted();
+      }
     }
 
     private static string GetProgramFilesPath()
@@ -177,88 +178,4 @@ namespace QuickRoute.BusinessEntities.Importers
     }
 
   }
-
-  public class FileFormat
-  {
-    private string fileFilter;
-
-    public FileFormat(string fileFilter)
-    {
-      this.fileFilter = fileFilter;
-    }
-
-    public string FileFilter
-    {
-      get { return fileFilter; }
-      set { fileFilter = value; }
-    }
-
-    public string[] Extensions
-    {
-      get
-      {
-        int pos = fileFilter.LastIndexOf("|");
-        string[] extensionsArray = fileFilter.Substring(pos + 1).Split(";".ToCharArray());
-        List<string> extensions = new List<string>();
-        foreach (string e in extensionsArray)
-        {
-          extensions.Add(e.TrimStart("*".ToCharArray()));
-        }
-        return extensions.ToArray();
-      }
-    }
-
-    public override string ToString()
-    {
-      int pos = fileFilter.LastIndexOf("|");
-      return fileFilter.Substring(0, pos);
-    }
-
-  }
-
-  public class RouteFileFormat : FileFormat
-  {
-    private IRouteFileImporter importer;
-
-    public RouteFileFormat(string fileFilter, IRouteFileImporter importer)
-      : base(fileFilter)
-    {
-      this.importer = importer;
-    }
-
-    public IRouteFileImporter Importer
-    {
-      get { return importer; }
-      set { importer = value; }
-    }
-  }
-
-  public class GPSDevice
-  {
-    private IGPSDeviceImporter importer;
-
-    public GPSDevice(IGPSDeviceImporter importer)
-    {
-      this.importer = importer;
-    }
-
-    public IGPSDeviceImporter Importer
-    {
-      get { return importer; }
-      set { importer = value; }
-    }
-
-    public override string ToString()
-    {
-      if (importer == null)
-      {
-        return base.ToString();
-      }
-      else
-      {
-        return importer.DeviceName;
-      }
-    }
-  }
-
 }

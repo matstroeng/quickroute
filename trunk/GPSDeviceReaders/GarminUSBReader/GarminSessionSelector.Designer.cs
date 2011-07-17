@@ -33,7 +33,6 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
       this.activityLabel = new System.Windows.Forms.Label();
       this.sessionsComboBox = new System.Windows.Forms.ComboBox();
       this.cancel = new System.Windows.Forms.Button();
-      this.readGPSUnit = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // ok
@@ -78,17 +77,6 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
       this.cancel.UseVisualStyleBackColor = true;
       this.cancel.Click += new System.EventHandler(this.cancel_Click);
       // 
-      // readGPSUnit
-      // 
-      this.readGPSUnit.AccessibleDescription = null;
-      this.readGPSUnit.AccessibleName = null;
-      resources.ApplyResources(this.readGPSUnit, "readGPSUnit");
-      this.readGPSUnit.BackgroundImage = null;
-      this.readGPSUnit.Font = null;
-      this.readGPSUnit.Name = "readGPSUnit";
-      this.readGPSUnit.UseVisualStyleBackColor = true;
-      this.readGPSUnit.Click += new System.EventHandler(this.readGPSUnit_Click);
-      // 
       // GarminSessionSelector
       // 
       this.AcceptButton = this.ok;
@@ -98,7 +86,6 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackgroundImage = null;
       this.CancelButton = this.cancel;
-      this.Controls.Add(this.readGPSUnit);
       this.Controls.Add(this.cancel);
       this.Controls.Add(this.sessionsComboBox);
       this.Controls.Add(this.activityLabel);
@@ -121,7 +108,6 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
     private System.Windows.Forms.Label activityLabel;
     private System.Windows.Forms.ComboBox sessionsComboBox;
     private System.Windows.Forms.Button cancel;
-    private System.Windows.Forms.Button readGPSUnit;
 
   }
 }

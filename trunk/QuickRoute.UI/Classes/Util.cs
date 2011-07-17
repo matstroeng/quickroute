@@ -230,15 +230,21 @@ namespace QuickRoute.UI.Classes
 
     }
 
-    public static readonly string SettingsFileName = CommonUtil.GetApplicationDataPath() + "QuickRoute.settings";
+    public static string SettingsFileName
+    {
+      get
+      {
+        return Path.Combine(CommonUtil.GetApplicationDataPath(), "QuickRoute.settings");
+      }
+    } 
 
     public static void EnsureApplicationDataFolderExists()
     {
       // ensure that application data folder and subfolders exists
       string[] necessaryFolders = new[] { 
                                           CommonUtil.GetApplicationDataPath(),
-                                          CommonUtil.GetApplicationDataPath() + "Gradients\\",
-                                          CommonUtil.GetApplicationDataPath() + "Temp\\"
+                                          Path.Combine(CommonUtil.GetApplicationDataPath(), "Gradients"),
+                                          CommonUtil.GetTempPath()
                                         };
       foreach (string folder in necessaryFolders)
       {
@@ -258,11 +264,7 @@ namespace QuickRoute.UI.Classes
 
       try
       {
-        IFormatter formatter = new BinaryFormatter();
-        Stream stream = new FileStream(SettingsFileName, FileMode.Open);
-        ApplicationSettings s = (ApplicationSettings)formatter.Deserialize(stream);
-        stream.Close();
-        return s;
+        return DeserializeFromFile<ApplicationSettings>(SettingsFileName);
       }
       catch (Exception)
       {
@@ -272,15 +274,24 @@ namespace QuickRoute.UI.Classes
 
     public static void SaveSettings(ApplicationSettings s)
     {
+      SerializeToFile(s, SettingsFileName);
+    }
+
+    public static void SerializeToFile<T>(T obj, string fileName)
+    {
       IFormatter formatter = new BinaryFormatter();
-      Stream stream = new FileStream(SettingsFileName, FileMode.Create, FileAccess.Write, FileShare.None);
-      try
+      using (var stream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None))
       {
-        formatter.Serialize(stream, s);
+        formatter.Serialize(stream, obj);
       }
-      finally
+    }
+
+    public static T DeserializeFromFile<T>(string fileName)
+    {
+      IFormatter formatter = new BinaryFormatter();
+      using (var stream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.None))
       {
-        stream.Close();
+        return (T)formatter.Deserialize(stream);
       }
     }
 

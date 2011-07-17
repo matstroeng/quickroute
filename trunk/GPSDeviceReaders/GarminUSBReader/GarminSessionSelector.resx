@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="&gt;&gt;sessionsComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;sessionsComboBox.Parent" xml:space="preserve">
     <value>$this</value>
@@ -133,24 +133,11 @@
   <data name="ok.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;readGPSUnit.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="readGPSUnit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="readGPSUnit.Text" xml:space="preserve">
-    <value>Re-read GPS unit</value>
   </data>
   <data name="&gt;&gt;activityLabel.Name" xml:space="preserve">
     <value>activityLabel</value>
@@ -158,15 +145,8 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Select session</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="readGPSUnit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 23</value>
-  </data>
   <data name="activityLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;readGPSUnit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="sessionsComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -177,9 +157,7 @@
   <data name="cancel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;readGPSUnit.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -188,9 +166,6 @@
   </data>
   <data name="&gt;&gt;ok.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="readGPSUnit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 53</value>
   </data>
   <data name="&gt;&gt;ok.Name" xml:space="preserve">
     <value>ok</value>
@@ -214,7 +189,7 @@
     <value>75, 23</value>
   </data>
   <data name="&gt;&gt;ok.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="activityLabel.Text" xml:space="preserve">
     <value>&amp;Session:</value>
@@ -232,10 +207,11 @@
     <value>cancel</value>
   </data>
   <data name="&gt;&gt;activityLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;readGPSUnit.Name" xml:space="preserve">
-    <value>readGPSUnit</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
   </data>
   <data name="activityLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 13</value>
@@ -243,11 +219,8 @@
   <data name="ok.Location" type="System.Drawing.Point, System.Drawing">
     <value>178, 53</value>
   </data>
-  <data name="readGPSUnit.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
   <data name="&gt;&gt;cancel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;activityLabel.Parent" xml:space="preserve">
     <value>$this</value>

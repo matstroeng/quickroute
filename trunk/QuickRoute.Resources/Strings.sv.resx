@@ -884,4 +884,7 @@
   <data name="NoSecondaryColorCoding" xml:space="preserve">
     <value>[ingen andra färg]</value>
   </data>
+  <data name="NotConnected" xml:space="preserve">
+    <value>ej ansluten</value>
+  </data>
 </root>

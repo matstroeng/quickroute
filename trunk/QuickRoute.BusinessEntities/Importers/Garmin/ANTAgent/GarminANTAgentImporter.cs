@@ -30,7 +30,7 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.ANTAgent
       foreach (DirectoryInfo di in baseDir.GetDirectories())
       {
         var antDevice = new ANTDevice(path + di.Name + "\\");
-        foreach(HistoryItem hi in antDevice.HistoryItems)
+        foreach (HistoryItem hi in antDevice.HistoryItems)
         {
           historyItems.Insert(0, hi);
         }
@@ -44,7 +44,7 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.ANTAgent
         DialogResult result = dlg.ShowDialog();
         if (result == DialogResult.OK)
         {
-          itemToImport = (HistoryItem) dlg.SelectedSession;
+          itemToImport = (HistoryItem)dlg.SelectedSession;
         }
         dlg.Dispose();
 
@@ -74,10 +74,12 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.ANTAgent
 
     public bool IsConnected
     {
-      get
-      {
-        return Directory.Exists(path);
-      }
+      get { return Directory.Exists(path); }
+    }
+
+    public bool CachedDataExists
+    {
+      get { return IsConnected; }
     }
 
     public string DeviceName
@@ -88,11 +90,11 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.ANTAgent
       }
     }
 
-      public void Refresh()
-      {
-          // do nothing
-      }
+    public void Refresh()
+    {
+      // do nothing
+    }
 
-      #endregion
+    #endregion
   }
 }

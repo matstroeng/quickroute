@@ -210,6 +210,11 @@ namespace QuickRoute.GPSDeviceReaders.JJConnectRegistratorSEReader
 
         private void CheckPort()
         {
+            if (string.IsNullOrEmpty(_portName))
+            {
+                IsConnected = false;
+                return;
+            }
             try
             {
                 if (_commport.IsOpen)
