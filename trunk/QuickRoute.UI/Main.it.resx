@@ -302,12 +302,6 @@
   <data name="circleTimeRadius.ToolTipText" xml:space="preserve">
     <value>Angolo d'ingresso e uscita dal punto</value>
   </data>
-  <data name="routeAppearanceToolstrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>594, 0</value>
-  </data>
-  <data name="routeAppearanceToolstrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 28</value>
-  </data>
   <data name="toolStripNew.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

@@ -1,15 +1,17 @@
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.UI", "QuickRoute.UI\QuickRoute.UI.csproj", "{953F40A2-9741-4BE8-B42E-59C603700281}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.BusinessEntities", "QuickRoute.BusinessEntities\QuickRoute.BusinessEntities.csproj", "{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "QuickRoute.Setup", "QuickRoute.Setup\QuickRoute.Setup.vdproj", "{FE26B0A5-5071-4175-94F1-4BDC04F27C95}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B64CC9AA-878F-4690-9949-0C5784306CEE}"
 	ProjectSection(SolutionItems) = preProject
 		QuickRoute.UI\todo.txt = QuickRoute.UI\todo.txt
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GPSDeviceReaders", "GPSDeviceReaders", "{8D875711-C954-4A8B-A492-42DD40EA190B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publishers", "Publishers", "{DECE96F3-CCEB-4FDD-A65A-5CB444EF8151}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.UI", "QuickRoute.UI\QuickRoute.UI.csproj", "{953F40A2-9741-4BE8-B42E-59C603700281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.BusinessEntities", "QuickRoute.BusinessEntities\QuickRoute.BusinessEntities.csproj", "{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.Controls", "QuickRoute.Controls\QuickRoute.Controls.csproj", "{D5755345-EE87-4B08-95D7-55DDDB331CFB}"
 EndProject
@@ -17,13 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.PropertyControls
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.Resources", "QuickRoute.Resources\QuickRoute.Resources.csproj", "{2854A1FB-52F7-4197-A24E-E9977FD21563}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GPSDeviceReaders", "GPSDeviceReaders", "{8D875711-C954-4A8B-A492-42DD40EA190B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GarminUSBReader", "GPSDeviceReaders\GarminUSBReader\GarminUSBReader.csproj", "{FFEC4820-9B6B-47E9-8594-B71A52081C1E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolarRS800CXReader", "GPSDeviceReaders\PolarRS800CXReader\PolarRS800CXReader.csproj", "{D3448966-5499-4F7F-8999-6484B27B56C9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publishers", "Publishers", "{DECE96F3-CCEB-4FDD-A65A-5CB444EF8151}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickRoute.Common", "QuickRoute.Common\QuickRoute.Common.csproj", "{7F93415F-ACEB-4B4F-8E6B-51D0B096F38E}"
 EndProject
@@ -34,6 +32,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJConnectRegistratorSEReader", "GPSDeviceReaders\JJConnectRegistratorSEReader\JJConnectRegistratorSEReader.csproj", "{E91D684B-2DD8-4C50-8111-1940BFB427EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialPortDeviceReader", "GPSDeviceReaders\SerialPortDeviceReader\SerialPortDeviceReader.csproj", "{11A24507-A39E-42A2-9662-0416E8A31597}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "QuickRoute.Setup", "QuickRoute.Setup\QuickRoute.Setup.vdproj", "{51A04DBF-5723-4E8E-8F45-DE95A89D0C14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,13 +59,6 @@ Global
 		{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}.Release|x86.ActiveCfg = Release|x86
 		{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}.Release|x86.Build.0 = Release|x86
-		{FE26B0A5-5071-4175-94F1-4BDC04F27C95}.Debug|Any CPU.ActiveCfg = Debug
-		{FE26B0A5-5071-4175-94F1-4BDC04F27C95}.Debug|Any CPU.Build.0 = Debug
-		{FE26B0A5-5071-4175-94F1-4BDC04F27C95}.Debug|x86.ActiveCfg = Debug
-		{FE26B0A5-5071-4175-94F1-4BDC04F27C95}.Release|Any CPU.ActiveCfg = Release
-		{FE26B0A5-5071-4175-94F1-4BDC04F27C95}.Release|Any CPU.Build.0 = Release
-		{FE26B0A5-5071-4175-94F1-4BDC04F27C95}.Release|x86.ActiveCfg = Release
-		{FE26B0A5-5071-4175-94F1-4BDC04F27C95}.Release|x86.Build.0 = Release
 		{D5755345-EE87-4B08-95D7-55DDDB331CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D5755345-EE87-4B08-95D7-55DDDB331CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5755345-EE87-4B08-95D7-55DDDB331CFB}.Debug|x86.ActiveCfg = Debug|x86
@@ -126,19 +119,30 @@ Global
 		{81633CC3-9C5E-4C93-A9A6-876F6AE40883}.Debug|x86.ActiveCfg = Debug|x86
 		{81633CC3-9C5E-4C93-A9A6-876F6AE40883}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81633CC3-9C5E-4C93-A9A6-876F6AE40883}.Release|Any CPU.Build.0 = Release|Any CPU
-		{81633CC3-9C5E-4C93-A9A6-876F6AE40883}.Release|x86.ActiveCfg = Release|Any CPU
+		{81633CC3-9C5E-4C93-A9A6-876F6AE40883}.Release|x86.ActiveCfg = Release|x86
+		{81633CC3-9C5E-4C93-A9A6-876F6AE40883}.Release|x86.Build.0 = Release|x86
 		{E91D684B-2DD8-4C50-8111-1940BFB427EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E91D684B-2DD8-4C50-8111-1940BFB427EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E91D684B-2DD8-4C50-8111-1940BFB427EE}.Debug|x86.ActiveCfg = Debug|x86
 		{E91D684B-2DD8-4C50-8111-1940BFB427EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E91D684B-2DD8-4C50-8111-1940BFB427EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E91D684B-2DD8-4C50-8111-1940BFB427EE}.Release|x86.ActiveCfg = Release|Any CPU
+		{E91D684B-2DD8-4C50-8111-1940BFB427EE}.Release|x86.ActiveCfg = Release|x86
+		{E91D684B-2DD8-4C50-8111-1940BFB427EE}.Release|x86.Build.0 = Release|x86
 		{11A24507-A39E-42A2-9662-0416E8A31597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11A24507-A39E-42A2-9662-0416E8A31597}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11A24507-A39E-42A2-9662-0416E8A31597}.Debug|x86.ActiveCfg = Debug|x86
 		{11A24507-A39E-42A2-9662-0416E8A31597}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11A24507-A39E-42A2-9662-0416E8A31597}.Release|Any CPU.Build.0 = Release|Any CPU
-		{11A24507-A39E-42A2-9662-0416E8A31597}.Release|x86.ActiveCfg = Release|Any CPU
+		{11A24507-A39E-42A2-9662-0416E8A31597}.Release|x86.ActiveCfg = Release|x86
+		{11A24507-A39E-42A2-9662-0416E8A31597}.Release|x86.Build.0 = Release|x86
+		{51A04DBF-5723-4E8E-8F45-DE95A89D0C14}.Debug|Any CPU.ActiveCfg = Debug
+		{51A04DBF-5723-4E8E-8F45-DE95A89D0C14}.Debug|Any CPU.Build.0 = Debug
+		{51A04DBF-5723-4E8E-8F45-DE95A89D0C14}.Debug|x86.ActiveCfg = Debug
+		{51A04DBF-5723-4E8E-8F45-DE95A89D0C14}.Debug|x86.Build.0 = Debug
+		{51A04DBF-5723-4E8E-8F45-DE95A89D0C14}.Release|Any CPU.ActiveCfg = Release
+		{51A04DBF-5723-4E8E-8F45-DE95A89D0C14}.Release|Any CPU.Build.0 = Release
+		{51A04DBF-5723-4E8E-8F45-DE95A89D0C14}.Release|x86.ActiveCfg = Release
+		{51A04DBF-5723-4E8E-8F45-DE95A89D0C14}.Release|x86.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -762,4 +762,16 @@ Du kan laste det ned fra earth.google.com.</value>
   <data name="Print" xml:space="preserve">
     <value>Skriv ut...</value>
   </data>
+  <data name="ImageSize" xml:space="preserve">
+    <value>Bildestørrelse</value>
+  </data>
+  <data name="Pixels" xml:space="preserve">
+    <value>piksler</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Endre</value>
+  </data>
+  <data name="DownloadingImage" xml:space="preserve">
+    <value>Laster ner bilde</value>
+  </data>
 </root>

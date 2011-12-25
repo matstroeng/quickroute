@@ -127,6 +127,25 @@
   <data name="timeLabel.Text" xml:space="preserve">
     <value>&amp;Tid:</value>
   </data>
+  <data name="timeTypeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 13</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="timeTypeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="timeTypeLabel.Text" xml:space="preserve">
+    <value>Tidt&amp;yp:</value>
+  </data>
+  <data name="timeStyle.Items" xml:space="preserve">
+    <value>Klockslag</value>
+  </data>
+  <data name="timeStyle.Items1" xml:space="preserve">
+    <value>Tid från start</value>
+  </data>
+  <data name="timeStyle.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Lägg till mellantid</value>
   </data>

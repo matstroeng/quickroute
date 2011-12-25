@@ -46,13 +46,16 @@ namespace QuickRoute.BusinessEntities
 
     public override bool Equals(object obj)
     {
-      if (typeof(object) != typeof(ParameterizedLocation)) return false;
+      if (!(obj is ParameterizedLocation)) return false;
       return this == (ParameterizedLocation)obj;
     }
 
     public override int GetHashCode()
     {
-      return base.GetHashCode();
+      unchecked
+      {
+        return  (SegmentIndex.GetHashCode() * 397) ^ Value.GetHashCode();
+      }
     }
 
     public static bool operator <(ParameterizedLocation pl0, ParameterizedLocation pl1)

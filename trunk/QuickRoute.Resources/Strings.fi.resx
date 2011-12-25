@@ -722,4 +722,13 @@
   <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
     <value>Ympyräaikojen summa välien lopuissa (rastille tulo): {0}</value>
   </data>
+  <data name="ImageSize" xml:space="preserve">
+    <value>Kuvan koko</value>
+  </data>
+  <data name="Pixels" xml:space="preserve">
+    <value>pikseliä</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Muuta</value>
+  </data>
 </root>

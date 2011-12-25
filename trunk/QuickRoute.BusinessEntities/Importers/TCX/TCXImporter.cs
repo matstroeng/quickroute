@@ -100,12 +100,18 @@ namespace QuickRoute.BusinessEntities.Importers.TCX
                     position.SelectSingleNode("ns:LatitudeDegrees", nsManager).ValueAsDouble);
                 }
                 if (trackpointNodes.Current.SelectSingleNode("ns:AltitudeMeters", nsManager) != null)
-                  waypoint.Altitude =
-                    trackpointNodes.Current.SelectSingleNode("ns:AltitudeMeters", nsManager).ValueAsDouble;
+                {
+                  waypoint.Altitude = trackpointNodes.Current.SelectSingleNode("ns:AltitudeMeters", nsManager).ValueAsDouble;
+                }
                 if (trackpointNodes.Current.SelectSingleNode("ns:HeartRateBpm/ns:Value", nsManager) != null)
-                  waypoint.HeartRate =
-                    trackpointNodes.Current.SelectSingleNode("ns:HeartRateBpm/ns:Value", nsManager).ValueAsDouble;
-
+                {
+                  waypoint.HeartRate = trackpointNodes.Current.SelectSingleNode("ns:HeartRateBpm/ns:Value", nsManager).ValueAsDouble;
+                }
+                if (waypoint.HeartRate == null && routeSegment.LastWaypoint != null)
+                {
+                  // sometimes heart rates are only present at some nodes, so use last valid heart rate
+                  waypoint.HeartRate = routeSegment.LastWaypoint.HeartRate;
+                }
                 // do not add waypoint if it has the same location or time as the previous one
                 if (waypoint.LongLat != null && !waypoint.LongLat.Equals(lastLongLat) && waypoint.Time != lastTime)
                 {
@@ -146,7 +152,7 @@ namespace QuickRoute.BusinessEntities.Importers.TCX
           LapCollection laps = new LapCollection();
           if (lapNodes.MoveNext())
           {
-            DateTime startTime = DateTime.Parse(lapNodes.Current.GetAttribute("StartTime", ""));
+            DateTime startTime = DateTime.Parse(lapNodes.Current.GetAttribute("StartTime", "")).ToUniversalTime();
             double elapsedTime = 0;
             do
             {

@@ -33,8 +33,6 @@ namespace QuickRoute.Controls.Forms
       this.ok = new System.Windows.Forms.Button();
       this.timeLabel = new System.Windows.Forms.Label();
       this.timeTextbox = new System.Windows.Forms.TextBox();
-      this.timeTypeLabel = new System.Windows.Forms.Label();
-      this.timeStyle = new System.Windows.Forms.ComboBox();
       this.SuspendLayout();
       // 
       // cancel
@@ -61,23 +59,8 @@ namespace QuickRoute.Controls.Forms
       // 
       resources.ApplyResources(this.timeTextbox, "timeTextbox");
       this.timeTextbox.Name = "timeTextbox";
-      this.timeTextbox.Leave += new System.EventHandler(this.TimeTextbox_Leave);
       this.timeTextbox.Enter += new System.EventHandler(this.TimeTextbox_Enter);
-      // 
-      // timeTypeLabel
-      // 
-      resources.ApplyResources(this.timeTypeLabel, "timeTypeLabel");
-      this.timeTypeLabel.Name = "timeTypeLabel";
-      // 
-      // timeStyle
-      // 
-      resources.ApplyResources(this.timeStyle, "timeStyle");
-      this.timeStyle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-      this.timeStyle.FormattingEnabled = true;
-      this.timeStyle.Items.AddRange(new object[] {
-            resources.GetString("timeStyle.Items"),
-            resources.GetString("timeStyle.Items1")});
-      this.timeStyle.Name = "timeStyle";
+      this.timeTextbox.Leave += new System.EventHandler(this.TimeTextbox_Leave);
       // 
       // LapTimeForm
       // 
@@ -85,8 +68,6 @@ namespace QuickRoute.Controls.Forms
       resources.ApplyResources(this, "$this");
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.CancelButton = this.cancel;
-      this.Controls.Add(this.timeStyle);
-      this.Controls.Add(this.timeTypeLabel);
       this.Controls.Add(this.timeTextbox);
       this.Controls.Add(this.timeLabel);
       this.Controls.Add(this.cancel);
@@ -108,8 +89,6 @@ namespace QuickRoute.Controls.Forms
     private System.Windows.Forms.Button ok;
     private System.Windows.Forms.Label timeLabel;
     private System.Windows.Forms.TextBox timeTextbox;
-    private System.Windows.Forms.Label timeTypeLabel;
-    private System.Windows.Forms.ComboBox timeStyle;
 
   }
 }

@@ -187,7 +187,7 @@ namespace QuickRoute.BusinessEntities.Exporters
       {
         var x = colorRangeRectangle.Left +
                 (int)
-                ((value - Properties.ColorRangeProperties.ScaleCreator.FirstMarkerValue) /
+                ((value - routeLineSettings.ColorRange.StartValue) /
                  (routeLineSettings.ColorRange.EndValue - routeLineSettings.ColorRange.StartValue) *
                  colorRangeRectangle.Width);
         var p = new Pen(Color.FromArgb(192, Color.Black));
@@ -195,7 +195,7 @@ namespace QuickRoute.BusinessEntities.Exporters
         p.Dispose();
 
         // draw label string, but only if the space is sufficient
-        if (value == Properties.ColorRangeProperties.ScaleCreator.FirstMarkerValue || (x - lastX) > colorRangeScaleLabelMaxSize.Width)
+        if (value == Properties.ColorRangeProperties.ScaleCreator.FirstMarkerValue || x - lastX > colorRangeScaleLabelMaxSize.Width)
         {
           sf.Alignment = StringAlignment.Center;
           sf.LineAlignment = StringAlignment.Near;

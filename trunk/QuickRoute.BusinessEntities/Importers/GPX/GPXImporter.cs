@@ -17,6 +17,8 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
     private string fileName;
     private ImportResult importResult;
 
+    private const string garminTrackPointExtensionsURI = "http://www.garmin.com/xmlschemas/TrackPointExtension/v1";
+
     public ImportResult ImportResult
     {
       get { return importResult; }
@@ -210,7 +212,11 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
                     var lon = (double)wpt.lon;
                     double? heartRate = null;
                     double? altitude = null;
+                    // check for heartrate in SportsTracks extensions
                     if (heartRates.ContainsKey(wpt.time)) heartRate = heartRates[wpt.time];
+                    // check for heartrate in Garmin Trackpoint Extensions
+                    heartRate = GetGarminHeartRateFromWaypoint(wpt) ?? heartRate;
+
                     if (wpt.eleSpecified)
                     {
                       altitude = (double?)wpt.ele;
@@ -346,34 +352,78 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
       }
 
       // import Polar HRM file with same base file name as the gpx file, if existing
-      string hrmFileName = new FileInfo(fileName).FullName.Replace(new FileInfo(fileName).Extension, ".hrm");
-      if(File.Exists(hrmFileName))
+      var extension = new FileInfo(fileName).Extension;
+      if(extension != "") 
       {
-        new PolarHRMImporter().AddLapsAndHRData(hrmFileName, importResult);
+        string hrmFileName = new FileInfo(fileName).FullName.Replace(extension, ".hrm");
+        if(File.Exists(hrmFileName))
+        {
+          new PolarHRMImporter().AddLapsAndHRData(hrmFileName, importResult);
+        }
       }
 
       if (EndWork != null) EndWork(this, new EventArgs());
     }
 
+    private static double? GetGarminHeartRateFromWaypoint(wptType wpt)
+    {
+      if (wpt.extensions != null)
+      {
+        foreach (var element in wpt.extensions.Any)
+        {
+          if (element.NamespaceURI == garminTrackPointExtensionsURI && element.LocalName == "TrackPointExtension")
+          {
+            foreach (XmlNode subElement in element.GetElementsByTagName("hr", garminTrackPointExtensionsURI))
+            {
+              double hr;
+              if (double.TryParse(subElement.InnerText, out hr)) return hr;
+            }
+          }
+        }
+      }
+      return null;
+    }
+
     private static List<DateTime> FilterMapReadings(List<DateTime> mapReadings)
     {
-      mapReadings.Sort();
       var filteredMapReadings = new List<DateTime>();
-      // remove zero-length intervals
       for(var i=0; i<mapReadings.Count; i+=2)
       {
         if (mapReadings[i] < mapReadings[i + 1])
         {
-          filteredMapReadings.Add(mapReadings[i]);
-          filteredMapReadings.Add(mapReadings[i+1]);
-        }
-      }
-      // merge adjacent intervals
-      for (var i = filteredMapReadings.Count - 2; i >= 2; i -= 2)
-      {
-        if(filteredMapReadings[i] == filteredMapReadings[i-1])
-        {
-          filteredMapReadings.RemoveRange(i-1, 2);
+          // only add non-zero-length intervals
+          if (filteredMapReadings.Count == 0 || mapReadings[i] > filteredMapReadings[filteredMapReadings.Count - 1])
+          {
+            // simplest case
+            filteredMapReadings.Add(mapReadings[i]);
+            filteredMapReadings.Add(mapReadings[i + 1]);
+          }
+          else
+          {
+            // tricky case, loop through list
+            // not very efficient, but will happen quite seldom so it should be fine
+            var j = 0;
+            while(j < filteredMapReadings.Count)
+            {
+              if (mapReadings[i] < filteredMapReadings[j])
+              {
+                filteredMapReadings[j] = mapReadings[i];
+              }
+              if(mapReadings[i] <= filteredMapReadings[j+1])
+              {
+                while(mapReadings[i+1] >= filteredMapReadings[j+1])
+                {
+                  filteredMapReadings.RemoveAt(j+1);
+                }
+                if(filteredMapReadings.Count % 2 == 1)
+                {
+                  filteredMapReadings.Insert(j + 1, mapReadings[i + 1]);
+                }
+                break;
+              }
+              j += 2;
+            }
+          }
         }
       }
       return filteredMapReadings;

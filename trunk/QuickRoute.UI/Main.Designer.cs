@@ -57,6 +57,30 @@ namespace QuickRoute.UI
       this.bottomPanel = new System.Windows.Forms.Panel();
       this.lineGraph = new QuickRoute.Controls.LineGraphControl();
       this.momentaneousInfoPanel = new System.Windows.Forms.Panel();
+      this.routeAppearanceToolstrip = new System.Windows.Forms.ToolStrip();
+      this.colorCodingAttributes = new System.Windows.Forms.ToolStripComboBox();
+      this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+      this.colorRangeStartValue = new System.Windows.Forms.ToolStripTextBox();
+      this.colorRangeIntervalSlider = new QuickRoute.Controls.ToolstripColorRangeIntervalSlider();
+      this.colorRangeEndValue = new System.Windows.Forms.ToolStripTextBox();
+      this.colorRangeIntervalButton = new System.Windows.Forms.ToolStripButton();
+      this.toolStripAutoAdjustColorRangeInterval = new System.Windows.Forms.ToolStripButton();
+      this.gradientAlphaAdjustment = new QuickRoute.Controls.ToolstripTrackBar();
+      this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+      this.routeLineWidthLabel = new System.Windows.Forms.ToolStripLabel();
+      this.routeLineWidth = new QuickRoute.Controls.ToolstripNumericUpDown();
+      this.routeLineMaskVisible = new System.Windows.Forms.ToolStripButton();
+      this.routeLineMaskWidth = new QuickRoute.Controls.ToolstripNumericUpDown();
+      this.routeLineMaskColorButton = new System.Windows.Forms.ToolStripButton();
+      this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+      this.secondaryColorCodingAttributeLabel = new System.Windows.Forms.ToolStripLabel();
+      this.secondaryColorCodingAttributes = new System.Windows.Forms.ToolStripComboBox();
+      this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+      this.smoothingIntervalLengthLabel = new System.Windows.Forms.ToolStripLabel();
+      this.smoothingIntervalLength = new System.Windows.Forms.ToolStripTextBox();
+      this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+      this.circleTimeRadiusLabel = new System.Windows.Forms.ToolStripLabel();
+      this.circleTimeRadius = new System.Windows.Forms.ToolStripTextBox();
       this.toolStrip = new System.Windows.Forms.ToolStrip();
       this.toolStripNew = new System.Windows.Forms.ToolStripButton();
       this.toolStripOpen = new System.Windows.Forms.ToolStripButton();
@@ -85,30 +109,6 @@ namespace QuickRoute.UI
       this.toolStripApplicationSettings = new System.Windows.Forms.ToolStripButton();
       this.tstSeparator5 = new System.Windows.Forms.ToolStripSeparator();
       this.toolStripDonate = new System.Windows.Forms.ToolStripButton();
-      this.routeAppearanceToolstrip = new System.Windows.Forms.ToolStrip();
-      this.colorCodingAttributes = new System.Windows.Forms.ToolStripComboBox();
-      this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-      this.colorRangeStartValue = new System.Windows.Forms.ToolStripTextBox();
-      this.colorRangeIntervalSlider = new QuickRoute.Controls.ToolstripColorRangeIntervalSlider();
-      this.colorRangeEndValue = new System.Windows.Forms.ToolStripTextBox();
-      this.colorRangeIntervalButton = new System.Windows.Forms.ToolStripButton();
-      this.toolStripAutoAdjustColorRangeInterval = new System.Windows.Forms.ToolStripButton();
-      this.gradientAlphaAdjustment = new QuickRoute.Controls.ToolstripTrackBar();
-      this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-      this.routeLineWidthLabel = new System.Windows.Forms.ToolStripLabel();
-      this.routeLineWidth = new QuickRoute.Controls.ToolstripNumericUpDown();
-      this.routeLineMaskVisible = new System.Windows.Forms.ToolStripButton();
-      this.routeLineMaskWidth = new QuickRoute.Controls.ToolstripNumericUpDown();
-      this.routeLineMaskColorButton = new System.Windows.Forms.ToolStripButton();
-      this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-      this.secondaryColorCodingAttributeLabel = new System.Windows.Forms.ToolStripLabel();
-      this.secondaryColorCodingAttributes = new System.Windows.Forms.ToolStripComboBox();
-      this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-      this.smoothingIntervalLengthLabel = new System.Windows.Forms.ToolStripLabel();
-      this.smoothingIntervalLength = new System.Windows.Forms.ToolStripTextBox();
-      this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-      this.circleTimeRadiusLabel = new System.Windows.Forms.ToolStripLabel();
-      this.circleTimeRadius = new System.Windows.Forms.ToolStripTextBox();
       this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
       this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
       this.menuStrip = new System.Windows.Forms.MenuStrip();
@@ -157,8 +157,8 @@ namespace QuickRoute.UI
       this.lapHistogramContainerPanel.SuspendLayout();
       this.lapHistogramToolstrip.SuspendLayout();
       this.bottomPanel.SuspendLayout();
-      this.toolStrip.SuspendLayout();
       this.routeAppearanceToolstrip.SuspendLayout();
+      this.toolStrip.SuspendLayout();
       this.menuStrip.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -183,8 +183,8 @@ namespace QuickRoute.UI
       // 
       // toolStripContainer1.TopToolStripPanel
       // 
-      this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.routeAppearanceToolstrip);
       this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip);
+      this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.routeAppearanceToolstrip);
       // 
       // canvas
       // 
@@ -195,8 +195,8 @@ namespace QuickRoute.UI
       this.canvas.CurrentSession = null;
       resources.ApplyResources(this.canvas, "canvas");
       this.canvas.Document = null;
-      this.canvas.MaxZoom = 2;
-      this.canvas.MinZoom = 0.25;
+      this.canvas.MaxZoom = 2D;
+      this.canvas.MinZoom = 0.25D;
       this.canvas.Name = "canvas";
       this.canvas.PreventRedraw = false;
       this.canvas.RouteDrawingMode = QuickRoute.BusinessEntities.Document.RouteDrawingMode.Extended;
@@ -204,15 +204,15 @@ namespace QuickRoute.UI
       this.canvas.SecondaryColorCodingAttribute = null;
       this.canvas.SelectedSessions = null;
       this.canvas.SessionsToDraw = QuickRoute.Controls.Canvas.SessionDrawingMode.Selected;
-      this.canvas.Zoom = 1;
+      this.canvas.Zoom = 1D;
       this.canvas.DocumentChanged += new System.EventHandler<System.EventArgs>(this.canvas_DocumentChanged);
-      this.canvas.CurrentSessionChanged += new System.EventHandler<System.EventArgs>(this.canvas_CurrentSessionChanged);
-      this.canvas.DragDrop += new System.Windows.Forms.DragEventHandler(this.canvas_DragDrop);
-      this.canvas.DragEnter += new System.Windows.Forms.DragEventHandler(this.canvas_DragEnter);
       this.canvas.BeforeZoomChanged += new System.EventHandler<System.EventArgs>(this.canvas_BeforeZoomChanged);
       this.canvas.AfterZoomChanged += new System.EventHandler<System.EventArgs>(this.canvas_AfterZoomChanged);
-      this.canvas.ActionPerformed += new System.EventHandler<QuickRoute.Controls.Canvas.ActionEventArgs>(this.canvas_ActionPerformed);
       this.canvas.RouteMouseHover += new System.EventHandler<QuickRoute.Controls.Canvas.RouteMouseHoverEventArgs>(this.canvas_RouteMouseHover);
+      this.canvas.CurrentSessionChanged += new System.EventHandler<System.EventArgs>(this.canvas_CurrentSessionChanged);
+      this.canvas.ActionPerformed += new System.EventHandler<QuickRoute.Controls.Canvas.ActionEventArgs>(this.canvas_ActionPerformed);
+      this.canvas.DragDrop += new System.Windows.Forms.DragEventHandler(this.canvas_DragDrop);
+      this.canvas.DragEnter += new System.Windows.Forms.DragEventHandler(this.canvas_DragEnter);
       this.canvas.MouseLeave += new System.EventHandler(this.canvas_MouseLeave);
       // 
       // dynamicHelpLabel
@@ -273,15 +273,15 @@ namespace QuickRoute.UI
       this.laps.RowHeadersVisible = false;
       this.laps.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
       this.laps.VirtualMode = true;
-      this.laps.MouseDown += new System.Windows.Forms.MouseEventHandler(this.laps_MouseDown);
-      this.laps.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.laps_CellMouseLeave);
-      this.laps.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.laps_ColumnHeaderMouseClick);
-      this.laps.CellValueNeeded += new System.Windows.Forms.DataGridViewCellValueEventHandler(this.laps_CellValueNeeded);
       this.laps.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.laps_CellFormatting);
       this.laps.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.laps_CellMouseEnter);
+      this.laps.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.laps_CellMouseLeave);
       this.laps.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.laps_CellToolTipTextNeeded);
-      this.laps.KeyDown += new System.Windows.Forms.KeyEventHandler(this.laps_KeyDown);
+      this.laps.CellValueNeeded += new System.Windows.Forms.DataGridViewCellValueEventHandler(this.laps_CellValueNeeded);
+      this.laps.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.laps_ColumnHeaderMouseClick);
       this.laps.SelectionChanged += new System.EventHandler(this.laps_SelectionChanged);
+      this.laps.KeyDown += new System.Windows.Forms.KeyEventHandler(this.laps_KeyDown);
+      this.laps.MouseDown += new System.Windows.Forms.MouseEventHandler(this.laps_MouseDown);
       // 
       // lapsLabel
       // 
@@ -308,8 +308,8 @@ namespace QuickRoute.UI
       this.sessions.FormattingEnabled = true;
       this.sessions.MultiColumn = true;
       this.sessions.Name = "sessions";
-      this.sessions.SelectedIndexChanged += new System.EventHandler(this.sessions_SelectedIndexChanged);
       this.sessions.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.sessions_ItemCheck);
+      this.sessions.SelectedIndexChanged += new System.EventHandler(this.sessions_SelectedIndexChanged);
       // 
       // rightPanelBottomSplitter
       // 
@@ -389,22 +389,22 @@ namespace QuickRoute.UI
       lineGraph1.StartPL = null;
       lineGraph1.XAxisAttribute = QuickRoute.BusinessEntities.DomainAttribute.TimeOfDay;
       lineGraph1.XAxisCaption = null;
-      lineGraph1.XAxisMaxValue = 0;
-      lineGraph1.XAxisMinValue = 0;
+      lineGraph1.XAxisMaxValue = 0D;
+      lineGraph1.XAxisMinValue = 0D;
       lineGraph1.XAxisNumericConverter = null;
       lineGraph1.XAxisScaleCreator = null;
       lineGraph1.YAxisAttribute = QuickRoute.BusinessEntities.WaypointAttribute.Pace;
       lineGraph1.YAxisCaption = null;
-      lineGraph1.YAxisMaxValue = 0;
-      lineGraph1.YAxisMinValue = 0;
+      lineGraph1.YAxisMaxValue = 0D;
+      lineGraph1.YAxisMinValue = 0D;
       lineGraph1.YAxisNumericConverter = null;
       lineGraph1.YAxisScaleCreator = null;
       this.lineGraph.Graph = lineGraph1;
       this.lineGraph.HoverXValue = null;
       this.lineGraph.Name = "lineGraph";
-      this.lineGraph.MouseLeave += new System.EventHandler(this.lineGraph_MouseLeave);
-      this.lineGraph.GraphMouseDown += new System.EventHandler<QuickRoute.Controls.Canvas.RouteMouseHoverEventArgs>(this.lineGraph_GraphMouseDown);
       this.lineGraph.GraphMouseHover += new System.EventHandler<QuickRoute.Controls.Canvas.RouteMouseHoverEventArgs>(this.lineGraph_GraphMouseHover);
+      this.lineGraph.GraphMouseDown += new System.EventHandler<QuickRoute.Controls.Canvas.RouteMouseHoverEventArgs>(this.lineGraph_GraphMouseDown);
+      this.lineGraph.MouseLeave += new System.EventHandler(this.lineGraph_MouseLeave);
       // 
       // momentaneousInfoPanel
       // 
@@ -413,6 +413,193 @@ namespace QuickRoute.UI
       this.momentaneousInfoPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.momentaneousInfoPanel_Paint);
       this.momentaneousInfoPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.momentaneousInfoPanel_MouseClick);
       this.momentaneousInfoPanel.Resize += new System.EventHandler(this.momentaneousInfoPanel_Resize);
+      // 
+      // routeAppearanceToolstrip
+      // 
+      resources.ApplyResources(this.routeAppearanceToolstrip, "routeAppearanceToolstrip");
+      this.routeAppearanceToolstrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.colorCodingAttributes,
+            this.toolStripSeparator1,
+            this.colorRangeStartValue,
+            this.colorRangeIntervalSlider,
+            this.colorRangeEndValue,
+            this.colorRangeIntervalButton,
+            this.toolStripAutoAdjustColorRangeInterval,
+            this.gradientAlphaAdjustment,
+            this.toolStripSeparator2,
+            this.routeLineWidthLabel,
+            this.routeLineWidth,
+            this.routeLineMaskVisible,
+            this.routeLineMaskWidth,
+            this.routeLineMaskColorButton,
+            this.toolStripSeparator9,
+            this.secondaryColorCodingAttributeLabel,
+            this.secondaryColorCodingAttributes,
+            this.toolStripSeparator5,
+            this.smoothingIntervalLengthLabel,
+            this.smoothingIntervalLength,
+            this.toolStripSeparator4,
+            this.circleTimeRadiusLabel,
+            this.circleTimeRadius});
+      this.routeAppearanceToolstrip.Name = "routeAppearanceToolstrip";
+      // 
+      // colorCodingAttributes
+      // 
+      this.colorCodingAttributes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+      this.colorCodingAttributes.Name = "colorCodingAttributes";
+      resources.ApplyResources(this.colorCodingAttributes, "colorCodingAttributes");
+      this.colorCodingAttributes.SelectedIndexChanged += new System.EventHandler(this.colorCodingAttributes_SelectedIndexChanged);
+      // 
+      // toolStripSeparator1
+      // 
+      this.toolStripSeparator1.Name = "toolStripSeparator1";
+      resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+      // 
+      // colorRangeStartValue
+      // 
+      this.colorRangeStartValue.Name = "colorRangeStartValue";
+      resources.ApplyResources(this.colorRangeStartValue, "colorRangeStartValue");
+      this.colorRangeStartValue.Leave += new System.EventHandler(this.colorRangeStartValue_Leave);
+      this.colorRangeStartValue.KeyDown += new System.Windows.Forms.KeyEventHandler(this.colorRangeStartValue_KeyDown);
+      // 
+      // colorRangeIntervalSlider
+      // 
+      resources.ApplyResources(this.colorRangeIntervalSlider, "colorRangeIntervalSlider");
+      this.colorRangeIntervalSlider.BackColor = System.Drawing.SystemColors.Control;
+      this.colorRangeIntervalSlider.Name = "colorRangeIntervalSlider";
+      this.colorRangeIntervalSlider.ColorRangeStartValueChanged += new System.EventHandler(this.colorRangeIntervalSlider_ColorRangeStartValueChanged);
+      this.colorRangeIntervalSlider.ColorRangeEndValueChanged += new System.EventHandler(this.colorRangeIntervalSlider_ColorRangeEndValueChanged);
+      this.colorRangeIntervalSlider.ColorRangeStartValueChanging += new System.EventHandler(this.colorRangeIntervalSlider_ColorRangeStartValueChanging);
+      this.colorRangeIntervalSlider.ColorRangeEndValueChanging += new System.EventHandler(this.colorRangeIntervalSlider_ColorRangeEndValueChanging);
+      this.colorRangeIntervalSlider.ColorRangeClicked += new System.Windows.Forms.MouseEventHandler(this.colorRangeIntervalSlider_ColorRangeClicked);
+      // 
+      // colorRangeEndValue
+      // 
+      this.colorRangeEndValue.Name = "colorRangeEndValue";
+      resources.ApplyResources(this.colorRangeEndValue, "colorRangeEndValue");
+      this.colorRangeEndValue.Leave += new System.EventHandler(this.colorRangeEndValue_Leave);
+      this.colorRangeEndValue.KeyDown += new System.Windows.Forms.KeyEventHandler(this.colorRangeEndValue_KeyDown);
+      // 
+      // colorRangeIntervalButton
+      // 
+      this.colorRangeIntervalButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      resources.ApplyResources(this.colorRangeIntervalButton, "colorRangeIntervalButton");
+      this.colorRangeIntervalButton.Name = "colorRangeIntervalButton";
+      this.colorRangeIntervalButton.Click += new System.EventHandler(this.colorRangeIntervalButton_Click);
+      // 
+      // toolStripAutoAdjustColorRangeInterval
+      // 
+      this.toolStripAutoAdjustColorRangeInterval.CheckOnClick = true;
+      this.toolStripAutoAdjustColorRangeInterval.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      resources.ApplyResources(this.toolStripAutoAdjustColorRangeInterval, "toolStripAutoAdjustColorRangeInterval");
+      this.toolStripAutoAdjustColorRangeInterval.Name = "toolStripAutoAdjustColorRangeInterval";
+      this.toolStripAutoAdjustColorRangeInterval.CheckedChanged += new System.EventHandler(this.toolStripAutoAdjustColorRangeInterval_CheckedChanged);
+      // 
+      // gradientAlphaAdjustment
+      // 
+      resources.ApplyResources(this.gradientAlphaAdjustment, "gradientAlphaAdjustment");
+      this.gradientAlphaAdjustment.Name = "gradientAlphaAdjustment";
+      this.gradientAlphaAdjustment.ValueChanged += new System.EventHandler(this.gradientAlphaAdjustment_ValueChanged);
+      this.gradientAlphaAdjustment.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gradientAlphaAdjustment_MouseDown);
+      this.gradientAlphaAdjustment.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gradientAlphaAdjustment_MouseUp);
+      // 
+      // toolStripSeparator2
+      // 
+      this.toolStripSeparator2.Name = "toolStripSeparator2";
+      resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+      // 
+      // routeLineWidthLabel
+      // 
+      this.routeLineWidthLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      resources.ApplyResources(this.routeLineWidthLabel, "routeLineWidthLabel");
+      this.routeLineWidthLabel.Margin = new System.Windows.Forms.Padding(1, 1, 2, 2);
+      this.routeLineWidthLabel.Name = "routeLineWidthLabel";
+      // 
+      // routeLineWidth
+      // 
+      resources.ApplyResources(this.routeLineWidth, "routeLineWidth");
+      this.routeLineWidth.Name = "routeLineWidth";
+      this.routeLineWidth.ValueChanged += new System.EventHandler(this.routeLineWidth_ValueChanged);
+      this.routeLineWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.routeLineWidth_KeyDown);
+      // 
+      // routeLineMaskVisible
+      // 
+      this.routeLineMaskVisible.CheckOnClick = true;
+      this.routeLineMaskVisible.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      resources.ApplyResources(this.routeLineMaskVisible, "routeLineMaskVisible");
+      this.routeLineMaskVisible.Name = "routeLineMaskVisible";
+      this.routeLineMaskVisible.CheckedChanged += new System.EventHandler(this.routeLineMaskVisible_CheckedChanged);
+      // 
+      // routeLineMaskWidth
+      // 
+      resources.ApplyResources(this.routeLineMaskWidth, "routeLineMaskWidth");
+      this.routeLineMaskWidth.Name = "routeLineMaskWidth";
+      this.routeLineMaskWidth.ValueChanged += new System.EventHandler(this.routeLineMaskWidth_ValueChanged);
+      this.routeLineMaskWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.routeLineMaskWidth_KeyDown);
+      // 
+      // routeLineMaskColorButton
+      // 
+      this.routeLineMaskColorButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      resources.ApplyResources(this.routeLineMaskColorButton, "routeLineMaskColorButton");
+      this.routeLineMaskColorButton.Name = "routeLineMaskColorButton";
+      this.routeLineMaskColorButton.Click += new System.EventHandler(this.routeLineMaskColorButton_Click);
+      // 
+      // toolStripSeparator9
+      // 
+      this.toolStripSeparator9.Name = "toolStripSeparator9";
+      resources.ApplyResources(this.toolStripSeparator9, "toolStripSeparator9");
+      // 
+      // secondaryColorCodingAttributeLabel
+      // 
+      this.secondaryColorCodingAttributeLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      resources.ApplyResources(this.secondaryColorCodingAttributeLabel, "secondaryColorCodingAttributeLabel");
+      this.secondaryColorCodingAttributeLabel.Margin = new System.Windows.Forms.Padding(1, 1, 2, 2);
+      this.secondaryColorCodingAttributeLabel.Name = "secondaryColorCodingAttributeLabel";
+      // 
+      // secondaryColorCodingAttributes
+      // 
+      this.secondaryColorCodingAttributes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+      this.secondaryColorCodingAttributes.Name = "secondaryColorCodingAttributes";
+      resources.ApplyResources(this.secondaryColorCodingAttributes, "secondaryColorCodingAttributes");
+      this.secondaryColorCodingAttributes.SelectedIndexChanged += new System.EventHandler(this.secondaryColorCodingAttributes_SelectedIndexChanged);
+      // 
+      // toolStripSeparator5
+      // 
+      this.toolStripSeparator5.Name = "toolStripSeparator5";
+      resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
+      // 
+      // smoothingIntervalLengthLabel
+      // 
+      this.smoothingIntervalLengthLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      resources.ApplyResources(this.smoothingIntervalLengthLabel, "smoothingIntervalLengthLabel");
+      this.smoothingIntervalLengthLabel.Margin = new System.Windows.Forms.Padding(1, 1, 2, 2);
+      this.smoothingIntervalLengthLabel.Name = "smoothingIntervalLengthLabel";
+      // 
+      // smoothingIntervalLength
+      // 
+      this.smoothingIntervalLength.Name = "smoothingIntervalLength";
+      resources.ApplyResources(this.smoothingIntervalLength, "smoothingIntervalLength");
+      this.smoothingIntervalLength.Leave += new System.EventHandler(this.smoothingIntervalLength_Leave);
+      this.smoothingIntervalLength.KeyDown += new System.Windows.Forms.KeyEventHandler(this.smoothingIntervalLength_KeyDown);
+      // 
+      // toolStripSeparator4
+      // 
+      this.toolStripSeparator4.Name = "toolStripSeparator4";
+      resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
+      // 
+      // circleTimeRadiusLabel
+      // 
+      this.circleTimeRadiusLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      resources.ApplyResources(this.circleTimeRadiusLabel, "circleTimeRadiusLabel");
+      this.circleTimeRadiusLabel.Margin = new System.Windows.Forms.Padding(1, 1, 2, 2);
+      this.circleTimeRadiusLabel.Name = "circleTimeRadiusLabel";
+      // 
+      // circleTimeRadius
+      // 
+      this.circleTimeRadius.Name = "circleTimeRadius";
+      resources.ApplyResources(this.circleTimeRadius, "circleTimeRadius");
+      this.circleTimeRadius.Leave += new System.EventHandler(this.circleTimeRadius_Leave);
+      this.circleTimeRadius.KeyDown += new System.Windows.Forms.KeyEventHandler(this.circleTimeRadius_KeyDown);
       // 
       // toolStrip
       // 
@@ -639,193 +826,6 @@ namespace QuickRoute.UI
       this.toolStripDonate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
       this.toolStripDonate.Name = "toolStripDonate";
       this.toolStripDonate.Click += new System.EventHandler(this.toolStripDonate_Click);
-      // 
-      // routeAppearanceToolstrip
-      // 
-      resources.ApplyResources(this.routeAppearanceToolstrip, "routeAppearanceToolstrip");
-      this.routeAppearanceToolstrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.colorCodingAttributes,
-            this.toolStripSeparator1,
-            this.colorRangeStartValue,
-            this.colorRangeIntervalSlider,
-            this.colorRangeEndValue,
-            this.colorRangeIntervalButton,
-            this.toolStripAutoAdjustColorRangeInterval,
-            this.gradientAlphaAdjustment,
-            this.toolStripSeparator2,
-            this.routeLineWidthLabel,
-            this.routeLineWidth,
-            this.routeLineMaskVisible,
-            this.routeLineMaskWidth,
-            this.routeLineMaskColorButton,
-            this.toolStripSeparator9,
-            this.secondaryColorCodingAttributeLabel,
-            this.secondaryColorCodingAttributes,
-            this.toolStripSeparator5,
-            this.smoothingIntervalLengthLabel,
-            this.smoothingIntervalLength,
-            this.toolStripSeparator4,
-            this.circleTimeRadiusLabel,
-            this.circleTimeRadius});
-      this.routeAppearanceToolstrip.Name = "routeAppearanceToolstrip";
-      // 
-      // colorCodingAttributes
-      // 
-      this.colorCodingAttributes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-      this.colorCodingAttributes.Name = "colorCodingAttributes";
-      resources.ApplyResources(this.colorCodingAttributes, "colorCodingAttributes");
-      this.colorCodingAttributes.SelectedIndexChanged += new System.EventHandler(this.colorCodingAttributes_SelectedIndexChanged);
-      // 
-      // toolStripSeparator1
-      // 
-      this.toolStripSeparator1.Name = "toolStripSeparator1";
-      resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-      // 
-      // colorRangeStartValue
-      // 
-      this.colorRangeStartValue.Name = "colorRangeStartValue";
-      resources.ApplyResources(this.colorRangeStartValue, "colorRangeStartValue");
-      this.colorRangeStartValue.Leave += new System.EventHandler(this.colorRangeStartValue_Leave);
-      this.colorRangeStartValue.KeyDown += new System.Windows.Forms.KeyEventHandler(this.colorRangeStartValue_KeyDown);
-      // 
-      // colorRangeIntervalSlider
-      // 
-      resources.ApplyResources(this.colorRangeIntervalSlider, "colorRangeIntervalSlider");
-      this.colorRangeIntervalSlider.BackColor = System.Drawing.SystemColors.Control;
-      this.colorRangeIntervalSlider.Name = "colorRangeIntervalSlider";
-      this.colorRangeIntervalSlider.ColorRangeStartValueChanged += new System.EventHandler(this.colorRangeIntervalSlider_ColorRangeStartValueChanged);
-      this.colorRangeIntervalSlider.ColorRangeEndValueChanged += new System.EventHandler(this.colorRangeIntervalSlider_ColorRangeEndValueChanged);
-      this.colorRangeIntervalSlider.ColorRangeClicked += new System.Windows.Forms.MouseEventHandler(this.colorRangeIntervalSlider_ColorRangeClicked);
-      this.colorRangeIntervalSlider.ColorRangeStartValueChanging += new System.EventHandler(this.colorRangeIntervalSlider_ColorRangeStartValueChanging);
-      this.colorRangeIntervalSlider.ColorRangeEndValueChanging += new System.EventHandler(this.colorRangeIntervalSlider_ColorRangeEndValueChanging);
-      // 
-      // colorRangeEndValue
-      // 
-      this.colorRangeEndValue.Name = "colorRangeEndValue";
-      resources.ApplyResources(this.colorRangeEndValue, "colorRangeEndValue");
-      this.colorRangeEndValue.Leave += new System.EventHandler(this.colorRangeEndValue_Leave);
-      this.colorRangeEndValue.KeyDown += new System.Windows.Forms.KeyEventHandler(this.colorRangeEndValue_KeyDown);
-      // 
-      // colorRangeIntervalButton
-      // 
-      this.colorRangeIntervalButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      resources.ApplyResources(this.colorRangeIntervalButton, "colorRangeIntervalButton");
-      this.colorRangeIntervalButton.Name = "colorRangeIntervalButton";
-      this.colorRangeIntervalButton.Click += new System.EventHandler(this.colorRangeIntervalButton_Click);
-      // 
-      // toolStripAutoAdjustColorRangeInterval
-      // 
-      this.toolStripAutoAdjustColorRangeInterval.CheckOnClick = true;
-      this.toolStripAutoAdjustColorRangeInterval.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      resources.ApplyResources(this.toolStripAutoAdjustColorRangeInterval, "toolStripAutoAdjustColorRangeInterval");
-      this.toolStripAutoAdjustColorRangeInterval.Name = "toolStripAutoAdjustColorRangeInterval";
-      this.toolStripAutoAdjustColorRangeInterval.CheckedChanged += new System.EventHandler(this.toolStripAutoAdjustColorRangeInterval_CheckedChanged);
-      // 
-      // gradientAlphaAdjustment
-      // 
-      resources.ApplyResources(this.gradientAlphaAdjustment, "gradientAlphaAdjustment");
-      this.gradientAlphaAdjustment.Name = "gradientAlphaAdjustment";
-      this.gradientAlphaAdjustment.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gradientAlphaAdjustment_MouseDown);
-      this.gradientAlphaAdjustment.ValueChanged += new System.EventHandler(this.gradientAlphaAdjustment_ValueChanged);
-      this.gradientAlphaAdjustment.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gradientAlphaAdjustment_MouseUp);
-      // 
-      // toolStripSeparator2
-      // 
-      this.toolStripSeparator2.Name = "toolStripSeparator2";
-      resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-      // 
-      // routeLineWidthLabel
-      // 
-      this.routeLineWidthLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      resources.ApplyResources(this.routeLineWidthLabel, "routeLineWidthLabel");
-      this.routeLineWidthLabel.Margin = new System.Windows.Forms.Padding(1, 1, 2, 2);
-      this.routeLineWidthLabel.Name = "routeLineWidthLabel";
-      // 
-      // routeLineWidth
-      // 
-      resources.ApplyResources(this.routeLineWidth, "routeLineWidth");
-      this.routeLineWidth.Name = "routeLineWidth";
-      this.routeLineWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.routeLineWidth_KeyDown);
-      this.routeLineWidth.ValueChanged += new System.EventHandler(this.routeLineWidth_ValueChanged);
-      // 
-      // routeLineMaskVisible
-      // 
-      this.routeLineMaskVisible.CheckOnClick = true;
-      this.routeLineMaskVisible.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      resources.ApplyResources(this.routeLineMaskVisible, "routeLineMaskVisible");
-      this.routeLineMaskVisible.Name = "routeLineMaskVisible";
-      this.routeLineMaskVisible.CheckedChanged += new System.EventHandler(this.routeLineMaskVisible_CheckedChanged);
-      // 
-      // routeLineMaskWidth
-      // 
-      resources.ApplyResources(this.routeLineMaskWidth, "routeLineMaskWidth");
-      this.routeLineMaskWidth.Name = "routeLineMaskWidth";
-      this.routeLineMaskWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.routeLineMaskWidth_KeyDown);
-      this.routeLineMaskWidth.ValueChanged += new System.EventHandler(this.routeLineMaskWidth_ValueChanged);
-      // 
-      // routeLineMaskColorButton
-      // 
-      this.routeLineMaskColorButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      resources.ApplyResources(this.routeLineMaskColorButton, "routeLineMaskColorButton");
-      this.routeLineMaskColorButton.Name = "routeLineMaskColorButton";
-      this.routeLineMaskColorButton.Click += new System.EventHandler(this.routeLineMaskColorButton_Click);
-      // 
-      // toolStripSeparator9
-      // 
-      this.toolStripSeparator9.Name = "toolStripSeparator9";
-      resources.ApplyResources(this.toolStripSeparator9, "toolStripSeparator9");
-      // 
-      // secondaryColorCodingAttributeLabel
-      // 
-      this.secondaryColorCodingAttributeLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      resources.ApplyResources(this.secondaryColorCodingAttributeLabel, "secondaryColorCodingAttributeLabel");
-      this.secondaryColorCodingAttributeLabel.Margin = new System.Windows.Forms.Padding(1, 1, 2, 2);
-      this.secondaryColorCodingAttributeLabel.Name = "secondaryColorCodingAttributeLabel";
-      // 
-      // secondaryColorCodingAttributes
-      // 
-      this.secondaryColorCodingAttributes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-      this.secondaryColorCodingAttributes.Name = "secondaryColorCodingAttributes";
-      resources.ApplyResources(this.secondaryColorCodingAttributes, "secondaryColorCodingAttributes");
-      this.secondaryColorCodingAttributes.SelectedIndexChanged += new System.EventHandler(this.secondaryColorCodingAttributes_SelectedIndexChanged);
-      // 
-      // toolStripSeparator5
-      // 
-      this.toolStripSeparator5.Name = "toolStripSeparator5";
-      resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
-      // 
-      // smoothingIntervalLengthLabel
-      // 
-      this.smoothingIntervalLengthLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      resources.ApplyResources(this.smoothingIntervalLengthLabel, "smoothingIntervalLengthLabel");
-      this.smoothingIntervalLengthLabel.Margin = new System.Windows.Forms.Padding(1, 1, 2, 2);
-      this.smoothingIntervalLengthLabel.Name = "smoothingIntervalLengthLabel";
-      // 
-      // smoothingIntervalLength
-      // 
-      this.smoothingIntervalLength.Name = "smoothingIntervalLength";
-      resources.ApplyResources(this.smoothingIntervalLength, "smoothingIntervalLength");
-      this.smoothingIntervalLength.Leave += new System.EventHandler(this.smoothingIntervalLength_Leave);
-      this.smoothingIntervalLength.KeyDown += new System.Windows.Forms.KeyEventHandler(this.smoothingIntervalLength_KeyDown);
-      // 
-      // toolStripSeparator4
-      // 
-      this.toolStripSeparator4.Name = "toolStripSeparator4";
-      resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
-      // 
-      // circleTimeRadiusLabel
-      // 
-      this.circleTimeRadiusLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-      resources.ApplyResources(this.circleTimeRadiusLabel, "circleTimeRadiusLabel");
-      this.circleTimeRadiusLabel.Margin = new System.Windows.Forms.Padding(1, 1, 2, 2);
-      this.circleTimeRadiusLabel.Name = "circleTimeRadiusLabel";
-      // 
-      // circleTimeRadius
-      // 
-      this.circleTimeRadius.Name = "circleTimeRadius";
-      resources.ApplyResources(this.circleTimeRadius, "circleTimeRadius");
-      this.circleTimeRadius.Leave += new System.EventHandler(this.circleTimeRadius_Leave);
-      this.circleTimeRadius.KeyDown += new System.Windows.Forms.KeyEventHandler(this.circleTimeRadius_KeyDown);
       // 
       // toolStripSeparator12
       // 
@@ -1098,10 +1098,10 @@ namespace QuickRoute.UI
       this.KeyPreview = true;
       this.MainMenuStrip = this.menuStrip;
       this.Name = "Main";
-      this.Load += new System.EventHandler(this.Main_Load);
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
-      this.Resize += new System.EventHandler(this.Main_Resize);
+      this.Load += new System.EventHandler(this.Main_Load);
       this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
+      this.Resize += new System.EventHandler(this.Main_Resize);
       this.toolStripContainer1.ContentPanel.ResumeLayout(false);
       this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
       this.toolStripContainer1.TopToolStripPanel.PerformLayout();
@@ -1116,10 +1116,10 @@ namespace QuickRoute.UI
       this.lapHistogramToolstrip.ResumeLayout(false);
       this.lapHistogramToolstrip.PerformLayout();
       this.bottomPanel.ResumeLayout(false);
-      this.toolStrip.ResumeLayout(false);
-      this.toolStrip.PerformLayout();
       this.routeAppearanceToolstrip.ResumeLayout(false);
       this.routeAppearanceToolstrip.PerformLayout();
+      this.toolStrip.ResumeLayout(false);
+      this.toolStrip.PerformLayout();
       this.menuStrip.ResumeLayout(false);
       this.menuStrip.PerformLayout();
       this.ResumeLayout(false);

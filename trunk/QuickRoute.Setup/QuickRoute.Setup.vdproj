@@ -15,20 +15,20 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_250B3CD010F2EB5E9E131519A6E190BC"
-        "OwnerKey" = "8:_ADA51EE56BC5965003A3F6CC3D316FAD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_250B3CD010F2EB5E9E131519A6E190BC"
+        "MsmKey" = "8:_00CF4D4FCF8692A97D428B936DC54A8C"
         "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_250B3CD010F2EB5E9E131519A6E190BC"
-        "OwnerKey" = "8:_C69A250CD098D02247B046598CC1BB91"
+        "MsmKey" = "8:_00CF4D4FCF8692A97D428B936DC54A8C"
+        "OwnerKey" = "8:_D1223866EC02BEE2C59EE3F6FD3DB0E6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_28421C10A9C6FD027207E0F161C17FD2"
+        "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -39,68 +39,80 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4DCA4C3F1275BB2DC1D6DB3EFEC080B2"
+        "MsmKey" = "8:_61372016840F1AB1C0CEAD016099832D"
         "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4DCA4C3F1275BB2DC1D6DB3EFEC080B2"
-        "OwnerKey" = "8:_C69A250CD098D02247B046598CC1BB91"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7086401D27439D2A459FDAABAD4EFF93"
-        "OwnerKey" = "8:_C69A250CD098D02247B046598CC1BB91"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7086401D27439D2A459FDAABAD4EFF93"
+        "MsmKey" = "8:_666BD4BC8492B9D6C49DB37C180620B0"
         "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_828C6CF8A6ED4C514CA5DF1DA0F4FE75"
+        "MsmKey" = "8:_69D573BFB3682AAEC1A6686929A8E5C4"
         "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8BD554298473DC37DF548FACE133F261"
+        "MsmKey" = "8:_69D573BFB3682AAEC1A6686929A8E5C4"
+        "OwnerKey" = "8:_D1223866EC02BEE2C59EE3F6FD3DB0E6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_71CAD7D748427E81230A2C80DA2E1F66"
+        "OwnerKey" = "8:_FCAA1D734AB40CEA53FBADDF1342AB95"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_71CAD7D748427E81230A2C80DA2E1F66"
         "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8BD554298473DC37DF548FACE133F261"
-        "OwnerKey" = "8:_C69A250CD098D02247B046598CC1BB91"
+        "MsmKey" = "8:_71CAD7D748427E81230A2C80DA2E1F66"
+        "OwnerKey" = "8:_844A8C59B0C1DE2959F5A535B98604A7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_ADA51EE56BC5965003A3F6CC3D316FAD"
+        "MsmKey" = "8:_7D34695E282AA08E8550B7EBECCD3430"
+        "OwnerKey" = "8:_FAEDA34F0DD5D1AA659B833515ED42B4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7D34695E282AA08E8550B7EBECCD3430"
         "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C506DFCBF31DFD9E8AA7D0D73EDFF6DC"
-        "OwnerKey" = "8:_DFF0FF45D9C4778EC2111F8A8D4E7207"
+        "MsmKey" = "8:_844A8C59B0C1DE2959F5A535B98604A7"
+        "OwnerKey" = "8:_D1223866EC02BEE2C59EE3F6FD3DB0E6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C69A250CD098D02247B046598CC1BB91"
+        "MsmKey" = "8:_844A8C59B0C1DE2959F5A535B98604A7"
         "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C69A250CD098D02247B046598CC1BB91"
-        "OwnerKey" = "8:_DD772E4E32B3458F5F2680A015EB94E7"
+        "MsmKey" = "8:_A908B0E6A15EE0A1931C157541B8A1D3"
+        "OwnerKey" = "8:_D1223866EC02BEE2C59EE3F6FD3DB0E6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A908B0E6A15EE0A1931C157541B8A1D3"
+        "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -111,56 +123,38 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_CC82B584FF93BE81A3CB84D321B14CB7"
+        "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CC82B584FF93BE81A3CB84D321B14CB7"
+        "OwnerKey" = "8:_D1223866EC02BEE2C59EE3F6FD3DB0E6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D1223866EC02BEE2C59EE3F6FD3DB0E6"
+        "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D1223866EC02BEE2C59EE3F6FD3DB0E6"
+        "OwnerKey" = "8:_666BD4BC8492B9D6C49DB37C180620B0"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D7CAD610AC4DB7FD36A15E53E4116C85"
-        "OwnerKey" = "8:_250B3CD010F2EB5E9E131519A6E190BC"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D7CAD610AC4DB7FD36A15E53E4116C85"
-        "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DCC2CE66F9EB0B7D5DA9A67231497F47"
-        "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DCC2CE66F9EB0B7D5DA9A67231497F47"
-        "OwnerKey" = "8:_C69A250CD098D02247B046598CC1BB91"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DD772E4E32B3458F5F2680A015EB94E7"
-        "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DFF0FF45D9C4778EC2111F8A8D4E7207"
-        "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F4F0F0897F23288F1E1D31BDD966A860"
-        "OwnerKey" = "8:_C69A250CD098D02247B046598CC1BB91"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F4F0F0897F23288F1E1D31BDD966A860"
-        "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
+        "MsmKey" = "8:_F411FBFDD1D0F6FE67965A5C5C54D918"
+        "OwnerKey" = "8:_61372016840F1AB1C0CEAD016099832D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -171,6 +165,48 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_FAB20514A9FDF51479E8F456D20B56AF"
+        "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FAB20514A9FDF51479E8F456D20B56AF"
+        "OwnerKey" = "8:_D1223866EC02BEE2C59EE3F6FD3DB0E6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FAEDA34F0DD5D1AA659B833515ED42B4"
+        "OwnerKey" = "8:_28421C10A9C6FD027207E0F161C17FD2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FAEDA34F0DD5D1AA659B833515ED42B4"
+        "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FAEDA34F0DD5D1AA659B833515ED42B4"
+        "OwnerKey" = "8:_D1223866EC02BEE2C59EE3F6FD3DB0E6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FCAA1D734AB40CEA53FBADDF1342AB95"
+        "OwnerKey" = "8:_D1223866EC02BEE2C59EE3F6FD3DB0E6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FCAA1D734AB40CEA53FBADDF1342AB95"
+        "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_D77C75C918DE42BE93B9D94FCFC1A199"
         "MsmSig" = "8:_UNDEFINED"
@@ -178,73 +214,85 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DD772E4E32B3458F5F2680A015EB94E7"
+        "OwnerKey" = "8:_666BD4BC8492B9D6C49DB37C180620B0"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C69A250CD098D02247B046598CC1BB91"
+        "OwnerKey" = "8:_D1223866EC02BEE2C59EE3F6FD3DB0E6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7086401D27439D2A459FDAABAD4EFF93"
+        "OwnerKey" = "8:_A908B0E6A15EE0A1931C157541B8A1D3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F4F0F0897F23288F1E1D31BDD966A860"
+        "OwnerKey" = "8:_844A8C59B0C1DE2959F5A535B98604A7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DCC2CE66F9EB0B7D5DA9A67231497F47"
+        "OwnerKey" = "8:_FCAA1D734AB40CEA53FBADDF1342AB95"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_ADA51EE56BC5965003A3F6CC3D316FAD"
+        "OwnerKey" = "8:_71CAD7D748427E81230A2C80DA2E1F66"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_250B3CD010F2EB5E9E131519A6E190BC"
+        "OwnerKey" = "8:_FAB20514A9FDF51479E8F456D20B56AF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4DCA4C3F1275BB2DC1D6DB3EFEC080B2"
+        "OwnerKey" = "8:_CC82B584FF93BE81A3CB84D321B14CB7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D7CAD610AC4DB7FD36A15E53E4116C85"
+        "OwnerKey" = "8:_28421C10A9C6FD027207E0F161C17FD2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8BD554298473DC37DF548FACE133F261"
+        "OwnerKey" = "8:_FAEDA34F0DD5D1AA659B833515ED42B4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_828C6CF8A6ED4C514CA5DF1DA0F4FE75"
+        "OwnerKey" = "8:_7D34695E282AA08E8550B7EBECCD3430"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DFF0FF45D9C4778EC2111F8A8D4E7207"
+        "OwnerKey" = "8:_69D573BFB3682AAEC1A6686929A8E5C4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_00CF4D4FCF8692A97D428B936DC54A8C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_61372016840F1AB1C0CEAD016099832D"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -286,7 +334,7 @@
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
-        "Compression" = "3:2"
+        "Compression" = "3:3"
         "SignOutput" = "11:FALSE"
         "CertificateFile" = "8:"
         "PrivateKeyFile" = "8:"
@@ -329,7 +377,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "Version" = "8:2.0.50727"
+                "FrameworkVersion" = "8:2.0.50727"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=9832"
                 }
@@ -337,20 +385,51 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_250B3CD010F2EB5E9E131519A6E190BC"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_00CF4D4FCF8692A97D428B936DC54A8C"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:QuickRoute.Common, Version=2.3.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:PowerCollections, Version=1.0.2141.24679, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_250B3CD010F2EB5E9E131519A6E190BC"
+                    "_00CF4D4FCF8692A97D428B936DC54A8C"
                     {
-                    "Name" = "8:QuickRoute.Common.dll"
+                    "Name" = "8:PowerCollections.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:QuickRoute.Common.dll"
+            "SourcePath" = "8:PowerCollections.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_28421C10A9C6FD027207E0F161C17FD2"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:QuickRoute.Publishers.DOMAPublisher, Version=2.4.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_28421C10A9C6FD027207E0F161C17FD2"
+                    {
+                    "Name" = "8:QuickRoute.Publishers.DOMAPublisher.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:QuickRoute.Publishers.DOMAPublisher.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
@@ -388,20 +467,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4DCA4C3F1275BB2DC1D6DB3EFEC080B2"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_61372016840F1AB1C0CEAD016099832D"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Ionic.Zip, Version=1.7.2.6, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Interop.EARTHLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_4DCA4C3F1275BB2DC1D6DB3EFEC080B2"
+                    "_61372016840F1AB1C0CEAD016099832D"
                     {
-                    "Name" = "8:Ionic.Zip.dll"
+                    "Name" = "8:Interop.EARTHLib.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Ionic.Zip.dll"
+            "SourcePath" = "8:Interop.EARTHLib.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
@@ -419,164 +498,175 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7086401D27439D2A459FDAABAD4EFF93"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_666BD4BC8492B9D6C49DB37C180620B0"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:QuickRoute.Resources, Version=2.3.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:QuickRoute.Controls, Version=2.4.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_7086401D27439D2A459FDAABAD4EFF93"
+                    "_666BD4BC8492B9D6C49DB37C180620B0"
+                    {
+                    "Name" = "8:QuickRoute.Controls.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:QuickRoute.Controls.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_69D573BFB3682AAEC1A6686929A8E5C4"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:QuickRoute.GPSDeviceReaders.GarminUSBReader, Version=2.4.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_69D573BFB3682AAEC1A6686929A8E5C4"
+                    {
+                    "Name" = "8:QuickRoute.GPSDeviceReaders.GarminUSBReader.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:QuickRoute.GPSDeviceReaders.GarminUSBReader.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_71CAD7D748427E81230A2C80DA2E1F66"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:QuickRoute.GPSDeviceReaders.SerialPortDeviceReader, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_71CAD7D748427E81230A2C80DA2E1F66"
+                    {
+                    "Name" = "8:QuickRoute.GPSDeviceReaders.SerialPortDeviceReader.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:QuickRoute.GPSDeviceReaders.SerialPortDeviceReader.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7D34695E282AA08E8550B7EBECCD3430"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_7D34695E282AA08E8550B7EBECCD3430"
+                    {
+                    "Name" = "8:log4net.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:log4net.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_844A8C59B0C1DE2959F5A535B98604A7"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:QuickRoute.GPSDeviceReaders.JJConnectRegistratorSEReader, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_844A8C59B0C1DE2959F5A535B98604A7"
+                    {
+                    "Name" = "8:QuickRoute.GPSDeviceReaders.JJConnectRegistratorSEReader.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:QuickRoute.GPSDeviceReaders.JJConnectRegistratorSEReader.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A908B0E6A15EE0A1931C157541B8A1D3"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:QuickRoute.Resources, Version=2.4.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_A908B0E6A15EE0A1931C157541B8A1D3"
                     {
                     "Name" = "8:QuickRoute.Resources.dll"
                     "Attributes" = "3:512"
                     }
                 }
             "SourcePath" = "8:QuickRoute.Resources.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_828C6CF8A6ED4C514CA5DF1DA0F4FE75"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.ExceptionMessageBox, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_828C6CF8A6ED4C514CA5DF1DA0F4FE75"
-                    {
-                    "Name" = "8:Microsoft.ExceptionMessageBox.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Microsoft.ExceptionMessageBox.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8BD554298473DC37DF548FACE133F261"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:PowerCollections, Version=1.0.2141.24679, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_8BD554298473DC37DF548FACE133F261"
-                    {
-                    "Name" = "8:PowerCollections.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:PowerCollections.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_ADA51EE56BC5965003A3F6CC3D316FAD"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:QuickRoute.Publishers.DOMAPublisher, Version=2.3.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                    "_ADA51EE56BC5965003A3F6CC3D316FAD"
-                    {
-                    "Name" = "8:QuickRoute.Publishers.DOMAPublisher.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:QuickRoute.Publishers.DOMAPublisher.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C506DFCBF31DFD9E8AA7D0D73EDFF6DC"
-            {
-            "SourcePath" = "8:googleearth.exe"
-            "TargetName" = "8:googleearth.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C69A250CD098D02247B046598CC1BB91"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:QuickRoute.BusinessEntities, Version=2.3.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                    "_C69A250CD098D02247B046598CC1BB91"
-                    {
-                    "Name" = "8:QuickRoute.BusinessEntities.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:QuickRoute.BusinessEntities.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
@@ -614,45 +704,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D7CAD610AC4DB7FD36A15E53E4116C85"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_D7CAD610AC4DB7FD36A15E53E4116C85"
-                    {
-                    "Name" = "8:log4net.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:log4net.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DCC2CE66F9EB0B7D5DA9A67231497F47"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CC82B584FF93BE81A3CB84D321B14CB7"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:ExifWorks, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_DCC2CE66F9EB0B7D5DA9A67231497F47"
+                    "_CC82B584FF93BE81A3CB84D321B14CB7"
                     {
                     "Name" = "8:ExifWorks.dll"
                     "Attributes" = "3:512"
@@ -676,20 +735,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DD772E4E32B3458F5F2680A015EB94E7"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D1223866EC02BEE2C59EE3F6FD3DB0E6"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:QuickRoute.Controls, Version=2.3.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:QuickRoute.BusinessEntities, Version=2.4.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_DD772E4E32B3458F5F2680A015EB94E7"
+                    "_D1223866EC02BEE2C59EE3F6FD3DB0E6"
                     {
-                    "Name" = "8:QuickRoute.Controls.dll"
+                    "Name" = "8:QuickRoute.BusinessEntities.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:QuickRoute.Controls.dll"
+            "SourcePath" = "8:QuickRoute.BusinessEntities.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
@@ -707,21 +766,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DFF0FF45D9C4778EC2111F8A8D4E7207"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F411FBFDD1D0F6FE67965A5C5C54D918"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Interop.EARTHLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_DFF0FF45D9C4778EC2111F8A8D4E7207"
-                    {
-                    "Name" = "8:Interop.EARTHLib.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Interop.EARTHLib.dll"
-            "TargetName" = "8:"
+            "SourcePath" = "8:googleearth.exe"
+            "TargetName" = "8:googleearth.exe"
             "Tag" = "8:"
             "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
             "Condition" = "8:"
@@ -734,38 +782,7 @@
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F4F0F0897F23288F1E1D31BDD966A860"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:QuickRoute.GPSDeviceReaders.GarminUSBReader, Version=2.3.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                    "_F4F0F0897F23288F1E1D31BDD966A860"
-                    {
-                    "Name" = "8:QuickRoute.GPSDeviceReaders.GarminUSBReader.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:QuickRoute.GPSDeviceReaders.GarminUSBReader.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
+            "Exclude" = "11:TRUE"
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
@@ -787,6 +804,99 @@
             "Register" = "3:1"
             "Exclude" = "11:TRUE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FAB20514A9FDF51479E8F456D20B56AF"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Ionic.Zip, Version=1.7.2.6, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FAB20514A9FDF51479E8F456D20B56AF"
+                    {
+                    "Name" = "8:Ionic.Zip.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Ionic.Zip.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FAEDA34F0DD5D1AA659B833515ED42B4"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:QuickRoute.Common, Version=2.4.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_FAEDA34F0DD5D1AA659B833515ED42B4"
+                    {
+                    "Name" = "8:QuickRoute.Common.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:QuickRoute.Common.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FCAA1D734AB40CEA53FBADDF1342AB95"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:QuickRoute.GPSDeviceReaders.GlobalSatGH615MReader, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_FCAA1D734AB40CEA53FBADDF1342AB95"
+                    {
+                    "Name" = "8:QuickRoute.GPSDeviceReaders.GlobalSatGH615MReader.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:QuickRoute.GPSDeviceReaders.GlobalSatGH615MReader.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -876,8 +986,9 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:QuickRoute"
         "ProductCode" = "8:{BDF3D53A-78E0-416D-B03E-A360355FDD6D}"
-        "PackageCode" = "8:{6884F224-43E5-4799-B08D-9E6E6AAD3C4F}"
+        "PackageCode" = "8:{D11212FE-BDCC-4F18-A37A-D32B4C3C9928}"
         "UpgradeCode" = "8:{377BCEA7-95CC-4CAD-A825-502347BD763A}"
+        "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
@@ -1504,7 +1615,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D77C75C918DE42BE93B9D94FCFC1A199"
             {
-            "SourcePath" = "8:..\\QuickRoute.UI\\obj\\x86\\Debug\\QuickRoute.exe"
+            "SourcePath" = "8:..\\QuickRoute.UI\\obj\\x86\\Release\\QuickRoute.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B843D13A09B94B59B361CB19B26A3B6E"

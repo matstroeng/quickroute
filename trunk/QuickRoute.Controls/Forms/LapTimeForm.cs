@@ -35,8 +35,8 @@ namespace QuickRoute.Controls.Forms
     {
       get 
       {
-        string timeString = timeTextbox.Text;
-        string timeSeparator = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.TimeSeparator;
+        var timeString = timeTextbox.Text;
+        var timeSeparator = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.TimeSeparator;
         timeString = timeString.Replace(".", timeSeparator);
         timeString = timeString.Replace(",", timeSeparator);
         timeString = timeString.Replace(":", timeSeparator);
@@ -44,7 +44,7 @@ namespace QuickRoute.Controls.Forms
         TimeSpan ts;
         if (TimeSpan.TryParse(timeString, out ts))
         {
-          DateTime dt = initialTime.Date.AddSeconds(ts.TotalSeconds);
+          var dt = initialTime.Date.AddSeconds(ts.TotalSeconds);
           dt = new DateTime(dt.Ticks, DateTimeKind.Local).ToUniversalTime();
           return dt;
         }
@@ -58,7 +58,7 @@ namespace QuickRoute.Controls.Forms
       }
     }
 
-    private static string FormatTime(DateTime time, bool includeDate)
+    private string FormatTime(DateTime time, bool includeDate)
     {
       var firstPart = includeDate ? time.ToString("G") : time.ToLongTimeString();
       return firstPart + time.ToString(".fffffff").TrimEnd("0".ToCharArray()).TrimEnd(".".ToCharArray());
@@ -85,6 +85,5 @@ namespace QuickRoute.Controls.Forms
     {
       timeTextbox.SelectAll();
     }
-  
   }
 }

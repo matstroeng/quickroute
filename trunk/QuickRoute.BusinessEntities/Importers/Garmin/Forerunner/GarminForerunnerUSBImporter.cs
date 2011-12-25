@@ -60,7 +60,7 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.Forerunner
       DialogResult result;
       var showProgressIndicator = false;
 
-      if (!garminUSBReader.CachedSessionsExists && !garminUSBReader.ReadingNow)
+      if (/*!garminUSBReader.CachedSessionsExists && */ !garminUSBReader.ReadingNow)
       {
         garminUSBReader.BeginReadData();
         showProgressIndicator = true;

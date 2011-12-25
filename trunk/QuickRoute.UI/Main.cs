@@ -37,8 +37,13 @@ namespace QuickRoute.UI
     private Bitmap momentaneousInfoPanelBackBuffer;
     private Graphics momentaneousInfoPanelBackBufferGraphics;
     private RoutePropertyCacheManager cacheManager = new RoutePropertyCacheManager();
+    
+    private int updatingUINowCounter;
+    private bool UpdatingUINow
+    {
+      get { return updatingUINowCounter > 0; }
+    }
 
-    private bool updatingUINow;
     private readonly bool startingUpNow;
     private bool updatingZoomNow;
     private bool openingDocumentNow;
@@ -98,7 +103,10 @@ namespace QuickRoute.UI
                                               new WaypointAttributeString(WaypointAttribute.DirectionDeviationToNextLap),
                                               new WaypointAttributeString(WaypointAttribute.MapReadingDuration)
                                             };
-      colorCodingAttributes.ComboBox.DataSource = cca;
+      foreach (var item in cca)
+      {
+        colorCodingAttributes.Items.Add(item);
+      }
       colorCodingAttributes.SelectedIndex = 0;
       List<WaypointAttributeString> scca = new List<WaypointAttributeString>
                                             {
@@ -110,7 +118,10 @@ namespace QuickRoute.UI
                                               new WaypointAttributeString(WaypointAttribute.DirectionDeviationToNextLap),
                                               new WaypointAttributeString(WaypointAttribute.MapReadingDuration)
                                             };
-      secondaryColorCodingAttributes.ComboBox.DataSource = scca;
+      foreach (var item in scca)
+      {
+        secondaryColorCodingAttributes.Items.Add(item);
+      }
       secondaryColorCodingAttributes.SelectedIndex = 0;
 
       routeLineWidth.NumericUpDownControl.DecimalPlaces = 1;
@@ -141,12 +152,21 @@ namespace QuickRoute.UI
     private bool garminUSBLastConnectionState;
     private void ReadGarminUSBData()
     {
-      var isConnected = GarminUSBReader.Instance.IsConnected;
-      if(isConnected && !garminUSBLastConnectionState && !GarminUSBReader.Instance.ReadingNow)
+      var autoread = ConfigurationManager.AppSettings["autoreadGarminUSBData"];
+      if(autoread != null)
       {
-        GarminUSBReader.Instance.BeginReadData();
+        bool b;
+        bool.TryParse(autoread, out b);
+        if(b)
+        {
+          var isConnected = GarminUSBReader.Instance.IsConnected;
+          if (isConnected && !garminUSBLastConnectionState && !GarminUSBReader.Instance.ReadingNow)
+          {
+            GarminUSBReader.Instance.BeginReadData();
+          }
+          garminUSBLastConnectionState = isConnected;
+        }
       }
-      garminUSBLastConnectionState = isConnected;
     }
 
     ~Main()
@@ -208,16 +228,16 @@ namespace QuickRoute.UI
             InitColorRangeIntervals();
             untitledDocumentFileNameProposal = cnf.FileNameProposal;
             documentChanged = true;
-            updatingUINow = true;
+            updatingUINowCounter++;
             PopulateSessionList();
-            updatingUINow = false;
+            updatingUINowCounter--;
             ResetActionStacks();
             lapSortOrderColumnIndex = 0;
             lapSortOrder = SortOrder.Ascending;
             CalculateLapInfo();
-            updatingUINow = true;
-            laps.Rows[laps.Rows.Count - 1].Selected = true;
-            updatingUINow = false;
+            //updatingUINowCounter++;
+            //laps.Rows[laps.Rows.Count - 1].Selected = true;
+            //updatingUINowCounter--;
             CalculateMomentaneousInfoLabelRectangles();
             CreateLapHistogram();
             DrawLapHistogram();
@@ -400,16 +420,16 @@ namespace QuickRoute.UI
         canvas.SelectedSessions = new SessionCollection();
         canvas.SelectedSessions.Add(canvas.CurrentSession);
         //if (ApplicationSettings.AutoAdjustColorRangeInterval) PerformColorRangeIntervalAutoAdjustment();
-        updatingUINow = true;
+        updatingUINowCounter++;
         PopulateSessionList();
-        updatingUINow = false;
+        updatingUINowCounter--;
         ResetActionStacks();
         lapSortOrderColumnIndex = 0;
         lapSortOrder = SortOrder.Ascending;
         CalculateLapInfo();
-        updatingUINow = true;
-        laps.Rows[laps.Rows.Count - 1].Selected = true;
-        updatingUINow = false;
+        //updatingUINowCounter++;
+        //laps.Rows[laps.Rows.Count - 1].Selected = true;
+        //updatingUINowCounter--;
         CalculateMomentaneousInfoLabelRectangles();
         CreateLapHistogram();
         DrawLapHistogram();
@@ -1044,8 +1064,8 @@ namespace QuickRoute.UI
 
     public void UpdateUI()
     {
-      if (updatingUINow) return;
-      updatingUINow = true;
+      if (UpdatingUINow) return;
+      updatingUINowCounter++;
 
       var documentOpened = (canvas.Document != null);
 
@@ -1212,7 +1232,7 @@ namespace QuickRoute.UI
       // momentaneous info
       momentaneousInfoPanel.Visible = documentOpened;
 
-      updatingUINow = false;
+      updatingUINowCounter--;
     }
 
     #endregion
@@ -1350,27 +1370,35 @@ namespace QuickRoute.UI
       lapInfoList.Add(totalInfo);
 
       // set number of rows and columns in grid
-      updatingUINow = true;
+      updatingUINowCounter++;
       laps.RowCount = 0;
       laps.ColumnCount = 0;
       laps.RowCount = lapInfoList.Count;
       laps.ColumnCount = (lapInfoList.Count == 0 ? 0 : lapInfoList[0].GetProperties().Count);
-      updatingUINow = false;
+      updatingUINowCounter--;
       SetLapGridHeaders();
       SortLapGrid();
       laps.Invalidate();
 
+      updatingUINowCounter -= 100; // ugly!
       laps.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
-      if (laps.Rows.Count > 0) laps.Rows[laps.Rows.Count - 1].Selected = true;
+      updatingUINowCounter += 100; // ugly!
+
+      if (laps.Rows.Count > 0)
+      {
+        updatingUINowCounter++;
+        laps.Rows[laps.Rows.Count - 1].Selected = true;
+        updatingUINowCounter--;
+      }
       int width = 0;
       foreach (DataGridViewColumn c in laps.Columns)
       {
         width += c.Width;
       }
 
-      updatingUINow = true;
+      updatingUINowCounter++;
       rightPanel.Width = width + laps.Margin.Horizontal;
-      updatingUINow = false;
+      updatingUINowCounter--;
     }
 
     private void SetLapGridHeaders()
@@ -1406,9 +1434,9 @@ namespace QuickRoute.UI
         {
           if (lapInfoList[i].Index == selectedLapNumber)
           {
-            updatingUINow = true;
+            updatingUINowCounter++;
             laps.Rows[i].Selected = true;
-            updatingUINow = false;
+            updatingUINowCounter--;
             return;
           }
         }
@@ -1752,6 +1780,10 @@ namespace QuickRoute.UI
       {
         canvas.Document.Settings.DefaultSessionSettings.CircleTimeRadius = value;
         CalculateLapInfo();
+        CreateLapHistogram();
+        DrawLapHistogram();
+        CreateLineGraph();
+        DrawLineGraph();
       }
       circleTimeRadius.Text = canvas.Document.Settings.DefaultSessionSettings.CircleTimeRadius.ToString();
       EndWork();
@@ -1812,28 +1844,36 @@ namespace QuickRoute.UI
 
     private void UpdateAfterUndoRedo(IAction action)
     {
-      updatingUINow = true;
+      updatingUINowCounter++;
       UpdateAfterAction(action);
       canvas.DrawMap(Canvas.MapDrawingFlags.Route | Canvas.MapDrawingFlags.Markers);
-      updatingUINow = false;
+      updatingUINowCounter--;
       UpdateUI();
     }
 
     private void UpdateAfterAction(IAction action)
     {
-      bool isLapAction =
-        (action is AddLapAction ||
-         action is EditLapAction ||
-         action is DeleteLapAction ||
-         action is CutRouteAction ||
-         action is TrimRouteAndAddLapsAction ||
-         action is AddTimeOffsetToSessionAction);
+      var isLapAction =
+        action is AddLapAction ||
+        action is EditLapAction ||
+        action is DeleteLapAction ||
+        action is CutRouteAction ||
+        action is TrimRouteAndAddLapsAction ||
+        action is AddTimeOffsetToSessionAction;
+
+      var isRouteAction = 
+        action is CutRouteAction ||
+        action is TrimRouteAndAddLapsAction ||
+        action is AddTimeOffsetToSessionAction;
 
       if (isLapAction)
       {
         // initializes session in order to recalculate waypoint attributes
-        canvas.CurrentSession.Initialize();
-        CalculateLapInfo();
+        canvas.CurrentSession.Initialize(isRouteAction);
+        updatingUINowCounter++;
+        CalculateLapInfo(); 
+        updatingUINowCounter--;
+
         AlphaAdjustSelectedLap();
         CreateLapHistogram();
         DrawLapHistogram();
@@ -1903,7 +1943,7 @@ namespace QuickRoute.UI
         }
       }
       momentaneousInfoPanel.Visible = true;
-      momentaneousInfoPanel.Height = Math.Max((noOfRows + 1) * rowHeight + momentaneousInfoPanel.Padding.Vertical, 1);
+      momentaneousInfoPanel.Height = Math.Max((noOfRows + 1) * (rowHeight == 0 ? 20 : rowHeight) + momentaneousInfoPanel.Padding.Vertical, 1);
       UpdateMomentaneousInfo(null);
     }
 
@@ -2115,7 +2155,7 @@ namespace QuickRoute.UI
 
     private void ToggleFullScreen(bool visible)
     {
-      if (updatingUINow) return;
+      if (UpdatingUINow) return;
       if (visible)
       {
         formState = new MainFormState();
@@ -2131,14 +2171,14 @@ namespace QuickRoute.UI
 
     private void ToggleRightPanel(bool visible)
     {
-      if (updatingUINow) return;
+      if (UpdatingUINow) return;
       ApplicationSettings.RightPanelVisible = visible;
       UpdateUI();
     }
 
     private void ToggleBottomPanel(bool visible)
     {
-      if (updatingUINow) return;
+      if (UpdatingUINow) return;
       ApplicationSettings.BottomPanelVisible = visible;
       UpdateUI();
     }
@@ -2151,7 +2191,7 @@ namespace QuickRoute.UI
 
       ColorRangeIntervalSliderSettings sliderSettings = canvas.Document.Settings.ColorRangeIntervalSliderSettings[attribute];
       RouteLineSettings rls = canvas.CurrentSession.Settings.RouteLineSettingsCollection[attribute];
-      updatingUINow = true;
+      updatingUINowCounter++;
       sliderSettings.MinValue = minValue;
       sliderSettings.MaxValue = maxValue;
       if (setSlidersToMinAndMax)
@@ -2166,7 +2206,7 @@ namespace QuickRoute.UI
         if (rls.ColorRange.EndValue < sliderSettings.MinValue) rls.ColorRange.EndValue = sliderSettings.MinValue;
         if (rls.ColorRange.EndValue > sliderSettings.MaxValue) rls.ColorRange.EndValue = sliderSettings.MaxValue;
       }
-      updatingUINow = false;
+      updatingUINowCounter--;
     }
 
     private void HandleAction(IAction action)
@@ -2350,7 +2390,7 @@ namespace QuickRoute.UI
 
     private void laps_SelectionChanged(object sender, EventArgs e)
     {
-      if (updatingUINow) return;
+      if (UpdatingUINow) return;
 
       BeginWork();
       CreateLapHistogram();
@@ -2388,7 +2428,7 @@ namespace QuickRoute.UI
 
     private void laps_CellValueNeeded(object sender, DataGridViewCellValueEventArgs e)
     {
-      if (updatingUINow) return;
+      if (UpdatingUINow) return;
 
       if (e.RowIndex == lapInfoList.Count - 1 && e.ColumnIndex == 0)
       {
@@ -2547,14 +2587,14 @@ namespace QuickRoute.UI
 
     private void sessions_SelectedIndexChanged(object sender, EventArgs e)
     {
-      if (updatingUINow) return;
+      if (UpdatingUINow) return;
       canvas.CurrentSession = canvas.Document.Sessions[sessions.SelectedIndex];
       canvas.DrawMap(Canvas.MapDrawingFlags.Route | Canvas.MapDrawingFlags.Markers);
     }
 
     private void sessions_ItemCheck(object sender, ItemCheckEventArgs e)
     {
-      if (updatingUINow) return;
+      if (UpdatingUINow) return;
       if (e.NewValue == CheckState.Unchecked)
       {
         canvas.SelectedSessions.Remove(canvas.Document.Sessions[e.Index]);
@@ -2751,9 +2791,9 @@ namespace QuickRoute.UI
           canvas.Document.Sessions = isf.Sessions;
           canvas.SelectedSessions = canvas.Document.Sessions;
           UpdateUI();
-          updatingUINow = true;
+          updatingUINowCounter++;
           PopulateSessionList();
-          updatingUINow = false;
+          updatingUINowCounter--;
           canvas.DrawMap(Canvas.MapDrawingFlags.Route | Canvas.MapDrawingFlags.Markers);
         }
       }
@@ -2861,17 +2901,17 @@ namespace QuickRoute.UI
 
     private void toolStripFullScreen_CheckedChanged(object sender, EventArgs e)
     {
-      if (!updatingUINow) ToggleFullScreen(toolStripFullScreen.Checked);
+      if (!UpdatingUINow) ToggleFullScreen(toolStripFullScreen.Checked);
     }
 
     private void toolStripRightPanelVisible_CheckedChanged(object sender, EventArgs e)
     {
-      if (!updatingUINow) ToggleRightPanel(toolStripRightPanelVisible.Checked);
+      if (!UpdatingUINow) ToggleRightPanel(toolStripRightPanelVisible.Checked);
     }
 
     private void toolStripBottomPanelVisible_CheckedChanged(object sender, EventArgs e)
     {
-      if (!updatingUINow) ToggleBottomPanel(toolStripBottomPanelVisible.Checked);
+      if (!UpdatingUINow) ToggleBottomPanel(toolStripBottomPanelVisible.Checked);
     }
 
     private void colorRangeIntervalSlider_ColorRangeClicked(object sender, MouseEventArgs e)
@@ -2883,12 +2923,12 @@ namespace QuickRoute.UI
     {
       RouteLineSettings routeLineSettings = canvas.CurrentSession.Settings.RouteLineSettingsCollection[SelectedColorCodingAttribute];
       routeLineSettings.MaskVisible = routeLineMaskVisible.Checked;
-      if (!updatingUINow) canvas.DrawMap(Canvas.MapDrawingFlags.Markers | Canvas.MapDrawingFlags.Route);
+      if (!UpdatingUINow) canvas.DrawMap(Canvas.MapDrawingFlags.Markers | Canvas.MapDrawingFlags.Route);
     }
 
     private void gradientAlphaAdjustment_ValueChanged(object sender, EventArgs e)
     {
-      if (!updatingUINow)
+      if (!UpdatingUINow)
       {
         RouteLineSettings routeLineSettings = canvas.CurrentSession.Settings.RouteLineSettingsCollection[SelectedColorCodingAttribute];
         routeLineSettings.AlphaAdjustment = (double)gradientAlphaAdjustment.TrackBarControl.Value / 10;
@@ -2899,7 +2939,7 @@ namespace QuickRoute.UI
 
     private void gradientAlphaAdjustment_MouseUp(object sender, MouseEventArgs e)
     {
-      if (updatingUINow) return;
+      if (UpdatingUINow) return;
       RouteLineSettings routeLineSettings = canvas.CurrentSession.Settings.RouteLineSettingsCollection[SelectedColorCodingAttribute];
       Lap lap = null;
       if (laps.SelectedRows[0].Index < laps.Rows.Count - 1) lap = canvas.CurrentSession.Laps[lapInfoList[laps.SelectedRows[0].Index].Index];
@@ -2956,7 +2996,7 @@ namespace QuickRoute.UI
 
     private void colorRangeIntervalSlider_ColorRangeEndValueChanged(object sender, EventArgs e)
     {
-      if (updatingUINow) return;
+      if (UpdatingUINow) return;
       BeginWork();
       colorRangeIntervalSlider_ColorRangeEndValueChanging(sender, e);
       canvas.DrawMap(Canvas.MapDrawingFlags.Route | Canvas.MapDrawingFlags.Markers);
@@ -2969,7 +3009,7 @@ namespace QuickRoute.UI
 
     private void colorRangeIntervalSlider_ColorRangeStartValueChanged(object sender, EventArgs e)
     {
-      if (updatingUINow) return;
+      if (UpdatingUINow) return;
       BeginWork();
       colorRangeIntervalSlider_ColorRangeStartValueChanging(sender, e);
       canvas.DrawMap(Canvas.MapDrawingFlags.Route | Canvas.MapDrawingFlags.Markers);
@@ -2982,27 +3022,27 @@ namespace QuickRoute.UI
 
     private void colorRangeIntervalSlider_ColorRangeEndValueChanging(object sender, EventArgs e)
     {
-      if (!updatingUINow)
+      if (!UpdatingUINow)
       {
-        updatingUINow = true;
+        updatingUINowCounter++;
         double value = colorRangeIntervalSlider.SliderControl.ColorRange.EndValue;
         colorRangeEndValue.Text = FormatColorRangeValue(value);
         canvas.CurrentSession.Settings.RouteLineSettingsCollection[SelectedColorCodingAttribute].ColorRange.EndValue = value;
         colorRangeEndValue.SelectAll();
-        updatingUINow = false;
+        updatingUINowCounter--;
       }
     }
 
     private void colorRangeIntervalSlider_ColorRangeStartValueChanging(object sender, EventArgs e)
     {
-      if (!updatingUINow)
+      if (!UpdatingUINow)
       {
-        updatingUINow = true;
+        updatingUINowCounter++;
         double value = colorRangeIntervalSlider.SliderControl.ColorRange.StartValue;
         colorRangeStartValue.Text = FormatColorRangeValue(value);
         canvas.CurrentSession.Settings.RouteLineSettingsCollection[SelectedColorCodingAttribute].ColorRange.StartValue = value;
         colorRangeStartValue.SelectAll();
-        updatingUINow = false;
+        updatingUINowCounter--;
       }
     }
 
@@ -3073,7 +3113,7 @@ namespace QuickRoute.UI
       canvas.ColorCodingAttribute = SelectedColorCodingAttribute;
       canvas.SecondaryColorCodingAttribute = SelectedSecondaryColorCodingAttribute;
       canvas.PreventRedraw = false;
-      if (!updatingUINow)
+      if (!UpdatingUINow)
       {
         UpdateUI();
       }
@@ -3092,7 +3132,7 @@ namespace QuickRoute.UI
 
     private void routeLineMaskWidth_ValueChanged(object sender, EventArgs e)
     {
-      if (!updatingUINow)
+      if (!UpdatingUINow)
       {
         RouteLineSettings routeLineSettings = canvas.CurrentSession.Settings.RouteLineSettingsCollection[SelectedColorCodingAttribute];
         routeLineSettings.MaskWidth = (double)routeLineMaskWidth.NumericUpDownControl.Value;
@@ -3102,7 +3142,7 @@ namespace QuickRoute.UI
 
     private void routeLineWidth_ValueChanged(object sender, EventArgs e)
     {
-      if (!updatingUINow)
+      if (!UpdatingUINow)
       {
         RouteLineSettings routeLineSettings = canvas.CurrentSession.Settings.RouteLineSettingsCollection[SelectedColorCodingAttribute];
         if (canvas.CurrentMouseTool == Canvas.MouseTool.AdjustRoute)
@@ -3197,7 +3237,7 @@ namespace QuickRoute.UI
 
     private void toolStripAutoAdjustColorRangeInterval_CheckedChanged(object sender, EventArgs e)
     {
-      if (updatingUINow) return;
+      if (UpdatingUINow) return;
       ApplicationSettings.AutoAdjustColorRangeInterval = toolStripAutoAdjustColorRangeInterval.Checked;
       if (ApplicationSettings.AutoAdjustColorRangeInterval) PerformColorRangeIntervalAutoAdjustment();
     }

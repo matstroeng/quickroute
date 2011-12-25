@@ -56,7 +56,7 @@ namespace QuickRoute.BusinessEntities
       set
       {
         smoothingIntervals = value;
-        CalculateWaypointAttributes();
+        CalculateWaypointAttributes(true);
       }
     }
 
@@ -103,7 +103,7 @@ namespace QuickRoute.BusinessEntities
 
     public void Initialize()
     {
-      CalculateWaypointAttributes();
+      CalculateWaypointAttributes(true);
     }
 
     public void EnsureUtcTimes()
@@ -495,50 +495,60 @@ namespace QuickRoute.BusinessEntities
     /// <summary>
     /// Calculates elapsed time, distance, direction and speed for all waypoints in the route.
     /// </summary>
-    public void CalculateWaypointAttributes()
+    public void CalculateWaypointAttributes(bool routeChanged)
     {
       if (suppressWaypointAttributeCalculation) return;
       // first pass: location, elapsed time, distance, direction
-      double distance = 0;
-      double elapsedTime = 0;
-      for (int i = 0; i < segments.Count; i++)
+
+      if (routeChanged)
       {
-        for (int j = 0; j < segments[i].Waypoints.Count; j++)
+        double distance = 0;
+        double elapsedTime = 0;
+        for (int i = 0; i < segments.Count; i++)
         {
-          Waypoint w = segments[i].Waypoints[j];
-          double deltaDistance = 0;
-          double deltaTime = 0;
-
-          w.Attributes[WaypointAttribute.Longitude] = w.LongLat.Longitude;
-          w.Attributes[WaypointAttribute.Latitude] = w.LongLat.Latitude;
-          if (j > 0)
+          for (int j = 0; j < segments[i].Waypoints.Count; j++)
           {
-            deltaDistance = LinearAlgebraUtil.DistancePointToPointLongLat(w.LongLat,
-                                                                          segments[i].Waypoints[j - 1].LongLat);
-            deltaTime = w.Time.Subtract(segments[i].Waypoints[j - 1].Time).TotalSeconds;
+            Waypoint w = segments[i].Waypoints[j];
+            double deltaDistance = 0;
+            double deltaTime = 0;
+
+            w.Attributes[WaypointAttribute.Longitude] = w.LongLat.Longitude;
+            w.Attributes[WaypointAttribute.Latitude] = w.LongLat.Latitude;
+            if (j > 0)
+            {
+              deltaDistance = LinearAlgebraUtil.DistancePointToPointLongLat(w.LongLat,
+                                                                            segments[i].Waypoints[j - 1].LongLat);
+              deltaTime = w.Time.Subtract(segments[i].Waypoints[j - 1].Time).TotalSeconds;
+            }
+            elapsedTime += deltaTime;
+            distance += deltaDistance;
+            w.Attributes[WaypointAttribute.Distance] = distance;
+            w.Attributes[WaypointAttribute.ElapsedTime] = elapsedTime;
           }
-          elapsedTime += deltaTime;
-          distance += deltaDistance;
-          w.Attributes[WaypointAttribute.Distance] = distance;
-          w.Attributes[WaypointAttribute.ElapsedTime] = elapsedTime;
         }
-      }
 
-      // check existence of heart rate, altitude and map reading
-      waypointAttributeExists = new Dictionary<WaypointAttribute, bool>();
-      var attributesToCheckExistenceFor = new List<WaypointAttribute> { WaypointAttribute.HeartRate, WaypointAttribute.Altitude, WaypointAttribute.MapReadingDuration };
-      foreach (var wa in attributesToCheckExistenceFor)
-      {
-        waypointAttributeExists[wa] = CheckIfWaypointAttributeExists(wa);
-      }
+        // check existence of heart rate, altitude and map reading
+        waypointAttributeExists = new Dictionary<WaypointAttribute, bool>();
+        var attributesToCheckExistenceFor = new List<WaypointAttribute>
+                                              {
+                                                WaypointAttribute.HeartRate,
+                                                WaypointAttribute.Altitude,
+                                                WaypointAttribute.MapReadingDuration
+                                              };
+        foreach (var wa in attributesToCheckExistenceFor)
+        {
+          waypointAttributeExists[wa] = CheckIfWaypointAttributeExists(wa);
+        }
 
-      // second pass: the rest
-      CalculateSpeeds();
-      CalculateSlidingAverageAttributes(WaypointAttribute.HeartRate, SmoothingIntervals[WaypointAttribute.HeartRate]);
-      CalculateSlidingAverageAttributes(WaypointAttribute.Altitude, SmoothingIntervals[WaypointAttribute.Altitude]);
+        // second pass: the rest
+        CalculateSpeeds();
+        CalculateSlidingAverageAttributes(WaypointAttribute.HeartRate, SmoothingIntervals[WaypointAttribute.HeartRate]);
+        CalculateSlidingAverageAttributes(WaypointAttribute.Altitude, SmoothingIntervals[WaypointAttribute.Altitude]);
+        CalculateInclinations();
+        CalculateMapReadings();
+      }
+      // CalculateDirectionDeviationsToNextLap is also dependent on laps, not just route change
       CalculateDirectionDeviationsToNextLap();
-      CalculateInclinations();
-      CalculateMapReadings();
     }
 
     public Waypoint CreateWaypointFromParameterizedLocation(ParameterizedLocation parameterizedLocation)

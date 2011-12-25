@@ -719,4 +719,13 @@
   <data name="RoutePropertyName_Longitude" xml:space="preserve">
     <value>Längengrad</value>
   </data>
+  <data name="ImageSize" xml:space="preserve">
+    <value>Bildgrösse</value>
+  </data>
+  <data name="Pixels" xml:space="preserve">
+    <value>Pixel</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Ändern</value>
+  </data>
 </root>

@@ -887,4 +887,16 @@
   <data name="NotConnected" xml:space="preserve">
     <value>ej ansluten</value>
   </data>
+  <data name="ImageSize" xml:space="preserve">
+    <value>Bildstorlek</value>
+  </data>
+  <data name="Pixels" xml:space="preserve">
+    <value>pixlar</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Ändra</value>
+  </data>
+  <data name="DownloadingImage" xml:space="preserve">
+    <value>Laddar ner bild</value>
+  </data>
 </root>
