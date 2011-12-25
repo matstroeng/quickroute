@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -14,10 +14,11 @@
     <ApplicationIcon>QuickRoute.ico</ApplicationIcon>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <OldToolsVersion>2.0</OldToolsVersion>
+    <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -144,6 +145,12 @@
     <Compile Include="Forms\CreateNewForm.Designer.cs">
       <DependentUpon>CreateNewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ImageManipulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImageManipulator.Designer.cs">
+      <DependentUpon>ImageManipulator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\OpenMultipleFilesInGoogleEarthDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +237,9 @@
     <EmbeddedResource Include="Forms\CreateNewForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>CreateNewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImageManipulator.sv.resx">
+      <DependentUpon>ImageManipulator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -702,7 +712,9 @@
   <ItemGroup>
     <Content Include="QuickRoute.ico" />
     <Content Include="todo.txt" />
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="app.production.config" />
     <None Include="Web References\QuickRouteServer\GetCurrentVersionResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -728,6 +740,11 @@
     <None Include="Web References\WinSplitsWebServices\WebServices.disco" />
   </ItemGroup>
   <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
       <Visible>False</Visible>
       <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
@@ -741,6 +758,11 @@
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
@@ -1016,9 +1038,14 @@
     <EmbeddedResource Include="Forms\TimeDialog.it.resx" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\ImageManipulator.resx">
+      <DependentUpon>ImageManipulator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.it.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Main.it.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

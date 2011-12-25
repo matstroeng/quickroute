@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,133 +117,39 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 57</value>
+  <data name="RotateCounterclockwise.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVDhPY2CgEeACmpsJxLuB+AEQvwHiC0A8DYgNCdmp
+        DVRwFoj/48DfgeJFuAyRAUrcxaLxLxaxCmyGrEdS+AfqZHsgrQfEGUB8D03eFGRIA9S/ID/DnP0ZyPbH
+        YgPIhdeQ1C0DqdmIxXmfgGJLgXgCEBugGeSHpP4WSM4KiP9hMQTkmqNALI5mADeQ/xiq/hVIjhGIj2Mx
+        4BBQjAeLN1iAYreh6kHRCwYJaAacAPJFsGgGCZkA8W+oelCMgQEfED+BCl4A0mI4NDMBxXchWbYBWd1s
+        IOcRECtg0QzSaAnEW9Fc6o6sVhPIAWFsAJQG0FPmJBxqsQp3ohmwAMhnJsWARKBiUJTtB+IIUjQSVAsA
+        bIVkMcKXGigAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="cancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="RotateClockwise.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAESSURBVDhPY2CgMjAEmjcNiC8A8RsgfgDEu4E4E4i5CNlV
+        BFTwHYj/48BngeLauAypwKLpLxaxu0AxGXRDTIECf5AU3wOyM4BYD4jtoV5Cll+PbsAyJM3XsNkAFPMH
+        4s9I6kBhAsINIMNuIUn4oZluAORPAOKlQPwJi5c2gtS/gko8BtLcaAaIA/lHsWgEBfQ/ILYCqQdFF0jg
+        NhCzoBkA4vIA8SEshhwHijGCFIBCFmTAbyA2wWIASEgEiE+gGZIAU7sBSWIXkM2EwxAxoPgFqNonQJoP
+        ps4dzeStQL4lDoMUgOKPgHg2uiWTsPgRlBawAU2gIAijAGYgbwGaIZ04DMArHAGU3Q/EoKhNJMcAkvUA
+        ABFCZDFzoHHbAAAAAElFTkSuQmCC
+</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cancel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="SizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 22</value>
   </data>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="SizeLabel.Text" xml:space="preserve">
+    <value>&amp;Storlek:</value>
   </data>
-  <data name="&gt;&gt;cancel.Name" xml:space="preserve">
-    <value>cancel</value>
-  </data>
-  <data name="&gt;&gt;cancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cancel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cancel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ok.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="ok.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 57</value>
-  </data>
-  <data name="ok.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="ok.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="&gt;&gt;ok.Name" xml:space="preserve">
-    <value>ok</value>
-  </data>
-  <data name="&gt;&gt;ok.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ok.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ok.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="timeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="timeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
-  </data>
-  <data name="timeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 13</value>
-  </data>
-  <data name="timeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="timeLabel.Text" xml:space="preserve">
-    <value>&amp;Time:</value>
-  </data>
-  <data name="&gt;&gt;timeLabel.Name" xml:space="preserve">
-    <value>timeLabel</value>
-  </data>
-  <data name="&gt;&gt;timeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;timeLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;timeLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="timeTextbox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="timeTextbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 25</value>
-  </data>
-  <data name="timeTextbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 20</value>
-  </data>
-  <data name="timeTextbox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;timeTextbox.Name" xml:space="preserve">
-    <value>timeTextbox</value>
-  </data>
-  <data name="&gt;&gt;timeTextbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;timeTextbox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;timeTextbox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>183, 92</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
+  <data name="Cancel.Text" xml:space="preserve">
+    <value>Avbryt</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Add split time</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>LapTimeForm</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Förbehandla bild</value>
   </data>
 </root>

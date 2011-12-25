@@ -142,15 +142,6 @@
   <data name="toolStripContainer1.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1024, 498</value>
   </data>
-  <data name="routeAppearanceToolstrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>594, 0</value>
-  </data>
-  <data name="routeAppearanceToolstrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>430, 28</value>
-  </data>
-  <data name="toolStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
   <data name="lapGridPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 123</value>
   </data>

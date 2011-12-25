@@ -403,7 +403,16 @@ namespace QuickRoute.Controls
                                                                                                      out distanceToRoute);
       if (!movingActiveHandleNow && !movingActiveLapNow)
       {
-        if (closestPL == null) return; // not close to the route
+        if (closestPL == null)
+        {
+          // not close to route
+          if(mouseHoverHandle != null)
+          {
+            ResetMouseHoverHandle();
+            DrawMap(MapDrawingFlags.Markers);
+          }
+          return; 
+        }
 
         // check if close to existing handle
         double closestHandleDistance = 0;
@@ -423,14 +432,7 @@ namespace QuickRoute.Controls
         if (distanceToRoute >= ROUTE_CLOSENESS_TOLERANCE)
         {
           // not close to route
-          mouseHoverHandle = null;
-          activeLap = null;
-          if (activeHandle != null)
-          {
-            // reset handle drawer to standard handle drawer
-            activeHandle.MarkerDrawer = CurrentSession.Settings.MarkerDrawers[MarkerType.Handle];
-          }
-          activeHandle = null;
+          ResetMouseHoverHandle();
           if (RouteMouseHover != null) RouteMouseHover(this, new RouteMouseHoverEventArgs(closestPL, false));
         }
         else if (closestHandle != null && closestHandleDistance < ROUTE_CLOSENESS_TOLERANCE &&
@@ -492,6 +494,18 @@ namespace QuickRoute.Controls
         activeLap.Time = CurrentSession.Route.GetTimeFromParameterizedLocation(closestPL);
         DrawMap(MapDrawingFlags.Markers);
       }
+    }
+
+    private void ResetMouseHoverHandle()
+    {
+      mouseHoverHandle = null;
+      activeLap = null;
+      if (activeHandle != null)
+      {
+        // reset handle drawer to standard handle drawer
+        activeHandle.MarkerDrawer = CurrentSession.Settings.MarkerDrawers[MarkerType.Handle];
+      }
+      activeHandle = null;
     }
 
     public void DrawActiveHandle(ParameterizedLocation pl)
@@ -647,6 +661,7 @@ namespace QuickRoute.Controls
     {
       if (document != null && document.Map != null)
       {
+        Console.WriteLine("ResizeCanvas");
         UpdateScrollbarProperties();
         if (!scrXPanel.Visible) scrX.Value = scrX.Minimum;
         if (!scrY.Visible) scrY.Value = scrY.Minimum;
@@ -858,18 +873,21 @@ namespace QuickRoute.Controls
     public void AddLap(ParameterizedLocation parameterizedLocation, bool showLapTimeForm)
     {
       var time = CurrentSession.Route.GetTimeFromParameterizedLocation(parameterizedLocation);
+      time = time.AddTicks(-time.Ticks % TimeSpan.TicksPerSecond); // truncate to nearest second
 
       if (showLapTimeForm)
       {
-        time = time.AddTicks(-time.Ticks % TimeSpan.TicksPerSecond); // truncate to nearest second
         using (var form = new LapTimeForm { InitialTime = time, Session = CurrentSession })
         {
           if (form.ShowDialog() != DialogResult.OK) return;
           time = form.Time;
         }
       }
-      ExecuteAction(new AddLapAction(new Lap(time, LapType.Lap), CurrentSession));
-      DrawMap(MapDrawingFlags.Route | MapDrawingFlags.Markers);
+      if (!CurrentSession.Laps.Exists(time))
+      {
+        ExecuteAction(new AddLapAction(new Lap(time, LapType.Lap), CurrentSession));
+        DrawMap(MapDrawingFlags.Route | MapDrawingFlags.Markers);
+      }
     }
 
     public void DeleteLap(Lap lap)
@@ -953,8 +971,15 @@ namespace QuickRoute.Controls
     private void EndActiveLapMoving()
     {
       movingActiveLapNow = false;
-      ExecuteAction(new EditLapAction(activeLap, oldActiveLap, CurrentSession));
-      DrawMap(MapDrawingFlags.Route | MapDrawingFlags.Markers);
+      if (!CurrentSession.Laps.Exists(activeLap.Time, 2))
+      {
+        ExecuteAction(new EditLapAction(activeLap, oldActiveLap, CurrentSession));
+        DrawMap(MapDrawingFlags.Route | MapDrawingFlags.Markers);
+      }
+      else
+      {
+        activeLap.Time = oldActiveLap.Time;
+      }
     }
 
     public static Cursor GetCursor(MouseTool mouseTool)

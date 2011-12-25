@@ -184,5 +184,15 @@ namespace QuickRoute.BusinessEntities
       }
 
     }
+
+    public bool Exists(DateTime time, int numberOfTimes = 1)
+    {
+      var count = 0;
+      foreach (var lap in this)
+      {
+        if (lap.Time == time) count++;
+      }
+      return count >= numberOfTimes;
+    }
   }
 }

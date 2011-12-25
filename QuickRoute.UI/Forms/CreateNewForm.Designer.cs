@@ -35,10 +35,10 @@ namespace QuickRoute.UI.Forms
       this.mapImageLayoutTable = new System.Windows.Forms.TableLayoutPanel();
       this.mapImageFileName = new System.Windows.Forms.ComboBox();
       this.mapImageFileNameBrowse = new System.Windows.Forms.Button();
-      this.mapImageFromFile = new System.Windows.Forms.RadioButton();
-      this.mapImageBlank = new System.Windows.Forms.RadioButton();
       this.mapImageFileFormatLabel = new System.Windows.Forms.Label();
       this.mapImageFileFormatComboBox = new System.Windows.Forms.ComboBox();
+      this.mapImageFromFile = new System.Windows.Forms.Label();
+      this.imageSizeLabel = new System.Windows.Forms.LinkLabel();
       this.routeGroup = new System.Windows.Forms.GroupBox();
       this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
       this.routeFromGpsDevice = new System.Windows.Forms.RadioButton();
@@ -49,8 +49,6 @@ namespace QuickRoute.UI.Forms
       this.routeFileNameBrowse = new System.Windows.Forms.Button();
       this.routeFileName = new System.Windows.Forms.ComboBox();
       this.refreshButton = new System.Windows.Forms.Button();
-      this.mapImageUrl = new System.Windows.Forms.TextBox();
-      this.mapImageFromUrl = new System.Windows.Forms.RadioButton();
       this.personGroup = new System.Windows.Forms.GroupBox();
       this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
       this.persons = new System.Windows.Forms.ComboBox();
@@ -90,20 +88,25 @@ namespace QuickRoute.UI.Forms
       resources.ApplyResources(this.mapImageLayoutTable, "mapImageLayoutTable");
       this.mapImageLayoutTable.Controls.Add(this.mapImageFileName, 1, 0);
       this.mapImageLayoutTable.Controls.Add(this.mapImageFileNameBrowse, 2, 0);
-      this.mapImageLayoutTable.Controls.Add(this.mapImageFromFile, 0, 0);
-      this.mapImageLayoutTable.Controls.Add(this.mapImageBlank, 0, 2);
       this.mapImageLayoutTable.Controls.Add(this.mapImageFileFormatLabel, 0, 1);
       this.mapImageLayoutTable.Controls.Add(this.mapImageFileFormatComboBox, 1, 1);
+      this.mapImageLayoutTable.Controls.Add(this.mapImageFromFile, 0, 0);
+      this.mapImageLayoutTable.Controls.Add(this.imageSizeLabel, 1, 2);
       this.mapImageLayoutTable.Name = "mapImageLayoutTable";
       // 
       // mapImageFileName
       // 
+      this.mapImageFileName.AllowDrop = true;
       resources.ApplyResources(this.mapImageFileName, "mapImageFileName");
       this.mapImageFileName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
       this.mapImageFileName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystem;
       this.mapImageFileName.FormattingEnabled = true;
       this.mapImageFileName.Name = "mapImageFileName";
+      this.mapImageFileName.SelectedValueChanged += new System.EventHandler(this.mapImageFileName_SelectedValueChanged);
       this.mapImageFileName.TextChanged += new System.EventHandler(this.mapImageFileName_TextChanged);
+      this.mapImageFileName.DragDrop += new System.Windows.Forms.DragEventHandler(this.mapImageFileName_DragDrop);
+      this.mapImageFileName.DragEnter += new System.Windows.Forms.DragEventHandler(this.mapImageFileName_DragEnter);
+      this.mapImageFileName.Leave += new System.EventHandler(this.mapImageFileName_Leave);
       // 
       // mapImageFileNameBrowse
       // 
@@ -111,21 +114,6 @@ namespace QuickRoute.UI.Forms
       this.mapImageFileNameBrowse.Name = "mapImageFileNameBrowse";
       this.mapImageFileNameBrowse.UseVisualStyleBackColor = true;
       this.mapImageFileNameBrowse.Click += new System.EventHandler(this.mapImageFileNameBrowse_Click);
-      // 
-      // mapImageFromFile
-      // 
-      resources.ApplyResources(this.mapImageFromFile, "mapImageFromFile");
-      this.mapImageFromFile.Checked = true;
-      this.mapImageFromFile.Name = "mapImageFromFile";
-      this.mapImageFromFile.TabStop = true;
-      this.mapImageFromFile.UseVisualStyleBackColor = true;
-      this.mapImageFromFile.CheckedChanged += new System.EventHandler(this.mapImageFromFile_CheckedChanged);
-      // 
-      // mapImageBlank
-      // 
-      resources.ApplyResources(this.mapImageBlank, "mapImageBlank");
-      this.mapImageBlank.Name = "mapImageBlank";
-      this.mapImageBlank.UseVisualStyleBackColor = true;
       // 
       // mapImageFileFormatLabel
       // 
@@ -138,6 +126,18 @@ namespace QuickRoute.UI.Forms
       this.mapImageFileFormatComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
       this.mapImageFileFormatComboBox.FormattingEnabled = true;
       this.mapImageFileFormatComboBox.Name = "mapImageFileFormatComboBox";
+      // 
+      // mapImageFromFile
+      // 
+      resources.ApplyResources(this.mapImageFromFile, "mapImageFromFile");
+      this.mapImageFromFile.Name = "mapImageFromFile";
+      this.mapImageFromFile.TabStop = true;
+      // 
+      // imageSizeLabel
+      // 
+      resources.ApplyResources(this.imageSizeLabel, "imageSizeLabel");
+      this.imageSizeLabel.Name = "imageSizeLabel";
+      this.imageSizeLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.imageSizeLabel_LinkClicked);
       // 
       // routeGroup
       // 
@@ -217,18 +217,6 @@ namespace QuickRoute.UI.Forms
       this.refreshButton.UseVisualStyleBackColor = true;
       this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
       // 
-      // mapImageUrl
-      // 
-      resources.ApplyResources(this.mapImageUrl, "mapImageUrl");
-      this.mapImageUrl.Name = "mapImageUrl";
-      // 
-      // mapImageFromUrl
-      // 
-      resources.ApplyResources(this.mapImageFromUrl, "mapImageFromUrl");
-      this.mapImageFromUrl.Name = "mapImageFromUrl";
-      this.mapImageFromUrl.UseVisualStyleBackColor = true;
-      this.mapImageFromUrl.ClientSizeChanged += new System.EventHandler(this.mapImageFromUrl_CheckedChanged);
-      // 
       // personGroup
       // 
       resources.ApplyResources(this.personGroup, "personGroup");
@@ -261,8 +249,6 @@ namespace QuickRoute.UI.Forms
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.CancelButton = this.cancel;
       this.Controls.Add(this.personGroup);
-      this.Controls.Add(this.mapImageUrl);
-      this.Controls.Add(this.mapImageFromUrl);
       this.Controls.Add(this.mapImageGroup);
       this.Controls.Add(this.cancel);
       this.Controls.Add(this.routeGroup);
@@ -282,7 +268,6 @@ namespace QuickRoute.UI.Forms
       this.tableLayoutPanel2.ResumeLayout(false);
       this.tableLayoutPanel2.PerformLayout();
       this.ResumeLayout(false);
-      this.PerformLayout();
 
     }
 
@@ -292,7 +277,6 @@ namespace QuickRoute.UI.Forms
     private System.Windows.Forms.Button cancel;
     private System.Windows.Forms.GroupBox mapImageGroup;
     private System.Windows.Forms.TableLayoutPanel mapImageLayoutTable;
-    private System.Windows.Forms.RadioButton mapImageFromFile;
     private System.Windows.Forms.GroupBox routeGroup;
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     private System.Windows.Forms.RadioButton routeFromGpsDevice;
@@ -302,9 +286,6 @@ namespace QuickRoute.UI.Forms
     private System.Windows.Forms.Label routeFileFormatLabel;
     private System.Windows.Forms.ComboBox routeGpsDevice;
     private System.Windows.Forms.Button mapImageFileNameBrowse;
-    private System.Windows.Forms.TextBox mapImageUrl;
-    private System.Windows.Forms.RadioButton mapImageFromUrl;
-    private System.Windows.Forms.RadioButton mapImageBlank;
     private System.Windows.Forms.Label mapImageFileFormatLabel;
     private System.Windows.Forms.ComboBox mapImageFileFormatComboBox;
     private System.Windows.Forms.ComboBox mapImageFileName;
@@ -314,5 +295,7 @@ namespace QuickRoute.UI.Forms
     private System.Windows.Forms.Label personNameLabel;
     private System.Windows.Forms.ComboBox persons;
     private System.Windows.Forms.Button refreshButton;
+    private System.Windows.Forms.Label mapImageFromFile;
+    private System.Windows.Forms.LinkLabel imageSizeLabel;
   }
 }

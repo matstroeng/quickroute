@@ -755,4 +755,13 @@
   <data name="RoutePropertyNameAndValue_NumberOfMapReadingsFromStart" xml:space="preserve">
     <value>Nombre de lectures (total): {0}</value>
   </data>
+  <data name="ImageSize" xml:space="preserve">
+    <value>Taille de l'image</value>
+  </data>
+  <data name="Pixels" xml:space="preserve">
+    <value>pixels</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Changer</value>
+  </data>
 </root>

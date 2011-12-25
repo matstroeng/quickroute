@@ -82,7 +82,7 @@ namespace QuickRoute.BusinessEntities
       // TODO: localize
       rls.ColorRange.Gradient.Name = WaypointAttribute.Pace.ToString();
       rls.MonochromeColor = rls.ColorRange.Gradient.GetColor(1);
-      rls.MonochromeWidth = rls.Width; 
+      rls.MonochromeWidth = rls.Width + 2 * rls.MaskWidth; 
       coll.Add(WaypointAttribute.Pace, rls);
 
       // default speed line settings
@@ -100,7 +100,7 @@ namespace QuickRoute.BusinessEntities
       // TODO: localize
       rls.ColorRange.Gradient.Name = WaypointAttribute.Speed.ToString();
       rls.MonochromeColor = rls.ColorRange.Gradient.GetColor(1);
-      rls.MonochromeWidth = rls.Width;
+      rls.MonochromeWidth = rls.Width + 2 * rls.MaskWidth;
       coll.Add(WaypointAttribute.Speed, rls);
 
       // default heart rate line settings
@@ -118,7 +118,7 @@ namespace QuickRoute.BusinessEntities
       // TODO: localize
       rls.ColorRange.Gradient.Name = WaypointAttribute.HeartRate.ToString();
       rls.MonochromeColor = rls.ColorRange.Gradient.GetColor(1);
-      rls.MonochromeWidth = rls.Width;
+      rls.MonochromeWidth = rls.Width + 2 * rls.MaskWidth;
       coll.Add(WaypointAttribute.HeartRate, rls);
 
       // default altitude line settings
@@ -137,7 +137,7 @@ namespace QuickRoute.BusinessEntities
       // TODO: localize
       rls.ColorRange.Gradient.Name = WaypointAttribute.Altitude.ToString();
       rls.MonochromeColor = rls.ColorRange.Gradient.GetColor(1);
-      rls.MonochromeWidth = rls.Width;
+      rls.MonochromeWidth = rls.Width + 2 * rls.MaskWidth;
       coll.Add(WaypointAttribute.Altitude, rls);
 
       // default direction line settings
@@ -155,7 +155,7 @@ namespace QuickRoute.BusinessEntities
       // TODO: localize
       rls.ColorRange.Gradient.Name = WaypointAttribute.DirectionDeviationToNextLap.ToString();
       rls.MonochromeColor = rls.ColorRange.Gradient.GetColor(1);
-      rls.MonochromeWidth = rls.Width;
+      rls.MonochromeWidth = rls.Width + 2 * rls.MaskWidth;
       coll.Add(WaypointAttribute.DirectionDeviationToNextLap, rls);
 
       // default map reading duration line settings
@@ -174,7 +174,7 @@ namespace QuickRoute.BusinessEntities
       // TODO: localize
       rls.ColorRange.Gradient.Name = WaypointAttribute.MapReadingDuration.ToString();
       rls.MonochromeColor = rls.ColorRange.Gradient.GetColor(1);
-      rls.MonochromeWidth = rls.Width;
+      rls.MonochromeWidth = rls.Width + 2 * rls.MaskWidth;
       coll.Add(WaypointAttribute.MapReadingDuration, rls);
 
 

@@ -220,7 +220,7 @@ namespace QuickRoute.BusinessEntities
     {
       foreach (var s in sessions)
       {
-        s.Initialize();
+        s.Initialize(true);
       }
     }
 
@@ -621,20 +621,22 @@ namespace QuickRoute.BusinessEntities
       return QuickRouteFileFormat.Unknown;
     }
 
-    /// <summary>
-    /// Opens a document from a file,
-    /// </summary>
-    /// <param name="fileName">The name of the file where the document is stored.</param>
-    /// <returns>A Document object</returns>
     public static Document OpenFromQrt(string fileName)
     {
+      using(var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+      {
+        return OpenFromQrt(fs, fileName);
+      }
+    }
+
+    public static Document OpenFromQrt(Stream stream, string fileNameForDocument = null)
+    {
       IFormatter formatter = new BinaryFormatter();
-      Stream stream = new FileStream(fileName, FileMode.Open);
       Document doc;
       try
       {
         doc = (Document)formatter.Deserialize(stream);
-        doc.FileName = fileName;
+        doc.FileName = fileNameForDocument;
       }
       catch (Exception ex)
       {
@@ -768,17 +770,18 @@ namespace QuickRoute.BusinessEntities
       var qualityByteArray = exif.GetProperty((int)ExifWorks.ExifWorks.TagNames.JPEGQuality, new byte[] { 80 });
 
       var encodingInfo = new JpegEncodingInfo((double)qualityByteArray[0] / 100);
-      var ms = new MemoryStream();
-      mapImage.Save(ms, encodingInfo.Encoder, encodingInfo.EncoderParams);
-      var document = new Document(new Map(ms), settings) { Sessions = ed.Sessions };
-      if (document.Sessions.Count > 0) document.ProjectionOrigin = document.Sessions[0].ProjectionOrigin;
-      document.FileName = fileName;
-      document.FileFormat = QuickRouteFileFormat.Jpeg;
-      document.Initialize();
-      ms.Close();
-      mapAndBorderImage.Dispose();
-      mapImage.Dispose();
-      return document;
+      using (var ms = new MemoryStream())
+      {
+        mapImage.Save(ms, encodingInfo.Encoder, encodingInfo.EncoderParams);
+        var document = new Document(new Map(ms), settings) { Sessions = ed.Sessions };
+        if (document.Sessions.Count > 0) document.ProjectionOrigin = document.Sessions[0].ProjectionOrigin;
+        document.FileName = fileName;
+        document.FileFormat = QuickRouteFileFormat.Jpeg;
+        document.Initialize();
+        mapAndBorderImage.Dispose();
+        mapImage.Dispose();
+        return document;
+      }
     }
 
     private static bool ArraysAreEqual(byte[] array1, byte[] array2)

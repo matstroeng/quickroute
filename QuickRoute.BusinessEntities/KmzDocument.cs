@@ -5,6 +5,7 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Xml;
+using QuickRoute.Common;
 
 namespace QuickRoute.BusinessEntities
 {
@@ -13,6 +14,17 @@ namespace QuickRoute.BusinessEntities
     public KmzDocument(string fileName)
     {
       CalculateImageAndTransformationMatrix(fileName);
+    }
+
+    public KmzDocument(Stream stream)
+    {
+      var tempFileName = CommonUtil.GetTempFileName();
+      using (var fs = new FileStream(tempFileName, FileMode.Create, FileAccess.Write))
+      {
+        CommonUtil.CopyStream(stream, fs);
+      }
+      CalculateImageAndTransformationMatrix(tempFileName);
+      File.Delete(tempFileName);
     }
 
     public Stream ImageStream { get; private set; }

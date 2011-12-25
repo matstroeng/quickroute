@@ -145,7 +145,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ok.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="cancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -172,7 +172,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cancel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="mapImageGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -237,69 +237,6 @@
   <data name="&gt;&gt;mapImageFileNameBrowse.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="mapImageFromFile.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="mapImageFromFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 7</value>
-  </data>
-  <data name="mapImageFromFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 7, 3, 3</value>
-  </data>
-  <data name="mapImageFromFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
-  </data>
-  <data name="mapImageFromFile.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="mapImageFromFile.Text" xml:space="preserve">
-    <value>From &amp;file:</value>
-  </data>
-  <data name="&gt;&gt;mapImageFromFile.Name" xml:space="preserve">
-    <value>mapImageFromFile</value>
-  </data>
-  <data name="&gt;&gt;mapImageFromFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mapImageFromFile.Parent" xml:space="preserve">
-    <value>mapImageLayoutTable</value>
-  </data>
-  <data name="&gt;&gt;mapImageFromFile.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="mapImageBlank.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="mapImageBlank.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mapImageBlank.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 64</value>
-  </data>
-  <data name="mapImageBlank.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 7, 3, 3</value>
-  </data>
-  <data name="mapImageBlank.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 17</value>
-  </data>
-  <data name="mapImageBlank.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="mapImageBlank.Text" xml:space="preserve">
-    <value>Blan&amp;k</value>
-  </data>
-  <data name="&gt;&gt;mapImageBlank.Name" xml:space="preserve">
-    <value>mapImageBlank</value>
-  </data>
-  <data name="&gt;&gt;mapImageBlank.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mapImageBlank.Parent" xml:space="preserve">
-    <value>mapImageLayoutTable</value>
-  </data>
-  <data name="&gt;&gt;mapImageBlank.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="mapImageFileFormatLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -331,7 +268,7 @@
     <value>mapImageLayoutTable</value>
   </data>
   <data name="&gt;&gt;mapImageFileFormatLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="mapImageFileFormatComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -358,6 +295,69 @@
     <value>mapImageLayoutTable</value>
   </data>
   <data name="&gt;&gt;mapImageFileFormatComboBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="mapImageFromFile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mapImageFromFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mapImageFromFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 7</value>
+  </data>
+  <data name="mapImageFromFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>19, 7, 3, 3</value>
+  </data>
+  <data name="mapImageFromFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="mapImageFromFile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mapImageFromFile.Text" xml:space="preserve">
+    <value>From &amp;file:</value>
+  </data>
+  <data name="&gt;&gt;mapImageFromFile.Name" xml:space="preserve">
+    <value>mapImageFromFile</value>
+  </data>
+  <data name="&gt;&gt;mapImageFromFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mapImageFromFile.Parent" xml:space="preserve">
+    <value>mapImageLayoutTable</value>
+  </data>
+  <data name="&gt;&gt;mapImageFromFile.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="imageSizeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="imageSizeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="imageSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 64</value>
+  </data>
+  <data name="imageSizeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 7, 3, 3</value>
+  </data>
+  <data name="imageSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 13</value>
+  </data>
+  <data name="imageSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;imageSizeLabel.Name" xml:space="preserve">
+    <value>imageSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;imageSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imageSizeLabel.Parent" xml:space="preserve">
+    <value>mapImageLayoutTable</value>
+  </data>
+  <data name="&gt;&gt;imageSizeLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="mapImageLayoutTable.Location" type="System.Drawing.Point, System.Drawing">
@@ -385,7 +385,7 @@
     <value>0</value>
   </data>
   <data name="mapImageLayoutTable.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="mapImageFileName" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileNameBrowse" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFromFile" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageBlank" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatComboBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,Absolute,497,Absolute,182" /&gt;&lt;Rows Styles="AutoSize,0,Absolute,28,Absolute,21" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="mapImageFileName" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileNameBrowse" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFileFormatComboBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="mapImageFromFile" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="imageSizeLabel" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,119,Absolute,497,Absolute,182" /&gt;&lt;Rows Styles="AutoSize,0,Absolute,28,Absolute,21" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="mapImageGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
@@ -409,7 +409,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;mapImageGroup.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="routeGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -694,70 +694,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;routeGroup.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="mapImageUrl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="mapImageUrl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 284</value>
-  </data>
-  <data name="mapImageUrl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>272, 20</value>
-  </data>
-  <data name="mapImageUrl.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="mapImageUrl.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;mapImageUrl.Name" xml:space="preserve">
-    <value>mapImageUrl</value>
-  </data>
-  <data name="&gt;&gt;mapImageUrl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mapImageUrl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;mapImageUrl.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="mapImageFromUrl.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="mapImageFromUrl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="mapImageFromUrl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 285</value>
-  </data>
-  <data name="mapImageFromUrl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 5, 3, 3</value>
-  </data>
-  <data name="mapImageFromUrl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 17</value>
-  </data>
-  <data name="mapImageFromUrl.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="mapImageFromUrl.Text" xml:space="preserve">
-    <value>From &amp;url:</value>
-  </data>
-  <data name="mapImageFromUrl.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;mapImageFromUrl.Name" xml:space="preserve">
-    <value>mapImageFromUrl</value>
-  </data>
-  <data name="&gt;&gt;mapImageFromUrl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mapImageFromUrl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;mapImageFromUrl.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="personGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>

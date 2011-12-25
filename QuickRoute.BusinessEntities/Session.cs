@@ -50,9 +50,8 @@ namespace QuickRoute.BusinessEntities
       this.settings = settings;
       this.initialTransformationMatrix = initialTransformationMatrix ??
                                          RouteAdjustmentManager.CreateInitialTransformationMatrix(this.route, mapSize, this.projectionOrigin);
-      this.route.CalculateWaypointAttributes();
       this.route.SuppressWaypointAttributeCalculation = false;
-      Initialize();
+      Initialize(true);
     }
 
     #endregion
@@ -141,10 +140,10 @@ namespace QuickRoute.BusinessEntities
 
     #region Public methods
 
-    public void Initialize()
+    public void Initialize(bool routeChanged)
     {
       SetLapTimesToRoute(route);
-      route.Initialize();
+      route.CalculateWaypointAttributes(routeChanged);
       route.EnsureUtcTimes();
       laps.EnsureUtcTimes();
       CreateAdjustedRoute();

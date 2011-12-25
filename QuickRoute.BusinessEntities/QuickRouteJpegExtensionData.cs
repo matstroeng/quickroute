@@ -61,7 +61,7 @@ namespace QuickRoute.BusinessEntities
     }
 
     /// <summary>
-    /// Creates a QuickRouteJpegExtensionData object from a stream containing a byte array with image data
+    /// Creates a QuickRouteJpegExtensionData object from a stream containing a byte array with image data.
     /// </summary>
     /// <param name="stream">A stream containing the byte array with data</param>
     /// <returns></returns>
@@ -294,6 +294,16 @@ namespace QuickRoute.BusinessEntities
           }
         }
       }
+    }
+
+    /// <summary>
+    /// Exports the QuickRouteJpegExtensionData object to a GPX file.
+    /// </summary>
+    /// <param name="stream">The stream to export the gpx file to.backbuffer</param>
+    public void ToGpx(Stream stream)
+    {
+      var gpxExporter = new GpxExporter(Sessions[0], stream);
+      gpxExporter.Export();
     }
 
     private static SessionCollection ReadSessions(BinaryReader reader)

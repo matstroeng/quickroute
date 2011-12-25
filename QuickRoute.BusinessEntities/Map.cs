@@ -41,7 +41,13 @@ namespace QuickRoute.BusinessEntities
           break;
       }
 
-      return StripQuickRouteHeader(stream);
+      var result = StripQuickRouteHeader(stream);
+      if(stream != null)
+      {
+        stream.Close();
+        stream.Dispose();
+      }
+      return result;
     }
 
     private Bitmap StripQuickRouteHeader(Stream stream)
@@ -66,8 +72,6 @@ namespace QuickRoute.BusinessEntities
         {
           targetImage = new Bitmap(sourceImage);
         }
-        stream.Close();
-        stream.Dispose();
       }
       return targetImage;
     }

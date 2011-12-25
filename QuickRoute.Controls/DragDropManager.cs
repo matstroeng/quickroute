@@ -8,7 +8,7 @@ namespace QuickRoute.Controls
 {
   public class DragDropManager
   {
-    public List<string> GetDroppedFileNames(DragEventArgs e, IEnumerable<string> allowedFileExtensions)
+    public List<string> GetDroppedFileNames(DragEventArgs e, IEnumerable<string> allowedFileExtensions = null)
     {
       var fileNames = new List<string>();
       if (e.Data.GetDataPresent(DataFormats.FileDrop))
