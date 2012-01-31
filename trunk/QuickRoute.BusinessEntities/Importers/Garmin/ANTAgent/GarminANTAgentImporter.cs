@@ -8,31 +8,29 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.ANTAgent
 {
   public class GarminANTAgentImporter : IGPSDeviceImporter
   {
-    private string path;
     private HistoryItem itemToImport;
 
     #region IRouteImporter Members
     public ImportResult ImportResult { get; set; }
 
     /// <summary>
-    /// The ...Application Data\GARMIN\Devices\ path. Shall end with a backslash.
+    /// The ...Application Data\GARMIN\Devices\ path(s). Shall end with a backslash.
     /// </summary>
-    public string Path
-    {
-      get { return path; }
-      set { path = value; }
-    }
+    public IEnumerable<string> Paths { get; set; }
 
     public DialogResult ShowPreImportDialogs()
     {
       var historyItems = new List<object>();
-      var baseDir = new DirectoryInfo(path);
-      foreach (DirectoryInfo di in baseDir.GetDirectories())
+      foreach (var path in Paths)
       {
-        var antDevice = new ANTDevice(path + di.Name + "\\");
-        foreach (HistoryItem hi in antDevice.HistoryItems)
+        var baseDir = new DirectoryInfo(path);
+        foreach (DirectoryInfo di in baseDir.GetDirectories())
         {
-          historyItems.Insert(0, hi);
+          var antDevice = new ANTDevice(path + di.Name + "\\");
+          foreach (HistoryItem hi in antDevice.HistoryItems)
+          {
+            historyItems.Insert(0, hi);
+          }
         }
       }
 
@@ -74,7 +72,14 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.ANTAgent
 
     public bool IsConnected
     {
-      get { return Directory.Exists(path); }
+      get
+      {
+        foreach(var path in Paths)
+        {
+          if (Directory.Exists(path)) return true;
+        }
+        return false;
+      }
     }
 
     public bool CachedDataExists
