@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -1918,11 +1918,11 @@
   <data name="menuToolsPublishMap.Text" xml:space="preserve">
     <value>&amp;Publish map...</value>
   </data>
-  <data name="menuToolsAddLapsFromWinSplits.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="menuToolsAddLapsFromExternalDataSource.Size" type="System.Drawing.Size, System.Drawing">
     <value>404, 22</value>
   </data>
-  <data name="menuToolsAddLapsFromWinSplits.Text" xml:space="preserve">
-    <value>Add split times from &amp;WinSplits...</value>
+  <data name="menuToolsAddLapsFromExternalDataSource.Text" xml:space="preserve">
+    <value>Add split times from &amp;external data source...</value>
   </data>
   <data name="menuTools.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
@@ -3060,10 +3060,10 @@
   <data name="&gt;&gt;menuToolsPublishMap.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;menuToolsAddLapsFromWinSplits.Name" xml:space="preserve">
-    <value>menuToolsAddLapsFromWinSplits</value>
+  <data name="&gt;&gt;menuToolsAddLapsFromExternalDataSource.Name" xml:space="preserve">
+    <value>menuToolsAddLapsFromExternalDataSource</value>
   </data>
-  <data name="&gt;&gt;menuToolsAddLapsFromWinSplits.Type" xml:space="preserve">
+  <data name="&gt;&gt;menuToolsAddLapsFromExternalDataSource.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuSettings.Name" xml:space="preserve">

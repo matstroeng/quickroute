@@ -103,11 +103,11 @@
     <Compile Include="Forms\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AddLapsFromWinSplits.cs">
+    <Compile Include="Forms\AddLapsFromExternalDataSource.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddLapsFromWinSplits.Designer.cs">
-      <DependentUpon>AddLapsFromWinSplits.cs</DependentUpon>
+    <Compile Include="Forms\AddLapsFromExternalDataSource.Designer.cs">
+      <DependentUpon>AddLapsFromExternalDataSource.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ApplicationSettingsEditor.cs">
       <SubType>Form</SubType>
@@ -255,7 +255,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Web References\WinSplitsWebServices\WebServices.wsdl" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -264,12 +263,8 @@
     <Compile Include="Forms\ColorChooser.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="Web References\QuickRouteServer\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
-    <Compile Include="Web References\WinSplitsWebServices\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -300,28 +295,28 @@
       <SubType>Designer</SubType>
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.de.resx">
-      <DependentUpon>AddLapsFromWinSplits.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AddLapsFromExternalDataSource.de.resx">
+      <DependentUpon>AddLapsFromExternalDataSource.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.fr.resx">
-      <DependentUpon>AddLapsFromWinSplits.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AddLapsFromExternalDataSource.fr.resx">
+      <DependentUpon>AddLapsFromExternalDataSource.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.no.resx">
-      <DependentUpon>AddLapsFromWinSplits.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AddLapsFromExternalDataSource.no.resx">
+      <DependentUpon>AddLapsFromExternalDataSource.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.resx">
-      <DependentUpon>AddLapsFromWinSplits.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AddLapsFromExternalDataSource.resx">
+      <DependentUpon>AddLapsFromExternalDataSource.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.ru.resx">
-      <DependentUpon>AddLapsFromWinSplits.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AddLapsFromExternalDataSource.ru.resx">
+      <DependentUpon>AddLapsFromExternalDataSource.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.sv.resx">
-      <DependentUpon>AddLapsFromWinSplits.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AddLapsFromExternalDataSource.sv.resx">
+      <DependentUpon>AddLapsFromExternalDataSource.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddSessionsForm.de.resx">
@@ -715,7 +710,9 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="app.production.config" />
+    <None Include="app.production.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\QuickRouteServer\GetCurrentVersionResponse.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -724,20 +721,6 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\WinSplitsWebServices\Category.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\WinSplitsWebServices\Event.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\WinSplitsWebServices\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\WinSplitsWebServices\Runner.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\WinSplitsWebServices\WebServices.disco" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -781,17 +764,6 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>QuickRoute_QuickRouteServer_QuickRouteServer</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="http://www.obasen.nu/winsplits/webservices/WebServices.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\WinSplitsWebServices\</RelPath>
-      <UpdateFromURL>http://www.obasen.nu/winsplits/webservices/WebServices.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>QuickRoute_WinSplitsWebServices_WebServices</CachedSettingsPropName>
-    </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\AboutBox.lt.resx">
@@ -799,7 +771,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.lt.resx">
+    <EmbeddedResource Include="Forms\AddLapsFromExternalDataSource.lt.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -881,7 +853,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.fi.resx">
+    <EmbeddedResource Include="Forms\AddLapsFromExternalDataSource.fi.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -990,7 +962,7 @@
     <EmbeddedResource Include="Forms\AboutBox.it.resx" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\AddLapsFromWinSplits.it.resx" />
+    <EmbeddedResource Include="Forms\AddLapsFromExternalDataSource.it.resx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\AddSessionsForm.it.resx" />

@@ -139,7 +139,7 @@ namespace QuickRoute.UI
       this.menuToolsOpenInGoogleEarth = new System.Windows.Forms.ToolStripMenuItem();
       this.menuToolsOpenMultipleFilesInGoogleEarth = new System.Windows.Forms.ToolStripMenuItem();
       this.menuToolsPublishMap = new System.Windows.Forms.ToolStripMenuItem();
-      this.menuToolsAddLapsFromWinSplits = new System.Windows.Forms.ToolStripMenuItem();
+      this.menuToolsAddLapsFromExternalDataSource = new System.Windows.Forms.ToolStripMenuItem();
       this.menuSettings = new System.Windows.Forms.ToolStripMenuItem();
       this.menuSettingsLanguage = new System.Windows.Forms.ToolStripMenuItem();
       this.menuHelp = new System.Windows.Forms.ToolStripMenuItem();
@@ -1017,7 +1017,7 @@ namespace QuickRoute.UI
             this.menuToolsOpenInGoogleEarth,
             this.menuToolsOpenMultipleFilesInGoogleEarth,
             this.menuToolsPublishMap,
-            this.menuToolsAddLapsFromWinSplits});
+            this.menuToolsAddLapsFromExternalDataSource});
       this.menuTools.Name = "menuTools";
       resources.ApplyResources(this.menuTools, "menuTools");
       // 
@@ -1039,11 +1039,11 @@ namespace QuickRoute.UI
       this.menuToolsPublishMap.Name = "menuToolsPublishMap";
       this.menuToolsPublishMap.Click += new System.EventHandler(this.menuToolsPublishMap_Click);
       // 
-      // menuToolsAddLapsFromWinSplits
+      // menuToolsAddLapsFromExternalDataSource
       // 
-      this.menuToolsAddLapsFromWinSplits.Name = "menuToolsAddLapsFromWinSplits";
-      resources.ApplyResources(this.menuToolsAddLapsFromWinSplits, "menuToolsAddLapsFromWinSplits");
-      this.menuToolsAddLapsFromWinSplits.Click += new System.EventHandler(this.menuToolsAddLapsFromWinSplits_Click);
+      this.menuToolsAddLapsFromExternalDataSource.Name = "menuToolsAddLapsFromExternalDataSource";
+      resources.ApplyResources(this.menuToolsAddLapsFromExternalDataSource, "menuToolsAddLapsFromExternalDataSource");
+      this.menuToolsAddLapsFromExternalDataSource.Click += new System.EventHandler(this.menuToolsAddLapsFromExternalDataSource_Click);
       // 
       // menuSettings
       // 
@@ -1210,7 +1210,7 @@ namespace QuickRoute.UI
     private System.Windows.Forms.ToolStripButton toolStripAutoAdjustColorRangeInterval;
     private System.Windows.Forms.ToolStripButton toolStripBottomPanelVisible;
     private System.Windows.Forms.ToolStripMenuItem menuTools;
-    private System.Windows.Forms.ToolStripMenuItem menuToolsAddLapsFromWinSplits;
+    private System.Windows.Forms.ToolStripMenuItem menuToolsAddLapsFromExternalDataSource;
     private System.Windows.Forms.Panel sessionPanel;
     private System.Windows.Forms.CheckedListBox sessions;
     private System.Windows.Forms.ToolStripMenuItem menuFileImportSessions;

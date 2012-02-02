@@ -70,6 +70,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -94,6 +96,13 @@
     <Compile Include="Exporters\GpxExporter.cs" />
     <Compile Include="Exporters\ImageExporter.cs" />
     <Compile Include="Exporters\RouteDataExporter.cs" />
+    <Compile Include="ExternalLapDataSources\Category.cs" />
+    <Compile Include="ExternalLapDataSources\CzechSplits\CzechSplitsLapDataSource.cs" />
+    <Compile Include="ExternalLapDataSources\Event.cs" />
+    <Compile Include="ExternalLapDataSources\ExternalLapDataSourceFactory.cs" />
+    <Compile Include="ExternalLapDataSources\IExternalLapDataSource.cs" />
+    <Compile Include="ExternalLapDataSources\Runner.cs" />
+    <Compile Include="ExternalLapDataSources\WinSplits\WinSplitsLapDataSource.cs" />
     <Compile Include="ExternalRoutePropertyRetriever.cs" />
     <Compile Include="Forms\ExportImageSizeAndQualitySelector.cs">
       <SubType>Form</SubType>
@@ -162,6 +171,11 @@
     <Compile Include="LapCollection.cs" />
     <Compile Include="LapInfo.cs" />
     <Compile Include="MapReadingState.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="RouteProperties\Altitude.cs" />
     <Compile Include="RouteProperties\AltitudeDifference.cs" />
     <Compile Include="RouteProperties\Ascent.cs" />
@@ -237,13 +251,59 @@
     <Compile Include="ApplicationSettings.cs" />
     <Compile Include="SessionSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\CzechSplitsWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WinSplitsWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Importers\GPX\GPX10\gpx1.0.xsd" />
     <None Include="Importers\GPX\GPX11\gpx1.1.xsd" />
     <None Include="Importers\GPX\GPX11\gpx1.1.xsx">
       <DependentUpon>gpx1.1.xsd</DependentUpon>
     </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CzechSplitsWebService\GetCategoriesResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CzechSplitsWebService\GetEventsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CzechSplitsWebService\GetRunnersAndSplitsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CzechSplitsWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CzechSplitsWebService\webservice.wsdl" />
+    <None Include="Web References\WinSplitsWebService\Category.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WinSplitsWebService\Event.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WinSplitsWebService\EventClubRunnerCount.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WinSplitsWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WinSplitsWebService\Runner.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WinSplitsWebService\WebServices.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.de.resx">
@@ -409,6 +469,7 @@
     <Content Include="Importers\GlobalSat\GH615M\toGPX.xsl" />
     <Content Include="Importers\GlobalSat\icon.ico" />
     <Content Include="Importers\GlobalSat\icon.png" />
+    <None Include="Web References\WinSplitsWebService\WebServices.disco" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.it.resx" />
@@ -425,6 +486,33 @@
   <ItemGroup>
     <Folder Include="Experimental\" />
     <Folder Include="ExternalReferences\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://bestik.cz/vysledky/webservice.php%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CzechSplitsWebService\</RelPath>
+      <UpdateFromURL>http://bestik.cz/vysledky/webservice.php%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QuickRoute_BusinessEntities_CzechSplitsWebService_ResultsDBService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.obasen.nu/winsplits/webservices/WebServices.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WinSplitsWebService\</RelPath>
+      <UpdateFromURL>http://www.obasen.nu/winsplits/webservices/WebServices.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QuickRoute_BusinessEntities_WinSplitsWebService_WebServices</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

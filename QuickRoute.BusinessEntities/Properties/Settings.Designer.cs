@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuickRoute.UI.Properties {
+namespace QuickRoute.BusinessEntities.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,10 +26,20 @@ namespace QuickRoute.UI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://www.matstroeng.se/quickroute/server/index.php")]
-        public string QuickRoute_QuickRouteServer_QuickRouteServer {
+        [global::System.Configuration.DefaultSettingValueAttribute("http://www.obasen.nu/winsplits/webservices/WebServices.asmx")]
+        public string QuickRoute_BusinessEntities_WinSplitsWebService_WebServices {
             get {
-                return ((string)(this["QuickRoute_QuickRouteServer_QuickRouteServer"]));
+                return ((string)(this["QuickRoute_BusinessEntities_WinSplitsWebService_WebServices"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://bestik.cz/vysledky/webservice.php")]
+        public string QuickRoute_BusinessEntities_CzechSplitsWebService_ResultsDBService {
+            get {
+                return ((string)(this["QuickRoute_BusinessEntities_CzechSplitsWebService_ResultsDBService"]));
             }
         }
     }

@@ -279,7 +279,7 @@
   <data name="menuToolsPublishMap.Text" xml:space="preserve">
     <value>&amp;Publier la carte...</value>
   </data>
-  <data name="menuToolsAddLapsFromWinSplits.Text" xml:space="preserve">
+  <data name="menuToolsAddLapsFromExternalDataSource.Text" xml:space="preserve">
     <value>Ajouter les temps intermédiaires depuis &amp;WinSplits</value>
   </data>
   <data name="menuTools.Text" xml:space="preserve">

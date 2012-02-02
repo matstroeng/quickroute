@@ -1089,7 +1089,7 @@ namespace QuickRoute.UI
       menuEditRedo.Enabled = (redoStack.Count > 0);
       menuEditSeparator1.Enabled = documentOpened;
       menuEditChangeStartTime.Enabled = documentOpened;
-      menuToolsAddLapsFromWinSplits.Enabled = documentOpened;
+      menuToolsAddLapsFromExternalDataSource.Enabled = documentOpened;
       menuToolsPublishMap.Enabled = documentOpened;
       menuToolsOpenInGoogleEarth.Enabled = documentOpened;
       menuViewRightPanelVisible.Enabled = documentOpened;
@@ -2091,9 +2091,9 @@ namespace QuickRoute.UI
       }
     }
 
-    private void AddLapsFromWinSplits()
+    private void AddLapsFromExternalDataSource()
     {
-      using (var form = new AddLapsFromWinSplits())
+      using (var form = new AddLapsFromExternalDataSource())
       {
         form.ShowDialog();
         if (form.DialogResult == DialogResult.OK)
@@ -2752,9 +2752,9 @@ namespace QuickRoute.UI
       ToggleBottomPanel(menuViewBottomPanelVisible.Checked);
     }
 
-    private void menuToolsAddLapsFromWinSplits_Click(object sender, EventArgs e)
+    private void menuToolsAddLapsFromExternalDataSource_Click(object sender, EventArgs e)
     {
-      AddLapsFromWinSplits();
+      AddLapsFromExternalDataSource();
     }
 
     private void menuToolsPublishMap_Click(object sender, EventArgs e)

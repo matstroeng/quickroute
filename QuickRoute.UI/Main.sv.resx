@@ -894,11 +894,11 @@
   <data name="menuToolsPublishMap.Text" xml:space="preserve">
     <value>&amp;Publicera karta...</value>
   </data>
-  <data name="menuToolsAddLapsFromWinSplits.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="menuToolsAddLapsFromExternalDataSource.Size" type="System.Drawing.Size, System.Drawing">
     <value>372, 22</value>
   </data>
-  <data name="menuToolsAddLapsFromWinSplits.Text" xml:space="preserve">
-    <value>Lägg till mellantider från &amp;WinSplits...</value>
+  <data name="menuToolsAddLapsFromExternalDataSource.Text" xml:space="preserve">
+    <value>Lägg till mellantider från &amp;extern datakälla...</value>
   </data>
   <data name="menuTools.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 20</value>
