@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="QuickRoute.BusinessEntities.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="QuickRoute_BusinessEntities_WinSplitsWebService_WebServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.obasen.nu/winsplits/webservices/WebServices.asmx</Value>
+    </Setting>
+    <Setting Name="QuickRoute_BusinessEntities_CzechSplitsWebService_ResultsDBService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://bestik.cz/vysledky/webservice.php</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

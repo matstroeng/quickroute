@@ -118,26 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="winSplitsEvents.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 146</value>
-  </data>
-  <data name="winSplitsEvents.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 21</value>
+  <data name="events.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 190</value>
   </data>
   <data name="categories.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 186</value>
-  </data>
-  <data name="categories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 21</value>
+    <value>12, 230</value>
   </data>
   <data name="runners.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 226</value>
-  </data>
-  <data name="runners.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 21</value>
+    <value>12, 270</value>
   </data>
   <data name="eventLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 130</value>
+    <value>9, 174</value>
   </data>
   <data name="eventLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 13</value>
@@ -146,13 +137,13 @@
     <value>&amp;Tävling</value>
   </data>
   <data name="classLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 170</value>
+    <value>9, 214</value>
   </data>
   <data name="classLabel.Text" xml:space="preserve">
     <value>&amp;Klass</value>
   </data>
   <data name="runnerLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 210</value>
+    <value>9, 254</value>
   </data>
   <data name="runnerLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 13</value>
@@ -161,22 +152,22 @@
     <value>&amp;Deltagare</value>
   </data>
   <data name="ok.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 255</value>
+    <value>122, 299</value>
   </data>
   <data name="cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 255</value>
+    <value>203, 299</value>
   </data>
   <data name="cancel.Text" xml:space="preserve">
     <value>Avbryt</value>
   </data>
   <data name="startDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 107</value>
+    <value>12, 151</value>
   </data>
   <data name="endDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 107</value>
+    <value>109, 151</value>
   </data>
   <data name="startDateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 91</value>
+    <value>9, 135</value>
   </data>
   <data name="startDateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 13</value>
@@ -185,7 +176,7 @@
     <value>&amp;Startdatum</value>
   </data>
   <data name="endDateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 91</value>
+    <value>106, 135</value>
   </data>
   <data name="endDateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 13</value>
@@ -194,13 +185,13 @@
     <value>Sl&amp;utdatum</value>
   </data>
   <data name="uiInformation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 73</value>
+    <value>266, 75</value>
   </data>
   <data name="uiInformation.Text" xml:space="preserve">
-    <value>Du kan automatiskt lägga till mellantider till QuickRoute-passet om tävlingen finns i WinSplits databas. Välj tävling, klass och deltagare och kilcka OK.</value>
+    <value>Du kan automatiskt lägga till mellantider till QuickRoute-passet om tävlingen finns i en extern datakälla. Välj tävling, klass och deltagare och klicka OK.</value>
   </data>
   <data name="search.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 106</value>
+    <value>206, 151</value>
   </data>
   <data name="search.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 23</value>
@@ -208,14 +199,25 @@
   <data name="search.Text" xml:space="preserve">
     <value>S&amp;ök</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>287, 290</value>
+  <data name="dataSourceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 95</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="dataSourceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 13</value>
+  </data>
+  <data name="dataSourceLabel.Text" xml:space="preserve">
+    <value>Data&amp;källa</value>
+  </data>
+  <data name="dataSources.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 111</value>
+  </data>
+  <data name="dataSources.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 21</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>287, 334</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Lägg till mellantider från WinSplits</value>
+    <value>Lägg till mellantider från extern datakälla</value>
   </data>
 </root>

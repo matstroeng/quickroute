@@ -309,7 +309,7 @@
   <data name="menuToolsPublishMap.Text" xml:space="preserve">
     <value>&amp;Publiser kart...</value>
   </data>
-  <data name="menuToolsAddLapsFromWinSplits.Text" xml:space="preserve">
+  <data name="menuToolsAddLapsFromExternalDataSource.Text" xml:space="preserve">
     <value>Legg til mellomtider fra &amp;WinSplints...</value>
   </data>
   <data name="menuTools.Text" xml:space="preserve">

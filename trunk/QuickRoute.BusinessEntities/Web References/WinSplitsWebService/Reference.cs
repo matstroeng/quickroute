@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace QuickRoute.UI.WinSplitsWebServices {
+namespace QuickRoute.BusinessEntities.WinSplitsWebService {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
@@ -35,11 +35,13 @@ namespace QuickRoute.UI.WinSplitsWebServices {
         
         private System.Threading.SendOrPostCallback GetRunnersAndSplitsOperationCompleted;
         
+        private System.Threading.SendOrPostCallback GetRunnersPerClubAndEventOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
         public WebServices() {
-            this.Url = global::QuickRoute.UI.Properties.Settings.Default.QuickRoute_WinSplitsWebServices_WebServices;
+            this.Url = global::QuickRoute.BusinessEntities.Properties.Settings.Default.QuickRoute_BusinessEntities_WinSplitsWebService_WebServices;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
@@ -83,27 +85,32 @@ namespace QuickRoute.UI.WinSplitsWebServices {
         public event GetRunnersAndSplitsCompletedEventHandler GetRunnersAndSplitsCompleted;
         
         /// <remarks/>
+        public event GetRunnersPerClubAndEventCompletedEventHandler GetRunnersPerClubAndEventCompleted;
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.winsplits.se/GetEvents", RequestNamespace="http://www.winsplits.se/", ResponseNamespace="http://www.winsplits.se/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public Event[] GetEvents(System.DateTime startDate, System.DateTime endDate) {
+        public Event[] GetEvents(System.DateTime startDate, System.DateTime endDate, string country) {
             object[] results = this.Invoke("GetEvents", new object[] {
                         startDate,
-                        endDate});
+                        endDate,
+                        country});
             return ((Event[])(results[0]));
         }
         
         /// <remarks/>
-        public void GetEventsAsync(System.DateTime startDate, System.DateTime endDate) {
-            this.GetEventsAsync(startDate, endDate, null);
+        public void GetEventsAsync(System.DateTime startDate, System.DateTime endDate, string country) {
+            this.GetEventsAsync(startDate, endDate, country, null);
         }
         
         /// <remarks/>
-        public void GetEventsAsync(System.DateTime startDate, System.DateTime endDate, object userState) {
+        public void GetEventsAsync(System.DateTime startDate, System.DateTime endDate, string country, object userState) {
             if ((this.GetEventsOperationCompleted == null)) {
                 this.GetEventsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetEventsOperationCompleted);
             }
             this.InvokeAsync("GetEvents", new object[] {
                         startDate,
-                        endDate}, this.GetEventsOperationCompleted, userState);
+                        endDate,
+                        country}, this.GetEventsOperationCompleted, userState);
         }
         
         private void OnGetEventsOperationCompleted(object arg) {
@@ -170,6 +177,39 @@ namespace QuickRoute.UI.WinSplitsWebServices {
             if ((this.GetRunnersAndSplitsCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetRunnersAndSplitsCompleted(this, new GetRunnersAndSplitsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.winsplits.se/GetRunnersPerClubAndEvent", RequestNamespace="http://www.winsplits.se/", ResponseNamespace="http://www.winsplits.se/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public EventClubRunnerCount[] GetRunnersPerClubAndEvent(System.DateTime startDate, System.DateTime endDate, string country) {
+            object[] results = this.Invoke("GetRunnersPerClubAndEvent", new object[] {
+                        startDate,
+                        endDate,
+                        country});
+            return ((EventClubRunnerCount[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetRunnersPerClubAndEventAsync(System.DateTime startDate, System.DateTime endDate, string country) {
+            this.GetRunnersPerClubAndEventAsync(startDate, endDate, country, null);
+        }
+        
+        /// <remarks/>
+        public void GetRunnersPerClubAndEventAsync(System.DateTime startDate, System.DateTime endDate, string country, object userState) {
+            if ((this.GetRunnersPerClubAndEventOperationCompleted == null)) {
+                this.GetRunnersPerClubAndEventOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetRunnersPerClubAndEventOperationCompleted);
+            }
+            this.InvokeAsync("GetRunnersPerClubAndEvent", new object[] {
+                        startDate,
+                        endDate,
+                        country}, this.GetRunnersPerClubAndEventOperationCompleted, userState);
+        }
+        
+        private void OnGetRunnersPerClubAndEventOperationCompleted(object arg) {
+            if ((this.GetRunnersPerClubAndEventCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetRunnersPerClubAndEventCompleted(this, new GetRunnersPerClubAndEventCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -245,6 +285,72 @@ namespace QuickRoute.UI.WinSplitsWebServices {
             }
             set {
                 this.databaseIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.233")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.winsplits.se/")]
+    public partial class ClubRunnerCount {
+        
+        private string clubField;
+        
+        private int noOfRunnersField;
+        
+        /// <remarks/>
+        public string Club {
+            get {
+                return this.clubField;
+            }
+            set {
+                this.clubField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int NoOfRunners {
+            get {
+                return this.noOfRunnersField;
+            }
+            set {
+                this.noOfRunnersField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.233")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.winsplits.se/")]
+    public partial class EventClubRunnerCount {
+        
+        private Event eventField;
+        
+        private ClubRunnerCount[] clubRunnerCountsField;
+        
+        /// <remarks/>
+        public Event Event {
+            get {
+                return this.eventField;
+            }
+            set {
+                this.eventField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ClubRunnerCount[] ClubRunnerCounts {
+            get {
+                return this.clubRunnerCountsField;
+            }
+            set {
+                this.clubRunnerCountsField = value;
             }
         }
     }
@@ -427,6 +533,32 @@ namespace QuickRoute.UI.WinSplitsWebServices {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((Runner[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.1")]
+    public delegate void GetRunnersPerClubAndEventCompletedEventHandler(object sender, GetRunnersPerClubAndEventCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.0.30319.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetRunnersPerClubAndEventCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetRunnersPerClubAndEventCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public EventClubRunnerCount[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((EventClubRunnerCount[])(this.results[0]));
             }
         }
     }

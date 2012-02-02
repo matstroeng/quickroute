@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.bestik.cz/vysledky" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.bestik.cz/vysledky" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.bestik.cz/vysledky">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="GetEvents">
+        <xsd:all>
+          <xsd:element name="startDate" type="xsd:dateTime" />
+          <xsd:element name="endDate" type="xsd:dateTime" />
+          <xsd:element name="country" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetEventsResponse">
+        <xsd:all>
+          <xsd:element name="GetEventsResult" type="tns:ArrayOfEvent" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfEvent">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:Event[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Event">
+        <xsd:all>
+          <xsd:element name="Name" type="xsd:string" />
+          <xsd:element name="Organiser" type="xsd:string" />
+          <xsd:element name="StartDate" type="xsd:dateTime" />
+          <xsd:element name="DatabaseId" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetCategories">
+        <xsd:all>
+          <xsd:element name="databaseId" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetCategoriesResponse">
+        <xsd:all>
+          <xsd:element name="GetCategoriesResult" type="tns:ArrayOfCategory" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfCategory">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:Category[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Category">
+        <xsd:all>
+          <xsd:element name="Name" type="xsd:string" />
+          <xsd:element name="NoOfRunners" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetRunnersAndSplits">
+        <xsd:all>
+          <xsd:element name="databaseId" type="xsd:string" />
+          <xsd:element name="categoryIndex" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetRunnersAndSplitsResponse">
+        <xsd:all>
+          <xsd:element name="GetRunnersAndSplitsResult" type="tns:ArrayOfRunner" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfRunner">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:Runner[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Runner">
+        <xsd:all>
+          <xsd:element name="Name" type="xsd:string" />
+          <xsd:element name="Club" type="xsd:string" />
+          <xsd:element name="StartTime" type="xsd:dateTime" />
+          <xsd:element name="FinishTime" type="xsd:dateTime" />
+          <xsd:element name="Splits" type="tns:ArrayOfDateTime" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfDateTime">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:dateTime[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="dateTime">
+        <xsd:all>
+          <xsd:element name="dateTime" type="xsd:dateTime" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetRunnersPerClubAndEvent">
+        <xsd:all>
+          <xsd:element name="startDate" type="xsd:dateTime" />
+          <xsd:element name="endDate" type="xsd:dateTime" />
+          <xsd:element name="country" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="GetRunnersPerClubAndEventResponse">
+        <xsd:all>
+          <xsd:element name="GetRunnersPerClubAndEventResult" type="tns:ArrayOfEventClubRunnerCount" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfEventClubRunnerCount">
+        <xsd:all>
+          <xsd:element name="EventClubRunnerCount" type="tns:EventClubRunnerCount" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="EventClubRunnerCount">
+        <xsd:all>
+          <xsd:element name="Event" type="tns:Event" />
+          <xsd:element name="ClubRunnerCounts" type="tns:ArrayOfClubRunnerCount" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfClubRunnerCount">
+        <xsd:all>
+          <xsd:element name="ClubRunnerCount" type="tns:ClubRunnerCount" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ClubRunnerCount">
+        <xsd:all>
+          <xsd:element name="Club" type="xsd:string" />
+          <xsd:element name="NoOfRunners" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEventsRequest">
+    <wsdl:part name="request" type="tns:GetEvents" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsResponse">
+    <wsdl:part name="response" type="tns:GetEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesRequest">
+    <wsdl:part name="request" type="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesResponse">
+    <wsdl:part name="response" type="tns:GetCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRunnersAndSplitsRequest">
+    <wsdl:part name="request" type="tns:GetRunnersAndSplits" />
+  </wsdl:message>
+  <wsdl:message name="GetRunnersAndSplitsResponse">
+    <wsdl:part name="response" type="tns:GetRunnersAndSplitsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ResultsDBServicePortType">
+    <wsdl:operation name="GetEvents">
+      <wsdl:input message="tns:GetEventsRequest" />
+      <wsdl:output message="tns:GetEventsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input message="tns:GetCategoriesRequest" />
+      <wsdl:output message="tns:GetCategoriesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRunnersAndSplits">
+      <wsdl:input message="tns:GetRunnersAndSplitsRequest" />
+      <wsdl:output message="tns:GetRunnersAndSplitsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ResultsDBServiceBinding" type="tns:ResultsDBServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="GetEvents">
+      <soap:operation soapAction="http://bestik.cz/vysledky/webservice.php/GetEvents" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.bestik.cz/vysledky" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.bestik.cz/vysledky" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap:operation soapAction="http://bestik.cz/vysledky/webservice.php/GetCategories" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.bestik.cz/vysledky" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.bestik.cz/vysledky" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRunnersAndSplits">
+      <soap:operation soapAction="http://bestik.cz/vysledky/webservice.php/GetRunnersAndSplits" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.bestik.cz/vysledky" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.bestik.cz/vysledky" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ResultsDBService">
+    <wsdl:port name="ResultsDBServicePort" binding="tns:ResultsDBServiceBinding">
+      <soap:address location="http://bestik.cz/vysledky/webservice.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
