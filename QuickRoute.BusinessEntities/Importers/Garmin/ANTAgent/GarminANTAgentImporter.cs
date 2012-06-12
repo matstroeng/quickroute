@@ -14,19 +14,19 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.ANTAgent
     public ImportResult ImportResult { get; set; }
 
     /// <summary>
-    /// The ...Application Data\GARMIN\Devices\ path(s). Shall end with a backslash.
+    /// The ...Application Data\GARMIN\Devices\ path. Shall end with a backslash.
     /// </summary>
-    public IEnumerable<string> Paths { get; set; }
+    public string Path { get; set; }
 
     public DialogResult ShowPreImportDialogs()
     {
       var historyItems = new List<object>();
-      foreach (var path in Paths)
+      var baseDir = new DirectoryInfo(Path);
+      if (baseDir.Exists)
       {
-        var baseDir = new DirectoryInfo(path);
         foreach (DirectoryInfo di in baseDir.GetDirectories())
         {
-          var antDevice = new ANTDevice(path + di.Name + "\\");
+          var antDevice = new ANTDevice(Path + di.Name + "\\");
           foreach (HistoryItem hi in antDevice.HistoryItems)
           {
             historyItems.Insert(0, hi);
@@ -74,11 +74,7 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.ANTAgent
     {
       get
       {
-        foreach(var path in Paths)
-        {
-          if (Directory.Exists(path)) return true;
-        }
-        return false;
+        return Directory.Exists(Path);
       }
     }
 

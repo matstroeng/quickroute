@@ -234,12 +234,72 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AboutBox.da.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddLapsFromExternalDataSource.da.resx">
+      <DependentUpon>AddLapsFromExternalDataSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddSessionsForm.da.resx">
+      <DependentUpon>AddSessionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ColorChooser.da.resx">
+      <DependentUpon>ColorChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ColorRangeIntervalEditor.da.resx">
+      <DependentUpon>ColorRangeIntervalEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateNewForm.da.resx">
+      <DependentUpon>CreateNewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateNewForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>CreateNewForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExceptionMessageBox.da.resx">
+      <DependentUpon>ExceptionMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportRouteDataDialog.da.resx">
+      <DependentUpon>ExportRouteDataDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GradientEditor.da.resx">
+      <DependentUpon>GradientEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImageManipulator.da.resx">
+      <DependentUpon>ImageManipulator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ImageManipulator.sv.resx">
       <DependentUpon>ImageManipulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KmlPropertySelectorDialog.da.resx">
+      <DependentUpon>KmlPropertySelectorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewVersionDialog.da.resx">
+      <DependentUpon>NewVersionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OpenMultipleFilesInGoogleEarthDialog.da.resx">
+      <DependentUpon>OpenMultipleFilesInGoogleEarthDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PublishMapForm.da.resx">
+      <DependentUpon>PublishMapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.da.resx">
+      <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RefreshDevicesProgressIndicator.lt.resx">
+      <DependentUpon>RefreshDevicesProgressIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectRoutePropertyTypesForm.da.resx">
+      <DependentUpon>SelectRoutePropertyTypesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectUICultureForm.da.resx">
+      <DependentUpon>SelectUICultureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimeDialog.da.resx">
+      <DependentUpon>TimeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.da.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -153,8 +153,8 @@
       this.webServiceURL.FormattingEnabled = true;
       this.webServiceURL.Name = "webServiceURL";
       this.webServiceURL.SelectedIndexChanged += new System.EventHandler(this.webServiceURL_SelectedIndexChanged);
-      this.webServiceURL.Leave += new System.EventHandler(this.webServiceURL_Leave);
       this.webServiceURL.Enter += new System.EventHandler(this.control_Enter);
+      this.webServiceURL.Leave += new System.EventHandler(this.webServiceURL_Leave);
       // 
       // username
       // 

@@ -362,7 +362,7 @@ namespace QuickRoute.BusinessEntities.CzechSplitsWebService {
         
         private string databaseIdField;
         
-        private string categoryIndexField;
+        private int categoryIndexField;
         
         /// <remarks/>
         public string databaseId {
@@ -375,7 +375,7 @@ namespace QuickRoute.BusinessEntities.CzechSplitsWebService {
         }
         
         /// <remarks/>
-        public string categoryIndex {
+        public int categoryIndex {
             get {
                 return this.categoryIndexField;
             }

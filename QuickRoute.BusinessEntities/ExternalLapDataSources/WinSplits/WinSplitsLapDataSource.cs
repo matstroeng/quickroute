@@ -30,9 +30,9 @@ namespace QuickRoute.BusinessEntities.ExternalLapDataSources.WinSplits
       return translatedCategories;
     }
 
-    public IEnumerable<Runner> GetRunnersAndSplits(string eventId, string categoryIndex)
+    public IEnumerable<Runner> GetRunnersAndSplits(string eventId, int categoryIndex)
     {
-      var runners = service.GetRunnersAndSplits(int.Parse(eventId), short.Parse(categoryIndex));
+      var runners = service.GetRunnersAndSplits(int.Parse(eventId), (short)categoryIndex);
       var translatedRunners = new List<Runner>();
       foreach (var r in runners)
       {

@@ -126,8 +126,8 @@
   <data name="&gt;&gt;SizeInPixelsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RotateClockwise.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ToolStrip.Text" xml:space="preserve">
+    <value>toolStrip1</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ScaleTextbox.Size" type="System.Drawing.Size, System.Drawing">
@@ -136,7 +136,7 @@
   <data name="RotateClockwise.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAESSURBVDhPY2CgMjAEmjcNiC8A8RsgfgDEu4E4E4i5CNlV
+        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAESSURBVDhPY2CgMjAEmjcNiC8A8RsgfgDEu4E4E4i5CNlV
         BFTwHYj/48BngeLauAypwKLpLxaxu0AxGXRDTIECf5AU3wOyM4BYD4jtoV5Cll+PbsAyJM3XsNkAFPMH
         4s9I6kBhAsINIMNuIUn4oZluAORPAOKlQPwJi5c2gtS/gko8BtLcaAaIA/lHsWgEBfQ/ILYCqQdFF0jg
         NhCzoBkA4vIA8SEshhwHijGCFIBCFmTAbyA2wWIASEgEiE+gGZIAU7sBSWIXkM2EwxAxoPgFqNonQJoP
@@ -157,14 +157,11 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ImageManipulator</value>
   </data>
-  <data name="ToolStrip.Text" xml:space="preserve">
-    <value>toolStrip1</value>
+  <data name="ScrollY.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="SizeInPixelsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 22</value>
-  </data>
-  <data name="RotateClockwise.Text" xml:space="preserve">
-    <value>toolStripButton1</value>
   </data>
   <data name="&gt;&gt;ToolStrip.Name" xml:space="preserve">
     <value>ToolStrip</value>
@@ -203,17 +200,23 @@
   <data name="&gt;&gt;ScrollX.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="&gt;&gt;RotateClockwise.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Cancel.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="RotateCounterclockwise.ToolTipText" xml:space="preserve">
+    <value>Rotate 90° counterclockwise</value>
+  </data>
+  <data name="RotateClockwise.Text" xml:space="preserve">
+    <value>toolStripButton1</value>
   </data>
   <data name="&gt;&gt;ToolStrip.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;SizeLabel.Name" xml:space="preserve">
     <value>SizeLabel</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>934, 662</value>
   </data>
   <data name="SizeInPixelsLabel.Text" xml:space="preserve">
     <value>100 x 100</value>
@@ -254,6 +257,9 @@
   <data name="Cancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>847, 627</value>
   </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="RotateClockwise.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
@@ -265,6 +271,9 @@
   </data>
   <data name="RotateCounterclockwise.Text" xml:space="preserve">
     <value>toolStripButton1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
   </data>
   <data name="&gt;&gt;ToolStrip.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -281,19 +290,11 @@
   <data name="ScrollX.Size" type="System.Drawing.Size, System.Drawing">
     <value>917, 17</value>
   </data>
-  <data name="RotateCounterclockwise.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAERSURBVDhPY2CgEeACmpsJxLuB+AEQvwHiC0A8DYgNCdmp
-        DVRwFoj/48DfgeJFuAyRAUrcxaLxLxaxCmyGrEdS+AfqZHsgrQfEGUB8D03eFGRIA9S/ID/DnP0ZyPbH
-        YgPIhdeQ1C0DqdmIxXmfgGJLgXgCEBugGeSHpP4WSM4KiP9hMQTkmqNALI5mADeQ/xiq/hVIjhGIj2Mx
-        4BBQjAeLN1iAYreh6kHRCwYJaAacAPJFsGgGCZkA8W+oelCMgQEfED+BCl4A0mI4NDMBxXchWbYBWd1s
-        IOcRECtg0QzSaAnEW9Fc6o6sVhPIAWFsAJQG0FPmJBxqsQp3ohmwAMhnJsWARKBiUJTtB+IIUjQSVAsA
-        bIVkMcKXGigAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="&gt;&gt;ScrollY.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="RotateClockwise.ToolTipText" xml:space="preserve">
+    <value>Rotate 90° clockwise</value>
   </data>
   <data name="&gt;&gt;OK.Parent" xml:space="preserve">
     <value>$this</value>
@@ -325,14 +326,11 @@
   <data name="&gt;&gt;ScaleTextbox.Name" xml:space="preserve">
     <value>ScaleTextbox</value>
   </data>
-  <data name="OK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
   <data name="RotateCounterclockwise.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
+  <data name="OK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
   <data name="&gt;&gt;RotateClockwise.Name" xml:space="preserve">
     <value>RotateClockwise</value>
@@ -352,11 +350,19 @@
   <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
     <value>toolStripSeparator2</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>934, 662</value>
   </data>
-  <data name="ScrollY.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="RotateCounterclockwise.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAERSURBVDhPY2CgEeACmpsJxLuB+AEQvwHiC0A8DYgNCdmp
+        DVRwFoj/48DfgeJFuAyRAUrcxaLxLxaxCmyGrEdS+AfqZHsgrQfEGUB8D03eFGRIA9S/ID/DnP0ZyPbH
+        YgPIhdeQ1C0DqdmIxXmfgGJLgXgCEBugGeSHpP4WSM4KiP9hMQTkmqNALI5mADeQ/xiq/hVIjhGIj2Mx
+        4BBQjAeLN1iAYreh6kHRCwYJaAacAPJFsGgGCZkA8W+oelCMgQEfED+BCl4A0mI4NDMBxXchWbYBWd1s
+        IOcRECtg0QzSaAnEW9Fc6o6sVhPIAWFsAJQG0FPmJBxqsQp3ohmwAMhnJsWARKBiUJTtB+IIUjQSVAsA
+        bIVkMcKXGigAAAAASUVORK5CYII=
+</value>
   </data>
   <data name="ToolStrip.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

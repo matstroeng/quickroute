@@ -129,6 +129,9 @@
         bIVkMcKXGigAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="RotateCounterclockwise.ToolTipText" xml:space="preserve">
+    <value>Rotera 90° moturs</value>
+  </data>
   <data name="RotateClockwise.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -139,6 +142,9 @@
         ps4dzeStQL4lDoMUgOKPgHg2uiWTsPgRlBawAU2gIAijAGYgbwGaIZ04DMArHAGU3Q/EoKhNJMcAkvUA
         ABFCZDFzoHHbAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="RotateClockwise.ToolTipText" xml:space="preserve">
+    <value>Rotera 90° medurs</value>
   </data>
   <data name="SizeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 22</value>

@@ -441,6 +441,7 @@ namespace QuickRoute.UI
             this.toolStripSeparator4,
             this.circleTimeRadiusLabel,
             this.circleTimeRadius});
+      this.routeAppearanceToolstrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
       this.routeAppearanceToolstrip.Name = "routeAppearanceToolstrip";
       // 
       // colorCodingAttributes

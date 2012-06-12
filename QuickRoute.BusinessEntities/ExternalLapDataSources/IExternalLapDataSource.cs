@@ -7,6 +7,6 @@ namespace QuickRoute.BusinessEntities.ExternalLapDataSources
   {
     IEnumerable<Event> GetEvents(DateTime startDate, DateTime endDate, string country);
     IEnumerable<Category> GetCategories(string eventId);
-    IEnumerable<Runner> GetRunnersAndSplits(string eventId, string categoryIndex);
+    IEnumerable<Runner> GetRunnersAndSplits(string eventId, int categoryIndex);
   }
 }

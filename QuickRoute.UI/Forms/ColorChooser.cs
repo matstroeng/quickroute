@@ -105,53 +105,37 @@ namespace QuickRoute.UI.Forms
       // 
       // lblBlue
       // 
-      this.lblBlue.AccessibleDescription = null;
-      this.lblBlue.AccessibleName = null;
       resources.ApplyResources(this.lblBlue, "lblBlue");
       this.lblBlue.Name = "lblBlue";
       // 
       // lblGreen
       // 
-      this.lblGreen.AccessibleDescription = null;
-      this.lblGreen.AccessibleName = null;
       resources.ApplyResources(this.lblGreen, "lblGreen");
       this.lblGreen.Name = "lblGreen";
       // 
       // lblRed
       // 
-      this.lblRed.AccessibleDescription = null;
-      this.lblRed.AccessibleName = null;
       resources.ApplyResources(this.lblRed, "lblRed");
       this.lblRed.Name = "lblRed";
       // 
       // lblBrightness
       // 
-      this.lblBrightness.AccessibleDescription = null;
-      this.lblBrightness.AccessibleName = null;
       resources.ApplyResources(this.lblBrightness, "lblBrightness");
       this.lblBrightness.Name = "lblBrightness";
       // 
       // lblSaturation
       // 
-      this.lblSaturation.AccessibleDescription = null;
-      this.lblSaturation.AccessibleName = null;
       resources.ApplyResources(this.lblSaturation, "lblSaturation");
       this.lblSaturation.Name = "lblSaturation";
       // 
       // lblHue
       // 
-      this.lblHue.AccessibleDescription = null;
-      this.lblHue.AccessibleName = null;
       resources.ApplyResources(this.lblHue, "lblHue");
       this.lblHue.Name = "lblHue";
       // 
       // hsbBlue
       // 
-      this.hsbBlue.AccessibleDescription = null;
-      this.hsbBlue.AccessibleName = null;
       resources.ApplyResources(this.hsbBlue, "hsbBlue");
-      this.hsbBlue.BackgroundImage = null;
-      this.hsbBlue.Font = null;
       this.hsbBlue.LargeChange = 1;
       this.hsbBlue.Maximum = 255;
       this.hsbBlue.Name = "hsbBlue";
@@ -159,11 +143,7 @@ namespace QuickRoute.UI.Forms
       // 
       // hsbGreen
       // 
-      this.hsbGreen.AccessibleDescription = null;
-      this.hsbGreen.AccessibleName = null;
       resources.ApplyResources(this.hsbGreen, "hsbGreen");
-      this.hsbGreen.BackgroundImage = null;
-      this.hsbGreen.Font = null;
       this.hsbGreen.LargeChange = 1;
       this.hsbGreen.Maximum = 255;
       this.hsbGreen.Name = "hsbGreen";
@@ -171,11 +151,7 @@ namespace QuickRoute.UI.Forms
       // 
       // hsbRed
       // 
-      this.hsbRed.AccessibleDescription = null;
-      this.hsbRed.AccessibleName = null;
       resources.ApplyResources(this.hsbRed, "hsbRed");
-      this.hsbRed.BackgroundImage = null;
-      this.hsbRed.Font = null;
       this.hsbRed.LargeChange = 1;
       this.hsbRed.Maximum = 255;
       this.hsbRed.Name = "hsbRed";
@@ -183,11 +159,7 @@ namespace QuickRoute.UI.Forms
       // 
       // hsbBrightness
       // 
-      this.hsbBrightness.AccessibleDescription = null;
-      this.hsbBrightness.AccessibleName = null;
       resources.ApplyResources(this.hsbBrightness, "hsbBrightness");
-      this.hsbBrightness.BackgroundImage = null;
-      this.hsbBrightness.Font = null;
       this.hsbBrightness.LargeChange = 1;
       this.hsbBrightness.Maximum = 255;
       this.hsbBrightness.Name = "hsbBrightness";
@@ -195,11 +167,7 @@ namespace QuickRoute.UI.Forms
       // 
       // hsbSaturation
       // 
-      this.hsbSaturation.AccessibleDescription = null;
-      this.hsbSaturation.AccessibleName = null;
       resources.ApplyResources(this.hsbSaturation, "hsbSaturation");
-      this.hsbSaturation.BackgroundImage = null;
-      this.hsbSaturation.Font = null;
       this.hsbSaturation.LargeChange = 1;
       this.hsbSaturation.Maximum = 255;
       this.hsbSaturation.Name = "hsbSaturation";
@@ -207,11 +175,7 @@ namespace QuickRoute.UI.Forms
       // 
       // hsbHue
       // 
-      this.hsbHue.AccessibleDescription = null;
-      this.hsbHue.AccessibleName = null;
       resources.ApplyResources(this.hsbHue, "hsbHue");
-      this.hsbHue.BackgroundImage = null;
-      this.hsbHue.Font = null;
       this.hsbHue.LargeChange = 1;
       this.hsbHue.Maximum = 255;
       this.hsbHue.Name = "hsbHue";
@@ -219,106 +183,69 @@ namespace QuickRoute.UI.Forms
       // 
       // btnCancel
       // 
-      this.btnCancel.AccessibleDescription = null;
-      this.btnCancel.AccessibleName = null;
       resources.ApplyResources(this.btnCancel, "btnCancel");
-      this.btnCancel.BackgroundImage = null;
       this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-      this.btnCancel.Font = null;
       this.btnCancel.Name = "btnCancel";
       // 
       // btnOK
       // 
-      this.btnOK.AccessibleDescription = null;
-      this.btnOK.AccessibleName = null;
       resources.ApplyResources(this.btnOK, "btnOK");
-      this.btnOK.BackgroundImage = null;
       this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
       this.btnOK.Name = "btnOK";
       // 
       // Label3
       // 
-      this.Label3.AccessibleDescription = null;
-      this.Label3.AccessibleName = null;
       resources.ApplyResources(this.Label3, "Label3");
       this.Label3.Name = "Label3";
       // 
       // Label7
       // 
-      this.Label7.AccessibleDescription = null;
-      this.Label7.AccessibleName = null;
       resources.ApplyResources(this.Label7, "Label7");
       this.Label7.Name = "Label7";
       // 
       // pnlColor
       // 
-      this.pnlColor.AccessibleDescription = null;
-      this.pnlColor.AccessibleName = null;
       resources.ApplyResources(this.pnlColor, "pnlColor");
-      this.pnlColor.BackgroundImage = null;
-      this.pnlColor.Font = null;
       this.pnlColor.Name = "pnlColor";
       // 
       // Label6
       // 
-      this.Label6.AccessibleDescription = null;
-      this.Label6.AccessibleName = null;
       resources.ApplyResources(this.Label6, "Label6");
       this.Label6.Name = "Label6";
       // 
       // Label1
       // 
-      this.Label1.AccessibleDescription = null;
-      this.Label1.AccessibleName = null;
       resources.ApplyResources(this.Label1, "Label1");
       this.Label1.Name = "Label1";
       // 
       // Label5
       // 
-      this.Label5.AccessibleDescription = null;
-      this.Label5.AccessibleName = null;
       resources.ApplyResources(this.Label5, "Label5");
       this.Label5.Name = "Label5";
       // 
       // pnlSelectedColor
       // 
-      this.pnlSelectedColor.AccessibleDescription = null;
-      this.pnlSelectedColor.AccessibleName = null;
       resources.ApplyResources(this.pnlSelectedColor, "pnlSelectedColor");
-      this.pnlSelectedColor.BackgroundImage = null;
-      this.pnlSelectedColor.Font = null;
       this.pnlSelectedColor.Name = "pnlSelectedColor";
       // 
       // pnlBrightness
       // 
-      this.pnlBrightness.AccessibleDescription = null;
-      this.pnlBrightness.AccessibleName = null;
       resources.ApplyResources(this.pnlBrightness, "pnlBrightness");
-      this.pnlBrightness.BackgroundImage = null;
-      this.pnlBrightness.Font = null;
       this.pnlBrightness.Name = "pnlBrightness";
       // 
       // Label2
       // 
-      this.Label2.AccessibleDescription = null;
-      this.Label2.AccessibleName = null;
       resources.ApplyResources(this.Label2, "Label2");
       this.Label2.Name = "Label2";
       // 
       // lblAlpha
       // 
-      this.lblAlpha.AccessibleDescription = null;
-      this.lblAlpha.AccessibleName = null;
       resources.ApplyResources(this.lblAlpha, "lblAlpha");
       this.lblAlpha.Name = "lblAlpha";
       // 
       // hsbAlpha
       // 
-      this.hsbAlpha.AccessibleDescription = null;
-      this.hsbAlpha.AccessibleName = null;
       resources.ApplyResources(this.hsbAlpha, "hsbAlpha");
-      this.hsbAlpha.BackgroundImage = null;
-      this.hsbAlpha.Font = null;
       this.hsbAlpha.LargeChange = 1;
       this.hsbAlpha.Maximum = 255;
       this.hsbAlpha.Name = "hsbAlpha";
@@ -326,27 +253,18 @@ namespace QuickRoute.UI.Forms
       // 
       // label8
       // 
-      this.label8.AccessibleDescription = null;
-      this.label8.AccessibleName = null;
       resources.ApplyResources(this.label8, "label8");
       this.label8.Name = "label8";
       // 
       // pnlAlpha
       // 
-      this.pnlAlpha.AccessibleDescription = null;
-      this.pnlAlpha.AccessibleName = null;
       resources.ApplyResources(this.pnlAlpha, "pnlAlpha");
-      this.pnlAlpha.BackgroundImage = null;
-      this.pnlAlpha.Font = null;
       this.pnlAlpha.Name = "pnlAlpha";
       // 
       // ColorChooser
       // 
       this.AcceptButton = this.btnOK;
-      this.AccessibleDescription = null;
-      this.AccessibleName = null;
       resources.ApplyResources(this, "$this");
-      this.BackgroundImage = null;
       this.CancelButton = this.btnCancel;
       this.Controls.Add(this.pnlAlpha);
       this.Controls.Add(this.lblAlpha);
@@ -376,17 +294,16 @@ namespace QuickRoute.UI.Forms
       this.Controls.Add(this.pnlBrightness);
       this.Controls.Add(this.Label2);
       this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-      this.Icon = null;
       this.MaximizeBox = false;
       this.MinimizeBox = false;
       this.Name = "ColorChooser";
       this.ShowIcon = false;
       this.ShowInTaskbar = false;
       this.Load += new System.EventHandler(this.ColorChooser2_Load);
-      this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmMain_MouseUp);
       this.Paint += new System.Windows.Forms.PaintEventHandler(this.ColorChooser2_Paint);
       this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HandleMouse);
       this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HandleMouse);
+      this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frmMain_MouseUp);
       this.ResumeLayout(false);
 
 		}

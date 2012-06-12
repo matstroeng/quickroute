@@ -91,6 +91,9 @@
     <Compile Include="GarminUtil.cs" />
     <Compile Include="Program_Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GarminSessionSelector.da.resx">
+      <DependentUpon>GarminSessionSelector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GarminSessionSelector.de.resx">
       <DependentUpon>GarminSessionSelector.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -110,6 +113,9 @@
     <EmbeddedResource Include="GarminSessionSelector.sv.resx">
       <DependentUpon>GarminSessionSelector.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressIndicator.da.resx">
+      <DependentUpon>ProgressIndicator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressIndicator.de.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>
@@ -144,6 +150,7 @@
       <DependentUpon>GarminSessionSelector.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Strings.da.resx" />
     <EmbeddedResource Include="Strings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>

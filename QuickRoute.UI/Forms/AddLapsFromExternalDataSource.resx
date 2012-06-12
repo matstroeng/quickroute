@@ -128,9 +128,6 @@
   <data name="&gt;&gt;endDateLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Add split times from external data source</value>
-  </data>
   <data name="&gt;&gt;runners.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -140,27 +137,33 @@
   <data name="dataSourceLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 98</value>
   </data>
+  <data name="uiInformation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 80</value>
+  </data>
   <data name="&gt;&gt;endDateLabel.Name" xml:space="preserve">
     <value>endDateLabel</value>
   </data>
   <data name="cancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="dataSourceLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;search.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;endDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="classLabel.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AddLapsFromExternalDataSource</value>
   </data>
-  <data name="&gt;&gt;endDateLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;runners.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dataSourceLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;cancel.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -198,8 +201,8 @@
   <data name="&gt;&gt;events.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="endDateLabel.Text" xml:space="preserve">
-    <value>&amp;End date</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Add split times from external data source</value>
   </data>
   <data name="search.Location" type="System.Drawing.Point, System.Drawing">
     <value>206, 153</value>
@@ -216,8 +219,8 @@
   <data name="&gt;&gt;startDateLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="uiInformation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 80</value>
+  <data name="&gt;&gt;startDate.Name" xml:space="preserve">
+    <value>startDate</value>
   </data>
   <data name="endDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 20</value>
@@ -228,6 +231,9 @@
   <data name="search.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
+  <data name="&gt;&gt;endDate.Name" xml:space="preserve">
+    <value>endDate</value>
+  </data>
   <data name="endDateLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -236,9 +242,6 @@
   </data>
   <data name="dataSourceLabel.Text" xml:space="preserve">
     <value>&amp;Data source</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
   </data>
   <data name="uiInformation.Text" xml:space="preserve">
     <value>You can automatically add your split times to a QuickRoute session if the competition exists in an external split time data source. Select competition, class and runner and click OK.
@@ -286,9 +289,6 @@
   <data name="endDate.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;startDate.Name" xml:space="preserve">
-    <value>startDate</value>
-  </data>
   <data name="uiInformation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -297,6 +297,9 @@
   </data>
   <data name="&gt;&gt;runnerLabel.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;classLabel.Name" xml:space="preserve">
+    <value>classLabel</value>
   </data>
   <data name="startDate.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 154</value>
@@ -337,20 +340,17 @@
   <data name="&gt;&gt;uiInformation.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="endDateLabel.Text" xml:space="preserve">
+    <value>&amp;End date</value>
+  </data>
   <data name="&gt;&gt;eventLabel.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="&gt;&gt;runners.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;categories.Name" xml:space="preserve">
-    <value>categories</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
   </data>
   <data name="eventLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 13</value>
-  </data>
-  <data name="dataSources.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="runners.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
@@ -360,6 +360,9 @@
   </data>
   <data name="classLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 13</value>
+  </data>
+  <data name="&gt;&gt;startDate.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="endDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -388,17 +391,11 @@
   <data name="&gt;&gt;uiInformation.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;search.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="eventLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 177</value>
+  <data name="dataSources.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;startDateLabel.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="startDateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 138</value>
   </data>
   <data name="&gt;&gt;cancel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -430,11 +427,11 @@
   <data name="runners.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 273</value>
   </data>
-  <data name="startDateLabel.Text" xml:space="preserve">
-    <value>&amp;Start date</value>
+  <data name="startDateLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 138</value>
   </data>
-  <data name="&gt;&gt;classLabel.Name" xml:space="preserve">
-    <value>classLabel</value>
+  <data name="startDateLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="startDateLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -448,14 +445,14 @@
   <data name="&gt;&gt;startDateLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="startDateLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="runners.Size" type="System.Drawing.Size, System.Drawing">
     <value>266, 21</value>
   </data>
   <data name="&gt;&gt;eventLabel.Name" xml:space="preserve">
     <value>eventLabel</value>
+  </data>
+  <data name="cancel.Text" xml:space="preserve">
+    <value>Cancel</value>
   </data>
   <data name="&gt;&gt;runnerLabel.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -487,8 +484,8 @@
   <data name="&gt;&gt;cancel.Name" xml:space="preserve">
     <value>cancel</value>
   </data>
-  <data name="&gt;&gt;endDate.Name" xml:space="preserve">
-    <value>endDate</value>
+  <data name="&gt;&gt;endDateLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;dataSources.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -505,9 +502,6 @@
   <data name="&gt;&gt;dataSourceLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="categories.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
   <data name="classLabel.Text" xml:space="preserve">
     <value>&amp;Class</value>
   </data>
@@ -516,6 +510,9 @@
   </data>
   <data name="startDate.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
+  </data>
+  <data name="startDateLabel.Text" xml:space="preserve">
+    <value>&amp;Start date</value>
   </data>
   <data name="&gt;&gt;uiInformation.Name" xml:space="preserve">
     <value>uiInformation</value>
@@ -532,23 +529,23 @@
   <data name="&gt;&gt;endDate.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="&gt;&gt;runnerLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="runners.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="&gt;&gt;search.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;categories.Name" xml:space="preserve">
+    <value>categories</value>
   </data>
   <data name="&gt;&gt;classLabel.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="uiInformation.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="categories.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;runnerLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="eventLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 177</value>
   </data>
   <data name="events.Size" type="System.Drawing.Size, System.Drawing">
     <value>266, 21</value>
@@ -556,8 +553,8 @@
   <data name="&gt;&gt;runners.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="&gt;&gt;startDate.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="uiInformation.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="&gt;&gt;ok.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -579,6 +576,9 @@
   </data>
   <data name="&gt;&gt;dataSourceLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;search.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -30,7 +30,7 @@ namespace QuickRoute.BusinessEntities.ExternalLapDataSources.CzechSplits
       return translatedCategories;
     }
 
-    public IEnumerable<Runner> GetRunnersAndSplits(string eventId, string categoryIndex)
+    public IEnumerable<Runner> GetRunnersAndSplits(string eventId, int categoryIndex)
     {
       var response = service.GetRunnersAndSplits(new GetRunnersAndSplits() { databaseId = eventId, categoryIndex = categoryIndex});
       var translatedRunners = new List<Runner>();

@@ -57,7 +57,7 @@
       <xsd:complexType name="GetRunnersAndSplits">
         <xsd:all>
           <xsd:element name="databaseId" type="xsd:string" />
-          <xsd:element name="categoryIndex" type="xsd:string" />
+          <xsd:element name="categoryIndex" type="xsd:int" />
         </xsd:all>
       </xsd:complexType>
       <xsd:complexType name="GetRunnersAndSplitsResponse">

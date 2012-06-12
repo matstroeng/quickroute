@@ -475,7 +475,7 @@ namespace QuickRoute.BusinessEntities
             secondaryColorCodingAttribute);
 
           // filter vertices
-          vertices = FilterVertices(vertices);
+          vertices = FilterVertices(vertices, AdjustedRoute);
 
           for (int i = 0; i < vertices.Count - 1; i++)
           {
@@ -706,9 +706,7 @@ namespace QuickRoute.BusinessEntities
     /// <summary>
     /// Reduces the number of vertices by removing "unnecessary" vertices, eg those that do not differ much in color and won't change the direction of the line much.
     /// </summary>
-    /// <param name="vertices"></param>
-    /// <returns></returns>
-    private static List<RouteLineVertex> FilterVertices(IList<RouteLineVertex> vertices)
+    private static List<RouteLineVertex> FilterVertices(IList<RouteLineVertex> vertices, AdjustedRoute adjustedRoute)
     {
       const double colorDistanceThreshold = 32;
       const double distanceFromLineThreshold = 0.5;
@@ -718,10 +716,12 @@ namespace QuickRoute.BusinessEntities
       var lastIndex = 0;
       for (var i = 0; i < vertices.Count; i++)
       {
-        var includeVertex = i == 0 ||                                      // always include first vertex
-                            i == vertices.Count - 1 ||                     // always include last vertex
-                            vertices[i].SecondaryColor != null ||          // currently no filtering when secondary colors are used
-                            i - lastIndex >= maxSubsequentSkippedVertices; // not too many vertices in a row can be skipped
+        var includeVertex = i == 0 ||                                                             // always include first vertex
+                            i == vertices.Count - 1 ||                                            // always include last vertex
+                            adjustedRoute.IsStartOfSegment(vertices[i].ParameterizedLocation) ||  // always include first vertex of route segment
+                            adjustedRoute.IsEndOfSegment(vertices[i].ParameterizedLocation) ||    // always include first vertex of route segment
+                            vertices[i].SecondaryColor != null ||                                 // currently no filtering when secondary colors are used
+                            i - lastIndex >= maxSubsequentSkippedVertices;                        // not too many vertices in a row can be skipped
         if (!includeVertex)
         {
           var colorDistance = ColorDistance(GraphicsUtil.AlphaAdjustColor(vertices[lastIndex].Color, vertices[lastIndex].AlphaAdjustment),

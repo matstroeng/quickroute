@@ -45,11 +45,7 @@ namespace QuickRoute.BusinessEntities.Importers
 
       // Garmin ANT Agent
       GarminANTAgentImporter antImporter = new GarminANTAgentImporter();
-      antImporter.Paths = new[]
-                            {
-                              Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\GARMIN\Devices\",
-                              Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Roaming\GARMIN\Devices\"
-                            };
+      antImporter.Path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\GARMIN\Devices\";
       GPSDevice antDevice = new GPSDevice(antImporter);
       supportedGPSDevices.Add(antDevice);
 
