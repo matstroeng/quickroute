@@ -80,6 +80,7 @@
       <LastGenOutput>Images.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Strings.da.resx" />
     <EmbeddedResource Include="Strings.de.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>

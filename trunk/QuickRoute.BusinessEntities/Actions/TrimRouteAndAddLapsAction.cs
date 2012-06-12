@@ -15,11 +15,6 @@ namespace QuickRoute.BusinessEntities.Actions
     private List<AddLapAction> addLapActions;
     private readonly TimeSpan offset;
 
-    public TrimRouteAndAddLapsAction()
-    {
-      
-    }
-
     public TrimRouteAndAddLapsAction(DateTime? startTime, DateTime? endTime, List<Lap> laps, Session session)
     {
       StartTime = startTime;

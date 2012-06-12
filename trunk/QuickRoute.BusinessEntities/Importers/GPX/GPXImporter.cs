@@ -190,6 +190,9 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
       {
         foreach (var trk in gpx11.trk)
         {
+          // Garmin Training Center exports each lap as a separate trkseg with end time of trkseg n equal to start time of trkseg n+1
+          // handle this issue
+
           foreach (var trkseg in trk.trkseg)
           {
             var routeSegment = new RouteSegment();

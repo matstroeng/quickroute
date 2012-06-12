@@ -44,82 +44,53 @@
       // 
       // ok
       // 
-      this.ok.AccessibleDescription = null;
-      this.ok.AccessibleName = null;
       resources.ApplyResources(this.ok, "ok");
-      this.ok.BackgroundImage = null;
-      this.ok.Font = null;
       this.ok.Name = "ok";
       this.ok.UseVisualStyleBackColor = true;
       this.ok.Click += new System.EventHandler(this.ok_Click);
       // 
       // cancel
       // 
-      this.cancel.AccessibleDescription = null;
-      this.cancel.AccessibleName = null;
       resources.ApplyResources(this.cancel, "cancel");
-      this.cancel.BackgroundImage = null;
       this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-      this.cancel.Font = null;
       this.cancel.Name = "cancel";
       this.cancel.UseVisualStyleBackColor = true;
       this.cancel.Click += new System.EventHandler(this.cancel_Click);
       // 
       // tableLayoutPanel1
       // 
-      this.tableLayoutPanel1.AccessibleDescription = null;
-      this.tableLayoutPanel1.AccessibleName = null;
       resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-      this.tableLayoutPanel1.BackgroundImage = null;
       this.tableLayoutPanel1.Controls.Add(this.imageQualityLabel, 0, 1);
       this.tableLayoutPanel1.Controls.Add(this.sizeLabel, 0, 0);
       this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
       this.tableLayoutPanel1.Controls.Add(this.imageQualityComboBox, 1, 1);
-      this.tableLayoutPanel1.Font = null;
       this.tableLayoutPanel1.Name = "tableLayoutPanel1";
       // 
       // imageQualityLabel
       // 
-      this.imageQualityLabel.AccessibleDescription = null;
-      this.imageQualityLabel.AccessibleName = null;
       resources.ApplyResources(this.imageQualityLabel, "imageQualityLabel");
-      this.imageQualityLabel.Font = null;
       this.imageQualityLabel.Name = "imageQualityLabel";
       // 
       // sizeLabel
       // 
-      this.sizeLabel.AccessibleDescription = null;
-      this.sizeLabel.AccessibleName = null;
       resources.ApplyResources(this.sizeLabel, "sizeLabel");
-      this.sizeLabel.Font = null;
       this.sizeLabel.Name = "sizeLabel";
       // 
       // panel1
       // 
-      this.panel1.AccessibleDescription = null;
-      this.panel1.AccessibleName = null;
       resources.ApplyResources(this.panel1, "panel1");
-      this.panel1.BackgroundImage = null;
       this.panel1.Controls.Add(this.sizeInPixels);
       this.panel1.Controls.Add(this.percentualSizeComboBox);
-      this.panel1.Font = null;
       this.panel1.Name = "panel1";
       // 
       // sizeInPixels
       // 
-      this.sizeInPixels.AccessibleDescription = null;
-      this.sizeInPixels.AccessibleName = null;
       resources.ApplyResources(this.sizeInPixels, "sizeInPixels");
-      this.sizeInPixels.Font = null;
       this.sizeInPixels.Name = "sizeInPixels";
       // 
       // percentualSizeComboBox
       // 
-      this.percentualSizeComboBox.AccessibleDescription = null;
-      this.percentualSizeComboBox.AccessibleName = null;
       resources.ApplyResources(this.percentualSizeComboBox, "percentualSizeComboBox");
-      this.percentualSizeComboBox.BackgroundImage = null;
-      this.percentualSizeComboBox.Font = null;
       this.percentualSizeComboBox.FormattingEnabled = true;
       this.percentualSizeComboBox.Items.AddRange(new object[] {
             resources.GetString("percentualSizeComboBox.Items"),
@@ -129,16 +100,12 @@
             resources.GetString("percentualSizeComboBox.Items4"),
             resources.GetString("percentualSizeComboBox.Items5")});
       this.percentualSizeComboBox.Name = "percentualSizeComboBox";
-      this.percentualSizeComboBox.Leave += new System.EventHandler(this.percentualSizeComboBox_Leave);
       this.percentualSizeComboBox.TextChanged += new System.EventHandler(this.percentualSizeComboBox_TextChanged);
+      this.percentualSizeComboBox.Leave += new System.EventHandler(this.percentualSizeComboBox_Leave);
       // 
       // imageQualityComboBox
       // 
-      this.imageQualityComboBox.AccessibleDescription = null;
-      this.imageQualityComboBox.AccessibleName = null;
       resources.ApplyResources(this.imageQualityComboBox, "imageQualityComboBox");
-      this.imageQualityComboBox.BackgroundImage = null;
-      this.imageQualityComboBox.Font = null;
       this.imageQualityComboBox.FormattingEnabled = true;
       this.imageQualityComboBox.Items.AddRange(new object[] {
             resources.GetString("imageQualityComboBox.Items"),
@@ -157,18 +124,13 @@
       // ExportImageSizeAndQualitySelector
       // 
       this.AcceptButton = this.ok;
-      this.AccessibleDescription = null;
-      this.AccessibleName = null;
       resources.ApplyResources(this, "$this");
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.BackgroundImage = null;
       this.CancelButton = this.cancel;
       this.Controls.Add(this.tableLayoutPanel1);
       this.Controls.Add(this.cancel);
       this.Controls.Add(this.ok);
-      this.Font = null;
       this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-      this.Icon = null;
       this.MaximizeBox = false;
       this.MinimizeBox = false;
       this.Name = "ExportImageSizeAndQualitySelector";

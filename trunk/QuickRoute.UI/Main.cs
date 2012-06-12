@@ -2093,7 +2093,8 @@ namespace QuickRoute.UI
 
     private void AddLapsFromExternalDataSource()
     {
-      using (var form = new AddLapsFromExternalDataSource())
+      var routeStartTime = canvas.CurrentSession.Route.FirstWaypoint.Time;
+      using (var form = new AddLapsFromExternalDataSource(routeStartTime.Date, routeStartTime.Date, 0))
       {
         form.ShowDialog();
         if (form.DialogResult == DialogResult.OK)
@@ -2127,6 +2128,7 @@ namespace QuickRoute.UI
           HandleAction(action);
 
           canvas.DrawMap(Canvas.MapDrawingFlags.Route | Canvas.MapDrawingFlags.Markers);
+          ApplicationSettings.ExternaLapDataSourceIndex = form.SelectedDataSourceIndex;
         }
       }
     }

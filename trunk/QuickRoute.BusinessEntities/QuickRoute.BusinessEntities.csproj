@@ -306,6 +306,9 @@
     <None Include="Web References\WinSplitsWebService\WebServices.wsdl" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.da.resx">
+      <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.de.resx">
       <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -329,6 +332,9 @@
     <EmbeddedResource Include="Forms\ExportImageSizeAndQualitySelector.sv.resx">
       <DependentUpon>ExportImageSizeAndQualitySelector.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportImageSizeSelector.da.resx">
+      <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportImageSizeSelector.de.resx">
       <DependentUpon>ExportImageSizeSelector.cs</DependentUpon>
@@ -377,6 +383,9 @@
     <EmbeddedResource Include="Importers\Polar\ProTrainer\PersonSessionSelector.sv.resx">
       <DependentUpon>PersonSessionSelector.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Importers\SessionSelector.da.resx">
+      <DependentUpon>SessionSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Importers\SessionSelector.de.resx">
       <DependentUpon>SessionSelector.cs</DependentUpon>

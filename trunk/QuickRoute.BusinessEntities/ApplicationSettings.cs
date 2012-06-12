@@ -41,6 +41,7 @@ namespace QuickRoute.BusinessEntities
     private ExportRouteDataSettings exportRouteDataSettings = new ExportRouteDataSettings();
     private SelectableRoutePropertyTypeCollection lapPropertyTypes = new SelectableRoutePropertyTypeCollection();
     private SelectableRoutePropertyTypeCollection momentaneousInfoPropertyTypes = new SelectableRoutePropertyTypeCollection();
+    private int externaLapDataSourceIndex = 0;
 
     public DocumentSettings DefaultDocumentSettings
     {
@@ -373,6 +374,12 @@ namespace QuickRoute.BusinessEntities
         return momentaneousInfoPropertyTypes;
       }
       set { momentaneousInfoPropertyTypes = value; }
+    }
+
+    public int ExternaLapDataSourceIndex
+    {
+      get { return externaLapDataSourceIndex; }
+      set { externaLapDataSourceIndex = value; }
     }
 
     public void AddRecentDocumentFileName(string fileName)

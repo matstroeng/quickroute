@@ -39,12 +39,8 @@
       // 
       // files
       // 
-      this.files.AccessibleDescription = null;
-      this.files.AccessibleName = null;
-      this.files.AllowDrop = true;
       resources.ApplyResources(this.files, "files");
-      this.files.BackgroundImage = null;
-      this.files.Font = null;
+      this.files.AllowDrop = true;
       this.files.FormattingEnabled = true;
       this.files.Name = "files";
       this.files.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
@@ -54,59 +50,39 @@
       // 
       // flowLayoutPanel1
       // 
-      this.flowLayoutPanel1.AccessibleDescription = null;
-      this.flowLayoutPanel1.AccessibleName = null;
       resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
-      this.flowLayoutPanel1.BackgroundImage = null;
-      this.flowLayoutPanel1.Controls.Add(this.addFileButton);
       this.flowLayoutPanel1.Controls.Add(this.addUrlButton);
       this.flowLayoutPanel1.Controls.Add(this.removeButton);
-      this.flowLayoutPanel1.Font = null;
+      this.flowLayoutPanel1.Controls.Add(this.addFileButton);
       this.flowLayoutPanel1.Name = "flowLayoutPanel1";
       // 
       // addFileButton
       // 
-      this.addFileButton.AccessibleDescription = null;
-      this.addFileButton.AccessibleName = null;
       resources.ApplyResources(this.addFileButton, "addFileButton");
-      this.addFileButton.BackgroundImage = null;
-      this.addFileButton.Font = null;
       this.addFileButton.Name = "addFileButton";
       this.addFileButton.UseVisualStyleBackColor = true;
       this.addFileButton.Click += new System.EventHandler(this.addFileButton_Click);
       // 
       // addUrlButton
       // 
-      this.addUrlButton.AccessibleDescription = null;
-      this.addUrlButton.AccessibleName = null;
       resources.ApplyResources(this.addUrlButton, "addUrlButton");
-      this.addUrlButton.BackgroundImage = null;
-      this.addUrlButton.Font = null;
       this.addUrlButton.Name = "addUrlButton";
       this.addUrlButton.UseVisualStyleBackColor = true;
       this.addUrlButton.Click += new System.EventHandler(this.AddUrlButton_Click);
       // 
       // removeButton
       // 
-      this.removeButton.AccessibleDescription = null;
-      this.removeButton.AccessibleName = null;
       resources.ApplyResources(this.removeButton, "removeButton");
-      this.removeButton.BackgroundImage = null;
-      this.removeButton.Font = null;
       this.removeButton.Name = "removeButton";
       this.removeButton.UseVisualStyleBackColor = true;
       this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
       // 
       // FileSelectorControl
       // 
-      this.AccessibleDescription = null;
-      this.AccessibleName = null;
       resources.ApplyResources(this, "$this");
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.BackgroundImage = null;
       this.Controls.Add(this.flowLayoutPanel1);
       this.Controls.Add(this.files);
-      this.Font = null;
       this.Name = "FileSelectorControl";
       this.flowLayoutPanel1.ResumeLayout(false);
       this.flowLayoutPanel1.PerformLayout();

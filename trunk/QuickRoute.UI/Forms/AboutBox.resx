@@ -118,85 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="quickRouteLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 26</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="versionLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="developerLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="quickRouteLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="translationLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="closeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="closeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="quickRouteLabel.Text" xml:space="preserve">
-    <value>QuickRoute</value>
+  <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 152</value>
   </data>
   <data name="&gt;&gt;quickRouteLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;versionLabel.Name" xml:space="preserve">
-    <value>versionLabel</value>
-  </data>
-  <data name="closeButton.Text" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="quickRouteLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="versionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 13</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="developerLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>AboutBox</value>
-  </data>
-  <data name="translationLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="developerLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;websiteLink.Name" xml:space="preserve">
-    <value>websiteLink</value>
-  </data>
-  <data name="&gt;&gt;developerLabel.Name" xml:space="preserve">
-    <value>developerLabel</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="developerLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 13</value>
-  </data>
-  <data name="&gt;&gt;quickRouteLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;closeButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="websiteLink.LinkArea" type="System.Windows.Forms.LinkArea, System.Windows.Forms">
-    <value>9, 28</value>
+  <data name="versionLabel.Text" xml:space="preserve">
+    <value>Version {0}</value>
   </data>
-  <data name="&gt;&gt;versionLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;developerLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="websiteLink.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="versionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="closeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;translationLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="developerLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 81</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2208,119 +2156,171 @@
         rkJggg==
 </value>
   </data>
-  <data name="&gt;&gt;websiteLink.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;closeButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;websiteLink.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;translationLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>About QuickRoute</value>
-  </data>
-  <data name="&gt;&gt;closeButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;developerLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;developerLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="quickRouteLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14pt</value>
-  </data>
-  <data name="&gt;&gt;developerLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;quickRouteLabel.Name" xml:space="preserve">
-    <value>quickRouteLabel</value>
-  </data>
-  <data name="translationLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="quickRouteLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;websiteLink.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="translationLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 103</value>
-  </data>
-  <data name="&gt;&gt;quickRouteLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="websiteLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 125</value>
-  </data>
-  <data name="&gt;&gt;versionLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;versionLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;closeButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;translationLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="versionLabel.Text" xml:space="preserve">
-    <value>Version {0}</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>484, 183</value>
-  </data>
-  <data name="&gt;&gt;translationLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="websiteLink.Text" xml:space="preserve">
-    <value>Website: www.matstroeng.se/quickroute</value>
-  </data>
-  <data name="quickRouteLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 24</value>
-  </data>
-  <data name="versionLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 59</value>
-  </data>
-  <data name="translationLabel.Text" xml:space="preserve">
-    <value>English translation by Mats Troeng and Boris Granovskiy</value>
-  </data>
-  <data name="&gt;&gt;closeButton.Name" xml:space="preserve">
-    <value>closeButton</value>
-  </data>
-  <data name="websiteLink.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 17</value>
-  </data>
-  <data name="developerLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 81</value>
-  </data>
-  <data name="versionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="closeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>397, 152</value>
-  </data>
-  <data name="websiteLink.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="developerLabel.Text" xml:space="preserve">
-    <value>Developed by Mats Troeng and Jörgen Ohlin</value>
+  <data name="&gt;&gt;websiteLink.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="translationLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>272, 13</value>
   </data>
+  <data name="&gt;&gt;versionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="translationLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="translationLabel.Text" xml:space="preserve">
+    <value>English translation by Mats Troeng and Boris Granovskiy</value>
+  </data>
+  <data name="&gt;&gt;websiteLink.Name" xml:space="preserve">
+    <value>websiteLink</value>
+  </data>
+  <data name="developerLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;versionLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;closeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="closeButton.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="closeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="websiteLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="websiteLink.LinkArea" type="System.Windows.Forms.LinkArea, System.Windows.Forms">
+    <value>9, 28</value>
+  </data>
+  <data name="&gt;&gt;developerLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="quickRouteLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 26</value>
+  </data>
+  <data name="closeButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="versionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="&gt;&gt;translationLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;quickRouteLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;versionLabel.Name" xml:space="preserve">
+    <value>versionLabel</value>
+  </data>
+  <data name="&gt;&gt;websiteLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;quickRouteLabel.Name" xml:space="preserve">
+    <value>quickRouteLabel</value>
+  </data>
+  <data name="translationLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="quickRouteLabel.Text" xml:space="preserve">
+    <value>QuickRoute</value>
+  </data>
+  <data name="&gt;&gt;translationLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="versionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 59</value>
+  </data>
+  <data name="&gt;&gt;developerLabel.Name" xml:space="preserve">
+    <value>developerLabel</value>
+  </data>
+  <data name="quickRouteLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14pt</value>
+  </data>
+  <data name="quickRouteLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="translationLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 103</value>
+  </data>
+  <data name="developerLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 13</value>
+  </data>
+  <data name="&gt;&gt;closeButton.Name" xml:space="preserve">
+    <value>closeButton</value>
+  </data>
+  <data name="&gt;&gt;quickRouteLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="websiteLink.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>About QuickRoute</value>
+  </data>
+  <data name="quickRouteLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 24</value>
+  </data>
+  <data name="&gt;&gt;closeButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AboutBox</value>
+  </data>
+  <data name="developerLabel.Text" xml:space="preserve">
+    <value>Developed by Mats Troeng and Jörgen Ohlin</value>
+  </data>
+  <data name="&gt;&gt;websiteLink.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="developerLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;developerLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="translationLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="developerLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="websiteLink.Text" xml:space="preserve">
+    <value>Website: www.matstroeng.se/quickroute</value>
+  </data>
+  <data name="websiteLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 17</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>484, 183</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;versionLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="websiteLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 125</value>
+  </data>
   <data name="&gt;&gt;translationLabel.Name" xml:space="preserve">
     <value>translationLabel</value>
+  </data>
+  <data name="versionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

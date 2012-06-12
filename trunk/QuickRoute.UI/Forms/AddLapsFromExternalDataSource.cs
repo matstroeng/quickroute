@@ -10,24 +10,24 @@ namespace QuickRoute.UI.Forms
     private bool updatingUiNow;
     private IExternalLapDataSource dataSource;
 
-    public AddLapsFromExternalDataSource()
+    public AddLapsFromExternalDataSource(DateTime startDate, DateTime endDate, int selectedDataSourceIndex)
     {
       InitializeComponent();
+      this.startDate.Value = startDate;
+      this.endDate.Value = endDate;
+      PopulateDataSources();
+      if (dataSources.Items.Count > 0) dataSources.SelectedIndex = Math.Min(selectedDataSourceIndex, dataSources.Items.Count-1);
     }
 
-    private void AddLapsFromExternalDataSource_Load(object sender, EventArgs e)
+    public int SelectedDataSourceIndex
     {
-      startDate.Value = DateTime.Now.AddDays(-7).Date;
-      endDate.Value = DateTime.Now.Date;
-
-      PopulateDataSources();
+      get { return dataSources.SelectedIndex; }
     }
 
     private void PopulateDataSources()
     {
       var formattedDataSources = FormattedDataSource.ToFormattedDataSources(ExternalLapDataSourceFactory.GetExternalLapDataSources());
       dataSources.DataSource = formattedDataSources;
-      if (dataSources.Items.Count > 0) dataSources.SelectedIndex = 0;
     }
 
     private void PopulateEvents()
@@ -56,7 +56,7 @@ namespace QuickRoute.UI.Forms
     private void PopulateRunners()
     {
       Cursor = Cursors.WaitCursor;
-      runners.DataSource = events.SelectedItem == null ? new FormattedRunner[0] : FormattedRunner.ToFormattedRunners(dataSource.GetRunnersAndSplits(((FormattedEvent)events.SelectedItem).Event.DatabaseId, categories.SelectedIndex.ToString()));
+      runners.DataSource = events.SelectedItem == null ? new FormattedRunner[0] : FormattedRunner.ToFormattedRunners(dataSource.GetRunnersAndSplits(((FormattedEvent)events.SelectedItem).Event.DatabaseId, categories.SelectedIndex));
       Cursor = Cursors.Default;
     }
 

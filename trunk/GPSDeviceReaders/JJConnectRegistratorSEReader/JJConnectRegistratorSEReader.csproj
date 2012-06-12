@@ -95,9 +95,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="JJConnectRegistratorSETrackSelector.da.resx">
+      <DependentUpon>JJConnectRegistratorSETrackSelector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="JJConnectRegistratorSETrackSelector.resx">
       <DependentUpon>JJConnectRegistratorSETrackSelector.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressIndicator.da.resx">
+      <DependentUpon>ProgressIndicator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressIndicator.de.resx">
       <DependentUpon>ProgressIndicator.cs</DependentUpon>

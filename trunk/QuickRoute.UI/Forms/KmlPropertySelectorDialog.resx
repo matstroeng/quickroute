@@ -117,77 +117,299 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="includeRoute.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 17</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+  <data name="replayTailLayoutPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="replayFrame.Text" xml:space="preserve">
-    <value>Replay</value>
+  <data name="mapFrame.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 8</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cancel.TabIndex" type="System.Int32, mscorlib">
+  <data name="replayTailVisible.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="replayMarkerStyle.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;adaptReplayToMapImage.Parent" xml:space="preserve">
+    <value>replayFrame</value>
+  </data>
+  <data name="&gt;&gt;ok.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="replayTimeIntervalLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 97</value>
+  <data name="&gt;&gt;replayMarkerStyle.Name" xml:space="preserve">
+    <value>replayMarkerStyle</value>
   </data>
-  <data name="&gt;&gt;includeRoute.Parent" xml:space="preserve">
-    <value>routeFrame</value>
+  <data name="includeRoute.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="includeMap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 17</value>
+  </data>
+  <data name="&gt;&gt;replayTimeIntervalLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;replayTailDuration.Parent" xml:space="preserve">
+    <value>replayTailLayoutPanel</value>
+  </data>
+  <data name="includeReplay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 8</value>
+  </data>
+  <data name="&gt;&gt;includeMap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;includeMap.Name" xml:space="preserve">
+    <value>includeMap</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cancel.Text" xml:space="preserve">
+    <value>Cancel</value>
   </data>
   <data name="&gt;&gt;cancel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="replayTailDuration.Items1" xml:space="preserve">
-    <value>60</value>
+  <data name="replayTimeInterval.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="replayTailDuration.Items" xml:space="preserve">
-    <value>30</value>
+  <data name="&gt;&gt;includeRoute.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="includeMap.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;replayMarkerStyleLabel.Name" xml:space="preserve">
+    <value>replayMarkerStyleLabel</value>
   </data>
-  <data name="adaptRouteToMapImage.Text" xml:space="preserve">
-    <value>&amp;Adjust route line object to map image</value>
+  <data name="&gt;&gt;routeLineStyleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;adaptRouteToMapImage.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;replayMarkerStyleLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;adaptReplayToMapImage.Name" xml:space="preserve">
-    <value>adaptReplayToMapImage</value>
+  <data name="cancel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;replayTailLayoutPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="replayTimeInterval.Items" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;mapFrame.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="includeReplay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 24</value>
   </data>
-  <data name="adaptRouteToMapImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 101</value>
-  </data>
-  <data name="replayTimeIntervalLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="mapFrame.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 53</value>
   </data>
   <data name="mapFrame.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>8, 8, 8, 8</value>
   </data>
-  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
-    <value>Time &amp;interval in seconds</value>
+  <data name="&gt;&gt;adaptRouteToMapImage.Parent" xml:space="preserve">
+    <value>routeFrame</value>
   </data>
-  <data name="&gt;&gt;replayTailVisible.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;replayTimeIntervalLabel.Parent" xml:space="preserve">
+    <value>replayFrame</value>
+  </data>
+  <data name="routeLineStyleLabel.Text" xml:space="preserve">
+    <value>Route line &amp;style</value>
+  </data>
+  <data name="routeLineStyleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="adaptReplayToMapImage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="routeFrame.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="includeRoute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 17</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>KML properties</value>
+  </data>
+  <data name="includeRoute.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 8</value>
+  </data>
+  <data name="replayTailDuration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 21</value>
+  </data>
+  <data name="adaptReplayToMapImage.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="replayTailVisible.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 17</value>
+  </data>
+  <data name="replayTailVisible.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="routeLineStyle.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="replayFrame.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="adaptRouteToMapImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 101</value>
+  </data>
+  <data name="includeMap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 24</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;replayFrame.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="replayFrame.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 221</value>
+  </data>
+  <data name="&gt;&gt;adaptRouteToMapImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;adaptRouteToMapImage.Name" xml:space="preserve">
+    <value>adaptRouteToMapImage</value>
+  </data>
+  <data name="replayTailDuration.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;replayTailVisible.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="replayTailLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="adaptReplayToMapImage.Text" xml:space="preserve">
+    <value>Adjust repla&amp;y objects to map image</value>
+  </data>
+  <data name="replayMarkerStyleLabel.Text" xml:space="preserve">
+    <value>Position mar&amp;ker style</value>
+  </data>
+  <data name="&gt;&gt;routeLineStyleLabel.Name" xml:space="preserve">
+    <value>routeLineStyleLabel</value>
+  </data>
+  <data name="cancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 455</value>
+  </data>
+  <data name="&gt;&gt;includeReplay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="routeLineStyleLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="includeReplay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 17</value>
+  </data>
+  <data name="&gt;&gt;includeRoute.Name" xml:space="preserve">
+    <value>includeRoute</value>
+  </data>
+  <data name="&gt;&gt;replayTimeInterval.Parent" xml:space="preserve">
+    <value>replayFrame</value>
+  </data>
+  <data name="routeLineStyle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;replayMarkerStyleLabel.Parent" xml:space="preserve">
+    <value>replayFrame</value>
+  </data>
+  <data name="&gt;&gt;routeFrame.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="replayMarkerStyleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="routeFrame.Text" xml:space="preserve">
+    <value>Route</value>
+  </data>
+  <data name="includeReplay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;mapFrame.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="routeFrame.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;replayTailDuration.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="replayFrame.Text" xml:space="preserve">
+    <value>Replay</value>
+  </data>
+  <data name="replayTailVisible.Text" xml:space="preserve">
+    <value>Show &amp;tail, duration in seconds:</value>
+  </data>
+  <data name="replayMarkerStyleLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="replayMarkerStyleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="adaptRouteToMapImage.Text" xml:space="preserve">
+    <value>&amp;Adjust route line object to map image</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 13</value>
+  </data>
+  <data name="&gt;&gt;replayFrame.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;replayFrame.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="replayTimeInterval.Items5" xml:space="preserve">
-    <value>30</value>
+  <data name="&gt;&gt;replayTimeIntervalLabel.Name" xml:space="preserve">
+    <value>replayTimeIntervalLabel</value>
+  </data>
+  <data name="mapFrame.Text" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="&gt;&gt;mapFrame.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="adaptRouteToMapImage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 8</value>
   </data>
   <data name="replayTimeInterval.Items4" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;ok.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;replayMarkerStyle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="replayFrame.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;includeReplay.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="replayTimeIntervalLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;replayTailVisible.Name" xml:space="preserve">
+    <value>replayTailVisible</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>400, 524</value>
+  </data>
+  <data name="&gt;&gt;routeLineStyle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="replayTailVisible.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 6</value>
+  </data>
+  <data name="replayFrame.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 218</value>
+  </data>
+  <data name="replayMarkerStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 49</value>
+  </data>
+  <data name="replayTimeInterval.Items5" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;replayTimeInterval.Name" xml:space="preserve">
+    <value>replayTimeInterval</value>
+  </data>
+  <data name="replayTimeInterval.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
   <data name="replayTimeInterval.Items6" xml:space="preserve">
     <value>60</value>
@@ -195,65 +417,326 @@
   <data name="replayTimeInterval.Items1" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="replayMarkerStyle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>327, 21</value>
+  </data>
   <data name="replayTimeInterval.Items3" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="replayTimeInterval.Items2" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;includeRoute.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;adaptReplayToMapImage.Name" xml:space="preserve">
+    <value>adaptReplayToMapImage</value>
   </data>
-  <data name="routeFrame.Text" xml:space="preserve">
-    <value>Route</value>
-  </data>
-  <data name="&gt;&gt;routeLineStyleLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="includeMap.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 24</value>
-  </data>
-  <data name="replayTailVisible.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="replayMarkerStyle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>327, 21</value>
-  </data>
-  <data name="mapFrame.Text" xml:space="preserve">
-    <value>Map</value>
-  </data>
-  <data name="replayTimeInterval.Size" type="System.Drawing.Size, System.Drawing">
-    <value>327, 21</value>
-  </data>
-  <data name="&gt;&gt;replayTailDuration.Name" xml:space="preserve">
-    <value>replayTailDuration</value>
-  </data>
-  <data name="&gt;&gt;mapFrame.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="mapFrame.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="&gt;&gt;replayTailLayoutPanel.Parent" xml:space="preserve">
-    <value>replayFrame</value>
-  </data>
-  <data name="&gt;&gt;includeMap.Name" xml:space="preserve">
-    <value>includeMap</value>
-  </data>
-  <data name="&gt;&gt;adaptReplayToMapImage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="includeReplay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 8</value>
+  <data name="&gt;&gt;replayTailLayoutPanel.Name" xml:space="preserve">
+    <value>replayTailLayoutPanel</value>
   </data>
   <data name="replayTailDuration.Items3" xml:space="preserve">
     <value>180</value>
   </data>
-  <data name="replayTimeIntervalLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 13</value>
+  <data name="replayTailVisible.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 6, 3, 3</value>
+  </data>
+  <data name="replayTimeInterval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 113</value>
   </data>
   <data name="replayTailDuration.Items6" xml:space="preserve">
     <value>600</value>
+  </data>
+  <data name="mapFrame.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;routeFrame.Name" xml:space="preserve">
+    <value>routeFrame</value>
+  </data>
+  <data name="replayTailVisible.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;adaptReplayToMapImage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="mapFrame.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="ok.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 97</value>
+  </data>
+  <data name="&gt;&gt;replayMarkerStyle.Parent" xml:space="preserve">
+    <value>replayFrame</value>
+  </data>
+  <data name="ok.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="replayTimeIntervalLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="includeMap.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;replayTailVisible.Parent" xml:space="preserve">
+    <value>replayTailLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;replayTailVisible.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="replayTimeIntervalLabel.Text" xml:space="preserve">
+    <value>Time &amp;interval in seconds</value>
+  </data>
+  <data name="routeLineStyleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;replayMarkerStyle.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="adaptRouteToMapImage.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="replayMarkerStyle.Items" xml:space="preserve">
+    <value>Monochrome</value>
+  </data>
+  <data name="&gt;&gt;replayTimeInterval.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;replayTailLayoutPanel.Parent" xml:space="preserve">
+    <value>replayFrame</value>
+  </data>
+  <data name="&gt;&gt;routeFrame.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="adaptReplayToMapImage.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="replayTimeIntervalLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ok.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;adaptReplayToMapImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;includeReplay.Name" xml:space="preserve">
+    <value>includeReplay</value>
+  </data>
+  <data name="&gt;&gt;ok.Name" xml:space="preserve">
+    <value>ok</value>
+  </data>
+  <data name="routeLineStyle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 65</value>
+  </data>
+  <data name="routeLineStyle.Items" xml:space="preserve">
+    <value>Embedded in map, color-coded</value>
+  </data>
+  <data name="adaptRouteToMapImage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;includeReplay.Parent" xml:space="preserve">
+    <value>replayFrame</value>
+  </data>
+  <data name="&gt;&gt;replayMarkerStyleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="replayTimeInterval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>327, 21</value>
+  </data>
+  <data name="replayMarkerStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 13</value>
+  </data>
+  <data name="replayMarkerStyle.Items1" xml:space="preserve">
+    <value>Color-coded</value>
+  </data>
+  <data name="&gt;&gt;routeLineStyle.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="includeMap.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="includeReplay.Text" xml:space="preserve">
+    <value>Include re&amp;play</value>
+  </data>
+  <data name="&gt;&gt;includeRoute.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="replayTailLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 146</value>
+  </data>
+  <data name="routeLineStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 13</value>
+  </data>
+  <data name="replayFrame.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 8, 8, 8</value>
+  </data>
+  <data name="&gt;&gt;cancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ok.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>KmlPropertySelectorDialog</value>
+  </data>
+  <data name="&gt;&gt;routeFrame.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cancel.Name" xml:space="preserve">
+    <value>cancel</value>
+  </data>
+  <data name="includeRoute.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="replayMarkerStyle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="replayTailLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ok.Location" type="System.Drawing.Point, System.Drawing">
+    <value>225, 455</value>
+  </data>
+  <data name="&gt;&gt;replayTimeIntervalLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ok.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="replayMarkerStyle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 65</value>
+  </data>
+  <data name="adaptReplayToMapImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 185</value>
+  </data>
+  <data name="adaptRouteToMapImage.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;includeMap.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;adaptRouteToMapImage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="replayTailDuration.Items" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="routeLineStyle.Items1" xml:space="preserve">
+    <value>Separate route line object, monochrome</value>
+  </data>
+  <data name="routeLineStyle.Items2" xml:space="preserve">
+    <value>Separate route line object, color-coded</value>
+  </data>
+  <data name="&gt;&gt;replayTailDuration.Name" xml:space="preserve">
+    <value>replayTailDuration</value>
+  </data>
+  <data name="replayFrame.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 8</value>
+  </data>
+  <data name="includeReplay.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="includeRoute.Text" xml:space="preserve">
+    <value>Include &amp;route</value>
+  </data>
+  <data name="&gt;&gt;mapFrame.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;replayTimeInterval.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="routeLineStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 49</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>392, 486</value>
+  </data>
+  <data name="mapFrame.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="&gt;&gt;routeLineStyleLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="includeMap.Text" xml:space="preserve">
+    <value>Include &amp;map</value>
+  </data>
+  <data name="&gt;&gt;routeLineStyle.Name" xml:space="preserve">
+    <value>routeLineStyle</value>
+  </data>
+  <data name="adaptReplayToMapImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 17</value>
+  </data>
+  <data name="&gt;&gt;replayFrame.Name" xml:space="preserve">
+    <value>replayFrame</value>
+  </data>
+  <data name="replayTailDuration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 3</value>
+  </data>
+  <data name="&gt;&gt;mapFrame.Name" xml:space="preserve">
+    <value>mapFrame</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>2000, 524</value>
+  </data>
+  <data name="&gt;&gt;replayTailDuration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;routeLineStyleLabel.Parent" xml:space="preserve">
+    <value>routeFrame</value>
+  </data>
+  <data name="routeFrame.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 8</value>
+  </data>
+  <data name="routeFrame.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 8, 8, 8</value>
+  </data>
+  <data name="routeLineStyle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>327, 21</value>
+  </data>
+  <data name="includeMap.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;replayTailLayoutPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;replayTailLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="replayTailDuration.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="includeRoute.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;includeMap.Parent" xml:space="preserve">
+    <value>mapFrame</value>
+  </data>
+  <data name="routeFrame.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 76</value>
+  </data>
+  <data name="replayTailLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>327, 27</value>
+  </data>
+  <data name="routeFrame.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 134</value>
+  </data>
+  <data name="&gt;&gt;ok.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="replayTailDuration.Items2" xml:space="preserve">
+    <value>120</value>
+  </data>
+  <data name="cancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="replayTailDuration.Items1" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="adaptReplayToMapImage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 8</value>
   </data>
   <data name="replayTailDuration.Items7" xml:space="preserve">
     <value>infinite</value>
@@ -264,503 +747,20 @@
   <data name="replayTailDuration.Items5" xml:space="preserve">
     <value>300</value>
   </data>
-  <data name="includeRoute.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 24</value>
-  </data>
-  <data name="includeMap.Text" xml:space="preserve">
-    <value>Include &amp;map</value>
-  </data>
-  <data name="&gt;&gt;replayTailLayoutPanel.Name" xml:space="preserve">
-    <value>replayTailLayoutPanel</value>
-  </data>
-  <data name="replayTimeInterval.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 113</value>
-  </data>
-  <data name="includeRoute.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 8</value>
-  </data>
-  <data name="replayMarkerStyle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="mapFrame.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;routeLineStyle.Name" xml:space="preserve">
-    <value>routeLineStyle</value>
-  </data>
-  <data name="cancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;replayFrame.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;mapFrame.Name" xml:space="preserve">
-    <value>mapFrame</value>
-  </data>
-  <data name="&gt;&gt;replayTimeIntervalLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;routeFrame.Name" xml:space="preserve">
-    <value>routeFrame</value>
-  </data>
-  <data name="replayMarkerStyleLabel.Text" xml:space="preserve">
-    <value>Position mar&amp;ker style</value>
-  </data>
-  <data name="&gt;&gt;adaptRouteToMapImage.Parent" xml:space="preserve">
-    <value>routeFrame</value>
-  </data>
-  <data name="mapFrame.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 8</value>
-  </data>
-  <data name="&gt;&gt;cancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="replayMarkerStyle.Items" xml:space="preserve">
-    <value>Monochrome</value>
-  </data>
-  <data name="routeFrame.Size" type="System.Drawing.Size, System.Drawing">
-    <value>369, 134</value>
-  </data>
-  <data name="routeLineStyle.Items" xml:space="preserve">
-    <value>Embedded in map, color-coded</value>
-  </data>
-  <data name="ok.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>KmlPropertySelectorDialog</value>
-  </data>
-  <data name="replayFrame.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 221</value>
-  </data>
-  <data name="replayTailDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 3</value>
-  </data>
-  <data name="adaptReplayToMapImage.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;routeFrame.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;replayTailDuration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="replayFrame.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="replayMarkerStyleLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;includeReplay.Parent" xml:space="preserve">
-    <value>replayFrame</value>
-  </data>
-  <data name="ok.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="includeReplay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 17</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="replayTimeIntervalLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;routeLineStyleLabel.Name" xml:space="preserve">
-    <value>routeLineStyleLabel</value>
-  </data>
-  <data name="&gt;&gt;replayTailDuration.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="replayTailVisible.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;includeMap.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="routeFrame.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 8</value>
-  </data>
-  <data name="ok.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="mapFrame.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="routeLineStyleLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="includeReplay.Text" xml:space="preserve">
-    <value>Include re&amp;play</value>
-  </data>
-  <data name="&gt;&gt;replayTimeIntervalLabel.Name" xml:space="preserve">
-    <value>replayTimeIntervalLabel</value>
-  </data>
-  <data name="&gt;&gt;replayTimeInterval.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;ok.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="includeRoute.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="routeLineStyle.Items2" xml:space="preserve">
-    <value>Separate route line object, color-coded</value>
-  </data>
-  <data name="&gt;&gt;replayMarkerStyle.Name" xml:space="preserve">
-    <value>replayMarkerStyle</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="adaptRouteToMapImage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="includeReplay.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="includeReplay.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="routeLineStyleLabel.Text" xml:space="preserve">
-    <value>Route line &amp;style</value>
-  </data>
-  <data name="&gt;&gt;includeReplay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;replayMarkerStyle.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;routeLineStyleLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="includeReplay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 24</value>
-  </data>
-  <data name="&gt;&gt;ok.Name" xml:space="preserve">
-    <value>ok</value>
-  </data>
-  <data name="adaptReplayToMapImage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 8</value>
-  </data>
-  <data name="includeMap.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;routeFrame.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;replayTailVisible.Name" xml:space="preserve">
-    <value>replayTailVisible</value>
-  </data>
-  <data name="&gt;&gt;replayTimeInterval.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;replayFrame.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="routeLineStyle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>327, 21</value>
-  </data>
-  <data name="&gt;&gt;routeLineStyle.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="replayMarkerStyle.Items1" xml:space="preserve">
-    <value>Color-coded</value>
-  </data>
-  <data name="&gt;&gt;adaptReplayToMapImage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="replayTimeInterval.Items" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="adaptReplayToMapImage.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="replayTailDuration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 21</value>
-  </data>
-  <data name="&gt;&gt;replayTimeInterval.Name" xml:space="preserve">
-    <value>replayTimeInterval</value>
-  </data>
-  <data name="replayTailLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;adaptRouteToMapImage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="replayMarkerStyleLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="replayTailVisible.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 17</value>
-  </data>
-  <data name="adaptReplayToMapImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 17</value>
-  </data>
-  <data name="&gt;&gt;includeMap.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="adaptRouteToMapImage.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;cancel.Name" xml:space="preserve">
-    <value>cancel</value>
-  </data>
-  <data name="replayTailVisible.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 6</value>
-  </data>
-  <data name="&gt;&gt;replayMarkerStyleLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;routeLineStyleLabel.Parent" xml:space="preserve">
-    <value>routeFrame</value>
-  </data>
-  <data name="&gt;&gt;adaptRouteToMapImage.Name" xml:space="preserve">
-    <value>adaptRouteToMapImage</value>
-  </data>
-  <data name="replayMarkerStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 49</value>
-  </data>
-  <data name="routeLineStyle.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="&gt;&gt;routeLineStyle.Parent" xml:space="preserve">
     <value>routeFrame</value>
   </data>
-  <data name="replayTailLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 146</value>
-  </data>
-  <data name="ok.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 455</value>
-  </data>
-  <data name="&gt;&gt;replayTailVisible.Parent" xml:space="preserve">
-    <value>replayTailLayoutPanel</value>
-  </data>
-  <data name="includeRoute.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="routeFrame.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="&gt;&gt;mapFrame.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="replayFrame.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 8</value>
-  </data>
-  <data name="replayMarkerStyle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 65</value>
-  </data>
-  <data name="&gt;&gt;replayFrame.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="adaptReplayToMapImage.Text" xml:space="preserve">
-    <value>Adjust repla&amp;y objects to map image</value>
-  </data>
-  <data name="replayTailLayoutPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="replayTailDuration.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="replayTailLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>327, 27</value>
-  </data>
-  <data name="routeLineStyleLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="replayMarkerStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 13</value>
-  </data>
-  <data name="includeMap.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="routeFrame.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 76</value>
-  </data>
-  <data name="&gt;&gt;replayFrame.Name" xml:space="preserve">
-    <value>replayFrame</value>
-  </data>
-  <data name="replayTimeInterval.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="replayFrame.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="routeLineStyleLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;adaptReplayToMapImage.Parent" xml:space="preserve">
-    <value>replayFrame</value>
-  </data>
-  <data name="replayTailVisible.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 455</value>
-  </data>
-  <data name="routeLineStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 13</value>
-  </data>
-  <data name="replayMarkerStyleLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="includeMap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 17</value>
-  </data>
-  <data name="&gt;&gt;replayTimeIntervalLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="includeRoute.Text" xml:space="preserve">
-    <value>Include &amp;route</value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>2000, 524</value>
-  </data>
-  <data name="mapFrame.Size" type="System.Drawing.Size, System.Drawing">
-    <value>369, 53</value>
-  </data>
-  <data name="routeLineStyle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 65</value>
-  </data>
-  <data name="routeFrame.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ok.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;includeMap.Parent" xml:space="preserve">
-    <value>mapFrame</value>
-  </data>
-  <data name="&gt;&gt;replayTimeIntervalLabel.Parent" xml:space="preserve">
-    <value>replayFrame</value>
-  </data>
-  <data name="includeRoute.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;routeFrame.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="routeLineStyle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;replayTimeInterval.Parent" xml:space="preserve">
-    <value>replayFrame</value>
-  </data>
-  <data name="&gt;&gt;replayMarkerStyleLabel.Parent" xml:space="preserve">
-    <value>replayFrame</value>
-  </data>
-  <data name="routeLineStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 49</value>
-  </data>
-  <data name="replayTailLayoutPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="adaptRouteToMapImage.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="adaptRouteToMapImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 17</value>
-  </data>
-  <data name="&gt;&gt;cancel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;includeReplay.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;includeRoute.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>400, 524</value>
-  </data>
-  <data name="replayTimeIntervalLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="adaptRouteToMapImage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 8</value>
-  </data>
-  <data name="routeFrame.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="adaptReplayToMapImage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="replayFrame.Size" type="System.Drawing.Size, System.Drawing">
-    <value>369, 218</value>
-  </data>
-  <data name="cancel.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;replayMarkerStyle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;includeReplay.Name" xml:space="preserve">
-    <value>includeReplay</value>
-  </data>
-  <data name="&gt;&gt;routeLineStyle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="replayTailDuration.Items2" xml:space="preserve">
-    <value>120</value>
-  </data>
-  <data name="&gt;&gt;replayMarkerStyle.Parent" xml:space="preserve">
-    <value>replayFrame</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>392, 486</value>
-  </data>
-  <data name="replayTailVisible.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 6, 3, 3</value>
-  </data>
-  <data name="replayTailVisible.Text" xml:space="preserve">
-    <value>Show &amp;tail, duration in seconds:</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>KML properties</value>
-  </data>
-  <data name="&gt;&gt;replayMarkerStyleLabel.Name" xml:space="preserve">
-    <value>replayMarkerStyleLabel</value>
-  </data>
-  <data name="&gt;&gt;includeRoute.Name" xml:space="preserve">
-    <value>includeRoute</value>
-  </data>
-  <data name="&gt;&gt;replayTailLayoutPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;replayTailDuration.Parent" xml:space="preserve">
-    <value>replayTailLayoutPanel</value>
-  </data>
-  <data name="replayTailDuration.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;includeRoute.Parent" xml:space="preserve">
+    <value>routeFrame</value>
   </data>
   <data name="includeReplay.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="replayFrame.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 8</value>
+  <data name="includeRoute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 24</value>
   </data>
-  <data name="&gt;&gt;replayMarkerStyleLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="replayMarkerStyle.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="ok.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;replayTailVisible.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="routeLineStyle.Items1" xml:space="preserve">
-    <value>Separate route line object, monochrome</value>
-  </data>
-  <data name="replayTimeInterval.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="adaptReplayToMapImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 185</value>
+  <data name="adaptRouteToMapImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 17</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

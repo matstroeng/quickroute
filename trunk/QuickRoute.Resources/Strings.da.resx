@@ -1,0 +1,867 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Altitude" xml:space="preserve">
+    <value>Højde</value>
+  </data>
+  <data name="Distance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="EastAbbreviated" xml:space="preserve">
+    <value>Ø</value>
+  </data>
+  <data name="ElapsedTime" xml:space="preserve">
+    <value>Forbrugt tid</value>
+  </data>
+  <data name="ExportImageTitle" xml:space="preserve">
+    <value>Eksporter billede</value>
+  </data>
+  <data name="ExportGPXTitle" xml:space="preserve">
+    <value>Eksporter rute til GPX</value>
+  </data>
+  <data name="HeartRate" xml:space="preserve">
+    <value>Puls</value>
+  </data>
+  <data name="Histogram" xml:space="preserve">
+    <value>Søjlediagram</value>
+  </data>
+  <data name="InvalidMapImage" xml:space="preserve">
+    <value>Ugyldigt kortbillede</value>
+  </data>
+  <data name="InvalidRoute" xml:space="preserve">
+    <value>Ugyldig rute</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Sted</value>
+  </data>
+  <data name="MapImageFileDoesNotExist" xml:space="preserve">
+    <value>Kortbilledet eksisterer ikke.</value>
+  </data>
+  <data name="NewGradient" xml:space="preserve">
+    <value>Ny gradient</value>
+  </data>
+  <data name="NoGPSDevicesConnected" xml:space="preserve">
+    <value>[Ingen GPS-enheder tilsluttet]</value>
+  </data>
+  <data name="NoGPSDevicesConnectedMessageBox" xml:space="preserve">
+    <value>Der er ingen GPS-enheder tilsluttet.</value>
+  </data>
+  <data name="NorthAbbreviated" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="OpenQuickRouteFileTitle" xml:space="preserve">
+    <value>Åbn QuickRoute fil</value>
+  </data>
+  <data name="Pace" xml:space="preserve">
+    <value>Tempo</value>
+  </data>
+  <data name="PromptSaveChanges" xml:space="preserve">
+    <value>Gem ændringer i {0}?</value>
+  </data>
+  <data name="QuickRoute" xml:space="preserve">
+    <value>QuickRoute</value>
+  </data>
+  <data name="RouteFileDoesNotExist" xml:space="preserve">
+    <value>Rutefilen eksisterer ikke.</value>
+  </data>
+  <data name="SaveAsTitle" xml:space="preserve">
+    <value>Gem QuickRoute-fil som</value>
+  </data>
+  <data name="SelectMapImageFile" xml:space="preserve">
+    <value>Vælg kortbilledfil</value>
+  </data>
+  <data name="SelectRouteFile" xml:space="preserve">
+    <value>Vælg rutefil</value>
+  </data>
+  <data name="SouthAbbreviated" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Hastighed</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Tid</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Totalt</value>
+  </data>
+  <data name="UICultureChangeTakesEffectAtNextRestart" xml:space="preserve">
+    <value>Sprogændringen træder i kraft næste gang QuickRoute startes.</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Uden navn</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="WestAbbreviated" xml:space="preserve">
+    <value>V</value>
+  </data>
+  <data name="CopyToClipboard" xml:space="preserve">
+    <value>Kopier til skrivebordet</value>
+  </data>
+  <data name="NewMap" xml:space="preserve">
+    <value>Nyt kort</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Retningsafvigelse</value>
+  </data>
+  <data name="ExportKMZTitle" xml:space="preserve">
+    <value>Eksporter til KMZ</value>
+  </data>
+  <data name="ExportRouteDataTitle" xml:space="preserve">
+    <value>Eksporter rutedata</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Kort</value>
+  </data>
+  <data name="QuickRouteSession" xml:space="preserve">
+    <value>QuickRoute løbepas {0}</value>
+  </data>
+  <data name="QuickRouteKmlData" xml:space="preserve">
+    <value>QuickRoute data</value>
+  </data>
+  <data name="ReplayPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="ReplayTail" xml:space="preserve">
+    <value>Hale</value>
+  </data>
+  <data name="Routes" xml:space="preserve">
+    <value>Ruter</value>
+  </data>
+  <data name="AddFiles" xml:space="preserve">
+    <value>Tilføj ruter</value>
+  </data>
+  <data name="UnexpectedExceptionMessage" xml:space="preserve">
+    <value>En uventet fejl opstod.</value>
+  </data>
+  <data name="UntitledX" xml:space="preserve">
+    <value>Unavngivet {0}</value>
+  </data>
+  <data name="OpenInGoogleEarth" xml:space="preserve">
+    <value>Åbn i Google Earth</value>
+  </data>
+  <data name="NewVersionAvailable" xml:space="preserve">
+    <value>QuickRoute version {0} er nu tilgængelig.</value>
+  </data>
+  <data name="NewVersionFeatures" xml:space="preserve">
+    <value>Funktioner i den nye version:</value>
+  </data>
+  <data name="OpenMultipleFilesInGoogleEarth" xml:space="preserve">
+    <value>Åbn flere QuickRoute filer i Google Earth</value>
+  </data>
+  <data name="LapX" xml:space="preserve">
+    <value>Mellemtid {0}</value>
+  </data>
+  <data name="MultipleFileExporterNoValidFiles" xml:space="preserve">
+    <value>Der er ingen gyldig QuickRoute-fil angivet.</value>
+  </data>
+  <data name="MultipleFileExporterSomeInvalidFiles" xml:space="preserve">
+    <value>De følgende filer indeholder ingen QuickRoute data og kan ikke inkluderes: {0}</value>
+  </data>
+  <data name="UnrecognizedFileFormat" xml:space="preserve">
+    <value>Ukendt filformat for {0}</value>
+  </data>
+  <data name="SelectLapInfoColumns" xml:space="preserve">
+    <value>Vælg kolonner</value>
+  </data>
+  <data name="SmoothingIntervalForX" xml:space="preserve">
+    <value>Udjævningsinterval for {0}</value>
+  </data>
+  <data name="SelectMomentaneousInfoProperties" xml:space="preserve">
+    <value>Vælg information</value>
+  </data>
+  <data name="Error_ExportImage" xml:space="preserve">
+    <value>Fejl ved læsning af billedfil</value>
+  </data>
+  <data name="Error_ExportRoute" xml:space="preserve">
+    <value>Fejl ved eksport af rutefil</value>
+  </data>
+  <data name="Error_NewDocument" xml:space="preserve">
+    <value>Fejl ved oprettelse af nyt dokument</value>
+  </data>
+  <data name="Error_OpenDocument" xml:space="preserve">
+    <value>Fejl ved åbning af dokument</value>
+  </data>
+  <data name="Error_SaveDocument" xml:space="preserve">
+    <value>Fejl ved lagring af dokument</value>
+  </data>
+  <data name="Error_MapPublishCommunication" xml:space="preserve">
+    <value>Fejl ved kommunikation med kortpubliceringsserver</value>
+  </data>
+  <data name="Error_GoogleEarthNotInstalledMessage" xml:space="preserve">
+    <value>Google Earth er ikke installeret på denne computer. Download programmet fra earth.google.com</value>
+  </data>
+  <data name="Error_GoogleEarthNotInstalledTitle" xml:space="preserve">
+    <value>Google Earth er ikke installeret</value>
+  </data>
+  <data name="Error_InvalidQuickRouteFile" xml:space="preserve">
+    <value>Filen er ikke en gyldig QuickRoute fil.</value>
+  </data>
+  <data name="DeleteLapX" xml:space="preserve">
+    <value>Slet mellemtid {0}</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Udskriv...</value>
+  </data>
+  <data name="MapReadingDuration" xml:space="preserve">
+    <value>Kortlæsningstid</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="NoSecondaryColorCoding" xml:space="preserve">
+    <value>[ingen sekundær farve]</value>
+  </data>
+  <data name="NotConnected" xml:space="preserve">
+    <value>ikke forbundet</value>
+  </data>
+  <data name="ImageSize" xml:space="preserve">
+    <value>Billedstørrelse</value>
+  </data>
+  <data name="Pixels" xml:space="preserve">
+    <value>pixels</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Ændre</value>
+  </data>
+  <data name="DownloadingImage" xml:space="preserve">
+    <value>Downloader billede</value>
+  </data>
+  <data name="RouteImportError_NoWaypoints" xml:space="preserve">
+    <value>Der er ingen rutepunkter i filen.</value>
+  </data>
+  <data name="RouteImportError_NoWaypointTimes" xml:space="preserve">
+    <value>Der er ingen rutepunkter med tider i filen.</value>
+  </data>
+  <data name="Unit_Altitude" xml:space="preserve">
+    <value>moh</value>
+  </data>
+  <data name="Unit_Distance" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="Unit_HeartRate" xml:space="preserve">
+    <value>slag/min</value>
+  </data>
+  <data name="Unit_Pace" xml:space="preserve">
+    <value>min/km</value>
+  </data>
+  <data name="Unit_Speed" xml:space="preserve">
+    <value>km/t</value>
+  </data>
+  <data name="FileFilter_AllFiles" xml:space="preserve">
+    <value>Alle filer (*.*)|*.*</value>
+  </data>
+  <data name="FileFilter_FrwdTxtFiles" xml:space="preserve">
+    <value>Frwd tekstfiler (*.txt)|*.txt</value>
+  </data>
+  <data name="FileFilter_ImageFiles" xml:space="preserve">
+    <value>Billedfiler (*.jpg; *.jpeg; *.gif; *.png; *.tif; *.tiff)|*.jpg;*.jpeg;*.gif;*.png;*.tif;*.tiff</value>
+  </data>
+  <data name="FileFilter_QuickRoute10Files" xml:space="preserve">
+    <value>QuickRoute 1.0 xml filer (*.xml)|*.xml</value>
+  </data>
+  <data name="FileFilter_QuickRouteFiles" xml:space="preserve">
+    <value>QuickRoute filer (*.qrt)|*.qrt</value>
+  </data>
+  <data name="FileFilter_TcxFiles" xml:space="preserve">
+    <value>Garmin Training Center history-filer (*.tcx)|*.tcx</value>
+  </data>
+  <data name="FileFilter_NavilockActFiles" xml:space="preserve">
+    <value>Navlock act filer (*.act)|*.act</value>
+  </data>
+  <data name="MapPublish_FailureTitle" xml:space="preserve">
+    <value>Kortet blev ikke offentliggjort</value>
+  </data>
+  <data name="MapPublish_Success" xml:space="preserve">
+    <value>Kortet blev offentliggjort på {0}</value>
+  </data>
+  <data name="MapPublish_SuccessTitle" xml:space="preserve">
+    <value>Kortet blev offentliggjort</value>
+  </data>
+  <data name="FileFilter_KmzFiles" xml:space="preserve">
+    <value>KMZ filer (*.kmz)|*.kmz</value>
+  </data>
+  <data name="FileFilter_RouteDataFiles" xml:space="preserve">
+    <value>Route data filer (*.xml)|*.xml</value>
+  </data>
+  <data name="FileFilter_JpegFilesExportedFromQuickRoute" xml:space="preserve">
+    <value>JPEG filer eksporteret fra QuickRoute (*.jpg; *.jpeg)|*.jpg;*.jpeg</value>
+  </data>
+  <data name="FileFilter_AllQuickRouteFiles" xml:space="preserve">
+    <value>Alle QuickRoute filer (*.qrt; *.xml; *.jpg; *.jpeg)|*.qrt;*.qrt;*.xml;*.jpg;*.jpeg</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Altitude" xml:space="preserve">
+    <value>Højde: {0} masl</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AltitudeDifference" xml:space="preserve">
+    <value>Højdeforskel (delstræk): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AltitudeDifferenceFromStart" xml:space="preserve">
+    <value>Højdeforskel (total): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Ascent" xml:space="preserve">
+    <value>Stigning (delstræk): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AscentFromStart" xml:space="preserve">
+    <value>Stigning (total): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageDirectionDeviationToNextLap" xml:space="preserve">
+    <value>Gennemsnitlig retningsafvigelse (delstræk): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageDirectionDeviationToNextLapFromStart" xml:space="preserve">
+    <value>Gennemsnitlig retningsafvigelse (total): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageHeartRate" xml:space="preserve">
+    <value>Gennemsnitlig puls (delstræk): {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageHeartRateFromStart" xml:space="preserve">
+    <value>Gennemsnitlig puls (total): {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageInclination" xml:space="preserve">
+    <value>Gennemsnitlig hældning (delstræk): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageInclinationFromStart" xml:space="preserve">
+    <value>Gennemsnitlig hældning (total): {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRoutePace" xml:space="preserve">
+    <value>Gennemsnitstempo (delstræk): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRoutePaceFromStart" xml:space="preserve">
+    <value>Gennemsnitstempo (total): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRouteSpeed" xml:space="preserve">
+    <value>Gennemsnitshastighed (delstræk): {0} km/t</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageRouteSpeedFromStart" xml:space="preserve">
+    <value>Gennemsnitshastighed (total): {0} km/t</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLinePace" xml:space="preserve">
+    <value>Gennemsnitstempo i luftlinje (delstræk): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLinePaceFromStart" xml:space="preserve">
+    <value>Gennemsnitstempo i luftlinje (total): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLineSpeed" xml:space="preserve">
+    <value>Gennemsnitstempo i luftlinje (delstræk): {0} km/t</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageStraightLineSpeedFromStart" xml:space="preserve">
+    <value>Gennemsnitstempo i luftlinje (total): {0} km/t</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Descent" xml:space="preserve">
+    <value>Faldhøjde (delstræk): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_DescentFromStart" xml:space="preserve">
+    <value>Faldhøjde (total): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Direction" xml:space="preserve">
+    <value>Retning: {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_DirectionDeviationToNextLap" xml:space="preserve">
+    <value>Retningsafvigelse: {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ElapsedTime" xml:space="preserve">
+    <value>Tid (delstræk): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ElapsedTimeFromStart" xml:space="preserve">
+    <value>Tid (total): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_HeartRate" xml:space="preserve">
+    <value>Puls: {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Inclination" xml:space="preserve">
+    <value>Hældning: {0}°</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_LapNumber" xml:space="preserve">
+    <value>Mellemtid nummer: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Location" xml:space="preserve">
+    <value>Sted: {0}</value>
+  </data>
+  <data name="Unit_Time" xml:space="preserve">
+    <value>Tid</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_AdjustRoute" xml:space="preserve">
+    <value>Klik på et punkt på ruten og træk det til det tilsvarende punkt på kortet. Mindst to punkter langs ruten - helst med god afstend - skal tilpasses. Hold Ctrl nede og klik på et tilpasset punkt for at fjerne det. Højreklik og træk for at flytte kortet. Når tilpasningen er tilendebrgat, vælg pilværktøjet for at vise den farvekodede rutelinje.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_Cut" xml:space="preserve">
+    <value>Klik på et punkt på ruten for at fjerne den følgende eller foregående del af ruten. Højreklik og træk for at flytte kortet.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_Lap" xml:space="preserve">
+    <value>Klik på et punkt på ruten for at tilføje en mellemtid. Hold Ctrl nede og klik på en mellemtid for at fjerne den. Hold Shift nede og klik på ruten for at tilføje en mellemtid på et bestemt tidspunkt. Højreklik og træk for at flytte kortet.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_Pointer" xml:space="preserve">
+    <value>Hold musepilen over ruten for at vise aktuel tid, distance, hastighed etc.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_ZoomIn" xml:space="preserve">
+    <value>Vælg det område hvor kortbilledet skal forstørres.</value>
+  </data>
+  <data name="DynamicHelp_MouseTool_ZoomOut" xml:space="preserve">
+    <value>Klik i midten af det område hvor kortbilledet skal formindskes.</value>
+  </data>
+  <data name="Route" xml:space="preserve">
+    <value>Rute</value>
+  </data>
+  <data name="RouteSegmentX" xml:space="preserve">
+    <value>Rute segment {0}</value>
+  </data>
+  <data name="Replay" xml:space="preserve">
+    <value>Gentag</value>
+  </data>
+  <data name="Infinite" xml:space="preserve">
+    <value>Uendeligt</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MaxHeartRate" xml:space="preserve">
+    <value>Maksimumpuls (delstræk): {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MaxHeartRateFromStart" xml:space="preserve">
+    <value>Maksimumpuls (total): {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MinHeartRate" xml:space="preserve">
+    <value>Minimumpuls (delstræk): {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MinHeartRateFromStart" xml:space="preserve">
+    <value>Minimumpuls (total): {0} bpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Pace" xml:space="preserve">
+    <value>Tempo: {0} min/km</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteDistance" xml:space="preserve">
+    <value>Rutelængde (delstræk): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteDistanceFromStart" xml:space="preserve">
+    <value>Rutelængde (total): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteToStraightLine" xml:space="preserve">
+    <value>Forskel mellem ruten og luftlinje (delstræk): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_RouteToStraightLineFromStart" xml:space="preserve">
+    <value>Forskel mellem ruten og luftlinje (total): {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Speed" xml:space="preserve">
+    <value>Hastighed: {0} km/h</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_StraightLineDistance" xml:space="preserve">
+    <value>Luftlinje (delstræk): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_StraightLineDistanceFromStart" xml:space="preserve">
+    <value>Luftlinje (total): {0} m</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Time" xml:space="preserve">
+    <value>Tidspunkt: {0}</value>
+  </data>
+  <data name="RoutePropertyName_Altitude" xml:space="preserve">
+    <value>Højde</value>
+  </data>
+  <data name="RoutePropertyName_AltitudeDifference" xml:space="preserve">
+    <value>Højdeforskel (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_AltitudeDifferenceFromStart" xml:space="preserve">
+    <value>Højdeforskel (total)</value>
+  </data>
+  <data name="RoutePropertyName_Ascent" xml:space="preserve">
+    <value>Stigning (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_AscentFromStart" xml:space="preserve">
+    <value>Stigning (total)</value>
+  </data>
+  <data name="RoutePropertyName_AverageDirectionDeviationToNextLap" xml:space="preserve">
+    <value>Gennemsnitlig retningsafvigelse (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_AverageDirectionDeviationToNextLapFromStart" xml:space="preserve">
+    <value>Gennemsnitlig retningsafvigelse (total)</value>
+  </data>
+  <data name="RoutePropertyName_AverageHeartRate" xml:space="preserve">
+    <value>Gennemsnitspuls (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_AverageHeartRateFromStart" xml:space="preserve">
+    <value>Gennemsnitspuls (total)</value>
+  </data>
+  <data name="RoutePropertyName_AverageInclination" xml:space="preserve">
+    <value>Gennemsnitshældning (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_AverageInclinationFromStart" xml:space="preserve">
+    <value>Gennemsnitshældning (total)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRoutePace" xml:space="preserve">
+    <value>Gennemsnitligt rutetempo (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRoutePaceFromStart" xml:space="preserve">
+    <value>Gennemsnitligt rutetempo (total)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRouteSpeed" xml:space="preserve">
+    <value>Gennemsnitshastighed (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_AverageRouteSpeedFromStart" xml:space="preserve">
+    <value>Gennemsnitshastighed (total)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLinePace" xml:space="preserve">
+    <value>Gennemsnitligt luftlinjetempo (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLinePaceFromStart" xml:space="preserve">
+    <value>Gennemsnitligt luftlinjetempo (total)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLineSpeed" xml:space="preserve">
+    <value>Gennemsnitlig luftlinjehastighed (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_AverageStraightLineSpeedFromStart" xml:space="preserve">
+    <value>Gennemsnitlig luftlinjehastighed (total)</value>
+  </data>
+  <data name="RoutePropertyName_Descent" xml:space="preserve">
+    <value>Fald (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_DescentFromStart" xml:space="preserve">
+    <value>Fald (total)</value>
+  </data>
+  <data name="RoutePropertyName_Direction" xml:space="preserve">
+    <value>Retning</value>
+  </data>
+  <data name="RoutePropertyName_DirectionDeviationToNextLap" xml:space="preserve">
+    <value>Retningsafvigelse</value>
+  </data>
+  <data name="RoutePropertyName_ElapsedTime" xml:space="preserve">
+    <value>Tid (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_ElapsedTimeFromStart" xml:space="preserve">
+    <value>Tid (total)</value>
+  </data>
+  <data name="RoutePropertyName_HeartRate" xml:space="preserve">
+    <value>Puls</value>
+  </data>
+  <data name="RoutePropertyName_Inclination" xml:space="preserve">
+    <value>Hældning</value>
+  </data>
+  <data name="RoutePropertyName_LapNumber" xml:space="preserve">
+    <value>Delstræk nummer</value>
+  </data>
+  <data name="RoutePropertyName_Location" xml:space="preserve">
+    <value>Sted</value>
+  </data>
+  <data name="RoutePropertyName_MaxHeartRate" xml:space="preserve">
+    <value>Maksimum puls (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_MaxHeartRateFromStart" xml:space="preserve">
+    <value>Maksimum puls (total)</value>
+  </data>
+  <data name="RoutePropertyName_MinHeartRate" xml:space="preserve">
+    <value>Minimumpuls (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_MinHeartRateFromStart" xml:space="preserve">
+    <value>Minimumpuls (total)</value>
+  </data>
+  <data name="RoutePropertyName_Pace" xml:space="preserve">
+    <value>Tempo</value>
+  </data>
+  <data name="RoutePropertyName_RouteDistance" xml:space="preserve">
+    <value>Rutelængde (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_RouteDistanceFromStart" xml:space="preserve">
+    <value>Rutelængde (total)</value>
+  </data>
+  <data name="RoutePropertyName_RouteToStraightLine" xml:space="preserve">
+    <value>Forskel melllem rutelængde og luftlinje (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_RouteToStraightLineFromStart" xml:space="preserve">
+    <value>Forskel mellem rutelængde og luftlinje (total)</value>
+  </data>
+  <data name="RoutePropertyName_Speed" xml:space="preserve">
+    <value>Hastighed</value>
+  </data>
+  <data name="RoutePropertyName_StraightLineDistance" xml:space="preserve">
+    <value>Luftlinje (delstræk)</value>
+  </data>
+  <data name="RoutePropertyName_StraightLineDistanceFromStart" xml:space="preserve">
+    <value>Luftlinje (total)</value>
+  </data>
+  <data name="RoutePropertyName_Time" xml:space="preserve">
+    <value>Tidspunkt</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ImageX" xml:space="preserve">
+    <value>Billedposition X: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_ImageY" xml:space="preserve">
+    <value>Billedposition Y: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Latitude" xml:space="preserve">
+    <value>Breddegrad: {0}</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Longitude" xml:space="preserve">
+    <value>Længdegrad: {0}</value>
+  </data>
+  <data name="RoutePropertyName_ImageX" xml:space="preserve">
+    <value>Billedposition X</value>
+  </data>
+  <data name="RoutePropertyName_ImageY" xml:space="preserve">
+    <value>Billedposition Y</value>
+  </data>
+  <data name="RoutePropertyName_Latitude" xml:space="preserve">
+    <value>Breddegrad</value>
+  </data>
+  <data name="RoutePropertyName_Longitude" xml:space="preserve">
+    <value>Længdegrad</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeBackward" xml:space="preserve">
+    <value>Tidsforbrug sidste stykke før aktuel position</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeBackward" xml:space="preserve">
+    <value>Tidsforbrug sidste stykke før aktuel position: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeForward" xml:space="preserve">
+    <value>Tidsforbrug første stykke efter aktuel position</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeForward" xml:space="preserve">
+    <value>Tidsforbrug første stykke efter aktuel position: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtStartOfSpan" xml:space="preserve">
+    <value>Tidsforbrug ud fra post</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpan" xml:space="preserve">
+    <value>Tidsforbrug ud fra post: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtEndOfSpan" xml:space="preserve">
+    <value>Tidsforbrug ind mod post</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpan" xml:space="preserve">
+    <value>Tidsforbrug ind mod post: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
+    <value>Sum af tidsforbrug ud fra poster</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtStartOfSpanFromStart" xml:space="preserve">
+    <value>Totaltidsforbrug ud fra poster: {0}</value>
+  </data>
+  <data name="RoutePropertyName_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
+    <value>Sum af tidsforbrug ind mod poster</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_CircleTimeAtEndOfSpanFromStart" xml:space="preserve">
+    <value>Totaltidsforbrug ind mod poster: {0}</value>
+  </data>
+  <data name="RoutePropertyName_AverageTimeBetweenMapReadings" xml:space="preserve">
+    <value>Gennemsnitlig tid mellem kortlæsning (delstræk)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageTimeBetweenMapReadings" xml:space="preserve">
+    <value>Gennemsnitlig tid mellem kortlæsning (delstræk): {0}</value>
+  </data>
+  <data name="RoutePropertyName_AverageTimeBetweenMapReadingsFromStart" xml:space="preserve">
+    <value>Gennemsnitlig tid mellem kortlæsning (total)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageTimeBetweenMapReadingsFromStart" xml:space="preserve">
+    <value>Gennemsnitlig tid mellem kortlæsning (total): {0}</value>
+  </data>
+  <data name="RoutePropertyName_AverageMapReadingTime" xml:space="preserve">
+    <value>Gennemsnitlig kortlæsningstid (delstræk)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageMapReadingTime" xml:space="preserve">
+    <value>Gennemsnitlig kortslæsningstid (delstræk): {0}</value>
+  </data>
+  <data name="RoutePropertyName_AverageMapReadingTimeFromStart" xml:space="preserve">
+    <value>Gennemsnitlig kortlæsningstid (total)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageMapReadingTimeFromStart" xml:space="preserve">
+    <value>Gennemsnitlig kortlæsningstid (total): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingDuration" xml:space="preserve">
+    <value>Kortlæsningstid</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingDuration" xml:space="preserve">
+    <value>Kortlæsningstid: {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingDurationInSpan" xml:space="preserve">
+    <value>Kortlæsningstid (delstræk)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingDurationInSpan" xml:space="preserve">
+    <value>Kortlæsningstid (delstræk): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingDurationFromStart" xml:space="preserve">
+    <value>Kortlæsningstid (total)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingDurationFromStart" xml:space="preserve">
+    <value>Kortlæsningstid (total): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingPercentage" xml:space="preserve">
+    <value>Kortlæsningsprocent (delstræk)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingPercentage" xml:space="preserve">
+    <value>Kortlæsningsprocent (delstræk): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingPercentageFromStart" xml:space="preserve">
+    <value>Kortlæsningstid (total)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingPercentageFromStart" xml:space="preserve">
+    <value>Kortlæsningstid (total): {0}</value>
+  </data>
+  <data name="RoutePropertyName_MapReadingState" xml:space="preserve">
+    <value>Kortlæsning</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MapReadingState" xml:space="preserve">
+    <value>Kortlæsning: {0}</value>
+  </data>
+  <data name="RoutePropertyName_PreviousMapReadingEnd" xml:space="preserve">
+    <value>Tid fra afslutning af sidste kortlæsning</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_PreviousMapReadingEnd" xml:space="preserve">
+    <value>Tid fra afslutning af sidste kortlæsning: {0}</value>
+  </data>
+  <data name="RoutePropertyName_NextMapReadingStart" xml:space="preserve">
+    <value>Tid før begyndelsen af næste kortlæsning</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_NextMapReadingStart" xml:space="preserve">
+    <value>Tid før begyndelsen af næste kortlæsning: {0}</value>
+  </data>
+  <data name="RoutePropertyName_NumberOfMapReadings" xml:space="preserve">
+    <value>Antal kortlæsninger (delstræk)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_NumberOfMapReadings" xml:space="preserve">
+    <value>Antal kortlæsninger (delstræk): {0}</value>
+  </data>
+  <data name="RoutePropertyName_NumberOfMapReadingsFromStart" xml:space="preserve">
+    <value>Antal kortlæsninger (total)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_NumberOfMapReadingsFromStart" xml:space="preserve">
+    <value>Antal kortlæsninger (total): {0}</value>
+  </data>
+  <data name="RoutePropertyName_AveragePaceWhenReadingMap" xml:space="preserve">
+    <value>Gennemsnitshastighed under kortlæsning (delstræk)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePaceWhenReadingMap" xml:space="preserve">
+    <value>Gennemsnitshastighed under kortlæsning (delstræk): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyName_AveragePaceWhenReadingMapFromStart" xml:space="preserve">
+    <value>Gennemsnitshastighed under kortlæsning (total)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePaceWhenReadingMapFromStart" xml:space="preserve">
+    <value>Gennemsnitshastighed under kortlæsning (total): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyName_AveragePaceWhenNotReadingMap" xml:space="preserve">
+    <value>Gennemsnitshastighed når der ikke læses kort (delstræk)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePaceWhenNotReadingMap" xml:space="preserve">
+    <value>Gennemsnitshastighed når der ikke læses kort (delstræk): {0} min/km</value>
+  </data>
+  <data name="RoutePropertyName_AveragePaceWhenNotReadingMapFromStart" xml:space="preserve">
+    <value>Gennemsnitshastighed når der ikke læses kort (total)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePaceWhenNotReadingMapFromStart" xml:space="preserve">
+    <value>Gennemsnitshastighed når der ikke læses kort (total): {0} min/km</value>
+  </data>
+</root>
