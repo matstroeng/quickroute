@@ -263,6 +263,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Strings.it.resx" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\QuickRoute.Common\QuickRoute.Common.csproj">
+      <Project>{7F93415F-ACEB-4B4F-8E6B-51D0B096F38E}</Project>
+      <Name>QuickRoute.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

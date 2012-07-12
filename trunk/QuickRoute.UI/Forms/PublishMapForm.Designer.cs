@@ -38,7 +38,7 @@
       this.usernameLabel = new System.Windows.Forms.Label();
       this.webServiceLabel = new System.Windows.Forms.Label();
       this.webServiceURL = new System.Windows.Forms.ComboBox();
-      this.username = new System.Windows.Forms.TextBox();
+      this.username = new System.Windows.Forms.ComboBox();
       this.passwordLabel = new System.Windows.Forms.Label();
       this.password = new System.Windows.Forms.TextBox();
       this.mapLabel = new System.Windows.Forms.Label();
@@ -159,8 +159,11 @@
       // username
       // 
       resources.ApplyResources(this.username, "username");
+      this.username.FormattingEnabled = true;
       this.username.Name = "username";
+      this.username.SelectedIndexChanged += new System.EventHandler(this.username_SelectedIndexChanged);
       this.username.Enter += new System.EventHandler(this.control_Enter);
+      this.username.Leave += new System.EventHandler(this.username_Leave);
       // 
       // passwordLabel
       // 
@@ -361,7 +364,7 @@
     private System.Windows.Forms.Label usernameLabel;
     private System.Windows.Forms.Label webServiceLabel;
     private System.Windows.Forms.ComboBox webServiceURL;
-    private System.Windows.Forms.TextBox username;
+    private System.Windows.Forms.ComboBox username;
     private System.Windows.Forms.Label passwordLabel;
     private System.Windows.Forms.TextBox password;
     private System.Windows.Forms.Label mapLabel;

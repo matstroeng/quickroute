@@ -30,7 +30,10 @@ namespace QuickRoute.UI.Forms
       this.colorRangeProperties = colorRangeProperties;
       foreach (var setting in Util.ApplicationSettings.PublishMapSettings)
       {
-        webServiceURL.Items.Add(setting.WebServiceURL);
+        if (!webServiceURL.Items.Contains(setting.WebServiceURL))
+        {
+          webServiceURL.Items.Add(setting.WebServiceURL);
+        }
       }
       if (webServiceURL.Items.Count > 0) webServiceURL.SelectedIndex = 0;
 
@@ -54,11 +57,16 @@ namespace QuickRoute.UI.Forms
 
     private void webServiceURL_SelectedIndexChanged(object sender, EventArgs e)
     {
+      PopulateUsernameComboBox();
+      if (username.Items.Count > 0) username.SelectedIndex = 0;
+    }
+
+    private void username_SelectedIndexChanged(object sender, EventArgs e)
+    {
       foreach (var setting in Util.ApplicationSettings.PublishMapSettings)
       {
-        if (webServiceURL.Text == setting.WebServiceURL)
+        if (webServiceURL.Text == setting.WebServiceURL && username.Text == setting.Username)
         {
-          username.Text = setting.Username;
           password.Text = setting.Password;
           SavePassword.Checked = (setting.Password != null);
           break;
@@ -115,6 +123,26 @@ namespace QuickRoute.UI.Forms
     private void webServiceURL_Leave(object sender, EventArgs e)
     {
       if (!string.IsNullOrEmpty(webServiceURL.Text) && !webServiceURL.Text.Contains("://")) webServiceURL.Text = "http://" + webServiceURL.Text;
+    }
+
+    private void username_Leave(object sender, EventArgs e)
+    {
+      var found = false;
+      foreach (var setting in Util.ApplicationSettings.PublishMapSettings)
+      {
+        if (webServiceURL.Text == setting.WebServiceURL && username.Text == setting.Username)
+        {
+          password.Text = setting.Password;
+          SavePassword.Checked = (setting.Password != null);
+          found = true;
+          break;
+        }
+      }
+      if (!found)
+      {
+        password.Text = "";
+        SavePassword.Checked = false;
+      }
     }
 
     #endregion
@@ -251,6 +279,7 @@ namespace QuickRoute.UI.Forms
         {
           Cursor = Cursors.WaitCursor;
           SaveConnectionSettings();
+          PopulateUsernameComboBox();
           getAllMapsResult = GetAllMaps();
           getAllCategoriesResult = mapPublisher.GetAllCategories();
         }
@@ -358,7 +387,7 @@ namespace QuickRoute.UI.Forms
       bool found = false;
       foreach (var setting in Util.ApplicationSettings.PublishMapSettings)
       {
-        if (webServiceURL.Text == setting.WebServiceURL)
+        if (webServiceURL.Text == setting.WebServiceURL && setting.Username == username.Text)
         {
           setting.Username = username.Text;
           setting.Password = SavePassword.Checked ? password.Text : null;
@@ -378,6 +407,18 @@ namespace QuickRoute.UI.Forms
           Password = SavePassword.Checked ? password.Text : null
         };
         Util.ApplicationSettings.PublishMapSettings.Insert(0, setting);
+      }
+    }
+
+    private void PopulateUsernameComboBox()
+    {
+      username.Items.Clear();
+      foreach (var setting in Util.ApplicationSettings.PublishMapSettings)
+      {
+        if (webServiceURL.Text == setting.WebServiceURL)
+        {
+          username.Items.Add(setting.Username);
+        }
       }
     }
 

@@ -5,6 +5,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
+using QuickRoute.Common;
 
 namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
 {
@@ -57,7 +58,7 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
         {
           try
           {
-            cachedSessionHeaders = DeserializeFromFile<IDictionary<string, GarminSessionHeader>>(CachedSessionsFileName);
+            cachedSessionHeaders = CommonUtil.DeserializeFromFile<IDictionary<string, GarminSessionHeader>>(CachedSessionsFileName);
           }
           catch (Exception)
           {
@@ -268,7 +269,7 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
       if (!cachedSessionHeaders.ContainsKey(sessionHeader.Key)) return null;
       try
       {
-        return DeserializeFromFile<GarminSession>(GetSessionFileName(sessionHeader));
+        return CommonUtil.DeserializeFromFile<GarminSession>(GetSessionFileName(sessionHeader));
       }
       catch (Exception)
       {
@@ -326,10 +327,10 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
           foreach (var session in CreateSessions(runs, laps, tracks, true))
           {
             var sessionHeader = session.GetHeader();
-            SerializeToFile(session, GetSessionFileName(sessionHeader));
+            CommonUtil.SerializeToFile(session, GetSessionFileName(sessionHeader));
             if (!cachedSessionHeaders.ContainsKey(sessionHeader.Key)) cachedSessionHeaders.Add(sessionHeader.Key, sessionHeader);
           }
-          SerializeToFile(cachedSessionHeaders, CachedSessionsFileName);
+          CommonUtil.SerializeToFile(cachedSessionHeaders, CachedSessionsFileName);
         }
 
         completed = true;
@@ -875,24 +876,6 @@ namespace QuickRoute.GPSDeviceReaders.GarminUSBReader
                  Altitude = BitConverter.ToSingle(data, 12),
                  HeartRate = data[20]
                };
-    }
-
-    public static void SerializeToFile<T>(T obj, string fileName)
-    {
-      IFormatter formatter = new BinaryFormatter();
-      using (var stream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None))
-      {
-        formatter.Serialize(stream, obj);
-      }
-    }
-
-    public static T DeserializeFromFile<T>(string fileName)
-    {
-      IFormatter formatter = new BinaryFormatter();
-      using (var stream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.None))
-      {
-        return (T)formatter.Deserialize(stream);
-      }
     }
 
     private string GetSessionFileName(GarminSessionHeader sessionHeader)
