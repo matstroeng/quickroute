@@ -264,7 +264,7 @@ namespace QuickRoute.UI.Classes
 
       try
       {
-        return DeserializeFromFile<ApplicationSettings>(SettingsFileName);
+        return CommonUtil.DeserializeFromFile<ApplicationSettings>(SettingsFileName);
       }
       catch (Exception)
       {
@@ -274,25 +274,7 @@ namespace QuickRoute.UI.Classes
 
     public static void SaveSettings(ApplicationSettings s)
     {
-      SerializeToFile(s, SettingsFileName);
-    }
-
-    public static void SerializeToFile<T>(T obj, string fileName)
-    {
-      IFormatter formatter = new BinaryFormatter();
-      using (var stream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None))
-      {
-        formatter.Serialize(stream, obj);
-      }
-    }
-
-    public static T DeserializeFromFile<T>(string fileName)
-    {
-      IFormatter formatter = new BinaryFormatter();
-      using (var stream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.None))
-      {
-        return (T)formatter.Deserialize(stream);
-      }
+      CommonUtil.SerializeToFile(s, SettingsFileName);
     }
 
     public static NumericConverter GetNumericConverterFromWaypointAttribute(WaypointAttribute wa)

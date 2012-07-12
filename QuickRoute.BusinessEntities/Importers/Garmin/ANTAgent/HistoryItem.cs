@@ -1,43 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace QuickRoute.BusinessEntities.Importers.Garmin.ANTAgent
 {
+  [Serializable]
   public class HistoryItem
   {
-    private string displayName;
-    private string id;
-    private string fileName;
-
-    public HistoryItem(string displayName, string id, string fileName)
+    public HistoryItem(string displayName, string id, FileInfo fileInfo)
     {
-      this.displayName = displayName;
-      this.id = id;
-      this.fileName = fileName;
+      DisplayName = displayName;
+      Id = id;
+      FileInfo = fileInfo;
     }
 
-    public string DisplayName
-    {
-      get { return displayName; }
-      set { displayName = value; }
-    }
+    public string DisplayName { get; set; }
 
-    public string Id
-    {
-      get { return id; }
-      set { id = value; }
-    }
+    public string Id { get; set; }
 
-    public string FileName
-    {
-      get { return fileName; }
-      set { fileName = value; }
-    }
+    public FileInfo FileInfo { get; set; }
 
     public override string ToString()
     {
-      return displayName + ": " + DateTime.Parse(id).ToString("yyyy-MM-dd HH:mm:ss");
+      return DisplayName + ": " + DateTime.Parse(Id).ToString("yyyy-MM-dd HH:mm:ss");
     }
 
   }

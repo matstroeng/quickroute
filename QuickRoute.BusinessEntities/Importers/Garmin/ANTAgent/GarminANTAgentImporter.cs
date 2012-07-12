@@ -55,7 +55,7 @@ namespace QuickRoute.BusinessEntities.Importers.Garmin.ANTAgent
       ImportResult = new ImportResult();
       var tcxImporter = new TCXImporter
                           {
-                            FileName = itemToImport.FileName,
+                            FileName = itemToImport.FileInfo.FullName,
                             IdToImport = DateTime.Parse(itemToImport.Id).ToString("yyyy-MM-dd HH:mm:ss")
                           };
       tcxImporter.Import();
