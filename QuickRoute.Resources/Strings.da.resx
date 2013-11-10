@@ -412,7 +412,7 @@
     <value>Alle QuickRoute filer (*.qrt; *.xml; *.jpg; *.jpeg)|*.qrt;*.qrt;*.xml;*.jpg;*.jpeg</value>
   </data>
   <data name="RoutePropertyNameAndValue_Altitude" xml:space="preserve">
-    <value>Højde: {0} masl</value>
+    <value>Højde: {0} moh</value>
   </data>
   <data name="RoutePropertyNameAndValue_AltitudeDifference" xml:space="preserve">
     <value>Højdeforskel (delstræk): {0} m</value>
@@ -433,10 +433,10 @@
     <value>Gennemsnitlig retningsafvigelse (total): {0}°</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageHeartRate" xml:space="preserve">
-    <value>Gennemsnitlig puls (delstræk): {0} bpm</value>
+    <value>Gennemsnitlig puls (delstræk): {0} slag/min</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageHeartRateFromStart" xml:space="preserve">
-    <value>Gennemsnitlig puls (total): {0} bpm</value>
+    <value>Gennemsnitlig puls (total): {0} slag/min</value>
   </data>
   <data name="RoutePropertyNameAndValue_AverageInclination" xml:space="preserve">
     <value>Gennemsnitlig hældning (delstræk): {0}°</value>
@@ -487,7 +487,7 @@
     <value>Tid (total): {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_HeartRate" xml:space="preserve">
-    <value>Puls: {0} bpm</value>
+    <value>Puls: {0} slag/min</value>
   </data>
   <data name="RoutePropertyNameAndValue_Inclination" xml:space="preserve">
     <value>Hældning: {0}°</value>
@@ -532,16 +532,16 @@
     <value>Uendeligt</value>
   </data>
   <data name="RoutePropertyNameAndValue_MaxHeartRate" xml:space="preserve">
-    <value>Maksimumpuls (delstræk): {0} bpm</value>
+    <value>Maksimumpuls (delstræk): {0} slag/min</value>
   </data>
   <data name="RoutePropertyNameAndValue_MaxHeartRateFromStart" xml:space="preserve">
-    <value>Maksimumpuls (total): {0} bpm</value>
+    <value>Maksimumpuls (total): {0} slag/min</value>
   </data>
   <data name="RoutePropertyNameAndValue_MinHeartRate" xml:space="preserve">
-    <value>Minimumpuls (delstræk): {0} bpm</value>
+    <value>Minimumpuls (delstræk): {0} slag/min</value>
   </data>
   <data name="RoutePropertyNameAndValue_MinHeartRateFromStart" xml:space="preserve">
-    <value>Minimumpuls (total): {0} bpm</value>
+    <value>Minimumpuls (total): {0} slag/min</value>
   </data>
   <data name="RoutePropertyNameAndValue_Pace" xml:space="preserve">
     <value>Tempo: {0} min/km</value>
@@ -559,7 +559,7 @@
     <value>Forskel mellem ruten og luftlinje (total): {0}</value>
   </data>
   <data name="RoutePropertyNameAndValue_Speed" xml:space="preserve">
-    <value>Hastighed: {0} km/h</value>
+    <value>Hastighed: {0} km/t</value>
   </data>
   <data name="RoutePropertyNameAndValue_StraightLineDistance" xml:space="preserve">
     <value>Luftlinje (delstræk): {0} m</value>

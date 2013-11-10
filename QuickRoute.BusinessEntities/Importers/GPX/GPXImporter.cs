@@ -280,6 +280,22 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
       // add map reading waypoints
       routeSegments = Route.AddMapReadingWaypoints(routeSegments, mapReadings);
 
+      // concat route segments if they are close enough (oddly enough, Garmin Training Center v2 seems to create a trkseg for each lap)
+      var lapsFromConcatenatedRouteSegments = new List<Lap>();
+      if (routeSegments.Count > 0)
+      {
+        var concatenatedRouteSegments = new List<RouteSegment>() { routeSegments[0] };
+        for (var i = 1; i < routeSegments.Count; i++)
+        {
+          if (concatenatedRouteSegments[concatenatedRouteSegments.Count - 1].LastWaypoint.Time.AddSeconds(10) > routeSegments[i].FirstWaypoint.Time)
+          {
+            lapsFromConcatenatedRouteSegments.Add(new Lap(concatenatedRouteSegments[concatenatedRouteSegments.Count - 1].LastWaypoint.Time, LapType.Lap));
+            concatenatedRouteSegments[concatenatedRouteSegments.Count - 1].Waypoints.AddRange(routeSegments[i].Waypoints);
+          }
+        }
+        routeSegments = concatenatedRouteSegments;
+      }
+
       importResult.Succeeded = (noOfWaypointsWithTimes > 0);
 
       if (ImportResult.Succeeded)
@@ -322,6 +338,8 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
             }
           }
         }
+
+        laps.AddRange(lapsFromConcatenatedRouteSegments);
 
         foreach (var rs in routeSegments)
         {

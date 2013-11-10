@@ -19,6 +19,8 @@ namespace QuickRoute.UI.Forms
     private readonly ColorRangeProperties colorRangeProperties;
     private readonly WaypointAttribute colorCodingAttribute;
     private readonly WaypointAttribute? secondaryColorCodingAttribute;
+    private string usernameOnEnter;
+    private string webServiceURLOnEnter;
 
     public PublishMapForm(Document document, WaypointAttribute colorCodingAttribute, WaypointAttribute? secondaryColorCodingAttribute, ColorRangeProperties colorRangeProperties)
     {
@@ -58,7 +60,14 @@ namespace QuickRoute.UI.Forms
     private void webServiceURL_SelectedIndexChanged(object sender, EventArgs e)
     {
       PopulateUsernameComboBox();
-      if (username.Items.Count > 0) username.SelectedIndex = 0;
+      if (username.Items.Count > 0)
+      {
+        username.SelectedIndex = 0;
+      }
+      else
+      {
+        SetControlEnabledState(false);
+      }
     }
 
     private void username_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,6 +81,7 @@ namespace QuickRoute.UI.Forms
           break;
         }
       }
+      SetControlEnabledState(false);
     }
 
     private void cancel_Click(object sender, EventArgs e)
@@ -120,9 +130,20 @@ namespace QuickRoute.UI.Forms
       }
     }
 
+    private void webServiceURL_Enter(object sender, EventArgs e)
+    {
+      webServiceURLOnEnter = webServiceURL.Text;
+    }
+
     private void webServiceURL_Leave(object sender, EventArgs e)
     {
       if (!string.IsNullOrEmpty(webServiceURL.Text) && !webServiceURL.Text.Contains("://")) webServiceURL.Text = "http://" + webServiceURL.Text;
+      if (webServiceURL.Text != webServiceURLOnEnter) SetControlEnabledState(false);
+    }
+
+    private void username_Enter(object sender, EventArgs e)
+    {
+      usernameOnEnter = username.Text;
     }
 
     private void username_Leave(object sender, EventArgs e)
@@ -143,6 +164,7 @@ namespace QuickRoute.UI.Forms
         password.Text = "";
         SavePassword.Checked = false;
       }
+      if (username.Text != usernameOnEnter) SetControlEnabledState(false);
     }
 
     #endregion
@@ -363,6 +385,13 @@ namespace QuickRoute.UI.Forms
       imageFormat.Enabled = enabled;
 
       ok.Enabled = enabled;
+
+      if(!enabled)
+      {
+        category.DataSource = null;
+        category.Items.Clear();
+        SetControlValues(new MapInfo() { Date = date.Value });
+      }
     }
 
     private void SetControlValues(MapInfo mapInfo)

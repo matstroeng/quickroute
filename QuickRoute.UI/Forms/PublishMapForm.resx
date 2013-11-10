@@ -190,7 +190,7 @@
     <value>yyyy-MM-dd HH:mm</value>
   </data>
   <data name="date.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 154</value>
+    <value>142, 155</value>
   </data>
   <data name="date.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 20</value>
@@ -217,7 +217,7 @@
     <value>NoControl</value>
   </data>
   <data name="commentLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 392</value>
+    <value>3, 393</value>
   </data>
   <data name="commentLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 0</value>
@@ -253,7 +253,7 @@
     <value>NoControl</value>
   </data>
   <data name="resultListUrlLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 366</value>
+    <value>3, 367</value>
   </data>
   <data name="resultListUrlLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 0</value>
@@ -382,7 +382,7 @@
     <value>142, 30</value>
   </data>
   <data name="username.Size" type="System.Drawing.Size, System.Drawing">
-    <value>461, 20</value>
+    <value>461, 21</value>
   </data>
   <data name="username.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -391,7 +391,7 @@
     <value>username</value>
   </data>
   <data name="&gt;&gt;username.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;username.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -406,7 +406,7 @@
     <value>NoControl</value>
   </data>
   <data name="passwordLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 60</value>
+    <value>3, 61</value>
   </data>
   <data name="passwordLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 0</value>
@@ -439,7 +439,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="password.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 56</value>
+    <value>142, 57</value>
   </data>
   <data name="password.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 20</value>
@@ -466,7 +466,7 @@
     <value>NoControl</value>
   </data>
   <data name="mapLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 131</value>
+    <value>3, 132</value>
   </data>
   <data name="mapLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 0</value>
@@ -499,7 +499,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="map.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 127</value>
+    <value>142, 128</value>
   </data>
   <data name="map.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 21</value>
@@ -526,7 +526,7 @@
     <value>NoControl</value>
   </data>
   <data name="dateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 158</value>
+    <value>3, 159</value>
   </data>
   <data name="dateLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 0</value>
@@ -562,7 +562,7 @@
     <value>NoControl</value>
   </data>
   <data name="nameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 210</value>
+    <value>3, 211</value>
   </data>
   <data name="nameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 0</value>
@@ -598,7 +598,7 @@
     <value>NoControl</value>
   </data>
   <data name="mapNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 236</value>
+    <value>3, 237</value>
   </data>
   <data name="mapNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 0</value>
@@ -634,7 +634,7 @@
     <value>NoControl</value>
   </data>
   <data name="organiserLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 262</value>
+    <value>3, 263</value>
   </data>
   <data name="organiserLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 0</value>
@@ -670,7 +670,7 @@
     <value>NoControl</value>
   </data>
   <data name="countryLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 288</value>
+    <value>3, 289</value>
   </data>
   <data name="countryLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 0</value>
@@ -706,7 +706,7 @@
     <value>NoControl</value>
   </data>
   <data name="disciplineLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 314</value>
+    <value>3, 315</value>
   </data>
   <data name="disciplineLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 0</value>
@@ -742,7 +742,7 @@
     <value>NoControl</value>
   </data>
   <data name="relayLegLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 340</value>
+    <value>3, 341</value>
   </data>
   <data name="relayLegLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 0</value>
@@ -775,7 +775,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 206</value>
+    <value>142, 207</value>
   </data>
   <data name="name.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 20</value>
@@ -799,7 +799,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="mapName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 232</value>
+    <value>142, 233</value>
   </data>
   <data name="mapName.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 20</value>
@@ -823,7 +823,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="organiser.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 258</value>
+    <value>142, 259</value>
   </data>
   <data name="organiser.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 20</value>
@@ -847,7 +847,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="country.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 284</value>
+    <value>142, 285</value>
   </data>
   <data name="country.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 20</value>
@@ -871,7 +871,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="type.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 310</value>
+    <value>142, 311</value>
   </data>
   <data name="type.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 20</value>
@@ -895,7 +895,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="relayLeg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 336</value>
+    <value>142, 337</value>
   </data>
   <data name="relayLeg.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 20</value>
@@ -919,7 +919,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="resultListUrl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 362</value>
+    <value>142, 363</value>
   </data>
   <data name="resultListUrl.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 20</value>
@@ -943,7 +943,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="comment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 388</value>
+    <value>142, 389</value>
   </data>
   <data name="comment.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -979,7 +979,7 @@
     <value>png</value>
   </data>
   <data name="imageFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 455</value>
+    <value>142, 456</value>
   </data>
   <data name="imageFormat.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 21</value>
@@ -1006,7 +1006,7 @@
     <value>NoControl</value>
   </data>
   <data name="imageFormatLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 459</value>
+    <value>3, 460</value>
   </data>
   <data name="imageFormatLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 0</value>
@@ -1039,7 +1039,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="category.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 180</value>
+    <value>142, 181</value>
   </data>
   <data name="category.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 21</value>
@@ -1066,7 +1066,7 @@
     <value>NoControl</value>
   </data>
   <data name="categoryLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 184</value>
+    <value>3, 185</value>
   </data>
   <data name="categoryLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 7, 3, 0</value>
@@ -1159,7 +1159,7 @@
     <value>1</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 82</value>
+    <value>142, 83</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>461, 39</value>
