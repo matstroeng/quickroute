@@ -1555,7 +1555,7 @@ namespace QuickRoute.BusinessEntities
           for (int j = 0; j < segments[i].Waypoints.Count; j++)
           {
             Waypoint w = segments[i].Waypoints[j];
-            while (w.Time > lapTimes[lapIndex] && lapIndex < lapTimes.Count - 1)
+            while (w.Time.ToUniversalTime() > lapTimes[lapIndex].ToUniversalTime() && lapIndex < lapTimes.Count - 1)
             {
               lapIndex++;
               lapStartPL = GetParameterizedLocationFromTime(lapTimes[lapIndex - 1]);
@@ -1605,7 +1605,7 @@ namespace QuickRoute.BusinessEntities
             w.Attributes[WaypointAttribute.Direction] = direction;
 
             // direction deviation to next lap
-            while (w.Time > lapTimes[lapIndex] && lapIndex < lapTimes.Count - 1)
+            while (w.Time.ToUniversalTime() > lapTimes[lapIndex].ToUniversalTime() && lapIndex < lapTimes.Count - 1)
             {
               lapIndex++;
               lapLongLat = GetLocationFromParameterizedLocation(GetParameterizedLocationFromTime(lapTimes[lapIndex]));

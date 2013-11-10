@@ -153,7 +153,7 @@
       this.webServiceURL.FormattingEnabled = true;
       this.webServiceURL.Name = "webServiceURL";
       this.webServiceURL.SelectedIndexChanged += new System.EventHandler(this.webServiceURL_SelectedIndexChanged);
-      this.webServiceURL.Enter += new System.EventHandler(this.control_Enter);
+      this.webServiceURL.Enter += new System.EventHandler(this.webServiceURL_Enter);
       this.webServiceURL.Leave += new System.EventHandler(this.webServiceURL_Leave);
       // 
       // username
@@ -162,7 +162,7 @@
       this.username.FormattingEnabled = true;
       this.username.Name = "username";
       this.username.SelectedIndexChanged += new System.EventHandler(this.username_SelectedIndexChanged);
-      this.username.Enter += new System.EventHandler(this.control_Enter);
+      this.username.Enter += new System.EventHandler(this.username_Enter);
       this.username.Leave += new System.EventHandler(this.username_Leave);
       // 
       // passwordLabel
