@@ -21,6 +21,7 @@ namespace QuickRoute.BusinessEntities
       var tempFileName = CommonUtil.GetTempFileName();
       using (var fs = new FileStream(tempFileName, FileMode.Create, FileAccess.Write))
       {
+        stream.Position = 0;
         CommonUtil.CopyStream(stream, fs);
       }
       CalculateImageAndTransformationMatrix(tempFileName);
@@ -33,61 +34,66 @@ namespace QuickRoute.BusinessEntities
 
     private void CalculateImageAndTransformationMatrix(string fileName)
     {
-      var zipFile = new Ionic.Zip.ZipFile(fileName);
-      var mapSize = new Size();
-      Transformation = new Transformation();
-
-      // get entry for kml file and image file
-      KmlDocument kmlDocument = null;
-      foreach (var entry in zipFile)
+      using (var zipFile = new Ionic.Zip.ZipFile(fileName))
       {
-        if (entry.FileName == entry.LocalFileName && Path.GetExtension(entry.FileName) == ".kml")
-        {
-          using (var kmlStream = new MemoryStream())
-          {
-            entry.Extract(kmlStream);
-            kmlStream.Position = 0;
-            kmlDocument = new KmlDocument(kmlStream);
-          }
-          break;
-        }
-      }
+        var mapSize = new Size();
+        Transformation = new Transformation();
 
-      if (kmlDocument != null)
-      {
-        // we have got a kml document, get map image file stream from it
+        // get entry for kml file and image file
+        KmlDocument kmlDocument = null;
         foreach (var entry in zipFile)
         {
-          if (entry.FileName == kmlDocument.ImageFileName)
+          if (entry.FileName == entry.LocalFileName && Path.GetExtension(entry.FileName) == ".kml")
           {
-            ImageStream = new MemoryStream();
-            entry.Extract(ImageStream);
-            ImageStream.Position = 0;
-            // check if image is QR jpeg
-            var ed = QuickRouteJpegExtensionData.FromStream(ImageStream);
-            if(ed != null)
+            using (var kmlStream = new MemoryStream())
             {
-              // get transformation matrix from QR jpeg metadata
-              Transformation = ed.Sessions.CalculateAverageTransformation();
-              ImageStream.Position = 0;
-              return;
+              entry.Extract(kmlStream);
+              kmlStream.Position = 0;
+              kmlDocument = new KmlDocument(kmlStream);
             }
-            else
+            if (kmlDocument.ImageFileName != null)
             {
-              // it is not, use normal image bounds
-              ImageStream.Position = 0;
-              mapSize = Image.FromStream(ImageStream).Size; // need to get image object to get image size
+              break;
             }
-            ImageStream.Position = 0;
-            break;
           }
         }
-      }
 
-      if (kmlDocument != null && ImageStream != null)
-      {
-        // finally, calculate the transformation
-        Transformation = new Transformation(kmlDocument.LongLatBox, mapSize);
+        if (kmlDocument != null)
+        {
+          // we have got a kml document, get map image file stream from it
+            foreach (var entry in zipFile)
+          {
+            if (entry.FileName == kmlDocument.ImageFileName)
+            {
+              ImageStream = new MemoryStream();
+              entry.Extract(ImageStream);
+              ImageStream.Position = 0;
+              // check if image is QR jpeg
+              var ed = QuickRouteJpegExtensionData.FromStream(ImageStream);
+              if (ed != null)
+              {
+                // get transformation matrix from QR jpeg metadata
+                Transformation = ed.Sessions.CalculateAverageTransformation();
+                ImageStream.Position = 0;
+                return;
+              }
+              else
+              {
+                // it is not, use normal image bounds
+                ImageStream.Position = 0;
+                mapSize = Image.FromStream(ImageStream).Size; // need to get image object to get image size
+              }
+              ImageStream.Position = 0;
+              break;
+            }
+          }
+        }
+
+        if (kmlDocument != null && ImageStream != null)
+        {
+          // finally, calculate the transformation
+          Transformation = new Transformation(kmlDocument.LongLatBox, mapSize);
+        }
       }
     }
 
