@@ -201,7 +201,7 @@ namespace QuickRoute.UI.Forms
 
     private void mapImageFileName_TextChanged(object sender, EventArgs e)
     {
-      UpdateMapImageFileFormat();
+        UpdateMapImageFileFormat();
     }
 
     private void mapImageFileName_SelectedValueChanged(object sender, EventArgs e)
@@ -211,6 +211,7 @@ namespace QuickRoute.UI.Forms
 
     private void mapImageFileName_Leave(object sender, EventArgs e)
     {
+      UpdateMapImageFileFormat();
       LoadImage();
     }
 
@@ -569,7 +570,7 @@ namespace QuickRoute.UI.Forms
       {
         foreach (string e in ff.Extensions)
         {
-          if (mapImageFileName.Text.EndsWith(e))
+          if (mapImageFileName.Text.EndsWith(e, StringComparison.InvariantCultureIgnoreCase))
           {
             mapImageFileFormatComboBox.SelectedItem = ff;
             found = true;
