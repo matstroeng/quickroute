@@ -203,7 +203,7 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
               {
                 if (lastWpt == null || wpt.time != lastWpt.time)
                 {
-                  if (wpt.extensions != null && wpt.extensions.Any[0].LocalName == "timerPaused")
+                  if (wpt.extensions != null && wpt.extensions.Any != null && wpt.extensions.Any[0].LocalName == "timerPaused")
                   {
                     // new route segment ahead
                     if (routeSegment.Waypoints.Count > 0) routeSegments.Add(routeSegment);
@@ -248,7 +248,7 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
           var routeSegment = new RouteSegment();
           foreach (var rtept in route.rtept)
           {
-            if (rtept.extensions != null && rtept.extensions.Any[0].LocalName == "timerPaused")
+            if (rtept.extensions != null && rtept.extensions.Any != null && rtept.extensions.Any[0].LocalName == "timerPaused")
             {
               // new route segment ahead
               if (routeSegment.Waypoints.Count > 0) routeSegments.Add(routeSegment);
@@ -388,7 +388,7 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
 
     private static double? GetGarminHeartRateFromWaypoint(wptType wpt)
     {
-      if (wpt.extensions != null)
+      if (wpt.extensions != null && wpt.extensions.Any != null)
       {
         foreach (var element in wpt.extensions.Any)
         {

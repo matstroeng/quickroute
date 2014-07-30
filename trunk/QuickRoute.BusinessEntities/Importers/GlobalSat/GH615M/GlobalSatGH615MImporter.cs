@@ -7,6 +7,11 @@ namespace QuickRoute.BusinessEntities.Importers.GlobalSat.GH615M
 {
     public class GlobalSatGH615MImporter : IGPSDeviceImporter
     {
+        public GlobalSatGH615MImporter()
+        {
+            
+        }
+
         private readonly GlobalSatGH615MReader _gsGH615MReader = new GlobalSatGH615MReader();
         private IGH615MTrackInfo _trackToImport;
         private ImportResult _importResult;
