@@ -260,7 +260,7 @@ namespace QuickRoute.UI.Forms
       {
         foreach (string e in ff.Extensions)
         {
-          if (routeFileName.Text.EndsWith(e))
+          if (routeFileName.Text.EndsWith(e, StringComparison.InvariantCultureIgnoreCase))
           {
             routeFileFormatComboBox.SelectedItem = ff;
             found = true;
