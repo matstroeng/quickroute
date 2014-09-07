@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<!-- Select a Product Configuration -->
+		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
+		<!-- Select a Visual Studio Configuration / InstallShield Release -->
+		<Configuration>Debug</Configuration>
+		<InstallShieldRelease>$(Configuration)</InstallShieldRelease>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- The InstallShieldProject item selects the project to build -->
+		<InstallShieldProject Include="$(MSBuildProjectDirectory)\$(MSBuildProjectName).isl"/>
+		<!-- The InstallShieldReleaseFlags sets Release Flags -->
+		<!--<InstallShieldReleaseFlags Include=""/>-->
+		<!-- The InstallShieldMergeModulePath specifies what directories are
+		searched for Merge Modules -->
+		<!--<InstallShieldMergeModulePath Include=""/>-->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The ProjectReference items refer to any Visual Studio solutions you want to automatically probe for Project Output Groups.  -->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The TaggedOutputs items allow you to explicitly add extra files to output groups. Each item must include both Name and OutputGroup, as well as TargetPath metadata values. -->
+		<!--<TaggedOutputs Include="C:\My Test Exe.exe">
+			<Name>My Test Project</Name>
+			<OutputGroup>Primary output</OutputGroup>
+			<TargetPath>My Test Exe.exe</TargetPath>
+		</TaggedOutputs> -->
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2013Limited\InstallShield.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\Publishers\DOMAPublisher\DOMAPublisher.csproj">
+			<Name>DOMAPublisher</Name>
+			<Project>{B7D88639-3248-4309-A687-94DC11EC2946}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\GPSDeviceReaders\GarminUSBReader\GarminUSBReader.csproj">
+			<Name>GarminUSBReader</Name>
+			<Project>{FFEC4820-9B6B-47E9-8594-B71A52081C1E}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\GPSDeviceReaders\GlobalSatGH615MReader\GlobalSatGH615MReader.csproj">
+			<Name>GlobalSatGH615MReader</Name>
+			<Project>{81633CC3-9C5E-4C93-A9A6-876F6AE40883}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\GPSDeviceReaders\JJConnectRegistratorSEReader\JJConnectRegistratorSEReader.csproj">
+			<Name>JJConnectRegistratorSEReader</Name>
+			<Project>{E91D684B-2DD8-4C50-8111-1940BFB427EE}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\GPSDeviceReaders\PolarRS800CXReader\PolarRS800CXReader.csproj">
+			<Name>PolarRS800CXReader</Name>
+			<Project>{D3448966-5499-4F7F-8999-6484B27B56C9}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\QuickRoute.BusinessEntities\QuickRoute.BusinessEntities.csproj">
+			<Name>QuickRoute.BusinessEntities</Name>
+			<Project>{A3FE7994-D8E2-4FF0-AE45-8BAA4ECECB61}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\QuickRoute.Common\QuickRoute.Common.csproj">
+			<Name>QuickRoute.Common</Name>
+			<Project>{7F93415F-ACEB-4B4F-8E6B-51D0B096F38E}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\QuickRoute.Controls\QuickRoute.Controls.csproj">
+			<Name>QuickRoute.Controls</Name>
+			<Project>{D5755345-EE87-4B08-95D7-55DDDB331CFB}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\QuickRoute.PropertyControls\QuickRoute.PropertyControls.csproj">
+			<Name>QuickRoute.PropertyControls</Name>
+			<Project>{4900715B-572B-4279-B704-29B0640612ED}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\QuickRoute.Resources\QuickRoute.Resources.csproj">
+			<Name>QuickRoute.Resources</Name>
+			<Project>{2854A1FB-52F7-4197-A24E-E9977FD21563}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\QuickRoute.UI\QuickRoute.UI.csproj">
+			<Name>QuickRoute.UI</Name>
+			<Project>{953F40A2-9741-4BE8-B42E-59C603700281}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\GPSDeviceReaders\SerialPortDeviceReader\SerialPortDeviceReader.csproj">
+			<Name>SerialPortDeviceReader</Name>
+			<Project>{11A24507-A39E-42A2-9662-0416E8A31597}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

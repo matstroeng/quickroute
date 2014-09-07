@@ -247,7 +247,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="&gt;&gt;gradientList.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.GradientListBox, QuickRoute.Controls, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickRoute.Controls.GradientListBox, QuickRoute.Controls, Version=2.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;gradientNameLabel.ZOrder" xml:space="preserve">
     <value>2</value>

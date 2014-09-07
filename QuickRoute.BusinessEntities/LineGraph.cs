@@ -234,6 +234,10 @@ namespace QuickRoute.BusinessEntities
           return w.Attributes[WaypointAttribute.DirectionDeviationToNextLap].Value;
         case WaypointAttribute.MapReadingDuration:
           return w.Attributes[WaypointAttribute.MapReadingDuration].GetValueOrDefault(0);
+        case WaypointAttribute.Cadence:
+          return w.Attributes[WaypointAttribute.Cadence].GetValueOrDefault(0);
+        case WaypointAttribute.Power:
+          return w.Attributes[WaypointAttribute.Power].GetValueOrDefault(0);
         case WaypointAttribute.Pace:
         default:
           return ConvertUtil.ToPace(w.Attributes[WaypointAttribute.Speed].Value).TotalSeconds;

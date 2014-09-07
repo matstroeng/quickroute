@@ -461,12 +461,6 @@
   <data name="RoutePropertyNameAndValue_AverageDirectionDeviationToNextLapFromStart" xml:space="preserve">
     <value>Genomsnittlig riktningsavvikelse (totalt): {0}°</value>
   </data>
-  <data name="RoutePropertyNameAndValue_AverageHeartRate" xml:space="preserve">
-    <value>Genomsnittlig puls (sträcka): {0} slag/min</value>
-  </data>
-  <data name="RoutePropertyNameAndValue_AverageHeartRateFromStart" xml:space="preserve">
-    <value>Genomsnittlig puls (totalt): {0} slag/min</value>
-  </data>
   <data name="RoutePropertyNameAndValue_AverageInclination" xml:space="preserve">
     <value>Genomsnittlig lutning (sträcka): {0}°</value>
   </data>
@@ -764,6 +758,18 @@
   <data name="MapReadingDuration" xml:space="preserve">
     <value>Kartläsningstid</value>
   </data>
+  <data name="Cadence" xml:space="preserve">
+    <value>Kadens</value>
+  </data>
+  <data name="Power" xml:space="preserve">
+    <value>Effekt</value>
+  </data>
+  <data name="Unit_Cadence" xml:space="preserve">
+    <value>rpm</value>
+  </data>
+  <data name="Unit_Power" xml:space="preserve">
+    <value>W</value>
+  </data>
   <data name="Yes" xml:space="preserve">
     <value>Ja</value>
   </data>
@@ -898,5 +904,71 @@
   </data>
   <data name="DownloadingImage" xml:space="preserve">
     <value>Laddar ner bild</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageHeartRate" xml:space="preserve">
+    <value>Genomsnittlig puls (sträcka): {0} slag/min</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageHeartRateFromStart" xml:space="preserve">
+    <value>Genomsnittlig puls (totalt): {0} slag/min</value>
+  </data>
+  <data name="RoutePropertyName_Cadence" xml:space="preserve">
+    <value>Kadens</value>
+  </data>
+  <data name="RoutePropertyName_Power" xml:space="preserve">
+    <value>Effekt</value>
+  </data>
+  <data name="RoutePropertyName_AverageCadence" xml:space="preserve">
+    <value>Genomsnittlig kadens (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_AverageCadenceFromStart" xml:space="preserve">
+    <value>Genomsnittlig kadens (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_AveragePower" xml:space="preserve">
+    <value>Genomsnittlig effekt (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_AveragePowerFromStart" xml:space="preserve">
+    <value>Genomsnittlig effekt (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_MaxCadence" xml:space="preserve">
+    <value>Högsta kadens (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_MaxCadenceFromStart" xml:space="preserve">
+    <value>Högsta kadens (totalt)</value>
+  </data>
+  <data name="RoutePropertyName_MaxPower" xml:space="preserve">
+    <value>Högsta effekt (sträcka)</value>
+  </data>
+  <data name="RoutePropertyName_MaxPowerFromStart" xml:space="preserve">
+    <value>Högsta effekt (totalt)</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Cadence" xml:space="preserve">
+    <value>Kadens: {0} rpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_Power" xml:space="preserve">
+    <value>Effekt: {0} W</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageCadence" xml:space="preserve">
+    <value>Genomsnittlig kadens (sträcka): {0} rpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AverageCadenceFromStart" xml:space="preserve">
+    <value>Genomsnittlig kadens (totalt): {0} rpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePower" xml:space="preserve">
+    <value>Genomsnittlig effekt (sträcka): {0} W</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_AveragePowerFromStart" xml:space="preserve">
+    <value>Genomsnittlig effekt (totalt): {0} W</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MaxCadence" xml:space="preserve">
+    <value>Högsta kadens (sträcka): {0} rpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MaxCadenceFromStart" xml:space="preserve">
+    <value>Högsta kadens (totalt): {0} rpm</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MaxPower" xml:space="preserve">
+    <value>Högsta effekt (sträcka): {0} W</value>
+  </data>
+  <data name="RoutePropertyNameAndValue_MaxPowerFromStart" xml:space="preserve">
+    <value>Högsta effekt (totalt): {0} W</value>
   </data>
 </root>

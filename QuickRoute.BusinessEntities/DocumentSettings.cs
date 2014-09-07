@@ -64,6 +64,14 @@ namespace QuickRoute.BusinessEntities
         WaypointAttribute.MapReadingDuration,
         new ColorRangeIntervalSliderSettings(0, 10)
       );
+      defaultColorRangeIntervalSliderSettings.Add(
+        WaypointAttribute.Cadence,
+        new ColorRangeIntervalSliderSettings(0, 200)
+      );
+      defaultColorRangeIntervalSliderSettings.Add(
+        WaypointAttribute.Power,
+        new ColorRangeIntervalSliderSettings(0, 500)
+      );
 
       return defaultColorRangeIntervalSliderSettings;
     }
@@ -94,6 +102,14 @@ namespace QuickRoute.BusinessEntities
       defaultLapHistogramSettings.Add(
         WaypointAttribute.MapReadingDuration,
         new LapHistogramSettings(1)
+      );
+      defaultLapHistogramSettings.Add(
+        WaypointAttribute.Cadence,
+        new LapHistogramSettings(5)
+      );
+      defaultLapHistogramSettings.Add(
+        WaypointAttribute.Power,
+        new LapHistogramSettings(10)
       );
       return defaultLapHistogramSettings;
     }

@@ -179,7 +179,9 @@
     <Compile Include="RouteProperties\Altitude.cs" />
     <Compile Include="RouteProperties\AltitudeDifference.cs" />
     <Compile Include="RouteProperties\Ascent.cs" />
+    <Compile Include="RouteProperties\AveragePower.cs" />
     <Compile Include="RouteProperties\AverageDirectionDeviationToNextLap.cs" />
+    <Compile Include="RouteProperties\AverageCadence.cs" />
     <Compile Include="RouteProperties\AverageHeartRate.cs" />
     <Compile Include="RouteProperties\AverageInclination.cs" />
     <Compile Include="RouteProperties\AverageMapReadingTime.cs" />
@@ -189,6 +191,7 @@
     <Compile Include="RouteProperties\AverageStraightLineSpeed.cs" />
     <Compile Include="RouteProperties\AverageTimeBetweenMapReadings.cs" />
     <Compile Include="RouteProperties\BlankRouteProperty.cs" />
+    <Compile Include="RouteProperties\Cadence.cs" />
     <Compile Include="RouteProperties\CircleTimeAtStartOfSpan.cs" />
     <Compile Include="RouteProperties\CircleTimeBackward.cs" />
     <Compile Include="RouteProperties\CircleTimeAtEndOfSpan.cs" />
@@ -209,6 +212,8 @@
     <Compile Include="RouteProperties\MapReadingDuration.cs" />
     <Compile Include="RouteProperties\MapReadingPercentage.cs" />
     <Compile Include="RouteProperties\MapReadingState.cs" />
+    <Compile Include="RouteProperties\MaxPower.cs" />
+    <Compile Include="RouteProperties\MaxCadence.cs" />
     <Compile Include="RouteProperties\MaxHeartRate.cs" />
     <Compile Include="RouteProperties\MinHeartRate.cs" />
     <Compile Include="RouteProperties\NextMapReadingStart.cs" />

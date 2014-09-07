@@ -426,6 +426,30 @@ namespace QuickRoute.BusinessEntities
     }
   }
 
+  public class Cadence : DoubleUnitBase
+  {
+    public Cadence()
+    {
+    }
+
+    public Cadence(double value)
+      : base(value)
+    {
+    }
+  }
+
+  public class Power : DoubleUnitBase
+  {
+    public Power()
+    {
+    }
+
+    public Power(double value)
+      : base(value)
+    {
+    }
+  }
+
   public class MapReadingSimpleState : IUnit
   {
     public MapReadingSimpleState()

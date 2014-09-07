@@ -226,7 +226,7 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
                     }
                     if (wpt.timeSpecified)
                     {
-                      routeSegment.Waypoints.Add(new Waypoint(wpt.time, new LongLat(lon, lat), altitude, heartRate, null));
+                      routeSegment.Waypoints.Add(new Waypoint(wpt.time, new LongLat(lon, lat), altitude, heartRate, null, null, null));
                       noOfWaypointsWithTimes++;
                       lastWpt = wpt;
                     }
@@ -267,7 +267,7 @@ namespace QuickRoute.BusinessEntities.Importers.GPX
               }
               if (rtept.timeSpecified)
               {
-                routeSegment.Waypoints.Add(new Waypoint(rtept.time, new LongLat(lon, lat), altitude, heartRate, null));
+                routeSegment.Waypoints.Add(new Waypoint(rtept.time, new LongLat(lon, lat), altitude, heartRate, null, null, null));
                 noOfWaypointsWithTimes++;
               }
             }

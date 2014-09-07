@@ -1315,7 +1315,9 @@ namespace QuickRoute.BusinessEntities
     MapReadingState,
     MapReadingDuration,
     PreviousMapReadingEnd,
-    NextMapReadingStart
+    NextMapReadingStart,
+    Cadence,
+    Power
   }
 
   public struct WaypointAttributeString
@@ -1356,6 +1358,14 @@ namespace QuickRoute.BusinessEntities
         case BusinessEntities.WaypointAttribute.MapReadingDuration:
           name = Strings.MapReadingDuration;
           unit = Strings.Unit_Time;
+          break;
+        case BusinessEntities.WaypointAttribute.Cadence:
+          name = Strings.Cadence;
+          unit = Strings.Unit_Cadence;
+          break;
+        case BusinessEntities.WaypointAttribute.Power:
+          name = Strings.Power;
+          unit = Strings.Unit_Power;
           break;
         default:
           name = "";
