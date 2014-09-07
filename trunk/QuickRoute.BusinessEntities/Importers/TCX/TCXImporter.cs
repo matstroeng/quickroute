@@ -59,6 +59,7 @@ namespace QuickRoute.BusinessEntities.Importers.TCX
       XPathNavigator nav = doc.CreateNavigator();
       XmlNamespaceManager nsManager = new XmlNamespaceManager(nav.NameTable);
       nsManager.AddNamespace("ns", "http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2");
+      nsManager.AddNamespace("garminExtensions", "http://www.garmin.com/xmlschemas/ActivityExtension/v2");
       XPathNodeIterator activities = nav.Select("//ns:Activity", nsManager);
 
       while (activities.MoveNext())
@@ -112,6 +113,24 @@ namespace QuickRoute.BusinessEntities.Importers.TCX
                   // sometimes heart rates are only present at some nodes, so use last valid heart rate
                   waypoint.HeartRate = routeSegment.LastWaypoint.HeartRate;
                 }
+
+                var cadenceNode = trackpointNodes.Current.SelectSingleNode("ns:Cadence", nsManager);
+                if (cadenceNode != null)
+                {
+                  waypoint.Cadence = cadenceNode.ValueAsDouble;
+                }
+
+
+                var extensionsNode = trackpointNodes.Current.SelectSingleNode("ns:Extensions", nsManager);
+                if (extensionsNode != null)
+                {
+                  var wattsNode = extensionsNode.SelectSingleNode("garminExtensions:TPX/garminExtensions:Watts", nsManager);
+                  if (wattsNode != null)
+                  {
+                    waypoint.Power = wattsNode.ValueAsDouble;
+                  }
+                }
+
                 // do not add waypoint if it has the same location or time as the previous one
                 if (waypoint.LongLat != null && !waypoint.LongLat.Equals(lastLongLat) && waypoint.Time != lastTime)
                 {

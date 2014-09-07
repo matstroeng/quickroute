@@ -151,7 +151,7 @@
     <value>canvas</value>
   </data>
   <data name="&gt;&gt;canvas.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.Canvas, QuickRoute.Controls, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickRoute.Controls.Canvas, QuickRoute.Controls, Version=2.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;canvas.Parent" xml:space="preserve">
     <value>toolStripContainer1.ContentPanel</value>
@@ -178,7 +178,7 @@
     <value>dynamicHelpLabel</value>
   </data>
   <data name="&gt;&gt;dynamicHelpLabel.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.ScrollableLabel, QuickRoute.Controls, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickRoute.Controls.ScrollableLabel, QuickRoute.Controls, Version=2.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;dynamicHelpLabel.Parent" xml:space="preserve">
     <value>toolStripContainer1.ContentPanel</value>
@@ -586,7 +586,7 @@
     <value>lineGraph</value>
   </data>
   <data name="&gt;&gt;lineGraph.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.LineGraphControl, QuickRoute.Controls, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickRoute.Controls.LineGraphControl, QuickRoute.Controls, Version=2.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lineGraph.Parent" xml:space="preserve">
     <value>bottomPanel</value>
@@ -2768,7 +2768,7 @@
     <value>colorRangeIntervalSlider</value>
   </data>
   <data name="&gt;&gt;colorRangeIntervalSlider.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.ToolstripColorRangeIntervalSlider, QuickRoute.Controls, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickRoute.Controls.ToolstripColorRangeIntervalSlider, QuickRoute.Controls, Version=2.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;colorRangeEndValue.Name" xml:space="preserve">
     <value>colorRangeEndValue</value>
@@ -2792,7 +2792,7 @@
     <value>gradientAlphaAdjustment</value>
   </data>
   <data name="&gt;&gt;gradientAlphaAdjustment.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.ToolstripTrackBar, QuickRoute.Controls, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickRoute.Controls.ToolstripTrackBar, QuickRoute.Controls, Version=2.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
     <value>toolStripSeparator2</value>
@@ -2810,7 +2810,7 @@
     <value>routeLineWidth</value>
   </data>
   <data name="&gt;&gt;routeLineWidth.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.ToolstripNumericUpDown, QuickRoute.Controls, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickRoute.Controls.ToolstripNumericUpDown, QuickRoute.Controls, Version=2.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;routeLineMaskVisible.Name" xml:space="preserve">
     <value>routeLineMaskVisible</value>
@@ -2822,7 +2822,7 @@
     <value>routeLineMaskWidth</value>
   </data>
   <data name="&gt;&gt;routeLineMaskWidth.Type" xml:space="preserve">
-    <value>QuickRoute.Controls.ToolstripNumericUpDown, QuickRoute.Controls, Version=2.4.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>QuickRoute.Controls.ToolstripNumericUpDown, QuickRoute.Controls, Version=2.5.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;routeLineMaskColorButton.Name" xml:space="preserve">
     <value>routeLineMaskColorButton</value>

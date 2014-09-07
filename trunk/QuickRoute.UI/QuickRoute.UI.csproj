@@ -767,7 +767,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="QuickRoute.ico" />
-    <Content Include="todo.txt" />
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>

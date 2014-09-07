@@ -54,7 +54,7 @@ namespace QuickRoute.BusinessEntities.Importers.FIT
             {
               if(routeSegment.Waypoints.Count == 0 || routeSegment.LastWaypoint.Time < w.Time)
               {
-                routeSegment.Waypoints.Add(new Waypoint(w.Time, new LongLat(w.Longitude, w.Latitude), w.Altitude, w.HeartRate, null));  
+                routeSegment.Waypoints.Add(new Waypoint(w.Time, new LongLat(w.Longitude, w.Latitude), w.Altitude, w.HeartRate, null, w.Cadence, w.Power));  
               }
             }
             ImportResult.Route = new Route(new List<RouteSegment>() { routeSegment });
@@ -145,6 +145,8 @@ namespace QuickRoute.BusinessEntities.Importers.FIT
                   var lng = d.GetInt32(1);
                   var alt = d.GetUInt16(2);
                   var hr = d.GetByte(3);
+                  var cadence = d.GetByte(4);
+                  var power = d.GetUInt16(7);
                   if (lng != null && lng != invalidInt32 && lat != null && lat != invalidInt32)
                   {
                     Waypoints.Add(new FITWaypoint()
@@ -153,7 +155,9 @@ namespace QuickRoute.BusinessEntities.Importers.FIT
                                       Latitude = positionFactor * lat.Value,
                                       Longitude = positionFactor * lng.Value,
                                       Altitude = alt == null || alt == invalidUInt16 ? (double?)null : (double)alt.Value / 5 - 500,
-                                      HeartRate = hr == null || hr == invalidByte ? null : hr
+                                      HeartRate = hr == null || hr == invalidByte ? null : hr,
+                                      Cadence = cadence == null || cadence == invalidByte ? null : cadence,
+                                      Power = power == null || power == invalidUInt16 ? null : power
                                     });
                   }
                 }
@@ -352,6 +356,8 @@ namespace QuickRoute.BusinessEntities.Importers.FIT
       public double Longitude { get; set; }
       public int? HeartRate { get; set; }
       public double? Altitude { get; set; }
+      public byte? Cadence { get; set; }
+      public ushort? Power { get; set; }
     }
 
     private class FITLap

@@ -177,6 +177,41 @@ namespace QuickRoute.BusinessEntities
       rls.MonochromeWidth = rls.Width + 2 * rls.MaskWidth;
       coll.Add(WaypointAttribute.MapReadingDuration, rls);
 
+      // default cadence line settings
+      rls = new RouteLineSettings(
+        new ColorRange(
+          new Gradient(Color.FromArgb(128, Color.Green), 0.0,
+                       Color.FromArgb(128, Color.Yellow), 0.5,
+                       Color.FromArgb(128, Color.Red), 1.0),
+          30, 150),
+        3,
+        Color.FromArgb(160, Color.DarkCyan),
+        1.5,
+        true,
+        0);
+      // TODO: localize
+      rls.ColorRange.Gradient.Name = WaypointAttribute.Cadence.ToString();
+      rls.MonochromeColor = rls.ColorRange.Gradient.GetColor(1);
+      rls.MonochromeWidth = rls.Width + 2 * rls.MaskWidth;
+      coll.Add(WaypointAttribute.Cadence, rls);
+
+      // default power line settings
+      rls = new RouteLineSettings(
+        new ColorRange(
+          new Gradient(Color.FromArgb(128, Color.Green), 0.0,
+                       Color.FromArgb(128, Color.Yellow), 0.5,
+                       Color.FromArgb(128, Color.Red), 1.0),
+          0, 600),
+        3,
+        Color.FromArgb(160, Color.DarkMagenta),
+        1.5,
+        true,
+        0);
+      // TODO: localize
+      rls.ColorRange.Gradient.Name = WaypointAttribute.Power.ToString();
+      rls.MonochromeColor = rls.ColorRange.Gradient.GetColor(1);
+      rls.MonochromeWidth = rls.Width + 2 * rls.MaskWidth;
+      coll.Add(WaypointAttribute.Power, rls);
 
       return coll; 
     }

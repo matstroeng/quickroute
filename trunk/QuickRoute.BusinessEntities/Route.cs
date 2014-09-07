@@ -533,7 +533,9 @@ namespace QuickRoute.BusinessEntities
                                               {
                                                 WaypointAttribute.HeartRate,
                                                 WaypointAttribute.Altitude,
-                                                WaypointAttribute.MapReadingDuration
+                                                WaypointAttribute.MapReadingDuration,
+                                                WaypointAttribute.Cadence,
+                                                WaypointAttribute.Power
                                               };
         foreach (var wa in attributesToCheckExistenceFor)
         {
@@ -546,6 +548,8 @@ namespace QuickRoute.BusinessEntities
         CalculateSlidingAverageAttributes(WaypointAttribute.Altitude, SmoothingIntervals[WaypointAttribute.Altitude]);
         CalculateInclinations();
         CalculateMapReadings();
+        CalculateCadences();
+        CalculatePowers();
       }
       // CalculateDirectionDeviationsToNextLap is also dependent on laps, not just route change
       CalculateDirectionDeviationsToNextLap();
@@ -595,7 +599,9 @@ namespace QuickRoute.BusinessEntities
                            WaypointAttribute.Inclination,
                            WaypointAttribute.Direction,
                            WaypointAttribute.Longitude,
-                           WaypointAttribute.Latitude
+                           WaypointAttribute.Latitude,
+                           WaypointAttribute.Cadence,
+                           WaypointAttribute.Power
                          };
 
       // map reading
@@ -616,10 +622,10 @@ namespace QuickRoute.BusinessEntities
                                 WaypointAttribute.MapReadingDuration,
                                 WaypointAttribute.MapReadingState,
                                 WaypointAttribute.PreviousMapReadingEnd,
-                                WaypointAttribute.NextMapReadingStart
+                                WaypointAttribute.NextMapReadingStart,
                               });
       }
-
+      
       foreach (var attribute in attributes)
       {
         w.Attributes[attribute] = GetAttributeValueBetweenWaypoints(waypoints[i], waypoints[i + 1], d, attribute);
@@ -1302,11 +1308,15 @@ namespace QuickRoute.BusinessEntities
           ? (double?)(w0.Attributes[WaypointAttribute.NextMapReadingStart].Value - t * (w1.Time - w0.Time).TotalSeconds)
           : null;
         default:
-          var d0 = w0.Attributes[attribute];
-          var d1 = w1.Attributes[attribute];
-          if (d0.HasValue && d1.HasValue) return d0 + t * (d1 - d0);
-          if (!d0.HasValue && !d1.HasValue) return null;
-          return (t < 0.5 ? d0 : d1);
+          if (w0.Attributes.ContainsKey(attribute) && w1.Attributes.ContainsKey(attribute))
+          {
+            var d0 = w0.Attributes[attribute];
+            var d1 = w1.Attributes[attribute];
+            if (d0.HasValue && d1.HasValue) return d0 + t * (d1 - d0);
+            if (!d0.HasValue && !d1.HasValue) return null;
+            return (t < 0.5 ? d0 : d1);
+          }
+          return null;
       }
     }
 
@@ -1766,6 +1776,58 @@ namespace QuickRoute.BusinessEntities
       }
     }
 
+    private void CalculateCadences()
+    {
+      if (waypointAttributeExists[WaypointAttribute.Cadence])
+      {
+        for (int i = 0; i < segments.Count; i++)
+        {
+          for (int j = 0; j < segments[i].Waypoints.Count; j++)
+          {
+            var waypoint = segments[i].Waypoints[j];
+            waypoint.Attributes[WaypointAttribute.Cadence] = waypoint.Cadence ?? 0;
+          }
+        }
+      }
+      else
+      {
+        for (int i = 0; i < segments.Count; i++)
+        {
+          for (int j = 0; j < segments[i].Waypoints.Count; j++)
+          {
+            var waypoint = segments[i].Waypoints[j];
+            waypoint.Attributes[WaypointAttribute.Cadence] = null;
+          }
+        }
+      }
+    }
+
+    private void CalculatePowers()
+    {
+      if (waypointAttributeExists[WaypointAttribute.Power])
+      {
+        for (int i = 0; i < segments.Count; i++)
+        {
+          for (int j = 0; j < segments[i].Waypoints.Count; j++)
+          {
+            var waypoint = segments[i].Waypoints[j];
+            waypoint.Attributes[WaypointAttribute.Power] = waypoint.Power ?? 0;
+          }
+        }
+      }
+      else
+      {
+        for (int i = 0; i < segments.Count; i++)
+        {
+          for (int j = 0; j < segments[i].Waypoints.Count; j++)
+          {
+            var waypoint = segments[i].Waypoints[j];
+            waypoint.Attributes[WaypointAttribute.Power] = null;
+          }
+        }
+      }
+    }
+
     private int GetNextLapIndexFromTime(DateTime time)
     {
       int lo = 0;
@@ -1808,6 +1870,15 @@ namespace QuickRoute.BusinessEntities
             case WaypointAttribute.MapReadingDuration:
               if (waypoint.MapReadingState != null) return true;
               break;
+
+            case WaypointAttribute.Cadence:
+              if (waypoint.Cadence != null) return true;
+              break;
+
+            case WaypointAttribute.Power:
+              if (waypoint.Power != null) return true;
+              break;
+
           }
         }
       }
@@ -1870,7 +1941,7 @@ namespace QuickRoute.BusinessEntities
               ? (double?)((1 - t) * waypoint.HeartRate.Value + t * nextWaypoint.HeartRate.Value)
               : null;
             var mapReadingState = (mapReadingIndex + 1) % 2 == 0 ? MapReadingState.StartReading : MapReadingState.EndReading;
-            newRouteSegment.Waypoints.Add(new Waypoint(time, longLat, altitude, heartRate, mapReadingState));
+            newRouteSegment.Waypoints.Add(new Waypoint(time, longLat, altitude, heartRate, mapReadingState, null, null));
             mapReadingIndex++;
           }
           waypointCount++;
@@ -1987,6 +2058,8 @@ namespace QuickRoute.BusinessEntities
     private LongLat longLat;
     private DateTime time;
     private MapReadingState? mapReadingState;
+    private double? cadence;
+    private double? power;
     // dictionary for storing calculated (possibly smoothed) attribute values (speed, altitude, etc) of this waypoint.
     [NonSerialized]
     private Dictionary<WaypointAttribute, double?> attributes;
@@ -1996,7 +2069,7 @@ namespace QuickRoute.BusinessEntities
       attributes = new Dictionary<WaypointAttribute, double?>();
     }
 
-    public Waypoint(DateTime time, LongLat longLat, double? altitude, double? heartRate, MapReadingState? mapReadingState)
+    public Waypoint(DateTime time, LongLat longLat, double? altitude, double? heartRate, MapReadingState? mapReadingState, double? cadence, double? power)
       : this()
     {
       this.time = time;
@@ -2004,6 +2077,8 @@ namespace QuickRoute.BusinessEntities
       this.altitude = altitude;
       this.heartRate = heartRate;
       this.mapReadingState = mapReadingState;
+      this.cadence = cadence;
+      this.power = power;
     }
 
     public DateTime Time
@@ -2036,9 +2111,21 @@ namespace QuickRoute.BusinessEntities
       set { mapReadingState = value; }
     }
 
+    public double? Cadence
+    {
+      get { return cadence; }
+      set { cadence = value; }
+    }
+
+    public double? Power
+    {
+      get { return power; }
+      set { power = value; }
+    }
+
     public Waypoint Clone()
     {
-      var newWaypoint = new Waypoint(time, longLat, altitude, heartRate, mapReadingState);
+      var newWaypoint = new Waypoint(time, longLat, altitude, heartRate, mapReadingState, cadence, power);
       foreach (var attributeKey in Attributes.Keys)
       {
         newWaypoint.Attributes[attributeKey] = Attributes[attributeKey];
