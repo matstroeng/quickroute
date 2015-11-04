@@ -573,7 +573,8 @@ namespace QuickRoute.BusinessEntities
     /// <returns></returns>
     public static TimeSpan ToPace(double speed)
     {
-      return speed == 0 ? new TimeSpan(0) : new TimeSpan((long)(3600.0 / speed * TimeSpan.TicksPerSecond));
+      // make sure we are not using paces slower than 100 min/km, to not break GDI+ when drawing line graphs
+      return speed == 0 ? new TimeSpan(0) : new TimeSpan((long)(Math.Min(3600.0 / speed, 3600.0) * TimeSpan.TicksPerSecond));
     }
 
     /// <summary>
