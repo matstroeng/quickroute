@@ -101,7 +101,7 @@ namespace QuickRoute.BusinessEntities.Exporters
       Brush colorRangeScaleBrush = new SolidBrush(Color.FromArgb(192, Color.White));
       // copy route image to a new image
       Image = new Bitmap(mapAndRouteImage.Width + 2 * exportImageBorderWidth,
-                                    mapAndRouteImage.Height + exportImageHeaderHeight + 3 * exportImageBorderWidth);
+                         mapAndRouteImage.Height + exportImageHeaderHeight + 3 * exportImageBorderWidth);
       var g = Graphics.FromImage(Image);
       MapBounds = new Rectangle(exportImageBorderWidth, 2 * exportImageBorderWidth + exportImageHeaderHeight, mapAndRouteImage.Width, mapAndRouteImage.Height);
 
@@ -141,6 +141,8 @@ namespace QuickRoute.BusinessEntities.Exporters
       {
         DrawColorRange(g, colorRangeScaleFont, routeLineSettings, colorRangeScaleBrush);
       }
+
+      Image.SetResolution(Document.Map.Image.HorizontalResolution, Document.Map.Image.VerticalResolution);
 
       // dispose objects
       borderPen.Dispose();

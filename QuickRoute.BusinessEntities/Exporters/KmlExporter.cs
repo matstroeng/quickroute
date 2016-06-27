@@ -163,12 +163,9 @@ namespace QuickRoute.BusinessEntities.Exporters
         var writerSettings = new XmlWriterSettings { Encoding = Encoding.UTF8, Indent = true, IndentChars = "  " };
         using (var writer = XmlWriter.Create(kmlStream, writerSettings))
         {
-          if (writer != null)
-          {
-            CreateKml(writer);
-            writer.Close();
-            kmzFile.AddFile(tempKmlFileName, "");
-          }
+          CreateKml(writer);
+          writer.Close();
+          kmzFile.AddFile(tempKmlFileName, "");
         }
       }
       kmzFile.Save(OutputStream);
