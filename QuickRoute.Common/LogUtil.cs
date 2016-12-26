@@ -17,8 +17,8 @@ namespace QuickRoute.Common
   {
     private static bool configured;
     private static decimal lastTime = -1;
-    private static readonly Dictionary<object, HighPerformanceTimer> timers = new Dictionary<object, HighPerformanceTimer>();
-    private static readonly HighPerformanceTimer standardTimer = new HighPerformanceTimer();
+    private static readonly Dictionary<object, Stopwatch> timers = new Dictionary<object, Stopwatch>();
+    private static readonly Stopwatch standardTimer = new Stopwatch();
 
     public static void LogDebug(string message)
     {
@@ -49,7 +49,7 @@ namespace QuickRoute.Common
     {
       if (!configured) throw new Exception("The LogUtil is not configured.");
 
-      var thisTime = HighPerformanceTimer.GetCurrentTime();
+			var thisTime = Stopwatch.GetTimestamp();
       var duration = (lastTime == -1 ? 0 : thisTime - lastTime);
       lastTime = thisTime;
       var caller = GetCaller();
@@ -111,14 +111,14 @@ namespace QuickRoute.Common
       return stackFrame.GetMethod();
     }
 
-    private static HighPerformanceTimer GetTimer()
+    private static Stopwatch GetTimer()
     {
       return standardTimer;
     }
 
-    private static HighPerformanceTimer GetTimer(object key)
+    private static Stopwatch GetTimer(object key)
     {
-      if (!timers.ContainsKey(key)) timers.Add(key, new HighPerformanceTimer());
+      if (!timers.ContainsKey(key)) timers.Add(key, new Stopwatch());
       return timers[key];
     }
 
@@ -127,95 +127,6 @@ namespace QuickRoute.Common
       if (timers.ContainsKey(key)) timers.Remove(key);
     }
 
-  }
-
-  public class HighPerformanceTimer
-  {
-    [DllImport("Kernel32.dll")]
-    private static extern bool QueryPerformanceCounter(out long lpPerformanceCount);
-
-    [DllImport("Kernel32.dll")]
-    private static extern bool QueryPerformanceFrequency(out long lpFrequency);
-
-    private long startTime, stopTime;
-    private static readonly long freq;
-
-    private bool isStarted;
-    private decimal duration;
-
-    static HighPerformanceTimer()
-    {
-      if (QueryPerformanceFrequency(out freq) == false)
-      {
-        // high-performance counter not supported
-        throw new Win32Exception();
-      }
-    }
-
-    // Constructor
-    public HighPerformanceTimer()
-      : this(false)
-    {
-    }
-
-    public HighPerformanceTimer(bool startImmediately)
-    {
-      if (startImmediately) Start();
-    }
-
-    // Start the timer
-    public decimal Start()
-    {
-      // lets do the waiting threads there work
-      Thread.Sleep(0);
-
-      QueryPerformanceCounter(out startTime);
-      isStarted = true;
-      return duration;
-    }
-
-    // Stop the timer
-    public decimal Stop()
-    {
-      if (!isStarted) return duration;
-      QueryPerformanceCounter(out stopTime);
-      duration += (decimal)(stopTime - startTime) / freq;
-      return duration;
-    }
-
-    // Returns the duration of the timer (in seconds)
-    public decimal Duration
-    {
-      get
-      {
-        if (isStarted)
-        {
-          long currentTime;
-          QueryPerformanceCounter(out currentTime);
-          return duration + (decimal)(currentTime - startTime) / freq;
-        }
-        return duration;
-      }
-    }
-
-    public void Reset()
-    {
-      isStarted = false;
-      duration = 0;
-    }
-
-    public void ResetAndStart()
-    {
-      Reset();
-      Start();
-    }
-
-    public static decimal GetCurrentTime()
-    {
-      long currentTime;
-      QueryPerformanceCounter(out currentTime);
-      return (decimal)currentTime / freq;
-    }
   }
 
   public enum LogLevel
