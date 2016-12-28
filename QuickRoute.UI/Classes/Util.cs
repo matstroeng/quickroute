@@ -129,9 +129,14 @@ namespace QuickRoute.UI.Classes
 
     public static string PathShortener(string path, int length)
     {
+#if __MonoCS__
+      //FIXME - implement some shortening
+      return path;
+#else
       var sb = new StringBuilder();
       PathCompactPathEx(sb, path, length, 0);
       return sb.ToString();
+#endif
     }
 
     public static void InsertIntoRecentDocumentsList(string fileName)
