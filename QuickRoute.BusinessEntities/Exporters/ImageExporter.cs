@@ -142,7 +142,11 @@ namespace QuickRoute.BusinessEntities.Exporters
         DrawColorRange(g, colorRangeScaleFont, routeLineSettings, colorRangeScaleBrush);
       }
 
+// Bitmap.SetResolution does not work in Mono
+// https://bugzilla.novell.com/show_bug.cgi?id=434583
+#if !__MonoCS__
       Image.SetResolution(Document.Map.Image.HorizontalResolution, Document.Map.Image.VerticalResolution);
+#endif
 
       // dispose objects
       borderPen.Dispose();
@@ -228,6 +232,7 @@ namespace QuickRoute.BusinessEntities.Exporters
 
     private void SetExifData()
     {
+#if !__MonoCS__
       // GPS version
       var image = Image;
       var exif = new ExifWorks.ExifWorks(ref image);
@@ -255,6 +260,7 @@ namespace QuickRoute.BusinessEntities.Exporters
       }
 
       exif.SetPropertyString((int)ExifWorks.ExifWorks.TagNames.SoftwareUsed, Strings.QuickRoute + " " + Document.GetVersionString());
+#endif
     }
 
     private void SetQuickRouteExtensionData()

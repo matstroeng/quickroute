@@ -661,7 +661,6 @@ namespace QuickRoute.Controls
     {
       if (document != null && document.Map != null)
       {
-        Console.WriteLine("ResizeCanvas");
         UpdateScrollbarProperties();
         if (!scrXPanel.Visible) scrX.Value = scrX.Minimum;
         if (!scrY.Visible) scrY.Value = scrY.Minimum;
